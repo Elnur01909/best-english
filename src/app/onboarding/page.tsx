@@ -43,7 +43,7 @@ export default function OnboardingPage() {
       .update({ onboarded: true })
       .eq('id', user.id)
 
-    router.push('/dashboard')
+    router.push('/placement')
   }
 
   if (step === 1) {

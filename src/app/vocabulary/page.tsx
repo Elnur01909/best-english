@@ -40,9 +40,10 @@ export default function VocabularyPage() {
       const { data: due } = await getDueCards(user.id, 20)
 
       if (!due || due.length === 0) {
-        // Yeni istifadəçi — level-ə uyğun ilk 20 söz əlavə et
+        // Yeni istifadəçi — level-ə uyğun sözlərdən təsadüfi 20 söz seç
         const filtered = (vocabData as VocabItem[])
           .filter((v) => v.level === userLevel || v.level === 'F')
+          .sort(() => Math.random() - 0.5)
           .slice(0, 20)
 
         const initialCards: VocabProgress[] = filtered.map((v) => ({
