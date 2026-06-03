@@ -1,0 +1,696 @@
+[
+  {
+    "id": 1,
+    "title": "Contract Formation",
+    "level": "Foundation",
+    "topic": "Contract Law",
+    "text": "A contract is a legally binding agreement between two or more parties. For a contract to be valid, several essential elements must be present. First, there must be an offer — a clear proposal by one party to another on specific terms. Second, there must be acceptance — an unconditional agreement to all the terms of the offer. Third, there must be consideration — something of value exchanged between the parties, such as money, goods, or services. Finally, both parties must have the legal capacity to enter into a contract.\n\nWhen an offer is made, the offeree may respond in one of three ways: they may accept the offer, reject it outright, or make a counteroffer. A counteroffer is itself a new offer that rejects the original terms. If the offeree makes a counteroffer, the original offeror is under no obligation to accept it.\n\nContracts may be written or oral, though certain types — such as those involving the sale of land or agreements lasting more than one year — must be in writing to be enforceable under the Statute of Frauds.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which of the following is NOT an essential element of a valid contract?",
+        "options": ["Offer", "Acceptance", "Consideration", "Written form"],
+        "correct": "Written form",
+        "explanation": "Most contracts do not need to be in writing. Written form is only required for specific types of contracts under the Statute of Frauds."
+      },
+      {
+        "id": 2,
+        "question": "When a counteroffer is made, what happens to the original offer?",
+        "options": ["It remains valid", "It is automatically accepted", "It is rejected", "It is suspended"],
+        "correct": "It is rejected",
+        "explanation": "A counteroffer rejects the original offer entirely. The original offeror is no longer bound by the original offer."
+      },
+      {
+        "id": 3,
+        "question": "According to the passage, what is 'consideration'?",
+        "options": ["Careful thought before signing", "Something of value exchanged between parties", "The legal capacity to contract", "A type of written contract"],
+        "correct": "Something of value exchanged between parties",
+        "explanation": "Consideration is one of the essential elements of a valid contract — it refers to something of value (money, goods, services) given by each party."
+      },
+      {
+        "id": 4,
+        "question": "Under the Statute of Frauds, which type of contract must be in writing?",
+        "options": ["Contracts for services", "Contracts involving the sale of land", "All employment contracts", "Verbal agreements between friends"],
+        "correct": "Contracts involving the sale of land",
+        "explanation": "The Statute of Frauds requires certain contracts to be in writing, including those for the sale of land and agreements lasting more than one year."
+      },
+      {
+        "id": 5,
+        "question": "What does 'offeree' mean in the context of this passage?",
+        "options": ["The person who makes the offer", "The person who receives the offer", "A neutral third party", "The court overseeing the contract"],
+        "correct": "The person who receives the offer",
+        "explanation": "The offeree is the party to whom an offer is made. They may accept, reject, or make a counteroffer."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The parties decided to ___ into a contract after lengthy negotiations.", "answer": "enter", "options": ["enter", "go", "make", "put"] },
+      { "sentence": "The buyer made an ___ to purchase the property at a reduced price.", "answer": "offer", "options": ["offer", "order", "appeal", "demand"] },
+      { "sentence": "Without valid ___, the agreement cannot be enforced.", "answer": "consideration", "options": ["consideration", "payment", "signature", "promise"] }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Breach of Contract and Remedies",
+    "level": "Foundation",
+    "topic": "Contract Law",
+    "text": "A breach of contract occurs when one party fails to perform their obligations under a valid contract without lawful excuse. Breaches can be classified as material or minor. A material breach is a fundamental failure that defeats the purpose of the contract, entitling the innocent party to treat the contract as terminated and to claim damages. A minor breach, by contrast, does not go to the root of the contract and only entitles the innocent party to claim damages.\n\nWhen a breach occurs, the innocent party has several remedies available. Damages are the most common remedy — the court awards a sum of money to compensate the innocent party for their loss. Specific performance is an equitable remedy ordering the breaching party to actually carry out their contractual obligations. This remedy is typically granted where damages would be inadequate, such as in contracts for unique property.\n\nThe innocent party also has a duty to mitigate their loss. This means they must take reasonable steps to reduce the damage caused by the breach. Failure to mitigate may result in a reduction of the damages awarded.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the key difference between a material and a minor breach?",
+        "options": [
+          "A material breach involves a written contract; a minor breach is oral",
+          "A material breach defeats the purpose of the contract; a minor breach does not",
+          "A material breach always involves financial loss; a minor breach does not",
+          "A material breach requires proof of intent; a minor breach does not"
+        ],
+        "correct": "A material breach defeats the purpose of the contract; a minor breach does not",
+        "explanation": "A material breach is fundamental — it goes to the root of the contract. A minor breach is less serious and only entitles the innocent party to damages, not termination."
+      },
+      {
+        "id": 2,
+        "question": "When is specific performance typically awarded?",
+        "options": [
+          "When the contract involves services",
+          "When damages would be inadequate, such as for unique property",
+          "When the breach is minor",
+          "When both parties agree to it"
+        ],
+        "correct": "When damages would be inadequate, such as for unique property",
+        "explanation": "Specific performance is an equitable remedy granted when money damages are insufficient — for example, where the subject matter is unique and cannot be replaced."
+      },
+      {
+        "id": 3,
+        "question": "What does the 'duty to mitigate' require?",
+        "options": [
+          "The breaching party must pay double damages",
+          "The innocent party must take reasonable steps to reduce their loss",
+          "Both parties must agree to mediation",
+          "The court must approve all settlements"
+        ],
+        "correct": "The innocent party must take reasonable steps to reduce their loss",
+        "explanation": "The duty to mitigate requires the innocent party to act reasonably to minimise their losses. Failure to do so can reduce the damages they receive."
+      },
+      {
+        "id": 4,
+        "question": "Which remedy does the court most commonly award for breach of contract?",
+        "options": ["Specific performance", "Rescission", "Damages", "Injunction"],
+        "correct": "Damages",
+        "explanation": "Damages — a monetary award to compensate for loss — is the primary remedy for breach of contract. Other remedies like specific performance are less common."
+      },
+      {
+        "id": 5,
+        "question": "Which phrase best describes 'specific performance'?",
+        "options": [
+          "A financial penalty imposed by the court",
+          "A court order requiring a party to fulfil their contractual obligations",
+          "An agreement to terminate the contract",
+          "A form of compensation paid in instalments"
+        ],
+        "correct": "A court order requiring a party to fulfil their contractual obligations",
+        "explanation": "Specific performance is a court order compelling the breaching party to actually perform what they promised under the contract."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The innocent party was entitled to ___ the contract as terminated after the material breach.", "answer": "treat", "options": ["treat", "make", "call", "set"] },
+      { "sentence": "The court awarded ___ to compensate the claimant for the financial loss suffered.", "answer": "damages", "options": ["damages", "penalties", "fines", "costs"] },
+      { "sentence": "The claimant had a duty to ___ their loss by finding an alternative supplier.", "answer": "mitigate", "options": ["mitigate", "reduce of", "limit to", "stop"] }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Negligence in Tort Law",
+    "level": "Foundation",
+    "topic": "Tort Law",
+    "text": "Negligence is one of the most significant torts in English law. To establish a claim in negligence, the claimant must prove three elements: first, that the defendant owed them a duty of care; second, that the defendant breached that duty; and third, that the breach caused the claimant's loss or damage.\n\nThe duty of care was famously established in the case of Donoghue v Stevenson (1932), where the House of Lords held that a manufacturer owed a duty of care to the ultimate consumer of their product. Lord Atkin's 'neighbour principle' states that we owe a duty of care to those who are so closely and directly affected by our acts that we ought reasonably to have them in contemplation.\n\nOnce a duty of care is established, the claimant must show that the defendant fell below the standard of a 'reasonable person' in the circumstances. This is an objective test — the court asks what a reasonable person in the defendant's position would have done. If the defendant's conduct fell below this standard, they are said to have breached their duty.\n\nFinally, the claimant must show that the breach caused the damage suffered. The basic test is the 'but for' test: but for the defendant's breach, would the claimant have suffered the loss?",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What are the three elements a claimant must prove in a negligence claim?",
+        "options": [
+          "Offer, acceptance, consideration",
+          "Duty of care, breach, causation",
+          "Intent, action, damage",
+          "Liability, loss, limitation"
+        ],
+        "correct": "Duty of care, breach, causation",
+        "explanation": "To succeed in negligence, a claimant must prove: (1) the defendant owed a duty of care, (2) the defendant breached that duty, and (3) the breach caused the loss."
+      },
+      {
+        "id": 2,
+        "question": "What is the standard used to determine if a duty of care has been breached?",
+        "options": [
+          "The standard of the defendant's profession",
+          "The standard of a reasonable person",
+          "The standard set by Parliament",
+          "The standard agreed in the contract"
+        ],
+        "correct": "The standard of a reasonable person",
+        "explanation": "The test for breach is objective — the court asks whether a 'reasonable person' in the defendant's position would have acted differently."
+      },
+      {
+        "id": 3,
+        "question": "What is the 'but for' test used to determine?",
+        "options": [
+          "Whether the defendant intended to cause harm",
+          "Whether the breach caused the claimant's loss",
+          "Whether the defendant owed a duty of care",
+          "Whether the loss was foreseeable"
+        ],
+        "correct": "Whether the breach caused the claimant's loss",
+        "explanation": "The 'but for' test asks: but for the defendant's negligent act, would the claimant have suffered the loss? If yes, causation is not established."
+      },
+      {
+        "id": 4,
+        "question": "In which case was the duty of care famously established?",
+        "options": [
+          "Carlill v Carbolic Smoke Ball Co",
+          "Donoghue v Stevenson (1932)",
+          "Hadley v Baxendale",
+          "Rylands v Fletcher"
+        ],
+        "correct": "Donoghue v Stevenson (1932)",
+        "explanation": "Donoghue v Stevenson is the landmark negligence case establishing that a manufacturer owes a duty of care to the end consumer of their product."
+      },
+      {
+        "id": 5,
+        "question": "Lord Atkin's 'neighbour principle' refers to those to whom we owe a duty of care. Who are our 'neighbours' in legal terms?",
+        "options": [
+          "People who live near us",
+          "People who are closely and directly affected by our acts",
+          "People we have a contract with",
+          "People who are related to us"
+        ],
+        "correct": "People who are closely and directly affected by our acts",
+        "explanation": "Lord Atkin defined our 'neighbours' as those who are so closely and directly affected by our acts that we ought reasonably to have them in contemplation when we act."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The defendant ___ a duty of care to the claimant as the ultimate consumer of the product.", "answer": "owed", "options": ["owed", "had", "gave", "made"] },
+      { "sentence": "The surgeon fell ___ the standard of a reasonable medical professional.", "answer": "below", "options": ["below", "under", "beneath of", "down from"] },
+      { "sentence": "The claimant must prove that the breach ___ the damage suffered.", "answer": "caused", "options": ["caused", "made", "did", "brought"] }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Company Directors and Their Duties",
+    "level": "Higher",
+    "topic": "Company Law",
+    "text": "Directors occupy a pivotal role in the governance of a company. Under the Companies Act 2006, directors in England and Wales are subject to a comprehensive set of statutory duties. These duties are owed to the company itself, not to individual shareholders or third parties.\n\nThe primary duties include: the duty to act within the company's constitution and to exercise powers only for the purposes for which they were conferred; the duty to promote the success of the company for the benefit of its members as a whole; the duty to exercise independent judgment; the duty to exercise reasonable care, skill and diligence; and the duty to avoid conflicts of interest.\n\nThe duty to avoid conflicts of interest is particularly significant. A director must not allow personal interests to conflict with those of the company. If a director has a personal interest in a proposed transaction, they must declare that interest to the board. Failure to disclose a conflict of interest may render the transaction voidable and expose the director to personal liability.\n\nWhere a director breaches their duties, the company may seek various remedies, including damages, account of profits, or injunctive relief to prevent further breaches.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "To whom are a director's statutory duties owed?",
+        "options": [
+          "To individual shareholders",
+          "To the company itself",
+          "To creditors of the company",
+          "To the government"
+        ],
+        "correct": "To the company itself",
+        "explanation": "Under the Companies Act 2006, directors owe their duties to the company as a whole, not to individual shareholders or third parties."
+      },
+      {
+        "id": 2,
+        "question": "What must a director do if they have a personal interest in a proposed transaction?",
+        "options": [
+          "Resign immediately",
+          "Proceed without disclosure",
+          "Declare the interest to the board",
+          "Seek court approval"
+        ],
+        "correct": "Declare the interest to the board",
+        "explanation": "A director with a personal interest in a transaction must disclose it to the board. Failure to do so can make the transaction voidable and expose the director to liability."
+      },
+      {
+        "id": 3,
+        "question": "What is the consequence of a director failing to disclose a conflict of interest?",
+        "options": [
+          "The director is automatically removed",
+          "The transaction may be voidable and the director may face personal liability",
+          "The company must pay a fine",
+          "The shareholders must vote on the issue"
+        ],
+        "correct": "The transaction may be voidable and the director may face personal liability",
+        "explanation": "Failure to disclose a conflict of interest may render the transaction voidable (capable of being set aside) and expose the director to personal liability for breach of duty."
+      },
+      {
+        "id": 4,
+        "question": "Which statute sets out directors' duties in England and Wales?",
+        "options": [
+          "The Contract Act 1990",
+          "The Companies Act 2006",
+          "The Employment Rights Act 1996",
+          "The Insolvency Act 1986"
+        ],
+        "correct": "The Companies Act 2006",
+        "explanation": "Directors' statutory duties in England and Wales are set out in the Companies Act 2006, which consolidated and codified the common law duties."
+      },
+      {
+        "id": 5,
+        "question": "What remedy allows a company to claim profits made by a director who breached their duties?",
+        "options": [
+          "Damages", "Account of profits", "Rescission", "Specific performance"
+        ],
+        "correct": "Account of profits",
+        "explanation": "An account of profits is an equitable remedy requiring the director to hand over any profit they made as a result of their breach of duty."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The director must ___ a conflict of interest to the board before the transaction proceeds.", "answer": "declare", "options": ["declare", "say", "tell of", "inform"] },
+      { "sentence": "Directors owe a ___ duty of care, skill and diligence to the company.", "answer": "reasonable", "options": ["reasonable", "high", "strong", "full"] },
+      { "sentence": "The transaction was held to be ___ because the director failed to disclose his personal interest.", "answer": "voidable", "options": ["voidable", "void", "illegal", "cancelled"] }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Employment Rights: Dismissal",
+    "level": "Higher",
+    "topic": "Employment Law",
+    "text": "The law governing dismissal in England and Wales distinguishes between two main types: wrongful dismissal and unfair dismissal. These are distinct legal concepts with different requirements and remedies.\n\nWrongful dismissal is a common law claim arising from a breach of the employment contract. It typically occurs when an employer terminates an employee's contract without giving the correct period of notice, or in breach of a contractual term. The remedy for wrongful dismissal is damages equivalent to the notice pay the employee should have received.\n\nUnfair dismissal, by contrast, is a statutory right under the Employment Rights Act 1996. To bring a claim for unfair dismissal, an employee must generally have been employed for at least two years. The employer must show that the dismissal was for a fair reason — such as conduct, capability, redundancy, or some other substantial reason — and that they followed a fair procedure. An employment tribunal may award compensation or, in some cases, reinstatement.\n\nRedundancy is a potentially fair reason for dismissal. It arises where the employer's need for a particular role ceases or diminishes. Employers must follow a fair selection process and consider alternative employment within the organisation before making an employee redundant.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the main difference between wrongful dismissal and unfair dismissal?",
+        "options": [
+          "Wrongful dismissal is a statutory claim; unfair dismissal is a common law claim",
+          "Wrongful dismissal is a contract law claim; unfair dismissal is a statutory claim",
+          "Wrongful dismissal applies to all workers; unfair dismissal only applies to directors",
+          "They are the same thing described differently"
+        ],
+        "correct": "Wrongful dismissal is a contract law claim; unfair dismissal is a statutory claim",
+        "explanation": "Wrongful dismissal is a common law (contract) claim for breach of the employment contract. Unfair dismissal is a statutory right under the Employment Rights Act 1996."
+      },
+      {
+        "id": 2,
+        "question": "How long must an employee typically have been employed to bring an unfair dismissal claim?",
+        "options": ["6 months", "1 year", "2 years", "5 years"],
+        "correct": "2 years",
+        "explanation": "Under the Employment Rights Act 1996, employees generally need at least two years' continuous employment to bring an unfair dismissal claim."
+      },
+      {
+        "id": 3,
+        "question": "What is the remedy for wrongful dismissal?",
+        "options": [
+          "Reinstatement to the previous role",
+          "Damages equivalent to the notice pay owed",
+          "A public apology from the employer",
+          "Compensation up to a statutory cap"
+        ],
+        "correct": "Damages equivalent to the notice pay owed",
+        "explanation": "The remedy for wrongful dismissal is common law damages — typically the salary the employee would have earned during the correct notice period."
+      },
+      {
+        "id": 4,
+        "question": "Which of the following is a potentially fair reason for dismissal mentioned in the passage?",
+        "options": [
+          "The employer dislikes the employee",
+          "Redundancy",
+          "The employee is pregnant",
+          "The employee made a protected disclosure"
+        ],
+        "correct": "Redundancy",
+        "explanation": "Redundancy is explicitly listed in the Employment Rights Act 1996 as a potentially fair reason for dismissal, provided a fair process is followed."
+      },
+      {
+        "id": 5,
+        "question": "Before making an employee redundant, what must the employer consider?",
+        "options": [
+          "Whether the employee has a mortgage",
+          "Alternative employment within the organisation",
+          "The employee's age and experience",
+          "Whether the employee agrees to redundancy"
+        ],
+        "correct": "Alternative employment within the organisation",
+        "explanation": "Before making an employee redundant, employers must consider whether there is suitable alternative employment within the organisation to offer the employee."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The employer must show that the dismissal was for a ___ reason.", "answer": "fair", "options": ["fair", "good", "right", "legal"] },
+      { "sentence": "The employee was awarded compensation by the employment ___.", "answer": "tribunal", "options": ["tribunal", "court", "board", "panel"] },
+      { "sentence": "Redundancy arises where the employer's need for a particular role ___ or diminishes.", "answer": "ceases", "options": ["ceases", "stops of", "ends up", "finishes"] }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Intellectual Property: Copyright and Infringement",
+    "level": "Higher",
+    "topic": "Intellectual Property",
+    "text": "Copyright is a form of intellectual property that automatically protects original literary, dramatic, musical, and artistic works. Unlike patents or trademarks, copyright does not require registration — it arises automatically upon the creation of an original work. In the United Kingdom, copyright is governed primarily by the Copyright, Designs and Patents Act 1988.\n\nCopyright gives the owner the exclusive right to reproduce, distribute, perform, display, or create derivative works from the original. These rights are limited in time: in general, copyright in a literary work lasts for the lifetime of the author plus 70 years after their death.\n\nCopyright infringement occurs when someone exercises one of the copyright owner's exclusive rights without permission or a lawful defence. A common defence is fair dealing, which permits limited use of a copyrighted work for purposes such as research, private study, criticism, review, or news reporting, without requiring the copyright holder's consent.\n\nWhere infringement is established, the copyright owner may seek various remedies, including an injunction to prevent further infringement, damages to compensate for loss suffered, and an account of profits earned by the infringer.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "How is copyright different from patents and trademarks?",
+        "options": [
+          "Copyright lasts longer than patents",
+          "Copyright does not require registration",
+          "Copyright can only protect music",
+          "Copyright must be renewed every year"
+        ],
+        "correct": "Copyright does not require registration",
+        "explanation": "Unlike patents and trademarks, copyright arises automatically upon creation of an original work — no registration is needed."
+      },
+      {
+        "id": 2,
+        "question": "How long does copyright in a literary work typically last in the UK?",
+        "options": [
+          "25 years from creation",
+          "50 years from publication",
+          "The author's lifetime plus 70 years",
+          "100 years from creation"
+        ],
+        "correct": "The author's lifetime plus 70 years",
+        "explanation": "In the UK, copyright in literary works lasts for the lifetime of the author plus 70 years after their death."
+      },
+      {
+        "id": 3,
+        "question": "What is the 'fair dealing' defence?",
+        "options": [
+          "A right to use any work freely for commercial purposes",
+          "A defence permitting limited use for purposes like research or criticism without consent",
+          "An agreement between the copyright owner and the user",
+          "A court order allowing publication of copyrighted material"
+        ],
+        "correct": "A defence permitting limited use for purposes like research or criticism without consent",
+        "explanation": "Fair dealing allows limited use of copyrighted material for specific purposes (research, criticism, news reporting) without the copyright owner's permission."
+      },
+      {
+        "id": 4,
+        "question": "When does copyright infringement occur?",
+        "options": [
+          "When someone admires a copyrighted work",
+          "When someone exercises the owner's exclusive rights without permission",
+          "When someone purchases a copyrighted work",
+          "When someone mentions a copyrighted work in conversation"
+        ],
+        "correct": "When someone exercises the owner's exclusive rights without permission",
+        "explanation": "Copyright infringement occurs when someone exercises one of the exclusive rights — such as reproduction or distribution — without the owner's permission or a lawful defence."
+      },
+      {
+        "id": 5,
+        "question": "Which remedy prevents further copyright infringement?",
+        "options": ["Damages", "Account of profits", "Injunction", "Rescission"],
+        "correct": "Injunction",
+        "explanation": "An injunction is a court order that prohibits a party from continuing an infringing activity. It is used to prevent future infringement, not compensate for past harm."
+      }
+    ],
+    "collocations": [
+      { "sentence": "Copyright ___ automatically upon the creation of an original work.", "answer": "arises", "options": ["arises", "starts", "begins of", "comes up"] },
+      { "sentence": "The claimant sought an ___ to prevent further reproduction of her work.", "answer": "injunction", "options": ["injunction", "order of", "command", "ban"] },
+      { "sentence": "The defendant raised the ___ dealing defence, arguing the use was for private study.", "answer": "fair", "options": ["fair", "good", "equal", "right"] }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Arbitration and Dispute Resolution",
+    "level": "Advanced",
+    "topic": "Court & Litigation",
+    "text": "Arbitration has become an increasingly popular method of resolving commercial disputes, particularly in international business. Unlike litigation, which takes place in open court, arbitration is a private process in which the parties agree to submit their dispute to one or more independent arbitrators, whose decision — known as an award — is final and binding.\n\nOne of the key advantages of arbitration over litigation is confidentiality. Court proceedings are generally public, whereas arbitration hearings and awards are private, which is particularly attractive to commercial parties who wish to protect sensitive business information. Additionally, arbitration can be faster and more cost-effective than litigation in complex commercial disputes.\n\nThe foundation of arbitration is the arbitration agreement — a contractual clause providing that disputes will be resolved by arbitration rather than through the courts. Such clauses are given considerable weight by English courts, which will generally stay court proceedings where a valid arbitration agreement exists.\n\nHowever, arbitration is not without its drawbacks. The right to appeal an arbitral award is very limited, and the costs of arbitration — particularly in international proceedings with three arbitrators — can be substantial. Furthermore, arbitration is not appropriate for all types of disputes; for example, matters involving insolvency or criminal law cannot generally be resolved through arbitration.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What makes an arbitral award different from a court judgment?",
+        "options": [
+          "An arbitral award can be appealed more easily",
+          "An arbitral award is not legally binding",
+          "An arbitral award is private and the right to appeal is very limited",
+          "An arbitral award requires government approval"
+        ],
+        "correct": "An arbitral award is private and the right to appeal is very limited",
+        "explanation": "Unlike court judgments, arbitral awards are private (confidential) and the grounds for appeal are very narrow — generally limited to serious procedural irregularities."
+      },
+      {
+        "id": 2,
+        "question": "Why is confidentiality an advantage of arbitration for commercial parties?",
+        "options": [
+          "It allows parties to avoid paying taxes",
+          "It protects sensitive business information from becoming public",
+          "It prevents the other party from knowing the outcome",
+          "It allows the arbitrator to decide without hearing both sides"
+        ],
+        "correct": "It protects sensitive business information from becoming public",
+        "explanation": "Commercial parties often deal with sensitive business information. Unlike open court proceedings, arbitration hearings and awards are private, protecting this information."
+      },
+      {
+        "id": 3,
+        "question": "What is the 'arbitration agreement' referred to in the passage?",
+        "options": [
+          "A court order to use arbitration",
+          "A contractual clause providing that disputes will be resolved by arbitration",
+          "An agreement signed after a dispute arises",
+          "A government regulation on dispute resolution"
+        ],
+        "correct": "A contractual clause providing that disputes will be resolved by arbitration",
+        "explanation": "An arbitration agreement (or clause) is typically included in a contract, providing in advance that any disputes arising from the contract will be resolved through arbitration."
+      },
+      {
+        "id": 4,
+        "question": "According to the passage, which type of dispute CANNOT generally be resolved through arbitration?",
+        "options": [
+          "Commercial contract disputes",
+          "International trade disputes",
+          "Insolvency matters",
+          "Employment disputes"
+        ],
+        "correct": "Insolvency matters",
+        "explanation": "The passage states that matters involving insolvency or criminal law cannot generally be resolved through arbitration — these require court intervention."
+      },
+      {
+        "id": 5,
+        "question": "What will English courts generally do when a valid arbitration agreement exists?",
+        "options": [
+          "Override the arbitration agreement and hear the case",
+          "Stay court proceedings and refer the parties to arbitration",
+          "Appoint a judge to act as arbitrator",
+          "Declare the arbitration agreement void"
+        ],
+        "correct": "Stay court proceedings and refer the parties to arbitration",
+        "explanation": "English courts give significant weight to arbitration agreements. If a valid agreement exists, courts will generally stay (pause) any court proceedings and require the parties to use arbitration."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The parties agreed to ___ their dispute to a panel of three arbitrators.", "answer": "submit", "options": ["submit", "give", "take", "put"] },
+      { "sentence": "The arbitration clause gave the arbitrators ___ jurisdiction over all contractual disputes.", "answer": "exclusive", "options": ["exclusive", "full", "only", "special"] },
+      { "sentence": "The court agreed to ___ the proceedings pending the outcome of the arbitration.", "answer": "stay", "options": ["stay", "stop of", "pause", "halt"] }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Insolvency and Liquidation",
+    "level": "Advanced",
+    "topic": "Bankruptcy Law",
+    "text": "Insolvency arises when a company or individual is unable to pay its debts as they fall due, or when its liabilities exceed its assets. In England and Wales, the insolvency of companies is primarily governed by the Insolvency Act 1986, which provides a range of procedures depending on the severity of the company's financial difficulties.\n\nFor companies facing temporary financial difficulties but with viable underlying businesses, administration may be appropriate. An administrator is appointed to manage the company's affairs with the objective of rescuing the company as a going concern, achieving a better result for creditors than immediate liquidation, or realising assets for the benefit of secured creditors.\n\nWhere rescue is not possible, the company may enter liquidation — also known as 'winding up'. In compulsory liquidation, a court order is made on the petition of a creditor or the company itself. In voluntary liquidation, the shareholders or creditors initiate the process without a court order. Upon liquidation, a liquidator is appointed to collect and sell the company's assets, pay creditors in a prescribed order of priority, and distribute any surplus to shareholders.\n\nThe order of priority in distributing assets is significant: secured creditors (those with a fixed or floating charge over the company's assets) are paid first, followed by preferential creditors (such as employees), then unsecured creditors, and finally shareholders. In practice, unsecured creditors and shareholders frequently receive little or nothing.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the primary objective of administration?",
+        "options": [
+          "To immediately sell the company's assets",
+          "To rescue the company as a going concern where possible",
+          "To prosecute the directors for misconduct",
+          "To distribute assets to shareholders"
+        ],
+        "correct": "To rescue the company as a going concern where possible",
+        "explanation": "The primary objective of administration is to rescue the company as a going concern. Only if that is not possible does the administrator pursue other objectives such as better returns for creditors."
+      },
+      {
+        "id": 2,
+        "question": "What is the difference between compulsory and voluntary liquidation?",
+        "options": [
+          "Compulsory liquidation is initiated by a court order; voluntary liquidation is initiated by shareholders or creditors",
+          "Compulsory liquidation is for individuals; voluntary liquidation is for companies",
+          "Compulsory liquidation is faster; voluntary liquidation is more expensive",
+          "There is no practical difference between the two"
+        ],
+        "correct": "Compulsory liquidation is initiated by a court order; voluntary liquidation is initiated by shareholders or creditors",
+        "explanation": "Compulsory liquidation requires a court order (usually on a creditor's petition). Voluntary liquidation is initiated by the shareholders or creditors without court intervention."
+      },
+      {
+        "id": 3,
+        "question": "Who is paid FIRST in the distribution of assets on liquidation?",
+        "options": [
+          "Unsecured creditors",
+          "Shareholders",
+          "Secured creditors",
+          "Employees"
+        ],
+        "correct": "Secured creditors",
+        "explanation": "The order of priority gives secured creditors (those with charges over the company's assets) first claim on the proceeds of liquidation."
+      },
+      {
+        "id": 4,
+        "question": "What does the phrase 'going concern' mean in the context of insolvency?",
+        "options": [
+          "A company that is profitable",
+          "A company that continues to operate as a functioning business",
+          "A company that is being investigated",
+          "A company in the process of being sold"
+        ],
+        "correct": "A company that continues to operate as a functioning business",
+        "explanation": "A 'going concern' refers to a business that is operating normally and expected to continue doing so. Rescuing a company 'as a going concern' means keeping it operational rather than breaking it up."
+      },
+      {
+        "id": 5,
+        "question": "According to the passage, what typically happens to unsecured creditors in liquidation?",
+        "options": [
+          "They are paid in full before shareholders",
+          "They frequently receive little or nothing",
+          "They are treated the same as secured creditors",
+          "They become shareholders in the new company"
+        ],
+        "correct": "They frequently receive little or nothing",
+        "explanation": "Unsecured creditors rank below secured and preferential creditors in the order of priority. In practice, by the time higher-priority creditors are paid, little or nothing remains for unsecured creditors."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The company entered ___ after the court granted a winding-up order.", "answer": "liquidation", "options": ["liquidation", "bankruptcy", "closure", "dissolution"] },
+      { "sentence": "Secured creditors hold a charge ___ the company's assets.", "answer": "over", "options": ["over", "on", "against of", "above"] },
+      { "sentence": "The administrator's primary objective was to rescue the company as a ___ concern.", "answer": "going", "options": ["going", "running", "living", "active"] }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Criminal Law: Mens Rea and Actus Reus",
+    "level": "Advanced",
+    "topic": "Criminal Law",
+    "text": "In English criminal law, a person cannot generally be convicted of an offence unless the prosecution proves two fundamental elements beyond reasonable doubt: the actus reus (the guilty act) and the mens rea (the guilty mind). These Latin terms form the cornerstone of criminal liability.\n\nThe actus reus refers to the physical conduct element of a crime — the act, omission, or state of affairs that the law prohibits. It is important to note that criminal liability can arise not only from positive acts but also from omissions where the defendant was under a legal duty to act. For example, a parent who fails to provide medical care for a child may be criminally liable for that omission.\n\nThe mens rea refers to the mental element — the defendant's state of mind at the time of the offence. Different offences require different levels of mens rea. Intention (meaning the defendant desired the outcome or knew it was virtually certain to occur) represents the highest form of mens rea. Recklessness (where the defendant foresaw a risk but proceeded regardless) represents a lower degree of fault. Some offences require only negligence, or even impose strict liability, where no fault element is required at all.\n\nConcurrence is also required — the actus reus and the mens rea must coincide at the same moment in time. Where the defendant's guilty act and guilty mind do not align, the defendant may escape criminal liability.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What must the prosecution prove to convict a person of a criminal offence?",
+        "options": [
+          "Only the actus reus",
+          "Only the mens rea",
+          "Both the actus reus and the mens rea beyond reasonable doubt",
+          "Either the actus reus or the mens rea"
+        ],
+        "correct": "Both the actus reus and the mens rea beyond reasonable doubt",
+        "explanation": "Both elements must be proved beyond reasonable doubt: the actus reus (guilty act) and the mens rea (guilty mind). The absence of either element is a defence."
+      },
+      {
+        "id": 2,
+        "question": "Can criminal liability arise from an omission (failure to act)?",
+        "options": [
+          "No, only positive acts can give rise to criminal liability",
+          "Yes, but only where the defendant was under a legal duty to act",
+          "Yes, any omission can give rise to criminal liability",
+          "No, omissions are always treated as civil matters"
+        ],
+        "correct": "Yes, but only where the defendant was under a legal duty to act",
+        "explanation": "Criminal liability for omissions arises only where the defendant was under a legal duty to act — for example, a parent's duty to care for their child."
+      },
+      {
+        "id": 3,
+        "question": "What is the difference between intention and recklessness as forms of mens rea?",
+        "options": [
+          "Intention requires proof; recklessness does not",
+          "Intention means desiring the outcome; recklessness means foreseeing a risk and proceeding anyway",
+          "Intention is always required; recklessness is only relevant for civil claims",
+          "They are the same thing described differently"
+        ],
+        "correct": "Intention means desiring the outcome; recklessness means foreseeing a risk and proceeding anyway",
+        "explanation": "Intention (the highest form of mens rea) means the defendant desired the result. Recklessness means the defendant foresaw the risk but took it anyway — a lower level of fault."
+      },
+      {
+        "id": 4,
+        "question": "What is meant by 'concurrence' in criminal law?",
+        "options": [
+          "The agreement of two or more defendants to commit a crime",
+          "The actus reus and mens rea must coincide at the same time",
+          "The prosecution and defence must agree on the facts",
+          "Two separate crimes committed by the same person"
+        ],
+        "correct": "The actus reus and mens rea must coincide at the same time",
+        "explanation": "Concurrence requires that the guilty act and guilty mind must exist at the same moment. If they do not coincide, criminal liability may not arise."
+      },
+      {
+        "id": 5,
+        "question": "What is meant by 'strict liability' as mentioned in the passage?",
+        "options": [
+          "A crime requiring the highest level of proof",
+          "An offence where no fault element (mens rea) is required",
+          "An offence only committed deliberately",
+          "A civil claim rather than a criminal one"
+        ],
+        "correct": "An offence where no fault element (mens rea) is required",
+        "explanation": "Strict liability offences do not require proof of any mental element — the prosecution only needs to prove the actus reus. These are typically regulatory offences."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The prosecution must prove the defendant's guilt ___ reasonable doubt.", "answer": "beyond", "options": ["beyond", "without", "above", "past"] },
+      { "sentence": "The defendant was ___ a legal duty to act, which gave rise to liability for his omission.", "answer": "under", "options": ["under", "in", "within", "at"] },
+      { "sentence": "The actus reus and mens rea must ___ at the same point in time.", "answer": "coincide", "options": ["coincide", "meet of", "exist together", "align at"] }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Defamation: Libel and Slander",
+    "level": "Advanced",
+    "topic": "Tort Law",
+    "text": "Defamation is the publication of a false statement that tends to lower the claimant in the estimation of right-thinking members of society. English defamation law distinguishes between two forms: libel (permanent form, such as writing, broadcasting, or online publication) and slander (transient form, such as spoken words).\n\nUnder the Defamation Act 2013, a claimant must show that the statement has caused or is likely to cause serious harm to their reputation. For a company, serious harm means serious financial loss. This threshold was introduced to prevent trivial claims from clogging the courts.\n\nA defendant may rely on several defences. The defence of truth (formerly justification) provides that a statement cannot be defamatory if it is substantially true. The defence of honest opinion (formerly fair comment) protects statements of opinion on a matter of public interest, provided the opinion is one that an honest person could hold based on the facts. The defence of publication on a matter of public interest provides protection where the defendant reasonably believed publishing the statement was in the public interest.\n\nWhere defamation is established, the claimant may seek damages, an injunction preventing further publication, or an order requiring the defendant to publish a summary of the court's judgment. English courts have traditionally awarded substantial damages for defamation, though the courts now take a more restrained approach.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the main distinction between libel and slander?",
+        "options": [
+          "Libel is more serious than slander",
+          "Libel is in permanent form; slander is in transient form",
+          "Libel requires proof of damage; slander does not",
+          "Libel is a criminal offence; slander is civil"
+        ],
+        "correct": "Libel is in permanent form; slander is in transient form",
+        "explanation": "Libel involves defamatory statements in a permanent form (writing, broadcast, online). Slander refers to transient forms, primarily spoken words."
+      },
+      {
+        "id": 2,
+        "question": "Under the Defamation Act 2013, what must a claimant demonstrate?",
+        "options": [
+          "That the statement was published internationally",
+          "That the statement caused or is likely to cause serious harm to their reputation",
+          "That the defendant intended to cause harm",
+          "That the statement was published more than once"
+        ],
+        "correct": "That the statement caused or is likely to cause serious harm to their reputation",
+        "explanation": "The Defamation Act 2013 introduced a 'serious harm' threshold — a claimant must show the statement has caused or is likely to cause serious reputational harm."
+      },
+      {
+        "id": 3,
+        "question": "What does the defence of 'truth' provide?",
+        "options": [
+          "Protection if the defendant genuinely believed the statement was true",
+          "A complete defence if the statement is substantially true",
+          "Protection only for statements made in good faith",
+          "A partial defence reducing damages"
+        ],
+        "correct": "A complete defence if the statement is substantially true",
+        "explanation": "The defence of truth (formerly justification) is a complete defence — if the defendant can prove the statement is substantially true, the claim fails entirely."
+      },
+      {
+        "id": 4,
+        "question": "What remedy requires the defendant to publish a correction?",
+        "options": [
+          "Damages", "Injunction", "An order to publish a summary of the court's judgment", "Specific performance"
+        ],
+        "correct": "An order to publish a summary of the court's judgment",
+        "explanation": "Under the Defamation Act 2013, courts can order a defendant to publish a summary of the judgment, effectively requiring them to publicise their defeat."
+      },
+      {
+        "id": 5,
+        "question": "What threshold did the Defamation Act 2013 introduce, and why?",
+        "options": [
+          "A financial threshold, to ensure only wealthy claimants could sue",
+          "A 'serious harm' threshold, to prevent trivial claims from clogging the courts",
+          "An intent threshold, requiring proof of malice",
+          "A publication threshold, requiring proof of widespread publication"
+        ],
+        "correct": "A 'serious harm' threshold, to prevent trivial claims from clogging the courts",
+        "explanation": "The 'serious harm' threshold was introduced to filter out minor or trivial defamation claims and ensure that only genuinely significant cases reached the courts."
+      }
+    ],
+    "collocations": [
+      { "sentence": "The defendant relied on the defence of ___ to argue the published statement was substantially true.", "answer": "truth", "options": ["truth", "fact", "reality", "honesty"] },
+      { "sentence": "The claimant sought an ___ preventing the newspaper from republishing the article.", "answer": "injunction", "options": ["injunction", "order of", "ban", "embargo"] },
+      { "sentence": "The statement was held to ___ the claimant's reputation in the eyes of right-thinking members of society.", "answer": "lower", "options": ["lower", "damage of", "harm to", "reduce"] }
+    ]
+  }
+]

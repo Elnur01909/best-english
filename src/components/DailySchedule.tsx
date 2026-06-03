@@ -21,9 +21,9 @@ const SESSIONS: Session[] = [
   {
     id: 'midday',
     emoji: '☀️',
-    activity: 'İ+1 Oxuma / Dərslər',
-    desc: 'Beyin aktiv olduğu vaxt — input',
-    route: '/lessons',
+    activity: 'TOLES Oxu Anlama',
+    desc: 'Hüquqi mətn oxu + kollokasiya məşqi (TOLES format)',
+    route: '/reading',
   },
   {
     id: 'evening',
@@ -35,9 +35,9 @@ const SESSIONS: Session[] = [
   {
     id: 'night',
     emoji: '🌙',
-    activity: 'Qısa Review (SRS)',
-    desc: 'Yuxu konsolidasiyasını aktivləşdirir',
-    route: '/vocabulary',
+    activity: 'TOLES Mock Mini-Test',
+    desc: 'Lüğət + qrammatika + kollokasiya — 10 sual, TOLES format',
+    route: '/mock-test',
   },
 ]
 

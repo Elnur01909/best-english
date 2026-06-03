@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState, useCallback } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { getUser, getUserProfile, getDueCards, upsertVocabProgress, updateStreak } from '@/lib/supabase'
 import { calculateNextReview, formatNextReview, SRS_DEFAULTS } from '@/lib/srs'
 import { getRandomMessage, DOPAMINE_MESSAGES } from '@/lib/psychology'
@@ -15,6 +15,8 @@ type FeedbackType = 'success' | 'wrong'
 
 export default function VocabularyPage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const isReviewMode = searchParams.get('mode') === 'review' // gecə rejimi
   const [userId, setUserId] = useState<string | null>(null)
   const [userLevel, setUserLevel] = useState<string>('B1')
   const [dueCards, setDueCards] = useState<VocabProgress[]>([])
@@ -37,21 +39,29 @@ export default function VocabularyPage() {
       const { data: prof } = await getUserProfile(user.id)
       if (prof) setUserLevel(prof.level)
 
-      const { data: due } = await getDueCards(user.id, 20)
+      // Review rejimi: yalnız 10 kart (yeni kart yox)
+      // Səhər rejimi: 20 kart (yeni + due)
+      const limit = isReviewMode ? 10 : 20
+      const { data: due } = await getDueCards(user.id, limit)
 
       if (!due || due.length === 0) {
-        // Yeni istifadəçi — level-ə uyğun sözlərdən təsadüfi 20 söz seç
-        const filtered = (vocabData as VocabItem[])
-          .filter((v) => v.level === userLevel || v.level === 'F')
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 20)
-
-        const initialCards: VocabProgress[] = filtered.map((v) => ({
-          user_id: user.id,
-          vocab_id: v.id,
-          ...SRS_DEFAULTS,
-        }))
-        setDueCards(initialCards)
+        if (isReviewMode) {
+          // Gecə review: due kart yoxdursa — tamamlanıb
+          setDueCards([])
+          setDone(true)
+        } else {
+          // Səhər: yeni istifadəçi — level-ə uyğun sözlərdən təsadüfi 20 söz seç
+          const filtered = (vocabData as VocabItem[])
+            .filter((v) => v.level === userLevel || v.level === 'F')
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 20)
+          const initialCards: VocabProgress[] = filtered.map((v) => ({
+            user_id: user.id,
+            vocab_id: v.id,
+            ...SRS_DEFAULTS,
+          }))
+          setDueCards(initialCards)
+        }
       } else {
         setDueCards(due as VocabProgress[])
       }
@@ -132,12 +142,18 @@ export default function VocabularyPage() {
   }
 
   if (done) {
-    const pct = Math.round((sessionStats.correct / sessionStats.total) * 100)
+    const pct = sessionStats.total > 0 ? Math.round((sessionStats.correct / sessionStats.total) * 100) : 100
+    const noCards = dueCards.length === 0 && isReviewMode
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="card max-w-sm w-full text-center">
-          <div className="text-5xl mb-4">{pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪'}</div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Sessiya Tamamlandı!</h2>
+          <div className="text-5xl mb-4">{noCards ? '✅' : pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪'}</div>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+            {isReviewMode ? '🌙 Gecə Review Tamamlandı!' : 'Sessiya Tamamlandı!'}
+          </h2>
+          {noCards && (
+            <p className="text-gray-500 mb-4">Bu gün review ediləcək kart yoxdur. Yaxşı iş! 🎯</p>
+          )}
           <p className="text-gray-500 mb-4">
             {sessionStats.correct} / {sessionStats.total} düzgün — {pct}%
           </p>
@@ -163,10 +179,12 @@ export default function VocabularyPage() {
       {/* Header */}
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
         <button onClick={() => router.push('/dashboard')} className="text-gray-500 hover:text-gray-700">← Geri</button>
-        <span className="text-sm text-gray-500">
-          {currentIndex + 1} / {dueCards.length}
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          {isReviewMode ? '🌙 Gecə Review' : '🌅 SRS Lüğət'}
         </span>
-        <span className="text-sm font-medium text-green-600">✓ {sessionStats.correct}</span>
+        <span className="text-sm text-gray-500">
+          {currentIndex + 1} / {dueCards.length} · ✓ {sessionStats.correct}
+        </span>
       </header>
 
       {/* Progress bar */}
