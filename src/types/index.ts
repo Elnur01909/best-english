@@ -1,0 +1,137 @@
+// ─── İstifadəçi ───────────────────────────────────────
+export type CEFRLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
+export type TOLESLevel = 'Foundation' | 'Higher' | 'Advanced'
+
+export interface UserProfile {
+  id: string
+  email: string
+  level: CEFRLevel
+  toles_level: TOLESLevel
+  streak: number
+  total_points: number
+  last_active: string
+  created_at: string
+}
+
+// ─── Lüğət ────────────────────────────────────────────
+export type VocabTopic =
+  | 'Contract Law'
+  | 'Company Law'
+  | 'Court & Litigation'
+  | 'Employment Law'
+  | 'Tort Law'
+  | 'Property Law'
+  | 'Legal Writing & Procedure'
+
+export interface VocabItem {
+  id: number
+  term: string
+  pos: string              // Noun, Verb, Adjective...
+  en_def: string           // İngilis tərifi
+  az_translation: string   // Azərbaycanca izah
+  en_example: string       // Nümunə cümlə (EN)
+  az_example: string       // Nümunə cümlə (AZ)
+  collocations: string     // Kollokasiyalar
+  level: CEFRLevel | 'F' | 'H' | 'A'   // TOLES level shorthand
+  topic: VocabTopic
+}
+
+// ─── SRS İrəliləyiş ───────────────────────────────────
+export interface VocabProgress {
+  user_id: string
+  vocab_id: number
+  next_review: string      // ISO datetime
+  interval: number         // günlərlə
+  ease_factor: number      // default: 2.5
+  repetitions: number
+}
+
+// ─── SRS Kartı ────────────────────────────────────────
+export type SRSQuality = 0 | 1 | 2 | 3 | 4 | 5
+// 0 = tamamilə unutdum
+// 1 = yanlış, amma tanış
+// 2 = yanlış, çətin
+// 3 = düzgün, çox çətin
+// 4 = düzgün, bir az çətin
+// 5 = mükəmməl
+
+export interface SRSResult {
+  newInterval: number
+  newEaseFactor: number
+  newRepetitions: number
+  nextReview: Date
+}
+
+// ─── Quiz ─────────────────────────────────────────────
+export type QuizType = 'multiple_choice' | 'true_false' | 'fill_blank'
+export type QuizLevel = 'Foundation' | 'Higher' | 'Advanced'
+
+export interface QuizQuestion {
+  id: number
+  text: string
+  options: string[]
+  answer: string
+  explanation: string      // Azərbaycanca izah
+  level: QuizLevel
+  type: QuizType
+  topic?: string
+}
+
+export interface QuizResult {
+  user_id: string
+  quiz_id: number
+  correct: boolean
+  time_taken: number       // saniyə
+  answered_at: string
+}
+
+// ─── Dərslər ──────────────────────────────────────────
+export interface LessonVocabItem {
+  term: string
+  meaning: string
+  az: string
+}
+
+export interface LessonExercise {
+  question: string
+  answer: string
+}
+
+export interface Lesson {
+  id: number
+  title: string
+  az_title: string
+  level: string
+  color: string
+  objectives: string[]
+  vocab: LessonVocabItem[]
+  grammar: string
+  reading_en: string
+  reading_az: string
+  exercises: LessonExercise[]
+}
+
+export interface LessonProgress {
+  user_id: string
+  lesson_id: number
+  completed: boolean
+  completed_at: string | null
+}
+
+// ─── Statistika ───────────────────────────────────────
+export interface WeeklyStats {
+  date: string
+  vocab_reviewed: number
+  quiz_correct: number
+  minutes_spent: number
+}
+
+export interface DashboardData {
+  profile: UserProfile
+  streak: number
+  total_vocab_learned: number
+  total_quiz_correct: number
+  lessons_completed: number
+  weekly_stats: WeeklyStats[]
+  due_cards_count: number
+}

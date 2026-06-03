@@ -1,0 +1,472 @@
+[
+  {
+    "id": 1,
+    "title": "Dərs 1: Contract Law, Tort Law, Court & Litigation, Company Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: OFFER, ACCEPTANCE, CONSIDERATION, BREACH OF CONTRACT, NEGLIGENCE, CLAIMANT, DEFENDANT, DAMAGES, INJUNCTION, FIDUCIARY DUTY, MISREPRESENTATION, DURESS, UNDUE INFLUENCE, VOID, VOIDABLE",
+    "terms": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Dərs 2: Contract Law, Tort Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: PARTY, INDEMNITY, WARRANTY, TERMINATION, ASSIGNMENT, DEFAMATION, LIBEL, SLANDER, FALSE IMPRISONMENT, ASSAULT, BATTERY, TRESPASS, PROPERTY DAMAGE, VICARIOUS LIABILITY, STRICT LIABILITY",
+    "terms": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Dərs 3: Court & Litigation, Criminal Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: STATUTE OF LIMITATIONS, JURISDICTION, VENUE, AFFIDAVIT, DISCOVERY, JUDGMENT, APPEAL, PRECEDENT, BURDEN OF PROOF, EVIDENCE, EXPERT WITNESS, WITNESS, PERJURY, CONVICTION, ACQUITTAL",
+    "terms": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Dərs 4: Criminal Law, Company Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: PLEA, PLEA AGREEMENT, SENTENCE, BAIL, CUSTODY, PAROLE, PROBATION, RESTITUTION, MERGER, ACQUISITION, CORPORATE GOVERNANCE, SHAREHOLDER, DIVIDEND, DIRECTOR, BOARD OF DIRECTORS",
+    "terms": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Dərs 5: Intellectual Property, Employment Law, Property Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: TRADEMARK, COPYRIGHT, PATENT, INTELLECTUAL PROPERTY, INFRINGEMENT, EMPLOYMENT CONTRACT, WRONGFUL DISMISSAL, DISCRIMINATION, HARASSMENT, WHISTLEBLOWER, UNFAIR DISMISSAL, REDUNDANCY, LAND LAW, TITLE, LIEN",
+    "terms": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Dərs 6: Property Law, Administrative Law, Court & Litigation",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: LEASE, TENANT, LANDLORD, EVICTION, CONVEYANCING, MORTGAGE, EASEMENT, POLLUTION, ADMINISTRATIVE LAW, LICENSING, PETITION, REGULATION, INJUNCTIVE RELIEF, SETTLEMENT, MEDIATION",
+    "terms": [
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Dərs 7: Court & Litigation, Legal Principles, International Law, Tort Law, Contract Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: ARBITRATION, LITIGATION, COMPLAINT, CROSS-EXAMINATION, DEPOSITION, STATUTE, COMMON LAW, CIVIL LAW, CONSTITUTIONAL LAW, INTERNATIONAL LAW, TORTIOUS LIABILITY, REMEDIES, CONTRACT, BILATERAL CONTRACT, UNILATERAL CONTRACT",
+    "terms": [
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105
+    ],
+    "duration": 30,
+    "level": "H",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Dərs 8: Contract Law, Legal Principles, Company Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: COUNTERFFER, FORCE MAJEURE, RESCISSION, RESTITUTION, ESTOPPEL, WAIVER, GUARANTEE, INDEMNIFICATION, EARNEST MONEY, ESCROW, CONFLICT OF INTEREST, COLLATERAL, PROMISSORY NOTE, STATUTE OF FRAUDS, QUANTUM MERUIT",
+    "terms": [
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Dərs 9: Legal Principles, Contract Law, Criminal Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: UNJUST ENRICHMENT, LIQUIDATED DAMAGES, PENALTY CLAUSE, SPECIFIC PERFORMANCE, COVENANTS, NOVATION, PAROL EVIDENCE, CULPABILITY, ACTUS REUS, MENS REA, ACCOMPLICE, ACCESSORY, EMBEZZLEMENT, LARCENY, FORGERY",
+    "terms": [
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135
+    ],
+    "duration": 30,
+    "level": "H",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Dərs 10: Criminal Law, Bankruptcy Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: ARSON, MANSLAUGHTER, ASSAULT AND BATTERY, AGGRAVATED ASSAULT, STATUTORY RAPE, ROBBERY, BURGLARY, FRAUD, PERJURY, TAX EVASION, MONEY LAUNDERING, CONSPIRACY, INSOLVENCY, BANKRUPTCY, LIQUIDATION",
+    "terms": [
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150
+    ],
+    "duration": 30,
+    "level": "H",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  }
+]

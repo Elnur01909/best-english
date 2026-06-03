@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Müqavilə pozulması iddiası",
+    "description": "Bir şirkət məhsul çatdırmadığı üçün digərinə qarşı müqavilə pozulması iddiası açmışdır.",
+    "scenario": "Tədarükçü vaxtında malları çatdırmadığı üçün alıcı 50,000 funt sterlinq kompensasiya tələb edir.",
+    "relatedTerms": [
+      1,
+      4,
+      6,
+      8,
+      36
+    ],
+    "questions": [
+      "Tədarükçü nə üçün məsuliyyətli?",
+      "Alıcı hansı təminat əldə edə bilər?",
+      "Məhkəmə nə həm verərdi?"
+    ],
+    "difficulty": "Foundation"
+  },
+  {
+    "id": 2,
+    "title": "Səhlənkarlıq iddiası",
+    "description": "Bir doktor xəstəyi xəbərdar etmədi və xəstə zərərçəkmişdir.",
+    "scenario": "Cerrah operasiyadan əvvəl riskləri xəstəyə izah etmədi, xəstə fəlacətə uğradı.",
+    "relatedTerms": [
+      5,
+      7,
+      8,
+      29
+    ],
+    "questions": [
+      "Cərrah nə səbəbdən səhlənkarlıqda məsuldür?",
+      "Xəstəxana vəkil məsuliyyətə tabe tutula bilərmi?",
+      "Kompensasiya hansı əsasda hesablanır?"
+    ],
+    "difficulty": "Foundation"
+  },
+  {
+    "id": 3,
+    "title": "İş hüququ mövzusu: qeyri-ədil çıxarılma",
+    "description": "Bir işçi xəbərdarlıq olmadan işdən çıxarılmışdır.",
+    "scenario": "İş verən işçini prosedur olmadan və səbəb göstərmədən işdən çıxardı.",
+    "relatedTerms": [
+      67,
+      68,
+      70
+    ],
+    "questions": [
+      "İşçi nə iddia qaldıra bilər?",
+      "İş verən nə cəzaya tabe tutula bilər?",
+      "Qanun işçini qoruyur?"
+    ],
+    "difficulty": "Higher"
+  },
+  {
+    "id": 4,
+    "title": "Mülkiyyət sərəncamı: kirayə sazişi",
+    "description": "Ev sahibi və kirayə tutanın arasında mənazəə.",
+    "scenario": "Kirayə tutan mətən zamanında ödəmir, ev sahibi cıxarma prosesi başlatır.",
+    "relatedTerms": [
+      76,
+      77,
+      78,
+      79
+    ],
+    "questions": [
+      "Ev sahibi kimə qanuni icazə?",
+      "Kirayə tutanın hüquqları nələrdir?",
+      "Cıxarma prosesi necə işləyir?"
+    ],
+    "difficulty": "Higher"
+  },
+  {
+    "id": 5,
+    "title": "Intellektual mülkiyyət: marka pozulması",
+    "description": "Bir şirkət başqa şirkətin marka işarəsini qeyri-icazə istifadə edir.",
+    "scenario": "Başqa məhsul istehsalçısı meşhur markanın oxşar işarəsini istifadə edərək bazarı aldatır.",
+    "relatedTerms": [
+      61,
+      62,
+      64,
+      65
+    ],
+    "questions": [
+      "Marka sahibi nə edə bilər?",
+      "Pozulma iddiasında nə sübut etmə lazımdır?",
+      "Kompensasiya nə ola bilər?"
+    ],
+    "difficulty": "Higher"
+  }
+]
