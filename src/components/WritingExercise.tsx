@@ -40,9 +40,10 @@ export default function WritingExercise({
       onSubmit?.(text)
       setSubmitted(true)
     } catch (err: any) {
-      if (err.message === 'NO_KEY') setAiError('AI Müəllimi aktivləşdir (sağ aşağıdakı 🎓 düymə).')
+      if (err.message === 'SHARED_LIMIT' || err.message === 'NO_KEY') setAiError('Gündəlik 15 pulsuz limit doldu — 🎓 paneldən öz açarını əlavə et.')
       else if (err.message === 'BAD_KEY') setAiError('API açarı yanlışdır.')
-      else if (err.message === 'RATE_LIMIT') setAiError('Günlük pulsuz limit doldu.')
+      else if (err.message === 'RATE_LIMIT') setAiError('Bir az gözlə və yenidən cəhd et.')
+      else if (err.message === 'NO_AUTH') setAiError('Sessiya bitib, yenidən daxil ol.')
       else setAiError('Xəta baş verdi.')
     } finally {
       setAiLoading(false)

@@ -18,10 +18,10 @@ export default function AIKeySetup({ onSaved }: AIKeySetupProps) {
   return (
     <div className="p-4 space-y-3">
       <div className="text-center">
-        <div className="text-3xl mb-2">🎓</div>
-        <h3 className="font-semibold text-gray-900 dark:text-white">AI Müəllimi Aktivləşdir</h3>
+        <div className="text-3xl mb-2">🔑</div>
+        <h3 className="font-semibold text-gray-900 dark:text-white">Limitsiz AI — Öz Açarın</h3>
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-          Pulsuz Google Gemini açarı ilə (kart lazım deyil)
+          Gündəlik pulsuz limiti keçmək üçün öz pulsuz Gemini açarını əlavə et (kart lazım deyil). Limitsiz olacaq.
         </p>
       </div>
 

@@ -1,5 +1,8 @@
-// ─── AI Müəllim — Gemini (BYOK: hər user öz pulsuz açarını gətirir) ───
-// Açar user-in brauzerində (localStorage) saxlanır, serverə getmir.
+// ─── AI Müəllim — Hibrid (ortaq açar + BYOK) ───
+// 1) User öz açarını əlavə edibsə → birbaşa Gemini (limitsiz, öz kvotası).
+// 2) Yoxsa → server ortaq açarla (gündə 15 pulsuz mesaj, sıfır əziyyət).
+
+import { supabase } from '@/lib/supabase'
 
 const KEY_STORAGE = 'best_english_gemini_key'
 // Pulsuz tier-də ən yüksək günlük limitli modellər (sıra ilə cəhd edilir)
@@ -32,14 +35,24 @@ export function hasApiKey(): boolean {
   return !!getApiKey()
 }
 
-// ─── Əsas çağırış ──────────────────────────────────────
+// ─── Əsas çağırış (hibrid) ─────────────────────────────
 export async function callGemini(
   systemPrompt: string,
   messages: AIMessage[]
 ): Promise<string> {
   const key = getApiKey()
-  if (!key) throw new Error('NO_KEY')
+  // 1) Öz açarı varsa → birbaşa Gemini (limitsiz)
+  if (key) return callDirect(key, systemPrompt, messages)
+  // 2) Yoxsa → ortaq hovuz (server, gündə 15 pulsuz)
+  return callShared(systemPrompt, messages)
+}
 
+// Birbaşa Gemini — istifadəçinin öz açarı ilə
+async function callDirect(
+  key: string,
+  systemPrompt: string,
+  messages: AIMessage[]
+): Promise<string> {
   const body = JSON.stringify({
     system_instruction: { parts: [{ text: systemPrompt }] },
     contents: messages.map((m) => ({ role: m.role, parts: [{ text: m.text }] })),
@@ -47,15 +60,12 @@ export async function callGemini(
   })
 
   let lastErr: Error = new Error('AI xətası')
-
-  // Modelləri sıra ilə cəhd et (biri 404/limit olsa, növbətiyə keç)
   for (const model of MODELS) {
     const res = await fetch(`${ENDPOINT(model)}?key=${key}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body,
     })
-
     if (res.ok) {
       const data = await res.json()
       const text = data?.candidates?.[0]?.content?.parts?.[0]?.text
@@ -63,15 +73,37 @@ export async function callGemini(
       lastErr = new Error('Boş cavab gəldi')
       continue
     }
-
     const errText = await res.text()
     if (res.status === 400 && errText.includes('API_KEY')) throw new Error('BAD_KEY')
-    if (res.status === 404) { lastErr = new Error('MODEL_404'); continue } // model yoxdur → növbəti
-    if (res.status === 429) { lastErr = new Error('RATE_LIMIT'); continue } // limit → başqa model cəhd et
+    if (res.status === 404) { lastErr = new Error('MODEL_404'); continue }
+    if (res.status === 429) { lastErr = new Error('RATE_LIMIT'); continue }
     lastErr = new Error(`AI xətası (${res.status})`)
   }
-
   throw lastErr
+}
+
+// Ortaq hovuz — server API route (sənin açarın gizli, gündə 15 limit)
+async function callShared(systemPrompt: string, messages: AIMessage[]): Promise<string> {
+  const { data: { session } } = await supabase.auth.getSession()
+  const accessToken = session?.access_token
+  if (!accessToken) throw new Error('NO_AUTH')
+
+  const res = await fetch('/api/ai', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ systemPrompt, messages, accessToken }),
+  })
+
+  if (res.ok) {
+    const data = await res.json()
+    if (data.text) return data.text
+    throw new Error('Boş cavab gəldi')
+  }
+
+  const err = await res.json().catch(() => ({}))
+  if (err.error === 'SHARED_LIMIT') throw new Error('SHARED_LIMIT') // gündəlik 15 doldu → öz açarını əlavə et
+  if (err.error === 'NO_SHARED_KEY') throw new Error('NO_KEY')      // server açarı yoxdur → öz açarını əlavə et
+  throw new Error('AI xətası')
 }
 
 // ─── Müəllim sistem promptu ────────────────────────────

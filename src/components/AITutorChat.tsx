@@ -1,6 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
-import { tutorChat, hasApiKey, type AIMessage } from '@/lib/ai'
+import { tutorChat, type AIMessage } from '@/lib/ai'
 import AIKeySetup from './AIKeySetup'
 
 interface AITutorChatProps {
@@ -9,16 +9,13 @@ interface AITutorChatProps {
 
 export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
   const [open, setOpen] = useState(false)
-  const [keyReady, setKeyReady] = useState(false)
+  const [showKeySetup, setShowKeySetup] = useState(false)
   const [messages, setMessages] = useState<AIMessage[]>([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [limitHit, setLimitHit] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (open) setKeyReady(hasApiKey())
-  }, [open])
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' })
@@ -36,11 +33,16 @@ export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
       const reply = await tutorChat(newHistory, level)
       setMessages([...newHistory, { role: 'model', text: reply }])
     } catch (err: any) {
-      if (err.message === 'BAD_KEY') {
+      if (err.message === 'SHARED_LIMIT' || err.message === 'NO_KEY') {
+        setLimitHit(true)
+        setError('Gündəlik pulsuz limit doldu. Davam etmək üçün öz pulsuz açarını əlavə et 👇')
+      } else if (err.message === 'BAD_KEY') {
         setError('Açar yanlışdır. Yenidən daxil et.')
-        setKeyReady(false)
+        setShowKeySetup(true)
       } else if (err.message === 'RATE_LIMIT') {
-        setError('Günlük pulsuz limit doldu. Sabah yenidən cəhd et.')
+        setError('Bir az gözlə (sürət limiti) və yenidən cəhd et.')
+      } else if (err.message === 'NO_AUTH') {
+        setError('Sessiya bitib. Yenidən daxil ol.')
       } else {
         setError('Xəta baş verdi. Yenidən cəhd et.')
       }
@@ -51,7 +53,6 @@ export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
 
   return (
     <>
-      {/* Üzən düymə */}
       {!open && (
         <button
           onClick={() => setOpen(true)}
@@ -62,7 +63,6 @@ export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
         </button>
       )}
 
-      {/* Panel */}
       {open && (
         <div className="fixed bottom-5 right-5 z-40 w-[92vw] max-w-sm h-[70vh] max-h-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden">
           {/* Header */}
@@ -71,21 +71,36 @@ export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
               <span className="text-xl">🎓</span>
               <span className="font-semibold text-sm">AI Müəllim</span>
             </div>
-            <button onClick={() => setOpen(false)} className="text-white/80 hover:text-white text-xl leading-none">×</button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setShowKeySetup((s) => !s)}
+                className="text-white/80 hover:text-white text-sm"
+                title="Öz açarını əlavə et"
+              >
+                🔑
+              </button>
+              <button onClick={() => setOpen(false)} className="text-white/80 hover:text-white text-xl leading-none">×</button>
+            </div>
           </div>
 
-          {!keyReady ? (
+          {showKeySetup ? (
             <div className="flex-1 overflow-y-auto">
-              <AIKeySetup onSaved={() => setKeyReady(true)} />
+              <AIKeySetup
+                onSaved={() => {
+                  setShowKeySetup(false)
+                  setLimitHit(false)
+                  setError(null)
+                }}
+              />
             </div>
           ) : (
             <>
-              {/* Mesajlar */}
               <div ref={scrollRef} className="flex-1 overflow-y-auto p-3 space-y-3">
                 {messages.length === 0 && (
                   <div className="text-center text-gray-400 text-sm mt-8 px-4">
                     <p className="mb-2">👋 Salam! Mən sənin İngilis/TOLES müəllimənəm.</p>
                     <p className="text-xs">Sual ver: "liable nə deməkdir?", "bu cümlə düzgündürmü?", "consideration izah et"...</p>
+                    <p className="text-[11px] text-gray-400 mt-3">✨ Gündə 15 pulsuz mesaj — açar lazım deyil</p>
                   </div>
                 )}
                 {messages.map((m, i) => (
@@ -101,16 +116,19 @@ export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
                   </div>
                 ))}
                 {loading && (
-                  <div className="mr-auto bg-gray-100 dark:bg-gray-800 p-2.5 rounded-xl text-sm text-gray-500">
-                    yazır...
-                  </div>
+                  <div className="mr-auto bg-gray-100 dark:bg-gray-800 p-2.5 rounded-xl text-sm text-gray-500">yazır...</div>
                 )}
-                {error && (
-                  <div className="text-center text-red-500 text-xs">{error}</div>
+                {error && <div className="text-center text-red-500 text-xs px-2">{error}</div>}
+                {limitHit && (
+                  <button
+                    onClick={() => setShowKeySetup(true)}
+                    className="mx-auto block px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium"
+                  >
+                    🔑 Öz pulsuz açarımı əlavə et
+                  </button>
                 )}
               </div>
 
-              {/* Input */}
               <div className="p-3 border-t border-gray-200 dark:border-gray-700 flex gap-2">
                 <input
                   value={input}
