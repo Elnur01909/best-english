@@ -16,8 +16,9 @@ function shuffle<T>(arr: T[]): T[] {
 
 // Exact match + trim (leading/trailing space allowed, internal spaces = yanlış)
 function checkAnswer(input: string, correct: string): boolean {
+  // Böyük/kiçik hərf fərqi yoxdur, amma sözün ortasında boşluq yanlışdır
   const trimmed = input.trim()
-  return trimmed === correct
+  return trimmed.toLowerCase() === correct.toLowerCase()
 }
 
 function ReadingContent() {
