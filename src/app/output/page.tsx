@@ -73,8 +73,12 @@ export default function OutputPage() {
     if (selected) return
     setSelected(option)
     const correct = option === currentQ.correct
-    setQuizResults((r) => [...r, correct])
+    const newResults = [...quizResults, correct]
+    setQuizResults(newResults)
     setQuizFeedback(getRandomMessage(correct ? 'success' : 'wrong_answer'))
+    // Dərhal score yaz — geri bassanı belə qalsın
+    const currentScore = Math.round((newResults.filter(Boolean).length / quizQuestions.length) * 100)
+    saveSessionScore('evening', currentScore)
     if (userId) {
       await saveQuizResult({ user_id: userId, quiz_id: currentQ.id, correct, time_taken: 0 })
     }

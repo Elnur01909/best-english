@@ -46,7 +46,13 @@ function ReadingContent() {
   function selectAnswer(opt: string) {
     if (selected) return
     setSelected(opt)
-    setQResults(r => [...r, opt === current.correct])
+    const correct = opt === current.correct
+    const newQResults = [...qResults, correct]
+    setQResults(newQResults)
+    // Dərhal score yaz
+    const total = questions.length + collocations.length
+    const currentScore = Math.round((newQResults.filter(Boolean).length + cResults.filter(Boolean).length) / total * 100)
+    saveSessionScore('midday', currentScore)
   }
 
   function nextQuestion() {
@@ -61,7 +67,13 @@ function ReadingContent() {
   function selectCollocation(opt: string) {
     if (cSelected) return
     setCSelected(opt)
-    setCResults(r => [...r, opt === currentC.answer])
+    const correct = opt === currentC.answer
+    const newCResults = [...cResults, correct]
+    setCResults(newCResults)
+    // Dərhal score yaz
+    const total = questions.length + collocations.length
+    const currentScore = Math.round((qResults.filter(Boolean).length + newCResults.filter(Boolean).length) / total * 100)
+    saveSessionScore('midday', currentScore)
   }
 
   function nextCollocation() {

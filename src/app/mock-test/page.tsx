@@ -289,10 +289,12 @@ function MockTestContent() {
     const correct = opt === current.correct
 
     if (correct) {
-      // Mənimsənildi
+      // Mənimsənildi — dərhal score yaz (geri bassanı belə qalsın)
       setMastered(prev => {
         const next = new Set(prev)
         next.add(current.id)
+        const newScore = Math.round((next.size / TOTAL_UNIQUE) * 100)
+        saveSessionScore('night', newScore)
         return next
       })
     } else {

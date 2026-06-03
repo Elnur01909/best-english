@@ -96,10 +96,12 @@ function VocabularyContent() {
     })
 
     const isCorrect = quality >= 3
-    setSessionStats((s) => ({
-      correct: isCorrect ? s.correct + 1 : s.correct,
-      total: s.total + 1,
-    }))
+    const newCorrect = isCorrect ? sessionStats.correct + 1 : sessionStats.correct
+    const newTotal = sessionStats.total + 1
+    setSessionStats({ correct: newCorrect, total: newTotal })
+    // Dərhal score yaz — geri bassanı belə qalsın
+    const vocabScore = Math.round((newCorrect / newTotal) * 100)
+    saveSessionScore('morning', vocabScore)
 
     // Affective Filter feedback
     setFeedbackMsg(getRandomMessage(isCorrect ? 'success' : 'wrong_answer'))
