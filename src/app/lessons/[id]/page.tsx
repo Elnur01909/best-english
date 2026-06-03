@@ -90,7 +90,10 @@ export default function LessonPage() {
                   <div className="font-bold text-gray-900 dark:text-white">{v.term}</div>
                   <AudioPlayer word={v.term} variant="minimal" />
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-300 mt-1">{v.en_def}</div>
+                <div className="space-y-1">
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{v.en_def}</div>
+                  <AudioPlayer word={v.en_def} variant="sentence" isSentence={true} />
+                </div>
                 <div className="text-sm text-green-700 dark:text-green-400 mt-1 italic">{v.az_translation}</div>
                 <div className="text-xs text-gray-400 mt-2">🔗 {v.collocations}</div>
               </div>
