@@ -345,7 +345,7 @@
       "ACQUISITION"
     ],
     "correct": "ASSAULT",
-    "explanation": "ASSAULT: A tort or crime in which a person intentionally creates an apprehension in another of imminent harmful or offensive contact.",
+    "explanation": "ASSAULT: Fiziki təmas TƏLƏB OLUNMUR — əsas şərt qorxu yaradılmasıdır. Məsələn, yumruq atmaq üçün əli qaldırmaq ASSAULT-dur, hətta əl dəyməsə belə. BATTERY-dən fərqi: BATTERY-də fiziki təmas mütləqdir.",
     "level": "H",
     "topic": "Tort Law"
   },
@@ -359,7 +359,7 @@
       "APPEAL"
     ],
     "correct": "BATTERY",
-    "explanation": "BATTERY: A tort or crime in which a person intentionally and without lawful justification makes harmful or offensive contact with another's body.",
+    "explanation": "BATTERY: Fiziki təmas MÜTLƏQDİR — ASSAULT-dan bu cəhətdən fərqlənir. Lakin xəsarət lazım deyil: sadə itələmək, toxunmaq da battery hesab oluna bilər. Məsələn: birini qəsdən itələmək = battery.",
     "level": "H",
     "topic": "Tort Law"
   },
