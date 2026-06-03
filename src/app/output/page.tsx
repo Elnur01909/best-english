@@ -9,6 +9,8 @@ import AITutorChat from '@/components/AITutorChat'
 import AudioPlayer from '@/components/AudioPlayer'
 import { saveSessionScore } from '@/lib/sessionScore'
 import quizData from '@/data/quizzes.json'
+import vocabData from '@/data/vocab.json'
+import type { VocabItem } from '@/types'
 
 function shuffle<T>(arr: T[]): T[] {
   return [...arr].sort(() => Math.random() - 0.5)
@@ -97,8 +99,14 @@ function OutputContent() {
       const exp = await explainQuizError(current.question, current.correct, selected ?? '—', userLevel)
       setAiExplanation(exp)
     } catch (err: any) {
-      if (err.message === 'SHARED_LIMIT' || err.message === 'NO_KEY') setAiError('AI limiti doldu — 🎓 öz açarını əlavə et.')
-      else setAiError('Xəta baş verdi.')
+      if (err.message === 'SHARED_LIMIT' || err.message === 'NO_KEY')
+        setAiError('Gündəlik pulsuz limit doldu — 🎓 düyməsindən öz pulsuz açarını əlavə et.')
+      else if (err.message === 'BAD_KEY')
+        setAiError('API açarı yanlışdır. 🎓 düyməsindən yenidən daxil et.')
+      else if (err.message === 'RATE_LIMIT')
+        setAiError('Bir az gözlə (sürət limiti) və yenidən cəhd et.')
+      else
+        setAiError('Xəta: ' + (err.message ?? 'Bilinmir'))
     } finally { setAiLoading(false) }
   }
 
@@ -197,10 +205,28 @@ function OutputContent() {
                     {selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}
                   </div>
                 )}
-                <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 rounded-xl p-4 mb-4">
-                  <p className="text-sm font-semibold text-blue-700 mb-1">💡 İzah:</p>
-                  <p className="text-sm text-blue-800 dark:text-blue-200">{current.explanation}</p>
-                </div>
+                {(() => {
+                  const vocab = (vocabData as VocabItem[]).find(
+                    v => v.term.toLowerCase() === current.correct.toLowerCase()
+                  )
+                  return (
+                    <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 rounded-xl p-4 mb-4 space-y-3">
+                      <div>
+                        <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">💡 İzah (EN):</p>
+                        <p className="text-sm text-blue-800 dark:text-blue-200">{current.explanation}</p>
+                        <div className="mt-1.5">
+                          <AudioPlayer word={current.explanation} variant="sentence" isSentence={true} />
+                        </div>
+                      </div>
+                      {vocab && (
+                        <div className="border-t border-blue-200 dark:border-blue-700 pt-3">
+                          <p className="text-sm font-semibold text-green-700 dark:text-green-400 mb-1">🇦🇿 Azərbaycanca:</p>
+                          <p className="text-sm text-green-800 dark:text-green-300">{vocab.az_translation}</p>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })()}
                 {!aiExplanation && (
                   <button onClick={askAiExplain} disabled={aiLoading}
                     className="w-full mb-4 py-2.5 rounded-xl border-2 border-purple-300 text-purple-700 text-sm font-medium disabled:opacity-50">
