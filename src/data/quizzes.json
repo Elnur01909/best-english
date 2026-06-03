@@ -597,7 +597,7 @@
       "CONVICTION"
     ],
     "correct": "PERJURY",
-    "explanation": "PERJURY: The crime of deliberately giving false testimony under oath in a court proceeding.",
+    "explanation": "PERJURY (Bilə-bilə yalan ifadə vermə): Məhkəmə prosesində and içərək qəsdən yalan ifadə vermə cinayəti. And içmiş şahid yalan danışarsa perjury törətmiş sayılır.",
     "level": "H",
     "topic": "Court & Litigation"
   },
@@ -2011,7 +2011,7 @@
       "MONEY LAUNDERING"
     ],
     "correct": "PERJURY",
-    "explanation": "PERJURY: The deliberate giving of false testimony under oath in a court proceeding.",
+    "explanation": "PERJURY (Bilə-bilə yalan ifadə vermə): Məhkəmə prosesində and içərək qəsdən yalan ifadə vermə cinayəti. And içmiş şahid yalan danışarsa perjury törətmiş sayılır.",
     "level": "H",
     "topic": "Criminal Law"
   },
