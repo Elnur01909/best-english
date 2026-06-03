@@ -28,19 +28,20 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-// Skor məntiqi: ən yüksək ardıcıl keçilmiş səviyyə (hər səviyyədə ≥60%)
+// Skor məntiqi: ümumi düzgün cavab sayına görə səviyyə təyin et
+// 18 sual, hər 3 sual = 1 səviyyə
+// 0–2 → A1, 3–5 → A2, 6–8 → B1, 9–11 → B2, 12–14 → C1, 15–18 → C2
 function computeLevel(correctByLevel: Record<string, number>, totalByLevel: Record<string, number>): CEFRLevel {
-  let result: CEFRLevel = 'A1'
-  for (const lvl of LEVELS) {
-    const total = totalByLevel[lvl] ?? 0
-    const correct = correctByLevel[lvl] ?? 0
-    if (total > 0 && correct / total >= 0.6) {
-      result = lvl
-    } else {
-      break // ardıcıllıq pozulur
-    }
-  }
-  return result
+  const total = Object.values(totalByLevel).reduce((a, b) => a + b, 0)
+  const correct = Object.values(correctByLevel).reduce((a, b) => a + b, 0)
+  const pct = total > 0 ? correct / total : 0
+
+  if (pct >= 0.83) return 'C2'   // 15–18/18
+  if (pct >= 0.67) return 'C1'   // 12–14/18
+  if (pct >= 0.50) return 'B2'   // 9–11/18
+  if (pct >= 0.33) return 'B1'   // 6–8/18
+  if (pct >= 0.17) return 'A2'   // 3–5/18
+  return 'A1'                    // 0–2/18
 }
 
 export default function PlacementPage() {

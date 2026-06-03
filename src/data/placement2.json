@@ -100,7 +100,7 @@
   { "id": 278, "level": "A2", "question": "She is the ___ student in class.", "options": ["good", "better", "best", "well"], "correct": "best" },
   { "id": 279, "level": "A2", "question": "There isn't ___ bread.", "options": ["many", "much", "a few", "any much"], "correct": "much" },
   { "id": 280, "level": "A2", "question": "I ___ help you.", "options": ["will", "am", "do", "going"], "correct": "will" },
-  { "id": 281, "level": "A2", "question": "He ___ a new car.", "options": ["buy", "bought", "buys", "buying"], "correct": "bought" },
+  { "id": 281, "level": "A2", "question": "He ___ a new car yesterday.", "options": ["buy", "bought", "buys", "buying"], "correct": "bought" },
   { "id": 282, "level": "A2", "question": "She is as tall ___ her sister.", "options": ["as", "than", "that", "so"], "correct": "as" },
   { "id": 283, "level": "A2", "question": "I'm interested ___ history.", "options": ["in", "on", "at", "for"], "correct": "in" },
   { "id": 284, "level": "A2", "question": "I ___ go to the gym.", "options": ["usually", "yesterday", "ago", "since"], "correct": "usually" },
@@ -119,7 +119,7 @@
   { "id": 297, "level": "A2", "question": "The phone's ringing. I ___ answer it.", "options": ["will", "am", "going", "do"], "correct": "will" },
   { "id": 298, "level": "A2", "question": "He drives ___.", "options": ["careful", "carefully", "care", "carefuly"], "correct": "carefully" },
   { "id": 299, "level": "A2", "question": "Is this bag ___?", "options": ["your", "yours", "you", "you're"], "correct": "yours" },
-  { "id": 300, "level": "A2", "question": "They ___ to the beach.", "options": ["go", "went", "gone", "goes"], "correct": "went" },
+  { "id": 300, "level": "A2", "question": "They ___ to the beach last summer.", "options": ["go", "went", "gone", "goes"], "correct": "went" },
 
   { "id": 301, "level": "B1", "question": "I ___ been waiting for an hour.", "options": ["have", "has", "am", "was"], "correct": "have" },
   { "id": 302, "level": "B1", "question": "If I had money, I ___ buy a car.", "options": ["will", "would", "can", "am"], "correct": "would" },
