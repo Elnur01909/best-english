@@ -216,76 +216,59 @@ function VocabularyContent() {
       </div>
 
       {/* Kart */}
-      <main className="flex-1 flex items-center justify-center px-4">
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-6">
         {currentVocab ? (
           <div className="w-full max-w-lg">
-            {/* Ön üz */}
-            <div
-              className="card cursor-pointer text-center py-12 mb-4"
-              onClick={() => setCardState('back')}
-            >
+
+            {/* KART — həmişə açıq, hər iki tərəf görsənir */}
+            <div className="card text-center mb-6">
               <div className="text-xs text-gray-400 mb-2">{currentVocab.topic}</div>
 
-              {/* Audio — 4-Modal: Eşitmə */}
-              <div className="mb-4 flex justify-center">
+              {/* Söz + audio */}
+              <div className="mb-3 flex justify-center">
                 <AudioPlayer word={currentVocab.term} variant="minimal" />
               </div>
-
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-1">
                 {currentVocab.term}
               </h2>
-              <p className="text-gray-500 italic">{currentVocab.pos}</p>
+              <p className="text-gray-400 italic text-sm mb-4">{currentVocab.pos}</p>
 
-              {cardState === 'front' && (
-                <p className="text-sm text-blue-500 mt-6">Cavabı görmək üçün karta bas</p>
-              )}
-
-              {cardState === 'back' && (
-                <div className="mt-6 space-y-3 text-left border-t border-gray-100 dark:border-gray-800 pt-4">
-                  <div className="space-y-1">
-                    <p className="text-gray-700 dark:text-gray-300">
-                      <span className="font-medium text-gray-500">EN:</span> {currentVocab.en_def}
-                    </p>
-                    <AudioPlayer
-                      word={currentVocab.en_def}
-                      variant="sentence"
-                      isSentence={true}
-                    />
-                  </div>
-                  <p className="text-green-700 dark:text-green-400">
-                    <span className="font-medium">AZ:</span> {currentVocab.az_translation}
+              {/* Ayırıcı */}
+              <div className="border-t border-gray-100 dark:border-gray-800 pt-4 space-y-3 text-left">
+                <div className="space-y-1">
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    <span className="font-medium text-gray-500">EN:</span> {currentVocab.en_def}
                   </p>
-                  {/* Nümunə cümlə + cümlə audio */}
-                  <div className="space-y-1">
-                    <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
-                    <AudioPlayer
-                      word={currentVocab.en_example}
-                      variant="sentence"
-                      isSentence={true}
-                    />
-                  </div>
-                  <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
+                  <AudioPlayer word={currentVocab.en_def} variant="sentence" isSentence={true} />
                 </div>
-              )}
+                <p className="text-green-700 dark:text-green-400 text-sm">
+                  <span className="font-medium">AZ:</span> {currentVocab.az_translation}
+                </p>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
+                  <AudioPlayer word={currentVocab.en_example} variant="sentence" isSentence={true} />
+                </div>
+                <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
+              </div>
             </div>
 
-            {/* Qiymətləndirmə düymələri */}
-            {cardState === 'back' && (
+            {/* Düymələr — həmişə görünür */}
+            {(
               <>
                 <div className="grid grid-cols-2 gap-4">
                   <button
                     onClick={handleUnutdum}
                     disabled={feedbackMsg !== null}
-                    className="py-4 rounded-xl bg-red-100 hover:bg-red-200 text-red-700 font-semibold text-base transition-colors disabled:opacity-50"
+                    className="py-5 rounded-xl bg-red-100 hover:bg-red-200 text-red-700 font-bold text-lg transition-colors disabled:opacity-50"
                   >
-                    ✗ Unutdum
+                    ✗ Unuduram
                   </button>
                   <button
                     onClick={handleBildim}
                     disabled={feedbackMsg !== null}
                     className="py-4 rounded-xl bg-green-100 hover:bg-green-200 text-green-700 font-semibold text-base transition-colors disabled:opacity-50"
                   >
-                    ✓ Bildim
+                    ✓ Bilirəm
                   </button>
                 </div>
 
