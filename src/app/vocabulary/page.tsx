@@ -17,19 +17,24 @@ type FeedbackType = 'success' | 'wrong'
 function VocabularyContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const isReviewMode = searchParams.get('mode') === 'review' // gecə rejimi
+  const isReviewMode = searchParams.get('mode') === 'review'
   const [userId, setUserId] = useState<string | null>(null)
   const [userLevel, setUserLevel] = useState<string>('B1')
-  const [dueCards, setDueCards] = useState<VocabProgress[]>([])
-  const [currentIndex, setCurrentIndex] = useState(0)
+  // Queue-based sistem: yanlış kartlar geri qayıdır
+  const [queue, setQueue] = useState<VocabProgress[]>([])
+  const [totalUnique, setTotalUnique] = useState(0)
+  const [qIdx, setQIdx] = useState(0)
+  const [mastered, setMastered] = useState<Set<number>>(new Set())
   const [cardState, setCardState] = useState<CardState>('front')
-  const [sessionStats, setSessionStats] = useState({ correct: 0, total: 0 })
   const [done, setDone] = useState(false)
   const [loading, setLoading] = useState(true)
   const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null)
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
   const [outputCount, setOutputCount] = useState(0)
   const [showOutputModal, setShowOutputModal] = useState(false)
+  // köhnə compat
+  const dueCards = queue
+  const currentIndex = qIdx
 
   useEffect(() => {
     async function init() {
@@ -47,103 +52,115 @@ function VocabularyContent() {
 
       if (!due || due.length === 0) {
         if (isReviewMode) {
-          // Gecə review: due kart yoxdursa — tamamlanıb
-          setDueCards([])
+          setQueue([])
+          setTotalUnique(0)
           setDone(true)
         } else {
-          // Səhər: yeni istifadəçi — level-ə uyğun sözlərdən təsadüfi 20 söz seç
           const filtered = (vocabData as VocabItem[])
             .filter((v) => v.level === userLevel || v.level === 'F')
             .sort(() => Math.random() - 0.5)
             .slice(0, 20)
           const initialCards: VocabProgress[] = filtered.map((v) => ({
-            user_id: user.id,
-            vocab_id: v.id,
-            ...SRS_DEFAULTS,
+            user_id: user.id, vocab_id: v.id, ...SRS_DEFAULTS,
           }))
-          setDueCards(initialCards)
+          setQueue(initialCards)
+          setTotalUnique(initialCards.length)
         }
       } else {
-        setDueCards(due as VocabProgress[])
+        setQueue(due as VocabProgress[])
+        setTotalUnique(due.length)
       }
       setLoading(false)
     }
     init()
   }, [router, userLevel])
 
-  const currentCard = dueCards[currentIndex]
+  const currentCard = queue[qIdx]
   const currentVocab = currentCard
     ? (vocabData as VocabItem[]).find((v) => v.id === currentCard.vocab_id)
     : null
 
-  async function handleQuality(quality: SRSQuality) {
+  const progressPct = totalUnique > 0 ? Math.round((mastered.size / totalUnique) * 100) : 0
+
+  async function handleBildim() {
     if (!userId || !currentCard || !currentVocab) return
 
-    const result = calculateNextReview(
-      quality,
-      currentCard.interval,
-      currentCard.ease_factor,
-      currentCard.repetitions
-    )
-
+    // SRS: uzun interval
+    const result = calculateNextReview(5, currentCard.interval, currentCard.ease_factor, currentCard.repetitions)
     await upsertVocabProgress({
-      user_id: userId,
-      vocab_id: currentCard.vocab_id,
+      user_id: userId, vocab_id: currentCard.vocab_id,
       next_review: result.nextReview.toISOString(),
-      interval: result.newInterval,
-      ease_factor: result.newEaseFactor,
-      repetitions: result.newRepetitions,
+      interval: result.newInterval, ease_factor: result.newEaseFactor, repetitions: result.newRepetitions,
     })
 
-    const isCorrect = quality >= 3
-    const newCorrect = isCorrect ? sessionStats.correct + 1 : sessionStats.correct
-    const newTotal = sessionStats.total + 1
-    setSessionStats({ correct: newCorrect, total: newTotal })
-    // Dərhal score yaz — geri bassanı belə qalsın
-    const vocabScore = Math.round((newCorrect / newTotal) * 100)
-    saveSessionScore('morning', vocabScore)
+    // Mənimsənildi
+    const next = new Set(mastered); next.add(currentCard.vocab_id)
+    setMastered(next)
+    const score = Math.round((next.size / totalUnique) * 100)
+    saveSessionScore('morning', score)
 
-    // Affective Filter feedback
-    setFeedbackMsg(getRandomMessage(isCorrect ? 'success' : 'wrong_answer'))
-    setFeedbackType(isCorrect ? 'success' : 'wrong')
+    setFeedbackMsg(getRandomMessage('success'))
+    setFeedbackType('success')
 
-    // Output Mandatory — hər 3 kartdan sonra
     const newOutputCount = outputCount + 1
     setOutputCount(newOutputCount)
 
-    // 2 saniye sonra sonrakı karta keç (yaxud output modal)
     setTimeout(() => {
-      // Hər 3 kartdan sonra output modal
-      if (newOutputCount % 3 === 0 && currentIndex + 1 < dueCards.length) {
-        setShowOutputModal(true)
-        return
+      if (newOutputCount % 3 === 0 && qIdx + 1 < queue.length) {
+        setShowOutputModal(true); return
       }
-
-      if (currentIndex + 1 >= dueCards.length) {
-        const vocabScore = sessionStats.total > 0 ? Math.round((sessionStats.correct / sessionStats.total) * 100) : 100
-      saveSessionScore('morning', vocabScore)
-      updateStreak(userId).then(() => setDone(true))
+      if (next.size === totalUnique) {
+        saveSessionScore('morning', 100)
+        if (userId) updateStreak(userId).then(() => setDone(true))
       } else {
-        setCurrentIndex((i) => i + 1)
+        setQIdx(i => i + 1)
         setCardState('front')
         setFeedbackMsg(null)
         setFeedbackType(null)
       }
-    }, 2000)
+    }, 1500)
+  }
+
+  async function handleUnutdum() {
+    if (!userId || !currentCard || !currentVocab) return
+
+    // SRS: qısa interval (tezliklə yenidən göstər)
+    const result = calculateNextReview(0, currentCard.interval, currentCard.ease_factor, currentCard.repetitions)
+    await upsertVocabProgress({
+      user_id: userId, vocab_id: currentCard.vocab_id,
+      next_review: result.nextReview.toISOString(),
+      interval: result.newInterval, ease_factor: result.newEaseFactor, repetitions: result.newRepetitions,
+    })
+
+    // Kart növbənin random yerinə (1-4 kart sonraya) əlavə et
+    setQueue(prev => {
+      const rem = prev.slice(qIdx + 1)
+      const at = Math.min(Math.floor(Math.random() * 4) + 1, rem.length)
+      const n = [...rem]
+      n.splice(at, 0, currentCard)
+      return [...prev.slice(0, qIdx + 1), ...n]
+    })
+
+    setFeedbackMsg(getRandomMessage('wrong_answer'))
+    setFeedbackType('wrong')
+
+    setTimeout(() => {
+      setQIdx(i => i + 1)
+      setCardState('front')
+      setFeedbackMsg(null)
+      setFeedbackType(null)
+    }, 1500)
   }
 
   if (loading) return <div className="min-h-screen flex items-center justify-center text-gray-500">Yüklənir...</div>
 
   function handleOutputComplete() {
     setShowOutputModal(false)
-    if (currentIndex + 1 >= dueCards.length) {
-      if (userId) {
-        const vocabScore = sessionStats.total > 0 ? Math.round((sessionStats.correct / sessionStats.total) * 100) : 100
-        saveSessionScore('morning', vocabScore)
-        updateStreak(userId).then(() => setDone(true))
-      }
+    if (mastered.size === totalUnique) {
+      saveSessionScore('morning', 100)
+      if (userId) updateStreak(userId).then(() => setDone(true))
     } else {
-      setCurrentIndex((i) => i + 1)
+      setQIdx(i => i + 1)
       setCardState('front')
       setFeedbackMsg(null)
       setFeedbackType(null)
@@ -151,23 +168,22 @@ function VocabularyContent() {
   }
 
   if (done) {
-    const pct = sessionStats.total > 0 ? Math.round((sessionStats.correct / sessionStats.total) * 100) : 100
-    const noCards = dueCards.length === 0 && isReviewMode
+    const noCards = queue.length === 0 && isReviewMode
+    const finalPct = noCards ? 100 : Math.round((mastered.size / Math.max(totalUnique, 1)) * 100)
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="card max-w-sm w-full text-center">
-          <div className="text-5xl mb-4">{noCards ? '✅' : pct >= 80 ? '🎉' : pct >= 60 ? '👍' : '💪'}</div>
+          <div className="text-5xl mb-4">{noCards ? '✅' : finalPct >= 80 ? '🎉' : finalPct >= 60 ? '👍' : '💪'}</div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-            {isReviewMode ? '🌙 Gecə Review Tamamlandı!' : 'Sessiya Tamamlandı!'}
+            {isReviewMode ? '🌙 Review Tamamlandı!' : 'SRS Sessiyası Tamamlandı!'}
           </h2>
-          {noCards && (
-            <p className="text-gray-500 mb-4">Bu gün review ediləcək kart yoxdur. Yaxşı iş! 🎯</p>
-          )}
-          <p className="text-gray-500 mb-4">
-            {sessionStats.correct} / {sessionStats.total} düzgün — {pct}%
-          </p>
+          {noCards
+            ? <p className="text-gray-500 mb-4">Bu gün review ediləcək kart yoxdur. Yaxşı iş! 🎯</p>
+            : <p className="text-gray-500 mb-4">Mənimsənildi: <strong>{mastered.size} / {totalUnique}</strong> — {finalPct}%</p>
+          }
           <div className="w-full bg-gray-100 rounded-full h-3 mb-6">
-            <div className="bg-blue-500 h-3 rounded-full" style={{ width: `${pct}%` }} />
+            <div className={`h-3 rounded-full ${finalPct >= 80 ? 'bg-green-500' : 'bg-blue-500'}`}
+              style={{ width: `${finalPct}%` }} />
           </div>
           <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">
             Ana Səhifəyə Qayıt
@@ -189,19 +205,14 @@ function VocabularyContent() {
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
         <button onClick={() => router.push('/dashboard')} className="text-gray-500 hover:text-gray-700">← Geri</button>
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-          {isReviewMode ? '🌙 Gecə Review' : '🌅 SRS Lüğət'}
+          {isReviewMode ? '🌙 Review' : '🌅 SRS Lüğət'}
         </span>
-        <span className="text-sm text-gray-500">
-          {currentIndex + 1} / {dueCards.length} · ✓ {sessionStats.correct}
-        </span>
+        <span className="text-sm text-gray-500">✓ {mastered.size}/{totalUnique}</span>
       </header>
 
-      {/* Progress bar */}
-      <div className="h-1 bg-gray-200">
-        <div
-          className="h-1 bg-blue-500 transition-all"
-          style={{ width: `${((currentIndex) / dueCards.length) * 100}%` }}
-        />
+      {/* Progress bar — mənimsənilən/cəmi */}
+      <div className="h-2 bg-gray-200">
+        <div className="h-2 bg-green-500 transition-all" style={{ width: `${progressPct}%` }} />
       </div>
 
       {/* Kart */}
@@ -261,27 +272,20 @@ function VocabularyContent() {
             {/* Qiymətləndirmə düymələri */}
             {cardState === 'back' && (
               <>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 gap-4">
                   <button
-                    onClick={() => handleQuality(0)}
+                    onClick={handleUnutdum}
                     disabled={feedbackMsg !== null}
-                    className="py-3 rounded-xl bg-red-100 hover:bg-red-200 text-red-700 font-medium text-sm transition-colors disabled:opacity-50"
+                    className="py-4 rounded-xl bg-red-100 hover:bg-red-200 text-red-700 font-semibold text-base transition-colors disabled:opacity-50"
                   >
-                    Unutdum
+                    ✗ Unutdum
                   </button>
                   <button
-                    onClick={() => handleQuality(3)}
+                    onClick={handleBildim}
                     disabled={feedbackMsg !== null}
-                    className="py-3 rounded-xl bg-yellow-100 hover:bg-yellow-200 text-yellow-700 font-medium text-sm transition-colors disabled:opacity-50"
+                    className="py-4 rounded-xl bg-green-100 hover:bg-green-200 text-green-700 font-semibold text-base transition-colors disabled:opacity-50"
                   >
-                    Çətin idi
-                  </button>
-                  <button
-                    onClick={() => handleQuality(5)}
-                    disabled={feedbackMsg !== null}
-                    className="py-3 rounded-xl bg-green-100 hover:bg-green-200 text-green-700 font-medium text-sm transition-colors disabled:opacity-50"
-                  >
-                    Bildim ✓
+                    ✓ Bildim
                   </button>
                 </div>
 
