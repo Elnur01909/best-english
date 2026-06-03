@@ -50,11 +50,16 @@ export default function PlacementPage() {
   const [result, setResult] = useState<CEFRLevel | null>(null)
   const [saving, setSaving] = useState(false)
 
-  // Sualları VƏ hər sualın variantlarını bir dəfə qarışdır (düzgün cavab təsadüfi mövqedə)
-  const questions = useMemo(
-    () => shuffle(placementData as PQuestion[]).map((q) => ({ ...q, options: shuffle(q.options) })),
-    []
-  )
+  // Hər səviyyədən təsadüfi 3 sual seç (180-lik hovuzdan), sonra suallar+variantlar qarışsın
+  const questions = useMemo(() => {
+    const pool = placementData as PQuestion[]
+    const picked: PQuestion[] = []
+    for (const lvl of LEVELS) {
+      const ofLevel = shuffle(pool.filter((q) => q.level === lvl))
+      picked.push(...ofLevel.slice(0, 3))
+    }
+    return shuffle(picked).map((q) => ({ ...q, options: shuffle(q.options) }))
+  }, [])
 
   useEffect(() => {
     getUser().then((u) => {
