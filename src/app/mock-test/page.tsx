@@ -341,7 +341,7 @@ export default function MockTestPage() {
 
           {/* Audio + AZ düymələri */}
           <div className="flex items-center gap-2">
-            <AudioPlayer word={current.question} variant="sentence" isSentence={true} />
+            <AudioPlayer word={current.question.replace(/___/g, '')} variant="sentence" isSentence={true} />
             <button
               onClick={() => setShowAz(s => !s)}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${

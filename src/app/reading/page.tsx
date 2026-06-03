@@ -176,7 +176,7 @@ export default function ReadingPage() {
             {currentC.sentence.replace('___', '_______')}
           </p>
           <div className="mt-3">
-            <AudioPlayer word={currentC.sentence.replace('___', currentC.answer)} variant="sentence" isSentence={true} />
+            <AudioPlayer word={currentC.sentence.replace(/___/g, '')} variant="sentence" isSentence={true} />
           </div>
         </div>
 
