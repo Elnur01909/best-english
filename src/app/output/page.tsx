@@ -5,6 +5,7 @@ import { getUser, getUserProfile, saveQuizResult } from '@/lib/supabase'
 import { checkWriting } from '@/lib/ai'
 import { getRandomMessage } from '@/lib/psychology'
 import AITutorChat from '@/components/AITutorChat'
+import AudioPlayer from '@/components/AudioPlayer'
 import vocabData from '@/data/vocab.json'
 import quizData from '@/data/quizzes.json'
 import type { VocabItem } from '@/types'
@@ -239,9 +240,12 @@ export default function OutputPage() {
         {currentQ && (
           <>
             <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">{currentQ.topic}</p>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 leading-relaxed">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 leading-relaxed">
               {currentQ.question}
             </h2>
+            <div className="mb-6">
+              <AudioPlayer word={currentQ.question} variant="sentence" isSentence={true} />
+            </div>
 
             <div className="space-y-3 mb-6">
               {currentQ.options.map((opt: string) => {
@@ -276,10 +280,29 @@ export default function OutputPage() {
                     {quizFeedback}
                   </div>
                 )}
-                <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
-                  <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">💡 İzah:</p>
-                  <p className="text-sm text-blue-800 dark:text-blue-200">{currentQ.explanation}</p>
-                </div>
+                {(() => {
+                  // Düzgün cavaba uyğun vocab tap (AZ tərcümə üçün)
+                  const vocab = (vocabData as VocabItem[]).find(
+                    (v) => v.term.toLowerCase() === currentQ.correct.toLowerCase()
+                  )
+                  return (
+                    <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6 space-y-3">
+                      <div>
+                        <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">💡 İzah (EN):</p>
+                        <p className="text-sm text-blue-800 dark:text-blue-200">{currentQ.explanation}</p>
+                        <div className="mt-1.5">
+                          <AudioPlayer word={currentQ.explanation} variant="sentence" isSentence={true} />
+                        </div>
+                      </div>
+                      {vocab && (
+                        <div className="border-t border-blue-200 dark:border-blue-800 pt-3">
+                          <p className="text-sm font-semibold text-green-700 dark:text-green-400 mb-1">🇦🇿 Azərbaycanca:</p>
+                          <p className="text-sm text-green-800 dark:text-green-300">{vocab.az_translation}</p>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })()}
                 <button onClick={nextQuiz} className="btn-primary w-full">
                   {quizIdx + 1 >= quizQuestions.length ? 'Yazma məşqinə keç →' : 'Növbəti sual →'}
                 </button>
