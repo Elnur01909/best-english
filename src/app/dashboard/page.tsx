@@ -18,6 +18,7 @@ export default function DashboardPage() {
   const [dueCount, setDueCount] = useState(0)
   const [weeklyData, setWeeklyData] = useState<{ day: string; correct: number }[]>([])
   const [loading, setLoading] = useState(true)
+  const [completedSessions, setCompletedSessions] = useState<string[]>([])
 
   useEffect(() => {
     async function load() {
@@ -48,6 +49,14 @@ export default function DashboardPage() {
   async function handleSignOut() {
     await supabase.auth.signOut()
     router.push('/')
+  }
+
+  function handleSessionClick(sessionId: string) {
+    setCompletedSessions(prev =>
+      prev.includes(sessionId)
+        ? prev.filter(id => id !== sessionId)
+        : [...prev, sessionId]
+    )
   }
 
   if (loading) {
@@ -136,7 +145,7 @@ export default function DashboardPage() {
         )}
 
         {/* Günlük Plan — Hissə 5 */}
-        <DailySchedule />
+        <DailySchedule completedSessions={completedSessions} onSessionClick={handleSessionClick} />
 
         {/* Həftəlik qrafik */}
         {weeklyData.length > 0 && (
