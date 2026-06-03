@@ -31,12 +31,14 @@ export default function HomePage() {
       {/* Features */}
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl w-full">
         {[
-          { icon: '🧠', title: 'Elmi SRS Sistemi', desc: 'Ebbinghaus metoduna əsaslanan ağıllı lüğət kartları' },
-          { icon: '📊', title: 'Şəxsi Statistika', desc: 'İrəliləyişini real vaxtda izlə, zəif nöqtələri gör' },
-          { icon: '⚖️', title: 'TOLES Hazırlığı', desc: 'Foundation, Higher, Advanced — istədiyin səviyyədən başla' },
+          { icon: '💡', title: 'Elmi SRS Sistemi', desc: 'Ebbinghaus metoduna əsaslanan ağıllı lüğət kartları', glow: true },
+          { icon: '📊', title: 'Şəxsi Statistika', desc: 'İrəliləyişini real vaxtda izlə, zəif nöqtələri gör', glow: false },
+          { icon: '⚖️', title: 'TOLES Hazırlığı', desc: 'Foundation, Higher, Advanced — istədiyin səviyyədən başla', glow: false },
         ].map((f) => (
           <div key={f.title} className="card text-center">
-            <div className="text-3xl mb-3">{f.icon}</div>
+            <div className={`text-4xl mb-3 ${f.glow ? 'animate-pulse drop-shadow-[0_0_12px_rgba(250,204,21,0.9)]' : ''}`}>
+              {f.icon}
+            </div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{f.title}</h3>
             <p className="text-sm text-gray-500 dark:text-gray-400">{f.desc}</p>
           </div>
