@@ -204,9 +204,16 @@ export default function VocabularyPage() {
 
               {cardState === 'back' && (
                 <div className="mt-6 space-y-3 text-left border-t border-gray-100 dark:border-gray-800 pt-4">
-                  <p className="text-gray-700 dark:text-gray-300">
-                    <span className="font-medium text-gray-500">EN:</span> {currentVocab.en_def}
-                  </p>
+                  <div className="space-y-1">
+                    <p className="text-gray-700 dark:text-gray-300">
+                      <span className="font-medium text-gray-500">EN:</span> {currentVocab.en_def}
+                    </p>
+                    <AudioPlayer
+                      word={currentVocab.en_def}
+                      variant="sentence"
+                      isSentence={true}
+                    />
+                  </div>
                   <p className="text-green-700 dark:text-green-400">
                     <span className="font-medium">AZ:</span> {currentVocab.az_translation}
                   </p>
