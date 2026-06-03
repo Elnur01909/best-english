@@ -30,7 +30,7 @@ const SESSIONS: Session[] = [
     emoji: '🌆',
     activity: 'Output: Quiz / Yazma',
     desc: 'Gündüzki inputu "işləyib çıxarır"',
-    route: '/quiz',
+    route: '/output',
   },
   {
     id: 'night',
