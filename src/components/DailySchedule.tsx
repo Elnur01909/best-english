@@ -50,23 +50,16 @@ export default function DailySchedule() {
   ]
 
   const scores = getTodayScores()
-  const isDone = (id: string) => plan.completedSessions.includes(id) || (scores[id] ?? 0) > 0
-  const getScore = (id: string) => scores[id] ?? (plan.completedSessions.includes(id) ? 100 : 0)
+  // Session yalnız localStorage-da real score varsa tamamlanmış sayılır
+  const getScore = (id: string) => scores[id] ?? 0
+  const isDone = (id: string) => getScore(id) > 0
   // Günlük faiz: hər session max 25%, session_score%-ə mütənasib
   const dailyPct = Math.round(
     SESSIONS.reduce((sum, s) => sum + (getScore(s.id) * 25) / 100, 0)
   )
 
-  async function handleStart(session: typeof SESSIONS[0]) {
-    if (!userId) return
-    // Tamamlandı kimi işarələ və səhifəyə get
-    await completeSession(userId, session.id)
-    setPlan(prev => prev ? {
-      ...prev,
-      completedSessions: prev.completedSessions.includes(session.id)
-          ? prev.completedSessions
-          : [...prev.completedSessions, session.id]
-    } : prev)
+  function handleStart(session: typeof SESSIONS[0]) {
+    // Yalnız navigate et — score hər səhifənin özü bitəndə yazır
     router.push(session.route)
   }
 

@@ -7,6 +7,7 @@ import { getRandomMessage, DOPAMINE_MESSAGES } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
 import OutputModal from '@/components/OutputModal'
 import AITutorChat from '@/components/AITutorChat'
+import { saveSessionScore } from '@/lib/sessionScore'
 import vocabData from '@/data/vocab.json'
 import type { VocabItem, VocabProgress, SRSQuality } from '@/types'
 
@@ -117,7 +118,9 @@ function VocabularyContent() {
       }
 
       if (currentIndex + 1 >= dueCards.length) {
-        updateStreak(userId).then(() => setDone(true))
+        const vocabScore = sessionStats.total > 0 ? Math.round((sessionStats.correct / sessionStats.total) * 100) : 100
+      saveSessionScore('morning', vocabScore)
+      updateStreak(userId).then(() => setDone(true))
       } else {
         setCurrentIndex((i) => i + 1)
         setCardState('front')
@@ -132,7 +135,11 @@ function VocabularyContent() {
   function handleOutputComplete() {
     setShowOutputModal(false)
     if (currentIndex + 1 >= dueCards.length) {
-      if (userId) updateStreak(userId).then(() => setDone(true))
+      if (userId) {
+        const vocabScore = sessionStats.total > 0 ? Math.round((sessionStats.correct / sessionStats.total) * 100) : 100
+        saveSessionScore('morning', vocabScore)
+        updateStreak(userId).then(() => setDone(true))
+      }
     } else {
       setCurrentIndex((i) => i + 1)
       setCardState('front')

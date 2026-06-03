@@ -6,6 +6,7 @@ import { checkWriting } from '@/lib/ai'
 import { getRandomMessage } from '@/lib/psychology'
 import AITutorChat from '@/components/AITutorChat'
 import AudioPlayer from '@/components/AudioPlayer'
+import { saveSessionScore } from '@/lib/sessionScore'
 import vocabData from '@/data/vocab.json'
 import quizData from '@/data/quizzes.json'
 import type { VocabItem } from '@/types'
@@ -117,6 +118,8 @@ export default function OutputPage() {
 
   function nextWriting() {
     if (writingIdx + 1 >= writingWords.length) {
+      const outputScore = Math.round((quizResults.filter(Boolean).length / quizQuestions.length) * 100)
+      saveSessionScore('evening', outputScore)
       setStage('done')
     } else {
       setWritingIdx((i) => i + 1)

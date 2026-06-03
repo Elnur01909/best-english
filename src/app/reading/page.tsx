@@ -3,6 +3,7 @@ import { useMemo, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import AudioPlayer from '@/components/AudioPlayer'
 import AITutorChat from '@/components/AITutorChat'
+import { saveSessionScore } from '@/lib/sessionScore'
 import readingData from '@/data/reading.json'
 
 type Stage = 'text' | 'questions' | 'collocations' | 'done'
@@ -65,6 +66,8 @@ function ReadingContent() {
 
   function nextCollocation() {
     if (cIdx + 1 >= collocations.length) {
+      const readingScore = Math.round(((qResults.filter(Boolean).length + cResults.filter(Boolean).length + 1) / (questions.length + collocations.length)) * 100)
+      saveSessionScore('midday', readingScore)
       setStage('done')
     } else {
       setCIdx(i => i + 1)
