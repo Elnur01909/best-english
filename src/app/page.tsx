@@ -20,7 +20,7 @@ export default function HomePage() {
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link href="/register" className="btn-primary text-center">
-            Pulsuz Başla →
+            Hesab Yarat →
           </Link>
           <Link href="/login" className="btn-secondary text-center">
             Daxil Ol
