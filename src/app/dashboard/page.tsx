@@ -7,6 +7,7 @@ import { LEVEL_COLORS, TOLES_COLORS, formatNumber } from '@/lib/utils'
 import { getTOLESProgress, TOLES_LEVELS } from '@/lib/toles'
 import { PROFICIENCY_HOURS, TOTAL_PATHWAY } from '@/lib/hours'
 import DailySchedule from '@/components/DailySchedule'
+import AITutorChat from '@/components/AITutorChat'
 import type { UserProfile } from '@/types'
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer
@@ -236,6 +237,7 @@ export default function DashboardPage() {
           ))}
         </div>
       </main>
+      <AITutorChat level={profile?.level ?? 'B1'} />
     </div>
   )
 }

@@ -4,6 +4,8 @@ import { useRouter } from 'next/navigation'
 import { getUser, saveQuizResult } from '@/lib/supabase'
 import { getRandomMessage } from '@/lib/psychology'
 import { analyzeWeakPoints } from '@/lib/analysis'
+import { explainQuizError } from '@/lib/ai'
+import AITutorChat from '@/components/AITutorChat'
 import quizData from '@/data/quizzes.json'
 import type { QuizQuestion, QuizLevel } from '@/types'
 
@@ -29,6 +31,9 @@ export default function QuizPage() {
   const [startTime, setStartTime] = useState<number>(0)
   const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null)
   const [weakPoints, setWeakPoints] = useState<Array<{ topic: string; errorRate: number; recommendation: string }>>([])
+  const [aiExplanation, setAiExplanation] = useState<string | null>(null)
+  const [aiLoading, setAiLoading] = useState(false)
+  const [aiError, setAiError] = useState<string | null>(null)
 
   // Zəif nöqtə analizi — result stage-də
   useEffect(() => {
@@ -93,6 +98,30 @@ export default function QuizPage() {
       setShowAnswer(false)
       setStartTime(Date.now())
       setFeedbackMsg(null)
+      setAiExplanation(null)
+      setAiError(null)
+    }
+  }
+
+  async function askAiExplain() {
+    if (!current) return
+    setAiLoading(true)
+    setAiError(null)
+    try {
+      const exp = await explainQuizError(
+        current.question,
+        current.correct,
+        selected ?? '—',
+        level
+      )
+      setAiExplanation(exp)
+    } catch (err: any) {
+      if (err.message === 'NO_KEY') setAiError('AI Müəllimi aktivləşdir (sağ aşağıdakı 🎓 düymə).')
+      else if (err.message === 'BAD_KEY') setAiError('API açarı yanlışdır.')
+      else if (err.message === 'RATE_LIMIT') setAiError('Günlük pulsuz limit doldu.')
+      else setAiError('Xəta baş verdi.')
+    } finally {
+      setAiLoading(false)
     }
   }
 
@@ -240,10 +269,28 @@ export default function QuizPage() {
                   </div>
                 )}
 
-                <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6">
+                <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-4">
                   <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">💡 İzah:</p>
                   <p className="text-sm text-blue-800 dark:text-blue-200">{current.explanation}</p>
                 </div>
+
+                {/* AI Müəllim — dərin izah */}
+                {!aiExplanation && (
+                  <button
+                    onClick={askAiExplain}
+                    disabled={aiLoading}
+                    className="w-full mb-4 py-2.5 px-4 rounded-xl border-2 border-purple-300 dark:border-purple-700 text-purple-700 dark:text-purple-300 hover:bg-purple-50 dark:hover:bg-purple-950 transition-colors text-sm font-medium disabled:opacity-50"
+                  >
+                    {aiLoading ? '🎓 Müəllim düşünür...' : '🎓 AI Müəllim daha ətraflı izah etsin'}
+                  </button>
+                )}
+                {aiError && <p className="text-center text-red-500 text-xs mb-4">{aiError}</p>}
+                {aiExplanation && (
+                  <div className="bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 rounded-xl p-4 mb-6">
+                    <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-1">🎓 AI Müəllim:</p>
+                    <p className="text-sm text-purple-800 dark:text-purple-200 whitespace-pre-wrap">{aiExplanation}</p>
+                  </div>
+                )}
               </>
             )}
 
@@ -255,6 +302,7 @@ export default function QuizPage() {
           </div>
         )}
       </main>
+      <AITutorChat level={level} />
     </div>
   )
 }

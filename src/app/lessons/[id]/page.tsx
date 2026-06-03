@@ -4,6 +4,7 @@ import { useRouter, useParams } from 'next/navigation'
 import { getUser, supabase } from '@/lib/supabase'
 import AudioPlayer from '@/components/AudioPlayer'
 import WritingExercise from '@/components/WritingExercise'
+import AITutorChat from '@/components/AITutorChat'
 import lessonsData from '@/data/lessons.json'
 import vocabData from '@/data/vocab.json'
 import type { Lesson, VocabItem } from '@/types'
@@ -100,9 +101,10 @@ export default function LessonPage() {
         {/* Yazma Məşqi — 4-Modal: Motor */}
         {vocabItems.length > 0 && (
           <WritingExercise
-            word={vocabItems[Math.floor(Math.random() * vocabItems.length)].term}
-            definition={vocabItems[Math.floor(Math.random() * vocabItems.length)].en_def}
+            word={vocabItems[0].term}
+            definition={vocabItems[0].en_def}
             optional={true}
+            level={lesson?.level ?? 'B1'}
           />
         )}
 
@@ -160,6 +162,7 @@ export default function LessonPage() {
           </div>
         )}
       </main>
+      <AITutorChat level={lesson?.level ?? 'B1'} />
     </div>
   )
 }

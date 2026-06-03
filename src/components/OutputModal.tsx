@@ -1,18 +1,41 @@
 'use client'
 import { useState } from 'react'
+import { checkWriting } from '@/lib/ai'
 import type { VocabItem } from '@/types'
 
 interface OutputModalProps {
   vocabWord: VocabItem
   onComplete: () => void
+  level?: string
 }
 
-export default function OutputModal({ vocabWord, onComplete }: OutputModalProps) {
+export default function OutputModal({ vocabWord, onComplete, level = 'B1' }: OutputModalProps) {
   const [text, setText] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [aiFeedback, setAiFeedback] = useState<string | null>(null)
+  const [aiLoading, setAiLoading] = useState(false)
+  const [aiError, setAiError] = useState<string | null>(null)
 
   function handleSubmit() {
     setSubmitted(true)
+  }
+
+  async function checkWithAI() {
+    if (!text.trim()) return
+    setAiLoading(true)
+    setAiError(null)
+    try {
+      const fb = await checkWriting(vocabWord.term, vocabWord.en_def, text, level)
+      setAiFeedback(fb)
+      setSubmitted(true)
+    } catch (err: any) {
+      if (err.message === 'NO_KEY') setAiError('AI Müəllimi aktivləşdir (🎓 düymə).')
+      else if (err.message === 'BAD_KEY') setAiError('API açarı yanlışdır.')
+      else if (err.message === 'RATE_LIMIT') setAiError('Günlük pulsuz limit doldu.')
+      else setAiError('Xəta baş verdi.')
+    } finally {
+      setAiLoading(false)
+    }
   }
 
   return (
@@ -48,8 +71,17 @@ export default function OutputModal({ vocabWord, onComplete }: OutputModalProps)
           rows={3}
         />
 
+        {/* AI Müəllim rəyi */}
+        {aiError && <p className="mb-3 text-center text-red-500 text-xs">{aiError}</p>}
+        {aiFeedback && (
+          <div className="mb-4 p-3 bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 rounded-lg">
+            <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-1">🎓 Müəllim rəyi:</p>
+            <p className="text-sm text-purple-800 dark:text-purple-200 whitespace-pre-wrap">{aiFeedback}</p>
+          </div>
+        )}
+
         {/* Nəticə mesajı */}
-        {submitted && (
+        {submitted && !aiFeedback && (
           <div className="mb-4 p-3 bg-green-100 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg">
             <p className="text-sm text-green-800 dark:text-green-200">
               ✓ <strong>Əla!</strong> Bu söz indi fəal lüğətinizə keçib. Danışmada və yazıda istifadə edin.
@@ -58,17 +90,24 @@ export default function OutputModal({ vocabWord, onComplete }: OutputModalProps)
         )}
 
         {/* Düymələr */}
-        <div className="flex gap-3">
+        <div className="flex gap-2">
+          <button
+            onClick={checkWithAI}
+            disabled={!text.trim() || aiLoading}
+            className="flex-1 py-2.5 px-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 text-sm"
+          >
+            {aiLoading ? '🎓...' : '🎓 AI yoxla'}
+          </button>
           <button
             onClick={onComplete}
             disabled={!text.trim() && !submitted}
-            className="flex-1 py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 py-2.5 px-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
           >
-            {submitted ? 'Davam Et →' : 'Təqdim Et'}
+            {submitted ? 'Davam →' : 'Təqdim'}
           </button>
           <button
             onClick={() => onComplete()}
-            className="px-4 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-sm font-medium"
+            className="px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-sm font-medium"
           >
             Skip
           </button>

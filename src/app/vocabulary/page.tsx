@@ -6,6 +6,7 @@ import { calculateNextReview, formatNextReview, SRS_DEFAULTS } from '@/lib/srs'
 import { getRandomMessage, DOPAMINE_MESSAGES } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
 import OutputModal from '@/components/OutputModal'
+import AITutorChat from '@/components/AITutorChat'
 import vocabData from '@/data/vocab.json'
 import type { VocabItem, VocabProgress, SRSQuality } from '@/types'
 
@@ -154,7 +155,7 @@ export default function VocabularyPage() {
     <>
       {/* Output Modal — Methodology: Mandatory Output */}
       {showOutputModal && currentVocab && (
-        <OutputModal vocabWord={currentVocab} onComplete={handleOutputComplete} />
+        <OutputModal vocabWord={currentVocab} onComplete={handleOutputComplete} level={userLevel} />
       )}
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
@@ -259,6 +260,7 @@ export default function VocabularyPage() {
         )}
       </main>
       </div>
+      <AITutorChat level={userLevel} />
     </>
   )
 }
