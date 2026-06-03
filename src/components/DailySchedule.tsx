@@ -129,10 +129,15 @@ export default function DailySchedule() {
                       <span className={`text-xs font-bold ${done ? 'text-green-600 dark:text-green-400' : 'text-gray-400'}`}>
                         {sessionPct}%
                       </span>
-                      {done ? (
+                      {sessionPct >= 100 ? (
                         <button onClick={() => router.push(session.route)}
                           className="text-xs text-green-600 dark:text-green-400 font-medium hover:underline">
                           Yenidən ↗
+                        </button>
+                      ) : sessionPct > 0 ? (
+                        <button onClick={() => router.push(session.route)}
+                          className="px-3 py-1 bg-green-600 hover:bg-green-700 text-white text-xs font-medium rounded-lg transition-colors">
+                          Davam et →
                         </button>
                       ) : (
                         <button onClick={() => handleStart(session)}
