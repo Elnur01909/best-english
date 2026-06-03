@@ -2,14 +2,19 @@
 import { useEffect, useState, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { getUser, getUserProfile, getDueCards, upsertVocabProgress, updateStreak } from '@/lib/supabase'
-import { calculateNextReview, formatNextReview, SRS_DEFAULTS } from '@/lib/srs'
-import { getRandomMessage, DOPAMINE_MESSAGES } from '@/lib/psychology'
+import { calculateNextReview, SRS_DEFAULTS } from '@/lib/srs'
+import { getRandomMessage } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
 import OutputModal from '@/components/OutputModal'
 import AITutorChat from '@/components/AITutorChat'
 import { saveSessionScore } from '@/lib/sessionScore'
+import { getDailyPlan } from '@/lib/curriculum'
 import vocabData from '@/data/vocab.json'
 import type { VocabItem, VocabProgress, SRSQuality } from '@/types'
+
+const NEW_WORDS_PER_DAY = 8   // Bugünkü mövzudan yeni sözlər
+const REVIEW_PER_DAY    = 4   // SM-2 review kartları
+// Cəmi: 12 kart
 
 type CardState = 'front' | 'back'
 type FeedbackType = 'success' | 'wrong'
@@ -47,29 +52,52 @@ function VocabularyContent() {
 
       // Review rejimi: yalnız 10 kart (yeni kart yox)
       // Səhər rejimi: 20 kart (yeni + due)
-      const limit = isReviewMode ? 10 : 20
-      const { data: due } = await getDueCards(user.id, limit)
-
-      if (!due || due.length === 0) {
-        if (isReviewMode) {
-          setQueue([])
-          setTotalUnique(0)
-          setDone(true)
-        } else {
-          const filtered = (vocabData as VocabItem[])
-            .filter((v) => v.level === userLevel || v.level === 'F')
-            .sort(() => Math.random() - 0.5)
-            .slice(0, 20)
-          const initialCards: VocabProgress[] = filtered.map((v) => ({
-            user_id: user.id, vocab_id: v.id, ...SRS_DEFAULTS,
-          }))
-          setQueue(initialCards)
-          setTotalUnique(initialCards.length)
-        }
-      } else {
+      if (isReviewMode) {
+        // Gecə rejimi: yalnız SM-2 review
+        const { data: due } = await getDueCards(user.id, 10)
+        if (!due || due.length === 0) { setDone(true); setLoading(false); return }
         setQueue(due as VocabProgress[])
         setTotalUnique(due.length)
+        setLoading(false)
+        return
       }
+
+      // ─── HİBRİD SİSTEM ───────────────────────────────────────
+      // 1) SM-2 review kartları (vaxtı gəlmiş)
+      const { data: dueRaw } = await getDueCards(user.id, REVIEW_PER_DAY)
+      const reviewCards = (dueRaw ?? []) as VocabProgress[]
+
+      // 2) Bugünkü curriculum mövzusundan yeni sözlər
+      const plan = await getDailyPlan(user.id)
+      const todayTopics = plan.curriculum.topics
+
+      // Artıq öyrənilmiş vocab_id-ləri çıxart
+      const reviewIds = new Set(reviewCards.map(c => c.vocab_id))
+
+      const topicWords = (vocabData as VocabItem[])
+        .filter(v => todayTopics.includes(v.topic) && !reviewIds.has(v.id))
+        .sort(() => Math.random() - 0.5)
+        .slice(0, NEW_WORDS_PER_DAY)
+
+      // Əgər mövzudan kifayət qədər söz yoxdursa — digər mövzulardan doldur
+      const needed = NEW_WORDS_PER_DAY - topicWords.length
+      const topicWordIds = new Set(topicWords.map(v => v.id))
+      const fillWords = needed > 0
+        ? (vocabData as VocabItem[])
+            .filter(v => !reviewIds.has(v.id) && !topicWordIds.has(v.id))
+            .sort(() => Math.random() - 0.5)
+            .slice(0, needed)
+        : []
+
+      const allNewWords = [...topicWords, ...fillWords]
+      const newCards: VocabProgress[] = allNewWords.map(v => ({
+        user_id: user.id, vocab_id: v.id, ...SRS_DEFAULTS,
+      }))
+
+      // 3) Birləşdir: əvvəl review, sonra yeni sözlər
+      const combined = [...reviewCards, ...newCards]
+      setQueue(combined)
+      setTotalUnique(combined.length)
       setLoading(false)
     }
     init()
