@@ -2,8 +2,10 @@
 // Açar user-in brauzerində (localStorage) saxlanır, serverə getmir.
 
 const KEY_STORAGE = 'best_english_gemini_key'
-const MODEL = 'gemini-2.0-flash'
-const ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`
+// Pulsuz tier-də ən yüksək günlük limitli modellər (sıra ilə cəhd edilir)
+const MODELS = ['gemini-2.5-flash-lite', 'gemini-2.0-flash-lite', 'gemini-2.0-flash']
+const ENDPOINT = (model: string) =>
+  `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`
 
 export interface AIMessage {
   role: 'user' | 'model'
@@ -38,30 +40,38 @@ export async function callGemini(
   const key = getApiKey()
   if (!key) throw new Error('NO_KEY')
 
-  const res = await fetch(`${ENDPOINT}?key=${key}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      system_instruction: { parts: [{ text: systemPrompt }] },
-      contents: messages.map((m) => ({
-        role: m.role,
-        parts: [{ text: m.text }],
-      })),
-      generationConfig: { temperature: 0.7, maxOutputTokens: 800 },
-    }),
+  const body = JSON.stringify({
+    system_instruction: { parts: [{ text: systemPrompt }] },
+    contents: messages.map((m) => ({ role: m.role, parts: [{ text: m.text }] })),
+    generationConfig: { temperature: 0.7, maxOutputTokens: 600 },
   })
 
-  if (!res.ok) {
+  let lastErr: Error = new Error('AI xətası')
+
+  // Modelləri sıra ilə cəhd et (biri 404/limit olsa, növbətiyə keç)
+  for (const model of MODELS) {
+    const res = await fetch(`${ENDPOINT(model)}?key=${key}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body,
+    })
+
+    if (res.ok) {
+      const data = await res.json()
+      const text = data?.candidates?.[0]?.content?.parts?.[0]?.text
+      if (text) return text.trim()
+      lastErr = new Error('Boş cavab gəldi')
+      continue
+    }
+
     const errText = await res.text()
     if (res.status === 400 && errText.includes('API_KEY')) throw new Error('BAD_KEY')
-    if (res.status === 429) throw new Error('RATE_LIMIT')
-    throw new Error(`AI xətası (${res.status})`)
+    if (res.status === 404) { lastErr = new Error('MODEL_404'); continue } // model yoxdur → növbəti
+    if (res.status === 429) { lastErr = new Error('RATE_LIMIT'); continue } // limit → başqa model cəhd et
+    lastErr = new Error(`AI xətası (${res.status})`)
   }
 
-  const data = await res.json()
-  const text = data?.candidates?.[0]?.content?.parts?.[0]?.text
-  if (!text) throw new Error('Boş cavab gəldi')
-  return text.trim()
+  throw lastErr
 }
 
 // ─── Müəllim sistem promptu ────────────────────────────
