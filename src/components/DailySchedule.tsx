@@ -113,34 +113,34 @@ export default function DailySchedule({ completedSessions = [], onSessionClick }
           }
           const route = routeMap[session.id] || '/vocabulary'
           return (
-          <button
-            key={session.id}
-            onClick={() => {
-              onSessionClick?.(session.id)
-              router.push(route)
-            }}
-            className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
-              session.completed
-                ? 'border-green-400 bg-green-50 dark:bg-green-950'
-                : 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950'
-            }`}
-          >
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">{session.emoji}</span>
-              <div className="flex-1">
-                <div className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                  {session.activity}
-                  {session.completed && <span className="text-green-600">✓</span>}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {session.time} • {session.duration}
-                </div>
-                <div className="text-xs text-gray-500 dark:text-gray-500 mt-1 italic">
-                  {session.focus}
+            <button
+              key={session.id}
+              onClick={() => {
+                onSessionClick?.(session.id)
+                router.push(route)
+              }}
+              className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
+                session.completed
+                  ? 'border-green-400 bg-green-50 dark:bg-green-950'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{session.emoji}</span>
+                <div className="flex-1">
+                  <div className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                    {session.activity}
+                    {session.completed && <span className="text-green-600">✓</span>}
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    {session.time} • {session.duration}
+                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-500 mt-1 italic">
+                    {session.focus}
+                  </div>
                 </div>
               </div>
-            </div>
-          </button>
+            </button>
           )
         })}
       </div>
