@@ -226,7 +226,7 @@ export default function ReadingPage() {
           💡 TOLES Reading hissəsi: həm anlama sualları, həm də dil istifadəsi (kollokasiya) yoxlanılır.
         </div>
         <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">
-          Dashboard-a qayıt →
+          Ana Səhifəyə Qayıt →
         </button>
       </div>
     </div>

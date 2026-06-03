@@ -161,7 +161,7 @@ function VocabularyContent() {
             <div className="bg-blue-500 h-3 rounded-full" style={{ width: `${pct}%` }} />
           </div>
           <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">
-            Dashboarda Qayıt
+            Ana Səhifəyə Qayıt
           </button>
         </div>
       </div>

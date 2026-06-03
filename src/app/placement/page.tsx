@@ -142,7 +142,7 @@ export default function PlacementPage() {
             disabled={saving}
             className="btn-primary w-full"
           >
-            {saving ? 'Saxlanılır...' : 'Dashboard-a keç →'}
+            {saving ? 'Saxlanılır...' : 'Ana Səhifəyə Keç →'}
           </button>
         </div>
       </div>

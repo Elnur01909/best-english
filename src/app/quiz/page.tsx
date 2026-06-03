@@ -185,7 +185,7 @@ export default function QuizPage() {
 
         <div className="flex gap-2 mb-6">
           <button onClick={() => setStage('select')} className="btn-secondary flex-1">Yenidən</button>
-          <button onClick={() => router.push('/dashboard')} className="btn-primary flex-1">Dashboard</button>
+          <button onClick={() => router.push('/dashboard')} className="btn-primary flex-1">Ana Səhifə</button>
         </div>
 
         {/* Deliberate Practice — Zəif nöqtə analizi */}

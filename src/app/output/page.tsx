@@ -154,7 +154,7 @@ export default function OutputPage() {
             💡 Output məşqi öyrənilən sözləri uzunmüddətli yaddaşa keçirir.
           </div>
           <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">
-            Dashboard-a qayıt →
+            Ana Səhifəyə Qayıt →
           </button>
         </div>
       </main>

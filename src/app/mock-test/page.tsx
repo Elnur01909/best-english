@@ -309,7 +309,7 @@ export default function MockTestPage() {
             <div className="bg-blue-50 dark:bg-blue-950 rounded-lg p-3 text-xs text-blue-800 dark:text-blue-200 mb-6">
               💡 TOLES: Lüğət + Qrammatika + Kollokasiya — bu test həmin formatı simulyasiya edir.
             </div>
-            <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">Dashboard-a qayıt →</button>
+            <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">Ana Səhifəyə Qayıt →</button>
           </div>
         </div>
       </div>
