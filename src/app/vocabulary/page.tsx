@@ -120,7 +120,7 @@ export default function VocabularyPage() {
   function handleOutputComplete() {
     setShowOutputModal(false)
     if (currentIndex + 1 >= dueCards.length) {
-      updateStreak(userId).then(() => setDone(true))
+      if (userId) updateStreak(userId).then(() => setDone(true))
     } else {
       setCurrentIndex((i) => i + 1)
       setCardState('front')

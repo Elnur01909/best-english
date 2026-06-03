@@ -63,12 +63,12 @@ export function getNextMilestone(totalQuizzesCompleted: number): {
   message: string
 } | null {
   const milestones = [
-    { count: 10, message: '🎯 10 Quiz Tamamlandı!' },
-    { count: 25, message: '⚡ 25 Quiz — Güclü Başlanğıc!' },
-    { count: 50, message: '🔥 50 Quiz — Əhəmiyyətli Piroqres!' },
-    { count: 100, message: '👑 100 Quiz — Quiz Master!' },
+    { milestone: 10, message: '🎯 10 Quiz Tamamlandı!' },
+    { milestone: 25, message: '⚡ 25 Quiz — Güclü Başlanğıc!' },
+    { milestone: 50, message: '🔥 50 Quiz — Əhəmiyyətli Piroqres!' },
+    { milestone: 100, message: '👑 100 Quiz — Quiz Master!' },
   ]
 
-  const next = milestones.find((m) => m.count === totalQuizzesCompleted)
+  const next = milestones.find((m) => m.milestone === totalQuizzesCompleted)
   return next || null
 }

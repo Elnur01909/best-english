@@ -68,13 +68,12 @@ export type QuizLevel = 'Foundation' | 'Higher' | 'Advanced'
 
 export interface QuizQuestion {
   id: number
-  text: string
+  question: string
   options: string[]
-  answer: string
-  explanation: string      // Azərbaycanca izah
-  level: QuizLevel
-  type: QuizType
-  topic?: string
+  correct: string
+  explanation: string
+  level: string
+  topic: string
 }
 
 export interface QuizResult {
@@ -97,18 +96,22 @@ export interface LessonExercise {
   answer: string
 }
 
+export interface ImmersionLink {
+  type: string
+  title: string
+  url: string
+}
+
 export interface Lesson {
   id: number
   title: string
-  az_title: string
+  description: string
+  content: string
+  terms: number[]
+  duration: number
   level: string
-  color: string
   objectives: string[]
-  vocab: LessonVocabItem[]
-  grammar: string
-  reading_en: string
-  reading_az: string
-  exercises: LessonExercise[]
+  immersionLinks: ImmersionLink[]
 }
 
 export interface LessonProgress {
