@@ -59,7 +59,7 @@ export default function RegisterPage() {
           </h1>
           <p className="text-gray-500 mt-1">
             {step === 1
-              ? 'Pulsuz qeydiyyat — kredit kartı lazım deyil'
+              ? 'Pulsuz qeydiyyat — bank kartı lazım deyil'
               : 'İstənilən vaxt dəyişə bilərsən'}
           </p>
         </div>
