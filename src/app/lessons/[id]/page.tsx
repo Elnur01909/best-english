@@ -111,47 +111,6 @@ export default function LessonPage() {
           />
         )}
 
-        {/* Immersion Körpüsü — Mass Immersion Approach */}
-        {lesson?.immersionLinks && lesson.immersionLinks.length > 0 && (
-          <div className="card border-l-4 border-purple-500 bg-purple-50 dark:bg-purple-950">
-            <h3 className="font-semibold text-purple-900 dark:text-purple-100 mb-4">
-              🌍 İmmersion Körpüsü — Bu Həftə Əlavə Oxu
-            </h3>
-            <p className="text-sm text-purple-800 dark:text-purple-200 mb-4">
-              Real dünya kontentinə maruz qalma beyni daha sürətli gücləndirir.
-            </p>
-            <div className="space-y-2">
-              {lesson.immersionLinks.map((link: any, idx: number) => (
-                <a
-                  key={idx}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 bg-white dark:bg-purple-900 border border-purple-200 dark:border-purple-800 rounded-lg hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">
-                      {link.type === 'youtube' && '▶️'}
-                      {link.type === 'podcast' && '🎙️'}
-                      {link.type === 'article' && '📰'}
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium text-purple-900 dark:text-purple-100 text-sm">
-                        {link.title}
-                      </p>
-                      <p className="text-xs text-purple-600 dark:text-purple-400">
-                        {link.type === 'youtube' && 'YouTube - 10-15 dəq'}
-                        {link.type === 'podcast' && 'Podcast - 20-30 dəq'}
-                        {link.type === 'article' && 'Məqalə - 5-10 dəq'}
-                      </p>
-                    </div>
-                    <span className="text-purple-400">→</span>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* Tamamlama düyməsi */}
         {!completed && (
