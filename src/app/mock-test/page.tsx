@@ -1,6 +1,6 @@
 'use client'
-import { useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useMemo, useState, Suspense } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import AITutorChat from '@/components/AITutorChat'
 import AudioPlayer from '@/components/AudioPlayer'
 import vocabData from '@/data/vocab.json'
@@ -197,11 +197,25 @@ function shuffle<T>(arr: T[]): T[] {
   return [...arr].sort(() => Math.random() - 0.5)
 }
 
-function buildQuestions(): MockQ[] {
+function buildQuestions(activeTopics: string[] | null): MockQ[] {
   const allVocab = vocabData as VocabItem[]
+  // Mövzuya uyğun vocab — əgər topics varsa filtr et, yoxsa hamısı
+  const filteredVocab = activeTopics
+    ? allVocab.filter(v => activeTopics.includes(v.topic))
+    : allVocab
+  const vocabPool = filteredVocab.length >= 4 ? filteredVocab : allVocab
+
+  // Mövzuya uyğun kollokasiya sualları
+  const collocationPool = activeTopics
+    ? COLLOCATION_QUESTIONS.filter(q => activeTopics.includes(q.topic))
+    : COLLOCATION_QUESTIONS
+  const finalCollocationPool = collocationPool.length >= 3 ? collocationPool : COLLOCATION_QUESTIONS
+
+  // Mövzuya uyğun qrammatika (qrammatika mövzudan asılı deyil — hamısı qalır)
+  const grammarPool = GRAMMAR_QUESTIONS
 
   // 4 lüğət (definition → term)
-  const vocabQs: MockQ[] = shuffle(allVocab).slice(0, 4).map(v => {
+  const vocabQs: MockQ[] = shuffle(vocabPool).slice(0, 4).map(v => {
     const same = allVocab.filter(x => x.id !== v.id && x.topic === v.topic)
     const any = allVocab.filter(x => x.id !== v.id)
     const distractors = shuffle(same.length >= 3 ? same : any).slice(0, 3).map(x => x.term)
@@ -222,13 +236,13 @@ function buildQuestions(): MockQ[] {
     }
   })
 
-  // 3 qrammatika
-  const grammarQs: MockQ[] = shuffle(GRAMMAR_QUESTIONS).slice(0, 3).map(q => ({
+  // 3 qrammatika (mövzudan asılı deyil)
+  const grammarQs: MockQ[] = shuffle(grammarPool).slice(0, 3).map(q => ({
     ...q, options: shuffle(q.options),
   }))
 
-  // 3 kollokasiya
-  const collocationQs: MockQ[] = shuffle(COLLOCATION_QUESTIONS).slice(0, 3).map(q => ({
+  // 3 kollokasiya (mövzuya uyğun)
+  const collocationQs: MockQ[] = shuffle(finalCollocationPool).slice(0, 3).map(q => ({
     ...q, options: shuffle(q.options),
   }))
 
@@ -246,9 +260,14 @@ const TYPE_COLOR: Record<string, string> = {
   collocation: 'bg-purple-100 text-purple-700 dark:bg-purple-950 dark:text-purple-300',
 }
 
-export default function MockTestPage() {
+function MockTestContent() {
   const router = useRouter()
-  const questions = useMemo(buildQuestions, [])
+  const searchParams = useSearchParams()
+  // topics param: "Contract Law,Tort Law" — filtrlənmiş suallar
+  const topicsParam = searchParams.get('topics')
+  const activeTopics = topicsParam ? topicsParam.split(',') : null
+
+  const questions = useMemo(() => buildQuestions(activeTopics), [activeTopics?.join(',')])
   const [idx, setIdx] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [results, setResults] = useState<boolean[]>([])
@@ -405,5 +424,13 @@ export default function MockTestPage() {
       </main>
       <AITutorChat level="B2" />
     </div>
+  )
+}
+
+export default function MockTestPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-500">Yüklənir...</div>}>
+      <MockTestContent />
+    </Suspense>
   )
 }

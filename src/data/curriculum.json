@@ -1,0 +1,311 @@
+[
+  {
+    "day": 1,
+    "title": "Müqavilənin Yaranması",
+    "title_en": "Contract Formation",
+    "toles_level": "Foundation",
+    "topics": ["Contract Law"],
+    "reading_id": 1,
+    "focus": "Offer, Acceptance, Consideration — müqavilənin 3 əsas elementi",
+    "vocab_count": 15
+  },
+  {
+    "day": 2,
+    "title": "Müqavilənin Pozulması",
+    "title_en": "Breach of Contract & Remedies",
+    "toles_level": "Foundation",
+    "topics": ["Contract Law"],
+    "reading_id": 2,
+    "focus": "Breach, Damages, Specific Performance, Mitigation",
+    "vocab_count": 12
+  },
+  {
+    "day": 3,
+    "title": "Hüquqa Zidd Hərəkətlər (Tort)",
+    "title_en": "Tort Law — Negligence",
+    "toles_level": "Foundation",
+    "topics": ["Tort Law"],
+    "reading_id": 3,
+    "focus": "Negligence, Duty of Care, Breach, Causation — 3 element",
+    "vocab_count": 12
+  },
+  {
+    "day": 4,
+    "title": "Digər Hüquqa Zidd Hərəkətlər",
+    "title_en": "Tort Law — Other Torts",
+    "toles_level": "Foundation",
+    "topics": ["Tort Law"],
+    "reading_id": 10,
+    "focus": "Defamation, Assault, Battery, Trespass, False Imprisonment",
+    "vocab_count": 10
+  },
+  {
+    "day": 5,
+    "title": "Məhkəmə Prosesi — Əsaslar",
+    "title_en": "Court & Litigation Basics",
+    "toles_level": "Foundation",
+    "topics": ["Court & Litigation"],
+    "reading_id": 7,
+    "focus": "Claimant, Defendant, Evidence, Judgment, Appeal",
+    "vocab_count": 14
+  },
+  {
+    "day": 6,
+    "title": "Cinayət Hüququ — Əsaslar",
+    "title_en": "Criminal Law Basics",
+    "toles_level": "Foundation",
+    "topics": ["Criminal Law"],
+    "reading_id": 9,
+    "focus": "Conviction, Acquittal, Plea, Bail, Custody, Sentence",
+    "vocab_count": 12
+  },
+  {
+    "day": 7,
+    "title": "Əmək Hüququ — Əsaslar",
+    "title_en": "Employment Law Basics",
+    "toles_level": "Foundation",
+    "topics": ["Employment Law"],
+    "reading_id": 5,
+    "focus": "Employment Contract, Dismissal, Discrimination, Redundancy",
+    "vocab_count": 10
+  },
+  {
+    "day": 8,
+    "title": "Foundation Təkrarı",
+    "title_en": "Foundation Review",
+    "toles_level": "Foundation",
+    "topics": ["Contract Law", "Tort Law", "Court & Litigation"],
+    "reading_id": 1,
+    "focus": "Tam Foundation mövzularının konsolidasiyası — qarışıq review",
+    "vocab_count": 20,
+    "is_review": true
+  },
+  {
+    "day": 9,
+    "title": "Foundation Mock İmtahanı",
+    "title_en": "Foundation Mock Exam",
+    "toles_level": "Foundation",
+    "topics": ["Contract Law", "Tort Law", "Court & Litigation", "Criminal Law", "Employment Law"],
+    "reading_id": 2,
+    "focus": "Bütün Foundation mövzularından 10 suallıq mock imtahan",
+    "vocab_count": 20,
+    "is_exam": true
+  },
+  {
+    "day": 10,
+    "title": "Müqavilə — Yanıltma və Məcburetmə",
+    "title_en": "Contract — Misrepresentation & Duress",
+    "toles_level": "Higher",
+    "topics": ["Contract Law"],
+    "reading_id": 1,
+    "focus": "Misrepresentation, Duress, Undue Influence, Void, Voidable",
+    "vocab_count": 12
+  },
+  {
+    "day": 11,
+    "title": "Müqavilə — Şərtlər və Xitam",
+    "title_en": "Contract Terms & Termination",
+    "toles_level": "Higher",
+    "topics": ["Contract Law"],
+    "reading_id": 2,
+    "focus": "Warranty, Indemnity, Termination, Assignment, Force Majeure",
+    "vocab_count": 12
+  },
+  {
+    "day": 12,
+    "title": "Müqavilə — Mürəkkəb Müddəalar",
+    "title_en": "Contract — Advanced Clauses",
+    "toles_level": "Higher",
+    "topics": ["Contract Law"],
+    "reading_id": 1,
+    "focus": "Liquidated Damages, Penalty Clause, Novation, Rescission, Escrow",
+    "vocab_count": 10
+  },
+  {
+    "day": 13,
+    "title": "Şirkət Hüququ — Direktorlar",
+    "title_en": "Company Law — Directors & Duties",
+    "toles_level": "Higher",
+    "topics": ["Company Law"],
+    "reading_id": 4,
+    "focus": "Director, Fiduciary Duty, Board of Directors, Corporate Governance",
+    "vocab_count": 12
+  },
+  {
+    "day": 14,
+    "title": "Şirkət Hüququ — Səhmdarlıq",
+    "title_en": "Company Law — Shareholders & M&A",
+    "toles_level": "Higher",
+    "topics": ["Company Law"],
+    "reading_id": 4,
+    "focus": "Shareholder, Dividend, Merger, Acquisition, Conflict of Interest",
+    "vocab_count": 10
+  },
+  {
+    "day": 15,
+    "title": "Əmək Hüququ — Ətraflı",
+    "title_en": "Employment Law — Advanced",
+    "toles_level": "Higher",
+    "topics": ["Employment Law"],
+    "reading_id": 5,
+    "focus": "Unfair Dismissal, Wrongful Dismissal, Harassment, Whistleblower",
+    "vocab_count": 10
+  },
+  {
+    "day": 16,
+    "title": "Əqli Mülkiyyət",
+    "title_en": "Intellectual Property",
+    "toles_level": "Higher",
+    "topics": ["Intellectual Property"],
+    "reading_id": 6,
+    "focus": "Trademark, Copyright, Patent, Infringement",
+    "vocab_count": 8
+  },
+  {
+    "day": 17,
+    "title": "Mülkiyyət Hüququ",
+    "title_en": "Property Law",
+    "toles_level": "Higher",
+    "topics": ["Property Law"],
+    "reading_id": 8,
+    "focus": "Lease, Tenant, Landlord, Mortgage, Conveyancing, Lien",
+    "vocab_count": 12
+  },
+  {
+    "day": 18,
+    "title": "Higher Təkrarı",
+    "title_en": "Higher Review",
+    "toles_level": "Higher",
+    "topics": ["Company Law", "Employment Law", "Intellectual Property", "Property Law"],
+    "reading_id": 4,
+    "focus": "Şirkət, Əmək, Əqli Mülkiyyət, Mülkiyyət — konsolidasiya",
+    "vocab_count": 20,
+    "is_review": true
+  },
+  {
+    "day": 19,
+    "title": "Higher Mock İmtahanı",
+    "title_en": "Higher Mock Exam",
+    "toles_level": "Higher",
+    "topics": ["Contract Law", "Company Law", "Employment Law", "Intellectual Property", "Property Law"],
+    "reading_id": 5,
+    "focus": "Bütün Higher mövzularından mock imtahan",
+    "vocab_count": 20,
+    "is_exam": true
+  },
+  {
+    "day": 20,
+    "title": "Hüquqi Prinsiplər",
+    "title_en": "Legal Principles",
+    "toles_level": "Advanced",
+    "topics": ["Legal Principles"],
+    "reading_id": 7,
+    "focus": "Estoppel, Waiver, Restitution, Remedies, Specific Performance, Unjust Enrichment",
+    "vocab_count": 12
+  },
+  {
+    "day": 21,
+    "title": "Cinayət Hüququ — Mürəkkəb",
+    "title_en": "Criminal Law — Advanced",
+    "toles_level": "Advanced",
+    "topics": ["Criminal Law"],
+    "reading_id": 9,
+    "focus": "Mens Rea, Actus Reus, Accomplice, Accessory, Embezzlement, Fraud",
+    "vocab_count": 12
+  },
+  {
+    "day": 22,
+    "title": "İflas və Likvidasiya",
+    "title_en": "Insolvency & Bankruptcy",
+    "toles_level": "Advanced",
+    "topics": ["Bankruptcy Law"],
+    "reading_id": 8,
+    "focus": "Insolvency, Bankruptcy, Liquidation — idarəetmə və prosedur",
+    "vocab_count": 6
+  },
+  {
+    "day": 23,
+    "title": "İnzibati Hüquq",
+    "title_en": "Administrative Law",
+    "toles_level": "Advanced",
+    "topics": ["Administrative Law"],
+    "reading_id": 7,
+    "focus": "Administrative Law, Regulation, Licensing, Petition",
+    "vocab_count": 8
+  },
+  {
+    "day": 24,
+    "title": "Arbitraj və Mübahisə Həlli",
+    "title_en": "Arbitration & Dispute Resolution",
+    "toles_level": "Advanced",
+    "topics": ["Court & Litigation"],
+    "reading_id": 7,
+    "focus": "Arbitration, Mediation, Settlement, Litigation — müqayisə",
+    "vocab_count": 8
+  },
+  {
+    "day": 25,
+    "title": "Beynəlxalq Hüquq",
+    "title_en": "International & Constitutional Law",
+    "toles_level": "Advanced",
+    "topics": ["Legal Principles"],
+    "reading_id": 3,
+    "focus": "International Law, Constitutional Law, Common Law, Civil Law",
+    "vocab_count": 8
+  },
+  {
+    "day": 26,
+    "title": "İnteqrasiya Təkrarı 1",
+    "title_en": "Integrated Review — Contract & Tort",
+    "toles_level": "Advanced",
+    "topics": ["Contract Law", "Tort Law"],
+    "reading_id": 3,
+    "focus": "Müqavilə + Tort hüququ — inteqrasiya və ziddiyyətin analizi",
+    "vocab_count": 20,
+    "is_review": true
+  },
+  {
+    "day": 27,
+    "title": "İnteqrasiya Təkrarı 2",
+    "title_en": "Integrated Review — Company & Employment",
+    "toles_level": "Advanced",
+    "topics": ["Company Law", "Employment Law"],
+    "reading_id": 4,
+    "focus": "Şirkət + Əmək hüququ — inteqrasiya",
+    "vocab_count": 20,
+    "is_review": true
+  },
+  {
+    "day": 28,
+    "title": "İnteqrasiya Təkrarı 3",
+    "title_en": "Integrated Review — Criminal & IP",
+    "toles_level": "Advanced",
+    "topics": ["Criminal Law", "Intellectual Property", "Bankruptcy Law"],
+    "reading_id": 9,
+    "focus": "Cinayət + Əqli Mülkiyyət + İflas — inteqrasiya",
+    "vocab_count": 20,
+    "is_review": true
+  },
+  {
+    "day": 29,
+    "title": "Tam TOLES Mock İmtahanı",
+    "title_en": "Full TOLES Mock Exam",
+    "toles_level": "Advanced",
+    "topics": ["Contract Law", "Tort Law", "Court & Litigation", "Company Law", "Employment Law", "Criminal Law", "Intellectual Property", "Property Law", "Legal Principles", "Bankruptcy Law"],
+    "reading_id": 2,
+    "focus": "Bütün mövzulardan tam TOLES simulyasiyası — 30 sual",
+    "vocab_count": 30,
+    "is_exam": true
+  },
+  {
+    "day": 30,
+    "title": "İmtahana Son Hazırlıq",
+    "title_en": "Final TOLES Readiness",
+    "toles_level": "Advanced",
+    "topics": ["Contract Law", "Tort Law", "Court & Litigation", "Company Law", "Employment Law", "Criminal Law", "Intellectual Property", "Property Law", "Legal Principles", "Bankruptcy Law"],
+    "reading_id": 10,
+    "focus": "Zəif nöqtələrin aradan qaldırılması. TOLES imtahanına hazırsan! 🎓",
+    "vocab_count": 30,
+    "is_exam": true
+  }
+]

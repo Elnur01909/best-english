@@ -1,6 +1,6 @@
 'use client'
-import { useMemo, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useMemo, useState, Suspense } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import AudioPlayer from '@/components/AudioPlayer'
 import AITutorChat from '@/components/AITutorChat'
 import readingData from '@/data/reading.json'
@@ -11,14 +11,19 @@ function shuffle<T>(arr: T[]): T[] {
   return [...arr].sort(() => Math.random() - 0.5)
 }
 
-export default function ReadingPage() {
+function ReadingContent() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const passageIdParam = searchParams.get('passageId')
 
-  // Hər dəfə random bir mətn seç
-  const passage = useMemo(
-    () => readingData[Math.floor(Math.random() * readingData.length)] as typeof readingData[0],
-    []
-  )
+  // passageId varsa — curriculum-dan gələn xüsusi mətn, yoxsa random
+  const passage = useMemo(() => {
+    if (passageIdParam) {
+      const found = (readingData as typeof readingData).find(p => p.id === Number(passageIdParam))
+      if (found) return found
+    }
+    return readingData[Math.floor(Math.random() * readingData.length)] as typeof readingData[0]
+  }, [passageIdParam])
   const questions = useMemo(
     () => passage.questions.map(q => ({ ...q, options: shuffle(q.options) })),
     [passage]
@@ -230,5 +235,13 @@ export default function ReadingPage() {
         </button>
       </div>
     </div>
+  )
+}
+
+export default function ReadingPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-500">Yüklənir...</div>}>
+      <ReadingContent />
+    </Suspense>
   )
 }
