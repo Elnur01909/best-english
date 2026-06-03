@@ -19,7 +19,6 @@ export default function DashboardPage() {
   const [dueCount, setDueCount] = useState(0)
   const [weeklyData, setWeeklyData] = useState<{ day: string; correct: number }[]>([])
   const [loading, setLoading] = useState(true)
-  const [completedSessions, setCompletedSessions] = useState<string[]>([])
 
   useEffect(() => {
     async function load() {
@@ -52,15 +51,7 @@ export default function DashboardPage() {
     router.push('/')
   }
 
-  function handleSessionClick(sessionId: string) {
-    setCompletedSessions(prev =>
-      prev.includes(sessionId)
-        ? prev.filter(id => id !== sessionId)
-        : [...prev, sessionId]
-    )
-  }
-
-  if (loading) {
+if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-gray-500">Yüklənir...</div>
@@ -146,7 +137,7 @@ export default function DashboardPage() {
         )}
 
         {/* Günlük Plan — Hissə 5 */}
-        <DailySchedule completedSessions={completedSessions} onSessionClick={handleSessionClick} />
+        <DailySchedule />
 
         {/* Həftəlik qrafik */}
         {weeklyData.length > 0 && (
