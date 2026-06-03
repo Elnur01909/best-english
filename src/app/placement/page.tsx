@@ -4,7 +4,10 @@ import { useRouter } from 'next/navigation'
 import { getUser, updateUserLevel } from '@/lib/supabase'
 import { cefrToToles } from '@/lib/utils'
 import placementData from '@/data/placement.json'
+import placementData2 from '@/data/placement2.json'
 import type { CEFRLevel } from '@/types'
+
+const ALL_QUESTIONS = [...placementData, ...placementData2]
 
 interface PQuestion {
   id: number
@@ -52,7 +55,7 @@ export default function PlacementPage() {
 
   // Hər səviyyədən təsadüfi 3 sual seç (180-lik hovuzdan), sonra suallar+variantlar qarışsın
   const questions = useMemo(() => {
-    const pool = placementData as PQuestion[]
+    const pool = ALL_QUESTIONS as PQuestion[]
     const picked: PQuestion[] = []
     for (const lvl of LEVELS) {
       const ofLevel = shuffle(pool.filter((q) => q.level === lvl))
