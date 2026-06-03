@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { getUser } from '@/lib/supabase'
 import { getDailyPlan, completeSession, CURRICULUM, type DailyPlan } from '@/lib/curriculum'
+import { getTodayScores } from '@/lib/sessionScore'
 
 const TOLES_COLORS: Record<string, string> = {
   Foundation: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300',
@@ -48,9 +49,13 @@ export default function DailySchedule() {
     { id: 'night',   emoji: '🌙', label: 'TOLES Mock Mini-Test', desc: `${curriculum.title} sualları — lüğət + qrammatika`,  route: `/mock-test?topics=${topicParam}` },
   ]
 
-  const isDone = (id: string) => plan.completedSessions.includes(id)
-  const completedCount = SESSIONS.filter(s => isDone(s.id)).length
-  const dailyPct = Math.round((completedCount / SESSIONS.length) * 100)
+  const scores = getTodayScores()
+  const isDone = (id: string) => plan.completedSessions.includes(id) || (scores[id] ?? 0) > 0
+  const getScore = (id: string) => scores[id] ?? (plan.completedSessions.includes(id) ? 100 : 0)
+  // Günlük faiz: hər session max 25%, session_score%-ə mütənasib
+  const dailyPct = Math.round(
+    SESSIONS.reduce((sum, s) => sum + (getScore(s.id) * 25) / 100, 0)
+  )
 
   async function handleStart(session: typeof SESSIONS[0]) {
     if (!userId) return
@@ -111,7 +116,7 @@ export default function DailySchedule() {
       <div className="space-y-3 mb-5">
         {SESSIONS.map((session, idx) => {
           const done = isDone(session.id)
-          const sessionPct = done ? 100 : 0
+          const sessionPct = getScore(session.id)
 
           return (
             <div key={session.id}

@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import AITutorChat from '@/components/AITutorChat'
 import AudioPlayer from '@/components/AudioPlayer'
 import vocabData from '@/data/vocab.json'
+import { saveSessionScore } from '@/lib/sessionScore'
 import type { VocabItem } from '@/types'
 
 interface MockQ {
@@ -263,67 +264,98 @@ const TYPE_COLOR: Record<string, string> = {
 function MockTestContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  // topics param: "Contract Law,Tort Law" — filtrlənmiş suallar
   const topicsParam = searchParams.get('topics')
   const activeTopics = topicsParam ? topicsParam.split(',') : null
 
-  const questions = useMemo(() => buildQuestions(activeTopics), [activeTopics?.join(',')])
-  const [idx, setIdx] = useState(0)
+  const initialQuestions = useMemo(() => buildQuestions(activeTopics), [activeTopics?.join(',')])
+  const TOTAL_UNIQUE = initialQuestions.length  // 10
+
+  // Aktiv sual növbəsi (yanlış cavablar sonra əlavə olunur)
+  const [queue, setQueue] = useState<MockQ[]>(initialQuestions)
+  // Unikal sualların ID-ləri — mənimsənilənlər
+  const [mastered, setMastered] = useState<Set<number>>(new Set())
+  const [qIdx, setQIdx] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
-  const [results, setResults] = useState<boolean[]>([])
   const [done, setDone] = useState(false)
   const [showAz, setShowAz] = useState(false)
 
-  const current = questions[idx]
+  const current = queue[qIdx]
+  // Real-time faiz: neçə unikal sual mənimsənildi
+  const progressPct = Math.round((mastered.size / TOTAL_UNIQUE) * 100)
 
   function select(opt: string) {
     if (selected) return
     setSelected(opt)
-    setResults(r => [...r, opt === current.correct])
+    const correct = opt === current.correct
+
+    if (correct) {
+      // Mənimsənildi
+      setMastered(prev => {
+        const next = new Set(prev)
+        next.add(current.id)
+        return next
+      })
+    } else {
+      // Yanlış — sualı növbənin random yerinə (növbəti 3 sual arası) əlavə et
+      setQueue(prev => {
+        const remaining = prev.slice(qIdx + 1)
+        const insertAt = Math.min(
+          Math.floor(Math.random() * 3) + 1,
+          remaining.length
+        )
+        const next = [...remaining]
+        next.splice(insertAt, 0, { ...current, options: shuffle(current.options) })
+        return [...prev.slice(0, qIdx + 1), ...next]
+      })
+    }
   }
 
   function next() {
-    if (idx + 1 >= questions.length) {
+    const nextIdx = qIdx + 1
+    // Bütün unikal suallar mənimsənilibsə (yanlış cavab verməyənlər) bitir
+    // YA DA növbə qurtarıbsa bitir
+    if (nextIdx >= queue.length || mastered.size === TOTAL_UNIQUE) {
+      const score = Math.round((mastered.size / TOTAL_UNIQUE) * 100)
+      saveSessionScore('night', score)
       setDone(true)
     } else {
-      setIdx(i => i + 1)
+      setQIdx(nextIdx)
       setSelected(null)
       setShowAz(false)
     }
   }
 
-  const score = results.filter(Boolean).length
-  const pct = done ? Math.round((score / questions.length) * 100) : 0
+  const finalPct = done ? Math.round((mastered.size / TOTAL_UNIQUE) * 100) : 0
 
   // ─── Header ────────────────────────────────────────────
   const header = (
     <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
       <button onClick={() => router.push('/dashboard')} className="text-gray-500 text-sm">← Geri</button>
       <span className="font-semibold text-gray-900 dark:text-white text-sm">🌙 TOLES Mock Test</span>
-      <span className="text-sm text-gray-400">{done ? '✓' : `${idx + 1}/${questions.length}`}</span>
+      <span className="text-sm text-gray-400">{done ? '✓' : `${mastered.size}/${TOTAL_UNIQUE} ✓`}</span>
     </header>
   )
 
   // ─── Nəticə ────────────────────────────────────────────
   if (done) {
-    const byType = { vocabulary: { c: 0, t: 0 }, grammar: { c: 0, t: 0 }, collocation: { c: 0, t: 0 } }
-    questions.forEach((q, i) => { byType[q.type].t++; if (results[i]) byType[q.type].c++ })
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
         {header}
         <div className="flex-1 flex items-center justify-center px-4">
           <div className="card max-w-sm w-full text-center">
-            <div className="text-5xl mb-3">{pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '💪'}</div>
+            <div className="text-5xl mb-3">{finalPct >= 80 ? '🏆' : finalPct >= 60 ? '👍' : '💪'}</div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">TOLES Mock Test</h2>
-            <p className="text-3xl font-bold text-blue-600 mb-1">{score}/{questions.length}</p>
-            <p className="text-gray-500 mb-5">{pct}%</p>
+            <p className="text-3xl font-bold text-blue-600 mb-1">{mastered.size}/{TOTAL_UNIQUE}</p>
+            <p className="text-gray-500 mb-1">Mənimsənildi: <strong>{finalPct}%</strong></p>
+            <p className="text-xs text-gray-400 mb-5">Günlük töhfə: {Math.round(finalPct * 25 / 100)}% (25%-dən)</p>
+            <div className="w-full bg-gray-100 dark:bg-gray-800 rounded-full h-3 mb-6">
+              <div className={`h-3 rounded-full ${finalPct >= 80 ? 'bg-green-500' : finalPct >= 60 ? 'bg-yellow-500' : 'bg-red-500'}`}
+                style={{ width: `${finalPct}%` }} />
+            </div>
             <div className="space-y-2 mb-6 text-left">
-              {Object.entries(byType).map(([type, { c, t }]) => (
-                <div key={type} className="flex items-center justify-between p-2.5 rounded-lg bg-gray-50 dark:bg-gray-800">
-                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${TYPE_COLOR[type]}`}>{TYPE_LABEL[type]}</span>
-                  <span className={`text-sm font-bold ${c === t ? 'text-green-600' : c >= t * 0.6 ? 'text-yellow-600' : 'text-red-600'}`}>{c}/{t}</span>
-                </div>
-              ))}
+              <div className="p-3 bg-blue-50 dark:bg-blue-950 rounded-lg text-xs text-blue-800 dark:text-blue-200">
+                💡 Yanlış cavab verdiyin suallar o gün dəfələrlə qarşına çıxdı. Mənimsəmədiklərini sabah yenidən sınaya bilərsən.
+              </div>
             </div>
             <div className="bg-blue-50 dark:bg-blue-950 rounded-lg p-3 text-xs text-blue-800 dark:text-blue-200 mb-6">
               💡 TOLES: Lüğət + Qrammatika + Kollokasiya — bu test həmin formatı simulyasiya edir.
@@ -339,8 +371,13 @@ function MockTestContent() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
       {header}
-      <div className="h-1 bg-gray-200">
-        <div className="h-1 bg-indigo-500 transition-all" style={{ width: `${(idx / questions.length) * 100}%` }} />
+      {/* Progress: mənimsənilən/cəmi */}
+      <div className="h-2 bg-gray-200">
+        <div className="h-2 bg-indigo-500 transition-all" style={{ width: `${progressPct}%` }} />
+      </div>
+      <div className="px-4 py-1.5 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs text-gray-500">
+        <span>✓ Mənimsənildi: <strong className="text-green-600">{mastered.size}/{TOTAL_UNIQUE}</strong></span>
+        <span className="font-medium text-indigo-600">{progressPct}%</span>
       </div>
 
       <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
@@ -350,6 +387,9 @@ function MockTestContent() {
             {TYPE_LABEL[current.type]}
           </span>
           <span className="text-xs text-gray-400">{current.topic}</span>
+          {selected && !mastered.has(current.id) && (
+            <span className="text-xs text-amber-600 font-medium">🔄 Yenidən qarşına çıxacaq</span>
+          )}
         </div>
 
         {/* Sual + 2 düymə */}
@@ -406,18 +446,18 @@ function MockTestContent() {
         {selected && (
           <>
             <div className={`mb-4 p-3 rounded-xl text-sm text-center font-medium ${
-              results[results.length - 1]
+              selected === current.correct
                 ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
                 : 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300'
             }`}>
-              {results[results.length - 1] ? '✓ Düzgün!' : '✗ Yanlış'}
+              {selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-xl p-4 mb-6">
               <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-1">💡 İzah:</p>
               <p className="text-sm text-indigo-800 dark:text-indigo-200">{current.explanation}</p>
             </div>
             <button onClick={next} className="btn-primary w-full">
-              {idx + 1 >= questions.length ? 'Nəticəni gör →' : 'Növbəti sual →'}
+              {mastered.size === TOTAL_UNIQUE || qIdx + 1 >= queue.length ? 'Nəticəni gör →' : 'Növbəti sual →'}
             </button>
           </>
         )}
