@@ -98,8 +98,8 @@ export default function PlacementPage() {
         <div className="text-5xl mb-4">📊</div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Səviyyə Ölçmə Testi</h1>
         <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">
-          30 sual — qrammatika və lüğət. Sənin İngilis dili səviyyəni (A1–C2) avtomatik təyin edəcək.
-          Bilmədiyin sual olsa, ən yaxşı təxminini seç. ~5 dəqiqə.
+          18 sual — qrammatika və lüğət. Sənin İngilis dili səviyyəni (A1–C2) avtomatik təyin edəcək.
+          Bilmədiyin sual olsa, ən yaxşı təxminini seç. ~3 dəqiqə.
         </p>
         <button onClick={() => setStage('test')} className="btn-primary w-full">
           Testə Başla →

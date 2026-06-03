@@ -1,37 +1,25 @@
 [
   { "id": 1, "level": "A1", "question": "She ___ a teacher.", "options": ["is", "are", "am", "be"], "correct": "is" },
   { "id": 2, "level": "A1", "question": "I ___ coffee every morning.", "options": ["drinks", "drink", "drinking", "drank"], "correct": "drink" },
-  { "id": 3, "level": "A1", "question": "There ___ two books on the table.", "options": ["is", "are", "be", "am"], "correct": "are" },
-  { "id": 4, "level": "A1", "question": "This is ___ apple.", "options": ["a", "an", "the", "some"], "correct": "an" },
-  { "id": 5, "level": "A1", "question": "They ___ from Spain.", "options": ["is", "am", "are", "be"], "correct": "are" },
+  { "id": 3, "level": "A1", "question": "This is ___ apple.", "options": ["a", "an", "the", "some"], "correct": "an" },
 
-  { "id": 6, "level": "A2", "question": "Yesterday I ___ to the cinema.", "options": ["go", "went", "gone", "going"], "correct": "went" },
-  { "id": 7, "level": "A2", "question": "She is ___ than her brother.", "options": ["tall", "taller", "tallest", "more tall"], "correct": "taller" },
-  { "id": 8, "level": "A2", "question": "We are going ___ visit our grandparents.", "options": ["to", "for", "at", "in"], "correct": "to" },
-  { "id": 9, "level": "A2", "question": "He ___ like spicy food.", "options": ["doesn't", "isn't", "don't", "not"], "correct": "doesn't" },
-  { "id": 10, "level": "A2", "question": "The keys are ___ the drawer.", "options": ["on", "at", "in", "by"], "correct": "in" },
+  { "id": 4, "level": "A2", "question": "Yesterday I ___ to the cinema.", "options": ["go", "went", "gone", "going"], "correct": "went" },
+  { "id": 5, "level": "A2", "question": "She is ___ than her brother.", "options": ["tall", "taller", "tallest", "more tall"], "correct": "taller" },
+  { "id": 6, "level": "A2", "question": "The keys are ___ the drawer.", "options": ["on", "at", "in", "by"], "correct": "in" },
 
-  { "id": 11, "level": "B1", "question": "I ___ already finished my homework.", "options": ["have", "has", "had", "am"], "correct": "have" },
-  { "id": 12, "level": "B1", "question": "If it rains, we ___ stay at home.", "options": ["will", "would", "are", "have"], "correct": "will" },
-  { "id": 13, "level": "B1", "question": "This is the man ___ helped me yesterday.", "options": ["which", "who", "whose", "whom"], "correct": "who" },
-  { "id": 14, "level": "B1", "question": "You ___ wear a helmet when riding a bike.", "options": ["should", "would", "could have", "are"], "correct": "should" },
-  { "id": 15, "level": "B1", "question": "She has lived here ___ 2015.", "options": ["for", "since", "from", "during"], "correct": "since" },
+  { "id": 7, "level": "B1", "question": "I ___ already finished my homework.", "options": ["have", "has", "had", "am"], "correct": "have" },
+  { "id": 8, "level": "B1", "question": "If it rains, we ___ stay at home.", "options": ["will", "would", "are", "have"], "correct": "will" },
+  { "id": 9, "level": "B1", "question": "She has lived here ___ 2015.", "options": ["for", "since", "from", "during"], "correct": "since" },
 
-  { "id": 16, "level": "B2", "question": "If I ___ more time, I would travel the world.", "options": ["have", "had", "have had", "will have"], "correct": "had" },
-  { "id": 17, "level": "B2", "question": "The report ___ by the committee last week.", "options": ["was reviewed", "reviewed", "has review", "is reviewing"], "correct": "was reviewed" },
-  { "id": 18, "level": "B2", "question": "He said he ___ finish the project by Friday.", "options": ["will", "would", "is", "can"], "correct": "would" },
-  { "id": 19, "level": "B2", "question": "We need to ___ a meeting to discuss the contract.", "options": ["set up", "set off", "set in", "set out"], "correct": "set up" },
-  { "id": 20, "level": "B2", "question": "I'm not used ___ early in the morning.", "options": ["to getting up", "to get up", "getting up", "get up"], "correct": "to getting up" },
+  { "id": 10, "level": "B2", "question": "If I ___ more time, I would travel the world.", "options": ["have", "had", "have had", "will have"], "correct": "had" },
+  { "id": 11, "level": "B2", "question": "The report ___ by the committee last week.", "options": ["was reviewed", "reviewed", "has review", "is reviewing"], "correct": "was reviewed" },
+  { "id": 12, "level": "B2", "question": "We need to ___ a meeting to discuss the contract.", "options": ["set up", "set off", "set in", "set out"], "correct": "set up" },
 
-  { "id": 21, "level": "C1", "question": "Not only ___ late, but he also forgot the documents.", "options": ["he was", "was he", "he is", "is he"], "correct": "was he" },
-  { "id": 22, "level": "C1", "question": "Had I known about the clause, I ___ signed the agreement.", "options": ["wouldn't have", "won't have", "didn't", "wouldn't"], "correct": "wouldn't have" },
-  { "id": 23, "level": "C1", "question": "The parties reached an agreement ___ lengthy negotiations.", "options": ["despite", "although", "however", "whereas"], "correct": "despite" },
-  { "id": 24, "level": "C1", "question": "She has a tendency ___ overcomplicate simple matters.", "options": ["to", "for", "of", "in"], "correct": "to" },
-  { "id": 25, "level": "C1", "question": "The defendant was found ___ of all charges.", "options": ["acquitted", "guilty-free", "innocent of", "released"], "correct": "acquitted" },
+  { "id": 13, "level": "C1", "question": "Not only ___ late, but he also forgot the documents.", "options": ["he was", "was he", "he is", "is he"], "correct": "was he" },
+  { "id": 14, "level": "C1", "question": "Had I known about the clause, I ___ signed the agreement.", "options": ["wouldn't have", "won't have", "didn't", "wouldn't"], "correct": "wouldn't have" },
+  { "id": 15, "level": "C1", "question": "The defendant was found ___ of all charges.", "options": ["acquitted", "guilty-free", "innocent of", "released"], "correct": "acquitted" },
 
-  { "id": 26, "level": "C2", "question": "Were it not for your support, the deal ___ collapsed.", "options": ["would have", "will have", "had", "would"], "correct": "would have" },
-  { "id": 27, "level": "C2", "question": "The terms of the contract are, ___ all intents and purposes, non-negotiable.", "options": ["to", "for", "by", "at"], "correct": "to" },
-  { "id": 28, "level": "C2", "question": "His argument, ___ compelling, ultimately lacked legal precedent.", "options": ["albeit", "despite", "nevertheless", "whereas"], "correct": "albeit" },
-  { "id": 29, "level": "C2", "question": "The court ruled that the evidence was ___ inadmissible.", "options": ["deemed", "thought of", "looked", "found out"], "correct": "deemed" },
-  { "id": 30, "level": "C2", "question": "Little ___ that the merger would face such scrutiny.", "options": ["did they realise", "they realised", "they did realise", "realised they"], "correct": "did they realise" }
+  { "id": 16, "level": "C2", "question": "Were it not for your support, the deal ___ collapsed.", "options": ["would have", "will have", "had", "would"], "correct": "would have" },
+  { "id": 17, "level": "C2", "question": "His argument, ___ compelling, ultimately lacked legal precedent.", "options": ["albeit", "despite", "nevertheless", "whereas"], "correct": "albeit" },
+  { "id": 18, "level": "C2", "question": "Little ___ that the merger would face such scrutiny.", "options": ["did they realise", "they realised", "they did realise", "realised they"], "correct": "did they realise" }
 ]
