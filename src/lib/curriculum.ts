@@ -10,6 +10,7 @@ export interface CurriculumDay {
   reading_id: number
   focus: string
   vocab_count: number
+  vocab_ids: number[]   // Həmin mətndəki 8 əsas termin
   is_review?: boolean
   is_exam?: boolean
 }

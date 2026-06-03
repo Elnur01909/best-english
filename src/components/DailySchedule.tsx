@@ -43,10 +43,10 @@ export default function DailySchedule() {
   const topicParam = encodeURIComponent(curriculum.topics.join(','))
 
   const SESSIONS = [
-    { id: 'morning', emoji: '🌅', label: 'SRS Lüğət Kartları',  desc: 'Gündəlik söz məşqi — SM-2 alqoritmi',               route: '/vocabulary' },
-    { id: 'midday',  emoji: '☀️', label: 'TOLES Oxu Anlama',     desc: `"${curriculum.title_en}" mətni + kollokasiya`,       route: `/reading?passageId=${curriculum.reading_id}&topics=${topicParam}` },
-    { id: 'evening', emoji: '🌆', label: 'Output: Quiz / Yazma', desc: `${curriculum.title} mövzusunda quiz + yazma`,         route: `/output?topics=${topicParam}` },
-    { id: 'night',   emoji: '🌙', label: 'TOLES Mock Mini-Test', desc: `${curriculum.title} sualları — lüğət + qrammatika`,  route: `/mock-test?topics=${topicParam}` },
+    { id: 'midday',  emoji: '☀️', label: 'TOLES Oxu Anlama',     desc: `"${curriculum.title_en}" mətni — sözləri kontekstdə gör`,  route: `/reading?passageId=${curriculum.reading_id}&topics=${topicParam}` },
+    { id: 'morning', emoji: '🌅', label: 'SRS Lüğət Kartları',  desc: 'Mətndəki terminləri öyrən — SM-2 + 4 review',               route: '/vocabulary' },
+    { id: 'evening', emoji: '🌆', label: 'Output: Quiz',         desc: `${curriculum.title} mövzusunda quiz — öyrəndiklərini sına`, route: `/output?topics=${topicParam}` },
+    { id: 'night',   emoji: '🌙', label: 'TOLES Mock Mini-Test', desc: `${curriculum.title} — lüğət + qrammatika + kollokasiya`,    route: `/mock-test?topics=${topicParam}` },
   ]
 
   const scores = getTodayScores()

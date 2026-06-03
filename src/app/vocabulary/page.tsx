@@ -63,38 +63,22 @@ function VocabularyContent() {
       }
 
       // ─── HİBRİD SİSTEM ───────────────────────────────────────
-      // 1) SM-2 review kartları (vaxtı gəlmiş)
+      // 1) SM-2 review kartları (vaxtı gəlmiş — 4 kart)
       const { data: dueRaw } = await getDueCards(user.id, REVIEW_PER_DAY)
       const reviewCards = (dueRaw ?? []) as VocabProgress[]
-
-      // 2) Bugünkü curriculum mövzusundan yeni sözlər
-      const plan = await getDailyPlan(user.id)
-      const todayTopics = plan.curriculum.topics
-
-      // Artıq öyrənilmiş vocab_id-ləri çıxart
       const reviewIds = new Set(reviewCards.map(c => c.vocab_id))
 
-      const topicWords = (vocabData as VocabItem[])
-        .filter(v => todayTopics.includes(v.topic) && !reviewIds.has(v.id))
-        .sort(() => Math.random() - 0.5)
+      // 2) Bugünkü mətndən 8 əsas termin (curriculum.vocab_ids)
+      const plan = await getDailyPlan(user.id)
+      const todayVocabIds = (plan.curriculum.vocab_ids ?? []) as number[]
+
+      // Review-da olanları çıxart, qalan sözləri tap
+      const newVocabIds = todayVocabIds.filter(id => !reviewIds.has(id))
+      const newCards: VocabProgress[] = newVocabIds
         .slice(0, NEW_WORDS_PER_DAY)
+        .map(id => ({ user_id: user.id, vocab_id: id, ...SRS_DEFAULTS }))
 
-      // Əgər mövzudan kifayət qədər söz yoxdursa — digər mövzulardan doldur
-      const needed = NEW_WORDS_PER_DAY - topicWords.length
-      const topicWordIds = new Set(topicWords.map(v => v.id))
-      const fillWords = needed > 0
-        ? (vocabData as VocabItem[])
-            .filter(v => !reviewIds.has(v.id) && !topicWordIds.has(v.id))
-            .sort(() => Math.random() - 0.5)
-            .slice(0, needed)
-        : []
-
-      const allNewWords = [...topicWords, ...fillWords]
-      const newCards: VocabProgress[] = allNewWords.map(v => ({
-        user_id: user.id, vocab_id: v.id, ...SRS_DEFAULTS,
-      }))
-
-      // 3) Birləşdir: əvvəl review, sonra yeni sözlər
+      // 3) Birləşdir: əvvəl review (4), sonra bugünkü mətndən (8)
       const combined = [...reviewCards, ...newCards]
       setQueue(combined)
       setTotalUnique(combined.length)
