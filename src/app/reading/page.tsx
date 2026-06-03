@@ -186,7 +186,7 @@ function ReadingContent() {
   // ─── Mətn oxuma ──────────────────────────────────────────
   if (stage === 'text') return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
-      {header('TOLES Oxu Anlama', passage.topic)}
+      {header('Hüquqi Oxu', passage.topic)}
       <main className="flex-1 max-w-2xl mx-auto px-4 py-6 w-full">
         <div className="mb-4">
           <span className="text-xs font-medium px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
@@ -360,7 +360,7 @@ function ReadingContent() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="card max-w-sm w-full text-center">
         <div className="text-5xl mb-3">{finalPct >= 80 ? '🏆' : finalPct >= 60 ? '👍' : '📖'}</div>
-        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">TOLES Oxu Anlama</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Hüquqi Oxu</h2>
         <p className="text-3xl font-bold text-blue-600 mb-1">{totalMastered}/{TOTAL}</p>
         <p className="text-gray-500 mb-1">Mənimsənildi: <strong>{finalPct}%</strong></p>
         <p className="text-xs text-gray-400 mb-5">Günlük töhfə: {Math.round(finalPct * 25 / 100)}% (25%-dən)</p>
