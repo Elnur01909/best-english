@@ -205,12 +205,17 @@ function buildQuestions(): MockQ[] {
     const same = allVocab.filter(x => x.id !== v.id && x.topic === v.topic)
     const any = allVocab.filter(x => x.id !== v.id)
     const distractors = shuffle(same.length >= 3 ? same : any).slice(0, 3).map(x => x.term)
+
+    // AZ: yalnız izah hissəsi — "Term – izah" formatından termini sil, cavabı açıqlama
+    const azParts = v.az_translation.split(' – ')
+    const azDefOnly = azParts.length > 1 ? azParts.slice(1).join(' – ') : v.az_translation
+
     return {
       id: v.id,
       type: 'vocabulary' as const,
       topic: v.topic,
       question: v.en_def,
-      az: v.az_translation,
+      az: azDefOnly,
       options: shuffle([v.term, ...distractors]),
       correct: v.term,
       explanation: `${v.term}: ${v.az_translation}`,
