@@ -50,8 +50,11 @@ export default function PlacementPage() {
   const [result, setResult] = useState<CEFRLevel | null>(null)
   const [saving, setSaving] = useState(false)
 
-  // Sualları bir dəfə qarışdır
-  const questions = useMemo(() => shuffle(placementData as PQuestion[]), [])
+  // Sualları VƏ hər sualın variantlarını bir dəfə qarışdır (düzgün cavab təsadüfi mövqedə)
+  const questions = useMemo(
+    () => shuffle(placementData as PQuestion[]).map((q) => ({ ...q, options: shuffle(q.options) })),
+    []
+  )
 
   useEffect(() => {
     getUser().then((u) => {

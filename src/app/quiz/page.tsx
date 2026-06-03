@@ -58,6 +58,8 @@ export default function QuizPage() {
       .filter((q) => q.level === level)
       .sort(() => Math.random() - 0.5)
       .slice(0, 10)
+      // Variantları da qarışdır ki, düzgün cavab həmişə eyni mövqedə olmasın
+      .map((q) => ({ ...q, options: [...q.options].sort(() => Math.random() - 0.5) }))
     setQuestions(filtered)
     setCurrentIdx(0)
     setResults([])
