@@ -76,6 +76,7 @@ export default function DailySchedule() {
             {curriculum.is_review && <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300 font-medium">🔄 Təkrar</span>}
           </div>
           <h3 className="font-bold text-gray-900 dark:text-white">{curriculum.title}</h3>
+          <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{curriculum.title_en}</p>
           <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">{curriculum.focus}</p>
         </div>
         <span className={`text-xs font-medium px-2.5 py-1 rounded-full shrink-0 ${TOLES_COLORS[curriculum.toles_level]}`}>
