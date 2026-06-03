@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface AudioPlayerProps {
   word: string
@@ -9,37 +9,67 @@ interface AudioPlayerProps {
 
 export default function AudioPlayer({ word, audioUrl, variant = 'minimal' }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const [supported, setSupported] = useState(true)
 
-  // TTS fallback — Google Translate API istifadə et
-  const getTTSUrl = () => {
-    if (audioUrl) return audioUrl
-    return `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodeURIComponent(word)}&tl=en&client=tw-ob`
-  }
+  useEffect(() => {
+    // Brauzer Web Speech API dəstəkləyir mi?
+    if (typeof window !== 'undefined' && !('speechSynthesis' in window)) {
+      setSupported(false)
+    }
+  }, [])
 
-  async function playAudio() {
-    setLoading(true)
-    try {
-      const audio = new Audio(getTTSUrl())
+  function playAudio() {
+    // 1) Əgər real audio faylı varsa — onu çal
+    if (audioUrl) {
+      const audio = new Audio(audioUrl)
       audio.onplay = () => setIsPlaying(true)
       audio.onended = () => setIsPlaying(false)
-      await audio.play()
-    } catch (err) {
-      console.error('Audio play error:', err)
-    } finally {
-      setLoading(false)
+      audio.play().catch((err) => {
+        console.error('Audio play error:', err)
+        speak() // fallback
+      })
+      return
     }
+    speak()
   }
+
+  // Brauzerin daxili TTS-i (Web Speech API) — CORS yoxdur, offline işləyir
+  function speak() {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      setSupported(false)
+      return
+    }
+
+    // Əvvəlki səsi dayandır
+    window.speechSynthesis.cancel()
+
+    const utterance = new SpeechSynthesisUtterance(word)
+    utterance.lang = 'en-US'
+    utterance.rate = 0.85 // bir az yavaş — öyrənmə üçün daha aydın
+    utterance.pitch = 1
+
+    // İngilis səsini seç (varsa)
+    const voices = window.speechSynthesis.getVoices()
+    const enVoice = voices.find((v) => v.lang.startsWith('en'))
+    if (enVoice) utterance.voice = enVoice
+
+    utterance.onstart = () => setIsPlaying(true)
+    utterance.onend = () => setIsPlaying(false)
+    utterance.onerror = () => setIsPlaying(false)
+
+    window.speechSynthesis.speak(utterance)
+  }
+
+  if (!supported) return null
 
   if (variant === 'card') {
     return (
       <div className="flex items-center gap-3 mb-4 p-3 bg-purple-50 dark:bg-purple-950 rounded-lg border border-purple-200 dark:border-purple-800">
         <button
           onClick={playAudio}
-          disabled={loading}
-          className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 hover:bg-purple-600 text-white flex items-center justify-center transition-colors disabled:opacity-50"
+          className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 hover:bg-purple-600 text-white flex items-center justify-center transition-colors"
         >
-          {loading ? '⏳' : isPlaying ? '⏸' : '🔊'}
+          {isPlaying ? '⏸' : '🔊'}
         </button>
         <div>
           <p className="text-sm font-medium text-purple-700 dark:text-purple-300">Native Tələffüzü</p>
@@ -52,10 +82,9 @@ export default function AudioPlayer({ word, audioUrl, variant = 'minimal' }: Aud
   return (
     <button
       onClick={playAudio}
-      disabled={loading}
-      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-900 transition-colors text-sm font-medium disabled:opacity-50"
+      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-900 transition-colors text-sm font-medium"
     >
-      {loading ? '⏳' : isPlaying ? '⏸' : '🔊'} {isPlaying ? 'Oynayan...' : 'Dinlə'}
+      {isPlaying ? '⏸' : '🔊'} {isPlaying ? 'Oynayan...' : 'Dinlə'}
     </button>
   )
 }
