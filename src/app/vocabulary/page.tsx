@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { getUser, getUserProfile, getDueCards, upsertVocabProgress, updateStreak } from '@/lib/supabase'
 import { calculateNextReview, formatNextReview, SRS_DEFAULTS } from '@/lib/srs'
@@ -13,7 +13,7 @@ import type { VocabItem, VocabProgress, SRSQuality } from '@/types'
 type CardState = 'front' | 'back'
 type FeedbackType = 'success' | 'wrong'
 
-export default function VocabularyPage() {
+function VocabularyContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const isReviewMode = searchParams.get('mode') === 'review' // gecə rejimi
@@ -296,5 +296,13 @@ export default function VocabularyPage() {
       </div>
       <AITutorChat level={userLevel} />
     </>
+  )
+}
+
+export default function VocabularyPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-500">Yüklənir...</div>}>
+      <VocabularyContent />
+    </Suspense>
   )
 }
