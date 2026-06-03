@@ -9,43 +9,107 @@
       {
         "id": 1,
         "question": "Which of the following is NOT an essential element of a valid contract?",
-        "options": ["Offer", "Acceptance", "Consideration", "Written form"],
+        "options": [
+          "Offer",
+          "Acceptance",
+          "Consideration",
+          "Written form"
+        ],
         "correct": "Written form",
         "explanation": "Most contracts do not need to be in writing. Written form is only required for specific types of contracts under the Statute of Frauds."
       },
       {
         "id": 2,
         "question": "When a counteroffer is made, what happens to the original offer?",
-        "options": ["It remains valid", "It is automatically accepted", "It is rejected", "It is suspended"],
+        "options": [
+          "It remains valid",
+          "It is automatically accepted",
+          "It is rejected",
+          "It is suspended"
+        ],
         "correct": "It is rejected",
         "explanation": "A counteroffer rejects the original offer entirely. The original offeror is no longer bound by the original offer."
       },
       {
         "id": 3,
         "question": "According to the passage, what is 'consideration'?",
-        "options": ["Careful thought before signing", "Something of value exchanged between parties", "The legal capacity to contract", "A type of written contract"],
+        "options": [
+          "Careful thought before signing",
+          "Something of value exchanged between parties",
+          "The legal capacity to contract",
+          "A type of written contract"
+        ],
         "correct": "Something of value exchanged between parties",
         "explanation": "Consideration is one of the essential elements of a valid contract — it refers to something of value (money, goods, services) given by each party."
       },
       {
         "id": 4,
         "question": "Under the Statute of Frauds, which type of contract must be in writing?",
-        "options": ["Contracts for services", "Contracts involving the sale of land", "All employment contracts", "Verbal agreements between friends"],
+        "options": [
+          "Contracts for services",
+          "Contracts involving the sale of land",
+          "All employment contracts",
+          "Verbal agreements between friends"
+        ],
         "correct": "Contracts involving the sale of land",
         "explanation": "The Statute of Frauds requires certain contracts to be in writing, including those for the sale of land and agreements lasting more than one year."
       },
       {
         "id": 5,
         "question": "What does 'offeree' mean in the context of this passage?",
-        "options": ["The person who makes the offer", "The person who receives the offer", "A neutral third party", "The court overseeing the contract"],
+        "options": [
+          "The person who makes the offer",
+          "The person who receives the offer",
+          "A neutral third party",
+          "The court overseeing the contract"
+        ],
         "correct": "The person who receives the offer",
         "explanation": "The offeree is the party to whom an offer is made. They may accept, reject, or make a counteroffer."
       }
     ],
     "collocations": [
-      { "sentence": "The parties decided to ___ into a contract after lengthy negotiations.", "answer": "enter", "options": ["enter", "go", "make", "put"] },
-      { "sentence": "The buyer made an ___ to purchase the property at a reduced price.", "answer": "offer", "options": ["offer", "order", "appeal", "demand"] },
-      { "sentence": "Without valid ___, the agreement cannot be enforced.", "answer": "consideration", "options": ["consideration", "payment", "signature", "promise"] }
+      {
+        "sentence": "The parties decided to ___ into a contract after lengthy negotiations.",
+        "answer": "enter",
+        "options": [
+          "enter",
+          "go",
+          "make",
+          "put"
+        ]
+      },
+      {
+        "sentence": "The buyer made an ___ to purchase the property at a reduced price.",
+        "answer": "offer",
+        "options": [
+          "offer",
+          "order",
+          "appeal",
+          "demand"
+        ]
+      },
+      {
+        "sentence": "Without valid ___, the agreement cannot be enforced.",
+        "answer": "consideration",
+        "options": [
+          "consideration",
+          "payment",
+          "signature",
+          "promise"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "There must be acceptance — an unconditional agreement to all the terms of the ___.",
+        "answer": "offer",
+        "hint": "Müqavilə bağlamaq üçün tərəfin irəli sürdüyü bəyan"
+      },
+      {
+        "sentence": "There must be consideration — something of value exchanged between the ___.",
+        "answer": "parties",
+        "hint": "Müqaviləyə daxil olan tərəflər"
+      }
     ]
   },
   {
@@ -94,7 +158,12 @@
       {
         "id": 4,
         "question": "Which remedy does the court most commonly award for breach of contract?",
-        "options": ["Specific performance", "Rescission", "Damages", "Injunction"],
+        "options": [
+          "Specific performance",
+          "Rescission",
+          "Damages",
+          "Injunction"
+        ],
         "correct": "Damages",
         "explanation": "Damages — a monetary award to compensate for loss — is the primary remedy for breach of contract. Other remedies like specific performance are less common."
       },
@@ -112,9 +181,48 @@
       }
     ],
     "collocations": [
-      { "sentence": "The innocent party was entitled to ___ the contract as terminated after the material breach.", "answer": "treat", "options": ["treat", "make", "call", "set"] },
-      { "sentence": "The court awarded ___ to compensate the claimant for the financial loss suffered.", "answer": "damages", "options": ["damages", "penalties", "fines", "costs"] },
-      { "sentence": "The claimant had a duty to ___ their loss by finding an alternative supplier.", "answer": "mitigate", "options": ["mitigate", "reduce of", "limit to", "stop"] }
+      {
+        "sentence": "The innocent party was entitled to ___ the contract as terminated after the material breach.",
+        "answer": "treat",
+        "options": [
+          "treat",
+          "make",
+          "call",
+          "set"
+        ]
+      },
+      {
+        "sentence": "The court awarded ___ to compensate the claimant for the financial loss suffered.",
+        "answer": "damages",
+        "options": [
+          "damages",
+          "penalties",
+          "fines",
+          "costs"
+        ]
+      },
+      {
+        "sentence": "The claimant had a duty to ___ their loss by finding an alternative supplier.",
+        "answer": "mitigate",
+        "options": [
+          "mitigate",
+          "reduce of",
+          "limit to",
+          "stop"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "A breach of contract occurs when one party fails to perform their ___ under a valid contract.",
+        "answer": "obligations",
+        "hint": "Yerinə yetirilməli olan öhdəliklər"
+      },
+      {
+        "sentence": "The innocent party also has a duty to ___ their loss.",
+        "answer": "mitigate",
+        "hint": "Zərəri minimuma endirmək"
+      }
     ]
   },
   {
@@ -186,9 +294,48 @@
       }
     ],
     "collocations": [
-      { "sentence": "The defendant ___ a duty of care to the claimant as the ultimate consumer of the product.", "answer": "owed", "options": ["owed", "had", "gave", "made"] },
-      { "sentence": "The surgeon fell ___ the standard of a reasonable medical professional.", "answer": "below", "options": ["below", "under", "beneath of", "down from"] },
-      { "sentence": "The claimant must prove that the breach ___ the damage suffered.", "answer": "caused", "options": ["caused", "made", "did", "brought"] }
+      {
+        "sentence": "The defendant ___ a duty of care to the claimant as the ultimate consumer of the product.",
+        "answer": "owed",
+        "options": [
+          "owed",
+          "had",
+          "gave",
+          "made"
+        ]
+      },
+      {
+        "sentence": "The surgeon fell ___ the standard of a reasonable medical professional.",
+        "answer": "below",
+        "options": [
+          "below",
+          "under",
+          "beneath of",
+          "down from"
+        ]
+      },
+      {
+        "sentence": "The claimant must prove that the breach ___ the damage suffered.",
+        "answer": "caused",
+        "options": [
+          "caused",
+          "made",
+          "did",
+          "brought"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "The claimant must prove that the defendant owed them a duty of ___.",
+        "answer": "care",
+        "hint": "Negligence-in birinci elementi"
+      },
+      {
+        "sentence": "But for the defendant's ___, would the claimant have suffered the loss?",
+        "answer": "breach",
+        "hint": "Standartın aşağı düşməsi"
+      }
     ]
   },
   {
@@ -250,16 +397,58 @@
         "id": 5,
         "question": "What remedy allows a company to claim profits made by a director who breached their duties?",
         "options": [
-          "Damages", "Account of profits", "Rescission", "Specific performance"
+          "Damages",
+          "Account of profits",
+          "Rescission",
+          "Specific performance"
         ],
         "correct": "Account of profits",
         "explanation": "An account of profits is an equitable remedy requiring the director to hand over any profit they made as a result of their breach of duty."
       }
     ],
     "collocations": [
-      { "sentence": "The director must ___ a conflict of interest to the board before the transaction proceeds.", "answer": "declare", "options": ["declare", "say", "tell of", "inform"] },
-      { "sentence": "Directors owe a ___ duty of care, skill and diligence to the company.", "answer": "reasonable", "options": ["reasonable", "high", "strong", "full"] },
-      { "sentence": "The transaction was held to be ___ because the director failed to disclose his personal interest.", "answer": "voidable", "options": ["voidable", "void", "illegal", "cancelled"] }
+      {
+        "sentence": "The director must ___ a conflict of interest to the board before the transaction proceeds.",
+        "answer": "declare",
+        "options": [
+          "declare",
+          "say",
+          "tell of",
+          "inform"
+        ]
+      },
+      {
+        "sentence": "Directors owe a ___ duty of care, skill and diligence to the company.",
+        "answer": "reasonable",
+        "options": [
+          "reasonable",
+          "high",
+          "strong",
+          "full"
+        ]
+      },
+      {
+        "sentence": "The transaction was held to be ___ because the director failed to disclose his personal interest.",
+        "answer": "voidable",
+        "options": [
+          "voidable",
+          "void",
+          "illegal",
+          "cancelled"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "A director must not allow personal interests to ___ with those of the company.",
+        "answer": "conflict",
+        "hint": "Toqquşmaq, ziddiyyət yaratmaq"
+      },
+      {
+        "sentence": "Directors owe their duties to the ___ itself, not to individual shareholders.",
+        "answer": "company",
+        "hint": "Hüquqi qurum"
+      }
     ]
   },
   {
@@ -284,7 +473,12 @@
       {
         "id": 2,
         "question": "How long must an employee typically have been employed to bring an unfair dismissal claim?",
-        "options": ["6 months", "1 year", "2 years", "5 years"],
+        "options": [
+          "6 months",
+          "1 year",
+          "2 years",
+          "5 years"
+        ],
         "correct": "2 years",
         "explanation": "Under the Employment Rights Act 1996, employees generally need at least two years' continuous employment to bring an unfair dismissal claim."
       },
@@ -326,9 +520,48 @@
       }
     ],
     "collocations": [
-      { "sentence": "The employer must show that the dismissal was for a ___ reason.", "answer": "fair", "options": ["fair", "good", "right", "legal"] },
-      { "sentence": "The employee was awarded compensation by the employment ___.", "answer": "tribunal", "options": ["tribunal", "court", "board", "panel"] },
-      { "sentence": "Redundancy arises where the employer's need for a particular role ___ or diminishes.", "answer": "ceases", "options": ["ceases", "stops of", "ends up", "finishes"] }
+      {
+        "sentence": "The employer must show that the dismissal was for a ___ reason.",
+        "answer": "fair",
+        "options": [
+          "fair",
+          "good",
+          "right",
+          "legal"
+        ]
+      },
+      {
+        "sentence": "The employee was awarded compensation by the employment ___.",
+        "answer": "tribunal",
+        "options": [
+          "tribunal",
+          "court",
+          "board",
+          "panel"
+        ]
+      },
+      {
+        "sentence": "Redundancy arises where the employer's need for a particular role ___ or diminishes.",
+        "answer": "ceases",
+        "options": [
+          "ceases",
+          "stops of",
+          "ends up",
+          "finishes"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "Wrongful dismissal is a common law claim arising from a ___ of the employment contract.",
+        "answer": "breach",
+        "hint": "Müqavilə şərtlərinin pozulması"
+      },
+      {
+        "sentence": "Redundancy arises where the employer's need for a particular role ___ or diminishes.",
+        "answer": "ceases",
+        "hint": "Tamamilə dayanmaq, bitirmək"
+      }
     ]
   },
   {
@@ -389,15 +622,59 @@
       {
         "id": 5,
         "question": "Which remedy prevents further copyright infringement?",
-        "options": ["Damages", "Account of profits", "Injunction", "Rescission"],
+        "options": [
+          "Damages",
+          "Account of profits",
+          "Injunction",
+          "Rescission"
+        ],
         "correct": "Injunction",
         "explanation": "An injunction is a court order that prohibits a party from continuing an infringing activity. It is used to prevent future infringement, not compensate for past harm."
       }
     ],
     "collocations": [
-      { "sentence": "Copyright ___ automatically upon the creation of an original work.", "answer": "arises", "options": ["arises", "starts", "begins of", "comes up"] },
-      { "sentence": "The claimant sought an ___ to prevent further reproduction of her work.", "answer": "injunction", "options": ["injunction", "order of", "command", "ban"] },
-      { "sentence": "The defendant raised the ___ dealing defence, arguing the use was for private study.", "answer": "fair", "options": ["fair", "good", "equal", "right"] }
+      {
+        "sentence": "Copyright ___ automatically upon the creation of an original work.",
+        "answer": "arises",
+        "options": [
+          "arises",
+          "starts",
+          "begins of",
+          "comes up"
+        ]
+      },
+      {
+        "sentence": "The claimant sought an ___ to prevent further reproduction of her work.",
+        "answer": "injunction",
+        "options": [
+          "injunction",
+          "order of",
+          "command",
+          "ban"
+        ]
+      },
+      {
+        "sentence": "The defendant raised the ___ dealing defence, arguing the use was for private study.",
+        "answer": "fair",
+        "options": [
+          "fair",
+          "good",
+          "equal",
+          "right"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "Copyright does not require ___ — it arises automatically upon the creation of an original work.",
+        "answer": "registration",
+        "hint": "Rəsmi siyahıya alınma"
+      },
+      {
+        "sentence": "Copyright infringement occurs when someone exercises the owner's exclusive rights without ___.",
+        "answer": "permission",
+        "hint": "İcazə, razılıq"
+      }
     ]
   },
   {
@@ -469,9 +746,48 @@
       }
     ],
     "collocations": [
-      { "sentence": "The parties agreed to ___ their dispute to a panel of three arbitrators.", "answer": "submit", "options": ["submit", "give", "take", "put"] },
-      { "sentence": "The arbitration clause gave the arbitrators ___ jurisdiction over all contractual disputes.", "answer": "exclusive", "options": ["exclusive", "full", "only", "special"] },
-      { "sentence": "The court agreed to ___ the proceedings pending the outcome of the arbitration.", "answer": "stay", "options": ["stay", "stop of", "pause", "halt"] }
+      {
+        "sentence": "The parties agreed to ___ their dispute to a panel of three arbitrators.",
+        "answer": "submit",
+        "options": [
+          "submit",
+          "give",
+          "take",
+          "put"
+        ]
+      },
+      {
+        "sentence": "The arbitration clause gave the arbitrators ___ jurisdiction over all contractual disputes.",
+        "answer": "exclusive",
+        "options": [
+          "exclusive",
+          "full",
+          "only",
+          "special"
+        ]
+      },
+      {
+        "sentence": "The court agreed to ___ the proceedings pending the outcome of the arbitration.",
+        "answer": "stay",
+        "options": [
+          "stay",
+          "stop of",
+          "pause",
+          "halt"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "Arbitration is a private process in which parties submit their dispute to independent ___.",
+        "answer": "arbitrators",
+        "hint": "Mübahisəni həll edən bitərəf şəxslər"
+      },
+      {
+        "sentence": "One of the key advantages of arbitration over litigation is ___.",
+        "answer": "confidentiality",
+        "hint": "Məxfilik, gizlilik"
+      }
     ]
   },
   {
@@ -543,9 +859,48 @@
       }
     ],
     "collocations": [
-      { "sentence": "The company entered ___ after the court granted a winding-up order.", "answer": "liquidation", "options": ["liquidation", "bankruptcy", "closure", "dissolution"] },
-      { "sentence": "Secured creditors hold a charge ___ the company's assets.", "answer": "over", "options": ["over", "on", "against of", "above"] },
-      { "sentence": "The administrator's primary objective was to rescue the company as a ___ concern.", "answer": "going", "options": ["going", "running", "living", "active"] }
+      {
+        "sentence": "The company entered ___ after the court granted a winding-up order.",
+        "answer": "liquidation",
+        "options": [
+          "liquidation",
+          "bankruptcy",
+          "closure",
+          "dissolution"
+        ]
+      },
+      {
+        "sentence": "Secured creditors hold a charge ___ the company's assets.",
+        "answer": "over",
+        "options": [
+          "over",
+          "on",
+          "against of",
+          "above"
+        ]
+      },
+      {
+        "sentence": "The administrator's primary objective was to rescue the company as a ___ concern.",
+        "answer": "going",
+        "options": [
+          "going",
+          "running",
+          "living",
+          "active"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "Insolvency arises when a company is unable to pay its ___ as they fall due.",
+        "answer": "debts",
+        "hint": "Ödənilməli olan məbləğlər"
+      },
+      {
+        "sentence": "Upon liquidation, a ___ is appointed to collect and sell the company's assets.",
+        "answer": "liquidator",
+        "hint": "Ləğvetmə prosesini idarə edən şəxs"
+      }
     ]
   },
   {
@@ -617,9 +972,48 @@
       }
     ],
     "collocations": [
-      { "sentence": "The prosecution must prove the defendant's guilt ___ reasonable doubt.", "answer": "beyond", "options": ["beyond", "without", "above", "past"] },
-      { "sentence": "The defendant was ___ a legal duty to act, which gave rise to liability for his omission.", "answer": "under", "options": ["under", "in", "within", "at"] },
-      { "sentence": "The actus reus and mens rea must ___ at the same point in time.", "answer": "coincide", "options": ["coincide", "meet of", "exist together", "align at"] }
+      {
+        "sentence": "The prosecution must prove the defendant's guilt ___ reasonable doubt.",
+        "answer": "beyond",
+        "options": [
+          "beyond",
+          "without",
+          "above",
+          "past"
+        ]
+      },
+      {
+        "sentence": "The defendant was ___ a legal duty to act, which gave rise to liability for his omission.",
+        "answer": "under",
+        "options": [
+          "under",
+          "in",
+          "within",
+          "at"
+        ]
+      },
+      {
+        "sentence": "The actus reus and mens rea must ___ at the same point in time.",
+        "answer": "coincide",
+        "options": [
+          "coincide",
+          "meet of",
+          "exist together",
+          "align at"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "The actus reus refers to the physical ___ element of a crime.",
+        "answer": "conduct",
+        "hint": "Hərəkət, davranış"
+      },
+      {
+        "sentence": "The mens rea refers to the ___ element — the defendant's state of mind.",
+        "answer": "mental",
+        "hint": "Ağıla, düşüncəyə aid"
+      }
     ]
   },
   {
@@ -669,7 +1063,10 @@
         "id": 4,
         "question": "What remedy requires the defendant to publish a correction?",
         "options": [
-          "Damages", "Injunction", "An order to publish a summary of the court's judgment", "Specific performance"
+          "Damages",
+          "Injunction",
+          "An order to publish a summary of the court's judgment",
+          "Specific performance"
         ],
         "correct": "An order to publish a summary of the court's judgment",
         "explanation": "Under the Defamation Act 2013, courts can order a defendant to publish a summary of the judgment, effectively requiring them to publicise their defeat."
@@ -688,9 +1085,48 @@
       }
     ],
     "collocations": [
-      { "sentence": "The defendant relied on the defence of ___ to argue the published statement was substantially true.", "answer": "truth", "options": ["truth", "fact", "reality", "honesty"] },
-      { "sentence": "The claimant sought an ___ preventing the newspaper from republishing the article.", "answer": "injunction", "options": ["injunction", "order of", "ban", "embargo"] },
-      { "sentence": "The statement was held to ___ the claimant's reputation in the eyes of right-thinking members of society.", "answer": "lower", "options": ["lower", "damage of", "harm to", "reduce"] }
+      {
+        "sentence": "The defendant relied on the defence of ___ to argue the published statement was substantially true.",
+        "answer": "truth",
+        "options": [
+          "truth",
+          "fact",
+          "reality",
+          "honesty"
+        ]
+      },
+      {
+        "sentence": "The claimant sought an ___ preventing the newspaper from republishing the article.",
+        "answer": "injunction",
+        "options": [
+          "injunction",
+          "order of",
+          "ban",
+          "embargo"
+        ]
+      },
+      {
+        "sentence": "The statement was held to ___ the claimant's reputation in the eyes of right-thinking members of society.",
+        "answer": "lower",
+        "options": [
+          "lower",
+          "damage of",
+          "harm to",
+          "reduce"
+        ]
+      }
+    ],
+    "cloze_questions": [
+      {
+        "sentence": "Defamation is the publication of a false statement that tends to ___ the claimant's reputation.",
+        "answer": "lower",
+        "hint": "Aşağı salmaq, zərər vermək"
+      },
+      {
+        "sentence": "The ___ Act 2013 introduced a serious harm threshold for defamation claims.",
+        "answer": "Defamation",
+        "hint": "Bu qanunun adı nədir?"
+      }
     ]
   }
 ]

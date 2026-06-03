@@ -1,276 +1,188 @@
 'use client'
 import { useEffect, useState, useMemo } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 import { getUser, getUserProfile, saveQuizResult } from '@/lib/supabase'
-import { checkWriting } from '@/lib/ai'
 import { getRandomMessage } from '@/lib/psychology'
+import { explainQuizError } from '@/lib/ai'
 import AITutorChat from '@/components/AITutorChat'
 import AudioPlayer from '@/components/AudioPlayer'
 import { saveSessionScore } from '@/lib/sessionScore'
-import vocabData from '@/data/vocab.json'
 import quizData from '@/data/quizzes.json'
-import type { VocabItem } from '@/types'
-
-type Stage = 'quiz' | 'writing' | 'done'
 
 function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
+  return [...arr].sort(() => Math.random() - 0.5)
 }
 
-export default function OutputPage() {
+function OutputContent() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const topicsParam = searchParams.get('topics')
+
   const [userId, setUserId] = useState<string | null>(null)
   const [userLevel, setUserLevel] = useState('B1')
-  const [stage, setStage] = useState<Stage>('quiz')
 
-  // Quiz state
-  const [quizIdx, setQuizIdx] = useState(0)
+  const INITIAL_COUNT = 5
+
+  // Topics filtri ilə sual seç, hər sualın options-ını da qarışdır
+  const initialQuestions = useMemo(() => {
+    const all = quizData as any[]
+    const filtered = topicsParam
+      ? all.filter(q => topicsParam.split(',').includes(q.topic))
+      : all
+    const pool = filtered.length >= INITIAL_COUNT ? filtered : all
+    return shuffle(pool).slice(0, INITIAL_COUNT).map((q: any) => ({
+      ...q, options: shuffle(q.options)
+    }))
+  }, [topicsParam])
+
+  const TOTAL_UNIQUE = initialQuestions.length
+
+  // Queue — yanlış cavablar geri əlavə olunur
+  const [queue, setQueue] = useState(initialQuestions)
+  const [qIdx, setQIdx] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
-  const [quizResults, setQuizResults] = useState<boolean[]>([])
-  const [quizFeedback, setQuizFeedback] = useState<string | null>(null)
-
-  // Writing state
-  const [writingIdx, setWritingIdx] = useState(0)
-  const [sentence, setSentence] = useState('')
-  const [aiFeedback, setAiFeedback] = useState<string | null>(null)
+  const [mastered, setMastered] = useState<Set<number>>(new Set())
+  const [feedback, setFeedback] = useState<string | null>(null)
+  const [done, setDone] = useState(false)
+  const [aiExplanation, setAiExplanation] = useState<string | null>(null)
   const [aiLoading, setAiLoading] = useState(false)
   const [aiError, setAiError] = useState<string | null>(null)
-  const [writingDone, setWritingDone] = useState(false)
-
-  // 5 quiz + 3 writing vocab seç
-  const quizQuestions = useMemo(() =>
-    shuffle(quizData as any[]).slice(0, 5).map((q: any) => ({
-      ...q,
-      options: shuffle(q.options),
-    }))
-  , [])
-
-  const writingWords = useMemo(() =>
-    shuffle(vocabData as VocabItem[]).slice(0, 3)
-  , [])
 
   useEffect(() => {
-    getUser().then((u) => {
+    getUser().then(u => {
       if (!u) { router.push('/login'); return }
       setUserId(u.id)
     })
-    getUserProfile && getUser().then(async (u) => {
+    getUserProfile && getUser().then(async u => {
       if (!u) return
       const { data } = await getUserProfile(u.id)
       if (data?.level) setUserLevel(data.level)
     })
   }, [router])
 
-  // ─── Quiz ───────────────────────────────────────────────
-  const currentQ = quizQuestions[quizIdx]
+  const current = queue[qIdx]
+  const progressPct = Math.round((mastered.size / TOTAL_UNIQUE) * 100)
 
   async function handleSelect(option: string) {
     if (selected) return
     setSelected(option)
-    const correct = option === currentQ.correct
-    const newResults = [...quizResults, correct]
-    setQuizResults(newResults)
-    setQuizFeedback(getRandomMessage(correct ? 'success' : 'wrong_answer'))
-    // Dərhal score yaz — geri bassanı belə qalsın
-    const currentScore = Math.round((newResults.filter(Boolean).length / quizQuestions.length) * 100)
-    saveSessionScore('evening', currentScore)
+    const correct = option === current.correct
+
+    if (correct) {
+      const next = new Set(mastered); next.add(current.id)
+      setMastered(next)
+      const score = Math.round((next.size / TOTAL_UNIQUE) * 100)
+      saveSessionScore('evening', score)
+    } else {
+      // Yanlış — geri əlavə et
+      setQueue(prev => {
+        const rem = prev.slice(qIdx + 1)
+        const at = Math.min(Math.floor(Math.random() * 3) + 1, rem.length)
+        const n = [...rem]; n.splice(at, 0, { ...current, options: shuffle(current.options) })
+        return [...prev.slice(0, qIdx + 1), ...n]
+      })
+    }
+
+    setFeedback(getRandomMessage(correct ? 'success' : 'wrong_answer'))
     if (userId) {
-      await saveQuizResult({ user_id: userId, quiz_id: currentQ.id, correct, time_taken: 0 })
+      await saveQuizResult({ user_id: userId, quiz_id: current.id, correct, time_taken: 0 })
     }
   }
 
-  function nextQuiz() {
-    if (quizIdx + 1 >= quizQuestions.length) {
-      setStage('writing')
-    } else {
-      setQuizIdx((i) => i + 1)
-      setSelected(null)
-      setQuizFeedback(null)
-    }
-  }
-
-  // ─── Writing ─────────────────────────────────────────────
-  const currentWord = writingWords[writingIdx]
-
-  async function checkWithAI() {
-    if (!sentence.trim()) return
-    setAiLoading(true)
-    setAiError(null)
+  async function askAiExplain() {
+    if (!current) return
+    setAiLoading(true); setAiError(null)
     try {
-      const fb = await checkWriting(currentWord.term, currentWord.en_def, sentence, userLevel)
-      setAiFeedback(fb)
-      setWritingDone(true)
+      const exp = await explainQuizError(current.question, current.correct, selected ?? '—', userLevel)
+      setAiExplanation(exp)
     } catch (err: any) {
-      if (err.message === 'NO_KEY' || err.message === 'SHARED_LIMIT') {
-        setAiError('AI limiti doldu. Öz pulsuz açarını 🎓 düyməsindən əlavə et.')
-      } else {
-        setAiError('Xəta baş verdi. Yenidən cəhd et.')
-      }
-    } finally {
-      setAiLoading(false)
-    }
+      if (err.message === 'SHARED_LIMIT' || err.message === 'NO_KEY') setAiError('AI limiti doldu — 🎓 öz açarını əlavə et.')
+      else setAiError('Xəta baş verdi.')
+    } finally { setAiLoading(false) }
   }
 
-  function skipWriting() {
-    nextWriting()
-  }
-
-  function nextWriting() {
-    if (writingIdx + 1 >= writingWords.length) {
-      const outputScore = Math.round((quizResults.filter(Boolean).length / quizQuestions.length) * 100)
-      saveSessionScore('evening', outputScore)
-      setStage('done')
+  function next() {
+    if (mastered.size === TOTAL_UNIQUE || qIdx + 1 >= queue.length) {
+      saveSessionScore('evening', Math.round((mastered.size / TOTAL_UNIQUE) * 100))
+      setDone(true)
     } else {
-      setWritingIdx((i) => i + 1)
-      setSentence('')
-      setAiFeedback(null)
-      setAiError(null)
-      setWritingDone(false)
+      setQIdx(i => i + 1); setSelected(null); setFeedback(null)
+      setAiExplanation(null); setAiError(null)
     }
   }
 
-  const quizScore = quizResults.filter(Boolean).length
-
-  // ─── Header ──────────────────────────────────────────────
   const header = (
     <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
       <button onClick={() => router.push('/dashboard')} className="text-gray-500 text-sm">← Geri</button>
-      <span className="font-semibold text-gray-900 dark:text-white">🌆 Output Sessiyası</span>
-      <span className="text-sm text-gray-400">
-        {stage === 'quiz' ? `Quiz ${quizIdx + 1}/5` : stage === 'writing' ? `Yazma ${writingIdx + 1}/3` : '✓'}
-      </span>
+      <span className="font-semibold text-gray-900 dark:text-white text-sm">🌆 Output: Quiz</span>
+      <span className="text-sm text-gray-400">{mastered.size}/{TOTAL_UNIQUE} ✓</span>
     </header>
   )
 
-  // ─── Tamamlandı ──────────────────────────────────────────
-  if (stage === 'done') return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
-      {header}
-      <main className="flex-1 flex items-center justify-center px-4">
-        <div className="card max-w-sm w-full text-center">
-          <div className="text-5xl mb-4">🎉</div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Output Tamamlandı!</h2>
-          <p className="text-gray-500 mb-2">Quiz: <strong>{quizScore}/5</strong> düzgün</p>
-          <p className="text-gray-500 mb-6">3 yazma məşqi tamamlandı ✓</p>
-          <div className="bg-blue-50 dark:bg-blue-950 rounded-lg p-3 text-sm text-blue-800 dark:text-blue-200 mb-6">
-            💡 Output məşqi öyrənilən sözləri uzunmüddətli yaddaşa keçirir.
+  // ─── Nəticə ─────────────────────────────────────────────
+  if (done) {
+    const finalPct = Math.round((mastered.size / TOTAL_UNIQUE) * 100)
+    return (
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
+        {header}
+        <div className="flex-1 flex items-center justify-center px-4">
+          <div className="card max-w-sm w-full text-center">
+            <div className="text-5xl mb-3">{finalPct >= 80 ? '🏆' : finalPct >= 60 ? '👍' : '💪'}</div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Output: Quiz</h2>
+            <p className="text-3xl font-bold text-blue-600 mb-1">{mastered.size}/{TOTAL_UNIQUE}</p>
+            <p className="text-gray-500 mb-1">Mənimsənildi: <strong>{finalPct}%</strong></p>
+            <p className="text-xs text-gray-400 mb-5">Günlük töhfə: {Math.round(finalPct * 25 / 100)}% (25%-dən)</p>
+            <div className="w-full bg-gray-100 rounded-full h-3 mb-6">
+              <div className={`h-3 rounded-full ${finalPct >= 80 ? 'bg-green-500' : finalPct >= 60 ? 'bg-yellow-500' : 'bg-red-500'}`}
+                style={{ width: `${finalPct}%` }} />
+            </div>
+            <div className="bg-blue-50 dark:bg-blue-950 rounded-lg p-3 text-xs text-blue-800 dark:text-blue-200 mb-6">
+              💡 Yanlış cavab verdiyin suallar yenidən qarşına çıxdı. Tam mənimsəmək üçün əla nəticə!
+            </div>
+            <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">Ana Səhifəyə Qayıt →</button>
           </div>
-          <button onClick={() => router.push('/dashboard')} className="btn-primary w-full">
-            Ana Səhifəyə Qayıt →
-          </button>
         </div>
-      </main>
-    </div>
-  )
-
-  // ─── Yazma məşqi ─────────────────────────────────────────
-  if (stage === 'writing') return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
-      {header}
-
-      {/* Progress */}
-      <div className="h-1 bg-gray-200">
-        <div className="h-1 bg-purple-500 transition-all" style={{ width: `${(writingIdx / writingWords.length) * 100}%` }} />
       </div>
-
-      <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
-        <div className="mb-6">
-          <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Yazma Məşqi — Output</p>
-          <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-            "{currentWord.term}" sözünü işlədərək cümlə yaz
-          </h2>
-          <p className="text-sm text-gray-500 mt-1">{currentWord.az_translation}</p>
-          <p className="text-xs text-gray-400 mt-1 italic">{currentWord.en_def}</p>
-        </div>
-
-        <textarea
-          value={sentence}
-          onChange={(e) => setSentence(e.target.value)}
-          placeholder={`Məs: "The claimant relied on ${currentWord.term.toLowerCase()} to support the case."`}
-          disabled={writingDone}
-          className="input w-full resize-none mb-4"
-          rows={4}
-        />
-
-        {aiFeedback && (
-          <div className="mb-4 p-4 bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 rounded-xl">
-            <p className="text-sm font-semibold text-purple-700 dark:text-purple-300 mb-1">🎓 AI Müəllim:</p>
-            <p className="text-sm text-purple-800 dark:text-purple-200 whitespace-pre-wrap">{aiFeedback}</p>
-          </div>
-        )}
-        {aiError && <p className="text-red-500 text-xs mb-4">{aiError}</p>}
-
-        <div className="flex gap-3">
-          {!writingDone && (
-            <button
-              onClick={checkWithAI}
-              disabled={!sentence.trim() || aiLoading}
-              className="flex-1 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-xl disabled:opacity-50"
-            >
-              {aiLoading ? '🎓 Yoxlanılır...' : '🎓 AI yoxlasın'}
-            </button>
-          )}
-          <button
-            onClick={writingDone ? nextWriting : skipWriting}
-            className={`py-3 px-5 rounded-xl font-medium transition-colors ${
-              writingDone
-                ? 'flex-1 bg-blue-600 hover:bg-blue-700 text-white'
-                : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
-            }`}
-          >
-            {writingDone
-              ? writingIdx + 1 >= writingWords.length ? 'Bitir →' : 'Növbəti →'
-              : 'Keç'}
-          </button>
-        </div>
-      </main>
-      <AITutorChat level={userLevel} />
-    </div>
-  )
+    )
+  }
 
   // ─── Quiz ────────────────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
       {header}
-
-      {/* Progress */}
-      <div className="h-1 bg-gray-200">
-        <div className="h-1 bg-blue-500 transition-all" style={{ width: `${(quizIdx / quizQuestions.length) * 100}%` }} />
+      {/* Progress bar */}
+      <div className="h-2 bg-gray-200">
+        <div className="h-2 bg-blue-500 transition-all" style={{ width: `${progressPct}%` }} />
+      </div>
+      <div className="px-4 py-1.5 bg-white dark:bg-gray-900 border-b flex justify-between text-xs text-gray-500">
+        <span>✓ Mənimsənildi: <strong className="text-green-600">{mastered.size}/{TOTAL_UNIQUE}</strong></span>
+        <span className="font-medium text-blue-600">{progressPct}%</span>
       </div>
 
       <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
-        {currentQ && (
+        {current && (
           <>
-            <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">{currentQ.topic}</p>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 leading-relaxed">
-              {currentQ.question}
+            <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">{current.topic}</p>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 leading-relaxed">
+              {current.question}
             </h2>
-            <div className="mb-6">
-              <AudioPlayer word={currentQ.question} variant="sentence" isSentence={true} />
+            <div className="mb-5">
+              <AudioPlayer word={current.question} variant="sentence" isSentence={true} />
             </div>
 
             <div className="space-y-3 mb-6">
-              {currentQ.options.map((opt: string) => {
-                const isCorrect = opt === currentQ.correct
-                const isSelected = opt === selected
+              {current.options.map((opt: string) => {
+                const isCorrect = opt === current.correct
+                const isSel = opt === selected
                 let cls = 'w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
-                if (!selected) {
-                  cls += 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950'
-                } else if (isCorrect) {
-                  cls += 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200'
-                } else if (isSelected) {
-                  cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'
-                } else {
-                  cls += 'border-gray-200 dark:border-gray-700 opacity-40'
-                }
+                if (!selected) cls += 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50'
+                else if (isCorrect) cls += 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800'
+                else if (isSel) cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800'
+                else cls += 'border-gray-200 opacity-40'
                 return (
                   <button key={opt} onClick={() => handleSelect(opt)} className={cls}>
-                    {selected && isCorrect ? '✓ ' : selected && isSelected ? '✗ ' : ''}{opt}
+                    {selected && isCorrect ? '✓ ' : selected && isSel ? '✗ ' : ''}{opt}
                   </button>
                 )
               })}
@@ -278,40 +190,32 @@ export default function OutputPage() {
 
             {selected && (
               <>
-                {quizFeedback && (
-                  <div className={`mb-4 p-3 rounded-xl text-center text-sm font-medium ${
-                    quizResults[quizResults.length - 1]
-                      ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
-                      : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
+                {feedback && (
+                  <div className={`mb-4 p-3 rounded-xl text-sm text-center font-medium ${
+                    selected === current.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                   }`}>
-                    {quizFeedback}
+                    {selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}
                   </div>
                 )}
-                {(() => {
-                  // Düzgün cavaba uyğun vocab tap (AZ tərcümə üçün)
-                  const vocab = (vocabData as VocabItem[]).find(
-                    (v) => v.term.toLowerCase() === currentQ.correct.toLowerCase()
-                  )
-                  return (
-                    <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-6 space-y-3">
-                      <div>
-                        <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">💡 İzah (EN):</p>
-                        <p className="text-sm text-blue-800 dark:text-blue-200">{currentQ.explanation}</p>
-                        <div className="mt-1.5">
-                          <AudioPlayer word={currentQ.explanation} variant="sentence" isSentence={true} />
-                        </div>
-                      </div>
-                      {vocab && (
-                        <div className="border-t border-blue-200 dark:border-blue-800 pt-3">
-                          <p className="text-sm font-semibold text-green-700 dark:text-green-400 mb-1">🇦🇿 Azərbaycanca:</p>
-                          <p className="text-sm text-green-800 dark:text-green-300">{vocab.az_translation}</p>
-                        </div>
-                      )}
-                    </div>
-                  )
-                })()}
-                <button onClick={nextQuiz} className="btn-primary w-full">
-                  {quizIdx + 1 >= quizQuestions.length ? 'Yazma məşqinə keç →' : 'Növbəti sual →'}
+                <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 rounded-xl p-4 mb-4">
+                  <p className="text-sm font-semibold text-blue-700 mb-1">💡 İzah:</p>
+                  <p className="text-sm text-blue-800 dark:text-blue-200">{current.explanation}</p>
+                </div>
+                {!aiExplanation && (
+                  <button onClick={askAiExplain} disabled={aiLoading}
+                    className="w-full mb-4 py-2.5 rounded-xl border-2 border-purple-300 text-purple-700 text-sm font-medium disabled:opacity-50">
+                    {aiLoading ? '🎓 Müəllim düşünür...' : '🎓 AI Müəllim daha ətraflı izah etsin'}
+                  </button>
+                )}
+                {aiError && <p className="text-red-500 text-xs mb-4 text-center">{aiError}</p>}
+                {aiExplanation && (
+                  <div className="bg-purple-50 dark:bg-purple-950 border border-purple-200 rounded-xl p-4 mb-4">
+                    <p className="text-sm font-semibold text-purple-700 mb-1">🎓 AI Müəllim:</p>
+                    <p className="text-sm text-purple-800 whitespace-pre-wrap">{aiExplanation}</p>
+                  </div>
+                )}
+                <button onClick={next} className="btn-primary w-full">
+                  {mastered.size === TOTAL_UNIQUE || qIdx + 1 >= queue.length ? 'Nəticəni gör →' : 'Növbəti sual →'}
                 </button>
               </>
             )}
@@ -320,5 +224,13 @@ export default function OutputPage() {
       </main>
       <AITutorChat level={userLevel} />
     </div>
+  )
+}
+
+export default function OutputPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-gray-500">Yüklənir...</div>}>
+      <OutputContent />
+    </Suspense>
   )
 }
