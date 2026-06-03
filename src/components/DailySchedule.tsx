@@ -58,7 +58,9 @@ export default function DailySchedule() {
     await completeSession(userId, session.id)
     setPlan(prev => prev ? {
       ...prev,
-      completedSessions: [...new Set([...prev.completedSessions, session.id])]
+      completedSessions: prev.completedSessions.includes(session.id)
+          ? prev.completedSessions
+          : [...prev.completedSessions, session.id]
     } : prev)
     router.push(session.route)
   }
