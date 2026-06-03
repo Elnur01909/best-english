@@ -3,7 +3,6 @@ import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import AITutorChat from '@/components/AITutorChat'
 import vocabData from '@/data/vocab.json'
-import quizData from '@/data/quizzes.json'
 import type { VocabItem } from '@/types'
 
 // TOLES Mock Mini-Test: 10 sual — lüğət + qrammatika + kollokasiya
@@ -17,6 +16,22 @@ interface MockQ {
   explanation: string
   topic: string
 }
+
+// ─── Həqiqi TOLES Qrammatika sualları ─────────────────────
+const GRAMMAR_QUESTIONS: MockQ[] = [
+  { id: 3001, type: 'grammar', topic: 'Contract Law', question: 'The contract ___ signed by both parties before the deadline.', options: ['was', 'were', 'has', 'did'], correct: 'was', explanation: 'Passive voice: "was signed" — the contract is the subject and the action was done to it. Past simple passive = was/were + past participle.' },
+  { id: 3002, type: 'grammar', topic: 'Court & Litigation', question: 'If the defendant ___ the terms, the claimant would have withdrawn the claim.', options: ['had accepted', 'accepted', 'would accept', 'has accepted'], correct: 'had accepted', explanation: 'Third conditional: "If + past perfect, would have + past participle." Used for hypothetical past situations.' },
+  { id: 3003, type: 'grammar', topic: 'Employment Law', question: 'The employee ___ for the company for ten years when she was made redundant.', options: ['had worked', 'has worked', 'was working', 'worked'], correct: 'had worked', explanation: 'Past perfect: "had worked" — the employment ended before another past event (redundancy). Shows duration up to a past point.' },
+  { id: 3004, type: 'grammar', topic: 'Criminal Law', question: 'The prosecution must prove that the defendant ___ the crime intentionally.', options: ['committed', 'had committed', 'commits', 'was committing'], correct: 'committed', explanation: 'Simple past: used for a completed action at a specific past time. "Committed" is the past tense of "commit".' },
+  { id: 3005, type: 'grammar', topic: 'Contract Law', question: 'Not only ___ the defendant breach the contract, but he also failed to notify the other party.', options: ['did', 'had', 'was', 'does'], correct: 'did', explanation: 'Inversion after "Not only": the auxiliary verb comes before the subject. "Not only did + subject + verb" is a formal TOLES structure.' },
+  { id: 3006, type: 'grammar', topic: 'Property Law', question: 'The landlord is required ___ the property in a habitable condition.', options: ['to maintain', 'maintaining', 'maintain', 'for maintain'], correct: 'to maintain', explanation: '"Required to + infinitive" is the correct structure. "Required to maintain" = has a legal obligation to keep.' },
+  { id: 3007, type: 'grammar', topic: 'Company Law', question: 'The director, ___ had a conflict of interest, was asked to leave the meeting.', options: ['who', 'which', 'whose', 'that'], correct: 'who', explanation: 'Non-defining relative clause: "who" refers to a person. "Which" is for things, not people.' },
+  { id: 3008, type: 'grammar', topic: 'Tort Law', question: 'The claimant suffered significant loss ___ a result of the defendant\'s negligence.', options: ['as', 'for', 'because', 'due'], correct: 'as', explanation: '"As a result of" is the correct preposition phrase. "For a result" and "due result" are incorrect.' },
+  { id: 3009, type: 'grammar', topic: 'Criminal Law', question: 'Had the witness told the truth, the verdict ___ different.', options: ['would have been', 'would be', 'had been', 'was'], correct: 'would have been', explanation: 'Inverted third conditional: "Had + past perfect" replaces "If had". Result clause = "would have been" (past conditional).' },
+  { id: 3010, type: 'grammar', topic: 'Contract Law', question: 'The parties ___ reached a settlement by now if negotiations had continued.', options: ['would have', 'had', 'have', 'will have'], correct: 'would have', explanation: 'Mixed conditional: "would have + past participle" for a past result. "Would have reached" = a past outcome that did not happen.' },
+  { id: 3011, type: 'grammar', topic: 'Court & Litigation', question: 'The evidence presented ___ the case significantly.', options: ['strengthened', 'strengthen', 'was strengthen', 'strengthening'], correct: 'strengthened', explanation: 'Simple past active: "strengthened" — the evidence (subject) performed the action of strengthening the case.' },
+  { id: 3012, type: 'grammar', topic: 'Employment Law', question: 'She has been working on this case ___ three months.', options: ['for', 'since', 'during', 'from'], correct: 'for', explanation: '"For + period of time" (three months, two years). "Since" is used with a specific point in time (since March, since 2020).' },
+]
 
 // Sabit kollokasiya sualları
 const COLLOCATION_QUESTIONS: MockQ[] = [
@@ -39,36 +54,32 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 function buildQuestions(): MockQ[] {
-  const allQuiz = quizData as any[]
   const allVocab = vocabData as VocabItem[]
 
-  // 4 vocab (definition → term)
-  const vocabQs: MockQ[] = shuffle(allVocab).slice(0, 4).map(v => ({
-    id: v.id,
-    type: 'vocabulary' as const,
-    topic: v.topic,
-    question: v.en_def,
-    options: shuffle([
-      v.term,
-      ...shuffle(allVocab.filter(x => x.id !== v.id && x.topic === v.topic)).slice(0, 3).map(x => x.term)
-    ]),
-    correct: v.term,
-    explanation: `${v.term}: ${v.az_translation}`,
-  }))
+  // 4 vocab (definition → term), distractor eyni topic-dən
+  const vocabQs: MockQ[] = shuffle(allVocab).slice(0, 4).map(v => {
+    const sameTopicOthers = allVocab.filter(x => x.id !== v.id && x.topic === v.topic)
+    const anyOthers = allVocab.filter(x => x.id !== v.id)
+    const distractors = shuffle(sameTopicOthers.length >= 3 ? sameTopicOthers : anyOthers).slice(0, 3).map(x => x.term)
+    return {
+      id: v.id,
+      type: 'vocabulary' as const,
+      topic: v.topic,
+      question: v.en_def,
+      options: shuffle([v.term, ...distractors]),
+      correct: v.term,
+      explanation: `${v.term}: ${v.az_translation}`,
+    }
+  })
 
-  // 2 grammar (quiz-dən)
-  const grammarQs: MockQ[] = shuffle(allQuiz).slice(0, 2).map(q => ({
-    id: q.id + 1000,
-    type: 'grammar' as const,
-    topic: q.topic,
-    question: q.question,
+  // 3 həqiqi qrammatika (fill-in-the-blank)
+  const grammarQs: MockQ[] = shuffle(GRAMMAR_QUESTIONS).slice(0, 3).map(q => ({
+    ...q,
     options: shuffle(q.options),
-    correct: q.correct,
-    explanation: q.explanation,
   }))
 
-  // 4 collocation
-  const collocationQs: MockQ[] = shuffle(COLLOCATION_QUESTIONS).slice(0, 4).map(q => ({
+  // 3 collocation
+  const collocationQs: MockQ[] = shuffle(COLLOCATION_QUESTIONS).slice(0, 3).map(q => ({
     ...q,
     options: shuffle(q.options),
   }))
