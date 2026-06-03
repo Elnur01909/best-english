@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 interface SessionSlot {
   id: string
@@ -17,6 +18,7 @@ interface DailyScheduleProps {
 }
 
 export default function DailySchedule({ completedSessions = [], onSessionClick }: DailyScheduleProps) {
+  const router = useRouter()
   const [sessions, setSessions] = useState<SessionSlot[]>([
     {
       id: 'morning',
@@ -102,10 +104,21 @@ export default function DailySchedule({ completedSessions = [], onSessionClick }
 
       {/* Sessiyalar */}
       <div className="space-y-3">
-        {sessions.map((session) => (
+        {sessions.map((session) => {
+          const routeMap: Record<string, string> = {
+            morning: '/vocabulary',
+            midday: '/lessons',
+            evening: '/quiz',
+            night: '/vocabulary',
+          }
+          const route = routeMap[session.id] || '/vocabulary'
+          return (
           <button
             key={session.id}
-            onClick={() => onSessionClick?.(session.id)}
+            onClick={() => {
+              onSessionClick?.(session.id)
+              router.push(route)
+            }}
             className={`w-full p-4 rounded-lg border-2 transition-all text-left ${
               session.completed
                 ? 'border-green-400 bg-green-50 dark:bg-green-950'
@@ -128,7 +141,8 @@ export default function DailySchedule({ completedSessions = [], onSessionClick }
               </div>
             </div>
           </button>
-        ))}
+          )
+        })}
       </div>
 
       {/* Məsləhət */}
