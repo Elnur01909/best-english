@@ -136,7 +136,7 @@ export default function QuizPage() {
   if (stage === 'select') return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
-        <button onClick={() => router.push('/dashboard')} className="text-gray-500 mb-6 block">← Geri</button>
+        <button onClick={() => router.push('/dashboard')} className="text-sm font-medium text-blue-600 hover:text-blue-800">🏠 Ana Səhifə</button>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Test Seç</h1>
         <p className="text-gray-500 mb-6 text-sm">Hər test 10 sualdan ibarətdir — cavab açarı ilə</p>
 

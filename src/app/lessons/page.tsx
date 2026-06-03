@@ -36,7 +36,7 @@ export default function LessonsPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center gap-3">
-        <button onClick={() => router.push('/dashboard')} className="text-gray-500">← Geri</button>
+        <button onClick={() => router.push('/dashboard')} className="text-sm font-medium text-blue-600 hover:text-blue-800">🏠 Ana Səhifə</button>
         <h1 className="font-bold text-gray-900 dark:text-white">Dərslər</h1>
         <span className="text-sm text-gray-400 ml-auto">{completed.size} / {lessonsData.length} tamamlandı</span>
       </header>

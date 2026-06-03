@@ -215,7 +215,7 @@ function VocabularyContent() {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
       {/* Header */}
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
-        <button onClick={() => router.push('/dashboard')} className="text-gray-500 hover:text-gray-700">← Geri</button>
+        <button onClick={() => router.push('/dashboard')} className="text-sm font-medium text-blue-600 hover:text-blue-800">🏠 Ana Səhifə</button>
         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
           {isReviewMode ? '🌙 Review' : '🌅 SRS Lüğət'}
         </span>

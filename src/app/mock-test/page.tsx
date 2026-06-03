@@ -332,7 +332,7 @@ function MockTestContent() {
   // ─── Header ────────────────────────────────────────────
   const header = (
     <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
-      <button onClick={() => router.push('/dashboard')} className="text-gray-500 text-sm">← Geri</button>
+      <button onClick={() => router.push('/dashboard')} className="text-sm font-medium text-blue-600 hover:text-blue-800">🏠 Ana Səhifə</button>
       <span className="font-semibold text-gray-900 dark:text-white text-sm">🌙 TOLES Mock Test</span>
       <span className="text-sm text-gray-400">{done ? '✓' : `${mastered.size}/${TOTAL_UNIQUE} ✓`}</span>
     </header>
