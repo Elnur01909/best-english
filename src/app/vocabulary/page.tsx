@@ -210,7 +210,15 @@ export default function VocabularyPage() {
                   <p className="text-green-700 dark:text-green-400">
                     <span className="font-medium">AZ:</span> {currentVocab.az_translation}
                   </p>
-                  <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
+                  {/* Nümunə cümlə + cümlə audio */}
+                  <div className="space-y-1">
+                    <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
+                    <AudioPlayer
+                      word={currentVocab.en_example}
+                      variant="sentence"
+                      isSentence={true}
+                    />
+                  </div>
                   <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
                 </div>
               )}
