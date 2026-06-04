@@ -73,7 +73,7 @@ export default function WeakPoints() {
       </div>
 
       <p className="text-xs text-gray-400 mt-4 text-center">
-        💡 Xəta faizi >30% olan mövzular avtomatik göstərilir
+        💡 Xəta faizi 30%-dən çox olan mövzular avtomatik göstərilir
       </p>
     </div>
   )
