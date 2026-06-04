@@ -7,6 +7,7 @@ import { getRandomMessage } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
 import OutputModal from '@/components/OutputModal'
 import AITutorChat from '@/components/AITutorChat'
+import SpeakingPractice from '@/components/SpeakingPractice'
 import { saveSessionScore } from '@/lib/sessionScore'
 import { getDailyPlan } from '@/lib/curriculum'
 import vocabData from '@/data/vocab.json'
@@ -236,8 +237,8 @@ function VocabularyContent() {
             <div className="card text-center mb-6">
               <div className="text-xs text-gray-400 mb-2">{currentVocab.topic}</div>
 
-              {/* Söz + audio */}
-              <div className="mb-3 flex justify-center">
+              {/* Söz + audio + danışma */}
+              <div className="mb-3 flex justify-center gap-3 flex-wrap">
                 <AudioPlayer word={currentVocab.term} variant="minimal" />
               </div>
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-1">
@@ -261,6 +262,11 @@ function VocabularyContent() {
                   <AudioPlayer word={currentVocab.en_example} variant="sentence" isSentence={true} />
                 </div>
                 <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
+                {/* Danışma məşqi */}
+                <div className="border-t border-gray-100 dark:border-gray-800 pt-3">
+                  <p className="text-xs text-gray-500 mb-1">🎤 Tələffüzü məşq et:</p>
+                  <SpeakingPractice term={currentVocab.term} />
+                </div>
               </div>
             </div>
 
