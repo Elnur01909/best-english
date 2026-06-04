@@ -75,6 +75,19 @@ export default function DailySchedule() {
             {curriculum.is_exam   && <span className="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300 font-medium">🎓 İmtahan</span>}
             {curriculum.is_review && <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300 font-medium">🔄 Təkrar</span>}
           </div>
+          {/* Mövzu (hüquq sahəsi) */}
+          {(curriculum as any).subject_az && (
+            <div className="flex items-center gap-1.5 mb-1">
+              <span className="text-xs font-semibold text-gray-700 dark:text-gray-300">
+                {(curriculum as any).subject_az}
+              </span>
+              <span className="text-gray-300 dark:text-gray-600">·</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {(curriculum as any).subject_en}
+              </span>
+            </div>
+          )}
+          {/* Günün spesifik adı */}
           <h3 className="font-bold text-gray-900 dark:text-white">{curriculum.title}</h3>
           <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{curriculum.title_en}</p>
           <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">{curriculum.focus}</p>

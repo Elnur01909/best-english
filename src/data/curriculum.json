@@ -19,7 +19,9 @@
       106,
       119,
       105
-    ]
+    ],
+    "subject_az": "Müqavilə Hüququ",
+    "subject_en": "Contract Law"
   },
   {
     "day": 2,
@@ -41,7 +43,9 @@
       109,
       122,
       18
-    ]
+    ],
+    "subject_az": "Müqavilə Hüququ",
+    "subject_en": "Contract Law"
   },
   {
     "day": 3,
@@ -63,7 +67,9 @@
       29,
       30,
       101
-    ]
+    ],
+    "subject_az": "Hüquqa Zidd Hərəkət",
+    "subject_en": "Tort Law"
   },
   {
     "day": 4,
@@ -85,7 +91,9 @@
       8,
       40,
       36
-    ]
+    ],
+    "subject_az": "Hüquqa Zidd Hərəkət",
+    "subject_en": "Tort Law"
   },
   {
     "day": 5,
@@ -107,7 +115,9 @@
       37,
       32,
       38
-    ]
+    ],
+    "subject_az": "Məhkəmə & Litigasiya",
+    "subject_en": "Court & Litigation"
   },
   {
     "day": 6,
@@ -129,7 +139,9 @@
       48,
       49,
       50
-    ]
+    ],
+    "subject_az": "Cinayət Hüququ",
+    "subject_en": "Criminal Law"
   },
   {
     "day": 7,
@@ -151,7 +163,9 @@
       69,
       70,
       96
-    ]
+    ],
+    "subject_az": "Əmək Hüququ",
+    "subject_en": "Employment Law"
   },
   {
     "day": 8,
@@ -176,7 +190,9 @@
       106,
       119,
       105
-    ]
+    ],
+    "subject_az": "Konsolidasiya",
+    "subject_en": "Foundation Review"
   },
   {
     "day": 9,
@@ -203,7 +219,9 @@
       109,
       122,
       18
-    ]
+    ],
+    "subject_az": "Mock İmtahan",
+    "subject_en": "Mock Exam"
   },
   {
     "day": 10,
@@ -225,7 +243,9 @@
       106,
       119,
       105
-    ]
+    ],
+    "subject_az": "Müqavilə Hüququ",
+    "subject_en": "Contract Law"
   },
   {
     "day": 11,
@@ -247,7 +267,9 @@
       109,
       122,
       18
-    ]
+    ],
+    "subject_az": "Müqavilə Hüququ",
+    "subject_en": "Contract Law"
   },
   {
     "day": 12,
@@ -269,7 +291,9 @@
       106,
       119,
       105
-    ]
+    ],
+    "subject_az": "Müqavilə Hüququ",
+    "subject_en": "Contract Law"
   },
   {
     "day": 13,
@@ -291,7 +315,9 @@
       116,
       58,
       55
-    ]
+    ],
+    "subject_az": "Şirkət Hüququ",
+    "subject_en": "Company Law"
   },
   {
     "day": 14,
@@ -313,7 +339,9 @@
       116,
       58,
       55
-    ]
+    ],
+    "subject_az": "Şirkət Hüququ",
+    "subject_en": "Company Law"
   },
   {
     "day": 15,
@@ -335,7 +363,9 @@
       69,
       70,
       96
-    ]
+    ],
+    "subject_az": "Əmək Hüququ",
+    "subject_en": "Employment Law"
   },
   {
     "day": 16,
@@ -357,7 +387,9 @@
       20,
       111,
       17
-    ]
+    ],
+    "subject_az": "Əqli Mülkiyyət Hüququ",
+    "subject_en": "Intellectual Property Law"
   },
   {
     "day": 17,
@@ -379,7 +411,9 @@
       117,
       81,
       112
-    ]
+    ],
+    "subject_az": "Mülkiyyət Hüququ",
+    "subject_en": "Property Law"
   },
   {
     "day": 18,
@@ -405,7 +439,9 @@
       116,
       58,
       55
-    ]
+    ],
+    "subject_az": "Konsolidasiya",
+    "subject_en": "Higher Review"
   },
   {
     "day": 19,
@@ -432,7 +468,9 @@
       69,
       70,
       96
-    ]
+    ],
+    "subject_az": "Mock İmtahan",
+    "subject_en": "Mock Exam"
   },
   {
     "day": 20,
@@ -454,7 +492,9 @@
       37,
       32,
       38
-    ]
+    ],
+    "subject_az": "Hüquqi Prinsiplər",
+    "subject_en": "Legal Principles"
   },
   {
     "day": 21,
@@ -476,7 +516,9 @@
       48,
       49,
       50
-    ]
+    ],
+    "subject_az": "Cinayət Hüququ",
+    "subject_en": "Criminal Law"
   },
   {
     "day": 22,
@@ -498,7 +540,9 @@
       117,
       81,
       112
-    ]
+    ],
+    "subject_az": "İflas Hüququ",
+    "subject_en": "Insolvency Law"
   },
   {
     "day": 23,
@@ -520,7 +564,9 @@
       37,
       32,
       38
-    ]
+    ],
+    "subject_az": "İnzibati Hüquq",
+    "subject_en": "Administrative Law"
   },
   {
     "day": 24,
@@ -542,7 +588,9 @@
       37,
       32,
       38
-    ]
+    ],
+    "subject_az": "Alternativ Mübahisə Həlli",
+    "subject_en": "Alternative Dispute Resolution"
   },
   {
     "day": 25,
@@ -564,7 +612,9 @@
       29,
       30,
       101
-    ]
+    ],
+    "subject_az": "Beynəlxalq Hüquq",
+    "subject_en": "International Law"
   },
   {
     "day": 26,
@@ -588,7 +638,9 @@
       29,
       30,
       101
-    ]
+    ],
+    "subject_az": "Müqavilə + Tort",
+    "subject_en": "Contract & Tort Law"
   },
   {
     "day": 27,
@@ -612,7 +664,9 @@
       116,
       58,
       55
-    ]
+    ],
+    "subject_az": "Şirkət + Əmək",
+    "subject_en": "Company & Employment Law"
   },
   {
     "day": 28,
@@ -637,7 +691,9 @@
       48,
       49,
       50
-    ]
+    ],
+    "subject_az": "Cinayət + Əqli Mülkiyyət",
+    "subject_en": "Criminal & IP Law"
   },
   {
     "day": 29,
@@ -669,7 +725,9 @@
       109,
       122,
       18
-    ]
+    ],
+    "subject_az": "TOLES Mock İmtahanı",
+    "subject_en": "Full TOLES Mock Exam"
   },
   {
     "day": 30,
@@ -701,6 +759,8 @@
       8,
       40,
       36
-    ]
+    ],
+    "subject_az": "TOLES Hazırlığı",
+    "subject_en": "TOLES Readiness"
   }
 ]
