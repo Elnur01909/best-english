@@ -7,6 +7,7 @@ import { LEVEL_COLORS, TOLES_COLORS, formatNumber } from '@/lib/utils'
 import { getTOLESProgress, TOLES_LEVELS } from '@/lib/toles'
 import { PROFICIENCY_HOURS, TOTAL_PATHWAY } from '@/lib/hours'
 import DailySchedule from '@/components/DailySchedule'
+import WeakPoints from '@/components/WeakPoints'
 import AITutorChat from '@/components/AITutorChat'
 import type { UserProfile } from '@/types'
 import {
@@ -135,6 +136,9 @@ if (loading) {
             </div>
           </div>
         )}
+
+        {/* Zəif Nöqtə Drilleri */}
+        <WeakPoints />
 
         {/* Günlük Plan — Hissə 5 */}
         <DailySchedule />

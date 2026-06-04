@@ -1,4 +1,61 @@
 // Deliberate Practice — Zəif nöqtə analizi
+import { supabase } from './supabase'
+import quizzesData from '@/data/quizzes.json'
+
+export interface WeakPoint {
+  topic: string
+  errorRate: number       // 0-100%
+  wrong: number
+  total: number
+  recommendation: string
+}
+
+// Supabase-dən son 50 quiz nəticəsini oxuyub zəif mövzuları tap
+export async function getWeakPointsFromHistory(userId: string): Promise<WeakPoint[]> {
+  const { data, error } = await supabase
+    .from('user_quiz_results')
+    .select('quiz_id, correct')
+    .eq('user_id', userId)
+    .order('answered_at', { ascending: false })
+    .limit(100)
+
+  if (error || !data || data.length === 0) return []
+
+  // quiz_id-yə görə mövzu tap
+  const quizMap: Record<number, string> = {}
+  ;(quizzesData as any[]).forEach(q => { quizMap[q.id] = q.topic })
+
+  // Mövzu üzrə statistika
+  const stats: Record<string, { correct: number; total: number }> = {}
+  data.forEach(r => {
+    const topic = quizMap[r.quiz_id] || 'Digər'
+    if (!stats[topic]) stats[topic] = { correct: 0, total: 0 }
+    stats[topic].total++
+    if (r.correct) stats[topic].correct++
+  })
+
+  // Zəif nöqtələr: ən az 3 sual olsun, >30% xəta
+  return Object.entries(stats)
+    .filter(([, s]) => s.total >= 3)
+    .map(([topic, s]) => {
+      const errorRate = Math.round(((s.total - s.correct) / s.total) * 100)
+      return {
+        topic,
+        errorRate,
+        wrong: s.total - s.correct,
+        total: s.total,
+        recommendation: errorRate > 60
+          ? 'Çox zəif — dərhal drill et!'
+          : errorRate > 40
+          ? 'Orta — bu həftə fokuslan'
+          : 'Kiçik boşluq — bir neçə məşq kifayət',
+      }
+    })
+    .filter(wp => wp.errorRate > 30)
+    .sort((a, b) => b.errorRate - a.errorRate)
+    .slice(0, 5) // Top 5 zəif mövzu
+}
+
 
 interface QuizQuestion {
   id: number
