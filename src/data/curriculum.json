@@ -1,8 +1,8 @@
 [
   {
     "day": 1,
-    "title": "Müqavilə Hüququ",
-    "title_en": "Contract Law",
+    "title": "Müqavilənin Yaranması",
+    "title_en": "Contract Formation",
     "toles_level": "Foundation",
     "topics": [
       "Contract Law"
@@ -23,8 +23,8 @@
   },
   {
     "day": 2,
-    "title": "Müqavilə Hüququ",
-    "title_en": "Contract Law",
+    "title": "Müqavilənin Pozulması",
+    "title_en": "Breach of Contract",
     "toles_level": "Foundation",
     "topics": [
       "Contract Law"
@@ -45,7 +45,7 @@
   },
   {
     "day": 3,
-    "title": "Hüquqa Zidd Hərəkət",
+    "title": "Səhlənkarlıq Hüququ",
     "title_en": "Tort Law — Negligence",
     "toles_level": "Foundation",
     "topics": [
@@ -67,7 +67,7 @@
   },
   {
     "day": 4,
-    "title": "Hüquqa Zidd Hərəkət",
+    "title": "Digər Hüquqa Zidd Hərəkətlər",
     "title_en": "Tort Law — Other Torts",
     "toles_level": "Foundation",
     "topics": [
@@ -155,7 +155,7 @@
   },
   {
     "day": 8,
-    "title": "Konsolidasiya",
+    "title": "Foundation Konsolidasiyası",
     "title_en": "Foundation Review",
     "toles_level": "Foundation",
     "topics": [
@@ -180,7 +180,7 @@
   },
   {
     "day": 9,
-    "title": "Mock İmtahan",
+    "title": "Foundation Mock İmtahanı",
     "title_en": "Foundation Mock Exam",
     "toles_level": "Foundation",
     "topics": [
@@ -207,8 +207,8 @@
   },
   {
     "day": 10,
-    "title": "Müqavilə Hüququ",
-    "title_en": "Contract Law — Advanced",
+    "title": "Müqavilə — Yanıltma & Məcburiyyət",
+    "title_en": "Misrepresentation & Duress",
     "toles_level": "Higher",
     "topics": [
       "Contract Law"
@@ -229,8 +229,8 @@
   },
   {
     "day": 11,
-    "title": "Müqavilə Hüququ",
-    "title_en": "Contract Law — Terms",
+    "title": "Müqavilə — Şərtlər & Xitam",
+    "title_en": "Contract Terms & Termination",
     "toles_level": "Higher",
     "topics": [
       "Contract Law"
@@ -251,8 +251,8 @@
   },
   {
     "day": 12,
-    "title": "Müqavilə Hüququ",
-    "title_en": "Contract Law — Clauses",
+    "title": "Müqavilə — Mürəkkəb Müddəalar",
+    "title_en": "Advanced Contract Clauses",
     "toles_level": "Higher",
     "topics": [
       "Contract Law"
@@ -273,7 +273,7 @@
   },
   {
     "day": 13,
-    "title": "Şirkət Hüququ",
+    "title": "Şirkət Hüququ — Direktorlar",
     "title_en": "Company Law — Directors",
     "toles_level": "Higher",
     "topics": [
@@ -295,7 +295,7 @@
   },
   {
     "day": 14,
-    "title": "Şirkət Hüququ",
+    "title": "Şirkət Hüququ — Səhmdarlıq",
     "title_en": "Company Law — Shareholders",
     "toles_level": "Higher",
     "topics": [
@@ -317,7 +317,7 @@
   },
   {
     "day": 15,
-    "title": "Əmək Hüququ",
+    "title": "Əmək Hüququ — Ətraflı",
     "title_en": "Employment Law — Advanced",
     "toles_level": "Higher",
     "topics": [
@@ -383,7 +383,7 @@
   },
   {
     "day": 18,
-    "title": "Konsolidasiya",
+    "title": "Higher Konsolidasiyası",
     "title_en": "Higher Review",
     "toles_level": "Higher",
     "topics": [
@@ -409,7 +409,7 @@
   },
   {
     "day": 19,
-    "title": "Mock İmtahan",
+    "title": "Higher Mock İmtahanı",
     "title_en": "Higher Mock Exam",
     "toles_level": "Higher",
     "topics": [
@@ -458,7 +458,7 @@
   },
   {
     "day": 21,
-    "title": "Cinayət Hüququ",
+    "title": "Cinayət Hüququ — Ətraflı",
     "title_en": "Criminal Law — Advanced",
     "toles_level": "Advanced",
     "topics": [
@@ -480,7 +480,7 @@
   },
   {
     "day": 22,
-    "title": "İflas Hüququ",
+    "title": "İflas & Likvidasiya",
     "title_en": "Insolvency & Bankruptcy",
     "toles_level": "Advanced",
     "topics": [
@@ -524,7 +524,7 @@
   },
   {
     "day": 24,
-    "title": "Arbitraj Hüququ",
+    "title": "Arbitraj & Mübahisə Həlli",
     "title_en": "Arbitration & ADR",
     "toles_level": "Advanced",
     "topics": [
@@ -568,7 +568,7 @@
   },
   {
     "day": 26,
-    "title": "Müqavilə + Tort Hüququ",
+    "title": "Müqavilə + Tort — Təkrar",
     "title_en": "Contract & Tort Review",
     "toles_level": "Advanced",
     "topics": [
@@ -592,7 +592,7 @@
   },
   {
     "day": 27,
-    "title": "Şirkət + Əmək Hüququ",
+    "title": "Şirkət + Əmək — Təkrar",
     "title_en": "Company & Employment Review",
     "toles_level": "Advanced",
     "topics": [
@@ -641,7 +641,7 @@
   },
   {
     "day": 29,
-    "title": "TOLES Mock İmtahanı",
+    "title": "Tam TOLES Mock İmtahanı",
     "title_en": "Full TOLES Mock Exam",
     "toles_level": "Advanced",
     "topics": [
@@ -673,8 +673,8 @@
   },
   {
     "day": 30,
-    "title": "TOLES Hazırlığı",
-    "title_en": "Final TOLES Readiness",
+    "title": "Son Hazırlıq",
+    "title_en": "TOLES Final Readiness",
     "toles_level": "Advanced",
     "topics": [
       "Contract Law",
