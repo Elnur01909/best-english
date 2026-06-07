@@ -99,16 +99,17 @@ export default function OutputModal({ vocabWord, onComplete, level = 'B1' }: Out
           >
             {aiLoading ? '🎓...' : '🎓 AI yoxla'}
           </button>
-          <button
-            onClick={onComplete}
-            disabled={!text.trim() && !submitted}
-            className="flex-1 py-2.5 px-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
-          >
-            {submitted ? 'Davam →' : 'Təqdim'}
-          </button>
+          {submitted && (
+            <button
+              onClick={onComplete}
+              className="flex-1 py-2.5 px-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors text-sm"
+            >
+              Davam →
+            </button>
+          )}
           <button
             onClick={() => onComplete()}
-            className="px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-sm font-medium"
+            className={`${submitted ? '' : 'flex-1'} px-3 py-2.5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-sm font-medium`}
           >
             Skip
           </button>
