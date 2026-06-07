@@ -129,17 +129,14 @@ export default function AudioPlayer({ word, audioUrl, variant = 'minimal', isSen
   if (variant === 'card') {
     return (
       <button
-        onClick={isPlaying ? stopAudio : playAudio}
+        onClick={playAudio}
         className="flex items-center gap-3 mb-4 p-3 bg-purple-50 dark:bg-purple-950 hover:bg-purple-100 dark:hover:bg-purple-900 rounded-lg border border-purple-200 dark:border-purple-800 transition-colors text-left w-full sm:w-auto"
       >
         <span className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-500 text-white flex items-center justify-center">
-          {isPlaying ? '⏹' : '🔊'}
+          🔊
         </span>
-        <span>
-          <span className="block text-sm font-medium text-purple-700 dark:text-purple-300">
-            {isPlaying ? 'Dayandır' : 'Tələffüzü dinlə'}
-          </span>
-          <span className="block text-xs text-purple-600 dark:text-purple-400">{word}</span>
+        <span className="text-sm font-medium text-purple-700 dark:text-purple-300">
+          Tələffüzü dinlə
         </span>
       </button>
     )
