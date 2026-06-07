@@ -87,7 +87,6 @@ export default function MemoryLabPage() {
   const [deepDive, setDeepDive] = useState<DeepEncoding | null>(null)
   const [deepDiveLoading, setDeepDiveLoading] = useState(false)
   const [deepDiveError, setDeepDiveError] = useState(false)
-  const [visualizeMode, setVisualizeMode] = useState(false)
   // Generasiya mərhələsi
   const [showOutputModal, setShowOutputModal] = useState(false)
   // Geri qayıdanda əvvəlki sözün SON mərhələsindən başlamaq üçün bayraq
@@ -126,7 +125,6 @@ export default function MemoryLabPage() {
     setShowAzExample(false)
     setDeepDive(null)
     setDeepDiveError(false)
-    setVisualizeMode(false)
     setLandOnLastStage(false)
   }, [])
 
@@ -139,8 +137,8 @@ export default function MemoryLabPage() {
     setDeepDiveError(false)
     try {
       const { data: cached } = await getDeepDive(currentWord.id)
-      if (cached && (cached.mnemonic_az || cached.etymology_az || cached.visual_az)) {
-        setDeepDive({ mnemonic: cached.mnemonic_az, etymology: cached.etymology_az, visual: cached.visual_az })
+      if (cached && (cached.mnemonic_az || cached.etymology_az)) {
+        setDeepDive({ mnemonic: cached.mnemonic_az, etymology: cached.etymology_az })
         return
       }
       const generated = await generateDeepEncoding(currentWord.term, currentWord.az_translation, currentWord.en_example)
@@ -427,25 +425,6 @@ export default function MemoryLabPage() {
                       <div className="bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
                         <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-1">🔑 Açar Söz Metodu (Mnemonika)</p>
                         <p className="text-sm text-amber-900 dark:text-amber-100">{deepDive.mnemonic}</p>
-                      </div>
-                    )}
-
-                    {deepDive.visual && (
-                      <div className="bg-pink-50 dark:bg-pink-950 border border-pink-200 dark:border-pink-800 rounded-lg p-4">
-                        <p className="text-xs font-semibold text-pink-700 dark:text-pink-300 mb-1">🖼️ İkili Kodlaşdırma — Vizual Səhnə</p>
-                        <p className="text-sm text-pink-900 dark:text-pink-100 mb-3">{deepDive.visual}</p>
-                        {!visualizeMode ? (
-                          <button onClick={() => setVisualizeMode(true)} className="text-xs font-medium text-pink-600 dark:text-pink-400 hover:underline">
-                            👁️ Gözlərimi yumub canlandırıram...
-                          </button>
-                        ) : (
-                          <div className="text-center py-3 bg-pink-100 dark:bg-pink-900 rounded-lg">
-                            <p className="text-sm text-pink-800 dark:text-pink-200">
-                              😌 Əla! İndi bu səhnəni təxəyyülündə daha <strong>gülməli, qəribə, hətta şok edici</strong> et —
-                              emosional səhnələr beyin tərəfindən daha güclü saxlanılır (Üsul #9).
-                            </p>
-                          </div>
-                        )}
                       </div>
                     )}
 

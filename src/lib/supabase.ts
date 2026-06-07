@@ -74,12 +74,12 @@ export async function saveMnemonic(vocabId: number, mnemonicAz: string) {
 }
 
 // ─── Dərin Kodlaşdırma keşi (Yaddaş Laboratoriyası — paylaşılan) ─────
-// Mnemonika + etimologiya + vizual səhnə bir AI çağırışında generasiya
+// Mnemonika + etimologiya bir AI çağırışında generasiya
 // olunur və hər söz üçün YALNIZ BİR DƏFƏ keşlənir (bütün istifadəçilər paylaşır).
 export async function getDeepDive(vocabId: number) {
   const { data, error } = await supabase
     .from('vocab_deep_dive')
-    .select('mnemonic_az, etymology_az, visual_az')
+    .select('mnemonic_az, etymology_az')
     .eq('vocab_id', vocabId)
     .maybeSingle()
   return { data, error }
@@ -87,12 +87,12 @@ export async function getDeepDive(vocabId: number) {
 
 export async function saveDeepDive(
   vocabId: number,
-  d: { mnemonic: string; etymology: string; visual: string }
+  d: { mnemonic: string; etymology: string }
 ) {
   const { data, error } = await supabase
     .from('vocab_deep_dive')
     .upsert(
-      { vocab_id: vocabId, mnemonic_az: d.mnemonic, etymology_az: d.etymology, visual_az: d.visual },
+      { vocab_id: vocabId, mnemonic_az: d.mnemonic, etymology_az: d.etymology },
       { onConflict: 'vocab_id' }
     )
   return { data, error }

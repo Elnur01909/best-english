@@ -196,7 +196,6 @@ Bu söz üçün Azərbaycan dilində QISA (2-3 cümlə), yaddaqalan, vizual bir 
 export interface DeepEncoding {
   mnemonic: string
   etymology: string
-  visual: string
 }
 
 export async function generateDeepEncoding(
@@ -213,11 +212,10 @@ export async function generateDeepEncoding(
 Mənası: ${azMeaning}
 Nümunə cümlə: ${enExample}
 
-Bu söz üçün Azərbaycan dilində 3 hissədən ibarət material hazırla. HƏR hissəni TAM olaraq aşağıdakı etiketlə başlat (başqa heç nə — giriş, başlıq, nömrələmə əlavə etmə):
+Bu söz üçün Azərbaycan dilində 2 hissədən ibarət material hazırla. HƏR hissəni TAM olaraq aşağıdakı etiketlə başlat (başqa heç nə — giriş, başlıq, nömrələmə əlavə etmə):
 
 MNEMONIKA: (2-3 cümlə) — sözün səslənişi/yazılışı ilə tanış bir Azərbaycan sözü/anlayışı arasında qəribə, gülməli, vizual əlaqə qur (açar söz metodu).
-ETIMOLOGIYA: (1-2 cümlə) — sözün kökü/mənşəyi (latın, fransız və s.) haqqında qısa, maraqlı məlumat; kök aydın deyilsə, məna əlaqəsini məntiqlə izah et.
-TƏSVİR: (2-3 cümlə) — gözlə görünən, hərəkətli, emosional bir səhnə təsviri ki, oxuyan gözünü yumub onu canlandıra bilsin (ikili kodlaşdırma).`,
+ETIMOLOGIYA: (1-2 cümlə) — sözün kökü/mənşəyi (latın, fransız və s.) haqqında qısa, maraqlı məlumat; kök aydın deyilsə, məna əlaqəsini məntiqlə izah et.`,
       },
     ]
   )
@@ -230,12 +228,10 @@ TƏSVİR: (2-3 cümlə) — gözlə görünən, hərəkətli, emosional bir səh
 
   const mnemonic = pick('MNEMONIKA')
   const etymology = pick('ETIMOLOGIYA')
-  const visual = pick('TƏSVİR')
 
   // Etiketlər tapılmasa belə, ən azı xam mətni itirməyək
   return {
     mnemonic: mnemonic || raw,
     etymology,
-    visual,
   }
 }
