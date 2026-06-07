@@ -188,11 +188,11 @@ function DrillContent() {
                 <button
                   onClick={toggleTranslation}
                   disabled={translating}
-                  className="shrink-0 w-7 h-7 mt-0.5 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-950 dark:hover:text-green-400 transition-colors text-sm disabled:opacity-50"
+                  className="shrink-0 mt-0.5 h-7 px-2.5 rounded-full flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-950 dark:hover:text-green-400 transition-colors text-xs font-semibold disabled:opacity-50"
                   title="Azərbaycan dilinə tərcümə et"
                   aria-label="Azərbaycan dilinə tərcümə et"
                 >
-                  {translating ? '⏳' : '🌐'}
+                  {translating ? '⏳' : '🌐'} AZ
                 </button>
               </div>
               {questionAz && (
