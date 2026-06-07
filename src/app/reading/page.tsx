@@ -1,8 +1,10 @@
 'use client'
-import { useMemo, useState, useRef, Suspense } from 'react'
+import { useMemo, useState, useEffect, useRef, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import AudioPlayer from '@/components/AudioPlayer'
 import AITutorChat from '@/components/AITutorChat'
+import ProfessorWidget from '@/components/ProfessorWidget'
+import { getRandomMessage } from '@/lib/psychology'
 import { saveSessionScore } from '@/lib/sessionScore'
 import readingData from '@/data/reading.json'
 
@@ -66,12 +68,27 @@ function ReadingContent() {
   const [clMastered, setClMastered] = useState<Set<number>>(new Set())
   const inputRef = useRef<HTMLInputElement>(null)
 
+  // Professor (bütün test/məşq səhifələrində eyni) — əhval + köpük mesajı
+  const [thinking, setThinking] = useState(false)
+  const [qFeedback, setQFeedback] = useState<string | null>(null)
+  const [cFeedback, setCFeedback] = useState<string | null>(null)
+  const [clFeedback, setClFeedback] = useState<string | null>(null)
+
   // Score: cəmi düzgün / TOTAL × 100 — dərhal yazılır
   function calcAndSave(qM: Set<number>, cM: Set<number>, clM: Set<number>) {
     const score = Math.round(((qM.size + cM.size + clM.size) / TOTAL) * 100)
     saveSessionScore('midday', score)
     return score
   }
+
+  // Professor: cavab gecikəndə (~8 san) "düşünür" vəziyyətinə keçsin
+  useEffect(() => {
+    setThinking(false)
+    const answered = stage === 'questions' ? qSelected : stage === 'collocations' ? cSelected : true
+    if (answered) return
+    const t = setTimeout(() => setThinking(true), 8000)
+    return () => clearTimeout(t)
+  }, [stage, qIdx, cIdx, qSelected, cSelected])
 
   // ─── Question handlers ───────────────────────────────────
   const currentQ = qQueue[qIdx]
@@ -80,6 +97,7 @@ function ReadingContent() {
     if (qSelected) return
     setQSelected(opt)
     const correct = opt === currentQ.correct
+    setQFeedback(correct ? getRandomMessage('success') : getRandomMessage('wrong_answer'))
     if (correct) {
       const next = new Set(qMastered); next.add(currentQ.id)
       setQMastered(next)
@@ -101,7 +119,7 @@ function ReadingContent() {
     if (qIdx + 1 >= qQueue.length && qMastered.size === questions.length) {
       setStage('collocations'); return
     }
-    setQIdx(i => i + 1); setQSelected(null)
+    setQIdx(i => i + 1); setQSelected(null); setQFeedback(null)
   }
 
   // ─── Collocation handlers ────────────────────────────────
@@ -111,6 +129,7 @@ function ReadingContent() {
     if (cSelected) return
     setCSelected(opt)
     const correct = opt === currentC.answer
+    setCFeedback(correct ? getRandomMessage('success') : getRandomMessage('wrong_answer'))
     if (correct) {
       const next = new Set(cMastered); next.add(cIdx)
       setCMastered(next)
@@ -129,7 +148,7 @@ function ReadingContent() {
       if (clozeList.length > 0) { setStage('cloze') } else { setStage('done') }
       return
     }
-    setCIdx(i => i + 1); setCSelected(null)
+    setCIdx(i => i + 1); setCSelected(null); setCFeedback(null)
   }
 
   // ─── Cloze handlers ──────────────────────────────────────
@@ -138,6 +157,7 @@ function ReadingContent() {
   function submitCloze() {
     const correct = checkAnswer(clInput, currentCl.answer)
     setClSubmitted(true); setClCorrect(correct)
+    setClFeedback(correct ? getRandomMessage('success') : getRandomMessage('wrong_answer'))
     if (correct) {
       const next = new Set(clMastered); next.add(currentCl.uid)
       setClMastered(next)
@@ -155,7 +175,7 @@ function ReadingContent() {
     if (clMastered.size === clozeList.length) {
       setStage('done'); return
     }
-    setClIdx(i => i + 1); setClInput(''); setClSubmitted(false); setClCorrect(false)
+    setClIdx(i => i + 1); setClInput(''); setClSubmitted(false); setClCorrect(false); setClFeedback(null)
     setTimeout(() => inputRef.current?.focus(), 100)
   }
 
@@ -216,9 +236,15 @@ function ReadingContent() {
       {header('Oxu Anlama', `Sual ${qMastered.size}/${questions.length} ✓`)}
       {progressBar}
       <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 leading-relaxed">
-          {currentQ?.question}
-        </h2>
+        <div className="flex items-start gap-3 mb-6">
+          <h2 className="flex-1 min-w-0 text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
+            {currentQ?.question}
+          </h2>
+          <ProfessorWidget
+            mood={qSelected ? (qSelected === currentQ?.correct ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
+            message={qSelected ? qFeedback : null}
+          />
+        </div>
         <div className="space-y-3 mb-6">
           {currentQ?.options.map((opt: string) => {
             const isCorrect = opt === currentQ.correct
@@ -266,11 +292,19 @@ function ReadingContent() {
       <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
         <p className="text-xs text-gray-400 uppercase tracking-wide mb-3">Boşluğu doldurun</p>
         <div className="card mb-6">
-          <p className="text-lg text-gray-900 dark:text-white leading-relaxed font-medium">
-            {currentC?.sentence.replace('___', '_______')}
-          </p>
-          <div className="mt-3">
-            <AudioPlayer word={currentC?.sentence.replace(/___/g, '')} variant="sentence" isSentence={true} />
+          <div className="flex items-start gap-3">
+            <div className="flex-1 min-w-0">
+              <p className="text-lg text-gray-900 dark:text-white leading-relaxed font-medium">
+                {currentC?.sentence.replace('___', '_______')}
+              </p>
+              <div className="mt-3">
+                <AudioPlayer word={currentC?.sentence.replace(/___/g, '')} variant="sentence" isSentence={true} />
+              </div>
+            </div>
+            <ProfessorWidget
+              mood={cSelected ? (cSelected === currentC?.answer ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
+              message={cSelected ? cFeedback : null}
+            />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-3 mb-6">
@@ -316,10 +350,18 @@ function ReadingContent() {
       <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
         <p className="text-xs text-gray-400 uppercase tracking-wide mb-3">Mətndən götürülmüş cümlə — boşluğu tamamla</p>
         <div className="card mb-4">
-          <p className="text-lg text-gray-900 dark:text-white leading-relaxed font-medium">
-            {currentCl?.sentence.replace('___', '______')}
-          </p>
-          <p className="text-xs text-gray-400 mt-2">💬 İpucu: {currentCl?.hint}</p>
+          <div className="flex items-start gap-3">
+            <div className="flex-1 min-w-0">
+              <p className="text-lg text-gray-900 dark:text-white leading-relaxed font-medium">
+                {currentCl?.sentence.replace('___', '______')}
+              </p>
+              <p className="text-xs text-gray-400 mt-2">💬 İpucu: {currentCl?.hint}</p>
+            </div>
+            <ProfessorWidget
+              mood={clSubmitted ? (clCorrect ? 'happy' : 'disappointed') : 'neutral'}
+              message={clSubmitted ? clFeedback : null}
+            />
+          </div>
         </div>
 
         <div className="mb-4">

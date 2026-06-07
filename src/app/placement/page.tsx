@@ -4,6 +4,8 @@ import { useRouter } from 'next/navigation'
 import { getUser, updateUserLevel } from '@/lib/supabase'
 import { cefrToToles } from '@/lib/utils'
 import AudioPlayer from '@/components/AudioPlayer'
+import ProfessorWidget from '@/components/ProfessorWidget'
+import { getRandomMessage } from '@/lib/psychology'
 import placementData from '@/data/placement.json'
 import placementData2 from '@/data/placement2.json'
 import type { CEFRLevel } from '@/types'
@@ -54,6 +56,9 @@ export default function PlacementPage() {
   const [stage, setStage] = useState<'intro' | 'test' | 'result'>('intro')
   const [result, setResult] = useState<CEFRLevel | null>(null)
   const [saving, setSaving] = useState(false)
+  // Professor (bütün test/məşq səhifələrində eyni) — əhval + köpük mesajı
+  const [thinking, setThinking] = useState(false)
+  const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null)
 
   // Hər səviyyədən təsadüfi 3 sual seç (180-lik hovuzdan), sonra suallar+variantlar qarışsın
   const questions = useMemo(() => {
@@ -75,10 +80,20 @@ export default function PlacementPage() {
 
   const current = questions[idx]
 
+  // Professor: cavab gecikəndə (~8 san) "düşünür" vəziyyətinə keçsin
+  useEffect(() => {
+    setThinking(false)
+    if (stage !== 'test' || selected) return
+    const t = setTimeout(() => setThinking(true), 8000)
+    return () => clearTimeout(t)
+  }, [idx, selected, stage])
+
   function answer(option: string) {
     if (selected) return
     setSelected(option)
-    setAnswers((a) => ({ ...a, [current.id]: option === current.correct }))
+    const correct = option === current.correct
+    setFeedbackMsg(correct ? getRandomMessage('success') : getRandomMessage('wrong_answer'))
+    setAnswers((a) => ({ ...a, [current.id]: correct }))
   }
 
   async function next() {
@@ -101,6 +116,7 @@ export default function PlacementPage() {
     } else {
       setIdx((i) => i + 1)
       setSelected(null)
+      setFeedbackMsg(null)
     }
   }
 
@@ -164,9 +180,15 @@ export default function PlacementPage() {
       <main className="flex-1 flex items-center justify-center px-4 py-6">
         {current && (
           <div className="w-full max-w-lg">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6 text-center leading-relaxed">
-              {current.question}
-            </h2>
+            <div className="flex items-start gap-3 mb-6">
+              <h2 className="flex-1 min-w-0 text-xl font-semibold text-gray-900 dark:text-white leading-relaxed">
+                {current.question}
+              </h2>
+              <ProfessorWidget
+                mood={selected ? (selected === current.correct ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
+                message={selected ? feedbackMsg : null}
+              />
+            </div>
             <div className="space-y-3">
               {current.options.map((opt) => {
                 const isCorrect = opt === current.correct

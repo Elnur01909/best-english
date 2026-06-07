@@ -1,9 +1,11 @@
 'use client'
-import { useMemo, useState, Suspense } from 'react'
+import { useMemo, useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import AITutorChat from '@/components/AITutorChat'
 import AudioPlayer from '@/components/AudioPlayer'
+import ProfessorWidget from '@/components/ProfessorWidget'
 import vocabData from '@/data/vocab.json'
+import { getRandomMessage } from '@/lib/psychology'
 import { saveSessionScore } from '@/lib/sessionScore'
 import type { VocabItem } from '@/types'
 
@@ -278,6 +280,9 @@ function MockTestContent() {
   const [selected, setSelected] = useState<string | null>(null)
   const [done, setDone] = useState(false)
   const [showAz, setShowAz] = useState(false)
+  // Professor (bütün test/məşq səhifələrində eyni) — əhval + köpük mesajı
+  const [thinking, setThinking] = useState(false)
+  const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null)
 
   const current = queue[qIdx]
   // Cavab variantlarının yerləri hər dəfə sual ekrana gələndə yenidən qarışsın —
@@ -292,10 +297,19 @@ function MockTestContent() {
   // Real-time faiz: neçə unikal sual mənimsənildi
   const progressPct = Math.round((mastered.size / TOTAL_UNIQUE) * 100)
 
+  // Professor: cavab gecikəndə (~8 san) "düşünür" vəziyyətinə keçsin
+  useEffect(() => {
+    setThinking(false)
+    if (selected) return
+    const t = setTimeout(() => setThinking(true), 8000)
+    return () => clearTimeout(t)
+  }, [qIdx, selected])
+
   function select(opt: string) {
     if (selected) return
     setSelected(opt)
     const correct = opt === current.correct
+    setFeedbackMsg(correct ? getRandomMessage('success') : getRandomMessage('wrong_answer'))
 
     if (correct) {
       // Mənimsənildi — dərhal score yaz (geri bassanı belə qalsın)
@@ -333,6 +347,7 @@ function MockTestContent() {
       setQIdx(nextIdx)
       setSelected(null)
       setShowAz(false)
+      setFeedbackMsg(null)
     }
   }
 
@@ -403,36 +418,44 @@ function MockTestContent() {
           )}
         </div>
 
-        {/* Sual + 2 düymə */}
+        {/* Sual + 2 düymə + Professor */}
         <div className="card mb-6">
-          <p className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed mb-4">
-            {current.question}
-          </p>
-
-          {/* Audio + AZ düymələri */}
-          <div className="flex items-center gap-2">
-            <AudioPlayer word={current.question.replace(/___/g, '')} variant="sentence" isSentence={true} />
-            <button
-              onClick={() => setShowAz(s => !s)}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
-                showAz
-                  ? 'bg-amber-500 text-white'
-                  : 'bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900'
-              }`}
-              title="Azərbaycan dilində mənasını göstər"
-            >
-              🗝️ {showAz ? 'Gizlət' : 'Mənası'}
-            </button>
-          </div>
-
-          {/* AZ tərcümə */}
-          {showAz && (
-            <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="text-sm text-amber-900 dark:text-amber-100 leading-relaxed">
-                🇦🇿 {current.az}
+          <div className="flex items-start gap-3">
+            <div className="flex-1 min-w-0">
+              <p className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed mb-4">
+                {current.question}
               </p>
+
+              {/* Audio + AZ düymələri */}
+              <div className="flex items-center gap-2">
+                <AudioPlayer word={current.question.replace(/___/g, '')} variant="sentence" isSentence={true} />
+                <button
+                  onClick={() => setShowAz(s => !s)}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                    showAz
+                      ? 'bg-amber-500 text-white'
+                      : 'bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-900'
+                  }`}
+                  title="Azərbaycan dilində mənasını göstər"
+                >
+                  🗝️ {showAz ? 'Gizlət' : 'Mənası'}
+                </button>
+              </div>
+
+              {/* AZ tərcümə */}
+              {showAz && (
+                <div className="mt-3 p-3 bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800 rounded-xl">
+                  <p className="text-sm text-amber-900 dark:text-amber-100 leading-relaxed">
+                    🇦🇿 {current.az}
+                  </p>
+                </div>
+              )}
             </div>
-          )}
+            <ProfessorWidget
+              mood={selected ? (selected === current.correct ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
+              message={selected ? feedbackMsg : null}
+            />
+          </div>
         </div>
 
         {/* Variantlar */}
