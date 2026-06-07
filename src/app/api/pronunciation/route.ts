@@ -82,6 +82,8 @@ export async function POST(req: Request) {
     }
 
     const data = await azureRes.json()
+    // MÜVƏQQƏTİ DEBUG: Azure-un xam cavabını logla (niyə skor 0 gəlir, yoxlamaq üçün)
+    console.log('[pronunciation][azure-raw]', JSON.stringify(data).slice(0, 4000))
     if (data.RecognitionStatus && data.RecognitionStatus !== 'Success') {
       return NextResponse.json({ error: 'NO_SPEECH' }, { status: 422 })
     }
