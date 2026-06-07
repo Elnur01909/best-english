@@ -5,6 +5,7 @@ import { getUser, saveQuizResult } from '@/lib/supabase'
 import { saveSessionScore } from '@/lib/sessionScore'
 import { getRandomMessage } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
+import { translateToAz } from '@/lib/translate'
 import AITutorChat from '@/components/AITutorChat'
 import ProfessorWidget from '@/components/ProfessorWidget'
 import quizzesData from '@/data/quizzes.json'
@@ -48,6 +49,9 @@ function DrillContent() {
   const [feedback, setFeedback] = useState<string | null>(null)
   const [done, setDone] = useState(false)
   const [thinking, setThinking] = useState(false)
+  const [questionAz, setQuestionAz] = useState<string | null>(null)
+  const [translating, setTranslating] = useState(false)
+  const [translateError, setTranslateError] = useState(false)
 
   const current = queue[qIdx]
   const progressPct = TOTAL > 0 ? Math.round((mastered.size / TOTAL) * 100) : 0
@@ -59,6 +63,27 @@ function DrillContent() {
     const t = setTimeout(() => setThinking(true), 8000)
     return () => clearTimeout(t)
   }, [qIdx, selected, current])
+
+  // Yeni sual gələndə tərcüməni sıfırla
+  useEffect(() => {
+    setQuestionAz(null)
+    setTranslateError(false)
+  }, [qIdx])
+
+  async function toggleTranslation() {
+    if (questionAz) { setQuestionAz(null); return }
+    if (!current) return
+    setTranslating(true)
+    setTranslateError(false)
+    try {
+      const az = await translateToAz(current.question)
+      setQuestionAz(az)
+    } catch {
+      setTranslateError(true)
+    } finally {
+      setTranslating(false)
+    }
+  }
 
   async function select(opt: string) {
     if (selected) return
@@ -156,9 +181,26 @@ function DrillContent() {
         <div className="mb-6">
           <div className="flex items-start gap-3">
             <div className="flex-1 min-w-0">
-              <p className="text-lg font-semibold text-gray-900 dark:text-white mb-2 leading-relaxed">
-                {current?.question}
-              </p>
+              <div className="flex items-start gap-2 mb-2">
+                <p className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
+                  {current?.question}
+                </p>
+                <button
+                  onClick={toggleTranslation}
+                  disabled={translating}
+                  className="shrink-0 w-7 h-7 mt-0.5 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-950 dark:hover:text-green-400 transition-colors text-sm disabled:opacity-50"
+                  title="Azərbaycan dilinə tərcümə et"
+                  aria-label="Azərbaycan dilinə tərcümə et"
+                >
+                  {translating ? '⏳' : '🌐'}
+                </button>
+              </div>
+              {questionAz && (
+                <p className="text-sm text-green-700 dark:text-green-400 mb-2 leading-relaxed">🇦🇿 {questionAz}</p>
+              )}
+              {translateError && (
+                <p className="text-xs text-red-500 mb-2">Tərcümə alınmadı — yenidən cəhd et.</p>
+              )}
               <AudioPlayer word={current?.question ?? ''} variant="sentence" isSentence={true} />
             </div>
             <ProfessorWidget
@@ -172,15 +214,18 @@ function DrillContent() {
           {current?.options.map(opt => {
             const isCorrect = opt === current.correct
             const isSel = opt === selected
-            let cls = 'w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
+            let cls = 'flex-1 p-3.5 rounded-xl border-2 text-left font-medium transition-all '
             if (!selected) cls += 'border-gray-200 dark:border-gray-700 hover:border-orange-400 hover:bg-orange-50'
             else if (isCorrect) cls += 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800'
             else if (isSel) cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800'
             else cls += 'border-gray-200 opacity-40'
             return (
-              <button key={opt} onClick={() => select(opt)} className={cls}>
-                {selected && isCorrect ? '✓ ' : selected && isSel ? '✗ ' : ''}{opt}
-              </button>
+              <div key={opt} className="flex items-center gap-2">
+                <button onClick={() => select(opt)} className={cls}>
+                  {selected && isCorrect ? '✓ ' : selected && isSel ? '✗ ' : ''}{opt}
+                </button>
+                <AudioPlayer word={opt} variant="icon" />
+              </div>
             )
           })}
         </div>

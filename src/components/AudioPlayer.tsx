@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 interface AudioPlayerProps {
   word: string
   audioUrl?: string
-  variant?: 'minimal' | 'card' | 'sentence'
+  variant?: 'minimal' | 'card' | 'sentence' | 'icon'
   isSentence?: boolean   // cümlə üçün daha yavaş, daha natural
 }
 
@@ -98,6 +98,20 @@ export default function AudioPlayer({ word, audioUrl, variant = 'minimal', isSen
   }
 
   if (!supported) return null
+
+  // İkon variant — yalnız kiçik dairəvi düymə (seçim/cavab sıralarında)
+  if (variant === 'icon') {
+    return (
+      <button
+        onClick={(e) => { e.stopPropagation(); isPlaying ? stopAudio() : playAudio() }}
+        className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-600 dark:hover:bg-blue-950 dark:hover:text-blue-400 transition-colors text-sm"
+        title="Tələffüzü dinlə"
+        aria-label="Tələffüzü dinlə"
+      >
+        {isPlaying ? '⏹' : '🔊'}
+      </button>
+    )
+  }
 
   // Cümlə variant — kiçik, göstərişsiz
   if (variant === 'sentence') {
