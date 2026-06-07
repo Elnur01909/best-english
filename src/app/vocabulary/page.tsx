@@ -9,6 +9,7 @@ import AudioPlayer from '@/components/AudioPlayer'
 import OutputModal from '@/components/OutputModal'
 import ProfessorWidget from '@/components/ProfessorWidget'
 import AITutorChat from '@/components/AITutorChat'
+import SpeakingPractice from '@/components/SpeakingPractice'
 import { saveSessionScore } from '@/lib/sessionScore'
 import { getDailyPlan } from '@/lib/curriculum'
 import vocabData from '@/data/vocab.json'
@@ -375,6 +376,11 @@ function VocabularyContent() {
                       <AudioPlayer word={currentVocab.en_example} variant="sentence" isSentence={true} />
                     </div>
                     <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
+                    {/* Danışma məşqi */}
+                    <div className="border-t border-gray-100 dark:border-gray-800 pt-3">
+                      <p className="text-xs text-gray-500 mb-1">🎤 Tələffüzü məşq et:</p>
+                      <SpeakingPractice term={currentVocab.term} />
+                    </div>
                   </div>
 
                   {/* Düymələr — yalnız tərcümə açıldıqdan sonra görünür */}

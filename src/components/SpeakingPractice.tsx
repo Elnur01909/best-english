@@ -1,21 +1,44 @@
 'use client'
 import { useState, useRef } from 'react'
+import { evaluatePronunciation, type MatchTier } from '@/lib/pronunciation'
 
 interface SpeakingPracticeProps {
   term: string        // Söylənməli termin (məs: "NEGLIGENCE")
   onResult?: (correct: boolean, heard: string) => void
 }
 
+const TIER_STYLE: Record<MatchTier, { border: string; bg: string; text: string; icon: string; label: string }> = {
+  high: {
+    border: 'border-green-400',
+    bg: 'bg-green-50 dark:bg-green-950',
+    text: 'text-green-800 dark:text-green-200',
+    icon: '✅',
+    label: 'Çox yaxın tələffüz!',
+  },
+  medium: {
+    border: 'border-amber-400',
+    bg: 'bg-amber-50 dark:bg-amber-950',
+    text: 'text-amber-800 dark:text-amber-200',
+    icon: '🟡',
+    label: 'Yaxındır — bir az fərq var',
+  },
+  low: {
+    border: 'border-orange-400',
+    bg: 'bg-orange-50 dark:bg-orange-950',
+    text: 'text-orange-800 dark:text-orange-200',
+    icon: '🧠',
+    label: 'Fərqli səslənir — bir də cəhd et',
+  },
+}
+
 export default function SpeakingPractice({ term, onResult }: SpeakingPracticeProps) {
-  const [status, setStatus] = useState<'idle' | 'listening' | 'result'>('idle')
+  const [status, setStatus] = useState<'idle' | 'listening' | 'result' | 'error'>('idle')
   const [heard, setHeard] = useState('')
-  const [correct, setCorrect] = useState(false)
+  const [tier, setTier] = useState<MatchTier>('low')
+  const [scorePct, setScorePct] = useState(0)
+  const [errorMsg, setErrorMsg] = useState('')
   const [supported, setSupported] = useState(true)
   const recognitionRef = useRef<any>(null)
-
-  function normalize(s: string) {
-    return s.toLowerCase().trim().replace(/[^a-z\s]/g, '')
-  }
 
   function start() {
     const SpeechRecognition =
@@ -31,56 +54,38 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
     recognitionRef.current = recognition
     recognition.lang = 'en-US'
     recognition.interimResults = false
-    recognition.maxAlternatives = 3
+    recognition.maxAlternatives = 5
 
     setStatus('listening')
     setHeard('')
 
     recognition.onresult = (e: any) => {
-      // Bütün alternativləri yoxla
-      const results: string[] = []
+      const alternatives: string[] = []
       for (let i = 0; i < e.results[0].length; i++) {
-        results.push(e.results[0][i].transcript)
+        alternatives.push(e.results[0][i].transcript)
       }
 
-      const normTerm = normalize(term)
-      let bestMatch = results[0]
-      let isCorrect = false
-
-      for (const r of results) {
-        if (normalize(r) === normTerm) {
-          isCorrect = true
-          bestMatch = r
-          break
-        }
-        // Qismən uyğunluq (multi-word terminlər üçün)
-        if (normTerm.includes(normalize(r)) || normalize(r).includes(normTerm)) {
-          isCorrect = true
-          bestMatch = r
-          break
-        }
-      }
-
-      setHeard(bestMatch)
-      setCorrect(isCorrect)
+      const result = evaluatePronunciation(term, alternatives)
+      setHeard(result.heard)
+      setTier(result.tier)
+      setScorePct(Math.round(result.score * 100))
       setStatus('result')
-      onResult?.(isCorrect, bestMatch)
+      onResult?.(result.isCorrect, result.heard)
     }
 
     recognition.onerror = (e: any) => {
       if (e.error === 'no-speech') {
-        setHeard('Səs aşkarlanmadı')
+        setErrorMsg('Səs aşkarlanmadı — bir az daha aydın danış və yenidən cəhd et')
       } else if (e.error === 'not-allowed') {
-        setHeard('Mikrofon icazəsi verilməyib')
+        setErrorMsg('Mikrofon icazəsi verilməyib — brauzer tənzimləmələrindən icazə ver')
       } else {
-        setHeard(`Xəta: ${e.error}`)
+        setErrorMsg(`Texniki xəta: ${e.error}`)
       }
-      setCorrect(false)
-      setStatus('result')
+      setStatus('error')
     }
 
     recognition.onend = () => {
-      if (status === 'listening') setStatus('idle')
+      setStatus((prev) => (prev === 'listening' ? 'idle' : prev))
     }
 
     recognition.start()
@@ -94,6 +99,7 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
   function reset() {
     setStatus('idle')
     setHeard('')
+    setErrorMsg('')
   }
 
   if (!supported) return (
@@ -122,32 +128,46 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
         </div>
       )}
 
-      {status === 'result' && (
+      {status === 'error' && (
         <div className="space-y-2">
-          <div className={`p-3 rounded-xl border-2 text-sm ${
-            correct
-              ? 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200'
-              : 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'
-          }`}>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">{correct ? '✅' : '❌'}</span>
-              <span className="font-semibold">{correct ? 'Düzgün tələffüz!' : 'Yenidən cəhd et'}</span>
-            </div>
-            <p className="text-xs opacity-80">
-              Eşidildi: <strong>"{heard}"</strong>
-            </p>
-            {!correct && (
-              <p className="text-xs opacity-80 mt-0.5">
-                Düzgün: <strong>"{term}"</strong>
-              </p>
-            )}
-          </div>
+          <p className="text-xs text-gray-500">{errorMsg}</p>
           <button onClick={reset}
             className="text-xs text-orange-600 hover:text-orange-800 font-medium">
             🎤 Yenidən cəhd et
           </button>
         </div>
       )}
+
+      {status === 'result' && (() => {
+        const style = TIER_STYLE[tier]
+        return (
+          <div className="space-y-2">
+            <div className={`p-3 rounded-xl border-2 text-sm ${style.border} ${style.bg} ${style.text}`}>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-lg">{style.icon}</span>
+                <span className="font-semibold">{style.label}</span>
+                <span className="ml-auto text-[11px] font-normal opacity-70">{scorePct}% uyğunluq</span>
+              </div>
+              <p className="text-xs opacity-80">
+                Sistemin eşitdiyi: <strong>"{heard}"</strong>
+              </p>
+              <p className="text-xs opacity-80 mt-0.5">
+                Hədəf söz: <strong>"{term}"</strong>
+              </p>
+              {tier !== 'high' && (
+                <p className="text-[11px] opacity-70 mt-1.5 italic">
+                  💡 Qeyd: bu, kompüterin "ən yaxşı təxmini"dir — nadir hüquqi terminləri tez-tez səhv tanıyır.
+                  Əgər özünə əmin idin, bunu doğru tələffüz kimi qəbul edə bilərsən. Yuxarıdakı audionu dinləyib müqayisə et.
+                </p>
+              )}
+            </div>
+            <button onClick={reset}
+              className="text-xs text-orange-600 hover:text-orange-800 font-medium">
+              🎤 Yenidən cəhd et
+            </button>
+          </div>
+        )
+      })()}
     </div>
   )
 }

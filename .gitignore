@@ -8,3 +8,4 @@ dist/
 build/
 
 .vercel
+.claude/settings.local.json

@@ -113,7 +113,7 @@ Claude Code sessiyasını belə başla: "CLAUDE.md-ə bax. Bu session: [tapşır
 - ✅ Görmə (Visual): Kart görmə
 - ✅ Eşitmə (Auditory): AudioPlayer (Google TTS)
 - ✅ Yazma (Motor): WritingExercise
-- ⏳ Danışma (Speaking): Web Speech API (optional)
+- ✅ Danışma (Speaking): SpeakingPractice + Levenshtein/Soundex uyğunluq alqoritmi (lib/pronunciation.ts)
 
 **Metodologiya (Hissə 3) — ✅ TAMAMLANMIŞ:**
 - ✅ Output Mandatory: Hər 3 kartdan sonra yazma məcburidir
@@ -161,7 +161,6 @@ Claude Code sessiyasını belə başla: "CLAUDE.md-ə bax. Bu session: [tapşır
 3. Supabase: schema.sql çalıştırın
 
 **Optional Enhancements (Sonrakı):**
-- Speech Recognition (Web Speech API)
 - İ+1 Adaptiv Çətinlik Engine
 - Əvvəlcə Notification System (CronCreate)
 - Mobile App (React Native)
