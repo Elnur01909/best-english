@@ -174,7 +174,7 @@ function DrillContent() {
               <div className={`mb-4 p-3 rounded-xl text-sm font-medium flex items-center gap-3 ${
                 selected === current.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
               }`}>
-                <ProfessorAvatar mood={selected === current.correct ? 'happy' : 'annoyed'} size={48} />
+                <ProfessorAvatar mood={selected === current.correct ? 'happy' : 'annoyed'} size={40} />
                 <span>{selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}</span>
               </div>
             )}
