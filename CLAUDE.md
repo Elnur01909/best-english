@@ -113,7 +113,10 @@ Claude Code sessiyasını belə başla: "CLAUDE.md-ə bax. Bu session: [tapşır
 - ✅ Görmə (Visual): Kart görmə
 - ✅ Eşitmə (Auditory): AudioPlayer (Google TTS)
 - ✅ Yazma (Motor): WritingExercise
-- ✅ Danışma (Speaking): SpeakingPractice + Levenshtein/Soundex uyğunluq alqoritmi (lib/pronunciation.ts)
+- ✅ Danışma (Speaking): SpeakingPractice — 2 rejim:
+  1. Sadə (defolt): Web Speech API + Levenshtein/Soundex uyğunluq (lib/pronunciation.ts)
+  2. Dəqiq (BYOK): Azure Pronunciation Assessment — fonem-səviyyəli qiymətləndirmə,
+     istifadəçinin öz Azure Speech açarı ilə (lib/azureSpeech.ts, components/AzureKeySetup.tsx)
 
 **Metodologiya (Hissə 3) — ✅ TAMAMLANMIŞ:**
 - ✅ Output Mandatory: Hər 3 kartdan sonra yazma məcburidir
