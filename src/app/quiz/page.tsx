@@ -8,7 +8,8 @@ import { explainQuizError } from '@/lib/ai'
 import AITutorChat from '@/components/AITutorChat'
 import ProfessorWidget from '@/components/ProfessorWidget'
 import quizData from '@/data/quizzes.json'
-import type { QuizQuestion, QuizLevel } from '@/types'
+import vocabData from '@/data/vocab.json'
+import type { QuizQuestion, QuizLevel, VocabItem } from '@/types'
 
 const LEVELS: QuizLevel[] = ['Foundation', 'Higher', 'Advanced']
 const LEVEL_COLORS = {
@@ -18,6 +19,10 @@ const LEVEL_COLORS = {
 }
 
 type Stage = 'select' | 'quiz' | 'result'
+
+function truncate(s: string, n: number): string {
+  return s.length > n ? s.slice(0, n).trim() + '…' : s
+}
 
 export default function QuizPage() {
   const router = useRouter()
@@ -139,6 +144,7 @@ export default function QuizPage() {
   }
 
   const current = questions[currentIdx]
+  const selectedVocab = selected ? (vocabData as VocabItem[]).find(v => v.term === selected) : null
   const score = results.filter(Boolean).length
   const pct = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0
 
@@ -253,7 +259,9 @@ export default function QuizPage() {
                   showAnswer
                     ? results[currentIdx]
                       ? feedbackMsg
-                      : `Sən "${selected}" seçdin, amma düzgün cavab "${current?.correct}"dir — səbəbini aşağıda izah etdim 👇`
+                      : selectedVocab
+                        ? `"${selected}" — ${truncate(selectedVocab.az_translation, 90)}`
+                        : `Sən "${selected}" sözünü seçdin.`
                     : null
                 }
               />

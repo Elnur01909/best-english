@@ -16,6 +16,10 @@ function shuffle<T>(arr: T[]): T[] {
   return [...arr].sort(() => Math.random() - 0.5)
 }
 
+function truncate(s: string, n: number): string {
+  return s.length > n ? s.slice(0, n).trim() + '…' : s
+}
+
 interface DrillQ {
   id: number
   question: string
@@ -157,6 +161,7 @@ function DrillContent() {
 
   // AZ translation for vocab
   const vocabMatch = (vocabData as VocabItem[]).find(v => v.term === current.correct)
+  const selectedVocab = selected ? (vocabData as VocabItem[]).find(v => v.term === selected) : null
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
@@ -209,7 +214,9 @@ function DrillContent() {
                 selected
                   ? selected === current?.correct
                     ? feedback
-                    : `Sən "${selected}" seçdin, amma düzgün cavab "${current?.correct}"dir — səbəbini aşağıda izah etdim 👇`
+                    : selectedVocab
+                      ? `"${selected}" — ${truncate(selectedVocab.az_translation, 90)}`
+                      : `Sən "${selected}" sözünü seçdin.`
                   : null
               }
             />
