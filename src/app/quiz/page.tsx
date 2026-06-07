@@ -248,7 +248,7 @@ export default function QuizPage() {
                 </h2>
               </div>
               <ProfessorWidget
-                mood={showAnswer ? (results[currentIdx] ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+                mood={showAnswer ? (results[currentIdx] ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
                 message={showAnswer ? feedbackMsg : null}
               />
             </div>

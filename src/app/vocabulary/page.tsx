@@ -246,7 +246,7 @@ function VocabularyContent() {
             <div className="card text-center mb-6 relative">
               <ProfessorWidget
                 className="absolute -top-4 right-1 sm:-right-6 z-10"
-                mood={feedbackMsg ? (feedbackType === 'success' ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+                mood={feedbackMsg ? (feedbackType === 'success' ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
                 message={feedbackMsg}
               />
               <div className="text-xs text-gray-400 mb-2">{currentVocab.topic}</div>

@@ -189,7 +189,7 @@ function OutputContent() {
                 </h2>
               </div>
               <ProfessorWidget
-                mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+                mood={selected ? (selected === current?.correct ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
                 message={selected ? feedback : null}
               />
             </div>

@@ -1,11 +1,11 @@
 'use client'
 
-export type ProfessorMood = 'neutral' | 'happy' | 'annoyed' | 'thinking'
+export type ProfessorMood = 'neutral' | 'happy' | 'disappointed' | 'thinking'
 
 const MOOD_ANIMATION: Record<ProfessorMood, string> = {
   neutral: 'animate-professor-breathe',
   happy: 'animate-professor-laugh',
-  annoyed: 'animate-professor-shake',
+  disappointed: 'animate-professor-sigh',
   thinking: 'animate-professor-think',
 }
 
@@ -15,8 +15,9 @@ const ASPECT = 1.24
 let uid = 0
 
 /**
- * Virtual professor persona — illüstrasiya tərzində mini-maskot müəllim.
- * Düzgün cavabda gülümsəyir/sevinir, səhv cavabda qaşqabaqlı/əsəbi olur.
+ * Virtual professor persona — illüstrasiya tərzində, canlı mimikalı müəllim.
+ * Düzgün cavabda gülümsəyir/sevinir, səhv cavabda qəzəblənmir — sadəcə məyus olur,
+ * uzun fasilədə isə düşüncəyə dalır.
  */
 export default function ProfessorAvatar({
   mood = 'neutral',
@@ -67,12 +68,13 @@ export default function ProfessorAvatar({
             <path d="M70 78 Q86 64 88 46" stroke={`url(#${robeGrad})`} strokeWidth="11" fill="none" strokeLinecap="round" />
             <circle cx="88" cy="45" r="7" fill={`url(#${skinGrad})`} />
           </>
-        ) : mood === 'annoyed' ? (
+        ) : mood === 'disappointed' ? (
           <>
-            <path d="M30 78 Q50 92 67 84" stroke={`url(#${robeGrad})`} strokeWidth="11" fill="none" strokeLinecap="round" />
-            <path d="M70 78 Q50 96 33 88" stroke="#6c5ce0" strokeWidth="11" fill="none" strokeLinecap="round" />
-            <circle cx="67" cy="84" r="7" fill={`url(#${skinGrad})`} />
-            <circle cx="33" cy="88" r="7" fill={`url(#${skinGrad})`} />
+            {/* çiyinləri düşmüş, qollar süst halda aşağı sallanıb */}
+            <path d="M31 79 Q22 92 26 108" stroke={`url(#${robeGrad})`} strokeWidth="11" fill="none" strokeLinecap="round" />
+            <circle cx="26" cy="108" r="7" fill={`url(#${skinGrad})`} />
+            <path d="M69 79 Q78 92 74 108" stroke={`url(#${robeGrad})`} strokeWidth="11" fill="none" strokeLinecap="round" />
+            <circle cx="74" cy="108" r="7" fill={`url(#${skinGrad})`} />
           </>
         ) : mood === 'thinking' ? (
           <>
@@ -115,16 +117,19 @@ export default function ProfessorAvatar({
 
         {/* üz */}
         <circle cx="50" cy="42" r="30" fill={`url(#${skinGrad})`} />
+        {/* üzdə təbii kölgələmə — sağ tərəf bir az tündləşir, sol tərəfdə işıq vurur */}
+        <path d="M50 12 A30 30 0 0 1 50 72 A34 34 0 0 0 50 12 Z" fill="#e8a76e" opacity="0.16" />
+        <ellipse cx="40" cy="32" rx="11" ry="8" fill="#fff" opacity="0.2" />
 
         {/* yanaq allığı */}
         <ellipse cx="32" cy="49" rx="5.5" ry="3.5" fill="#ff9d8a" opacity="0.45" />
         <ellipse cx="68" cy="49" rx="5.5" ry="3.5" fill="#ff9d8a" opacity="0.45" />
 
         {/* qaşlar */}
-        {mood === 'annoyed' ? (
+        {mood === 'disappointed' ? (
           <>
-            <path d="M33 33 Q40 38 46 36" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
-            <path d="M67 33 Q60 38 54 36" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M33 31 Q40 35.5 46 35" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M67 31 Q60 35.5 54 35" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
           </>
         ) : mood === 'thinking' ? (
           <>
@@ -149,20 +154,29 @@ export default function ProfessorAvatar({
             <path d="M33 45 Q37 41 41 45" stroke="#4a4360" strokeWidth="2.6" fill="none" strokeLinecap="round" />
             <path d="M59 45 Q63 41 67 45" stroke="#4a4360" strokeWidth="2.6" fill="none" strokeLinecap="round" />
           </>
-        ) : mood === 'annoyed' ? (
+        ) : mood === 'disappointed' ? (
           <>
-            <ellipse cx="37" cy="45.5" rx="2.6" ry="3" fill="#4a4360" />
-            <ellipse cx="63" cy="45.5" rx="2.6" ry="3" fill="#4a4360" />
+            {/* yarıyumulmuş, aşağı baxan kədərli gözlər + kirpik */}
+            <path d="M33.5 45.5 Q37 47.5 40.5 45.5" stroke="#4a4360" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+            <path d="M59.5 45.5 Q63 47.5 66.5 45.5" stroke="#4a4360" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+            <ellipse cx="37" cy="46.5" rx="1.9" ry="2.1" fill="#4a4360" />
+            <ellipse cx="63" cy="46.5" rx="1.9" ry="2.1" fill="#4a4360" />
+            {/* kədər damlası */}
+            <path d="M67.5 50 Q70 54 67.5 56.5 Q65 54 67.5 50 Z" fill="#8ec9f5" opacity="0.85" className="animate-professor-tear" />
           </>
         ) : mood === 'thinking' ? (
           <>
             <ellipse cx="37" cy="44" rx="2.4" ry="2.8" fill="#4a4360" />
             <ellipse cx="63" cy="44" rx="2.4" ry="2.8" fill="#4a4360" />
+            <circle cx="37.8" cy="43.1" r="0.8" fill="#fff" opacity="0.85" />
+            <circle cx="63.8" cy="43.1" r="0.8" fill="#fff" opacity="0.85" />
           </>
         ) : (
           <>
             <circle cx="37" cy="45" r="2.6" fill="#4a4360" />
             <circle cx="63" cy="45" r="2.6" fill="#4a4360" />
+            <circle cx="37.9" cy="44" r="0.9" fill="#fff" opacity="0.9" />
+            <circle cx="63.9" cy="44" r="0.9" fill="#fff" opacity="0.9" />
           </>
         )}
 
@@ -172,8 +186,8 @@ export default function ProfessorAvatar({
         {/* ağız */}
         {mood === 'happy' ? (
           <path d="M41 62 Q50 70.5 59 62" stroke="#c1395a" strokeWidth="2.8" fill="none" strokeLinecap="round" />
-        ) : mood === 'annoyed' ? (
-          <path d="M42 65 Q50 59.5 58 65" stroke="#c1395a" strokeWidth="2.8" fill="none" strokeLinecap="round" />
+        ) : mood === 'disappointed' ? (
+          <path d="M43 65.5 Q50 60.5 57 65.5" stroke="#9c5b75" strokeWidth="2.6" fill="none" strokeLinecap="round" />
         ) : mood === 'thinking' ? (
           <ellipse cx="49" cy="63" rx="3" ry="3.4" fill="#c1395a" opacity="0.75" />
         ) : (
@@ -189,8 +203,8 @@ export default function ProfessorAvatar({
         </g>
       </svg>
 
-      {mood === 'annoyed' && (
-        <span className="absolute top-1 -right-1 text-base animate-professor-pop select-none">💢</span>
+      {mood === 'disappointed' && (
+        <span className="absolute top-1 -right-1 text-base animate-professor-pop select-none">😔</span>
       )}
       {mood === 'happy' && (
         <span className="absolute top-1 -right-1 text-base animate-professor-pop select-none">✨</span>

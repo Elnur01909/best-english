@@ -162,7 +162,7 @@ function DrillContent() {
               <AudioPlayer word={current?.question ?? ''} variant="sentence" isSentence={true} />
             </div>
             <ProfessorWidget
-              mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+              mood={selected ? (selected === current?.correct ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
               message={selected ? feedback : null}
             />
           </div>
