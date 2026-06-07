@@ -19,6 +19,16 @@ const NEW_WORDS_PER_DAY = 8   // Bugünkü mövzudan yeni sözlər
 const REVIEW_PER_DAY    = 4   // SM-2 review kartları
 // Cəmi: 12 kart
 
+// Fisher-Yates qarışdırma — sözlər həmişə eyni sıra ilə gəlməsin
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
 type CardState = 'front' | 'back'
 type FeedbackType = 'success' | 'wrong'
 
@@ -64,8 +74,9 @@ function VocabularyContent() {
         // Gecə rejimi: yalnız SM-2 review
         const { data: due } = await getDueCards(user.id, 10)
         if (!due || due.length === 0) { setDone(true); setLoading(false); return }
-        setQueue(due as VocabProgress[])
-        setTotalUnique(due.length)
+        const shuffledDue = shuffle(due as VocabProgress[])
+        setQueue(shuffledDue)
+        setTotalUnique(shuffledDue.length)
         setLoading(false)
         return
       }
@@ -80,14 +91,14 @@ function VocabularyContent() {
       const plan = await getDailyPlan(user.id)
       const todayVocabIds = (plan.curriculum.vocab_ids ?? []) as number[]
 
-      // Review-da olanları çıxart, qalan sözləri tap
-      const newVocabIds = todayVocabIds.filter(id => !reviewIds.has(id))
+      // Review-da olanları çıxart, qalan sözləri qarışdırıb seç (sıra hər dəfə fərqli)
+      const newVocabIds = shuffle(todayVocabIds.filter(id => !reviewIds.has(id)))
       const newCards: VocabProgress[] = newVocabIds
         .slice(0, NEW_WORDS_PER_DAY)
         .map(id => ({ user_id: user.id, vocab_id: id, ...SRS_DEFAULTS }))
 
-      // 3) Birləşdir: əvvəl review (4), sonra bugünkü mətndən (8)
-      const combined = [...reviewCards, ...newCards]
+      // 3) Birləşdir və hamısını qarışdır — sözlər həmişə eyni sıra ilə gəlməsin
+      const combined = shuffle([...reviewCards, ...newCards])
       setQueue(combined)
       setTotalUnique(combined.length)
       setLoading(false)

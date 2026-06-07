@@ -65,11 +65,12 @@ export async function getDailyPlan(userId: string): Promise<DailyPlan> {
     const completed: string[] = progress.completed_sessions || []
     const carryOver = allSessions.filter(s => !completed.includes(s))
 
-    // Yeni günə keç (əgər bütün sessionlar tamamlandısa)
-    const allDone = allSessions.every(s => completed.includes(s))
-    const nextDay = allDone
-      ? Math.min(progress.current_day + 1, CURRICULUM.length)
-      : progress.current_day
+    // Hər yeni təqvim günü avtomatik növbəti günə keç — 4 sessiyanın hamısını
+    // tamamlamaq tələb olunmur (əks halda istifadəçi həmişə Day 1-də ilişib qalırdı).
+    // Curriculum sonuna çatanda təzədən 1-dən dövr et ki, sözlər təkrar-təkrar dəyişsin.
+    const nextDay = progress.current_day >= CURRICULUM.length
+      ? 1
+      : progress.current_day + 1
 
     // Progress sıfırla
     await supabase.from('user_curriculum_progress').upsert({
