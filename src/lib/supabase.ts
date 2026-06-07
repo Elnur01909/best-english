@@ -73,6 +73,45 @@ export async function saveMnemonic(vocabId: number, mnemonicAz: string) {
   return { data, error }
 }
 
+// ─── Dərin Kodlaşdırma keşi (Yaddaş Laboratoriyası — paylaşılan) ─────
+// Mnemonika + etimologiya + vizual səhnə bir AI çağırışında generasiya
+// olunur və hər söz üçün YALNIZ BİR DƏFƏ keşlənir (bütün istifadəçilər paylaşır).
+export async function getDeepDive(vocabId: number) {
+  const { data, error } = await supabase
+    .from('vocab_deep_dive')
+    .select('mnemonic_az, etymology_az, visual_az')
+    .eq('vocab_id', vocabId)
+    .maybeSingle()
+  return { data, error }
+}
+
+export async function saveDeepDive(
+  vocabId: number,
+  d: { mnemonic: string; etymology: string; visual: string }
+) {
+  const { data, error } = await supabase
+    .from('vocab_deep_dive')
+    .upsert(
+      { vocab_id: vocabId, mnemonic_az: d.mnemonic, etymology_az: d.etymology, visual_az: d.visual },
+      { onConflict: 'vocab_id' }
+    )
+  return { data, error }
+}
+
+// ─── Yaddaş Laboratoriyası — "leech" sözlərin oxunması (read-only) ───
+// Günlük plana TƏSİR ETMİR — sadəcə istifadəçinin ən çox unutduğu sözləri
+// tapıb, "Yaddaş Laboratoriyası" sessiyasına önəri kimi gətirir.
+export async function getLeechWords(userId: string, limit = 5) {
+  const { data, error } = await supabase
+    .from('user_vocab_progress')
+    .select('*')
+    .eq('user_id', userId)
+    .gte('consecutive_lapses', 2)
+    .order('consecutive_lapses', { ascending: false })
+    .limit(limit)
+  return { data, error }
+}
+
 export async function upsertVocabProgress(progress: {
   user_id: string
   vocab_id: number

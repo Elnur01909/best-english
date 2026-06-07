@@ -193,6 +193,14 @@ if (loading) {
               urgent: dueCount > 0,
             },
             {
+              href: '/memory-lab',
+              icon: '🧪',
+              title: 'Yaddaş Laboratoriyası',
+              desc: '9 elmi yaddaş üsulunu (mnemonika, vizual təsvir, etimologiya...) bir sözdə birləşdir — könüllü, ayrı məşq',
+              cta: 'Dərinə get →',
+              urgent: false,
+            },
+            {
               href: '/quiz',
               icon: '✍️',
               title: 'Testlər',

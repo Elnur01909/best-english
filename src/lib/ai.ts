@@ -188,3 +188,54 @@ Bu söz üçün Azərbaycan dilində QISA (2-3 cümlə), yaddaqalan, vizual bir 
     ]
   )
 }
+
+// ─── 5) Dərin Kodlaşdırma — "Yaddaş Laboratoriyası" üçün ──────────
+// Bir sözü 3 elmi üsulla eyni anda emal edir: açar söz metodu (mnemonika),
+// etimologiya (kök araşdırması) və ikili kodlaşdırma (vizual səhnə).
+// Supabase-də (vocab_deep_dive) keşlənir — hər söz üçün YALNIZ BİR DƏFƏ AI işlədilsin.
+export interface DeepEncoding {
+  mnemonic: string
+  etymology: string
+  visual: string
+}
+
+export async function generateDeepEncoding(
+  term: string,
+  azMeaning: string,
+  enExample: string
+): Promise<DeepEncoding> {
+  const raw = await callGemini(
+    `Sən yaddaş elmi (kognitiv psixologiya) üzrə ekspert müəllimsən. İngilis hüquqi terminlərini Azərbaycan dilində danışanlara DƏRİNDƏN, çoxqatlı yadda saxlatmaq üçün qısa, canlı materiallar hazırlayırsan.`,
+    [
+      {
+        role: 'user',
+        text: `İngilis termini: "${term}"
+Mənası: ${azMeaning}
+Nümunə cümlə: ${enExample}
+
+Bu söz üçün Azərbaycan dilində 3 hissədən ibarət material hazırla. HƏR hissəni TAM olaraq aşağıdakı etiketlə başlat (başqa heç nə — giriş, başlıq, nömrələmə əlavə etmə):
+
+MNEMONIKA: (2-3 cümlə) — sözün səslənişi/yazılışı ilə tanış bir Azərbaycan sözü/anlayışı arasında qəribə, gülməli, vizual əlaqə qur (açar söz metodu).
+ETIMOLOGIYA: (1-2 cümlə) — sözün kökü/mənşəyi (latın, fransız və s.) haqqında qısa, maraqlı məlumat; kök aydın deyilsə, məna əlaqəsini məntiqlə izah et.
+TƏSVİR: (2-3 cümlə) — gözlə görünən, hərəkətli, emosional bir səhnə təsviri ki, oxuyan gözünü yumub onu canlandıra bilsin (ikili kodlaşdırma).`,
+      },
+    ]
+  )
+
+  const pick = (label: string): string => {
+    const re = new RegExp(`${label}\\s*:\\s*([\\s\\S]*?)(?=\\n[A-ZÇƏĞİıÖŞÜ]+\\s*:|$)`, 'i')
+    const m = raw.match(re)
+    return m ? m[1].trim() : ''
+  }
+
+  const mnemonic = pick('MNEMONIKA')
+  const etymology = pick('ETIMOLOGIYA')
+  const visual = pick('TƏSVİR')
+
+  // Etiketlər tapılmasa belə, ən azı xam mətni itirməyək
+  return {
+    mnemonic: mnemonic || raw,
+    etymology,
+    visual,
+  }
+}

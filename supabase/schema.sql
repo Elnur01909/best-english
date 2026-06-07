@@ -75,6 +75,18 @@ create table if not exists public.vocab_mnemonics (
   created_at  timestamptz default now()
 );
 
+-- ─── 4c. Dərin Kodlaşdırma Keşi ("Yaddaş Laboratoriyası", paylaşılan) ──
+-- Mnemonika + etimologiya + vizual səhnə BİR AI çağırışında generasiya olunur.
+-- Gündəlik plana / SRS axınına TƏSİR ETMİR — ayrıca, könüllü funksiyadır.
+-- Bax: migrations/add_vocab_deep_dive.sql
+create table if not exists public.vocab_deep_dive (
+  vocab_id     integer primary key,
+  mnemonic_az  text not null default '',
+  etymology_az text not null default '',
+  visual_az    text not null default '',
+  created_at   timestamptz default now()
+);
+
 -- ─── 5. Row Level Security (RLS) ────────────────────────
 -- İstifadəçi yalnız öz məlumatlarını görə bilər
 
