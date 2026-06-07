@@ -124,33 +124,34 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
     setStatus('idle')
   }
 
-  // ─── Azure rejimi: mikrofonu lentə al → fonem-səviyyəli qiymət al ──
+  // ─── Azure rejimi: mikrofonu lentə al → danışıq bitən kimi (VAD) özü dayanıb qiymətləndirir ──
   async function startAzure() {
     setErrorMsg('')
     setAzureResult(null)
     try {
       setStatus('recording')
-      const rec = await startRecording(8000)
+      const rec = await startRecording()
       recordingRef.current = rec
+      // Qeydəalma — istər avtomatik (sükut aşkarlanması), istər əl ilə "Bitir"
+      // düyməsi ilə — bitən kimi `done` yerinə yetir və təhlilə keçirik
+      const blob = await rec.done
+      if (recordingRef.current !== rec) return // bu arada reset edilib
+      recordingRef.current = null
+      await assessAndShow(blob)
     } catch {
       setErrorMsg('Mikrofon icazəsi verilməyib — brauzer tənzimləmələrindən icazə ver')
       setStatus('error')
     }
   }
 
-  async function stopAzureAndAssess() {
-    const rec = recordingRef.current
-    if (!rec) return
+  async function assessAndShow(blob: Blob) {
     try {
       setStatus('analyzing')
-      const blob = await rec.stop()
-      recordingRef.current = null
       const result = await assessPronunciation(term, blob)
       setAzureResult(result)
       setStatus('result')
       onResult?.(result.pronScore >= 70, result.recognizedText)
     } catch (err: any) {
-      recordingRef.current = null
       const code = err?.message
       if (code === 'SHARED_LIMIT') {
         // Aylıq kvota bitdi — istifadəçiyə bildirmədən səssizcə sadə rejimə keç
@@ -185,6 +186,7 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
   }
 
   function reset() {
+    recordingRef.current = null
     setStatus('idle')
     setHeard('')
     setAzureResult(null)
@@ -196,8 +198,10 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
     else startSimple()
   }
 
+  // Əl ilə erkən bitirmək — adətən lazım olmur, çünki qeydəalma danışıq
+  // bitən kimi (sükut aşkarlananda) özü dayanıb təhlilə keçir
   function stop() {
-    if (azureMode) stopAzureAndAssess()
+    if (azureMode) recordingRef.current?.stop()
     else stopSimple()
   }
 
@@ -255,10 +259,10 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
       {status === 'recording' && (
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-red-100 dark:bg-red-950 border-2 border-red-400 text-red-700 dark:text-red-300 text-sm font-medium animate-pulse">
-            🎙️ Səs yazılır — sözü aydın söylə...
+            🎙️ Sözü söylə — bitirən kimi avtomatik dayanacaq...
           </div>
           <button onClick={stop} className="text-xs font-medium text-orange-600 hover:text-orange-800">
-            ⏹ Bitir və yoxla
+            ⏹ İndi bitir
           </button>
         </div>
       )}

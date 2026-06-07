@@ -135,12 +135,26 @@ async function blobToWav16k(blob: Blob): Promise<ArrayBuffer> {
   return buffer
 }
 
-// ─── Mikrofon qeydəalma — istifadəçi "Dayandır" deyənə qədər (max limitlə) ──
+// ─── Mikrofon qeydəalma — Səs Aktivliyi Aşkarlanması (VAD) ilə özü dayanır ──
+//
+// İstifadəçi danışığını bitirən kimi qeydəalma AVTOMATİK dayanır və təhlilə göndərilir —
+// "Dayandır" düyməsini əl ilə basmaq lazım deyil (bu, axıcı, təbii təcrübə üçün vacibdir).
+// Mikrofon səviyyəsini Web Audio Analyser ilə izləyirik: danışıq aşkarlanandan sonra
+// qısa müddət (SILENCE_HOLD_MS) sükut davam edərsə, söz bitib hesab edib qeydəalmanı
+// dayandırırıq. Maksimum müddət (maxMs) də ehtiyat fren kimi qalır.
 export interface ActiveRecording {
-  stop: () => Promise<Blob>
+  // Qeydəalma bitəndə (avtomatik aşkarlanma, max-müddət, ya da əl ilə dayandırma
+  // ilə) bu promise audio blob-u ilə yerinə yetir
+  done: Promise<Blob>
+  // Əl ilə tez bitirmək üçün (məs. istifadəçi "Bitir" düyməsinə bassa)
+  stop: () => void
 }
 
-export async function startRecording(maxMs = 6000): Promise<ActiveRecording> {
+const VAD_SILENCE_RMS = 0.02     // bu səviyyədən aşağı səs həcmi "sükut" sayılır
+const VAD_SILENCE_HOLD_MS = 650  // danışıqdan sonra bu qədər sükut = söz bitib, dayandır
+const VAD_MIN_SPEECH_MS = 200    // avtomatik dayandırma üçün ən azı bu qədər danışıq aşkarlanmalıdır
+
+export async function startRecording(maxMs = 8000): Promise<ActiveRecording> {
   // Tələffüz qiymətləndirməsi üçün təmiz, işlənməmiş audio daha yaxşıdır:
   // noise suppression / auto-gain bəzən qısa sözləri "yeyir" → onları söndürürük
   const stream = await navigator.mediaDevices.getUserMedia({
@@ -153,35 +167,80 @@ export async function startRecording(maxMs = 6000): Promise<ActiveRecording> {
   })
   const recorder = new MediaRecorder(stream)
   const chunks: BlobPart[] = []
-
-  let settle: ((b: Blob) => void) | null = null
-  const done = new Promise<Blob>((resolve) => { settle = resolve })
-
   recorder.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data) }
-  recorder.onstop = () => {
-    stream.getTracks().forEach((t) => t.stop())
-    settle?.(new Blob(chunks, { type: recorder.mimeType || 'audio/webm' }))
-  }
+
+  const done = new Promise<Blob>((resolve) => {
+    recorder.onstop = () => {
+      stream.getTracks().forEach((t) => t.stop())
+      resolve(new Blob(chunks, { type: recorder.mimeType || 'audio/webm' }))
+    }
+  })
+
+  const startedAt = Date.now()
   // timeslice ilə start → data dövri olaraq boşaldılır, qısa yazılışlar itmir
   recorder.start(200)
 
-  const startedAt = Date.now()
-  const timer = setTimeout(() => {
+  // ─── VAD qurulumu — mikrofon səviyyəsini canlı izləyirik ───────────────────
+  const AudioCtx = window.AudioContext || (window as any).webkitAudioContext
+  const audioCtx = new AudioCtx()
+  const source = audioCtx.createMediaStreamSource(stream)
+  const analyser = audioCtx.createAnalyser()
+  analyser.fftSize = 1024
+  source.connect(analyser)
+  const timeData = new Uint8Array(analyser.fftSize)
+
+  let speechStartedAt: number | null = null
+  let lastLoudAt: number | null = null
+  let vadFrame = 0
+  let finished = false
+  let maxTimer: ReturnType<typeof setTimeout>
+
+  const finish = () => {
+    if (finished) return
+    finished = true
+    cancelAnimationFrame(vadFrame)
+    clearTimeout(maxTimer)
+    audioCtx.close().catch(() => {})
     if (recorder.state !== 'inactive') recorder.stop()
-  }, maxMs)
+  }
+
+  const tick = () => {
+    analyser.getByteTimeDomainData(timeData)
+    let sumSq = 0
+    for (let i = 0; i < timeData.length; i++) {
+      const v = (timeData[i] - 128) / 128
+      sumSq += v * v
+    }
+    const rms = Math.sqrt(sumSq / timeData.length)
+    const now = Date.now()
+
+    if (rms > VAD_SILENCE_RMS) {
+      if (speechStartedAt === null) speechStartedAt = now
+      lastLoudAt = now
+    } else if (
+      speechStartedAt !== null &&
+      lastLoudAt !== null &&
+      now - speechStartedAt > VAD_MIN_SPEECH_MS &&
+      now - lastLoudAt > VAD_SILENCE_HOLD_MS
+    ) {
+      finish()
+      return
+    }
+    vadFrame = requestAnimationFrame(tick)
+  }
+  vadFrame = requestAnimationFrame(tick)
+
+  // Ehtiyat fren — VAD nəyisə buraxsa belə, maksimum müddətdən sonra hökmən dayan
+  maxTimer = setTimeout(finish, maxMs)
 
   return {
-    stop: async () => {
-      clearTimeout(timer)
-      // Çox tez "Dayandır" basılıbsa (qısa söz), audio header-dən başqa heç nə
+    done,
+    stop: () => {
+      // Çox tez "Bitir" basılıbsa (qısa söz), audio header-dən başqa heç nə
       // tutulmaya bilər → ən az ~600 ms yazılış zəmanəti veririk
       const elapsed = Date.now() - startedAt
-      if (elapsed < 600) {
-        await new Promise((r) => setTimeout(r, 600 - elapsed))
-      }
-      if (recorder.state !== 'inactive') recorder.stop()
-      else settle?.(new Blob(chunks, { type: recorder.mimeType || 'audio/webm' }))
-      return done
+      if (elapsed < 600) setTimeout(finish, 600 - elapsed)
+      else finish()
     },
   }
 }
