@@ -248,7 +248,7 @@ function VocabularyContent() {
         {currentVocab ? (
           <div className="w-full max-w-lg">
 
-            {/* KART — həmişə açıq, hər iki tərəf görsənir */}
+            {/* KART — flashcard kimi: əvvəl yalnız söz, "Tərcüməni göstər" ilə arxa üz açılır (aktiv yada salma) */}
             <div className="card text-center mb-6 relative">
               <ProfessorWidget
                 className="absolute -top-4 right-1 sm:-right-6 z-10"
@@ -266,70 +266,81 @@ function VocabularyContent() {
               </h2>
               <p className="text-gray-400 italic text-sm mb-4">{currentVocab.pos}</p>
 
-              {/* Ayırıcı */}
-              <div className="border-t border-gray-100 dark:border-gray-800 pt-4 space-y-3 text-left">
-                <div className="space-y-1">
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    <span className="font-medium text-gray-500">EN:</span> {currentVocab.en_def}
-                  </p>
-                  <AudioPlayer word={currentVocab.en_def} variant="sentence" isSentence={true} />
+              {cardState === 'front' ? (
+                /* ÖN ÜZ — aktiv yada salma: əvvəl yalnız söz görünür, tərcümə gizlidir */
+                <div className="border-t border-gray-100 dark:border-gray-800 pt-6 pb-1">
+                  <p className="text-sm text-gray-400 mb-4">🧠 Mənasını yadına salmağa çalış, sonra aç...</p>
+                  <button
+                    onClick={() => setCardState('back')}
+                    className="px-6 py-3 rounded-xl bg-blue-100 hover:bg-blue-200 dark:bg-blue-950 dark:hover:bg-blue-900 text-blue-700 dark:text-blue-300 font-semibold transition-colors"
+                  >
+                    👁 Tərcüməni göstər
+                  </button>
                 </div>
-                <p className="text-green-700 dark:text-green-400 text-sm">
-                  <span className="font-medium">AZ:</span> {currentVocab.az_translation}
-                </p>
-                <div className="space-y-1">
-                  <div className="flex items-start gap-2">
-                    <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
+              ) : (
+                <>
+                  {/* ARXA ÜZ — tərif, tərcümə, nümunələr */}
+                  <div className="border-t border-gray-100 dark:border-gray-800 pt-4 space-y-3 text-left">
+                    <div className="space-y-1">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                        <span className="font-medium text-gray-500">EN:</span> {currentVocab.en_def}
+                      </p>
+                      <AudioPlayer word={currentVocab.en_def} variant="sentence" isSentence={true} />
+                    </div>
+                    <p className="text-green-700 dark:text-green-400 text-sm">
+                      <span className="font-medium">AZ:</span> {currentVocab.az_translation}
+                    </p>
+                    <div className="space-y-1">
+                      <div className="flex items-start gap-2">
+                        <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
+                        <button
+                          onClick={() => setShowExampleAz(v => !v)}
+                          className="shrink-0 mt-0.5 h-6 px-2 rounded-full flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-950 dark:hover:text-green-400 transition-colors text-[11px] font-semibold"
+                          title="Azərbaycan dilinə tərcümə et"
+                          aria-label="Azərbaycan dilinə tərcümə et"
+                        >
+                          🌐 AZ
+                        </button>
+                      </div>
+                      {showExampleAz && (
+                        <p className="text-sm text-green-700 dark:text-green-400 italic">"{currentVocab.az_example}"</p>
+                      )}
+                      <AudioPlayer word={currentVocab.en_example} variant="sentence" isSentence={true} />
+                    </div>
+                    <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
+                  </div>
+
+                  {/* Düymələr — yalnız tərcümə açıldıqdan sonra görünür */}
+                  <div className="grid grid-cols-2 gap-4 mt-6">
                     <button
-                      onClick={() => setShowExampleAz(v => !v)}
-                      className="shrink-0 mt-0.5 h-6 px-2 rounded-full flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-950 dark:hover:text-green-400 transition-colors text-[11px] font-semibold"
-                      title="Azərbaycan dilinə tərcümə et"
-                      aria-label="Azərbaycan dilinə tərcümə et"
+                      onClick={handleUnutdum}
+                      disabled={feedbackMsg !== null}
+                      className="py-5 rounded-xl bg-red-100 hover:bg-red-200 text-red-700 font-bold text-lg transition-colors disabled:opacity-50"
                     >
-                      🌐 AZ
+                      ✗ Unuduram
+                    </button>
+                    <button
+                      onClick={handleBildim}
+                      disabled={feedbackMsg !== null}
+                      className="py-4 rounded-xl bg-green-100 hover:bg-green-200 text-green-700 font-semibold text-base transition-colors disabled:opacity-50"
+                    >
+                      ✓ Bilirəm
                     </button>
                   </div>
-                  {showExampleAz && (
-                    <p className="text-sm text-green-700 dark:text-green-400 italic">"{currentVocab.az_example}"</p>
+
+                  {/* Affective Filter Feedback */}
+                  {feedbackMsg && (
+                    <div className={`mt-4 p-4 rounded-xl text-center font-medium text-sm animate-bounce ${
+                      feedbackType === 'success'
+                        ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
+                        : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
+                    }`}>
+                      {feedbackMsg}
+                    </div>
                   )}
-                  <AudioPlayer word={currentVocab.en_example} variant="sentence" isSentence={true} />
-                </div>
-                <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
-              </div>
+                </>
+              )}
             </div>
-
-            {/* Düymələr — həmişə görünür */}
-            {(
-              <>
-                <div className="grid grid-cols-2 gap-4">
-                  <button
-                    onClick={handleUnutdum}
-                    disabled={feedbackMsg !== null}
-                    className="py-5 rounded-xl bg-red-100 hover:bg-red-200 text-red-700 font-bold text-lg transition-colors disabled:opacity-50"
-                  >
-                    ✗ Unuduram
-                  </button>
-                  <button
-                    onClick={handleBildim}
-                    disabled={feedbackMsg !== null}
-                    className="py-4 rounded-xl bg-green-100 hover:bg-green-200 text-green-700 font-semibold text-base transition-colors disabled:opacity-50"
-                  >
-                    ✓ Bilirəm
-                  </button>
-                </div>
-
-                {/* Affective Filter Feedback */}
-                {feedbackMsg && (
-                  <div className={`mt-4 p-4 rounded-xl text-center font-medium text-sm animate-bounce ${
-                    feedbackType === 'success'
-                      ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
-                      : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
-                  }`}>
-                    {feedbackMsg}
-                  </div>
-                )}
-              </>
-            )}
           </div>
         ) : (
           <p className="text-gray-500">Kart tapılmadı</p>
