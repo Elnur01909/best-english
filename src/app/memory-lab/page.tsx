@@ -334,9 +334,11 @@ export default function MemoryLabPage() {
                 )}
 
                 <div className="flex gap-2">
-                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
-                    ← Geri
-                  </button>
+                  {canGoBack && (
+                    <button onClick={prevStage} className="btn-secondary px-4 flex-shrink-0">
+                      ← Geri
+                    </button>
+                  )}
                   <button
                     onClick={() => goToStage('context')}
                     disabled={!revealed}
@@ -373,9 +375,11 @@ export default function MemoryLabPage() {
                   🗣️ İndi cümləni ucadan, audio ilə birlikdə təkrarla — neçə kanal işə düşsə, bir o qədər güclü iz qalır.
                 </p>
                 <div className="flex gap-2">
-                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
-                    ← Geri
-                  </button>
+                  {canGoBack && (
+                    <button onClick={prevStage} className="btn-secondary px-4 flex-shrink-0">
+                      ← Geri
+                    </button>
+                  )}
                   <button onClick={() => goToStage('encode')} className="btn-primary flex-1">
                     Növbəti: Açar söz + Vizual + Kök →
                   </button>
@@ -440,9 +444,11 @@ export default function MemoryLabPage() {
                 )}
 
                 <div className="flex gap-2">
-                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
-                    ← Geri
-                  </button>
+                  {canGoBack && (
+                    <button onClick={prevStage} className="btn-secondary px-4 flex-shrink-0">
+                      ← Geri
+                    </button>
+                  )}
                   <button
                     onClick={() => goToStage('generate')}
                     disabled={deepDiveLoading || (!deepDive && !deepDiveError)}
@@ -465,9 +471,11 @@ export default function MemoryLabPage() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
-                    ← Geri
-                  </button>
+                  {canGoBack && (
+                    <button onClick={prevStage} className="btn-secondary px-4 flex-shrink-0">
+                      ← Geri
+                    </button>
+                  )}
                   <button onClick={() => setShowOutputModal(true)} className="btn-primary flex-1">
                     Cümləmi yazıram →
                   </button>
