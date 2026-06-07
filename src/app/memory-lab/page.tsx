@@ -367,7 +367,7 @@ export default function MemoryLabPage() {
                     onClick={() => setShowAzExample(v => !v)}
                     className="text-xs font-medium text-purple-600 dark:text-purple-400 hover:underline"
                   >
-                    {showAzExample ? 'Tərcüməni gizlət' : 'Tərcüməni göstər'}
+                    {showAzExample ? '🌐 Tərcüməni gizlət' : '🌐 Tərcüməni göstər'}
                   </button>
                 </div>
                 <p className="text-xs text-gray-400 mb-4">

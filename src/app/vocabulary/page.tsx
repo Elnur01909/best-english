@@ -341,7 +341,7 @@ function VocabularyContent() {
                     onClick={() => setCardState('back')}
                     className="px-6 py-3 rounded-xl bg-blue-100 hover:bg-blue-200 dark:bg-blue-950 dark:hover:bg-blue-900 text-blue-700 dark:text-blue-300 font-semibold transition-colors"
                   >
-                    👁 Tərcüməni göstər
+                    🌐 Tərcüməni göstər
                   </button>
                 </div>
               ) : (
