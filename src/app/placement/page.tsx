@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { getUser, updateUserLevel } from '@/lib/supabase'
 import { cefrToToles } from '@/lib/utils'
+import AudioPlayer from '@/components/AudioPlayer'
 import placementData from '@/data/placement.json'
 import placementData2 from '@/data/placement2.json'
 import type { CEFRLevel } from '@/types'
@@ -170,7 +171,7 @@ export default function PlacementPage() {
               {current.options.map((opt) => {
                 const isCorrect = opt === current.correct
                 const isSelected = opt === selected
-                let cls = 'w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
+                let cls = 'flex-1 p-3.5 rounded-xl border-2 text-left font-medium transition-all '
                 if (!selected) {
                   cls += 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950'
                 } else if (isCorrect) {
@@ -181,9 +182,13 @@ export default function PlacementPage() {
                   cls += 'border-gray-200 dark:border-gray-700 opacity-50'
                 }
                 return (
-                  <button key={opt} onClick={() => answer(opt)} className={cls}>
-                    {selected && isCorrect ? '✓ ' : selected && isSelected ? '✗ ' : ''}{opt}
-                  </button>
+                  <div key={opt} className="flex items-center gap-2">
+                    <button onClick={() => answer(opt)} className={cls}>
+                      {selected && isCorrect ? '✓ ' : selected && isSelected ? '✗ ' : ''}{opt}
+                    </button>
+                    {/* Səsləndirmə — sağda (bütün test səhifələrində eyni) */}
+                    <AudioPlayer word={opt} variant="icon" />
+                  </div>
                 )
               })}
             </div>

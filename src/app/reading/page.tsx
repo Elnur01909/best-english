@@ -223,15 +223,19 @@ function ReadingContent() {
           {currentQ?.options.map((opt: string) => {
             const isCorrect = opt === currentQ.correct
             const isSel = opt === qSelected
-            let cls = 'w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
+            let cls = 'flex-1 p-3.5 rounded-xl border-2 text-left font-medium transition-all '
             if (!qSelected) cls += 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50'
             else if (isCorrect) cls += 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800'
             else if (isSel) cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800'
             else cls += 'border-gray-200 opacity-40'
             return (
-              <button key={opt} onClick={() => selectQ(opt)} className={cls}>
-                {qSelected && isCorrect ? '✓ ' : qSelected && isSel ? '✗ ' : ''}{opt}
-              </button>
+              <div key={opt} className="flex items-center gap-2">
+                <button onClick={() => selectQ(opt)} className={cls}>
+                  {qSelected && isCorrect ? '✓ ' : qSelected && isSel ? '✗ ' : ''}{opt}
+                </button>
+                {/* Səsləndirmə — sağda (bütün test səhifələrində eyni) */}
+                <AudioPlayer word={opt} variant="icon" />
+              </div>
             )
           })}
         </div>
@@ -273,15 +277,19 @@ function ReadingContent() {
           {shuffle(currentC?.options ?? []).map((opt: string) => {
             const isCorrect = opt === currentC?.answer
             const isSel = opt === cSelected
-            let cls = 'p-3 rounded-xl border-2 text-center font-medium transition-all '
+            let cls = 'flex-1 p-3 rounded-xl border-2 text-center font-medium transition-all '
             if (!cSelected) cls += 'border-gray-200 dark:border-gray-700 hover:border-purple-400 hover:bg-purple-50'
             else if (isCorrect) cls += 'border-green-400 bg-green-50 text-green-800'
             else if (isSel) cls += 'border-red-400 bg-red-50 text-red-800'
             else cls += 'border-gray-200 opacity-40'
             return (
-              <button key={opt} onClick={() => selectC(opt)} className={cls}>
-                {cSelected && isCorrect ? '✓ ' : cSelected && isSel ? '✗ ' : ''}{opt}
-              </button>
+              <div key={opt} className="flex items-center gap-1">
+                <button onClick={() => selectC(opt)} className={cls}>
+                  {cSelected && isCorrect ? '✓ ' : cSelected && isSel ? '✗ ' : ''}{opt}
+                </button>
+                {/* Səsləndirmə — sağda (bütün test səhifələrində eyni) */}
+                <AudioPlayer word={opt} variant="icon" />
+              </div>
             )
           })}
         </div>

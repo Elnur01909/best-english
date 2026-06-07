@@ -440,17 +440,17 @@ function MockTestContent() {
           {displayedOptions.map((opt) => {
             const isCorrect = opt === current.correct
             const isSelected = opt === selected
-            let cls = 'flex items-center gap-2 w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
+            let cls = 'flex-1 p-3.5 rounded-xl border-2 text-left font-medium transition-all '
             if (!selected) cls += 'border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950'
             else if (isCorrect) cls += 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-200'
             else if (isSelected) cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-200'
             else cls += 'border-gray-200 dark:border-gray-700 opacity-40'
             return (
-              <div key={opt} className={cls}>
-                <button onClick={() => select(opt)} className="flex-1 text-left bg-transparent">
+              <div key={opt} className="flex items-center gap-2">
+                <button onClick={() => select(opt)} className={cls}>
                   {selected && isCorrect ? '✓ ' : selected && isSelected ? '✗ ' : ''}{opt}
                 </button>
-                {/* Səsləndirmə — sağda, variant sözünü/ifadəsini dinlə (seçimi tetiklətmir) */}
+                {/* Səsləndirmə — sağda (bütün test səhifələrində eyni), seçimi tetiklətmir */}
                 <AudioPlayer word={opt} variant="icon" />
               </div>
             )

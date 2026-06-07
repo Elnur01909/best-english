@@ -201,15 +201,19 @@ function OutputContent() {
               {current.options.map((opt: string) => {
                 const isCorrect = opt === current.correct
                 const isSel = opt === selected
-                let cls = 'w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
+                let cls = 'flex-1 p-3.5 rounded-xl border-2 text-left font-medium transition-all '
                 if (!selected) cls += 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50'
                 else if (isCorrect) cls += 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800'
                 else if (isSel) cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800'
                 else cls += 'border-gray-200 opacity-40'
                 return (
-                  <button key={opt} onClick={() => handleSelect(opt)} className={cls}>
-                    {selected && isCorrect ? '✓ ' : selected && isSel ? '✗ ' : ''}{opt}
-                  </button>
+                  <div key={opt} className="flex items-center gap-2">
+                    <button onClick={() => handleSelect(opt)} className={cls}>
+                      {selected && isCorrect ? '✓ ' : selected && isSel ? '✗ ' : ''}{opt}
+                    </button>
+                    {/* Səsləndirmə — sağda (bütün test səhifələrində eyni) */}
+                    <AudioPlayer word={opt} variant="icon" />
+                  </div>
                 )
               })}
             </div>

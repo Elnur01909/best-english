@@ -7,6 +7,7 @@ import { analyzeWeakPoints } from '@/lib/analysis'
 import { explainQuizError } from '@/lib/ai'
 import AITutorChat from '@/components/AITutorChat'
 import ProfessorWidget from '@/components/ProfessorWidget'
+import AudioPlayer from '@/components/AudioPlayer'
 import quizData from '@/data/quizzes.json'
 import vocabData from '@/data/vocab.json'
 import type { QuizQuestion, QuizLevel, VocabItem } from '@/types'
@@ -268,7 +269,7 @@ export default function QuizPage() {
                 const isCorrect = opt === current.correct
                 const isSelected = opt === selected
 
-                let cls = 'w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
+                let cls = 'flex-1 p-3.5 rounded-xl border-2 text-left font-medium transition-all '
                 if (!showAnswer) {
                   cls += 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950'
                 } else if (isCorrect) {
@@ -280,9 +281,13 @@ export default function QuizPage() {
                 }
 
                 return (
-                  <button key={opt} onClick={() => handleSelect(opt)} className={cls}>
-                    {isCorrect && showAnswer ? '✓ ' : isSelected && showAnswer ? '✗ ' : ''}{opt}
-                  </button>
+                  <div key={opt} className="flex items-center gap-2">
+                    <button onClick={() => handleSelect(opt)} className={cls}>
+                      {isCorrect && showAnswer ? '✓ ' : isSelected && showAnswer ? '✗ ' : ''}{opt}
+                    </button>
+                    {/* Səsləndirmə — sağda (bütün test səhifələrində eyni) */}
+                    <AudioPlayer word={opt} variant="icon" />
+                  </div>
                 )
               })}
             </div>
