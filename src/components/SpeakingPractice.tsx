@@ -351,9 +351,14 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
                 <div className="mt-2 flex flex-wrap gap-1">
                   {azureResult.words.map((w, i) => {
                     // Söz balı yüksək görünsə belə, ən pis fonem aşağıdırsa, sözü ona görə qiymətləndiririk —
-                    // beləcə "contract"-ı "jantrak" kimi deyəndə /k/ səsi düzgün qırmızı işarələnir
-                    const flagged = w.worstPhoneme && w.worstPhoneme.accuracyScore < 65
-                    const effScore = flagged ? Math.min(w.accuracyScore, w.worstPhoneme!.accuracyScore + 30) : w.accuracyScore
+                    // eyni bant məntiqi ilə (effectivePronScore) ki, söz balı ümumi balla uyğun gəlsin
+                    const wp = w.worstPhoneme?.accuracyScore ?? 100
+                    const flagged = wp < 60
+                    const effScore =
+                      wp < 40 ? Math.min(w.accuracyScore, wp + 12)
+                      : wp < 60 ? Math.min(w.accuracyScore, wp + 20)
+                      : wp < 75 ? Math.min(w.accuracyScore, wp + 28)
+                      : w.accuracyScore
                     const wTier = tierFromScore(effScore)
                     const badge =
                       wTier === 'high' ? 'bg-green-200/60 dark:bg-green-800/40 text-green-900 dark:text-green-100'

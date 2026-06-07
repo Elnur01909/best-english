@@ -68,18 +68,29 @@ export interface PronunciationAssessmentResult {
   remaining?: number    // ortaq hovuzda neçə pulsuz cəhd qalıb (yalnız shared route qaytarır)
 }
 
-// Azure-un söz-səviyyəli ümumi balı bəzən aldadıcıdır: məsələn "contract" sözündə "k" səsini
-// "j" kimi tələffüz etsən belə, söz balı 79-89 çıxa bilər (Azure ümumi balı fonemlərin sadə
-// ortalaması kimi yox, perseptual/uzunluq-çəkili modellə hesablayır). Buna görə real
-// "tələffüz düzgünlüyü"nü ən pis fonemin balı ilə korreksiya edirik.
-export function effectivePronScore(result: Pick<PronunciationAssessmentResult, 'pronScore' | 'words'>): number {
+// Bütün sözlərdəki ən pis (ən aşağı bal alan) fonemin balını qaytarır.
+// Tək söz məşqində "tələffüz düzgünlüyü" əslində ən zəif səslə müəyyən olunur.
+export function worstPhonemeScore(result: Pick<PronunciationAssessmentResult, 'words'>): number {
   let worst = 100
   for (const w of result.words) {
     if (w.worstPhoneme && w.worstPhoneme.accuracyScore < worst) worst = w.worstPhoneme.accuracyScore
   }
-  // Əgər hər hansı fonem çox aşağıdırsa (aydın səhv səs), ümumi balı ona doğru çəkirik
-  if (worst < 40) return Math.min(result.pronScore, worst + 25)
-  if (worst < 65) return Math.min(result.pronScore, worst + 35)
+  return worst
+}
+
+// Azure-un söz-səviyyəli ümumi balı bəzən aldadıcıdır: məsələn "contract" sözündə "k" səsini
+// "j" kimi tələffüz etsən belə, söz balı 79-89 çıxa bilər (Azure ümumi balı fonemlərin sadə
+// ortalaması kimi yox, perseptual/uzunluq-çəkili modellə hesablayır). Buna görə real
+// "tələffüz düzgünlüyü"nü ən pis fonemin balı ilə korreksiya edirik.
+//
+// QEYD (eşik məntiqi): UI-də ✅ yaşıl ("Çox yaxın") = bal ≥ 80, 🟡 sarı = ≥ 55.
+// Bantları elə qururuq ki, yaşıl yalnız ən zəif fonem ≥ 60 olanda mümkün olsun —
+// yəni hər hansı səs açıq zəifdirsə (məs. "s" = 47), nəticə yaşıl OLMASIN.
+export function effectivePronScore(result: Pick<PronunciationAssessmentResult, 'pronScore' | 'words'>): number {
+  const worst = worstPhonemeScore(result)
+  if (worst < 40) return Math.min(result.pronScore, worst + 12) // aydın səhv səs → açıq aşağı bal
+  if (worst < 60) return Math.min(result.pronScore, worst + 20) // zəif səs → ən çoxu sarı (<80)
+  if (worst < 75) return Math.min(result.pronScore, worst + 28) // qənaətbəxş → yaşıl mümkün
   return result.pronScore
 }
 
