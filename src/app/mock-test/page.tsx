@@ -280,6 +280,15 @@ function MockTestContent() {
   const [showAz, setShowAz] = useState(false)
 
   const current = queue[qIdx]
+  // Cavab variantlarının yerləri hər dəfə sual ekrana gələndə yenidən qarışsın —
+  // eyni sual təkrar gələndə (səhv cavabdan sonra) variantlar fərqli sırada olsun.
+  // qIdx-ə bağlı useMemo: hər yeni mövqedə təzə qarışma, amma eyni sual ekranda
+  // olarkən (seç, "Mənası" aç və s. re-render-lərdə) sıra sabit qalsın.
+  const displayedOptions = useMemo(
+    () => (current ? shuffle(current.options) : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [qIdx, current?.id]
+  )
   // Real-time faiz: neçə unikal sual mənimsənildi
   const progressPct = Math.round((mastered.size / TOTAL_UNIQUE) * 100)
 
@@ -428,7 +437,7 @@ function MockTestContent() {
 
         {/* Variantlar */}
         <div className="space-y-3 mb-6">
-          {current.options.map((opt) => {
+          {displayedOptions.map((opt) => {
             const isCorrect = opt === current.correct
             const isSelected = opt === selected
             let cls = 'flex items-center gap-2 w-full p-3.5 rounded-xl border-2 text-left font-medium transition-all '
