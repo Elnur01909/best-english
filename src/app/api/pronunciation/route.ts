@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 // Ortaq Azure açarı ilə aylıq pulsuz qiymətləndirmə limiti (hər user üçün)
 // Hesab: Azure Free F0 = 5 audio-saat/ay (~18 000 san) ÷ ~4 san/cəhd ≈ 4500 cəhd/ay
 //        4500 ÷ 20 ≈ ~225 aktiv istifadəçi/ay rahat sığır (bufer ilə ~150-200 real)
-const MONTHLY_LIMIT = 20
+const MONTHLY_LIMIT = 200
 
 export async function POST(req: Request) {
   try {
