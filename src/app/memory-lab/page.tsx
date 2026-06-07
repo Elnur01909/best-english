@@ -89,6 +89,8 @@ export default function MemoryLabPage() {
   const [visualizeMode, setVisualizeMode] = useState(false)
   // Generasiya mərhələsi
   const [showOutputModal, setShowOutputModal] = useState(false)
+  // Geri qayıdanda əvvəlki sözün SON mərhələsindən başlamaq üçün bayraq
+  const [landOnLastStage, setLandOnLastStage] = useState(false)
 
   const currentWord = words[wIdx] ?? null
 
@@ -113,17 +115,21 @@ export default function MemoryLabPage() {
   }, [router])
 
   // ─── Yeni sözə keçəndə hər şeyi sıfırla ────────────────────────
-  const resetWordState = useCallback(() => {
-    setStage('recall')
-    setStageIdx(0)
-    setRevealed(false)
+  // Adətən ilk mərhələdən (recall) başlanır; "Geri" ilə əvvəlki sözə
+  // qayıdanda isə (landOnLastStage) onun SON mərhələsindən davam edirik.
+  const resetWordState = useCallback((landLast: boolean) => {
+    const targetIdx = landLast ? STAGES.length - 1 : 0
+    setStage(STAGES[targetIdx].key)
+    setStageIdx(targetIdx)
+    setRevealed(landLast)   // əvvəlki söz üçün məna artıq açılmışdı
     setShowAzExample(false)
     setDeepDive(null)
     setDeepDiveError(false)
     setVisualizeMode(false)
+    setLandOnLastStage(false)
   }, [])
 
-  useEffect(() => { resetWordState() }, [wIdx, resetWordState])
+  useEffect(() => { resetWordState(landOnLastStage) }, [wIdx]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ─── "Açar söz + Vizual + Kök" mərhələsinə girəndə AI/keş yüklə ─
   const loadDeepDive = useCallback(async () => {
@@ -150,8 +156,33 @@ export default function MemoryLabPage() {
     const idx = STAGES.findIndex(s => s.key === next)
     setStage(next)
     setStageIdx(idx)
-    if (next === 'encode') loadDeepDive()
   }
+
+  // "Açar söz" mərhələsinə HƏR YOLLA (irəli, geri, sözlər arası) gələndə
+  // material yüklənsin — yalnız bir dəfə, yoxdursa.
+  useEffect(() => {
+    if (stage === 'encode' && currentWord && !deepDive && !deepDiveLoading && !deepDiveError) {
+      loadDeepDive()
+    }
+  }, [stage, currentWord, deepDive, deepDiveLoading, deepDiveError, loadDeepDive])
+
+  // ─── Geri / İrəli naviqasiyası ─────────────────────────────────
+  // Mərhələ daxilində geri qayıt; ilk mərhələdəsənsə — əvvəlki sözə keç
+  // (əvvəlki sözün son mərhələsindən davam et ki, hər şeyi yenidən etmə).
+  function prevStage() {
+    if (stageIdx > 0) {
+      const target = STAGES[stageIdx - 1].key
+      setStage(target)
+      setStageIdx(stageIdx - 1)
+      return
+    }
+    if (wIdx > 0) {
+      setWIdx(wIdx - 1)
+      setLandOnLastStage(true)
+    }
+  }
+
+  const canGoBack = stageIdx > 0 || wIdx > 0
 
   function nextWord() {
     if (wIdx + 1 < words.length) {
@@ -302,13 +333,18 @@ export default function MemoryLabPage() {
                   </div>
                 )}
 
-                <button
-                  onClick={() => goToStage('context')}
-                  disabled={!revealed}
-                  className="btn-secondary w-full"
-                >
-                  Növbəti: Kontekstdə gör →
-                </button>
+                <div className="flex gap-2">
+                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
+                    ← Geri
+                  </button>
+                  <button
+                    onClick={() => goToStage('context')}
+                    disabled={!revealed}
+                    className="btn-primary flex-1"
+                  >
+                    Növbəti: Kontekstdə gör →
+                  </button>
+                </div>
               </div>
             )}
 
@@ -336,9 +372,14 @@ export default function MemoryLabPage() {
                   📖 Sözü tək yox, <strong>cümlə içində</strong> öyrənmək 6 ay sonra 67% daha güclü yaddaş yaradır.
                   🗣️ İndi cümləni ucadan, audio ilə birlikdə təkrarla — neçə kanal işə düşsə, bir o qədər güclü iz qalır.
                 </p>
-                <button onClick={() => goToStage('encode')} className="btn-primary w-full">
-                  Növbəti: Açar söz + Vizual + Kök →
-                </button>
+                <div className="flex gap-2">
+                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
+                    ← Geri
+                  </button>
+                  <button onClick={() => goToStage('encode')} className="btn-primary flex-1">
+                    Növbəti: Açar söz + Vizual + Kök →
+                  </button>
+                </div>
               </div>
             )}
 
@@ -398,13 +439,18 @@ export default function MemoryLabPage() {
                   </div>
                 )}
 
-                <button
-                  onClick={() => goToStage('generate')}
-                  disabled={deepDiveLoading || (!deepDive && !deepDiveError)}
-                  className="btn-primary w-full"
-                >
-                  Növbəti: Öz cümləni yarat →
-                </button>
+                <div className="flex gap-2">
+                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
+                    ← Geri
+                  </button>
+                  <button
+                    onClick={() => goToStage('generate')}
+                    disabled={deepDiveLoading || (!deepDive && !deepDiveError)}
+                    className="btn-primary flex-1"
+                  >
+                    Növbəti: Öz cümləni yarat →
+                  </button>
+                </div>
               </div>
             )}
 
@@ -418,9 +464,19 @@ export default function MemoryLabPage() {
                     sözü ilə öz cümləni yaz, AI müəllim sənə rəy versin.
                   </p>
                 </div>
-                <button onClick={() => setShowOutputModal(true)} className="btn-primary w-full">
-                  Cümləmi yazıram →
-                </button>
+                <div className="flex gap-2">
+                  <button onClick={prevStage} disabled={!canGoBack} className="btn-secondary px-4 flex-shrink-0">
+                    ← Geri
+                  </button>
+                  <button onClick={() => setShowOutputModal(true)} className="btn-primary flex-1">
+                    Cümləmi yazıram →
+                  </button>
+                  {wIdx + 1 < words.length && (
+                    <button onClick={nextWord} className="btn-secondary px-4 flex-shrink-0">
+                      Sözü ötür →
+                    </button>
+                  )}
+                </div>
               </div>
             )}
           </div>
