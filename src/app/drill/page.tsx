@@ -154,10 +154,18 @@ function DrillContent() {
 
       <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
         <div className="mb-6">
-          <p className="text-lg font-semibold text-gray-900 dark:text-white mb-2 leading-relaxed">
-            {current?.question}
-          </p>
-          <AudioPlayer word={current?.question ?? ''} variant="sentence" isSentence={true} />
+          <div className="flex items-start gap-3">
+            <div className="flex-1 min-w-0">
+              <p className="text-lg font-semibold text-gray-900 dark:text-white mb-2 leading-relaxed">
+                {current?.question}
+              </p>
+              <AudioPlayer word={current?.question ?? ''} variant="sentence" isSentence={true} />
+            </div>
+            <ProfessorWidget
+              mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+              message={selected ? feedback : null}
+            />
+          </div>
         </div>
 
         <div className="space-y-3 mb-6">
@@ -205,10 +213,6 @@ function DrillContent() {
           </>
         )}
       </main>
-      <ProfessorWidget
-        mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
-        message={selected ? feedback : null}
-      />
       <AITutorChat level="B2" />
     </div>
   )

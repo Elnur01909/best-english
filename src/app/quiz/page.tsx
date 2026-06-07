@@ -240,10 +240,18 @@ export default function QuizPage() {
       <main className="flex-1 overflow-y-auto px-4 py-6 max-w-2xl mx-auto w-full">
         {current && (
           <div>
-            <p className="text-sm text-gray-400 mb-2 uppercase tracking-wide">{current.topic}</p>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 leading-relaxed">
-              {current.question}
-            </h2>
+            <div className="flex items-start gap-3 mb-6">
+              <div className="flex-1 min-w-0">
+                <p className="text-sm text-gray-400 mb-2 uppercase tracking-wide">{current.topic}</p>
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
+                  {current.question}
+                </h2>
+              </div>
+              <ProfessorWidget
+                mood={showAnswer ? (results[currentIdx] ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+                message={showAnswer ? feedbackMsg : null}
+              />
+            </div>
 
             <div className="space-y-3 mb-6">
               {current.options.map((opt) => {
@@ -315,10 +323,6 @@ export default function QuizPage() {
           </div>
         )}
       </main>
-      <ProfessorWidget
-        mood={showAnswer ? (results[currentIdx] ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
-        message={showAnswer ? feedbackMsg : null}
-      />
       <AITutorChat level={level} />
     </div>
   )

@@ -181,10 +181,18 @@ function OutputContent() {
       <main className="flex-1 px-4 py-6 max-w-2xl mx-auto w-full">
         {current && (
           <>
-            <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">{current.topic}</p>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 leading-relaxed">
-              {current.question}
-            </h2>
+            <div className="flex items-start gap-3 mb-3">
+              <div className="flex-1 min-w-0">
+                <p className="text-xs text-gray-400 uppercase tracking-wide mb-2">{current.topic}</p>
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
+                  {current.question}
+                </h2>
+              </div>
+              <ProfessorWidget
+                mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+                message={selected ? feedback : null}
+              />
+            </div>
             <div className="mb-5">
               <AudioPlayer word={current.question} variant="sentence" isSentence={true} />
             </div>
@@ -258,10 +266,6 @@ function OutputContent() {
           </>
         )}
       </main>
-      <ProfessorWidget
-        mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
-        message={selected ? feedback : null}
-      />
       <AITutorChat level={userLevel} />
     </div>
   )
