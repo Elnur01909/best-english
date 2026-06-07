@@ -56,6 +56,23 @@ export async function getDueCards(userId: string, limit = 20) {
   return { data, error }
 }
 
+// ─── Mnemonika keşi (paylaşılan — hər söz üçün bir dəfə AI ilə generasiya) ──
+export async function getMnemonic(vocabId: number) {
+  const { data, error } = await supabase
+    .from('vocab_mnemonics')
+    .select('mnemonic_az')
+    .eq('vocab_id', vocabId)
+    .maybeSingle()
+  return { data, error }
+}
+
+export async function saveMnemonic(vocabId: number, mnemonicAz: string) {
+  const { data, error } = await supabase
+    .from('vocab_mnemonics')
+    .upsert({ vocab_id: vocabId, mnemonic_az: mnemonicAz }, { onConflict: 'vocab_id' })
+  return { data, error }
+}
+
 export async function upsertVocabProgress(progress: {
   user_id: string
   vocab_id: number

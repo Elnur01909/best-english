@@ -1,7 +1,8 @@
 'use client'
 import { useEffect, useState, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { getUser, getUserProfile, getDueCards, upsertVocabProgress, updateStreak } from '@/lib/supabase'
+import { getUser, getUserProfile, getDueCards, upsertVocabProgress, updateStreak, getMnemonic, saveMnemonic } from '@/lib/supabase'
+import { generateMnemonic } from '@/lib/ai'
 import { calculateNextReview, SRS_DEFAULTS } from '@/lib/srs'
 import { getRandomMessage } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
@@ -40,6 +41,9 @@ function VocabularyContent() {
   const [showOutputModal, setShowOutputModal] = useState(false)
   const [thinking, setThinking] = useState(false)
   const [showExampleAz, setShowExampleAz] = useState(false)
+  const [mnemonic, setMnemonic] = useState<string | null>(null)
+  const [mnemonicLoading, setMnemonicLoading] = useState(false)
+  const [mnemonicError, setMnemonicError] = useState(false)
   // köhnə compat
   const dueCards = queue
   const currentIndex = qIdx
@@ -97,10 +101,34 @@ function VocabularyContent() {
 
   const progressPct = totalUnique > 0 ? Math.round((mastered.size / totalUnique) * 100) : 0
 
-  // Yeni kart gələndə tərcüməni sıfırla
+  // Yeni kart gələndə tərcüməni və mnemonikanı sıfırla
   useEffect(() => {
     setShowExampleAz(false)
+    setMnemonic(null)
+    setMnemonicError(false)
   }, [qIdx])
+
+  async function loadMnemonic() {
+    if (!currentVocab || mnemonic || mnemonicLoading) return
+    setMnemonicLoading(true)
+    setMnemonicError(false)
+    try {
+      // 1) Əvvəlcə paylaşılan keşi yoxla — tapılsa AI çağırışı lazım deyil
+      const { data: cached } = await getMnemonic(currentVocab.id)
+      if (cached?.mnemonic_az) {
+        setMnemonic(cached.mnemonic_az)
+        return
+      }
+      // 2) Keşdə yoxdursa — AI ilə generasiya et və keşlə (bir dəfəlik, paylaşılan)
+      const generated = await generateMnemonic(currentVocab.term, currentVocab.az_translation)
+      setMnemonic(generated)
+      saveMnemonic(currentVocab.id, generated).catch(() => {})
+    } catch {
+      setMnemonicError(true)
+    } finally {
+      setMnemonicLoading(false)
+    }
+  }
 
   // Gec cavab verəndə professor "düşünməyə" başlasın
   useEffect(() => {
@@ -267,8 +295,32 @@ function VocabularyContent() {
               />
               <div className="text-xs text-gray-400 mb-2">{currentVocab.topic}</div>
               {(currentCard?.consecutive_lapses ?? 0) >= 4 && (
-                <div className="inline-block mb-2 px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 text-[11px] font-semibold">
-                  🔥 Çətin söz — {currentCard?.consecutive_lapses}x unuduldu, diqqətlə təkrarla
+                <div className="mb-3">
+                  <div className="inline-block mb-2 px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 text-[11px] font-semibold">
+                    🔥 Çətin söz — {currentCard?.consecutive_lapses}x unuduldu, diqqətlə təkrarla
+                  </div>
+                  {!mnemonic && !mnemonicLoading && !mnemonicError && (
+                    <div>
+                      <button
+                        onClick={loadMnemonic}
+                        className="px-3 py-1.5 rounded-full bg-purple-100 hover:bg-purple-200 dark:bg-purple-950 dark:hover:bg-purple-900 text-purple-700 dark:text-purple-300 text-xs font-semibold transition-colors"
+                      >
+                        🧠 Yadda saxlama ipucu göstər
+                      </button>
+                    </div>
+                  )}
+                  {mnemonicLoading && (
+                    <p className="text-xs text-gray-400">🧠 Mnemonika hazırlanır...</p>
+                  )}
+                  {mnemonicError && (
+                    <p className="text-xs text-red-500">Mnemonika alınmadı — yenidən cəhd et.</p>
+                  )}
+                  {mnemonic && (
+                    <div className="mt-1 p-3 rounded-xl bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 text-left">
+                      <p className="text-xs font-semibold text-purple-700 dark:text-purple-300 mb-1">🧠 Yadda saxlama ipucu:</p>
+                      <p className="text-sm text-purple-800 dark:text-purple-200">{mnemonic}</p>
+                    </div>
+                  )}
                 </div>
               )}
 

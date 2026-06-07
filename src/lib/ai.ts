@@ -170,3 +170,21 @@ export async function tutorChat(
 ): Promise<string> {
   return callGemini(teacherSystem(level), history)
 }
+
+// ─── 4) Mnemonika — "açar söz metodu" ilə yaddaqalan assosiasiya ──
+// Yalnız "leech" (4+ dəfə unudulan) sözlər üçün çağırılır və Supabase-də
+// (vocab_mnemonics) keşlənir ki, hər söz üçün YALNIZ BİR DƏFƏ AI işlədilsin.
+export async function generateMnemonic(term: string, azMeaning: string): Promise<string> {
+  return callGemini(
+    `Sən yaddaş texnikaları üzrə ekspertsən və "açar söz metodu" (keyword mnemonic) ilə İngilis hüquqi terminlərini Azərbaycan dilində danışanlara yadda saxlatmaq üçün qısa, canlı, vizual assosiasiyalar yaradırsan.`,
+    [
+      {
+        role: 'user',
+        text: `İngilis termini: "${term}"
+Mənası: ${azMeaning}
+
+Bu söz üçün Azərbaycan dilində QISA (2-3 cümlə), yaddaqalan, vizual bir mnemonika yarat: sözün səslənişi/yazılışı ilə tanış bir Azərbaycan sözü/anlayışı arasında qəribə, gülməli və ya təəccüblü bir əlaqə qur ki, termini bir daha unutmasın. Yalnız mnemonikanın özünü yaz, başqa heç nə əlavə etmə (giriş, başlıq və s. yox).`,
+      },
+    ]
+  )
+}

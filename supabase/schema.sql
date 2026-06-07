@@ -66,6 +66,15 @@ create table if not exists public.user_lesson_progress (
   unique(user_id, lesson_id)
 );
 
+-- ─── 4b. Mnemonika Keşi (paylaşılan, AI ilə generasiya) ──
+-- Hər söz üçün YALNIZ BİR DƏFƏ generasiya olunur, bütün istifadəçilər
+-- arasında paylaşılır (AI kvotasına qənaət). Bax: migrations/add_vocab_mnemonics.sql
+create table if not exists public.vocab_mnemonics (
+  vocab_id    integer primary key,
+  mnemonic_az text not null,
+  created_at  timestamptz default now()
+);
+
 -- ─── 5. Row Level Security (RLS) ────────────────────────
 -- İstifadəçi yalnız öz məlumatlarını görə bilər
 
