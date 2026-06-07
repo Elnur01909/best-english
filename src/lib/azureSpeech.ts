@@ -1,4 +1,6 @@
-// Azure Pronunciation Assessment — BYOK (istifadəçinin öz Azure Speech açarı)
+import { supabase } from '@/lib/supabase'
+
+// Azure Pronunciation Assessment — Hibrid (ortaq açar + BYOK)
 //
 // NİYƏ AZURE LAZIMDIR?
 // Brauzerin Web Speech API-si əslində SÖZ TANIMA (speech-to-text) mühərrikidir:
@@ -54,6 +56,7 @@ export interface PronunciationAssessmentResult {
   pronScore: number         // ümumi xal (yuxarıdakıların çəkili ortalaması)
   words: WordAssessment[]
   recognizedText: string
+  remaining?: number    // ortaq hovuzda neçə pulsuz cəhd qalıb (yalnız shared route qaytarır)
 }
 
 // ─── Audio → 16kHz mono 16-bit PCM WAV (Azure REST tələbi) ─────
@@ -113,7 +116,7 @@ export interface ActiveRecording {
   stop: () => Promise<Blob>
 }
 
-export async function startRecording(maxMs = 8000): Promise<ActiveRecording> {
+export async function startRecording(maxMs = 5000): Promise<ActiveRecording> {
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
   const recorder = new MediaRecorder(stream)
   const chunks: BlobPart[] = []
@@ -142,47 +145,19 @@ export async function startRecording(maxMs = 8000): Promise<ActiveRecording> {
   }
 }
 
-// ─── Əsas çağırış: səsi Azure-a göndər, fonem-səviyyəli qiymət al ──
-export async function assessPronunciation(
-  referenceText: string,
-  audioBlob: Blob
-): Promise<PronunciationAssessmentResult> {
-  const creds = getAzureCreds()
-  if (!creds) throw new Error('NO_AZURE_KEY')
-
-  const wav = await blobToWav16k(audioBlob)
-
-  const pronAssessmentConfig =
-    typeof window !== 'undefined'
-      ? window.btoa(
-          JSON.stringify({
-            ReferenceText: referenceText,
-            GradingSystem: 'HundredMark',
-            Granularity: 'Phoneme',
-            Dimension: 'Comprehensive',
-            EnableMiscue: true,
-          })
-        )
-      : ''
-
-  const url = `https://${creds.region}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US&format=detailed`
-
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Ocp-Apim-Subscription-Key': creds.key,
-      'Content-Type': 'audio/wav; codecs=audio/pcm; samplerate=16000',
-      'Pronunciation-Assessment': pronAssessmentConfig,
-      Accept: 'application/json',
-    },
-    body: wav,
+function buildPronAssessmentHeader(referenceText: string): string {
+  const json = JSON.stringify({
+    ReferenceText: referenceText,
+    GradingSystem: 'HundredMark',
+    Granularity: 'Phoneme',
+    Dimension: 'Comprehensive',
+    EnableMiscue: true,
   })
+  return typeof window !== 'undefined' ? window.btoa(json) : Buffer.from(json).toString('base64')
+}
 
-  if (res.status === 401 || res.status === 403) throw new Error('BAD_KEY')
-  if (res.status === 404) throw new Error('BAD_REGION')
-  if (!res.ok) throw new Error(`AZURE_ERROR_${res.status}`)
-
-  const data = await res.json()
+// Azure cavabını ortaq formaya çevirir
+function parseAzureResponse(data: any): PronunciationAssessmentResult {
   if (data.RecognitionStatus && data.RecognitionStatus !== 'Success') {
     throw new Error('NO_SPEECH')
   }
@@ -205,4 +180,68 @@ export async function assessPronunciation(
     words,
     recognizedText: best.Display ?? best.Lexical ?? '',
   }
+}
+
+// ─── 1) Birbaşa Azure — istifadəçinin öz açarı ilə (limitsiz, BYOK) ──
+async function callDirect(
+  creds: { key: string; region: string },
+  referenceText: string,
+  wav: ArrayBuffer
+): Promise<PronunciationAssessmentResult> {
+  const url = `https://${creds.region}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US&format=detailed`
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Ocp-Apim-Subscription-Key': creds.key,
+      'Content-Type': 'audio/wav; codecs=audio/pcm; samplerate=16000',
+      'Pronunciation-Assessment': buildPronAssessmentHeader(referenceText),
+      Accept: 'application/json',
+    },
+    body: wav,
+  })
+
+  if (res.status === 401 || res.status === 403) throw new Error('BAD_KEY')
+  if (res.status === 404) throw new Error('BAD_REGION')
+  if (!res.ok) throw new Error(`AZURE_ERROR_${res.status}`)
+
+  return parseAzureResponse(await res.json())
+}
+
+// ─── 2) Ortaq hovuz — server API route (sənin açarın gizli, ayda 20 limit) ──
+async function callShared(
+  referenceText: string,
+  wav: ArrayBuffer
+): Promise<PronunciationAssessmentResult> {
+  const { data: { session } } = await supabase.auth.getSession()
+  const accessToken = session?.access_token
+  if (!accessToken) throw new Error('NO_AUTH')
+
+  const form = new FormData()
+  form.append('audio', new Blob([wav], { type: 'audio/wav' }), 'speech.wav')
+  form.append('referenceText', referenceText)
+  form.append('accessToken', accessToken)
+
+  const res = await fetch('/api/pronunciation', { method: 'POST', body: form })
+
+  if (res.ok) return await res.json()
+
+  const err = await res.json().catch(() => ({}))
+  if (err.error === 'SHARED_LIMIT') throw new Error('SHARED_LIMIT') // aylıq 20 doldu → öz açarını əlavə et
+  if (err.error === 'NO_SHARED_KEY') throw new Error('NO_SHARED_KEY') // server açarı hələ qurulmayıb
+  if (err.error === 'NO_SPEECH') throw new Error('NO_SPEECH')
+  throw new Error('AZURE_ERROR')
+}
+
+// ─── Əsas çağırış (hibrid): səsi Azure-a göndər, fonem-səviyyəli qiymət al ──
+// 1) Öz açarı varsa → birbaşa Azure (limitsiz, öz kvotası)
+// 2) Yoxsa → ortaq hovuz (server, ayda 20 pulsuz cəhd)
+export async function assessPronunciation(
+  referenceText: string,
+  audioBlob: Blob
+): Promise<PronunciationAssessmentResult> {
+  const wav = await blobToWav16k(audioBlob)
+  const creds = getAzureCreds()
+  if (creds) return callDirect(creds, referenceText, wav)
+  return callShared(referenceText, wav)
 }

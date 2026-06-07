@@ -15,7 +15,7 @@ interface SpeakingPracticeProps {
   onResult?: (correct: boolean, heard: string) => void
 }
 
-type Status = 'idle' | 'listening' | 'recording' | 'analyzing' | 'result' | 'error' | 'setup'
+type Status = 'idle' | 'listening' | 'recording' | 'analyzing' | 'result' | 'error' | 'setup' | 'limit'
 
 const TIER_STYLE: Record<MatchTier, { border: string; bg: string; text: string; icon: string; label: string }> = {
   high: {
@@ -50,7 +50,11 @@ function tierFromScore(score0to100: number): MatchTier {
 
 export default function SpeakingPractice({ term, onResult }: SpeakingPracticeProps) {
   const [status, setStatus] = useState<Status>('idle')
-  const [azureMode, setAzureMode] = useState(() => hasAzureCreds())
+  // Defolt: HƏR KƏS üçün dəqiq (Azure) rejim aktivdir — ortaq hovuzdan (ayda 20 pulsuz
+  // cəhd) işləyir, server-side açarla. Öz açarı varsa → birbaşa, limitsiz (BYOK).
+  const [azureMode, setAzureMode] = useState(true)
+  const [hasOwnKey, setHasOwnKey] = useState(() => hasAzureCreds())
+  const [remaining, setRemaining] = useState<number | null>(null)
 
   // Sadə rejim (Web Speech) nəticəsi
   const [heard, setHeard] = useState('')
@@ -145,24 +149,40 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
       recordingRef.current = null
       const result = await assessPronunciation(term, blob)
       setAzureResult(result)
+      if (typeof result.remaining === 'number') setRemaining(result.remaining)
       setStatus('result')
       onResult?.(result.pronScore >= 70, result.recognizedText)
     } catch (err: any) {
       recordingRef.current = null
       const code = err?.message
-      if (code === 'NO_AZURE_KEY') {
+      if (code === 'SHARED_LIMIT') {
+        // Aylıq pulsuz kvota (20 cəhd) bitdi — limitsiz davam üçün öz açarını əlavə etsin
+        setRemaining(0)
+        setStatus('limit')
+        return
+      } else if (code === 'NO_SHARED_KEY') {
+        // Server-side Azure açarı hələ qurulmayıb → sadə rejimə keç
+        setAzureMode(false)
+        setErrorMsg('Dəqiq rejim hazırda mövcud deyil — sadə rejimlə davam edirik. "Danış" düyməsinə yenidən bas.')
+        setStatus('error')
+      } else if (code === 'BAD_KEY') {
+        setErrorMsg('Azure açarın etibarsızdır — açarı yenidən yoxla')
         setStatus('setup')
         return
-      } else if (code === 'BAD_KEY') {
-        setErrorMsg('Azure açarı etibarsızdır — açarı yenidən yoxla (aşağıda dəyişə bilərsən)')
       } else if (code === 'BAD_REGION') {
         setErrorMsg('Region yanlışdır — Azure resursunun regionu ilə eyni olmalıdır')
+        setStatus('setup')
+        return
       } else if (code === 'NO_SPEECH') {
         setErrorMsg('Səs aşkarlanmadı — daha bərkdən və aydın danış, yenidən cəhd et')
+        setStatus('error')
+      } else if (code === 'NO_AUTH') {
+        setErrorMsg('Bu funksiyadan istifadə üçün hesabına daxil ol')
+        setStatus('error')
       } else {
         setErrorMsg('Texniki xəta baş verdi — bir az sonra yenidən cəhd et')
+        setStatus('error')
       }
-      setStatus('error')
     }
   }
 
@@ -187,9 +207,33 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
     return (
       <div className="mt-3 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
         <AzureKeySetup
-          onSaved={() => { setAzureMode(true); reset() }}
-          onSkip={() => { setAzureMode(false); reset() }}
+          onSaved={() => { setHasOwnKey(true); setAzureMode(true); reset() }}
+          onSkip={() => reset()}
         />
+      </div>
+    )
+  }
+
+  if (status === 'limit') {
+    return (
+      <div className="mt-3 space-y-2">
+        <div className="p-3 rounded-xl border-2 border-blue-300 bg-blue-50 dark:bg-blue-950 text-blue-800 dark:text-blue-200 text-sm space-y-1.5">
+          <p className="font-semibold">🎯 Bu ayın pulsuz dəqiq qiymətləndirmə kvotası bitdi (20/20)</p>
+          <p className="text-xs opacity-80">
+            Limitsiz davam etmək üçün öz Azure Speech açarını əlavə edə bilərsən (pulsuz, ~5 dəqiqə) —
+            ya da gələn ay yeni kvota ilə davam et, ya da sadə rejimlə (Web Speech) məşqi davam etdir.
+          </p>
+          <div className="flex items-center gap-3 pt-1">
+            <button onClick={() => setStatus('setup')}
+              className="text-xs font-medium text-blue-700 dark:text-blue-300 underline">
+              Öz açarımı əlavə et (limitsiz) →
+            </button>
+            <button onClick={() => { setAzureMode(false); reset() }}
+              className="text-xs text-gray-500 hover:text-gray-700">
+              Sadə rejimlə davam et
+            </button>
+          </div>
+        </div>
       </div>
     )
   }
@@ -210,14 +254,15 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
           </button>
           {azureMode ? (
             <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
-              🎯 Dəqiq rejim aktivdir (Azure)
+              🎯 Dəqiq rejim (Azure){hasOwnKey ? ' — limitsiz (öz açarın)' : ''}
+              {!hasOwnKey && remaining !== null && ` — bu ay ${remaining}/20 cəhd qalıb`}
             </span>
           ) : (
             <button
-              onClick={() => setStatus('setup')}
+              onClick={() => { setAzureMode(true); reset() }}
               className="text-[11px] text-blue-600 hover:text-blue-800 underline"
             >
-              Daha dəqiq qiymətləndirmə istəyirsən? →
+              🎯 Dəqiq rejimə qayıt →
             </button>
           )}
         </div>
@@ -298,9 +343,9 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
                 className="text-xs text-orange-600 hover:text-orange-800 font-medium">
                 🎤 Yenidən cəhd et
               </button>
-              <button onClick={() => setStatus('setup')}
+              <button onClick={() => { setAzureMode(true); reset() }}
                 className="text-xs text-blue-600 hover:text-blue-800 underline">
-                Daha dəqiq qiymətləndirmə istəyirsən? →
+                🎯 Dəqiq rejimə qayıt →
               </button>
             </div>
           </div>
@@ -365,10 +410,17 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
                 </p>
               )}
             </div>
-            <button onClick={reset}
-              className="text-xs text-orange-600 hover:text-orange-800 font-medium">
-              🎤 Yenidən cəhd et
-            </button>
+            <div className="flex items-center gap-3">
+              <button onClick={reset}
+                className="text-xs text-orange-600 hover:text-orange-800 font-medium">
+                🎤 Yenidən cəhd et
+              </button>
+              {!hasOwnKey && remaining !== null && (
+                <span className="text-[11px] text-gray-400">
+                  Bu ay: {remaining}/20 pulsuz cəhd qalıb
+                </span>
+              )}
+            </div>
           </div>
         )
       })()}
