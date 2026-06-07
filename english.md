@@ -2,6 +2,8 @@
 
 > Bu sənəd layihənin texniki audit/analiz xülasəsidir. Yeni sessiyada işə başlamazdan əvvəl bunu oxumaq layihənin tam mənzərəsini verir.
 
+🔗 Bağlı qeydlər: [[Layihə-Xəritəsi]] · [[CLAUDE]] · [[Qərarlar-Tarixçəsi]] · [[Bug-Jurnalı]]
+
 ## 1. Layihə nədir?
 
 **Best English** — TOLES (hüquqi ingilis dili sertifikatı) hazırlığı və ümumi ingilis dili öyrənməsi üçün interaktiv veb platformadır. Elmi əsaslı (kognitiv psixologiya, SM-2 SRS, Growth Mindset, Affective Filter) bir öyrənmə sistemi qurulub və tam produksiyaya hazır vəziyyətdədir.

@@ -1,5 +1,7 @@
 # Best English — TOLES + İngilis Dili Öyrənmə Platforması
 
+🔗 Bağlı qeydlər: [[Layihə-Xəritəsi]] · [[english]] · [[Qərarlar-Tarixçəsi]] · [[Bug-Jurnalı]]
+
 ## Layihə haqqında
 İnteraktiv veb öyrənmə platforması. İstifadəçilər:
 - İstənilən CEFR səviyyəsindən (A1→C2) başlaya bilər, istənilən vaxt dəyişə bilər
