@@ -19,10 +19,11 @@ export default function ProfessorWidget({
 
   const bubbleText = mood === 'thinking' ? (message ?? 'Hmm... düşünürəm 🤔') : message
 
-  // Köpük əhval-ruhiyyə neytrala dönənədək (yəni növbəti suala keçənədək) görünür qalır
+  // Köpük: ya əhval neytral deyil (sual-cavab səhifələri), ya da neytral olsa belə
+  // bir bələdçi mesajı verilibsə (məs. yaddaş laboratoriyası / dərs səhifələri) görünür
   useEffect(() => {
-    setVisible(mood !== 'neutral')
-  }, [mood, message])
+    setVisible(mood !== 'neutral' || !!bubbleText)
+  }, [mood, message, bubbleText])
 
   return (
     <div className={`flex flex-col items-center gap-1.5 shrink-0 pointer-events-none select-none ${className}`}>

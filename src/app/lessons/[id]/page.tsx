@@ -5,6 +5,7 @@ import { getUser, supabase } from '@/lib/supabase'
 import AudioPlayer from '@/components/AudioPlayer'
 import WritingExercise from '@/components/WritingExercise'
 import AITutorChat from '@/components/AITutorChat'
+import ProfessorWidget from '@/components/ProfessorWidget'
 import lessonsData from '@/data/lessons.json'
 import vocabData from '@/data/vocab.json'
 import type { Lesson, VocabItem } from '@/types'
@@ -70,8 +71,16 @@ export default function LessonPage() {
 
 
       <main className="max-w-2xl mx-auto px-4 py-6 space-y-6">
-        {/* Hədəflər */}
-        <div className="card bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
+        {/* Hədəflər + Professor bələdçi */}
+        <div className="card bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800 relative">
+          {/* Professor: dərs boyu bələdçi mesajı, tamamlananda sevinir */}
+          <ProfessorWidget
+            className="absolute -top-4 right-1 sm:-right-6 z-10"
+            mood={completed ? 'happy' : 'neutral'}
+            message={completed
+              ? 'Əla! Bu dərsi tamamladın 🎉'
+              : 'Sözləri oxu, dinlə və yadda saxla 📚'}
+          />
           <h3 className="font-semibold text-blue-700 dark:text-blue-300 mb-3">🎯 Öyrənmə Hədəfləri</h3>
           <ul className="space-y-2">
             {lesson?.objectives?.map((o, i) => (

@@ -8,6 +8,7 @@ import {
 import { generateDeepEncoding, type DeepEncoding } from '@/lib/ai'
 import AudioPlayer from '@/components/AudioPlayer'
 import OutputModal from '@/components/OutputModal'
+import ProfessorWidget from '@/components/ProfessorWidget'
 import vocabData from '@/data/vocab.json'
 import type { VocabItem } from '@/types'
 
@@ -303,13 +304,27 @@ export default function MemoryLabPage() {
 
         <main className="flex-1 max-w-2xl mx-auto w-full px-4 py-6">
           <div className="card">
-            {/* Söz başlığı — bütün mərhələlərdə görünür */}
-            <div className="flex items-center justify-between mb-4">
-              <div>
+            {/* Söz başlığı — bütün mərhələlərdə görünür + Professor bələdçi */}
+            <div className="flex items-start justify-between gap-3 mb-4">
+              <div className="min-w-0 flex-1">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">{currentWord.term}</h2>
                 <span className="text-xs text-gray-400 italic">{currentWord.pos} · {currentWord.topic}</span>
+                <div className="mt-3"><AudioPlayer word={currentWord.term} variant="card" /></div>
               </div>
-              <AudioPlayer word={currentWord.term} variant="card" />
+              {/* Professor: yada salma mərhələsində "düşünür" (açmadan əvvəl xatırla),
+                  məna açılanda sevinir, digər mərhələlərdə neytral bələdçi mesajı verir */}
+              <ProfessorWidget
+                mood={stage === 'recall' ? (revealed ? 'happy' : 'thinking') : 'neutral'}
+                message={
+                  stage === 'recall'
+                    ? (revealed ? 'Afərin! Cəhd yaddaşı gücləndirir 💪' : 'Açmadan əvvəl özün xatırla 🧠')
+                    : stage === 'context'
+                      ? 'Cümlədə gör və ucadan tələffüz et 🔊'
+                      : stage === 'encode'
+                        ? 'Açar söz və şəkillə yaddaşa "yapışdır" 🔑'
+                        : 'İndi ÖZ cümləni yarat — generasiya effekti ✍️'
+                }
+              />
             </div>
 
             {/* ═══ Mərhələ 1: Aktiv Yada Salma ═══ */}
