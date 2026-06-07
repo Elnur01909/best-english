@@ -1,5 +1,5 @@
 'use client'
-import { useMemo, useState, Suspense } from 'react'
+import { useEffect, useMemo, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { getUser, saveQuizResult } from '@/lib/supabase'
 import { saveSessionScore } from '@/lib/sessionScore'
@@ -47,9 +47,18 @@ function DrillContent() {
   const [selected, setSelected] = useState<string | null>(null)
   const [feedback, setFeedback] = useState<string | null>(null)
   const [done, setDone] = useState(false)
+  const [thinking, setThinking] = useState(false)
 
   const current = queue[qIdx]
   const progressPct = TOTAL > 0 ? Math.round((mastered.size / TOTAL) * 100) : 0
+
+  // Gec cavab verəndə professor "düşünməyə" başlasın
+  useEffect(() => {
+    setThinking(false)
+    if (selected || !current) return
+    const t = setTimeout(() => setThinking(true), 8000)
+    return () => clearTimeout(t)
+  }, [qIdx, selected, current])
 
   async function select(opt: string) {
     if (selected) return
@@ -196,7 +205,10 @@ function DrillContent() {
           </>
         )}
       </main>
-      <ProfessorWidget mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : 'neutral'} message={feedback} />
+      <ProfessorWidget
+        mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+        message={selected ? feedback : null}
+      />
       <AITutorChat level="B2" />
     </div>
   )

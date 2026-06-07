@@ -15,9 +15,15 @@ export default function ProfessorWidget({
 }) {
   const [visible, setVisible] = useState(false)
 
+  const bubbleText = mood === 'thinking' ? (message ?? 'Hmm... düşünürəm 🤔') : message
+
   useEffect(() => {
     if (mood === 'neutral') {
       setVisible(false)
+      return
+    }
+    if (mood === 'thinking') {
+      setVisible(true)
       return
     }
     setVisible(true)
@@ -26,24 +32,22 @@ export default function ProfessorWidget({
   }, [mood, message])
 
   return (
-    <div className="fixed bottom-5 left-5 z-40 flex items-end gap-2 pointer-events-none select-none">
-      <div
-        className={`transition-all duration-300 ${
-          mood === 'neutral' ? 'animate-professor-idle' : ''
-        }`}
-      >
-        <ProfessorAvatar mood={mood} size={58} />
+    <div className="fixed bottom-2 left-2 sm:bottom-4 sm:left-4 z-40 flex items-end gap-2 pointer-events-none select-none">
+      <div className={`transition-all duration-300 ${mood === 'neutral' ? 'animate-professor-idle' : ''}`}>
+        <ProfessorAvatar mood={mood} size={92} />
       </div>
 
-      {visible && message && (
+      {visible && bubbleText && (
         <div
-          className={`mb-2 max-w-[200px] rounded-2xl rounded-bl-sm px-3.5 py-2.5 text-xs font-medium shadow-lg animate-professor-bubble ${
+          className={`mb-3 max-w-[200px] rounded-2xl rounded-bl-sm px-3.5 py-2.5 text-xs font-medium shadow-lg animate-professor-bubble ${
             mood === 'happy'
               ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
+              : mood === 'thinking'
+              ? 'bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300'
               : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
           }`}
         >
-          {message}
+          {bubbleText}
         </div>
       )}
     </div>

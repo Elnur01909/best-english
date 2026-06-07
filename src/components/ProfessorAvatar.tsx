@@ -1,11 +1,12 @@
 'use client'
 
-export type ProfessorMood = 'neutral' | 'happy' | 'annoyed'
+export type ProfessorMood = 'neutral' | 'happy' | 'annoyed' | 'thinking'
 
 const MOOD_ANIMATION: Record<ProfessorMood, string> = {
-  neutral: '',
+  neutral: 'animate-professor-breathe',
   happy: 'animate-professor-laugh',
   annoyed: 'animate-professor-shake',
+  thinking: 'animate-professor-think',
 }
 
 // Bədən proporsiyası: viewBox 100 (en) x 124 (hündürlük) — "mascot" tipli, isti illüstrasiya
@@ -73,6 +74,15 @@ export default function ProfessorAvatar({
             <circle cx="67" cy="84" r="7" fill={`url(#${skinGrad})`} />
             <circle cx="33" cy="88" r="7" fill={`url(#${skinGrad})`} />
           </>
+        ) : mood === 'thinking' ? (
+          <>
+            {/* sağ qol — çənəyə dayanıb düşünür */}
+            <path d="M70 78 Q80 64 64 53" stroke={`url(#${robeGrad})`} strokeWidth="11" fill="none" strokeLinecap="round" />
+            <circle cx="63" cy="53" r="7" fill={`url(#${skinGrad})`} />
+            {/* sol qol aşağı */}
+            <path d="M30 78 Q19 96 28 110" stroke={`url(#${robeGrad})`} strokeWidth="11" fill="none" strokeLinecap="round" />
+            <circle cx="28" cy="110" r="7" fill={`url(#${skinGrad})`} />
+          </>
         ) : (
           <>
             <path d="M30 78 Q19 96 28 110" stroke={`url(#${robeGrad})`} strokeWidth="11" fill="none" strokeLinecap="round" />
@@ -116,6 +126,11 @@ export default function ProfessorAvatar({
             <path d="M33 33 Q40 38 46 36" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
             <path d="M67 33 Q60 38 54 36" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
           </>
+        ) : mood === 'thinking' ? (
+          <>
+            <path d="M33 32 Q39.5 29 46 31" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M54 34 Q60.5 31.5 67 35" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
+          </>
         ) : (
           <>
             <path d="M33 34 Q39.5 30 46 33.5" stroke="#7a7390" strokeWidth="3" fill="none" strokeLinecap="round" />
@@ -139,6 +154,11 @@ export default function ProfessorAvatar({
             <ellipse cx="37" cy="45.5" rx="2.6" ry="3" fill="#4a4360" />
             <ellipse cx="63" cy="45.5" rx="2.6" ry="3" fill="#4a4360" />
           </>
+        ) : mood === 'thinking' ? (
+          <>
+            <ellipse cx="37" cy="44" rx="2.4" ry="2.8" fill="#4a4360" />
+            <ellipse cx="63" cy="44" rx="2.4" ry="2.8" fill="#4a4360" />
+          </>
         ) : (
           <>
             <circle cx="37" cy="45" r="2.6" fill="#4a4360" />
@@ -154,6 +174,8 @@ export default function ProfessorAvatar({
           <path d="M41 62 Q50 70.5 59 62" stroke="#c1395a" strokeWidth="2.8" fill="none" strokeLinecap="round" />
         ) : mood === 'annoyed' ? (
           <path d="M42 65 Q50 59.5 58 65" stroke="#c1395a" strokeWidth="2.8" fill="none" strokeLinecap="round" />
+        ) : mood === 'thinking' ? (
+          <ellipse cx="49" cy="63" rx="3" ry="3.4" fill="#c1395a" opacity="0.75" />
         ) : (
           <path d="M44 62.5 Q50 64.5 56 62.5" stroke="#c1395a" strokeWidth="2.8" fill="none" strokeLinecap="round" />
         )}
@@ -172,6 +194,13 @@ export default function ProfessorAvatar({
       )}
       {mood === 'happy' && (
         <span className="absolute top-1 -right-1 text-base animate-professor-pop select-none">✨</span>
+      )}
+      {mood === 'thinking' && (
+        <span className="absolute -top-1 -right-1 flex items-center gap-0.5 rounded-full bg-white/90 dark:bg-gray-800/90 shadow px-1.5 py-1 select-none">
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-professor-think-dot" style={{ animationDelay: '0ms' }} />
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-professor-think-dot" style={{ animationDelay: '180ms' }} />
+          <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-professor-think-dot" style={{ animationDelay: '360ms' }} />
+        </span>
       )}
     </div>
   )

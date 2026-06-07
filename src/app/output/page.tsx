@@ -51,6 +51,15 @@ function OutputContent() {
   const [aiExplanation, setAiExplanation] = useState<string | null>(null)
   const [aiLoading, setAiLoading] = useState(false)
   const [aiError, setAiError] = useState<string | null>(null)
+  const [thinking, setThinking] = useState(false)
+
+  // Gec cavab verəndə professor "düşünməyə" başlasın
+  useEffect(() => {
+    setThinking(false)
+    if (selected || !queue[qIdx]) return
+    const t = setTimeout(() => setThinking(true), 8000)
+    return () => clearTimeout(t)
+  }, [qIdx, selected, queue])
 
   useEffect(() => {
     getUser().then(u => {
@@ -249,7 +258,10 @@ function OutputContent() {
           </>
         )}
       </main>
-      <ProfessorWidget mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : 'neutral'} message={feedback} />
+      <ProfessorWidget
+        mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+        message={selected ? feedback : null}
+      />
       <AITutorChat level={userLevel} />
     </div>
   )

@@ -31,6 +31,7 @@ export default function QuizPage() {
   const [results, setResults] = useState<boolean[]>([])
   const [startTime, setStartTime] = useState<number>(0)
   const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null)
+  const [thinking, setThinking] = useState(false)
   const [weakPoints, setWeakPoints] = useState<Array<{ topic: string; errorRate: number; recommendation: string }>>([])
   const [aiExplanation, setAiExplanation] = useState<string | null>(null)
   const [aiLoading, setAiLoading] = useState(false)
@@ -46,6 +47,14 @@ export default function QuizPage() {
       setWeakPoints(analysis)
     }
   }, [stage, questions, results])
+
+  // Gec cavab verəndə professor "düşünməyə" başlasın
+  useEffect(() => {
+    setThinking(false)
+    if (showAnswer || !questions[currentIdx]) return
+    const t = setTimeout(() => setThinking(true), 8000)
+    return () => clearTimeout(t)
+  }, [currentIdx, showAnswer, questions])
 
   useEffect(() => {
     getUser().then((u) => {
@@ -306,7 +315,10 @@ export default function QuizPage() {
           </div>
         )}
       </main>
-      <ProfessorWidget mood={showAnswer ? (results[currentIdx] ? 'happy' : 'annoyed') : 'neutral'} message={feedbackMsg} />
+      <ProfessorWidget
+        mood={showAnswer ? (results[currentIdx] ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+        message={showAnswer ? feedbackMsg : null}
+      />
       <AITutorChat level={level} />
     </div>
   )

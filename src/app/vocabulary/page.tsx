@@ -38,6 +38,7 @@ function VocabularyContent() {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null)
   const [outputCount, setOutputCount] = useState(0)
   const [showOutputModal, setShowOutputModal] = useState(false)
+  const [thinking, setThinking] = useState(false)
   // köhnə compat
   const dueCards = queue
   const currentIndex = qIdx
@@ -94,6 +95,14 @@ function VocabularyContent() {
     : null
 
   const progressPct = totalUnique > 0 ? Math.round((mastered.size / totalUnique) * 100) : 0
+
+  // Gec cavab verəndə professor "düşünməyə" başlasın
+  useEffect(() => {
+    setThinking(false)
+    if (feedbackMsg || !currentCard) return
+    const t = setTimeout(() => setThinking(true), 8000)
+    return () => clearTimeout(t)
+  }, [qIdx, cardState, feedbackMsg, currentCard])
 
   async function handleBildim() {
     if (!userId || !currentCard || !currentVocab) return
@@ -303,7 +312,10 @@ function VocabularyContent() {
         )}
       </main>
       </div>
-      <ProfessorWidget mood={feedbackMsg ? (feedbackType === 'success' ? 'happy' : 'annoyed') : 'neutral'} message={feedbackMsg} />
+      <ProfessorWidget
+        mood={feedbackMsg ? (feedbackType === 'success' ? 'happy' : 'annoyed') : thinking ? 'thinking' : 'neutral'}
+        message={feedbackMsg}
+      />
       <AITutorChat level={userLevel} />
     </>
   )
