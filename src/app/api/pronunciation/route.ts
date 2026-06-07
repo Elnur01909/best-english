@@ -82,8 +82,6 @@ export async function POST(req: Request) {
     }
 
     const data = await azureRes.json()
-    // MÜVƏQQƏTİ DEBUG: Azure-un xam cavabını logla (niyə skor 0 gəlir, yoxlamaq üçün)
-    console.log('[pronunciation][azure-raw]', JSON.stringify(data).slice(0, 4000))
     if (data.RecognitionStatus && data.RecognitionStatus !== 'Success') {
       return NextResponse.json({ error: 'NO_SPEECH' }, { status: 422 })
     }
@@ -93,11 +91,14 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'NO_RESULT' }, { status: 502 })
     }
 
-    const pa = best.PronunciationAssessment ?? {}
+    // QEYD: Azure REST cavabında qiymətləndirmə balları AYRI "PronunciationAssessment"
+    // obyektində YOX, birbaşa nəticə/söz obyektinin üzərindədir (SDK formatından fərqli) —
+    // ona görə həm düz, həm iç-içə formatı yoxlayırıq (hər ehtimala qarşı).
+    const pa = best.PronunciationAssessment ?? best
     const words = (best.Words ?? []).map((w: any) => ({
       word: w.Word,
-      accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? 0,
-      errorType: w.PronunciationAssessment?.ErrorType ?? 'None',
+      accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? w.AccuracyScore ?? 0,
+      errorType: w.PronunciationAssessment?.ErrorType ?? w.ErrorType ?? 'None',
     }))
 
     // Sayğacı artır

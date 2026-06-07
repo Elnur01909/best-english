@@ -165,11 +165,13 @@ function parseAzureResponse(data: any): PronunciationAssessmentResult {
   const best = data.NBest?.[0]
   if (!best) throw new Error('NO_RESULT')
 
-  const pa = best.PronunciationAssessment ?? {}
+  // QEYD: Azure REST cavabında qiymətləndirmə balları ayrı "PronunciationAssessment"
+  // obyektində yox, birbaşa nəticə/söz obyektinin üzərindədir — hər iki formatı yoxlayırıq
+  const pa = best.PronunciationAssessment ?? best
   const words: WordAssessment[] = (best.Words ?? []).map((w: any) => ({
     word: w.Word,
-    accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? 0,
-    errorType: w.PronunciationAssessment?.ErrorType ?? 'None',
+    accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? w.AccuracyScore ?? 0,
+    errorType: w.PronunciationAssessment?.ErrorType ?? w.ErrorType ?? 'None',
   }))
 
   return {
