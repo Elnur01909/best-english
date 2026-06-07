@@ -39,6 +39,7 @@ function VocabularyContent() {
   const [outputCount, setOutputCount] = useState(0)
   const [showOutputModal, setShowOutputModal] = useState(false)
   const [thinking, setThinking] = useState(false)
+  const [showExampleAz, setShowExampleAz] = useState(false)
   // köhnə compat
   const dueCards = queue
   const currentIndex = qIdx
@@ -95,6 +96,11 @@ function VocabularyContent() {
     : null
 
   const progressPct = totalUnique > 0 ? Math.round((mastered.size / totalUnique) * 100) : 0
+
+  // Yeni kart gələndə tərcüməni sıfırla
+  useEffect(() => {
+    setShowExampleAz(false)
+  }, [qIdx])
 
   // Gec cavab verəndə professor "düşünməyə" başlasın
   useEffect(() => {
@@ -272,7 +278,20 @@ function VocabularyContent() {
                   <span className="font-medium">AZ:</span> {currentVocab.az_translation}
                 </p>
                 <div className="space-y-1">
-                  <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
+                  <div className="flex items-start gap-2">
+                    <p className="text-sm text-gray-500 italic">"{currentVocab.en_example}"</p>
+                    <button
+                      onClick={() => setShowExampleAz(v => !v)}
+                      className="shrink-0 mt-0.5 h-6 px-2 rounded-full flex items-center gap-1 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-green-100 hover:text-green-700 dark:hover:bg-green-950 dark:hover:text-green-400 transition-colors text-[11px] font-semibold"
+                      title="Azərbaycan dilinə tərcümə et"
+                      aria-label="Azərbaycan dilinə tərcümə et"
+                    >
+                      🌐 AZ
+                    </button>
+                  </div>
+                  {showExampleAz && (
+                    <p className="text-sm text-green-700 dark:text-green-400 italic">"{currentVocab.az_example}"</p>
+                  )}
                   <AudioPlayer word={currentVocab.en_example} variant="sentence" isSentence={true} />
                 </div>
                 <p className="text-xs text-blue-600">🔗 {currentVocab.collocations}</p>
