@@ -19,26 +19,16 @@ export default function ProfessorWidget({
 
   const bubbleText = mood === 'thinking' ? (message ?? 'Hmm... düşünürəm 🤔') : message
 
+  // Köpük əhval-ruhiyyə neytrala dönənədək (yəni növbəti suala keçənədək) görünür qalır
   useEffect(() => {
-    if (mood === 'neutral') {
-      setVisible(false)
-      return
-    }
-    if (mood === 'thinking') {
-      setVisible(true)
-      return
-    }
-    setVisible(true)
-    // Səhv cavabda izah daha uzundur — köpüyü bir az daha çox saxla
-    const t = setTimeout(() => setVisible(false), mood === 'disappointed' ? 7500 : 4200)
-    return () => clearTimeout(t)
+    setVisible(mood !== 'neutral')
   }, [mood, message])
 
   return (
     <div className={`flex flex-col items-center gap-1.5 shrink-0 pointer-events-none select-none ${className}`}>
       {visible && bubbleText && (
         <div
-          className={`max-w-[190px] rounded-2xl px-3 py-2 text-[11px] leading-snug text-center font-medium shadow-lg animate-professor-bubble ${
+          className={`max-w-[220px] rounded-2xl px-3 py-2 text-[11px] leading-snug text-center font-medium shadow-lg animate-professor-bubble ${
             mood === 'happy'
               ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
               : mood === 'thinking'

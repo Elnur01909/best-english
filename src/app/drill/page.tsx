@@ -16,10 +16,6 @@ function shuffle<T>(arr: T[]): T[] {
   return [...arr].sort(() => Math.random() - 0.5)
 }
 
-function truncate(s: string, n: number): string {
-  return s.length > n ? s.slice(0, n).trim() + '…' : s
-}
-
 interface DrillQ {
   id: number
   question: string
@@ -215,7 +211,7 @@ function DrillContent() {
                   ? selected === current?.correct
                     ? feedback
                     : selectedVocab
-                      ? `"${selected}" — ${truncate(selectedVocab.az_translation, 90)}`
+                      ? `"${selected}" — ${selectedVocab.az_translation}`
                       : `Sən "${selected}" sözünü seçdin.`
                   : null
               }

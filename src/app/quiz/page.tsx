@@ -20,10 +20,6 @@ const LEVEL_COLORS = {
 
 type Stage = 'select' | 'quiz' | 'result'
 
-function truncate(s: string, n: number): string {
-  return s.length > n ? s.slice(0, n).trim() + '…' : s
-}
-
 export default function QuizPage() {
   const router = useRouter()
   const [userId, setUserId] = useState<string | null>(null)
@@ -260,7 +256,7 @@ export default function QuizPage() {
                     ? results[currentIdx]
                       ? feedbackMsg
                       : selectedVocab
-                        ? `"${selected}" — ${truncate(selectedVocab.az_translation, 90)}`
+                        ? `"${selected}" — ${selectedVocab.az_translation}`
                         : `Sən "${selected}" sözünü seçdin.`
                     : null
                 }
