@@ -4,6 +4,7 @@ import { evaluatePronunciation, type MatchTier } from '@/lib/pronunciation'
 import {
   startRecording,
   assessPronunciation,
+  effectivePronScore,
   type ActiveRecording,
   type PronunciationAssessmentResult,
 } from '@/lib/azureSpeech'
@@ -326,7 +327,7 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
 
       {/* ─── Azure rejimi nəticəsi (fonem-səviyyəli) ─── */}
       {status === 'result' && azureMode && azureResult && (() => {
-        const overall = Math.round(azureResult.pronScore)
+        const overall = Math.round(effectivePronScore(azureResult))
         const t = tierFromScore(overall)
         const style = TIER_STYLE[t]
         return (
@@ -360,15 +361,22 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
               {azureResult.words.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-1">
                   {azureResult.words.map((w, i) => {
-                    const wTier = tierFromScore(w.accuracyScore)
+                    // Söz balı yüksək görünsə belə, ən pis fonem aşağıdırsa, sözü ona görə qiymətləndiririk —
+                    // beləcə "contract"-ı "jantrak" kimi deyəndə /k/ səsi düzgün qırmızı işarələnir
+                    const flagged = w.worstPhoneme && w.worstPhoneme.accuracyScore < 65
+                    const effScore = flagged ? Math.min(w.accuracyScore, w.worstPhoneme!.accuracyScore + 30) : w.accuracyScore
+                    const wTier = tierFromScore(effScore)
                     const badge =
                       wTier === 'high' ? 'bg-green-200/60 dark:bg-green-800/40 text-green-900 dark:text-green-100'
                       : wTier === 'medium' ? 'bg-amber-200/60 dark:bg-amber-800/40 text-amber-900 dark:text-amber-100'
                       : 'bg-orange-200/60 dark:bg-orange-800/40 text-orange-900 dark:text-orange-100'
                     return (
                       <span key={i} className={`px-1.5 py-0.5 rounded text-[11px] font-mono ${badge}`}>
-                        {w.word} · {Math.round(w.accuracyScore)}
+                        {w.word} · {Math.round(effScore)}
                         {w.errorType !== 'None' && <span className="opacity-70"> ({w.errorType})</span>}
+                        {flagged && (
+                          <span className="opacity-70"> · "{w.worstPhoneme!.phoneme}" səsi zəif ({Math.round(w.worstPhoneme!.accuracyScore)})</span>
+                        )}
                       </span>
                     )
                   })}

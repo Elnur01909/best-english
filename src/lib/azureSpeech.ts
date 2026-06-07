@@ -43,10 +43,19 @@ export function hasAzureCreds(): boolean {
 }
 
 // ─── Tipllər ────────────────────────────────────────────
+export interface PhonemeAssessment {
+  phoneme: string
+  accuracyScore: number
+}
+
 export interface WordAssessment {
   word: string
   accuracyScore: number
   errorType: 'None' | 'Mispronunciation' | 'Omission' | 'Insertion' | string
+  phonemes: PhonemeAssessment[]   // fonem-səviyyəli ballar — Azure-un ümumi söz balı bəzən
+                                  // tək bir səhv fonemi gizlədir (qısa sözlərdə xüsusilə)
+  worstPhoneme: PhonemeAssessment | null  // ən aşağı bal alan fonem — istifadəçiyə dəqiq harada
+                                          // səhv etdiyini göstərmək üçün
 }
 
 export interface PronunciationAssessmentResult {
@@ -57,6 +66,21 @@ export interface PronunciationAssessmentResult {
   words: WordAssessment[]
   recognizedText: string
   remaining?: number    // ortaq hovuzda neçə pulsuz cəhd qalıb (yalnız shared route qaytarır)
+}
+
+// Azure-un söz-səviyyəli ümumi balı bəzən aldadıcıdır: məsələn "contract" sözündə "k" səsini
+// "j" kimi tələffüz etsən belə, söz balı 79-89 çıxa bilər (Azure ümumi balı fonemlərin sadə
+// ortalaması kimi yox, perseptual/uzunluq-çəkili modellə hesablayır). Buna görə real
+// "tələffüz düzgünlüyü"nü ən pis fonemin balı ilə korreksiya edirik.
+export function effectivePronScore(result: Pick<PronunciationAssessmentResult, 'pronScore' | 'words'>): number {
+  let worst = 100
+  for (const w of result.words) {
+    if (w.worstPhoneme && w.worstPhoneme.accuracyScore < worst) worst = w.worstPhoneme.accuracyScore
+  }
+  // Əgər hər hansı fonem çox aşağıdırsa (aydın səhv səs), ümumi balı ona doğru çəkirik
+  if (worst < 40) return Math.min(result.pronScore, worst + 25)
+  if (worst < 65) return Math.min(result.pronScore, worst + 35)
+  return result.pronScore
 }
 
 // ─── Audio → 16kHz mono 16-bit PCM WAV (Azure REST tələbi) ─────
@@ -185,11 +209,22 @@ function parseAzureResponse(data: any): PronunciationAssessmentResult {
   // QEYD: Azure REST cavabında qiymətləndirmə balları ayrı "PronunciationAssessment"
   // obyektində yox, birbaşa nəticə/söz obyektinin üzərindədir — hər iki formatı yoxlayırıq
   const pa = best.PronunciationAssessment ?? best
-  const words: WordAssessment[] = (best.Words ?? []).map((w: any) => ({
-    word: w.Word,
-    accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? w.AccuracyScore ?? 0,
-    errorType: w.PronunciationAssessment?.ErrorType ?? w.ErrorType ?? 'None',
-  }))
+  const words: WordAssessment[] = (best.Words ?? []).map((w: any) => {
+    const phonemes: PhonemeAssessment[] = (w.Phonemes ?? []).map((p: any) => ({
+      phoneme: p.Phoneme,
+      accuracyScore: p.PronunciationAssessment?.AccuracyScore ?? p.AccuracyScore ?? 0,
+    }))
+    const worstPhoneme = phonemes.length
+      ? phonemes.reduce((min: PhonemeAssessment, p: PhonemeAssessment) => (p.accuracyScore < min.accuracyScore ? p : min))
+      : null
+    return {
+      word: w.Word,
+      accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? w.AccuracyScore ?? 0,
+      errorType: w.PronunciationAssessment?.ErrorType ?? w.ErrorType ?? 'None',
+      phonemes,
+      worstPhoneme,
+    }
+  })
 
   return {
     accuracyScore: pa.AccuracyScore ?? 0,

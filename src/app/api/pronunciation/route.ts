@@ -84,8 +84,6 @@ export async function POST(req: Request) {
     }
 
     const data = await azureRes.json()
-    // MÜVƏQQƏTİ DEBUG: niyə pis tələffüz "düzgün" sayılır — Azure-un xam cavabı
-    console.log('[pronunciation][debug]', referenceText, '→', JSON.stringify(data).slice(0, 2500))
     if (data.RecognitionStatus && data.RecognitionStatus !== 'Success') {
       return NextResponse.json({ error: 'NO_SPEECH' }, { status: 422 })
     }
@@ -99,11 +97,24 @@ export async function POST(req: Request) {
     // obyektində YOX, birbaşa nəticə/söz obyektinin üzərindədir (SDK formatından fərqli) —
     // ona görə həm düz, həm iç-içə formatı yoxlayırıq (hər ehtimala qarşı).
     const pa = best.PronunciationAssessment ?? best
-    const words = (best.Words ?? []).map((w: any) => ({
-      word: w.Word,
-      accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? w.AccuracyScore ?? 0,
-      errorType: w.PronunciationAssessment?.ErrorType ?? w.ErrorType ?? 'None',
-    }))
+    // Fonem-səviyyəli ballar da çıxarılır — Azure-un söz-səviyyəli ümumi balı bəzən
+    // tək bir aydın səhv fonemi gizlədir (qısa sözlərdə xüsusilə nəzərə çarpır)
+    const words = (best.Words ?? []).map((w: any) => {
+      const phonemes = (w.Phonemes ?? []).map((p: any) => ({
+        phoneme: p.Phoneme,
+        accuracyScore: p.PronunciationAssessment?.AccuracyScore ?? p.AccuracyScore ?? 0,
+      }))
+      const worstPhoneme = phonemes.length
+        ? phonemes.reduce((min: any, p: any) => (p.accuracyScore < min.accuracyScore ? p : min))
+        : null
+      return {
+        word: w.Word,
+        accuracyScore: w.PronunciationAssessment?.AccuracyScore ?? w.AccuracyScore ?? 0,
+        errorType: w.PronunciationAssessment?.ErrorType ?? w.ErrorType ?? 'None',
+        phonemes,
+        worstPhoneme,
+      }
+    })
 
     // Sayğacı artır
     await admin
