@@ -116,8 +116,17 @@ export interface ActiveRecording {
   stop: () => Promise<Blob>
 }
 
-export async function startRecording(maxMs = 5000): Promise<ActiveRecording> {
-  const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+export async function startRecording(maxMs = 6000): Promise<ActiveRecording> {
+  // Tələffüz qiymətləndirməsi üçün təmiz, işlənməmiş audio daha yaxşıdır:
+  // noise suppression / auto-gain bəzən qısa sözləri "yeyir" → onları söndürürük
+  const stream = await navigator.mediaDevices.getUserMedia({
+    audio: {
+      echoCancellation: false,
+      noiseSuppression: false,
+      autoGainControl: false,
+      channelCount: 1,
+    },
+  })
   const recorder = new MediaRecorder(stream)
   const chunks: BlobPart[] = []
 
@@ -129,15 +138,23 @@ export async function startRecording(maxMs = 5000): Promise<ActiveRecording> {
     stream.getTracks().forEach((t) => t.stop())
     settle?.(new Blob(chunks, { type: recorder.mimeType || 'audio/webm' }))
   }
-  recorder.start()
+  // timeslice ilə start → data dövri olaraq boşaldılır, qısa yazılışlar itmir
+  recorder.start(200)
 
+  const startedAt = Date.now()
   const timer = setTimeout(() => {
     if (recorder.state !== 'inactive') recorder.stop()
   }, maxMs)
 
   return {
-    stop: () => {
+    stop: async () => {
       clearTimeout(timer)
+      // Çox tez "Dayandır" basılıbsa (qısa söz), audio header-dən başqa heç nə
+      // tutulmaya bilər → ən az ~600 ms yazılış zəmanəti veririk
+      const elapsed = Date.now() - startedAt
+      if (elapsed < 600) {
+        await new Promise((r) => setTimeout(r, 600 - elapsed))
+      }
       if (recorder.state !== 'inactive') recorder.stop()
       else settle?.(new Blob(chunks, { type: recorder.mimeType || 'audio/webm' }))
       return done

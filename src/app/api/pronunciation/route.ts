@@ -53,14 +53,19 @@ export async function POST(req: Request) {
 
     // Klient artıq 16kHz/mono/16-bit PCM WAV-a çevirib göndərir
     const wavBuffer = Buffer.from(await audio.arrayBuffer())
+    // MÜVƏQQƏTİ DEBUG: audio ölçüsü (44 = boş WAV header, çox kiçik = nitq tutulmayıb)
+    const approxSec = Math.max(0, (wavBuffer.length - 44) / (16000 * 2))
+    console.log('[pronunciation][audio]', { bytes: wavBuffer.length, approxSec: approxSec.toFixed(2), ref: referenceText })
 
+    // QEYD: Tək söz üçün EnableMiscue=false — true olanda Azure bəzən söz uyğun
+    // gəlsə belə "Omission" kimi qeyd edir; tək söz məşqində bu yanlışdır.
     const pronAssessmentConfig = Buffer.from(
       JSON.stringify({
         ReferenceText: referenceText,
         GradingSystem: 'HundredMark',
         Granularity: 'Phoneme',
         Dimension: 'Comprehensive',
-        EnableMiscue: true,
+        EnableMiscue: false,
       })
     ).toString('base64')
 
@@ -82,6 +87,8 @@ export async function POST(req: Request) {
     }
 
     const data = await azureRes.json()
+    // MÜVƏQQƏTİ DEBUG: Azure-un xam cavabı
+    console.log('[pronunciation][azure-raw]', JSON.stringify(data).slice(0, 3000))
     if (data.RecognitionStatus && data.RecognitionStatus !== 'Success') {
       return NextResponse.json({ error: 'NO_SPEECH' }, { status: 422 })
     }
