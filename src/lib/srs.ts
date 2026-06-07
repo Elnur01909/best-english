@@ -82,6 +82,7 @@ export const SRS_DEFAULTS = {
   interval: 0,
   ease_factor: 2.5,
   repetitions: 0,
+  consecutive_lapses: 0,
   next_review: new Date().toISOString(),
 }
 

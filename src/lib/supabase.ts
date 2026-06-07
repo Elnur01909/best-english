@@ -63,6 +63,7 @@ export async function upsertVocabProgress(progress: {
   interval: number
   ease_factor: number
   repetitions: number
+  consecutive_lapses?: number
 }) {
   const { data, error } = await supabase
     .from('user_vocab_progress')

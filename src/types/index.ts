@@ -44,6 +44,7 @@ export interface VocabProgress {
   interval: number         // günlərlə
   ease_factor: number      // default: 2.5
   repetitions: number
+  consecutive_lapses?: number   // ardıcıl "Unuduram" sayı — 4+ olduqda "leech" sayılır
 }
 
 // ─── SRS Kartı ────────────────────────────────────────

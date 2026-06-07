@@ -119,7 +119,11 @@ function VocabularyContent() {
       user_id: userId, vocab_id: currentCard.vocab_id,
       next_review: result.nextReview.toISOString(),
       interval: result.newInterval, ease_factor: result.newEaseFactor, repetitions: result.newRepetitions,
+      consecutive_lapses: 0,
     })
+
+    // Lokal queue-da da sıfırla — "leech" nişanı dərhal yenilənsin
+    setQueue(prev => prev.map((c, i) => i === qIdx ? { ...c, consecutive_lapses: 0 } : c))
 
     // Mənimsənildi
     const next = new Set(mastered); next.add(currentCard.vocab_id)
@@ -154,18 +158,24 @@ function VocabularyContent() {
 
     // SRS: qısa interval (tezliklə yenidən göstər)
     const result = calculateNextReview(0, currentCard.interval, currentCard.ease_factor, currentCard.repetitions)
+    const newLapses = (currentCard.consecutive_lapses ?? 0) + 1
+    const isLeech = newLapses >= 4
     await upsertVocabProgress({
       user_id: userId, vocab_id: currentCard.vocab_id,
       next_review: result.nextReview.toISOString(),
       interval: result.newInterval, ease_factor: result.newEaseFactor, repetitions: result.newRepetitions,
+      consecutive_lapses: newLapses,
     })
 
-    // Kart növbənin random yerinə (1-4 kart sonraya) əlavə et
+    const updatedCard = { ...currentCard, consecutive_lapses: newLapses }
+
+    // Kart növbəyə geri qayıdır — "leech" sözlər daha tez (1-2 kart sonra), adilər 1-4 aralığında
     setQueue(prev => {
       const rem = prev.slice(qIdx + 1)
-      const at = Math.min(Math.floor(Math.random() * 4) + 1, rem.length)
+      const range = isLeech ? 2 : 4
+      const at = Math.min(Math.floor(Math.random() * range) + 1, rem.length)
       const n = [...rem]
-      n.splice(at, 0, currentCard)
+      n.splice(at, 0, updatedCard)
       return [...prev.slice(0, qIdx + 1), ...n]
     })
 
@@ -256,6 +266,11 @@ function VocabularyContent() {
                 message={feedbackMsg}
               />
               <div className="text-xs text-gray-400 mb-2">{currentVocab.topic}</div>
+              {(currentCard?.consecutive_lapses ?? 0) >= 4 && (
+                <div className="inline-block mb-2 px-2.5 py-1 rounded-full bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 text-[11px] font-semibold">
+                  🔥 Çətin söz — {currentCard?.consecutive_lapses}x unuduldu, diqqətlə təkrarla
+                </div>
+              )}
 
               {/* Söz + audio + danışma */}
               <div className="mb-3 flex justify-center gap-3 flex-wrap">

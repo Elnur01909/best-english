@@ -40,6 +40,7 @@ create table if not exists public.user_vocab_progress (
   interval      integer not null default 0,
   ease_factor   float not null default 2.5,
   repetitions   integer not null default 0,
+  consecutive_lapses integer not null default 0,
   created_at    timestamptz default now(),
   updated_at    timestamptz default now(),
   unique(user_id, vocab_id)
