@@ -84,6 +84,8 @@ export async function POST(req: Request) {
     }
 
     const data = await azureRes.json()
+    // MÜVƏQQƏTİ DEBUG: niyə pis tələffüz "düzgün" sayılır — Azure-un xam cavabı
+    console.log('[pronunciation][debug]', referenceText, '→', JSON.stringify(data).slice(0, 2500))
     if (data.RecognitionStatus && data.RecognitionStatus !== 'Success') {
       return NextResponse.json({ error: 'NO_SPEECH' }, { status: 422 })
     }
