@@ -292,7 +292,7 @@ function VocabularyContent() {
                       ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
                       : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
                   }`}>
-                    <ProfessorAvatar mood={feedbackType === 'success' ? 'happy' : 'annoyed'} size={46} />
+                    <ProfessorAvatar mood={feedbackType === 'success' ? 'happy' : 'annoyed'} size={54} />
                     <span>{feedbackMsg}</span>
                   </div>
                 )}
