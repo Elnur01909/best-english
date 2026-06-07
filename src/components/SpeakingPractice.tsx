@@ -343,21 +343,6 @@ export default function SpeakingPractice({ term, onResult }: SpeakingPracticePro
                 Sistemin eşitdiyi: <strong>"{azureResult.recognizedText || '—'}"</strong> · Hədəf: <strong>"{term}"</strong>
               </p>
 
-              <div className="grid grid-cols-3 gap-2 mt-2 text-[11px]">
-                <div className="bg-white/50 dark:bg-black/20 rounded-lg px-2 py-1 text-center">
-                  <div className="font-semibold">{Math.round(azureResult.accuracyScore)}</div>
-                  <div className="opacity-70">Dəqiqlik</div>
-                </div>
-                <div className="bg-white/50 dark:bg-black/20 rounded-lg px-2 py-1 text-center">
-                  <div className="font-semibold">{Math.round(azureResult.fluencyScore)}</div>
-                  <div className="opacity-70">Axıcılıq</div>
-                </div>
-                <div className="bg-white/50 dark:bg-black/20 rounded-lg px-2 py-1 text-center">
-                  <div className="font-semibold">{Math.round(azureResult.completenessScore)}</div>
-                  <div className="opacity-70">Tamlıq</div>
-                </div>
-              </div>
-
               {azureResult.words.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-1">
                   {azureResult.words.map((w, i) => {
