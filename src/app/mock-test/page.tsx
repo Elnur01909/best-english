@@ -447,11 +447,11 @@ function MockTestContent() {
             else cls += 'border-gray-200 dark:border-gray-700 opacity-40'
             return (
               <div key={opt} className={cls}>
-                {/* Səsləndirmə — variant sözünü/ifadəsini dinlə (seçimi tetiklətmir) */}
-                <AudioPlayer word={opt} variant="icon" />
                 <button onClick={() => select(opt)} className="flex-1 text-left bg-transparent">
                   {selected && isCorrect ? '✓ ' : selected && isSelected ? '✗ ' : ''}{opt}
                 </button>
+                {/* Səsləndirmə — sağda, variant sözünü/ifadəsini dinlə (seçimi tetiklətmir) */}
+                <AudioPlayer word={opt} variant="icon" />
               </div>
             )
           })}
