@@ -468,7 +468,7 @@
       "AFFIDAVIT",
       "ADMINISTRATIVE LAW",
       "BILATERAL CONTRACT",
-      "COUNTERFFER"
+      "COUNTER OFFER"
     ],
     "correct": "AFFIDAVIT",
     "explanation": "AFFIDAVIT: A written statement of fact confirmed by oath or affirmation before a notary or court official.",
@@ -1476,10 +1476,10 @@
       "PERJURY",
       "VOID",
       "TENANT",
-      "COUNTERFFER"
+      "COUNTER OFFER"
     ],
-    "correct": "COUNTERFFER",
-    "explanation": "COUNTERFFER: A response to an offer in which a party rejects the original offer and proposes different terms.",
+    "correct": "COUNTER OFFER",
+    "explanation": "COUNTER OFFER: A response to an offer in which a party rejects the original offer and proposes different terms.",
     "level": "F",
     "topic": "Contract Law"
   },
