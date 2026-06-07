@@ -6,7 +6,7 @@ import { getRandomMessage } from '@/lib/psychology'
 import { analyzeWeakPoints } from '@/lib/analysis'
 import { explainQuizError } from '@/lib/ai'
 import AITutorChat from '@/components/AITutorChat'
-import ProfessorAvatar from '@/components/ProfessorAvatar'
+import ProfessorWidget from '@/components/ProfessorWidget'
 import quizData from '@/data/quizzes.json'
 import type { QuizQuestion, QuizLevel } from '@/types'
 
@@ -262,15 +262,14 @@ export default function QuizPage() {
 
             {showAnswer && (
               <>
-                {/* Affective Filter Feedback — Professor Personajı */}
+                {/* Affective Filter Feedback */}
                 {feedbackMsg && (
-                  <div className={`mb-4 p-4 rounded-xl flex items-center gap-3 font-medium text-sm ${
+                  <div className={`mb-4 p-4 rounded-xl text-center font-medium text-sm ${
                     results[currentIdx]
                       ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
                       : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
                   }`}>
-                    <ProfessorAvatar mood={results[currentIdx] ? 'happy' : 'annoyed'} size={54} />
-                    <span>{feedbackMsg}</span>
+                    {feedbackMsg}
                   </div>
                 )}
 
@@ -307,6 +306,7 @@ export default function QuizPage() {
           </div>
         )}
       </main>
+      <ProfessorWidget mood={showAnswer ? (results[currentIdx] ? 'happy' : 'annoyed') : 'neutral'} message={feedbackMsg} />
       <AITutorChat level={level} />
     </div>
   )

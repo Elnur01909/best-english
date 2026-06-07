@@ -7,7 +7,7 @@ import { getRandomMessage } from '@/lib/psychology'
 import { explainQuizError } from '@/lib/ai'
 import AITutorChat from '@/components/AITutorChat'
 import AudioPlayer from '@/components/AudioPlayer'
-import ProfessorAvatar from '@/components/ProfessorAvatar'
+import ProfessorWidget from '@/components/ProfessorWidget'
 import { saveSessionScore } from '@/lib/sessionScore'
 import quizData from '@/data/quizzes.json'
 import vocabData from '@/data/vocab.json'
@@ -200,11 +200,10 @@ function OutputContent() {
             {selected && (
               <>
                 {feedback && (
-                  <div className={`mb-4 p-3 rounded-xl text-sm font-medium flex items-center gap-3 ${
+                  <div className={`mb-4 p-3 rounded-xl text-sm font-medium text-center ${
                     selected === current.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                   }`}>
-                    <ProfessorAvatar mood={selected === current.correct ? 'happy' : 'annoyed'} size={48} />
-                    <span>{selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}</span>
+                    {selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}
                   </div>
                 )}
                 {(() => {
@@ -250,6 +249,7 @@ function OutputContent() {
           </>
         )}
       </main>
+      <ProfessorWidget mood={selected ? (selected === current?.correct ? 'happy' : 'annoyed') : 'neutral'} message={feedback} />
       <AITutorChat level={userLevel} />
     </div>
   )
