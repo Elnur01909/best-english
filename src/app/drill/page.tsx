@@ -205,7 +205,13 @@ function DrillContent() {
             </div>
             <ProfessorWidget
               mood={selected ? (selected === current?.correct ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
-              message={selected ? feedback : null}
+              message={
+                selected
+                  ? selected === current?.correct
+                    ? feedback
+                    : `Sən "${selected}" seçdin, amma düzgün cavab "${current?.correct}"dir — səbəbini aşağıda izah etdim 👇`
+                  : null
+              }
             />
           </div>
         </div>

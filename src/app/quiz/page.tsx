@@ -249,7 +249,13 @@ export default function QuizPage() {
               </div>
               <ProfessorWidget
                 mood={showAnswer ? (results[currentIdx] ? 'happy' : 'disappointed') : thinking ? 'thinking' : 'neutral'}
-                message={showAnswer ? feedbackMsg : null}
+                message={
+                  showAnswer
+                    ? results[currentIdx]
+                      ? feedbackMsg
+                      : `Sən "${selected}" seçdin, amma düzgün cavab "${current?.correct}"dir — səbəbini aşağıda izah etdim 👇`
+                    : null
+                }
               />
             </div>
 
