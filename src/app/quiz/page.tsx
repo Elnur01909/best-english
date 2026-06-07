@@ -6,6 +6,7 @@ import { getRandomMessage } from '@/lib/psychology'
 import { analyzeWeakPoints } from '@/lib/analysis'
 import { explainQuizError } from '@/lib/ai'
 import AITutorChat from '@/components/AITutorChat'
+import ProfessorAvatar from '@/components/ProfessorAvatar'
 import quizData from '@/data/quizzes.json'
 import type { QuizQuestion, QuizLevel } from '@/types'
 
@@ -261,14 +262,15 @@ export default function QuizPage() {
 
             {showAnswer && (
               <>
-                {/* Affective Filter Feedback */}
+                {/* Affective Filter Feedback — Professor Personajı */}
                 {feedbackMsg && (
-                  <div className={`mb-4 p-4 rounded-xl text-center font-medium text-sm animate-bounce ${
+                  <div className={`mb-4 p-4 rounded-xl flex items-center gap-3 font-medium text-sm ${
                     results[currentIdx]
                       ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
                       : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
                   }`}>
-                    {feedbackMsg}
+                    <ProfessorAvatar mood={results[currentIdx] ? 'happy' : 'annoyed'} size={56} />
+                    <span>{feedbackMsg}</span>
                   </div>
                 )}
 

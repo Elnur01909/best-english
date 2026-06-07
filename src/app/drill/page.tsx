@@ -6,6 +6,7 @@ import { saveSessionScore } from '@/lib/sessionScore'
 import { getRandomMessage } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
 import AITutorChat from '@/components/AITutorChat'
+import ProfessorAvatar from '@/components/ProfessorAvatar'
 import quizzesData from '@/data/quizzes.json'
 import vocabData from '@/data/vocab.json'
 import type { VocabItem } from '@/types'
@@ -170,10 +171,11 @@ function DrillContent() {
         {selected && (
           <>
             {feedback && (
-              <div className={`mb-4 p-3 rounded-xl text-sm text-center font-medium ${
+              <div className={`mb-4 p-3 rounded-xl text-sm font-medium flex items-center gap-3 ${
                 selected === current.correct ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
               }`}>
-                {selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}
+                <ProfessorAvatar mood={selected === current.correct ? 'happy' : 'annoyed'} size={48} />
+                <span>{selected === current.correct ? '✓ Düzgün!' : '✗ Yanlış — yenidən qarşına çıxacaq 🔄'}</span>
               </div>
             )}
             <div className="bg-orange-50 dark:bg-orange-950 border border-orange-200 dark:border-orange-800 rounded-xl p-4 mb-4 space-y-2">

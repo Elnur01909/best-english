@@ -6,6 +6,7 @@ import { calculateNextReview, SRS_DEFAULTS } from '@/lib/srs'
 import { getRandomMessage } from '@/lib/psychology'
 import AudioPlayer from '@/components/AudioPlayer'
 import OutputModal from '@/components/OutputModal'
+import ProfessorAvatar from '@/components/ProfessorAvatar'
 import AITutorChat from '@/components/AITutorChat'
 import { saveSessionScore } from '@/lib/sessionScore'
 import { getDailyPlan } from '@/lib/curriculum'
@@ -284,14 +285,15 @@ function VocabularyContent() {
                   </button>
                 </div>
 
-                {/* Affective Filter Feedback */}
+                {/* Affective Filter Feedback — Professor Personajı */}
                 {feedbackMsg && (
-                  <div className={`mt-4 p-4 rounded-xl text-center font-medium text-sm animate-bounce ${
+                  <div className={`mt-4 p-4 rounded-xl flex items-center gap-3 font-medium text-sm ${
                     feedbackType === 'success'
                       ? 'bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300'
                       : 'bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300'
                   }`}>
-                    {feedbackMsg}
+                    <ProfessorAvatar mood={feedbackType === 'success' ? 'happy' : 'annoyed'} size={56} />
+                    <span>{feedbackMsg}</span>
                   </div>
                 )}
               </>
