@@ -7,6 +7,7 @@ Bu qeyd "Best English" layihəsinin Obsidian-dakı **mərkəzi qovşağıdır** 
 - [[english]] — Tam texniki analiz (modullar, son düzəlişlər, arxitektura)
 
 ## 📚 Mövzu üzrə qeydlər
+- [[Dostlar-və-Yarış-Funksiyası]] — Dostluq sistemi + canlı TOLES Mini-Test yarışı (tam izah)
 - [[Qərarlar-Tarixçəsi]] — niyə belə etdik? (tərcümə, skoring, UI qərarları)
 - [[Bug-Jurnalı]] — tapılan və düzəldilən problemlər
 - [[Funksional-Modullar]] — hər modulun (SRS, Pronunciation, Memory Lab və s.) ayrı izahı

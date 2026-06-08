@@ -16,6 +16,7 @@ Bağlı: [[Layihə-Xəritəsi]] · [[Qərarlar-Tarixçəsi]] · [[english]]
 | ProfessorWidget bəzi sual səhifələrində yox idi | Komponent tədricən əlavə edilirdi, hamısına paralel köçürülməmişdi | Bütün Q&A səhifələri (mock-test, reading×3, placement) üçün audit + inteqrasiya |
 | OutputModal-da "Təqdim" düyməsi nə üçün olduğu aydın deyildi | Düymə həqiqətən heç nə etmirdi — sadəcə `onComplete()` çağırırdı, Skip ilə eynilik təşkil edirdi | Düymə silindi, yalnız "🎓 AI yoxla" (real qiymətləndirmə) və "Skip" qaldı, "Davam →" yalnız AI yoxlamasından sonra görünür |
 | Memory Lab-da "İkili Kodlaşdırma — Vizual Səhnə" çaşqınlıq yaradırdı | Funksiya konseptual cəhətdən aydın izah olunmamışdı, istifadəçiyə artıq yük kimi görünürdü | UI bloku, AI generasiya promptu (`generateDeepEncoding`), DB sahəsi (`visual_az`) tam silindi |
+| Dostluq sorğusu göndərilirdi, amma qarşı tərəfdə "Sorğular" tabında görünmürdü | `friend_requests`/`battles`/`battle_answers` sütunları `auth.users(id)`-ə FK bağlı idi, amma sorğular PostgREST embedding (`sender:sender_id(email,...)`) ilə `user_profiles`-dan məlumat çəkirdi — FK əlaqəsi olmadığı üçün sorğu səssizcə boş qayıdırdı | `fix_friend_battle_user_profiles_fk.sql` — bütün uyğun FK-lər `public.user_profiles(id)`-ə yönəldildi → [[Dostlar-və-Yarış-Funksiyası]] |
 
 ## ⏳ Açıq qalan (hələ düzəldilməyib)
 - **Reading collocation reshuffle bug** (`task_3f44833e`): seçim variantları hər render-də (o cümlədən cavab seçiləndə) yenidən qarışır, vizual "tullanma" yaradır → `useMemo`-ya keçirilməli (ayrıca background sessiyada işlənir)
