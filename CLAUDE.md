@@ -7,9 +7,10 @@
 - İstənilən CEFR səviyyəsindən (A1→C2) başlaya bilər, istənilən vaxt dəyişə bilər
 - TOLES sertifikat hazırlığı (Foundation / Higher / Advanced)
 - SRS lüğət sistemi (SM-2 alqoritmi — Ebbinghaus unudulma əyrisinə əsasən)
-- Testlər (Foundation 50q + Higher 50q + Advanced 50q)
-- 10 mini-dərs (qrammatika + oxuma + məşqlər)
-- 5 Case Study + 5 yazı məşqi
+- Testlər (~1600 sual, 9 format: tərif, boşluq, kollokasiya, sözönü, təsnifat, T/F, cümlə, uyğunlaşdırma, kollokasiya-uyğun.)
+- 27 mini-dərs (qrammatika + oxuma + məşqlər)
+- 14 Case Study + yazı məşqləri
+- Dostlar & Yarış: email ilə dost tap, canlı TOLES Mini-Test battle
 - Şəxsi hesab, irəliləyiş statistikaları, streak sistemi
 
 ## Tech Stack
@@ -36,10 +37,10 @@ src/
     srs.ts               ← SM-2 SRS alqoritmi
     utils.ts             ← Köməkçi funksiyalar
   data/
-    vocab.json           ← 150 hüquqi termin
-    quizzes.json         ← 150 test sualı
-    lessons.json         ← 10 dərs
-    cases.json           ← 5 case study
+    vocab.json           ← 378 hüquqi termin (təkrarsız)
+    quizzes.json         ← ~1598 test sualı (9 format)
+    lessons.json         ← 27 dərs
+    cases.json           ← 14 case study
   types/
     index.ts             ← TypeScript tiplər
 supabase/
@@ -49,11 +50,15 @@ supabase/
 ## Verilənlər Bazası Cədvəlləri
 ```
 auth.users               ← Supabase-in özü idarə edir
-user_profiles            ← id, level, toles_level, streak, total_points, last_active
+user_profiles            ← id, email, display_name, level, toles_level, streak, total_points, last_active
 user_vocab_progress      ← user_id, vocab_id, next_review, interval, ease_factor, repetitions
 user_quiz_results        ← user_id, quiz_id, correct, time_taken, answered_at
 user_lesson_progress     ← user_id, lesson_id, completed, completed_at
+friend_requests          ← sender_id, receiver_id, status (FK → user_profiles)
+battles                  ← creator_id, opponent_id, status, question_ids[], toles_level
+battle_answers           ← battle_id, user_id, q_index, correct, time_taken_ms
 ```
+> Qeyd: friend_requests / battles / battle_answers FK-ləri `public.user_profiles(id)`-ə bağlıdır (PostgREST embedding üçün). Realtime: battles, battle_answers, friend_requests `supabase_realtime` publikasiyasındadır.
 
 ## SRS Alqoritmi (src/lib/srs.ts)
 SM-2 alqoritmi:
@@ -82,15 +87,17 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 - [x] TypeScript tiplər yazıldı
 - [x] SRS alqoritmi yazıldı
 - [x] Supabase client yazıldı
-- [x] vocab.json (150 termin) yazıldı
-- [x] quizzes.json (150 sual) yazıldı
-- [x] lessons.json (10 dərs) yazıldı
+- [x] vocab.json (378 termin, təkrarsız)
+- [x] quizzes.json (~1598 sual, 9 format)
+- [x] lessons.json (27 dərs)
+- [x] cases.json (14 case study)
 - [x] Auth səhifələri (login/register + change-level)
 - [x] Dashboard (streak, stats, navigasiya)
 - [x] Vocabulary (SRS) modulu
-- [x] Quiz modulu
+- [x] Quiz modulu (9 format)
 - [x] Lessons modulu
-- [ ] Deploy (Vercel)
+- [x] Dostlar & Yarış (canlı TOLES battle + qlobal bildiriş)
+- [x] Deploy (Vercel) — canlı: best-english-lovat.vercel.app
 
 ## Növbəti Sessiya Üçün
 Hər sessiyada bu faylı oxu, sonra "Mövcud Vəziyyət"-i yenilə.
@@ -102,8 +109,9 @@ Claude Code sessiyasını belə başla: "CLAUDE.md-ə bax. Bu session: [tapşır
 - ✅ Onboarding (Identity Shift + Growth Mindset)
 - ✅ Dashboard (stats, streak, navigasiya)
 - ✅ Vocabulary (SRS SM-2 + Affective Filter + Audio)
-- ✅ Quiz (150 sual, 3 səviyyə + Growth Mindset)
-- ✅ Lessons (10 dərs + Audio + Yazma məşqi)
+- ✅ Quiz (~1598 sual, 9 format, 3 səviyyə + Growth Mindset)
+- ✅ Lessons (27 dərs + Audio + Yazma məşqi)
+- ✅ Dostlar & Yarış (canlı battle, 30s timer, qlobal bildiriş)
 - ✅ Components: AudioPlayer, WritingExercise, OutputModal
 
 **Psixologiya (Hissə 1) — ✅ TAMAMLANMIŞ:**
@@ -131,11 +139,11 @@ Claude Code sessiyasını belə başla: "CLAUDE.md-ə bax. Bu session: [tapşır
 - ✅ TOLES Kollokasiyaları: 12+ hüquqi çoxlu-sözlü ifadə
 - ✅ Dərs Sonunda Kollokasiya Təkrarı
 
-**Data:**
-- ✅ vocab.json: 150 hüquqi termin
-- ✅ quizzes.json: 150 sual
-- ✅ lessons.json: 10 dərs + immersion links
-- ✅ cases.json: 5 case study
+**Data:** (TOLES coursebook Unit 1A+1B + master bazalar inteqrasiya olunub)
+- ✅ vocab.json: 378 hüquqi termin (təkrarsız)
+- ✅ quizzes.json: ~1598 sual (9 format: tərif/boşluq/kollokasiya/sözönü/təsnifat/T-F/cümlə/uyğunlaşdırma/kollokasiya-uyğun.)
+- ✅ lessons.json: 27 dərs + immersion links
+- ✅ cases.json: 14 case study
 
 **Günlük Proqram (Hissə 5) — ✅ TAMAMLANMIŞ:**
 - ✅ DailySchedule: Səhər/Gündüz/Axşam/Gecə 4-sessiya
