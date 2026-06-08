@@ -61,6 +61,9 @@ export interface BattleAnswer {
 }
 
 // ─── Lüğət ────────────────────────────────────────────
+// Öyrənmə treki: ümumi ingilis nərdivanı vs hüquqi ixtisas
+export type LearningTrack = 'general' | 'legal'
+
 export type VocabTopic =
   | 'Contract Law'
   | 'Company Law'
@@ -70,6 +73,17 @@ export type VocabTopic =
   | 'Property Law'
   | 'Legal Writing & Procedure'
   | 'Commercial Contracts'
+  // ── Ümumi ingilis mövzuları (general track) ──
+  | 'Everyday Life'
+  | 'People & Family'
+  | 'Food & Drink'
+  | 'Work & School'
+  | 'Travel & Places'
+  | 'Time & Numbers'
+  | 'Verbs & Actions'
+  | 'Describing Words'
+  | 'Health & Body'
+  | 'Nature & Weather'
 
 export interface VocabItem {
   id: number
@@ -80,7 +94,9 @@ export interface VocabItem {
   en_example: string       // Nümunə cümlə (EN)
   az_example: string       // Nümunə cümlə (AZ)
   collocations: string     // Kollokasiyalar
-  level: CEFRLevel | 'F' | 'H' | 'A'   // TOLES level shorthand
+  level: CEFRLevel | 'F' | 'H' | 'A'   // TOLES level shorthand (köhnə)
+  cefr?: CEFRLevel         // CEFR səviyyəsi (A1–C2) — nərdivan üçün
+  track?: LearningTrack    // 'general' (ümumi ingilis) | 'legal' (hüquq)
   topic: VocabTopic
 }
 
@@ -122,6 +138,8 @@ export interface QuizQuestion {
   correct: string
   explanation: string
   level: string
+  cefr?: CEFRLevel         // CEFR səviyyəsi (A1–C2)
+  track?: LearningTrack    // 'general' | 'legal'
   topic: string
   type?: 'definition' | 'gap-fill' | 'collocation' | 'collocation-match' | 'preposition' | 'classification' | 'true-false' | 'sentence' | 'matching'  // sual formatı
 }

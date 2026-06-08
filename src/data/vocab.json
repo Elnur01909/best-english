@@ -9,7 +9,9 @@
     "az_example": "Tədarükçü 30 gün ərzində 500 vahidi sabit qiymətə çatdırmaq barədə təklif irəli sürdü.",
     "collocations": "make / accept / withdraw / reject an offer",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 2,
@@ -21,7 +23,9 @@
     "az_example": "Onun əks-təklifə verdiyi qəbul 14 mart tarixli e-poçt vasitəsilə bildirilib.",
     "collocations": "unconditional acceptance; communicate / signify acceptance",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 3,
@@ -33,7 +37,9 @@
     "az_example": "Etibarlı əvəz olmadan saziş müqavilə kimi icra oluna bilməz.",
     "collocations": "provide / constitute / sufficient consideration",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 4,
@@ -45,7 +51,9 @@
     "az_example": "Cavabdeh malları çatdırmadığı üçün müqaviləni pozduğuna görə məsuliyyətli hesab edildi.",
     "collocations": "material / fundamental breach; sue for breach",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 5,
@@ -57,7 +65,9 @@
     "az_example": "Cərrah xəstəni məlum risklər barəsində xəbərdar etmədiyinə görə səhlənkarlıqda məsuliyyətli hesab edildi.",
     "collocations": "professional negligence; duty of care; standard of care",
     "level": "F",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 6,
@@ -69,7 +79,9 @@
     "az_example": "Müddəi Ali Məhkəməyə 2 milyon funt sterlinq kompensasiya tələb edən iddia verdi.",
     "collocations": "file / bring a claim; the claimant argues / alleges",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 7,
@@ -81,7 +93,9 @@
     "az_example": "Cavabdeh bütün iddiaları rədd etdi və ətraflı müdafiə mövqeyi təqdim etdi.",
     "collocations": "the defendant denies / admits; judgment against the defendant",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 8,
@@ -93,7 +107,9 @@
     "az_example": "Məhkəmə müddəiyə müqavilənin pozulmasına görə 50,000 funt sterlinq kompensasiya verdi.",
     "collocations": "award / claim / recover damages; general / special damages",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 9,
@@ -105,7 +121,9 @@
     "az_example": "Məhkəmə sənədlərin məhv edilməsinin qarşısını almaq üçün təcili qadağa verdi.",
     "collocations": "grant / obtain / lift an injunction; interim / permanent injunction",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 10,
@@ -117,7 +135,9 @@
     "az_example": "Direktor özünə şəxsən faydalı olan müqaviləni təsdiq edərək etibarlılıq borcunu pozdu.",
     "collocations": "owe / breach a fiduciary duty; fiduciary relationship",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 11,
@@ -129,7 +149,9 @@
     "az_example": "Satıcı binanın konstruktiv cəhətdən etibarlı olduğunu yalan olaraq bildirdiyinə görə yanıltmada məsuliyyətli hesab edildi.",
     "collocations": "fraudulent / innocent misrepresentation; induce by misrepresentation",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 12,
@@ -141,7 +163,9 @@
     "az_example": "Müddəi hədə-qorxuya məruz qalaraq müqaviləni imzaladığı üçün müqavilə ləğv edilə bilən hesab edildi.",
     "collocations": "act / contract under duress; void / voidable for duress",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 13,
@@ -153,7 +177,9 @@
     "az_example": "Vəsiyyətnamə ləğv edildi, çünki mərhumun onu qulluqçusunun haqsız təsiri altında imzaladığı sübut edildi.",
     "collocations": "exercise / subject to undue influence; rebut the presumption of undue influence",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 14,
@@ -165,7 +191,9 @@
     "az_example": "Müqavilə əsas şərtlərdən məhrum olduğuna görə əvvəldən etibarsız (batil) sayıldı.",
     "collocations": "void ab initio; declare / render void",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 15,
@@ -177,7 +205,9 @@
     "az_example": "Digər tərəf yanıltma etdiyindən müqavilə zərər çəkən tərəfin istəyi ilə ləğv edilə bilər.",
     "collocations": "voidable contract / transaction; render / make voidable",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 16,
@@ -189,7 +219,9 @@
     "az_example": "Hər hansı dəyişiklik edilməzdən əvvəl müqavilənin bütün tərəflərinin razılığı tələb olunur.",
     "collocations": "contracting / third party; party to a contract; aggrieved party",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 17,
@@ -201,7 +233,9 @@
     "az_example": "Podratçı qüsurlu materiallardan irəli gələn hər hansı iddialara qarşı mülkiyyət sahibini zərərsizləşdirəcəyinə zəmanət verdi.",
     "collocations": "provide / seek indemnity; indemnify against; letter of indemnity",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 18,
@@ -213,7 +247,9 @@
     "az_example": "İstehsalçı bir il müddətinə bütün qüsurları əhatə edən məhdud zəmanət verdi.",
     "collocations": "express / implied warranty; breach of warranty; warranty period",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 19,
@@ -225,7 +261,9 @@
     "az_example": "Satıcı alıcı 30 gün ərzində ödəniş etmədikdən sonra müqaviləyə xitam vermə hüququndan istifadə etdi.",
     "collocations": "contract termination; terminate a contract; termination clause; notice of termination",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 20,
@@ -237,7 +275,9 @@
     "az_example": "Kreditor borcun yığılması hüququnu üçüncü tərəf borc yığım agentliyinə güzəşt etdi.",
     "collocations": "assign to; assignment of rights / obligations; express / implied assignment",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 21,
@@ -249,7 +289,9 @@
     "az_example": "Qəzet şirkət haqqında yalan iddialar dərc etdiyinə görə iftiraya görə məhkəməyə verildi.",
     "collocations": "slander / libel; publish defamation; defamatory statement / remarks",
     "level": "F",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 22,
@@ -261,7 +303,9 @@
     "az_example": "Nəşriyyat müddəi haqqında yalan və zərərli ifadələr nəşr etdiyinə görə yazılı böhtana görə məsuliyyətli hesab edildi.",
     "collocations": "commit libel; action for libel; libel suit; published libel",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 23,
@@ -273,7 +317,9 @@
     "az_example": "O, keçmiş həmkarının iş konfransında onun haqqında zərərli şərhlər söylədiyi üçün şifahi böhtana görə məhkəmə qaldırdı.",
     "collocations": "commit slander; action for slander; slander per se",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 24,
@@ -285,7 +331,9 @@
     "az_example": "Mühafizəçi müştərini gecə boyu mağazada kilidlədikdə hüquqsuz həbs iddiaçısına çevrildi.",
     "collocations": "unlawful confinement; false imprisonment claim; liable for false imprisonment",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 25,
@@ -297,7 +345,9 @@
     "az_example": "Müddəi cavabdehin yumruq atmaq üçün əlini qaldırmasından sonra hücum iddiası qaldırdı — fiziki təmas olmasa da.",
     "collocations": "commit assault; threaten assault; simple assault; aggravated assault",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 26,
@@ -309,7 +359,9 @@
     "az_example": "Cavabdeh müddəini qəsdən divara itələdiyinə görə fiziki hücum törətməkdə məsuliyyətli hesab edildi.",
     "collocations": "commit battery; assault and battery; liable for battery; harmful contact",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 27,
@@ -321,7 +373,9 @@
     "az_example": "Torpaq sahibi inkişafçı mülkü yoxlamaq üçün torpağına icazəsiz daxil olduqda hüquqsuz giriş iddiası qaldırdı.",
     "collocations": "trespass on land; private property; trespass notice; liable for trespass",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 28,
@@ -333,7 +387,9 @@
     "az_example": "Kirayəçi mənzildə yaşadığı müddətdə səhlənkarlıq nəticəsində dəyən mülkiyyət zərərini ödəmək məcburiyyətinə qaldı.",
     "collocations": "cause / compensate for property damage; assessment of property damage",
     "level": "F",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 29,
@@ -345,7 +401,9 @@
     "az_example": "Xəstəxana cərrahın səhlənkarlığına görə niyabətdən doğan məsuliyyət əsasında məsul hesab edildi.",
     "collocations": "vicarious liability; liable vicariously; vicarious liability claim",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 30,
@@ -357,7 +415,9 @@
     "az_example": "İstehsalçı məhsulun istənilən qüsuruna görə, təqsirindən asılı olmayaraq, mütləq məsuliyyət daşıyır.",
     "collocations": "strict liability; strict liability regime; subject to strict liability",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 31,
@@ -369,7 +429,9 @@
     "az_example": "İddia müddəti hadisədən üç il sonra bitdiyinə görə müddəi iddia qaldırma hüququnu itirdi.",
     "collocations": "statute of limitations; bar by statute; within the statute; expiration of statute",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 32,
@@ -381,7 +443,9 @@
     "az_example": "Məhkəmə cavabdehin həmin ərazidə yaşadığına əsaslanaraq işi eşitmək yurisdiksiyasının olduğunu müəyyən etdi.",
     "collocations": "exclusive / concurrent jurisdiction; exercise jurisdiction; subject matter jurisdiction",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 33,
@@ -393,7 +457,9 @@
     "az_example": "Məhkəmənin düzgün yeri olmadığı üçün iş başqa yerə göndərildi.",
     "collocations": "proper venue; change of venue; venue of proceedings; challenge venue",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 34,
@@ -405,7 +471,9 @@
     "az_example": "Şahid müddəinin mövqeyini dəstəkləmək üçün qəzanın ətraflı icmalını əks etdirən imzalı bəyannamə verdi.",
     "collocations": "sworn affidavit; file / submit an affidavit; affidavit evidence; affidavit of service",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 35,
@@ -417,7 +485,9 @@
     "az_example": "Açıqlama mərhələsində cavabdeh müqavilə pozulması ilə bağlı bütün e-poçt və yazışmaları təqdim etməli oldu.",
     "collocations": "document discovery; discovery dispute; produce in discovery; discovery request / order",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 36,
@@ -429,7 +499,9 @@
     "az_example": "Hakim müddəi xeyrinə hüküm çıxararaq cavabdehe 100,000 funt sterlinq ödəməyi əmr etdi.",
     "collocations": "judgment in default; judgment on the merits; enter judgment; enforce judgment",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 37,
@@ -441,7 +513,9 @@
     "az_example": "Cavabdeh məhkəmənin qanunu tətbiqetmədə səhvlərə yol verdiyini iddia edərək apellyasiya verdi.",
     "collocations": "file / lodge an appeal; grounds for appeal; appeal court / tribunal; hear an appeal",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 38,
@@ -453,7 +527,9 @@
     "az_example": "Məhkəmə bu məsələdə Ali Məhkəmənin əvvəlki qərarı ilə yaradılmış presedentə riayət etmək məcburiyyətindədir.",
     "collocations": "follow / set a precedent; binding / persuasive precedent; landmark precedent",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 39,
@@ -465,7 +541,9 @@
     "az_example": "Mülki işlərdə müddəi sübut yükünü ehtimalların üstünlüyü meyarı ilə daşıyır.",
     "collocations": "standard of proof; balance of probabilities; beyond reasonable doubt; shift burden of proof",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 40,
@@ -477,7 +555,9 @@
     "az_example": "Şahidin ifadəsi cavabdehin hadisə yerində olduğuna dair əsas dəlil oldu.",
     "collocations": "admissible / inadmissible evidence; documentary / circumstantial evidence; evidence of intent",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 41,
@@ -489,7 +569,9 @@
     "az_example": "Ekspert şahid müddəinin aldığı xəsarətlərin tibbi səbəbləri barəsində ifadə verdi.",
     "collocations": "expert witness opinion; expert witness report; cross-examine expert witness",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 42,
@@ -501,7 +583,9 @@
     "az_example": "Əsas şahid saat 22:00-də cavabdehin binadan çıxdığını gördüyünü bildirdi.",
     "collocations": "credible / credible witness; eyewitness; witness stand; witness statement / testimony",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 43,
@@ -513,7 +597,9 @@
     "az_example": "Şahid öz ifadəsinin yalan olduğunu etiraf etdikdən sonra yalançı şəhadətə görə ittiham altına alındı.",
     "collocations": "charge / convict for perjury; perjured testimony; commit perjury",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 44,
@@ -525,7 +611,9 @@
     "az_example": "Cavabdehin dələduzluğa görə məhkumiyyəti apellyasiya mərhələsində qüvvədə saxlanıldı.",
     "collocations": "criminal conviction; prior conviction; misdemeanor conviction; felony conviction",
     "level": "F",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 45,
@@ -537,7 +625,9 @@
     "az_example": "Münsiflər heyəti bəraət hökmü çıxardı, cavabdeh dərhal azad edildi.",
     "collocations": "jury acquittal; verdict of acquittal; acquittal on all charges",
     "level": "F",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 46,
@@ -549,7 +639,9 @@
     "az_example": "Cavabdeh günahkarlıq bəyanatı verdi və iki il həbs cəzasına məhkum edildi.",
     "collocations": "guilty / not guilty plea; plea of no contest; enter a plea; plea agreement / bargain",
     "level": "F",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 47,
@@ -561,7 +653,9 @@
     "az_example": "Cavabdeh günahkarlıq bəyanatı müqabilində soyğun ittihamını oğurluğa endirən razılaşmalı bəyanatı qəbul etdi.",
     "collocations": "negotiate / accept a plea agreement; plea agreement terms; plea deal",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 48,
@@ -573,7 +667,9 @@
     "az_example": "Hakim hücum törətməyə görə məhkumiyyətdə beş il həbs cəzası kəsdi.",
     "collocations": "custodial / suspended sentence; impose / pass sentence; sentence review / appeal",
     "level": "F",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 49,
@@ -585,7 +681,9 @@
     "az_example": "Məhkəmə girov məbləğini 10,000 funt sterlinq müəyyən etdi, məbləği ödədikdən sonra cavabdeh azad edildi.",
     "collocations": "set bail; grant / deny bail; bail amount / condition; bail bond; bail hearing",
     "level": "F",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 50,
@@ -597,7 +695,9 @@
     "az_example": "Cavabdeh məhkəmə prosesi başlamazdan üç ay əvvəl nəzarətdə saxlanıldı.",
     "collocations": "hold in custody; remand in custody; police custody; custody review",
     "level": "F",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 51,
@@ -609,7 +709,9 @@
     "az_example": "Cəzasının yarısını çəkdikdən sonra məhbus məhdudiyyətli şəraitdə şərti azadlığa buraxıldı.",
     "collocations": "release on parole; parole officer; parole conditions; parole violation",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 52,
@@ -621,7 +723,9 @@
     "az_example": "Hakim günahkara həbs əvəzinə iki il sınaq müddəti kəsdi.",
     "collocations": "probation period / officer; probation conditions; probation violation; on probation",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 53,
@@ -633,7 +737,9 @@
     "az_example": "Məhkəmə cavabdehə dəyən zərərə görə mağdura 5,000 funt sterlinq ödəməyi əmr etdi.",
     "collocations": "order restitution; restitution amount; victim restitution; restitution order",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 54,
@@ -645,7 +751,9 @@
     "az_example": "İki bank ölkənin ən böyük maliyyə qurumunu yaradacaq birləşməni elan etdi.",
     "collocations": "merger agreement / transaction; propose a merger; merger approval / completion",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 55,
@@ -657,7 +765,9 @@
     "az_example": "Satın alma fövqəladə ümumi yığıncaqda səhmdarlar əməliyyatı təsdiq etdikdən sonra başa çatdırıldı.",
     "collocations": "acquisition price; acquisition strategy; acquisition target; complete acquisition",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 56,
@@ -669,7 +779,9 @@
     "az_example": "Direktorlar şurası tənzimləyici tələblərə uyğunluğu təmin etmək üçün korporativ idarəetmə siyasətini nəzərdən keçirdi.",
     "collocations": "corporate governance code / framework; corporate governance violation",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 57,
@@ -681,7 +793,9 @@
     "az_example": "Əsas səhmdar dividendlərin bölüşdürülməsini təsdiq etmək üçün illik ümumi iclasda səs hüququndan istifadə etdi.",
     "collocations": "majority / minority shareholder; shareholder meeting / vote; shareholder agreement / resolution",
     "level": "F",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 58,
@@ -693,7 +807,9 @@
     "az_example": "Şirkət qeydə alınmış bütün səhmdarlara hər pay üçün 5 peni dividend ödəyəcəyini elan etdi.",
     "collocations": "declare / pay dividend; dividend payment; interim / final dividend; dividend yield",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 59,
@@ -705,7 +821,9 @@
     "az_example": "Direktorlar şurası şirkətin illik büdcəsini və strateji planını təsdiq etdi.",
     "collocations": "company director; board of directors; executive / non-executive director; director's duties",
     "level": "F",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 60,
@@ -717,7 +835,9 @@
     "az_example": "Direktorlar şurası şirkətin fəaliyyətini nəzərdən keçirmək və mühüm qərarları təsdiq etmək üçün rüblük toplanır.",
     "collocations": "board meeting; board resolution; board member; executive board / committee",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 61,
@@ -729,7 +849,9 @@
     "az_example": "Şirkət marka kimliyini qorumaq və icazəsiz istifadənin qarşısını almaq üçün ticarət nişanını qeydə aldırdı.",
     "collocations": "register / file a trademark; trademark infringement; trademark registration; trademark rights / protection",
     "level": "F",
-    "topic": "Intellectual Property"
+    "topic": "Intellectual Property",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 62,
@@ -741,7 +863,9 @@
     "az_example": "Nəşriyyat romana müstəsna müəlliflik hüququna sahib idi və icazəsiz çoxaltmalara qarşı hüquqi addım ata bilərdi.",
     "collocations": "copyright holder; copyright infringement; copyright protection; copyright notice",
     "level": "F",
-    "topic": "Intellectual Property"
+    "topic": "Intellectual Property",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 63,
@@ -753,7 +877,9 @@
     "az_example": "Şirkət öz innovativ texnologiyasını rəqiblərdən qorumaq üçün patent ərizəsi verdi.",
     "collocations": "patent application / grant; patent holder / owner; patent infringement; patent term / expiration",
     "level": "H",
-    "topic": "Intellectual Property"
+    "topic": "Intellectual Property",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 64,
@@ -765,7 +891,9 @@
     "az_example": "Şirkətin əqli mülkiyyət aktivlərinə patentlər, ticarət nişanları və xüsusi proqram təminatı daxil idi.",
     "collocations": "intellectual property rights / protection; intellectual property infringement / dispute",
     "level": "H",
-    "topic": "Intellectual Property"
+    "topic": "Intellectual Property",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 65,
@@ -777,7 +905,9 @@
     "az_example": "Məhkəmə proqramın icazəsiz surətlərini çıxardıqdan sonra cavabdehi müəlliflik hüququ pozuntusunda məsuliyyətli hesab etdi.",
     "collocations": "trademark / patent / copyright infringement; liable for infringement; infringement action / lawsuit",
     "level": "H",
-    "topic": "Intellectual Property"
+    "topic": "Intellectual Property",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 66,
@@ -789,7 +919,9 @@
     "az_example": "Əmək müqaviləsi işçinin maaşını, güzəştlərini və vəzifə öhdəliklərini əks etdirdi.",
     "collocations": "employment contract terms / conditions; terminate employment contract; employment contract dispute",
     "level": "F",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 67,
@@ -801,7 +933,9 @@
     "az_example": "İşçi xəbərdarlıq edilmədən və xaricetmə ödənişi verilmədən işdən çıxarıldıqdan sonra hüquqsuz işdən çıxarmaya görə şirkətə iddia qaldırdı.",
     "collocations": "claim wrongful dismissal; wrongful dismissal suit / action; wrongful dismissal compensation",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 68,
@@ -813,7 +947,9 @@
     "az_example": "İşçi yaşına görə vəzifə yüksəlişindən məhrum edildiyini iddia edərək ayrı-seçkilik iddiaçısı oldu.",
     "collocations": "sex / age / disability discrimination; discrimination claim / lawsuit; discrimination law",
     "level": "F",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 69,
@@ -825,7 +961,9 @@
     "collocations": "workplace harassment; sexual harassment; harassment claim / complaint; anti-harassment policy",
     "level": "H",
     "topic": "Employment Law",
-    "az_translation": "Təhdid/Təhqiramiz davranış (harassment) – xüsusilə iş yerindəki kimi düşmənçilik, incidici və ya qorxuducu mühit yaradan istənilməz və təkrarlanan davranış"
+    "az_translation": "Təhdid/Təhqiramiz davranış (harassment) – xüsusilə iş yerindəki kimi düşmənçilik, incidici və ya qorxuducu mühit yaradan istənilməz və təkrarlanan davranış",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 70,
@@ -837,7 +975,9 @@
     "az_example": "İfşaçı şirkətin saxtakarlıq xarakterli mühasibat fəaliyyətlərini tənzimləyici orqanlara bildirdi.",
     "collocations": "whistleblower protection; whistleblower retaliation; whistleblower disclosure; whistleblower law",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 71,
@@ -849,7 +989,9 @@
     "az_example": "Tribunal işdən çıxarmanın düzgün həyata keçirilmədiyini müəyyən edərək müddəiyə ədalətsiz işdən çıxarmaya görə kompensasiya verdi.",
     "collocations": "unfair dismissal claim / complaint; unfair dismissal compensation; unfair dismissal hearing / tribunal",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 72,
@@ -861,7 +1003,9 @@
     "az_example": "Şirkət satışların azalması və maliyyə çətinlikləri nəticəsində məcburi ixtisarı elan etdi.",
     "collocations": "declare / announce redundancy; compulsory / voluntary redundancy; redundancy payment / compensation",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 73,
@@ -873,7 +1017,9 @@
     "az_example": "Ölkə torpaq hüququ mülkiyyət sahiblərinin və kirayəçilərin hüquq və öhdəliklərini müəyyən edir.",
     "collocations": "land law principles / rules; land law dispute; land law reform",
     "level": "H",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 74,
@@ -885,7 +1031,9 @@
     "az_example": "Alıcı alqı-satqı başa çatdıqdan sonra mülkiyyətin tam hüquqi sahiblik hüququnu əldə etdi.",
     "collocations": "legal / equitable title; title deed; title insurance; title transfer; title dispute",
     "level": "H",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 75,
@@ -897,7 +1045,9 @@
     "collocations": "mechanic's lien; creditor's lien; enforce a lien; lien release / discharge",
     "level": "H",
     "topic": "Property Law",
-    "az_example": "Mexanik təmir xərclərinin tam ödənilənə qədər nəqliyyat vasitəsi üzərindəki girov hüququndan istifadə etdi."
+    "az_example": "Mexanik təmir xərclərinin tam ödənilənə qədər nəqliyyat vasitəsi üzərindəki girov hüququndan istifadə etdi.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 76,
@@ -909,7 +1059,9 @@
     "az_example": "İcarəçi aylıq 5,000 funt sterlinq kirayə müqabilində ofis sahəsi üçün üç illik icarə müqaviləsi bağladı.",
     "collocations": "lease agreement / terms; lease renewal; lease expiration / termination; commercial / residential lease",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 77,
@@ -921,7 +1073,9 @@
     "az_example": "İcarəçi kirayəni vaxtında ödəmək və mülkiyyəti qənaətbəxş vəziyyətdə saxlamaqla məsuliyyət daşıyır.",
     "collocations": "tenant rights / responsibilities; protected tenant; secure tenant; assured tenant; tenant agreement",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 78,
@@ -933,7 +1087,9 @@
     "az_example": "Ev sahibi qanun əsasında mülkiyyəti yaşayış üçün münasib vəziyyətdə saxlamağa və icarəçinin sakit istifadəsinə hörmət etməyə borcludur.",
     "collocations": "landlord responsibilities / obligations; landlord and tenant; landlord duties; landlord rights",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 79,
@@ -945,7 +1101,9 @@
     "az_example": "Ev sahibi icarəçi ardıcıl üç ay kirayə ödəmədikdən sonra boşaldılma prosesini başlatdı.",
     "collocations": "eviction notice; eviction order; eviction proceedings; illegal eviction",
     "level": "H",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 80,
@@ -957,7 +1115,9 @@
     "az_example": "Vəkil bütün hüquqi sənədlərin düzgün icra edilib qeydə alınmasını təmin edərək mülkiyyətin köçürülmə prosesini idarə etdi.",
     "collocations": "conveyancing transaction; conveyancing process; conveyancing solicitor / lawyer; conveyancing fee",
     "level": "H",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 81,
@@ -969,7 +1129,9 @@
     "az_example": "Bank ev almaq üçün ipoteka krediti verdi, mülkiyyət girov kimi xidmət etdi.",
     "collocations": "mortgage loan / agreement; mortgage interest / rate; mortgage repayment; mortgage lender; mortgage default",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 82,
@@ -981,7 +1143,9 @@
     "collocations": "grant / obtain easement; easement right; right of way; easement deed",
     "level": "H",
     "topic": "Property Law",
-    "az_example": "Mülkiyyət sahibi kommunal şirkətə yeraltı boruları qoymaq və saxlamaq üçün xidmət servidütü verdi."
+    "az_example": "Mülkiyyət sahibi kommunal şirkətə yeraltı boruları qoymaq və saxlamaq üçün xidmət servidütü verdi.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 83,
@@ -993,7 +1157,9 @@
     "collocations": "air / water / soil pollution; pollution control; pollution legislation; pollution liability",
     "level": "H",
     "topic": "Administrative Law",
-    "az_example": "Fabrik çaya zəhərli kimyəvi maddələr axıtdıqdan sonra ətraf mühitin çirklənməsinə görə məsuliyyətə cəlb edildi."
+    "az_example": "Fabrik çaya zəhərli kimyəvi maddələr axıtdıqdan sonra ətraf mühitin çirklənməsinə görə məsuliyyətə cəlb edildi.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 84,
@@ -1005,7 +1171,9 @@
     "az_example": "İnzibati hüquq ictimai sorğular, lisenziyalaşdırma və dövlət qərarlarına apellyasiya üçün prosedurları müəyyən edir.",
     "collocations": "administrative law principles; administrative procedure; administrative tribunal / court",
     "level": "H",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 85,
@@ -1017,7 +1185,9 @@
     "collocations": "business license; liquor license; license application; license renewal; license suspension / revocation",
     "level": "H",
     "topic": "Administrative Law",
-    "az_example": "Restoran ictimaiyyətə açılmadan əvvəl səhiyyə departamentindən qida xidməti lisenziyası aldı."
+    "az_example": "Restoran ictimaiyyətə açılmadan əvvəl səhiyyə departamentindən qida xidməti lisenziyası aldı.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 86,
@@ -1029,7 +1199,9 @@
     "az_example": "Sakinlər fabrinin tullantı atma fəaliyyətlərinin araşdırılmasını tələb edərək ətraf mühit agentliyinə vəsatət verdilər.",
     "collocations": "file a petition; petition for review; petition process; petition deadline",
     "level": "H",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 87,
@@ -1041,7 +1213,9 @@
     "az_example": "Yeni ətraf mühit qaydaları emissiyalar və tullantı idarəetməsi üçün ciddi normalar müəyyən etdi.",
     "collocations": "environmental / financial / health regulations; regulation compliance; regulation enforcement; issue / adopt regulations",
     "level": "F",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 88,
@@ -1053,7 +1227,9 @@
     "az_example": "Müddəi cavabdehin məxfi məlumatları ifşa etməsinin qarşısını almaq üçün məhkəmə qadağası vasitəsi tələb etdi.",
     "collocations": "seek injunctive relief; grant injunctive relief; request for injunctive relief; injunctive relief order",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 89,
@@ -1065,7 +1241,9 @@
     "az_example": "İki tərəf müqavilə mübahisəsinə son qoymaq üçün 250,000 funt sterlinq dəyərli barışıq razılaşmasına gəldi.",
     "collocations": "reach / negotiate a settlement; settlement agreement; settlement terms; full / partial settlement",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 90,
@@ -1077,7 +1255,9 @@
     "az_example": "Tərəflər anlaşmazlıqlarını həll etmək üçün məhkəmə prosesinə keçmədən əvvəl vasitəçiliyə razılaşdılar.",
     "collocations": "mediation process / session; mediation agreement; mediator; enter mediation; mediation clause",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 91,
@@ -1089,7 +1269,9 @@
     "az_example": "Müqavilə tərəfləri mübahisələri məhkəmə əvəzinə məcburi arbitraja təqdim etməyi nəzərdə tutan arbitraj bəndi əhatə edirdi.",
     "collocations": "arbitration clause; arbitration agreement / process; binding arbitration; arbitrator; arbitration hearing",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 92,
@@ -1101,7 +1283,9 @@
     "az_example": "Müzakirələr nəticəsiz qaldıqdan sonra şirkət ödənilməmiş borcu geri almaq üçün məhkəmə prosesinə başlamaq qərarına gəldi.",
     "collocations": "litigation process / costs; litigation strategy; litigation risk; litigation support; commercial litigation",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 93,
@@ -1113,7 +1297,9 @@
     "az_example": "Müddəi müqavilənin pozulduğunu iddia edən ərizə verdi və 500,000 funt sterlinq kompensasiya tələb etdi.",
     "collocations": "file a complaint; complaint allegations; complaint form; complaint procedure",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 94,
@@ -1125,7 +1311,9 @@
     "az_example": "Müdafiə vəkili çarpaz sorğu zamanı şahidin hadisələrlə bağlı bəyanını rədd etdi.",
     "collocations": "cross-examination of witness; cross-examine; skillful cross-examination; cross-examination technique",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 95,
@@ -1137,7 +1325,9 @@
     "az_example": "Şahid hüquq bürosunda məhkəməqabağı ifadə verdi; bu ifadə sonradan məhkəmədə dəlil kimi istifadə edildi.",
     "collocations": "deposition testimony; deposition notice; deposition transcript; deposition date",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 96,
@@ -1149,7 +1339,9 @@
     "az_example": "Yeni qanun əmək ayrı-seçkiliyini tənzimləyən normaları dəyişdirdi və əlavə kateqoriyalara mühafizəni genişləndirdi.",
     "collocations": "statutory law; statute of limitations; statute enactment / passage; statutory requirement / obligation",
     "level": "F",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 97,
@@ -1161,7 +1353,9 @@
     "az_example": "Birləşmiş Krallığın hüquq sistemi ümumi hüquq prinsipləri üzərində qurulmuşdur; burada məhkəmə qərarları bağlayıcı presedent yaradır.",
     "collocations": "common law system; common law jurisdiction; common law right; common law principle",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 98,
@@ -1173,7 +1367,9 @@
     "az_example": "Bir çox Avropa ölkəsi qanunların ətraflı hüquqi kodlarda sistemləşdirildiyi mülki hüquq sistemini tətbiq edir.",
     "collocations": "civil law system; civil law jurisdiction; civil law tradition; civil law code",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 99,
@@ -1185,7 +1381,9 @@
     "az_example": "Konstitusiya hüququ icra, qanunvericilik və məhkəmə hakimiyyəti arasında səlahiyyətlər bölgüsünü müəyyən edir.",
     "collocations": "constitutional law principles; constitutional amendment; constitutional court; constitutional right",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 100,
@@ -1197,7 +1395,9 @@
     "az_example": "Beynəlxalq hüquq suverən dövlətlər arasındakı münasibətləri tənzimləyən müqavilələri, konvensiyaları və adət normalarını əhatə edir.",
     "collocations": "international law principles; international treaty; international convention; international court",
     "level": "H",
-    "topic": "International Law"
+    "topic": "International Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 101,
@@ -1209,7 +1409,9 @@
     "az_example": "Cavabdeh müddəinin aldığı şəxsi xəsarətə görə hüquqa zidd hərəkət qanunu əsasında məsuliyyətli hesab edildi.",
     "collocations": "tortious liability; tortious conduct; tortious act; tortious interference",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 102,
@@ -1221,7 +1423,9 @@
     "az_example": "Məhkəmə müddəiyə kompensasiya və gələcək pozuntulara qarşı qadağa da daxil olmaqla müxtəlif hüquqi vasitələr verdi.",
     "collocations": "legal remedies; equitable remedies; damages; specific performance; injunctive relief",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 103,
@@ -1233,7 +1437,9 @@
     "az_example": "Tərəflər ticarət mülkiyyətini 2 milyon funt sterlinqə almaq-satmaq üçün müqavilə bağladılar.",
     "collocations": "contract terms / conditions; contract formation; contract breach; contract agreement; contract law",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 104,
@@ -1245,7 +1451,9 @@
     "az_example": "Alıcı pul, satıcı isə mal verməyi söz verdiyi zaman ikitərəfli müqavilə formalaşır.",
     "collocations": "bilateral contract formation; bilateral agreement; bilateral exchange of promises",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 105,
@@ -1257,7 +1465,9 @@
     "az_example": "Mükafat elanı birtərəfli müqavilə nümunəsidir — tapanın heç bir öhdəliyi yoxdur, ancaq itirilmiş əşyanı tapıb gətirsə, vəd edilmiş mükafatı almaq hüququ yaranır.",
     "collocations": "unilateral contract; unilateral offer; unilateral promise; unilateral contract formation",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 106,
@@ -1269,7 +1479,9 @@
     "az_example": "Alıcı daha aşağı qiymətlə əks-təklif verdikdə satıcı yeni şərtləri qəbul etdi.",
     "collocations": "submit a counteroffer; accept / reject counteroffer; counteroffer terms; counteroffer negotiation",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 107,
@@ -1281,7 +1493,9 @@
     "az_example": "Podratçı gözlənilməz təbii fəlakətə görə öhdəliyin yerinə yetirilməməsini əsaslandırmaq üçün fors-major bəndini tətbiq etdi.",
     "collocations": "force majeure clause; force majeure event; invoke force majeure; force majeure provision",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 108,
@@ -1293,7 +1507,9 @@
     "az_example": "Məhkəmə cavabdehin saxtakarlıq xarakterli yanıltmasına görə müqaviləni ləğv etdi.",
     "collocations": "right to rescission; rescission of contract; grounds for rescission; rescission remedy",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 110,
@@ -1305,7 +1521,9 @@
     "az_example": "Hüquq tutulması doktrinası ev sahibinin kirayə qəbul etdikdən sonra icarəçinin istifadə hüququnu inkar etməsinin qarşısını aldı.",
     "collocations": "promissory estoppel; equitable estoppel; estoppel by conduct; estoppel defence",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 111,
@@ -1317,7 +1535,9 @@
     "az_example": "Müddətin bitməsindən sonra ödənişləri qəbul etməyə davam etməklə kreditorun gecikmə cəzasını tələb etmək hüququndan imtina etdiyi hesab edildi.",
     "collocations": "waiver of rights; waiver clause; waiver agreement; waiver of privilege",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 112,
@@ -1329,7 +1549,9 @@
     "az_example": "Ana şirkət filialın bank krediti üçün zəmanət verdi; filial ödəyə bilməzsə ödənişi özü həyata keçirəcəyi öhdəliyini götürdü.",
     "collocations": "provide / offer a guarantee; guarantee agreement; guarantee clause; personal guarantee; corporate guarantee",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 113,
@@ -1341,7 +1563,9 @@
     "collocations": "indemnification clause; indemnification agreement; indemnification provision; mutual indemnification",
     "level": "H",
     "topic": "Contract Law",
-    "az_example": "Podratçı qüsurlu işçilikdən irəli gələn hər hansı üçüncü tərəf iddiaları üçün mülkiyyət sahibini zərərsizləşdirməyə razılaşdı."
+    "az_example": "Podratçı qüsurlu işçilikdən irəli gələn hər hansı üçüncü tərəf iddiaları üçün mülkiyyət sahibini zərərsizləşdirməyə razılaşdı.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 114,
@@ -1353,7 +1577,9 @@
     "az_example": "Alıcı mülkiyyəti bağlamaq üçün 20,000 funt sterlinq baya ödədi; təklif geri götürülərsə bu məbləğ qaytarılmayacaq.",
     "collocations": "earnest money deposit; forfeit earnest money; earnest money agreement; earnest money clause",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 115,
@@ -1365,7 +1591,9 @@
     "az_example": "Ekspert mülkiyyətin bütün müqavilə tələblərini karşıladığını təsdiq edənə qədər alqı qiyməti depozit hesabında saxlanıldı.",
     "collocations": "escrow account; hold in escrow; escrow agent; escrow disbursement / release",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 116,
@@ -1377,7 +1605,9 @@
     "az_example": "Direktor şəxsən sahibi olduğu şirkətle əqd bağlanması nəzərdən keçirilərkən maraqların toqquşmasını açıqladı.",
     "collocations": "conflict of interest disclosure; conflict of interest policy; conflict of interest waiver; potential conflict of interest",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 117,
@@ -1389,7 +1619,9 @@
     "az_example": "Bank ticarət krediti üçün iş aktivlərinin girov kimi göstərilməsini tələb etdi.",
     "collocations": "collateral security; collateral damage; collateral for loan; collateral agreement",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 118,
@@ -1401,7 +1633,9 @@
     "az_example": "Kreditor kredit öhdəliyinin sübutu olaraq borc alan tərəfdən imzalanmış veksil tələb etdi.",
     "collocations": "promissory note agreement; promissory note default; promissory note signature; promissory note payment",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 119,
@@ -1413,7 +1647,9 @@
     "az_example": "Saxtakarlıq Qaydası əsasında torpaq alqı-satqısı müqaviləsi etibarlı olmaq üçün yazılı formada bağlanmalıdır.",
     "collocations": "Statute of Frauds requirement; Statute of Frauds exception; Statute of Frauds compliance",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 120,
@@ -1425,7 +1661,9 @@
     "collocations": "quantum meruit claim; quantum meruit recovery; quantum meruit basis; quantum meruit valuation",
     "level": "H",
     "topic": "Contract Law",
-    "az_example": "Müqavilə qiyməti razılaşdırılmadığı üçün podratçı yerinə yetirdiyi iş üçün əməyə görə haqlı ödəniş əsasında ödəniş tələb etdi."
+    "az_example": "Müqavilə qiyməti razılaşdırılmadığı üçün podratçı yerinə yetirdiyi iş üçün əməyə görə haqlı ödəniş əsasında ödəniş tələb etdi.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 121,
@@ -1437,7 +1675,9 @@
     "az_example": "Müddəi cavabdehin ödəniş etmədən əqli mülkiyyətindən mənfəət əldə etdiyinə görə haqsız zənginləşmə iddiası qaldırdı.",
     "collocations": "unjust enrichment claim; unjust enrichment defence; unjust enrichment remedy; unjust enrichment principle",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 122,
@@ -1449,7 +1689,9 @@
     "az_example": "Müqavilə gecikmiş çatdırılmanın hər günü üçün 10,000 funt sterlinq öncədən müəyyən edilmiş zərər məbləği nəzərdə tuturdu.",
     "collocations": "liquidated damages clause; liquidated damages amount; liquidated damages provision; agreed liquidated damages",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 123,
@@ -1461,7 +1703,9 @@
     "az_example": "Məhkəmə cərimə bəndini icra etməkdən imtina etdi, çünki məbləğ faktiki zərərlə açıq-aşkar qeyri-mütənasib idi.",
     "collocations": "penalty clause enforcement; penalty clause validity; penalty clause provision; unreasonable penalty clause",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 124,
@@ -1473,7 +1717,9 @@
     "az_example": "Müddəi müqavilə əsasında vəd edilmiş unikal sənət əsərinin verilməsini tələb edərək aynen icraya dair tələb irəli sürdü.",
     "collocations": "order for specific performance; seek specific performance; specific performance remedy; specific performance order",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 125,
@@ -1485,7 +1731,9 @@
     "az_example": "Müqavilə icarəçinin mülkiyyəti saxlamaq və ticarət məqsədi üçün istifadə etməmək öhdəliklərini əks etdirirdi.",
     "collocations": "covenant in contract; breach of covenant; covenant agreement; affirmative / negative covenant",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 126,
@@ -1497,7 +1745,9 @@
     "az_example": "Tərəflər ilkin kredit müqaviləsini yeniləyərək kreditoru yeni borc verənlə əvəz etdilər.",
     "collocations": "novation agreement; novation of contract; novation effect; novation consent",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 127,
@@ -1509,7 +1759,9 @@
     "az_example": "Məhkəmə yazılı müqavilənin şərtləri ilə ziddiyyət yaradan şifahi ifadəni istisna etmək üçün şifahi dəlil qaydasını tətbiq etdi.",
     "collocations": "parol evidence rule; parol evidence admissible; parol evidence exception; parol evidence exclusion",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 128,
@@ -1521,7 +1773,9 @@
     "az_example": "İttihamçı məhkumiiyyəti əldə etmək üçün cavabdehin ağlabatan şübhə hüdudlarını aşan günahkarlığını sübut etməlidir.",
     "collocations": "culpability standard; culpability determination; degree of culpability; criminal culpability",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 129,
@@ -1533,7 +1787,9 @@
     "az_example": "Oğurluğun cinayət hərəkəti başqasının əmlakının icazəsiz götürülüb aparılmasından ibarətdir.",
     "collocations": "actus reus element; actus reus requirement; actus reus definition; actus reus proof",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 130,
@@ -1545,7 +1801,9 @@
     "az_example": "İttihamçı qatillikdə məhkumiyyəti əsaslandırmaq üçün cavabdehdə tələb olunan cinayət niyyətinin olduğunu sübut etməlidir.",
     "collocations": "mens rea element; mens rea requirement; mens rea standard; mens rea proof",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 131,
@@ -1557,7 +1815,9 @@
     "az_example": "Şərik əsas günahkarın istifadə etdiyi qaçış avtomobilini verdiyi üçün soyğunda məhkum edildi.",
     "collocations": "accomplice liability; accomplice to crime; accomplice conviction; accomplice prosecution",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 132,
@@ -1569,7 +1829,9 @@
     "collocations": "accessory before / after the fact; accessory to crime; accessory liability; accessory charges",
     "level": "H",
     "topic": "Criminal Law",
-    "az_example": "Cavabdeh qaçaq şəxsin qaçmasına kömək etdiyinə görə hadisədən sonrakı cinayət köməkçisi kimi ittiham altına alındı."
+    "az_example": "Cavabdeh qaçaq şəxsin qaçmasına kömək etdiyinə görə hadisədən sonrakı cinayət köməkçisi kimi ittiham altına alındı.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 133,
@@ -1581,7 +1843,9 @@
     "az_example": "Mühasib şirkət vəsaitlərini şəxsi hesaba köçürdüyü aşkar edildikdən sonra ixtilas törətməkdə ittiham altına alındı.",
     "collocations": "embezzlement charge / conviction; embezzlement funds; embezzlement scheme; embezzlement investigation",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 134,
@@ -1593,7 +1857,9 @@
     "az_example": "Cavabdeh mağazadan 5,000 funt sterlinq dəyərli mal oğurladığına görə böyük oğurluqda ittiham altına alındı.",
     "collocations": "grand / petty larceny; larceny charge; larceny conviction; larceny offense",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 135,
@@ -1605,7 +1871,9 @@
     "az_example": "Cavabdeh saxta çeklər düzəldib bankda nağdlaşdırmağa çalışdığına görə sənəd saxtalaşdırmada ittiham altına alındı.",
     "collocations": "document forgery; forgery charge; forgery conviction; forgery document; identity forgery",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 136,
@@ -1617,7 +1885,9 @@
     "az_example": "Üç bina şübhəli şəraitdə yandıqdan sonra şübhəli yanğın törətməkdə şübhəli bilinərək həbs edildi.",
     "collocations": "arson charge / conviction; arson investigation; arson suspect; arson case",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 137,
@@ -1629,7 +1899,9 @@
     "az_example": "Cavabdeh ehtiyatsız sürücülük nəticəsində piyadanın ölümünə səbəb olduğu üçün ehtiyatsız adam öldürməyə görə məhkum edildi.",
     "collocations": "involuntary / voluntary manslaughter; manslaughter charge / conviction; manslaughter sentence",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 138,
@@ -1641,7 +1913,9 @@
     "az_example": "Cavabdeh mağduru üzündən yumruqladığına görə hücum və fiziki hücumda məhkum edildi.",
     "collocations": "assault and battery charge; assault and battery conviction; assault and battery offense",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 139,
@@ -1653,7 +1927,9 @@
     "az_example": "Cavabdeh toqquşma zamanı bıçaq işlətdiyinə görə ağırlaşdırılmış hücumda ittiham altına alındı.",
     "collocations": "aggravated assault charge; aggravated assault conviction; aggravated assault with weapon",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 140,
@@ -1665,7 +1941,9 @@
     "az_example": "Cavabdeh yetkinlik yaşına çatmamış şəxslə cinsi əlaqəyə girdiyi üçün məhkum edildi.",
     "collocations": "statutory rape charge; statutory rape conviction; statutory rape offense; age of consent",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 141,
@@ -1677,7 +1955,9 @@
     "az_example": "Şübhəli bank işçisini silahla hədə-qorxu ilə qorxutduqdan sonra silahlı soyğun törətmədə tutularaq ittiham altına alındı.",
     "collocations": "armed / unarmed robbery; robbery charge / conviction; robbery suspect; robbery investigation",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 142,
@@ -1689,7 +1969,9 @@
     "az_example": "Cavabdeh mal oğurlamaq niyyəti ilə mağazaya zorla daxil olduğuna görə ev soyğunçuluğunda ittiham altına alındı.",
     "collocations": "home burglary; burglary charge / conviction; burglary suspect; burglary investigation",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 143,
@@ -1701,7 +1983,9 @@
     "az_example": "Şirkət müştərilərə məhsullarının keyfiyyəti barəsində yalan məlumat verdiyi üçün dələduzluqda məhkum edildi.",
     "collocations": "fraud charge / conviction; fraud scheme / investigation; mail / wire fraud; fraud victim",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 145,
@@ -1714,7 +1998,9 @@
     "collocations": "tax evasion charge / conviction; tax evasion scheme; tax evasion prosecution; tax evasion penalty",
     "level": "H",
     "topic": "Criminal Law",
-    "az_example": "Şirkət bəyan edilməmiş gəlir və saxta tutulmalar aşkar edildikdən sonra vergi qaçaqçılığında məsuliyyətə cəlb edildi."
+    "az_example": "Şirkət bəyan edilməmiş gəlir və saxta tutulmalar aşkar edildikdən sonra vergi qaçaqçılığında məsuliyyətə cəlb edildi.",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 146,
@@ -1726,7 +2012,9 @@
     "az_example": "Kriminal təşkilat narkotik gəlirlərini qanuni bizneslər vasitəsilə keçirtdiyinə görə pul yuyuculuğunda məhkum edildi.",
     "collocations": "money laundering scheme; money laundering charge / conviction; money laundering investigation",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 147,
@@ -1738,7 +2026,9 @@
     "az_example": "Cavabdeh biznес ortaqları ilə sxem quraraq dələduzluq törətmək qəsdi üzrə ittiham altına alındı.",
     "collocations": "conspiracy charge / conviction; conspiracy to commit crime; conspiracy prosecution; conspiracy agreement",
     "level": "H",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 148,
@@ -1750,7 +2040,9 @@
     "az_example": "Şirkət maliyyə öhdəliklərini yerinə yetirə bilmədikdən sonra ödəmə qabiliyyətsizliyi vəziyyətinə düşərək iflas ərizəsi verdi.",
     "collocations": "insolvency proceedings; insolvency law; insolvency test; technical insolvency",
     "level": "H",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 149,
@@ -1762,7 +2054,9 @@
     "az_example": "Şəxs uğursuz sahibkarlıq fəaliyyətindən toplanan küllü borcu həll etmək üçün şəxsi iflas ərizəsi verdi.",
     "collocations": "file for bankruptcy; bankruptcy proceeding; bankruptcy court; bankruptcy law; bankruptcy discharge",
     "level": "H",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 150,
@@ -1774,7 +2068,9 @@
     "az_example": "Məhkəmə müflis şirkətin ləğvetmə prosesinə başlanmasını əmr etdi; kreditorlar aktiv satışından paylarını aldılar.",
     "collocations": "company liquidation; voluntary / compulsory liquidation; liquidation process; liquidation value; liquidation sale",
     "level": "H",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 158,
@@ -1786,7 +2082,9 @@
     "az_example": "Ödəniş mülkiyyət hüququnun keçməsi üçün ilkin şərt idi.",
     "collocations": "to satisfy / fulfil a condition precedent",
     "level": "A",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 164,
@@ -1798,7 +2096,9 @@
     "az_example": "Alıcının çatdırılma tarixindən əvvəl malı qəbul etməkdən imtinası qabaqlayıcı pozuntu sayıldı.",
     "collocations": "to commit / accept an anticipatory breach",
     "level": "A",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 165,
@@ -1810,7 +2110,9 @@
     "az_example": "İstisna bəndi qeyri-ədalətli sayıldığı üçün hüquqi qüvvəsi olmadığı qərara alındı.",
     "collocations": "to incorporate / rely on an exclusion clause",
     "level": "A",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 167,
@@ -1822,7 +2124,9 @@
     "az_example": "Həkimlər həmişə öz xəstələri qarşısında qayğı göstərmək vəzifəsi daşıyırlar.",
     "collocations": "to owe / breach a duty of care",
     "level": "F",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 171,
@@ -1834,7 +2138,9 @@
     "az_example": "Zavodun davamlı küyü şəxsi narahatlıq sayıldı.",
     "collocations": "private / public nuisance / to constitute a nuisance",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 174,
@@ -1846,7 +2152,9 @@
     "az_example": "İddiaçı səhlənkarlıqla zədə arasında səbəbiyyət əlaqəsini sübut etməli idi.",
     "collocations": "to establish / prove causation / chain of causation",
     "level": "A",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 176,
@@ -1858,7 +2166,9 @@
     "az_example": "İddiaçının qarşılıqlı səhlənkarlığına görə kompensasiya 30% azaldıldı.",
     "collocations": "to plead / find contributory negligence",
     "level": "A",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 177,
@@ -1870,7 +2180,9 @@
     "az_example": "Məhkəmə cavabdehin məsuliyyətini məhdudlaşdırmaq üçün zərərin uzaqlığı meyarını tətbiq etdi.",
     "collocations": "test of remoteness / too remote a consequence",
     "level": "A",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 178,
@@ -1882,7 +2194,9 @@
     "az_example": "Məhkəmə bu işdə xalis iqtisadi zərərə görə kompensasiya verməkdən imtina etdi.",
     "collocations": "pure economic loss / to recover economic loss",
     "level": "A",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 180,
@@ -1894,7 +2208,9 @@
     "az_example": "Nizamnamə direktorların təyin edilməsi qaydasını müəyyən edirdi.",
     "collocations": "to amend / adopt the articles of association",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 181,
@@ -1906,7 +2222,9 @@
     "az_example": "Təsis müqaviləsi şirkətin təsisçi üzvlərini təsdiqlədi.",
     "collocations": "to sign / register the memorandum of association",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 182,
@@ -1918,7 +2236,9 @@
     "az_example": "Məhdud məsuliyyət səhmdarların şəxsi əmlakını şirkətin borclarından qoruyur.",
     "collocations": "limited liability company / limited liability partnership",
     "level": "F",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 188,
@@ -1930,7 +2250,9 @@
     "az_example": "İştirak edə bilməyən səhmdarlar onların adından səs vermək üçün etibarnamə üzrə nümayəndə təyin edə bilərdilər.",
     "collocations": "proxy vote / to appoint a proxy / proxy form",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 189,
@@ -1942,7 +2264,9 @@
     "az_example": "Azlıq səhmdarları əksəriyyətin əsas aktivləri satmaq qərarına qarşı qorunma tələb etdilər.",
     "collocations": "minority shareholder protection / oppression of minority shareholders",
     "level": "A",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 190,
@@ -1954,7 +2278,9 @@
     "az_example": "Məhkəmə şirkətin borcları ödəyə bilməməsinə görə onun ləğvi barədə qərar verdi.",
     "collocations": "compulsory / voluntary winding up / winding-up petition",
     "level": "A",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 195,
@@ -1966,7 +2292,9 @@
     "az_example": "Böyük münsiflər heyəti şirkətin keçmiş baş icraçı direktoru əleyhinə ittihamnamə təqdim etdi.",
     "collocations": "to bring / issue an indictment / indictable offence",
     "level": "A",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 196,
@@ -1978,7 +2306,9 @@
     "az_example": "İttiham tərəfi təqsirləndirilən şəxs əleyhinə güclü ekspertiza sübutları təqdim etdi.",
     "collocations": "to bring a prosecution / public prosecutor",
     "level": "F",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 198,
@@ -1990,7 +2320,9 @@
     "az_example": "O, razılaşma sazişini qəbul etdi və daha az cəza aldı.",
     "collocations": "to negotiate / accept a plea bargain",
     "level": "A",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 199,
@@ -2002,7 +2334,9 @@
     "az_example": "Hakim cəza təyin etməzdən əvvəl cavabdehin yüngülləşdirici hallarını nəzərə aldı.",
     "collocations": "to plead / consider mitigating circumstances",
     "level": "A",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 200,
@@ -2014,7 +2348,9 @@
     "az_example": "Silahdan istifadə cəza təyin edilərkən ağırlaşdırıcı hal kimi qiymətləndirildi.",
     "collocations": "to identify / treat as an aggravating factor",
     "level": "A",
-    "topic": "Criminal Law"
+    "topic": "Criminal Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 201,
@@ -2026,7 +2362,9 @@
     "az_example": "İddiaçı müqavilənin pozulmasına görə kompensasiya tələb etdi.",
     "collocations": "plaintiff's claim / to act as plaintiff",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 204,
@@ -2038,7 +2376,9 @@
     "az_example": "Şahidə məhkəmə prosesində ifadə vermək üçün çağırış vərəqəsi təqdim edildi.",
     "collocations": "to issue / serve a subpoena",
     "level": "A",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 207,
@@ -2050,7 +2390,9 @@
     "az_example": "Münsiflər heyəti yekdilliklə təqsirli olduğu barədə hökm çıxardı.",
     "collocations": "guilty / not guilty verdict / to deliver a verdict",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 213,
@@ -2062,7 +2404,9 @@
     "az_example": "Minlərlə istehlakçı istehsalçıya qarşı kollektiv iddiaya qoşuldu.",
     "collocations": "to file / join a class action / class action lawsuit",
     "level": "A",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 214,
@@ -2074,7 +2418,9 @@
     "az_example": "O, evin tam mülkiyyətini aldı və torpağa tam sahib oldu.",
     "collocations": "freehold property / freehold title",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 215,
@@ -2086,7 +2432,9 @@
     "az_example": "Mənzil icarə müddətindən 99 il qaldığı leasehold əsasında satılır.",
     "collocations": "leasehold property / leasehold interest",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 218,
@@ -2098,7 +2446,9 @@
     "az_example": "Mülkiyyət sənədi torpağın onun adına qeydiyyatdan keçdiyini təsdiqlədi.",
     "collocations": "to register / transfer a title deed",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 219,
@@ -2110,7 +2460,9 @@
     "az_example": "İcarə müqaviləsində iki aylıq xəbərdarlıq müddəti müəyyən edilmişdi.",
     "collocations": "joint tenancy / periodic tenancy / to terminate a tenancy",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 221,
@@ -2122,7 +2474,9 @@
     "az_example": "Alıcı əmlakın yüklərdən azad olduğunu yoxlamaq üçün reyestri yoxladı.",
     "collocations": "to register / discharge an encumbrance / free from encumbrance",
     "level": "A",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 222,
@@ -2134,7 +2488,9 @@
     "az_example": "O, istifadə olunmayan torpağa əksinə sahiblik yolu ilə mülkiyyət hüququ tələb etdi.",
     "collocations": "to claim / establish adverse possession",
     "level": "A",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 223,
@@ -2146,7 +2502,9 @@
     "az_example": "Məhdudlaşdırıcı şərt sahibinin torpaqda tikinti aparmasının qarşısını aldı.",
     "collocations": "to impose / breach a restrictive covenant",
     "level": "A",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 224,
@@ -2158,7 +2516,9 @@
     "az_example": "Sənəd qonşu fermanın ərazisindən keçid hüququ verdi.",
     "collocations": "to grant / exercise a right of way",
     "level": "H",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 227,
@@ -2170,7 +2530,9 @@
     "az_example": "Şirkətdən oğurluq ağır intizam pozuntusu sayılaraq ani işdən çıxarmaya səbəb oldu.",
     "collocations": "to be guilty of / dismiss for gross misconduct",
     "level": "A",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 228,
@@ -2182,7 +2544,9 @@
     "az_example": "Onun müqaviləsi istefa üçün üç aylıq xəbərdarlıq müddəti tələb edirdi.",
     "collocations": "to serve / waive a notice period",
     "level": "F",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 230,
@@ -2194,7 +2558,9 @@
     "az_example": "Yeni əmək haqqı həmkarlar ittifaqı ilə kollektiv danışıqlar yolu ilə razılaşdırıldı.",
     "collocations": "collective bargaining agreement / right to collective bargaining",
     "level": "A",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 231,
@@ -2206,7 +2572,9 @@
     "az_example": "O, ədalətsiz münasibətə görə menecerinə qarşı rəsmi şikayət qaldırdı.",
     "collocations": "to raise / file / resolve a grievance",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 232,
@@ -2218,7 +2586,9 @@
     "az_example": "Vəzifəsindən gedən direktor xeyli işdən çıxarılma müavinəti aldı.",
     "collocations": "severance pay package / to negotiate severance pay",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 238,
@@ -2230,7 +2600,9 @@
     "az_example": "Resept bir əsrdən artıq kommersiya sirri kimi saxlanıldı.",
     "collocations": "to protect / disclose a trade secret",
     "level": "A",
-    "topic": "Intellectual Property"
+    "topic": "Intellectual Property",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 239,
@@ -2242,7 +2614,9 @@
     "az_example": "Müəllif kitabın satılan hər nüsxəsindən royalti alır.",
     "collocations": "royalty payment / to pay / collect royalties",
     "level": "H",
-    "topic": "Intellectual Property"
+    "topic": "Intellectual Property",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 240,
@@ -2254,7 +2628,9 @@
     "az_example": "Kampaniya qrupu bələdiyyənin qərarına dair məhkəmə nəzarəti üçün müraciət etdi.",
     "collocations": "to apply for / seek judicial review",
     "level": "A",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 241,
@@ -2266,7 +2642,9 @@
     "az_example": "Nazir yeni siyasəti həyata keçirmək üçün səlahiyyət əsasında qanunvericiliyə uyğun qaydalar qəbul etdi.",
     "collocations": "to enact / pass delegated legislation",
     "level": "A",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 242,
@@ -2278,7 +2656,9 @@
     "az_example": "Şikayət müstəqil araşdırma üçün ombudsmana göndərildi.",
     "collocations": "to refer to / appoint an ombudsman",
     "level": "H",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 243,
@@ -2290,7 +2670,9 @@
     "az_example": "Məhkəmə bələdiyyənin qərarının səlahiyyət hüdudlarından kənar olduğunu və buna görə etibarsız sayıldığını elan etdi.",
     "collocations": "ultra vires act / to act ultra vires",
     "level": "A",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 244,
@@ -2302,7 +2684,9 @@
     "az_example": "Tribunalın qərarı təbii ədalət qaydalarını pozduğuna görə ləğv edildi.",
     "collocations": "rules of natural justice / to breach natural justice",
     "level": "A",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 245,
@@ -2314,7 +2698,9 @@
     "az_example": "İş əmək tribunalında baxıldı.",
     "collocations": "to appear before a tribunal / tribunal hearing",
     "level": "H",
-    "topic": "Administrative Law"
+    "topic": "Administrative Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 246,
@@ -2326,7 +2712,9 @@
     "az_example": "İki ölkə idxal mallarına tarifləri azaltmaq üçün müqavilə imzaladı.",
     "collocations": "to sign / ratify a treaty / treaty obligations",
     "level": "F",
-    "topic": "International Law"
+    "topic": "International Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 247,
@@ -2338,7 +2726,9 @@
     "az_example": "Mübahisə mübahisəli ərazi üzərində milli suverenlik məsələlərini gündəmə gətirdi.",
     "collocations": "national / state sovereignty / to violate sovereignty",
     "level": "H",
-    "topic": "International Law"
+    "topic": "International Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 248,
@@ -2350,7 +2740,9 @@
     "az_example": "Hökumət qonşu ölkədən qaçaqın ekstradisiyasını tələb etdi.",
     "collocations": "extradition treaty / to request / grant extradition",
     "level": "A",
-    "topic": "International Law"
+    "topic": "International Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 249,
@@ -2362,7 +2754,9 @@
     "az_example": "Diplomat diplomatik toxunulmazlığa malik olduğu üçün ittiham oluna bilmədi.",
     "collocations": "to claim / waive diplomatic immunity",
     "level": "A",
-    "topic": "International Law"
+    "topic": "International Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 250,
@@ -2374,7 +2768,9 @@
     "az_example": "Mübahisə iki hüquq sistemi arasında mürəkkəb sərhədlərarası yurisdiksiya məsələlərini ortaya çıxardı.",
     "collocations": "to establish / exercise cross-border jurisdiction",
     "level": "A",
-    "topic": "International Law"
+    "topic": "International Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 251,
@@ -2386,7 +2782,9 @@
     "az_example": "Beynəlxalq ictimaiyyət rejimə qarşı iqtisadi sanksiyalar tətbiq etdi.",
     "collocations": "to impose / lift sanctions / trade sanctions",
     "level": "H",
-    "topic": "International Law"
+    "topic": "International Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 252,
@@ -2398,7 +2796,9 @@
     "az_example": "Cavabdeh istintaq zamanı ona qanuni prosedurun təmin edilmədiyini iddia etdi.",
     "collocations": "to guarantee / deny due process",
     "level": "A",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 253,
@@ -2410,7 +2810,9 @@
     "az_example": "Məhkəmə işi res judicata prinsipi əsasında rədd etdi.",
     "collocations": "doctrine of res judicata / to plead res judicata",
     "level": "A",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 254,
@@ -2422,7 +2824,9 @@
     "az_example": "Stare decisis prinsipinə əsasən, aşağı instansiya məhkəməsi apellyasiya qərarına tabe idi.",
     "collocations": "doctrine of stare decisis / to apply stare decisis",
     "level": "A",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 255,
@@ -2434,7 +2838,9 @@
     "az_example": "Məhkəmə alışın satıcının mala sahib olduğuna xeyirxah niyyətlə inanaraq edildiyini qəbul etdi.",
     "collocations": "bona fide purchaser / bona fide belief",
     "level": "H",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 256,
@@ -2446,7 +2852,9 @@
     "az_example": "İttiham tərəfi cavabdeh əleyhinə ilk baxışdan əsaslı iş təqdim etdi.",
     "collocations": "prima facie case / prima facie evidence",
     "level": "A",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 257,
@@ -2458,7 +2866,9 @@
     "az_example": "Onun vəkilləri saxlanılmasına etiraz etmək üçün habeas corpus ərizəsi təqdim etdilər.",
     "collocations": "writ of habeas corpus / to file for habeas corpus",
     "level": "A",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 258,
@@ -2470,7 +2880,9 @@
     "az_example": "Nikah tərəflərdən birinin razılıq vermə qabiliyyətinin olmaması səbəbindən etibarsız elan edildi.",
     "collocations": "decree of nullity / to declare a nullity",
     "level": "A",
-    "topic": "Legal Principles"
+    "topic": "Legal Principles",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 260,
@@ -2482,7 +2894,9 @@
     "az_example": "Çətinlik çəkən pərakəndə satış şirkəti kreditorları tərəfindən müvəqqəti idarəetməyə verildi.",
     "collocations": "to go into / be placed in receivership",
     "level": "A",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 261,
@@ -2494,7 +2908,9 @@
     "az_example": "Kreditorlar borcun bir hissəsini geri qaytarmaq üçün ödəniş planına razılaşdılar.",
     "collocations": "secured / unsecured creditor / creditors' meeting",
     "level": "F",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 262,
@@ -2506,7 +2922,9 @@
     "az_example": "Borcluya qalıq məbləği ödəmək üçün altmış gün vaxt verildi.",
     "collocations": "judgment debtor / to pursue a debtor",
     "level": "F",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 263,
@@ -2518,7 +2936,9 @@
     "az_example": "Üç ildən sonra o, müflisləşmədən azad olma sənədini aldı.",
     "collocations": "to obtain / apply for discharge of bankruptcy",
     "level": "A",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 264,
@@ -2530,7 +2950,9 @@
     "az_example": "Məhkəmə şirkətə yenidənqurulmaq imkanı vermək üçün idarəetmə əmri verdi.",
     "collocations": "to apply for / grant an administration order",
     "level": "A",
-    "topic": "Bankruptcy Law"
+    "topic": "Bankruptcy Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 265,
@@ -2542,7 +2964,9 @@
     "az_example": "Məhkəmə ona keçmiş həyat yoldaşına beş il müddətinə nəfəqə ödəməyi əmr etdi.",
     "collocations": "to pay / claim alimony / alimony payments",
     "level": "F",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 267,
@@ -2554,7 +2978,9 @@
     "az_example": "O, nikahın heç vaxt həyata keçirilmədiyi əsasında onun etibarsız sayılması üçün müraciət etdi.",
     "collocations": "to seek / grant an annulment / decree of annulment",
     "level": "H",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 268,
@@ -2566,7 +2992,9 @@
     "az_example": "Onlar ayrı-ayrı əmlaklarını qorumaq üçün toydan əvvəl nikahdan əvvəl bağlanan saziş imzaladılar.",
     "collocations": "to sign / draft a prenuptial agreement",
     "level": "H",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 269,
@@ -2578,7 +3006,9 @@
     "az_example": "Boşanma hökmü altı aylıq gözləmə müddətindən sonra yekunlaşdırıldı.",
     "collocations": "to issue / finalise a divorce decree",
     "level": "F",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 270,
@@ -2590,7 +3020,9 @@
     "az_example": "Məhkəmə onu kiçik bacı-qardaşlarının qanuni qəyyumu təyin etdi.",
     "collocations": "to appoint / grant guardianship / legal guardian",
     "level": "F",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 271,
@@ -2602,7 +3034,9 @@
     "az_example": "Cütlük aylarla davam edən qiymətləndirmədən sonra övladlığa götürmə prosesini tamamladı.",
     "collocations": "to apply for / finalise an adoption / adoption agency",
     "level": "F",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 272,
@@ -2614,7 +3048,9 @@
     "az_example": "Atasına uşaqları üçün aylıq ödəniş tələb edən saxlama haqqı əmri verildi.",
     "collocations": "to apply for / enforce a maintenance order",
     "level": "H",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 273,
@@ -2626,7 +3062,9 @@
     "az_example": "Aktivlər bölüşdürülmədən əvvəl miras vergisi ödənilməli idi.",
     "collocations": "to pay / be exempt from inheritance tax",
     "level": "H",
-    "topic": "Tax Law"
+    "topic": "Tax Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 274,
@@ -2638,7 +3076,9 @@
     "az_example": "Vərəsəlik vergisi varislərə keçən aktivlərin dəyərini xeyli azaltdı.",
     "collocations": "to assess / collect estate tax / estate tax exemption",
     "level": "A",
-    "topic": "Tax Law"
+    "topic": "Tax Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 276,
@@ -2650,7 +3090,9 @@
     "az_example": "Şirkət öhdəliklərini azaltmaq üçün qanuni vergidən yan keçmə sxemlərindən istifadə etdi.",
     "collocations": "tax avoidance scheme / aggressive tax avoidance",
     "level": "A",
-    "topic": "Tax Law"
+    "topic": "Tax Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 277,
@@ -2662,7 +3104,9 @@
     "az_example": "O, ikinci əmlakını satmaqdan əldə etdiyi mənfəətə görə kapital artımı vergisi ödəməli oldu.",
     "collocations": "to be liable for / exempt from capital gains tax",
     "level": "H",
-    "topic": "Tax Law"
+    "topic": "Tax Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 278,
@@ -2674,7 +3118,9 @@
     "az_example": "Bank xarici investorlara ödənilən faizdən mənbədən tutulan vergini çıxdı.",
     "collocations": "to deduct / impose withholding tax",
     "level": "A",
-    "topic": "Tax Law"
+    "topic": "Tax Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 279,
@@ -2686,7 +3132,9 @@
     "az_example": "Saziş sərhədlərarası gəlirin ikiqat vergitutmasının qarşısını almaq üçün imzalandı.",
     "collocations": "double taxation treaty / to avoid / relieve double taxation",
     "level": "A",
-    "topic": "Tax Law"
+    "topic": "Tax Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 280,
@@ -2698,7 +3146,9 @@
     "az_example": "Vizası ləğv edildikdən sonra o, deportasiya təhlükəsi ilə üzləşdi.",
     "collocations": "deportation order / to face / order deportation",
     "level": "H",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 281,
@@ -2710,7 +3160,9 @@
     "az_example": "O, vətənində siyasi təqibdən qaçdıqdan sonra sığınacaq üçün müraciət etdi.",
     "collocations": "to seek / grant / claim asylum / asylum seeker",
     "level": "F",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 282,
@@ -2722,7 +3174,9 @@
     "az_example": "O, iş vizasının müddəti bitməzdən əvvəl onu yeniləməli idi.",
     "collocations": "to apply for / renew / extend a visa / visa requirements",
     "level": "F",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 283,
@@ -2734,7 +3188,9 @@
     "az_example": "On il yaşadıqdan sonra o, vətəndaşlığa qəbul üçün müraciət etmək hüququ qazandı.",
     "collocations": "naturalization process / to apply for naturalization",
     "level": "H",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 284,
@@ -2746,7 +3202,9 @@
     "az_example": "Onun yaşayış icazəsi daha iki il müddətinə uzadıldı.",
     "collocations": "to obtain / renew a residency permit",
     "level": "F",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 285,
@@ -2758,7 +3216,9 @@
     "az_example": "Müraciətləri araşdırılarkən mühacirlər saxlanılma yerində saxlanıldı.",
     "collocations": "immigration detention / to hold in / release from detention",
     "level": "A",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 286,
@@ -2770,7 +3230,9 @@
     "az_example": "Tribunal təqib riski əsasında ona qaçqın statusu verdi.",
     "collocations": "to grant / be denied refugee status / refugee status determination",
     "level": "H",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 287,
@@ -2782,7 +3244,9 @@
     "az_example": "Toqquşma işi dəniz məhkəməsində dəniz hüququ əsasında baxıldı.",
     "collocations": "admiralty court / principles of admiralty law",
     "level": "A",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 288,
@@ -2794,7 +3258,9 @@
     "az_example": "İxracatçı akkreditiv üzrə ödəniş tələb etmək üçün konosament təqdim etdi.",
     "collocations": "to issue / present a bill of lading",
     "level": "A",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 289,
@@ -2806,7 +3272,9 @@
     "az_example": "Çarter müqaviləsində daşıma haqqı dərəcəsi və icarə müddəti müəyyən edilmişdi.",
     "collocations": "to sign / negotiate a charter party / time charter party",
     "level": "A",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 290,
@@ -2818,7 +3286,9 @@
     "az_example": "Xilasetmə şirkətinə sahilə oturmuş tankeri xilas etdiyinə görə xeyli haqq ödənildi.",
     "collocations": "salvage operation / to claim a salvage award",
     "level": "A",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 291,
@@ -2830,7 +3300,9 @@
     "az_example": "Heyət ödənilməmiş əmək haqqına görə gəmi üzərində dəniz girovu hüququ irəli sürdü.",
     "collocations": "to enforce / assert a maritime lien",
     "level": "A",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 292,
@@ -2842,7 +3314,9 @@
     "az_example": "Gəmi öz bayraq dövlətinin təhlükəsizlik qaydalarına əməl etməli idi.",
     "collocations": "flag state jurisdiction / to register under a flag state",
     "level": "A",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 293,
@@ -2854,7 +3328,9 @@
     "az_example": "Çarterçi yükün boşaldılmasındakı gecikməyə görə demuraj ödəməli oldu.",
     "collocations": "to incur / pay demurrage / demurrage charges",
     "level": "A",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 295,
@@ -2866,7 +3342,9 @@
     "az_example": "Onun atası kreditin ödənilməsi üçün zamin olmağa razılıq verdi.",
     "collocations": "to act as / stand as guarantor / guarantor agreement",
     "level": "F",
-    "topic": "Banking & Finance Law"
+    "topic": "Banking & Finance Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 296,
@@ -2878,7 +3356,9 @@
     "az_example": "Borcalan işini itirdikdən sonra kreditin ödənilməsində öhdəliyini yerinə yetirmədi.",
     "collocations": "to default on a loan / event of default",
     "level": "F",
-    "topic": "Banking & Finance Law"
+    "topic": "Banking & Finance Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 297,
@@ -2890,7 +3370,9 @@
     "az_example": "Bank yeni kreditləşmə üçün kapitalı sərbəst buraxmaq məqsədilə sekuritizasiyadan istifadə etdi.",
     "collocations": "securitization process / to securitize assets",
     "level": "A",
-    "topic": "Banking & Finance Law"
+    "topic": "Banking & Finance Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 298,
@@ -2902,7 +3384,9 @@
     "az_example": "Yük üçün ödəniş ləğv edilə bilməyən akkreditiv vasitəsilə təmin edildi.",
     "collocations": "to issue / open a letter of credit / irrevocable letter of credit",
     "level": "H",
-    "topic": "Banking & Finance Law"
+    "topic": "Banking & Finance Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 299,
@@ -2914,7 +3398,9 @@
     "az_example": "Kredit müqaviləsində əlavə borc almağı məhdudlaşdıran şərt öhdəlikləri var idi.",
     "collocations": "financial covenant / to breach a covenant",
     "level": "A",
-    "topic": "Banking & Finance Law"
+    "topic": "Banking & Finance Law",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 300,
@@ -2926,7 +3412,9 @@
     "az_example": "İnvestorlar startapı maliyyələşdirməyə razı olmazdan əvvəl hərtərəfli yoxlama apardılar.",
     "collocations": "to conduct / carry out due diligence / due diligence report",
     "level": "H",
-    "topic": "Banking & Finance Law"
+    "topic": "Banking & Finance Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 301,
@@ -2938,7 +3426,9 @@
     "az_example": "O, təcrübə müqaviləsini bitirdikdən sonra hüquqşünas ixtisasına yiyələndi.",
     "collocations": "to qualify as a lawyer / corporate lawyer / criminal lawyer",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 302,
@@ -2950,7 +3440,9 @@
     "az_example": "Solisitor müştərisinə mübahisəni məhkəmədənkənar həll etməyi məsləhət gördü.",
     "collocations": "to instruct a solicitor / firm of solicitors",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 303,
@@ -2962,7 +3454,9 @@
     "az_example": "Solisitor müştərini məhkəmədə təmsil etmək üçün barrister təyin etdi.",
     "collocations": "to instruct a barrister / practising barrister",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 304,
@@ -2974,7 +3468,9 @@
     "az_example": "ABŞ-da cavabdehin vəkili işin rədd edilməsi barədə vəsatət verdi.",
     "collocations": "district attorney / power of attorney",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 305,
@@ -2986,7 +3482,9 @@
     "az_example": "Barristerlər məhkəmədə dəlilləri təsirli təqdim etmək üçün vəkillik fəaliyyəti üzrə təlim keçirlər.",
     "collocations": "skills of advocacy / oral advocacy",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 306,
@@ -2998,7 +3496,9 @@
     "az_example": "O, kommersiya hüququ üzrə ixtisaslaşmış böyük beynəlxalq hüquq firmasında işləyir.",
     "collocations": "to work for / join a law firm",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 307,
@@ -3010,7 +3510,9 @@
     "az_example": "O, məzun olduqdan sonra aparıcı firmada təcrübə müqaviləsi əldə etdi.",
     "collocations": "to secure / complete a training contract",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 308,
@@ -3022,7 +3524,9 @@
     "az_example": "Bar kursundan sonra o, vəkillər palatasında pupillage təlimini başladı.",
     "collocations": "to undertake / complete pupillage",
     "level": "A",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 309,
@@ -3034,7 +3538,9 @@
     "az_example": "İddiaçı müqavilənin pozulmasına görə iddia qaldırdı.",
     "collocations": "to issue / serve / settle a claim",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 310,
@@ -3046,7 +3552,9 @@
     "az_example": "Ödənilməmiş borclara görə şirkət əleyhinə məhkəmə icraatı başladıldı.",
     "collocations": "to issue / commence / stay proceedings / court proceedings",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 311,
@@ -3058,7 +3566,9 @@
     "az_example": "Uduzan tərəfə qarşı tərəfin məhkəmə xərclərini ödəmək tapşırıldı.",
     "collocations": "to award / recover legal costs",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 312,
@@ -3070,7 +3580,9 @@
     "az_example": "İddia ilk qaldırıldıqda məhkəmə rüsumu ödənilməlidir.",
     "collocations": "to pay / waive a court fee",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 313,
@@ -3082,7 +3594,9 @@
     "az_example": "Qərarı icra etmək və borcu almaq üçün məhkəmə icraçısı göndərildi.",
     "collocations": "to send in / instruct a bailiff",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 314,
@@ -3094,7 +3608,9 @@
     "az_example": "Müştəri qüsurlu məhsula görə şirkəti məhkəməyə verməklə hədələdi.",
     "collocations": "to sue someone for damages / to be sued",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 315,
@@ -3106,7 +3622,9 @@
     "az_example": "Apellyasiya prosessual ədalətsizlik əsasları ilə təmin edildi.",
     "collocations": "grounds for a claim / on the grounds of",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 316,
@@ -3118,7 +3636,9 @@
     "az_example": "Bir çox şəxsi zədə işləri 'uduşsuz ödənişsiz' əsasında götürülür.",
     "collocations": "no win no fee agreement / on a no win no fee basis",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 317,
@@ -3130,7 +3650,9 @@
     "az_example": "Müqaviləyə hər hansı mübahisənin necə həll olunacağına dair bənd daxil edilmişdi.",
     "collocations": "to resolve / settle a dispute / dispute resolution",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 318,
@@ -3142,7 +3664,9 @@
     "az_example": "Səhlənkarlıq şəxsi zədə işlərində ən geniş yayılmış delikt növüdür.",
     "collocations": "to commit a tort / law of tort",
     "level": "F",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 319,
@@ -3154,7 +3678,9 @@
     "az_example": "Məhkəmə zədələnmiş işçiyə kompensasiya təyin etdi.",
     "collocations": "to award / claim / pay compensation",
     "level": "F",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 320,
@@ -3166,7 +3692,9 @@
     "az_example": "O, oğlunun doğulmasından sonra altı ay analıq məzuniyyəti götürdü.",
     "collocations": "to take / be on maternity leave",
     "level": "F",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 321,
@@ -3178,7 +3706,9 @@
     "az_example": "İşçilər müəyyən müddətdən sonra qanunla nəzərdə tutulan xəstəlik ödənişinə haqq qazanırlar.",
     "collocations": "statutory sick pay / to receive sick pay",
     "level": "F",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 322,
@@ -3190,7 +3720,9 @@
     "az_example": "Təsisçilər şirkəti yaratmaq üçün investorlardan kapital cəlb etdilər.",
     "collocations": "to raise / invest capital / share capital",
     "level": "F",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 323,
@@ -3202,7 +3734,9 @@
     "az_example": "Solisitor tərəfdaşlara biznesin yaradılması barədə məsləhət verdi.",
     "collocations": "formation of a business / company formation",
     "level": "H",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 324,
@@ -3214,7 +3748,9 @@
     "az_example": "İki hüquqşünas öz firmalarını qurmaq üçün ortaqlıq yaratdılar.",
     "collocations": "to form / dissolve a partnership / business partnership",
     "level": "F",
-    "topic": "Company Law"
+    "topic": "Company Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 325,
@@ -3226,7 +3762,9 @@
     "az_example": "O, yığımının böyük hissəsini kommersiya daşınmaz əmlakına qoydu.",
     "collocations": "real estate agent / commercial real estate",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 326,
@@ -3238,7 +3776,9 @@
     "az_example": "Hər tərəf saziş üzrə öz öhdəliklərini yerinə yetirməlidir.",
     "collocations": "to fulfil / breach an obligation / contractual obligation",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 327,
@@ -3250,7 +3790,9 @@
     "az_example": "Müqavilənin etibarlı olması üçün təklif, qəbul və əvəz olmalıdır.",
     "collocations": "valid contract / legally valid",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 328,
@@ -3262,7 +3804,9 @@
     "az_example": "O, bütün əmlakını övladlarına vəsiyyət edən vəsiyyətnamə tərtib etdi.",
     "collocations": "to make / draw up / execute a will",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 329,
@@ -3274,7 +3818,9 @@
     "az_example": "Torpağın mülkiyyəti əməliyyat tamamlandıqda alıcıya keçdi.",
     "collocations": "to transfer / acquire ownership / proof of ownership",
     "level": "F",
-    "topic": "Property Law"
+    "topic": "Property Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 330,
@@ -3286,7 +3832,9 @@
     "az_example": "Malları vaxtında çatdırmamaq sazişin pozulması idi.",
     "collocations": "to breach a contract / in breach of / material breach",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 331,
@@ -3298,7 +3846,9 @@
     "az_example": "Solisitordan əmək müqaviləsini tərtib etmək tələb olundu.",
     "collocations": "to draft a contract / draft agreement",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 332,
@@ -3310,7 +3860,9 @@
     "az_example": "Şirkət müqavilə üzrə öz öhdəliklərini yerinə yetirdi.",
     "collocations": "to honour a contract / honour an agreement",
     "level": "H",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 333,
@@ -3322,7 +3874,9 @@
     "az_example": "Müqavilə malların xarici alıcıya satışına aid idi.",
     "collocations": "sale of goods / to deliver / supply goods",
     "level": "F",
-    "topic": "Contract Law"
+    "topic": "Contract Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 334,
@@ -3334,7 +3888,9 @@
     "az_example": "Solisitor işi müzakirə etmək üçün müştəri ilə görüşdü.",
     "collocations": "to act for / advise a client",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 335,
@@ -3346,7 +3902,9 @@
     "az_example": "Barrister cavabdehi məhkəmədə təmsil edəcək.",
     "collocations": "to represent a client / legally represented",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 336,
@@ -3358,7 +3916,9 @@
     "az_example": "O, əqli mülkiyyət hüququ üzrə ixtisaslaşmaq qərarına gəldi.",
     "collocations": "to specialise in law / specialise in a field",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 337,
@@ -3370,7 +3930,9 @@
     "az_example": "O, beş illik təcrübəyə malik tam ixtisaslı solisitordur.",
     "collocations": "to be / become qualified / newly qualified",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 338,
@@ -3382,7 +3944,9 @@
     "az_example": "O, böyük firmadakı illərdən sonra öz hüquqi fəaliyyətini qurdu.",
     "collocations": "to set up / run a legal practice",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 339,
@@ -3394,7 +3958,9 @@
     "az_example": "O, təlimini bitirdikdən sonra Bara qəbul edildi.",
     "collocations": "to be called to the Bar / member of the Bar",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 340,
@@ -3406,7 +3972,9 @@
     "az_example": "İddia ərizəsi cavabdehə dörd ay ərzində təqdim edilməlidir.",
     "collocations": "to serve a claim / serve documents / serve notice",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 341,
@@ -3418,7 +3986,9 @@
     "az_example": "Cavabdehin iddiaya cavab vermək üçün 14 günü var.",
     "collocations": "to respond to a claim / respond in writing",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 342,
@@ -3430,7 +4000,9 @@
     "az_example": "Şirkət bütün intizam pozuntusu ittihamlarını rədd etdi.",
     "collocations": "to make / deny / face an allegation",
     "level": "H",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 343,
@@ -3442,7 +4014,9 @@
     "az_example": "Solisitor eyni müştəri üçün bir neçə işlə məşğuldur.",
     "collocations": "to handle / deal with a matter / legal matter",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 344,
@@ -3454,7 +4028,9 @@
     "az_example": "Qəza sürücünün diqqətsizliyi nəticəsində baş verdi.",
     "collocations": "gross carelessness / due to carelessness",
     "level": "H",
-    "topic": "Tort Law"
+    "topic": "Tort Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 345,
@@ -3466,7 +4042,9 @@
     "az_example": "Hakim sübutları dinlədi və iddiaçının xeyrinə qərar çıxardı.",
     "collocations": "sit as a judge / appear before a judge / preside over a case",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 346,
@@ -3478,7 +4056,9 @@
     "az_example": "İxtisas aldıqdan sonra o, kommersiya hüquq firmasında assosiat kimi işlədi.",
     "collocations": "senior / junior associate / promote an associate",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 347,
@@ -3490,7 +4070,9 @@
     "az_example": "Firmada on ildən sonra o, tərəfdaş oldu.",
     "collocations": "become a partner / managing partner / senior partner",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 348,
@@ -3502,7 +4084,9 @@
     "az_example": "Təcrübəçi solisitor kimi o, dörd müxtəlif şöbədə növbə ilə çalışdı.",
     "collocations": "trainee solicitor / training contract",
     "level": "F",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 349,
@@ -3514,7 +4098,9 @@
     "az_example": "Barrister Londonun mərkəzindəki çambersdən işləyir.",
     "collocations": "a set of chambers / barristers’ chambers",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 350,
@@ -3526,7 +4112,9 @@
     "az_example": "Barristerlər bütün məhkəmələrdə çıxış hüququna malikdir.",
     "collocations": "right of audience in the higher courts",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 351,
@@ -3538,7 +4126,9 @@
     "az_example": "O, tək çalışan vəkil kimi işləmək üçün firmadan ayrıldı.",
     "collocations": "work as a sole practitioner",
     "level": "H",
-    "topic": "Legal Profession"
+    "topic": "Legal Profession",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 352,
@@ -3550,7 +4140,9 @@
     "az_example": "O, işəgötürəninə qarşı bərabər əmək haqqı iddiası qaldırdı.",
     "collocations": "equal pay claim / right to equal pay",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 353,
@@ -3562,7 +4154,9 @@
     "az_example": "Cavabdeh borcu ödəmək barədə məhkəmə əmrini nəzərə almadı.",
     "collocations": "to make / obey / enforce a court order",
     "level": "F",
-    "topic": "Court & Litigation"
+    "topic": "Court & Litigation",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 354,
@@ -3574,7 +4168,9 @@
     "az_example": "O, xaricdə yeni işinə başlamazdan əvvəl iş icazəsinə ehtiyac duydu.",
     "collocations": "to apply for / obtain a work permit",
     "level": "F",
-    "topic": "Immigration Law"
+    "topic": "Immigration Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 355,
@@ -3586,7 +4182,9 @@
     "az_example": "Gəmi yükü Atlantik okeanı boyunca daşıdı.",
     "collocations": "to charter / register a ship",
     "level": "F",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 356,
@@ -3598,7 +4196,9 @@
     "az_example": "Yük dənizdə itki riskinə qarşı sığortalanmışdı.",
     "collocations": "to carry / insure / transport cargo",
     "level": "F",
-    "topic": "Maritime Law"
+    "topic": "Maritime Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 357,
@@ -3610,7 +4210,9 @@
     "az_example": "Nikah dağıldıqdan sonra o, boşanma üçün müraciət etdi.",
     "collocations": "to file for / grant a divorce",
     "level": "F",
-    "topic": "Family Law"
+    "topic": "Family Law",
+    "track": "legal",
+    "cefr": "B2"
   },
   {
     "id": 358,
@@ -3622,7 +4224,9 @@
     "az_example": "Yuxarıda qeyd edilmiş müddəalar bu müqavilə çərçivəsindəki bütün əməliyyatlara tətbiq ediləcək.",
     "collocations": "abovementioned provisions; aforementioned parties; aforesaid conditions; as mentioned above",
     "level": "A",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 359,
@@ -3634,7 +4238,9 @@
     "az_example": "Hər hesabat dövründən sonra 30 gün ərzində lisenziat tam royalti hesabatı təqdim etməlidir.",
     "collocations": "accounting period; reporting period; financial year; end of accounting period",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 360,
@@ -3646,7 +4252,9 @@
     "az_example": "Faiz gecikdirilmə tarixindən faktiki ödəniş tarixinə kimi ildə 8% nisbətilə toplanar.",
     "collocations": "interest accrues; accrue at a rate; accrued interest; accrual period; accrue from the date",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 361,
@@ -3658,7 +4266,9 @@
     "az_example": "Şirkət yenidən maliyyələşməni təmin edə bilmədikdən sonra müvəqqəti idarəetməyə keçdi; inzibatçı biznesi fəaliyyətdə saxlayaraq satdı.",
     "collocations": "enter administration; administration order; administrator appointed; going concern; out of administration",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 362,
@@ -3670,7 +4280,9 @@
     "az_example": "Tədarükçünün altı ay mal çatdırmaması alıcıya müqaviləyə xitam vermə hüququ verən ciddi əsaslı müqavilə pozuntusunu təşkil etdi.",
     "collocations": "adverse material breach; material breach; fundamental breach; repudiation; right to terminate",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 363,
@@ -3682,7 +4294,9 @@
     "az_example": "Tərəflər müqavilənin tələbinə əsasən məhkəmə prosesinə başlamazdan əvvəl mübahisəni alternativ mübahisə həllinə göndərməyə razılaşdı.",
     "collocations": "ADR clause; refer to ADR; mediation; arbitration; ADR procedure",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 364,
@@ -3694,7 +4308,9 @@
     "az_example": "Lisenziat, lisenziyalı texnologiyadan istifadəsindən irəli gələn bütün iddialardan lisenzoru zərərsiz saxlayacaq.",
     "collocations": "arising out of; arising from; claims arising from; loss arising out of; disputes arising under",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 365,
@@ -3706,7 +4322,9 @@
     "az_example": "İcarəçi üç aylıq gecikdirilmiş borca düşdü, bu da ev sahibini ödəniş bildirişi verməyə vadar etdi.",
     "collocations": "in arrears; fall into arrears; arrears of rent; interest on arrears; payment in arrears",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 366,
@@ -3718,7 +4336,9 @@
     "az_example": "Müqavilə əvvəlcədən yazılı razılıq olmadan güzəşti qadağan edir, alt-lisenziya isə icazəlidir.",
     "collocations": "assignment of rights; prohibited assignment; consent to assignment; assign without consent; assignment vs licence",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 367,
@@ -3730,7 +4350,9 @@
     "az_example": "Güzəşt edən distribüsiya müqaviləsi üzrə bütün hüquqları dərhal qüvvəyə minmə şərti ilə güzəşt alana köçürdü.",
     "collocations": "assignor's obligations; assignee's rights; assignment agreement; assignor and assignee",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 368,
@@ -3742,7 +4364,9 @@
     "az_example": "Bu müqavilə tərəflər və onların öz varisləri ilə güzəşt alanları üçün bağlayıcı olacaq.",
     "collocations": "successors and assigns; assigns of the parties; permitted assigns; binding upon assigns",
     "level": "A",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 369,
@@ -3754,7 +4378,9 @@
     "az_example": "Lisenzor qrupundakı hər hansı əlaqəli şirkətə əlavə ödəniş tələb etmədən alt-lisenziya verə bilər.",
     "collocations": "associated company; group company; subsidiary; parent company; affiliate",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 370,
@@ -3766,7 +4392,9 @@
     "az_example": "Şübhənin aradan qaldırılması üçün qeyd edirik ki, lisenzor proqram üzərindəki bütün əqli mülkiyyət hüquqlarını saxlayır.",
     "collocations": "for the avoidance of doubt; avoidance of doubt clause; to avoid any doubt; it is confirmed that",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 371,
@@ -3778,7 +4406,9 @@
     "az_example": "Hükümdən sonra cavabdeh əleyhinə 20,000 funt sterlinq məbləğində məhkəmə xərclərinin ödənilməsi qərara alındı.",
     "collocations": "costs awarded against; award costs against; costs order; awarded in favour of",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 372,
@@ -3790,7 +4420,9 @@
     "az_example": "Alıcı tamamlama tarixindən 10 iş günü ərzində alış qiymətinin qalıq məbləğini ödəyəcək.",
     "collocations": "outstanding balance; remaining balance; balance of the price; settle the balance; pay the balance",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 373,
@@ -3802,7 +4434,9 @@
     "az_example": "Kreditor bir ildən çox ödəniş etməyən fiziki şəxs borcluya qarşı müflislik ərizəsi verdi.",
     "collocations": "declared bankrupt; bankruptcy petition; petition for bankruptcy; personal bankruptcy; individual insolvency",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 374,
@@ -3814,7 +4448,9 @@
     "az_example": "Gecikdirilmiş ödənişlər üzrə faiz İngiltərə Bankının əsas faiz dərəcəsindən yüksək ildə 4% nisbətilə toplanar.",
     "collocations": "base rate; above base rate; bank base rate; reference rate; prime rate",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 375,
@@ -3826,7 +4462,9 @@
     "az_example": "Əməliyyatdan irəli gələn bütün xərclər tərəflər arasında bərabər bölüşdürüləcək.",
     "collocations": "costs borne by; bear the cost; borne by the employer; bear the risk; bear sole responsibility",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 376,
@@ -3838,7 +4476,9 @@
     "az_example": "Distribütor ərazidə məhsulları tanıtmaq və satmaq üçün maksimum səy göstərəcək.",
     "collocations": "best endeavours; reasonable endeavours; use best endeavours; all reasonable efforts; commercially reasonable efforts",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 378,
@@ -3850,7 +4490,9 @@
     "az_example": "500,000 funt sterlinqdən çox dəyər daşıyan müqavilənin icrasından əvvəl şuranın təsdiqi tələb olunur.",
     "collocations": "board approval; board resolution; board meeting; board decision; subject to board approval",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 379,
@@ -3862,7 +4504,9 @@
     "az_example": "Vəkil xüsusilə tətbiq edilən hüquq və arbitraj müddəalarına diqqət yetirərək standart tipik bəndləri diqqətlə nəzərdən keçirdi.",
     "collocations": "boilerplate clauses; standard clauses; miscellaneous provisions; governing law clause; entire agreement clause",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 380,
@@ -3874,7 +4518,9 @@
     "az_example": "Bütün tərəflər imzalanma tarixindən bu müqavilənin şərtlərinə hüquqi olaraq bağlıdır.",
     "collocations": "legally bound; bound by the terms; bound by contract; binding obligation; binding on the parties",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 381,
@@ -3886,7 +4532,9 @@
     "az_example": "Tədarükçü razılaşdırılmış texniki xüsusiyyətlərə uyğun olmayan mallar çatdıraraq müqaviləni pozdu.",
     "collocations": "breach a contract; in breach of; remedy a breach; breach of obligation; cure the breach",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 382,
@@ -3898,7 +4546,9 @@
     "az_example": "Pozuntuya yol verməyən tərəf digər hüquqlarına xələl gəlmədən pozuntuya yol verən tərəfdən kompensasiya tələb edə bilər.",
     "collocations": "breaching party; party in breach; non-breaching party; defaulting party",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 383,
@@ -3910,7 +4560,9 @@
     "az_example": "Fakturaya tutulmuş bütün xərclər və xərclənmələrin tam ayrıntılı siyahısı əlavə edilməlidir.",
     "collocations": "cost breakdown; detailed breakdown; breakdown of charges; provide a breakdown",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 384,
@@ -3922,7 +4574,9 @@
     "az_example": "Satıcı alınan istənilən bildirişə beş iş günü ərzində cavab verməlidir.",
     "collocations": "business day; working day; within X business days; business day deadline; next business day",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 385,
@@ -3934,7 +4588,9 @@
     "az_example": "Gecikmə faizi bəndinin işə düşməsinin qarşısını almaq üçün ödəniş 31 mart 2026-cı ilə kimi həyata keçirilməlidir.",
     "collocations": "by the due date; on or before; by close of business; payment deadline; no later than",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 386,
@@ -3946,7 +4602,9 @@
     "az_example": "Lisenziat hər təqvim ayının bitimindən 30 gün ərzində royalti hesabatları təqdim etməlidir.",
     "collocations": "calendar month; per calendar month; within one calendar month; calendar year",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 387,
@@ -3958,7 +4616,9 @@
     "az_example": "Fəsx zamanı lisenziat bütün lisenziyalı ticarət nişanlarından və materiallardan istifadəni dərhal dayandırmalıdır.",
     "collocations": "cease and desist; cease using; cease trading; cease operations; immediately cease",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 388,
@@ -3970,7 +4630,9 @@
     "az_example": "Kreditçi şirkətin torpağı üzərindəki sabit yükü və ticari debitor borcları üzərindəki üzən yükü götürdü.",
     "collocations": "fixed charge; floating charge; register a charge; charge over assets; security interest; crystallise a charge",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 389,
@@ -3982,7 +4644,9 @@
     "az_example": "Bənd başlıqları yalnız istinad məqsədi üçündür və bu müqavilənin qurulmasına və ya şərhinə təsir etməyəcək.",
     "collocations": "clause headings; section headings; for convenience only; headings not binding",
     "level": "A",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 390,
@@ -3994,7 +4658,9 @@
     "az_example": "Bütün ilkin şərtlər yerinə yetirildikdə və ya imtina edildikdə tamamlama baş verəcək.",
     "collocations": "completion date; closing date; date of completion; pre-completion conditions; post-closing obligations",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 391,
@@ -4006,7 +4672,9 @@
     "az_example": "Satın alma 90 gün ərzində rəqabət orqanının təsdiqinin alınmasına şərtlidir.",
     "collocations": "conditional on; conditional upon; subject to; provided that; contingent upon",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 392,
@@ -4018,7 +4686,9 @@
     "az_example": "Satın alma tənzimləyici rəy və üçüncü tərəf razılıqları daxil olmaqla ilkin şərtlərin yerinə yetirilməsinə tabedir.",
     "collocations": "conditions precedent; satisfy / waive a CP; CP satisfaction notice; condition precedent to closing",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 394,
@@ -4030,7 +4700,9 @@
     "az_example": "Heç bir tərəf mənfəətin, gəlirin və ya biznes fürsətinin itirilməsi daxil olmaqla, hər hansı dolayı zərərə görə məsuliyyət daşımayacaq.",
     "collocations": "consequential loss; indirect loss; exclude consequential loss; loss of profits; special damages",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 395,
@@ -4042,7 +4714,9 @@
     "az_example": "Patent güzəşti üçün əvəz tamamlama zamanı ödəniləcək 2 milyon funt sterlinq birdəfəlik məbləğ idi.",
     "collocations": "in consideration of; good consideration; valuable consideration; nominal consideration; consideration for the assignment",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 396,
@@ -4054,7 +4728,9 @@
     "az_example": "Bu müqavilə İngiltərə və Uels qanunlarına uyğun tənzimlənəcək və şərh ediləcək.",
     "collocations": "construed in accordance with; rules of construction; governed and construed; interpretation clause",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 397,
@@ -4066,7 +4742,9 @@
     "az_example": "Tərəflər bu müqavilə ilə nəzərdə tutulmuş bütün əməliyyatlarla bağlı vicdanla hərəkət edəcəklər.",
     "collocations": "contemplated by this agreement; transactions contemplated; as contemplated herein",
     "level": "A",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C2"
   },
   {
     "id": 398,
@@ -4078,7 +4756,9 @@
     "az_example": "Bu müqavilə ayrı-ayrı nüsxələrdə imzalana bilər; hər biri orijinal sayılır, hamısı bir yerdə isə bir müqavilə əmələ gətirir.",
     "collocations": "executed in counterparts; counterparts clause; multiple originals; electronic counterparts",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 399,
@@ -4090,7 +4770,9 @@
     "az_example": "Ləğvetmə zamanı inzibatçı aktivləri əvvəlcə girovlu kreditorlara, sonra isə girovzuz kreditorlara payladı.",
     "collocations": "secured / unsecured creditor; preferential creditor; creditors meeting; judgment creditor",
     "level": "H",
-    "topic": "Commercial Contracts"
+    "topic": "Commercial Contracts",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 400,
@@ -4102,7 +4784,9 @@
     "az_example": "İşçi xəstəlik üzündən üç gün işdə olmadı və geri döndükdə tibbi arayış təqdim etdi.",
     "collocations": "absence from work; absent due to illness; unauthorised absence; absence record; persistent absence",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 401,
@@ -4114,7 +4798,9 @@
     "az_example": "İşçi altı aylıq sınaq müddətinin sonuna qədər 15 günlük ödənişli məzuniyyət hüququ toplamışdı.",
     "collocations": "accrued holiday; accrue leave entitlement; accrued rights; accrual of benefits",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 402,
@@ -4126,7 +4812,9 @@
     "az_example": "Vəzifə həm müştərilərlə ünsiyyəti, həm də arxivləmə və hesabat hazırlamaq kimi müəyyən həcmdə inzibati işi əhatə edir.",
     "collocations": "administrative duties; administrative work; office administration; carry out administrative tasks",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 403,
@@ -4138,7 +4826,9 @@
     "az_example": "Tribunal müəyyən etdi ki, işəgötürənin siyasəti əlilliyi olan işçilərə mənfi təsir göstərdi.",
     "collocations": "adverse effect on; have an adverse effect; adverse impact; detrimental effect",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 404,
@@ -4150,7 +4840,9 @@
     "az_example": "Yeni qanun bir çox işəgötürənə ciddi təsir edəcək. Əsas nəticələrdən biri ayrı-seçkilik iddialarının artması olacaq.",
     "collocations": "affect employment; take effect; have an effect; come into effect; adverse effect",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 405,
@@ -4162,7 +4854,9 @@
     "az_example": "Müddəi üstün ixtisaslara sahib olmasına baxmayaraq müsahibədə rədd edildikdən sonra yaş ayrı-seçkiliyi iddiasını irəli sürdü.",
     "collocations": "age discrimination claim; age discrimination law; discriminate on grounds of age; direct / indirect age discrimination",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 407,
@@ -4174,7 +4868,9 @@
     "az_example": "İşdən çıxarılan işçi intizam siyasətindəki nəzərdə tutulduğu kimi beş iş günü ərzindəki apellyasiya hüququndan istifadə etdi.",
     "collocations": "lodge / submit an appeal; appeal hearing; right of appeal; appeal against dismissal; appeal outcome",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 408,
@@ -4186,7 +4882,9 @@
     "az_example": "Bütün namizədlər standart müraciət formasını doldurmaq və iki mərhələli müsahibə prosesinə qatılmaq məcburiyyətindədir.",
     "collocations": "job applicant; short-listed applicant; successful / unsuccessful applicant; applicant pool; screen applicants",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 409,
@@ -4198,7 +4896,9 @@
     "az_example": "Müsahibə komitəsinin tövsiyəsindən sonra şura yeni Hüquq Şöbəsinin rəhbərinin təyinatını təsdiq etdi.",
     "collocations": "confirm an appointment; letter of appointment; terms of appointment; appointment to the role; new appointment",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 410,
@@ -4210,7 +4910,9 @@
     "az_example": "İllik performans qiymətləndirmə görüşü məqsədlər müəyyənləşdirmək, inkişaf ehtiyaclarını müzakirə etmək və maaşı nəzərdən keçirmək üçün fürsət yaradır.",
     "collocations": "annual appraisal; performance appraisal; appraisal meeting; conduct an appraisal; appraisal form / report",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 411,
@@ -4222,7 +4924,9 @@
     "az_example": "Üç aylıq sınaq müddətinin sonunda rəsmi performans qiymətləndirməsi aparılacaq.",
     "collocations": "performance assessment; assessment during probation; assess performance; performance review; carry out an assessment",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 412,
@@ -4234,7 +4938,9 @@
     "az_example": "Tribunal işçinin yoxluqlarının uzunmüddətli tibbi vəziyyətinə bağlı olduğunu qəbul etdi.",
     "collocations": "attributable to illness; directly attributable to; attributable to a disability; cause attributable to",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 413,
@@ -4246,7 +4952,9 @@
     "az_example": "İfşaçılıq üçün işçini işdən çıxarmaq avtomatik olaraq ədalətsizdir və məhdudiyyətsiz kompensasiya hüququ yaradır.",
     "collocations": "automatically unfair dismissal; automatically unfair reason; protected characteristic; no qualifying period",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 414,
@@ -4258,7 +4966,9 @@
     "az_example": "İşçi tribunal onun maaşının qanunsuz olaraq azaldıldığını müəyyən etdikdən sonra uğurla ödənilməmiş maaş tələbini qaldırdı.",
     "collocations": "claim back pay; unpaid wages; back pay award; recover back pay; back taxes owed",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 415,
@@ -4270,7 +4980,9 @@
     "az_example": "Uşaq baxım sektorundakı bütün yeni işçilər işə başlamazdan əvvəl cinayət qeydiyyatı yoxlanmasından keçməlidir.",
     "collocations": "criminal record check; DBS check; background screening; conduct a background check; reference check",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 416,
@@ -4282,7 +4994,9 @@
     "az_example": "Müqavilədə işçilərin 25 günlük illik məzuniyyətlərinə əlavə olaraq bütün dövlət bayramlarına haqları olduğu bildirilir.",
     "collocations": "bank holiday entitlement; public holiday; work on a bank holiday; bank holiday pay; statutory holiday",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 417,
@@ -4294,7 +5008,9 @@
     "az_example": "Maaş hər təqvim ayının son iş günündə bank köçürməsi yolu ilə ödəniləcək.",
     "collocations": "bank transfer; salary payment; direct deposit; account number; sort code; BACS payment",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 418,
@@ -4306,7 +5022,9 @@
     "az_example": "Müraciət blankı ictimai vəsaitlərin idarəsi ilə bağlı olan bu vəzifəyə görə cari və ya keçmiş müflisliyin açıqlanmasını tələb edir.",
     "collocations": "declared bankrupt; undischarged bankrupt; bankruptcy order; disclosure of bankruptcy; disqualify due to bankruptcy",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 419,
@@ -4318,7 +5036,9 @@
     "az_example": "Vəzifə öhdəliklərinin yerinə yetirilməsi zamanı çəkilən bütün ağlabatan səyahət xərcləri işəgötürən tərəfindən qarşılanacaq.",
     "collocations": "costs borne by the employer; bear the cost; borne by the employee; bear the risk; travel costs borne by",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 420,
@@ -4330,7 +5050,9 @@
     "az_example": "Əmək paketi 45,000 funt sterlinq maaş üstəgəl pensiya töhfəsi və şəxsi sağlamlıq sığortası kimi güzəştlərdən ibarətdir.",
     "collocations": "employee benefits; benefits package; statutory benefits; unemployment benefit; benefits entitlement",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 421,
@@ -4342,7 +5064,9 @@
     "az_example": "Şirkət avtomobili və şəxsi sağlamlıq xidməti kimi natura güzəştlər HMRC qaydaları çərçivəsindəki gəlir vergisinə tabedir.",
     "collocations": "benefits in kind; fringe benefits; perks of the job; taxable benefits; non-cash benefits",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 422,
@@ -4354,7 +5078,9 @@
     "az_example": "Müqavilə performansa bağlı olaraq əsas maaşın 20%-ə qədər mülahizəli illik bonus ödənişini nəzərdə tutur.",
     "collocations": "annual bonus; discretionary bonus; performance bonus; bonus payment; Christmas bonus; bonus scheme",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 423,
@@ -4366,7 +5092,9 @@
     "az_example": "Hər iki tərəf işə qəbul təklifinin qəbul edildiyi tarixdən əmək müqaviləsinin şərtlərini yerinə yetirməklə bağlıdır.",
     "collocations": "bound by contract; legally bound; bound by the terms; bound by legislation; bound by the agreement",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 424,
@@ -4378,7 +5106,9 @@
     "az_example": "İşçi əvvəlcə London filialına təyin edildi, lakin sonradan Manchester ofisine köçürüldü.",
     "collocations": "branch office; branch manager; local branch; transfer to a branch; branch location",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 425,
@@ -4390,7 +5120,9 @@
     "az_example": "İşçi işəgötürən razılaşdırılmış ixtisar ödənişini ödəmədikdən sonra müqavilənin pozulması iddiasını irəli sürdü.",
     "collocations": "breach of employment contract; claim for breach; breach by the employer / employee; remedy for breach",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 426,
@@ -4402,7 +5134,9 @@
     "az_example": "Şikayət siyasəti həmkarı və ya menecerin zorbalıq və ya intimidasiya davranışını bildirmək üçün proseduru müəyyənləşdirir.",
     "collocations": "workplace bullying; anti-bullying policy; intimidatory behaviour; harassment and bullying; report bullying",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 427,
@@ -4414,7 +5148,9 @@
     "az_example": "İşdən çıxarılmasına apellyasiya etmək istəyən işçi bunu yazılı əsasları aldıqdan sonra beş iş günü ərzindəki etməlidir.",
     "collocations": "business day; working day; within X business days; five business days; next business day",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 428,
@@ -4426,7 +5162,9 @@
     "az_example": "İşəgötürən uzunmüddətli xəstəlik səbəbindən işçini işdən çıxarmazdan əvvəl ədalətli qabiliyyət prosedurundan istifadə etdi.",
     "collocations": "capability procedure; capability dismissal; ill-health capability; lack of capability; capability review",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 429,
@@ -4438,7 +5176,9 @@
     "az_example": "Şirkət daimi işçilərini gücləndirmək üçün sıx yay dövründəki müvəqqəti işçiləri cəlb etdi.",
     "collocations": "casual worker; zero-hours contract; irregular worker; agency worker; casual employment",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 430,
@@ -4450,7 +5190,9 @@
     "az_example": "Şikayətçi ET1 formasını qanunla müəyyən edilmiş üç aylıq müddət ərzindəki Əmək Tribunalına təqdim etdi.",
     "collocations": "claimant at tribunal; ET1 form; claimant's case; successful claimant; claimant's representative",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 431,
@@ -4462,7 +5204,9 @@
     "az_example": "Həmkarlar ittifaqı ilə bağlanan kollektiv saziş əhatə edilən bütün işçilər üçün illik 3% maaş artımı nəzərdə tuturdu.",
     "collocations": "collective agreement; trade union agreement; collective bargaining; incorporated into contract; collective negotiation",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 432,
@@ -4474,7 +5218,9 @@
     "az_example": "Satış meneceri 25,000 funt sterlinq əsas maaş üstəgəl bağlanan bütün yeni müqavilələrdən 5% komissiya haqqı alır.",
     "collocations": "sales commission; commission rate; earn commission; commission-only role; commission structure; commission payment",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 433,
@@ -4486,7 +5232,9 @@
     "az_example": "Əmək Tribunalı şikayətçiyə haqsız işdən çıxarma və hisslərə xəsarət üçün 18,000 funt sterlinq kompensasiya hökm etdi.",
     "collocations": "compensation award; compensation for unfair dismissal; injury to feelings; basic award; compensatory award",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 434,
@@ -4498,7 +5246,9 @@
     "az_example": "Tərəflər işçinin üç aylıq maaş aldığı və bütün tribunal iddialarından imtina etdiyi kompromis sazişinə nail oldular.",
     "collocations": "settlement agreement; compromise agreement; COT3; without prejudice; waive tribunal claims; independent legal advice",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 435,
@@ -4510,7 +5260,9 @@
     "az_example": "Müqavilənin məxfilik şərti işçinin ayrıldıqdan sonra müştəri siyahılarını və ticarət sirlərini açıqlamasını məhdudlaşdırır.",
     "collocations": "confidentiality clause; non-disclosure agreement; NDA; duty of confidentiality; breach of confidentiality",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 436,
@@ -4522,7 +5274,9 @@
     "az_example": "İşçi meneceri onu ictimai alanda rüsvay etdikdən sonra istefa etdi və uğurla məcburi istefa iddiasını qaldırdı.",
     "collocations": "claim constructive dismissal; constructive unfair dismissal; fundamental breach; forced to resign; resign in response to breach",
     "level": "H",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "C1"
   },
   {
     "id": 437,
@@ -4534,6 +5288,8 @@
     "az_example": "Hər işçi işə başlamasından iki ay ərzindəki əmək müqaviləsinin əsas şərtlərinin yazılı bəyanatını almaq hüququna malikdir.",
     "collocations": "contract of employment; terms of employment; written statement; employment terms; implied terms; express terms",
     "level": "F",
-    "topic": "Employment Law"
+    "topic": "Employment Law",
+    "track": "legal",
+    "cefr": "B2"
   }
 ]
