@@ -45,6 +45,7 @@ const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
   'true-false':     { label: '✓✗ Doğru/Yanlış',   cls: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300' },
   'sentence':       { label: '📑 Cümlə tamamlama', cls: 'bg-violet-100 text-violet-700 dark:bg-violet-950 dark:text-violet-300' },
   'matching':       { label: '🔀 Uyğunlaşdırma',   cls: 'bg-lime-100 text-lime-700 dark:bg-lime-950 dark:text-lime-300' },
+  'grammar':        { label: '✏️ Qrammatika',      cls: 'bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300' },
 }
 
 // Səsləndirmə yalnız variantları söz/termin olan formatlarda göstərilir

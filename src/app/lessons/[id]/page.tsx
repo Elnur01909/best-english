@@ -89,7 +89,16 @@ export default function LessonPage() {
           </ul>
         </div>
 
+        {/* İzah (qrammatika / mətn dərsləri üçün) */}
+        {lesson.content && lesson.content.length > 40 && (
+          <div className="card">
+            <h2 className="font-semibold text-gray-900 dark:text-white mb-3">📖 İzah</h2>
+            <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{lesson.content}</div>
+          </div>
+        )}
+
         {/* Lüğət */}
+        {vocabItems.length > 0 && (
         <div>
           <h2 className="font-semibold text-gray-900 dark:text-white mb-4">📚 Dərsin Lüğəti</h2>
           <div className="space-y-4">
@@ -109,6 +118,7 @@ export default function LessonPage() {
             ))}
           </div>
         </div>
+        )}
 
         {/* Yazma Məşqi — 4-Modal: Motor */}
         {vocabItems.length > 0 && (

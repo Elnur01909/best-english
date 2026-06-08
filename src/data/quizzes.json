@@ -43846,5 +43846,1093 @@
     "cefr": "B1",
     "track": "general",
     "topic": "Nature & Weather"
+  },
+  {
+    "id": 2682,
+    "type": "grammar",
+    "question": "I ___ a student.",
+    "options": [
+      "am",
+      "is",
+      "are",
+      "be"
+    ],
+    "correct": "am",
+    "explanation": "I + am",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2683,
+    "type": "grammar",
+    "question": "She ___ happy.",
+    "options": [
+      "are",
+      "am",
+      "be",
+      "is"
+    ],
+    "correct": "is",
+    "explanation": "she + is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2684,
+    "type": "grammar",
+    "question": "They ___ friends.",
+    "options": [
+      "am",
+      "is",
+      "be",
+      "are"
+    ],
+    "correct": "are",
+    "explanation": "they + are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2685,
+    "type": "grammar",
+    "question": "He ___ a doctor.",
+    "options": [
+      "are",
+      "is",
+      "do",
+      "am"
+    ],
+    "correct": "is",
+    "explanation": "he + is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2686,
+    "type": "grammar",
+    "question": "We ___ at home.",
+    "options": [
+      "are",
+      "be",
+      "is",
+      "am"
+    ],
+    "correct": "are",
+    "explanation": "we + are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2687,
+    "type": "grammar",
+    "question": "You ___ my friend.",
+    "options": [
+      "be",
+      "is",
+      "am",
+      "are"
+    ],
+    "correct": "are",
+    "explanation": "you + are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2688,
+    "type": "grammar",
+    "question": "It ___ cold today.",
+    "options": [
+      "is",
+      "be",
+      "am",
+      "are"
+    ],
+    "correct": "is",
+    "explanation": "it + is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2689,
+    "type": "grammar",
+    "question": "I ___ not tired.",
+    "options": [
+      "do",
+      "am",
+      "is",
+      "are"
+    ],
+    "correct": "am",
+    "explanation": "I am not",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2690,
+    "type": "grammar",
+    "question": "I have ___ apple.",
+    "options": [
+      "an",
+      "the",
+      "a",
+      "-"
+    ],
+    "correct": "an",
+    "explanation": "apple saitlə başlayır → an",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2691,
+    "type": "grammar",
+    "question": "She is ___ teacher.",
+    "options": [
+      "-",
+      "a",
+      "an",
+      "the"
+    ],
+    "correct": "a",
+    "explanation": "teacher samitlə başlayır → a",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2692,
+    "type": "grammar",
+    "question": "He has ___ old car.",
+    "options": [
+      "an",
+      "the",
+      "-",
+      "a"
+    ],
+    "correct": "an",
+    "explanation": "old saitlə başlayır → an",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2693,
+    "type": "grammar",
+    "question": "It is ___ egg.",
+    "options": [
+      "a",
+      "an",
+      "-",
+      "the"
+    ],
+    "correct": "an",
+    "explanation": "egg saitlə başlayır → an",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2694,
+    "type": "grammar",
+    "question": "I want ___ banana.",
+    "options": [
+      "a",
+      "an",
+      "-",
+      "the"
+    ],
+    "correct": "a",
+    "explanation": "banana samitlə → a",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2695,
+    "type": "grammar",
+    "question": "We saw ___ elephant.",
+    "options": [
+      "a",
+      "an",
+      "-",
+      "the"
+    ],
+    "correct": "an",
+    "explanation": "elephant saitlə → an",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2696,
+    "type": "grammar",
+    "question": "There is ___ book on the table.",
+    "options": [
+      "-",
+      "a",
+      "the",
+      "an"
+    ],
+    "correct": "a",
+    "explanation": "book samitlə → a",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2697,
+    "type": "grammar",
+    "question": "I need ___ umbrella.",
+    "options": [
+      "an",
+      "-",
+      "the",
+      "a"
+    ],
+    "correct": "an",
+    "explanation": "umbrella saitlə → an",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2698,
+    "type": "grammar",
+    "question": "one book, two ___",
+    "options": [
+      "books",
+      "book",
+      "bookies",
+      "bookes"
+    ],
+    "correct": "books",
+    "explanation": "sadəcə -s",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2699,
+    "type": "grammar",
+    "question": "one box, three ___",
+    "options": [
+      "box",
+      "boxies",
+      "boxs",
+      "boxes"
+    ],
+    "correct": "boxes",
+    "explanation": "-x → -es",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2700,
+    "type": "grammar",
+    "question": "one city, many ___",
+    "options": [
+      "cityes",
+      "city",
+      "citys",
+      "cities"
+    ],
+    "correct": "cities",
+    "explanation": "samit+y → -ies",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2701,
+    "type": "grammar",
+    "question": "one man, two ___",
+    "options": [
+      "men",
+      "mans",
+      "mens",
+      "man"
+    ],
+    "correct": "men",
+    "explanation": "qaydasız: man → men",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2702,
+    "type": "grammar",
+    "question": "one child, three ___",
+    "options": [
+      "childrens",
+      "children",
+      "childes",
+      "childs"
+    ],
+    "correct": "children",
+    "explanation": "qaydasız: child → children",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2703,
+    "type": "grammar",
+    "question": "one bus, two ___",
+    "options": [
+      "buss",
+      "bus",
+      "busies",
+      "buses"
+    ],
+    "correct": "buses",
+    "explanation": "-s → -es",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2704,
+    "type": "grammar",
+    "question": "one baby, two ___",
+    "options": [
+      "babys",
+      "baby",
+      "babyes",
+      "babies"
+    ],
+    "correct": "babies",
+    "explanation": "samit+y → -ies",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2705,
+    "type": "grammar",
+    "question": "one foot, two ___",
+    "options": [
+      "foots",
+      "feets",
+      "foot",
+      "feet"
+    ],
+    "correct": "feet",
+    "explanation": "qaydasız: foot → feet",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2706,
+    "type": "grammar",
+    "question": "Ali is my brother. ___ is tall.",
+    "options": [
+      "It",
+      "She",
+      "They",
+      "He"
+    ],
+    "correct": "He",
+    "explanation": "Ali (kişi) → He",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2707,
+    "type": "grammar",
+    "question": "Maria is here. ___ is my sister.",
+    "options": [
+      "It",
+      "He",
+      "They",
+      "She"
+    ],
+    "correct": "She",
+    "explanation": "Maria (qadın) → She",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2708,
+    "type": "grammar",
+    "question": "The dog is big. ___ is brown.",
+    "options": [
+      "It",
+      "She",
+      "He",
+      "They"
+    ],
+    "correct": "It",
+    "explanation": "heyvan/əşya → It",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2709,
+    "type": "grammar",
+    "question": "Tom and I are friends. ___ are happy.",
+    "options": [
+      "You",
+      "We",
+      "They",
+      "He"
+    ],
+    "correct": "We",
+    "explanation": "Tom and I → We",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2710,
+    "type": "grammar",
+    "question": "The students are here. ___ are ready.",
+    "options": [
+      "It",
+      "They",
+      "He",
+      "We"
+    ],
+    "correct": "They",
+    "explanation": "çoxluq → They",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2711,
+    "type": "grammar",
+    "question": "___ am a teacher.",
+    "options": [
+      "He",
+      "I",
+      "It",
+      "We"
+    ],
+    "correct": "I",
+    "explanation": "am yalnız I ilə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2712,
+    "type": "grammar",
+    "question": "My parents are kind. ___ help me.",
+    "options": [
+      "It",
+      "They",
+      "She",
+      "He"
+    ],
+    "correct": "They",
+    "explanation": "parents → They",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2713,
+    "type": "grammar",
+    "question": "This is my book. ___ is new.",
+    "options": [
+      "She",
+      "He",
+      "They",
+      "It"
+    ],
+    "correct": "It",
+    "explanation": "kitab (əşya) → It",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2714,
+    "type": "grammar",
+    "question": "I ___ to school every day.",
+    "options": [
+      "going",
+      "goes",
+      "go",
+      "went"
+    ],
+    "correct": "go",
+    "explanation": "I → əsas forma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2715,
+    "type": "grammar",
+    "question": "She ___ English.",
+    "options": [
+      "speaks",
+      "speak",
+      "spoke",
+      "speaking"
+    ],
+    "correct": "speaks",
+    "explanation": "she → -s",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2716,
+    "type": "grammar",
+    "question": "He ___ coffee every morning.",
+    "options": [
+      "drinking",
+      "drinks",
+      "drank",
+      "drink"
+    ],
+    "correct": "drinks",
+    "explanation": "he → -s",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2717,
+    "type": "grammar",
+    "question": "They ___ football on Sunday.",
+    "options": [
+      "play",
+      "playing",
+      "plays",
+      "played"
+    ],
+    "correct": "play",
+    "explanation": "they → əsas forma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2718,
+    "type": "grammar",
+    "question": "My father ___ in a bank.",
+    "options": [
+      "worked",
+      "working",
+      "work",
+      "works"
+    ],
+    "correct": "works",
+    "explanation": "he/she → -s",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2719,
+    "type": "grammar",
+    "question": "He ___ to school every day. (watch → -es)",
+    "options": [
+      "watches",
+      "watch",
+      "watching",
+      "watchs"
+    ],
+    "correct": "watches",
+    "explanation": "-ch → -es",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2720,
+    "type": "grammar",
+    "question": "I ___ like fish.",
+    "options": [
+      "not",
+      "don't",
+      "no",
+      "doesn't"
+    ],
+    "correct": "don't",
+    "explanation": "I → don't",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2721,
+    "type": "grammar",
+    "question": "___ she work here?",
+    "options": [
+      "Are",
+      "Is",
+      "Do",
+      "Does"
+    ],
+    "correct": "Does",
+    "explanation": "she → Does",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2722,
+    "type": "grammar",
+    "question": "I ___ swim very well.",
+    "options": [
+      "can",
+      "am",
+      "cans",
+      "do"
+    ],
+    "correct": "can",
+    "explanation": "bacarıq → can",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2723,
+    "type": "grammar",
+    "question": "She can ___ a car.",
+    "options": [
+      "driving",
+      "drove",
+      "drive",
+      "drives"
+    ],
+    "correct": "drive",
+    "explanation": "can + əsas forma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2724,
+    "type": "grammar",
+    "question": "___ you help me?",
+    "options": [
+      "Do",
+      "Is",
+      "Can",
+      "Are"
+    ],
+    "correct": "Can",
+    "explanation": "Can ilə sual",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2725,
+    "type": "grammar",
+    "question": "He ___ speak French.",
+    "options": [
+      "can't",
+      "isn't",
+      "not",
+      "doesn't"
+    ],
+    "correct": "can't",
+    "explanation": "bacarıq inkarı → can't",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2726,
+    "type": "grammar",
+    "question": "Birds ___ fly.",
+    "options": [
+      "cans",
+      "can",
+      "are",
+      "do"
+    ],
+    "correct": "can",
+    "explanation": "bacarıq → can",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2727,
+    "type": "grammar",
+    "question": "I can ___ English.",
+    "options": [
+      "spoke",
+      "speaking",
+      "speaks",
+      "speak"
+    ],
+    "correct": "speak",
+    "explanation": "can + əsas forma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2728,
+    "type": "grammar",
+    "question": "A fish can ___.",
+    "options": [
+      "swims",
+      "swam",
+      "swimming",
+      "swim"
+    ],
+    "correct": "swim",
+    "explanation": "can + əsas forma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2729,
+    "type": "grammar",
+    "question": "___ she cook?",
+    "options": [
+      "Does",
+      "Do",
+      "Is",
+      "Can"
+    ],
+    "correct": "Can",
+    "explanation": "bacarıq sualı → Can",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2730,
+    "type": "grammar",
+    "question": "___ a book on the table.",
+    "options": [
+      "There is",
+      "There are",
+      "It is",
+      "There be"
+    ],
+    "correct": "There is",
+    "explanation": "təkün → There is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2731,
+    "type": "grammar",
+    "question": "___ three cats in the garden.",
+    "options": [
+      "There be",
+      "There is",
+      "It is",
+      "There are"
+    ],
+    "correct": "There are",
+    "explanation": "cəm → There are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2732,
+    "type": "grammar",
+    "question": "There ___ a cat here.",
+    "options": [
+      "is",
+      "am",
+      "are",
+      "be"
+    ],
+    "correct": "is",
+    "explanation": "təkün → is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2733,
+    "type": "grammar",
+    "question": "There ___ five students.",
+    "options": [
+      "is",
+      "are",
+      "am",
+      "be"
+    ],
+    "correct": "are",
+    "explanation": "cəm → are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2734,
+    "type": "grammar",
+    "question": "___ there any milk?",
+    "options": [
+      "Do",
+      "Is",
+      "Does",
+      "Are"
+    ],
+    "correct": "Is",
+    "explanation": "milk (sayılmaz) → Is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2735,
+    "type": "grammar",
+    "question": "There ___ two windows.",
+    "options": [
+      "am",
+      "is",
+      "are",
+      "be"
+    ],
+    "correct": "are",
+    "explanation": "cəm → are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2736,
+    "type": "grammar",
+    "question": "There ___ a problem.",
+    "options": [
+      "be",
+      "are",
+      "is",
+      "am"
+    ],
+    "correct": "is",
+    "explanation": "təkün → is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2737,
+    "type": "grammar",
+    "question": "There ___ many people here.",
+    "options": [
+      "am",
+      "is",
+      "are",
+      "be"
+    ],
+    "correct": "are",
+    "explanation": "people (cəm) → are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2738,
+    "type": "grammar",
+    "question": "This is ___ book. (I)",
+    "options": [
+      "mine",
+      "me",
+      "my",
+      "I"
+    ],
+    "correct": "my",
+    "explanation": "I → my",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2739,
+    "type": "grammar",
+    "question": "That is ___ car. (she)",
+    "options": [
+      "she",
+      "hers",
+      "her",
+      "his"
+    ],
+    "correct": "her",
+    "explanation": "she → her",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2740,
+    "type": "grammar",
+    "question": "It is ___ ball. (he)",
+    "options": [
+      "her",
+      "him",
+      "his",
+      "he"
+    ],
+    "correct": "his",
+    "explanation": "he → his",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2741,
+    "type": "grammar",
+    "question": "This is ___ house. (we)",
+    "options": [
+      "our",
+      "we",
+      "us",
+      "ours"
+    ],
+    "correct": "our",
+    "explanation": "we → our",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2742,
+    "type": "grammar",
+    "question": "This is Tom___ bag.",
+    "options": [
+      "s",
+      "s'",
+      "'s",
+      "is"
+    ],
+    "correct": "'s",
+    "explanation": "isim + 's",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2743,
+    "type": "grammar",
+    "question": "They love ___ dog. (they)",
+    "options": [
+      "them",
+      "theirs",
+      "they",
+      "their"
+    ],
+    "correct": "their",
+    "explanation": "they → their",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2744,
+    "type": "grammar",
+    "question": "What is ___ name? (you)",
+    "options": [
+      "your",
+      "you",
+      "youre",
+      "yours"
+    ],
+    "correct": "your",
+    "explanation": "you → your",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2745,
+    "type": "grammar",
+    "question": "The cat licked ___ paw. (it)",
+    "options": [
+      "it",
+      "its",
+      "it's",
+      "his"
+    ],
+    "correct": "its",
+    "explanation": "it → its (apostrofsuz)",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
   }
 ]

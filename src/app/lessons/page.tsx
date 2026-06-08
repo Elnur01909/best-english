@@ -7,10 +7,13 @@ import lessonsData from '@/data/lessons.json'
 import type { Lesson } from '@/types'
 
 const LEVEL_BADGE: Record<string, string> = {
-  'Bütün Səviyyələr':   'bg-gray-100 text-gray-600',
-  'Foundation – Higher':'bg-emerald-100 text-emerald-700',
-  'Higher – Advanced':  'bg-blue-100 text-blue-700',
-  'Higher':             'bg-blue-100 text-blue-700',
+  A1: 'bg-green-100 text-green-700', A2: 'bg-emerald-100 text-emerald-700', B1: 'bg-teal-100 text-teal-700',
+  F: 'bg-emerald-100 text-emerald-700', H: 'bg-blue-100 text-blue-700', A: 'bg-red-100 text-red-700',
+  B2: 'bg-blue-100 text-blue-700', C1: 'bg-indigo-100 text-indigo-700', C2: 'bg-red-100 text-red-700',
+}
+const LEVEL_LABEL: Record<string, string> = {
+  F: 'Foundation', H: 'Higher', A: 'Advanced',
+  A1: 'A1', A2: 'A2', B1: 'B1', B2: 'B2', C1: 'C1', C2: 'C2',
 }
 
 export default function LessonsPage() {
@@ -57,7 +60,7 @@ export default function LessonsPage() {
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-xs text-gray-400">Dərs {lesson.id}</span>
                       <span className={`badge text-xs ${LEVEL_BADGE[lesson.level] ?? 'bg-gray-100 text-gray-600'}`}>
-                        {lesson.level === 'F' ? 'Foundation' : lesson.level === 'H' ? 'Higher' : 'Advanced'}
+                        {LEVEL_LABEL[lesson.level] ?? lesson.level}
                       </span>
                       {isDone && <span className="badge bg-green-100 text-green-700 text-xs">✓ Tamamlandı</span>}
                     </div>

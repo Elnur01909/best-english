@@ -1249,5 +1249,173 @@
         "url": "https://www.toleslegal.com/"
       }
     ]
+  },
+  {
+    "id": 28,
+    "title": "A1 Qrammatika: \"to be\" (am / is / are)",
+    "description": "İngiliscənin ən əsas feli — \"olmaq\". am, is, are arasındakı fərq.",
+    "content": "İngiliscədə \"to be\" (olmaq) feli 3 formada işlənir:\n\n• I → am        →  I am a student. (Mən tələbəyəm.)\n• he / she / it → is   →  She is happy. (O xoşbəxtdir.)\n• you / we / they → are →  We are friends. (Biz dostuq.)\n\nQısa forma: I'm, he's, she's, it's, you're, we're, they're.\nİnkar: I am not  /  he isn't  /  they aren't.\nSual: Are you a teacher? — Yes, I am. / No, I'm not.",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "am / is / are arasında fərqi bil",
+      "Müsbət, inkar və sual cümləsi qur",
+      "Qısa formaları işlət (I'm, she's...)"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "To be — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+To%20be"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "A1 Qrammatika: Artikllər (a / an)",
+    "description": "\"a\" və \"an\" nə vaxt işlənir — samit və sait qaydası.",
+    "content": "\"a\" və \"an\" \"bir\" deməkdir və sayıla bilən təkün isimdən əvvəl işlənir:\n\n• a  → samitlə başlayan sözdən əvvəl:  a book, a car, a dog\n• an → saitlə (a, e, i, o, u) başlayan sözdən əvvəl:  an apple, an egg, an orange\n\nDiqqət: səsə görə qərar ver, hərfə yox.\n• an hour (h səssizdir → sait səs)\n• a university (u burda \"yu\" kimi səslənir → samit səs)",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "a və an arasında seç",
+      "Sait və samit səsi tanı",
+      "Düzgün artikl işlət"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Articles a/an — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Articles%20a%2Fan"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "A1 Qrammatika: Cəm (plural) isimlər",
+    "description": "Birdən çox: -s, -es, -ies və qaydasız cəmlər.",
+    "content": "İsmin cəmi (birdən çox) belə düzəlir:\n\n• Adətən -s:  book → books, car → cars, dog → dogs\n• -s, -ss, -sh, -ch, -x ilə bitənlərə -es:  bus → buses, box → boxes, watch → watches\n• samit + y → -ies:  city → cities, baby → babies\n• Qaydasız cəmlər (əzbərlə):\n   man → men, woman → women, child → children,\n   foot → feet, tooth → teeth, person → people",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "-s / -es / -ies qaydalarını bil",
+      "Qaydasız cəmləri tanı",
+      "Düzgün cəm forması qur"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Plural nouns — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Plural%20nouns"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "A1 Qrammatika: Şəxs əvəzlikləri (I, you, he, she...)",
+    "description": "İsmin yerinə işlənən əvəzliklər.",
+    "content": "Şəxs (subyekt) əvəzlikləri ismin yerinə işlənir:\n\nI = mən,  you = sən/siz,  he = o (kişi),  she = o (qadın),\nit = o (əşya/heyvan),  we = biz,  they = onlar.\n\nMisallar:\n• Ali is tall.  → He is tall.\n• Maria is here. → She is here.\n• The dog is big. → It is big.\n• Tom and I are friends. → We are friends.",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "İsmi düzgün əvəzliklə əvəz et",
+      "he / she / it fərqini bil",
+      "we və they işlət"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Subject pronouns — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Subject%20pronouns"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "A1 Qrammatika: Present Simple (indiki sadə zaman)",
+    "description": "Gündəlik, daimi hərəkətlər. he/she/it → -s.",
+    "content": "Present Simple gündəlik və daimi hərəkətləri bildirir:\n\n• I / you / we / they → felin əsas forması:  I work, they play.\n• he / she / it → felə -s əlavə olunur:  He works, she plays.\n• -s, -sh, -ch, -o ilə bitənlərə -es:  He goes, she watches.\n\nİnkar: I don't work.  /  He doesn't work.\nSual: Do you work?  /  Does he work?\nDiqqət: doesn't / does işlənəndə feilə -s ƏLAVƏ OLUNMUR (He doesn't work).",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "he/she/it ilə -s qoy",
+      "don't / doesn't ilə inkar qur",
+      "Do / Does ilə sual qur"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Present Simple — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Present%20Simple"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "A1 Qrammatika: can / can't (bacarıq)",
+    "description": "Bacarıq və icazə. can + felin əsas forması.",
+    "content": "\"can\" bacarıq və icazəni bildirir. Həmişə felin ƏSAS forması ilə işlənir:\n\n• I can swim.  (Üzə bilirəm.)\n• She can drive.  (O, maşın sürə bilir.)\n\nİnkar: cannot / can't → I can't sing.\nSual: Can you help me? — Yes, I can. / No, I can't.\n\nDiqqət: \"can\"-dan sonra feilə -s ƏLAVƏ OLUNMUR.\n✓ He can swim.   ✗ He cans swim.",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "can + əsas fel işlət",
+      "can't ilə inkar qur",
+      "Can ilə sual qur"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Can / can't — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Can%20%2F%20can't"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "title": "A1 Qrammatika: There is / There are (var)",
+    "description": "Mövcudluq bildirmək: təkün → is, cəm → are.",
+    "content": "\"There is / There are\" bir şeyin mövcudluğunu bildirir (var):\n\n• There is + təkün isim:  There is a book on the table.\n• There are + cəm isim:  There are two books.\n\nİnkar: There isn't a problem.  /  There aren't any cars.\nSual: Is there a problem?  /  Are there any questions?",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "təkün → is, cəm → are seç",
+      "Müsbət və inkar qur",
+      "Sual forması qur"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "There is / There are — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+There%20is%20%2F%20There%20are"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title": "A1 Qrammatika: Yiyəlik (my, your, Tom's)",
+    "description": "Yiyəlik əvəzlikləri və 's.",
+    "content": "Yiyəlik (kiminsə olması) iki yolla bildirilir:\n\n1) Yiyəlik əvəzlikləri: my, your, his, her, its, our, their\n   • This is my pen.  • That is her car.\n\n2) İsmin sonuna 's:  Ali's book (Əlinin kitabı), the dog's tail.\n\nMisal: This is Tom's bag.  /  These are our books.",
+    "terms": [],
+    "duration": 12,
+    "level": "A1",
+    "objectives": [
+      "my/your/his/her seç",
+      "isimə 's əlavə et",
+      "Yiyəliyi düzgün ifadə et"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Possessives — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Possessives"
+      }
+    ]
   }
 ]

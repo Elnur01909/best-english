@@ -141,7 +141,7 @@ export interface QuizQuestion {
   cefr?: CEFRLevel         // CEFR səviyyəsi (A1–C2)
   track?: LearningTrack    // 'general' | 'legal'
   topic: string
-  type?: 'definition' | 'gap-fill' | 'collocation' | 'collocation-match' | 'preposition' | 'classification' | 'true-false' | 'sentence' | 'matching'  // sual formatı
+  type?: 'definition' | 'gap-fill' | 'collocation' | 'collocation-match' | 'preposition' | 'classification' | 'true-false' | 'sentence' | 'matching' | 'grammar'  // sual formatı
 }
 
 export interface QuizResult {
