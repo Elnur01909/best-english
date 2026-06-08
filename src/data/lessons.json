@@ -1043,5 +1043,211 @@
         "url": "https://legalenglishboost.com/"
       }
     ]
+  },
+  {
+    "id": 23,
+    "title": "Dərs 23: Terms of Art vs Legalese — Hüquqi Dil Mədəniyyəti",
+    "description": "Advanced hüquqi yazım: 'term of art' ilə 'legalese' arasındakı fərq, Plain English hərəkatı və müasir müqavilə yazımının 6 əsas qaydası.",
+    "content": "Bu dərsdə iki əsas anlayış araşdırılır.\n\nTERMS OF ART — məhkəmə tərəfindən dəqiq şəkildə müəyyən edilmiş mənası olan əvəzsiz hüquqi sözlər: məsələn, 'consideration', 'indemnify', 'novation'. Bunları daha sadə sözlərlə əvəz etmək olmaz — çünki məhkəmə onların məhz bu forması üzrə interpretasiya yaratmışdır.\n\nLEGALESE — daha sadə alternativlər mövcud olduğu halda istifadə edilən lazımsız mürəkkəb dil. Nümunə: 'notwithstanding' əvəzinə 'despite'; 'forthwith' əvəzinə 'immediately'; 'aforementioned' əvəzinə 'previously mentioned'.\n\nTexas hakimi Lynn Hughes legalese-i belə tərif edib: \"tənbəllik, qarışıqlıq, qorxaqlıq, cəhalət, laqeydlik və mədəni yoxsulluğun məhsulu.\"\n\nPLAIN ENGLISH YAZIMININ 6 QAYDASI:\n1. Görüntüyü artırmaq üçün mürəkkəb söz işlətmə — 'furnish' yox, 'provide' işlət.\n2. Müasir müqavilələrdən Latın ifadələrini çıxar.\n3. Köhnəlmiş sözləri sil: 'heretofore', 'hereby', 'foregoing' — müasir qarşılıqlarını işlət.\n4. Sinonimlər siyahısından istifadə etmə: 'alter, amend, vary or modify' əvəzinə bir söz seç.\n5. Cümlələri qısa saxla.\n6. Aktiv səs işlət: \"The Buyer must pay by 9 February\" — passiv deyil.\n\nMƏŞQ: Florida ev satışı müqaviləsindəki bu parçanı Plain English-ə çevir:\n\"WHEREAS, Seller is desirous of selling the Property as hereinafter defined in Paragraph 2 hereof and Purchaser is desirous of purchasing the Property on the terms and conditions hereinafter set forth…\"\nCavab: \"The Seller agrees to sell the Property and the Buyer agrees to buy it on the terms set out below.\"",
+    "terms": [
+      3,
+      17,
+      20,
+      358,
+      364,
+      370,
+      379,
+      396
+    ],
+    "duration": 40,
+    "level": "A",
+    "objectives": [
+      "'Term of art' ilə 'legalese' arasındakı fərqi konkret nümunələrlə izah et",
+      "Plain English yazımının 6 qaydasını tətbiq et",
+      "Klassik legalese ifadələrini (notwithstanding, forthwith, aforementioned) sadə dillə yenidən yaz"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Plain English in Legal Drafting",
+        "url": "https://www.lawteacher.net/free-law-essays/contract-law/"
+      },
+      {
+        "type": "youtube",
+        "title": "Plain English vs Legalese — Legal Drafting",
+        "url": "https://www.youtube.com/results?search_query=plain+english+legal+drafting"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Boost — Advanced Writing",
+        "url": "https://legalenglishboost.com/"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Dərs 24: Süni İntellekt və Hüquq Peşəsi",
+    "description": "MIT Technology Review mənbəyinə əsasən: AI-nin hüquq peşəsinə təsiri, COIN, CaseIQ, McKinsey 22% avtomatlaşdırma hesabatı və gələcəyin vəkili.",
+    "content": "Bu dərsdə süni intellektin (AI) hüquq peşəsinə təsiri araşdırılır.\n\nƏSAS ANLAYIŞLAR:\n\nDocument Discovery Tools — milyonlarla sənəd üzərində öyrədilmiş AI alətləri; hüquqi iş üçün aktual mənbələri saniyələr içində müəyyən edir.\n\nCOIN (Contract Intelligence) — JPMorgan Chase-in müqavilə analiz sistemi; hüquqi köməkçilərin 360,000 saat ərzində etdiyi işi saniyələr içində yerinə yetirir.\n\nCaseIQ — 'virtual associate'; məhkəmə brifinqini analiz edərək inkişaf tövsiyələri verir.\n\nMcKinsey hesabatına görə vəkilin işinin 22%-i avtomatlaşdırıla bilər.\n\nMÜZAKİRƏ SUALLAR:\n1. AI bir insan vəkili qədər dəqiq araşdırma apara bilərmi?\n2. McKinsey 22% avtomatlaşdırmanı proqnozlaşdırır — siz bunu xoş qarşılayırsınız, yoxsa narahat edir?\n3. COIN 360,000 saatı saniyələrə sıxışdırır — bu effektivlik iş itirilməsini əsaslandırırmı?\n4. AI gənc vəkillərin təlim imkanlarını azaldırsa, gənc hüquqşünaslar necə 'əlavə dəyər' yarada bilər?\n\nƏSAS LÜĞƏT:\n• augment — bir şeyi artırmaq, inkişaf etdirmək\n• automate — texnologiya ilə insan müdaxiləsi olmadan iş yerinə yetirmək\n• meticulous — çox diqqətli; detalları dəqiqliklə izləyən\n• algorithm — kompüterin problemi həll etmək üçün izlədiyi qaydalar toplusu\n• redundant — artıq lazımsız (işçi və ya iş haqqında)\n• uptake — bir şeyin mənimsənilmə sürəti\n• paralegal — hüquqşünas deyil, lakin vəkilə kömək edən hüquq bilikli şəxs\n• repository — geniş məlumat arxivi",
+    "terms": [
+      35,
+      36,
+      40,
+      41,
+      91,
+      92,
+      382,
+      383
+    ],
+    "duration": 40,
+    "level": "A",
+    "objectives": [
+      "AI-nin hüquq peşəsinə əsas təsirlərini (COIN, CaseIQ, document discovery) izah et",
+      "Avtomatlaşdırma ilə insan ekspertizasının hüquqda balansını müzakirə et",
+      "Dərsin 8 əsas texnologiya lüğəti terminini (augment, algorithm, redundant...) cümlələrdə işlət"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "AI and the Law — MIT Technology Review",
+        "url": "https://www.technologyreview.com/topic/artificial-intelligence/"
+      },
+      {
+        "type": "youtube",
+        "title": "AI in Legal Practice — How Law is Changing",
+        "url": "https://www.youtube.com/results?search_query=artificial+intelligence+legal+profession"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal Talk Network — AI and Law",
+        "url": "https://legaltalknetwork.com/"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Dərs 25: Hüquqi Kollokasiyalar — Düzgün Söz Birləşmələri",
+    "description": "Güclü və zəif kollokasiyalar; hüquqi kontekstdə verb+noun, adjective+noun nümunələri; Snapchat davası üzərindən kollokasiya məşqi.",
+    "content": "Bu dərsdə hüquqi İngiliscədəki kollokasiyalar — bir-birinə doğal yanaşan söz cütləri — öyrənilir.\n\nKOLLOKASİYA NEDİR?\nKollokasiya bir-birini 'tutan' söz cütü və ya qrupudur. Yanlış kollokasiya işlətmək ingilisnizi qeyri-təbii edir, hətta məna aydın olsa belə.\n\nDüzgün: \"to make a decision\" / \"to adjourn a case\" / \"to mitigate a loss\"\nYanlış: \"to do a decision\" / \"to suspend a case\" / \"to reduce a loss\"\n\nGÜCLÜ KOLLOKASİYALAR — az alternativ var: \"to mitigate a loss\"\nZƏİF KOLLOKASİYALAR — bir neçə variant işləyir: \"to fulfil / perform / carry out an obligation\"\n\nƏSAS HÜQUQİ KOLLOKASİYALAR CƏDVƏLI:\nVerb + Noun: breach a contract / adjourn a trial / levy a tax\nPhrasal Verb: carry out an obligation / run up a debt / bring up a subject\nAdjective + Noun: a wide range / fierce competition / a final offer\nVerb + Adverb: to fall sharply / to closely resemble / to fail miserably\n\nSNAPCHAT DAVASI KOLLOKASİYALARI (Frank Brown v Thomas Spiegel, 2011-2014):\n1. to launch a new business\n2. to assert your legal right\n3. to instruct a law firm\n4. to incorporate a company\n5. to bring a claim against someone\n6. to deny an allegation\n7. to settle a claim out of court\n8. to resolve a dispute\n9. to disclose information\n10. to reach a settlement\n\nCOUNTY COURT KOLLOKASİYALARI (Jo Rider v Harry Spencer):\n• outstanding sum — hələ ödənilməmiş məbləğ\n• due date — ödəniş son tarixi\n• fill out a claim form / submit to the court / issue the claim\n• served on the defendant — sənədlər rəsmi çatdırılır\n• incur legal fees — hüquqi xərclər yaranır",
+    "terms": [
+      4,
+      6,
+      8,
+      35,
+      37,
+      89,
+      90,
+      381,
+      406,
+      432
+    ],
+    "duration": 40,
+    "level": "A",
+    "objectives": [
+      "Güclü və zəif kollokasiya arasındakı fərqi izah et",
+      "10 Snapchat davası kollokasiyasını cümlələrdə düzgün işlət",
+      "County Court prosesini ifadə edən kollokasiyaları (issue a claim, serve on the defendant, incur costs) mənimsə"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Legal English Collocations — LawTeacher",
+        "url": "https://www.lawteacher.net/"
+      },
+      {
+        "type": "youtube",
+        "title": "Legal English Collocations — Advanced",
+        "url": "https://www.youtube.com/results?search_query=legal+english+collocations+advanced"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Boost — Collocation Practice",
+        "url": "https://legalenglishboost.com/"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Dərs 26: Hüquqi Preposisiyalar — Düzgün İstifadə",
+    "description": "Kommersiya müqavilələrindəki 10 əsas prepozisiya ifadəsi; ümumi xətalar və düzgün formları; məşq cümlələr.",
+    "content": "Bu dərsdə qeyri-ana dilli hüquqşünasların ən çox səhv etdiyi prepozisiya ifadələri öyrənilir.\n\n10 ƏSAS HÜQUQİ PREPOZİSİYA İFADƏSİ:\n\n1. in accordance with — qaydalarına uyğun olaraq; tərəfindən tələb olunduğu kimi\n   \"This Agreement shall be interpreted IN ACCORDANCE WITH English law.\"\n\n2. in respect of — haqqında; ilə bağlı; istinadən\n   \"The Company accepts liability IN RESPECT OF any damage during delivery.\"\n\n3. in the event of / that — əgər baş verərsə\n   \"Either party may terminate IN THE EVENT OF a material breach.\"\n\n4. subject to — şərtinə bağlı olaraq; tabe olaraq\n   \"The payment shall be made SUBJECT TO board approval.\"\n\n5. pursuant to — uyğun olaraq; nəticəsindəki\n   \"The payment shall be made PURSUANT TO the provisions of clause 5.\"\n\n6. on behalf of — adından; təmsil edərək\n   \"The solicitor signed the document ON BEHALF OF his client.\"\n\n7. by virtue of — səbəbindən; nəticəsindəki\n   \"She is entitled to compensation BY VIRTUE OF her long service.\"\n\n8. in lieu of — əvəzinə\n   \"The employee received payment IN LIEU OF notice.\"\n\n9. without prejudice — məsuliyyəti qəbul etmədən (sülh danışıqlarında işlədilir)\n   \"This offer is made WITHOUT PREJUDICE to our legal position.\"\n\n10. notwithstanding — baxmayaraq; baxmayaraq ki\n    \"The Seller retains title NOTWITHSTANDING delivery to the Buyer.\"\n\nÜMUMI XƏTALAR — DÜZGÜN FORMLAR:\n❌ in accordance OF  →  ✓ in accordance WITH\n❌ in respect TO     →  ✓ in respect OF\n❌ pursuant OF       →  ✓ pursuant TO\n❌ on behalf FOR     →  ✓ on behalf OF\n❌ by virtue TO      →  ✓ by virtue OF\n\nMƏŞQ — boşluğu doldurun:\n1. \"This Agreement shall be interpreted _______ English law.\" (in accordance with)\n2. \"The Company accepts liability _______ any damage during delivery.\" (in respect of)\n3. \"Either party may terminate this Agreement _______ a material breach.\" (in the event of)\n4. \"The payment shall be made _______ the provisions of clause 5.\" (pursuant to)\n5. \"The solicitor signed the document _______ his client.\" (on behalf of)",
+    "terms": [
+      17,
+      19,
+      20,
+      363,
+      364,
+      391,
+      392,
+      396,
+      397,
+      425
+    ],
+    "duration": 40,
+    "level": "A",
+    "objectives": [
+      "10 əsas hüquqi prepozisiya ifadəsini (in accordance with, pursuant to, without prejudice...) düzgün işlət",
+      "Qeyri-ana dilli hüquqşünasların etdiyi 5 tipik prepozisiya səhvini müəyyən et və düzəlt",
+      "Prepozisiya ifadələrini real müqavilə cümlələri kontekstindəki tətbiq et"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Legal Prepositional Phrases — LawTeacher",
+        "url": "https://www.lawteacher.net/"
+      },
+      {
+        "type": "youtube",
+        "title": "Prepositions in Legal English — Common Mistakes",
+        "url": "https://www.youtube.com/results?search_query=prepositions+legal+english"
+      },
+      {
+        "type": "podcast",
+        "title": "TOLES Advanced — Legal Language",
+        "url": "https://www.toleslegal.com/"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Dərs 27: Real Müqavilələrin Strukturu və Şərhi",
+    "description": "Kommersiya müqaviləsinin standart quruluşu (Tərəflər → Recitals → Öhdəliklər → Boilerplate); əsas boilerplate bəndlərinin funksiyası; şərh prinsipləri.",
+    "content": "Bu dərsdə kommersiya müqaviləsinin standart strukturu və əsas bəndlərinin hüquqi funksiyası öyrənilir.\n\nSTANDART MÜQAVİLƏ STRUKTURU:\n\n1. Parties (Tərəflər) — müqaviləyə daxil olanları müəyyən edir\n2. Recitals / WHEREAS clauses — müqavilənin bağlanma kontekstini izah edən giriş paraqraflar\n3. Definitions (Tərifi Anlayışlar) — böyük hərflə yazılan terminlərın mənasını müəyyən edir\n4. Operative Clauses (Əsas Öhdəliklər) — hər tərəfin real öhdəliklərini sadalayır\n5. Conditions Precedent (İlkin Şərtlər) — öhdəliklərin yaranmasından əvvəl yerinə yetirilməli şərtlər\n6. Representations & Warranties — mövcud faktlar haqqında vədlər\n7. Indemnities (Zərərsizləşdirmə) — bir şey yanlış gedərsə kimin ödəyəcəyini müəyyən edir\n8. Limitation of Liability — zərər kompensasiyasının üst həddini müəyyən edir\n9. Termination (Fəsih) — müqavilənin nə zaman və necə sona çatdırıla biləcəyi\n10. Boilerplate / General — force majeure, tətbiq edilən hüquq, bildirişlər, bölünmüşlük, tam saziş\n\nƏSAS BOILERPLATE BƏNDLƏRİ:\n\nEntire Agreement Clause — yazılı müqavilənin tam saziş olduğunu bildirir; əvvəlki şifahi razılaşmalar daxil deyil.\n\nForce Majeure Clause — fövqəladə və öncədən görülə bilməyən hadisə (zəlzələ, müharibə, pandemiya) performansın qarşısını alırsa tərəfi bağışlayır. Qeyd: bənd hadisələri spesifik şəkildə sadalamalıdır.\n\nGoverning Law Clause — müqaviləni hansı ölkənin hüququnun tənzimləyəcəyini müəyyən edir.\n\"This Agreement shall be governed by and construed in accordance with the laws of England and Wales.\"\n\nJurisdiction Clause — mübahisəni hansı məhkəmənin baxacağını müəyyən edir; exclusive (yalnız bir məhkəmə) və ya non-exclusive ola bilər.\n\nNotice Clause — rəsmi bildirişlərin necə (qeydiyyatlı poçt, e-poçt) və nə zaman çatdırılmış sayılacağını müəyyən edir.\n\nSeverability Clause — bir bənd etibarsız hesab olunarsa, müqavilənin qalan hissəsi qüvvədə qalır.\n\nƏSAS LÜĞƏT:\n• recitals — WHEREAS bəndləri; giriş kontekst paraqrafları\n• operative clause — faktiki müqavilə öhdəliklərini təyin edən bənd\n• representation — müqaviləyə girişi stimullaşdırmaq üçün edilən mövcud fakt bəyanatı\n• warranty — müəyyən faktların doğru olduğuna dair müqavilə vədi\n• severability — bir bəndin etibarsız sayılmasına baxmayaraq müqavilənin qüvvədə qalması bacarığı",
+    "terms": [
+      17,
+      18,
+      19,
+      32,
+      107,
+      379,
+      390,
+      392,
+      396,
+      398
+    ],
+    "duration": 45,
+    "level": "A",
+    "objectives": [
+      "Kommersiya müqaviləsinin 10 əsas bölməsini ardıcıllıqla sadalaya və hər birinin funksiyasını izah et",
+      "6 əsas boilerplate bəndi (entire agreement, force majeure, governing law, jurisdiction, notice, severability) arasındakı fərqi izah et",
+      "Recitals, operative clause, representation, warranty və severability terminlərini real müqavilə kontekstindəki işlət"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Commercial Contract Structure — LawTeacher",
+        "url": "https://www.lawteacher.net/free-law-essays/contract-law/"
+      },
+      {
+        "type": "youtube",
+        "title": "How to Read a Commercial Contract",
+        "url": "https://www.youtube.com/results?search_query=how+to+read+commercial+contract+structure"
+      },
+      {
+        "type": "podcast",
+        "title": "TOLES Advanced — Contract Interpretation",
+        "url": "https://www.toleslegal.com/"
+      }
+    ]
   }
 ]
