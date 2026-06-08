@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState, useCallback, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { getUser, getUserProfile, getDueCards, upsertVocabProgress, updateStreak, getMnemonic, saveMnemonic } from '@/lib/supabase'
+import { getUser, getUserProfile, getDueCards, getSeenVocabIds, upsertVocabProgress, updateStreak, getMnemonic, saveMnemonic } from '@/lib/supabase'
 import { generateMnemonic } from '@/lib/ai'
 import { calculateNextReview, SRS_DEFAULTS } from '@/lib/srs'
 import { getRandomMessage } from '@/lib/psychology'
@@ -87,14 +87,29 @@ function VocabularyContent() {
       const reviewCards = (dueRaw ?? []) as VocabProgress[]
       const reviewIds = new Set(reviewCards.map(c => c.vocab_id))
 
-      // 2) Bugünkü mətndən 8 əsas termin (curriculum.vocab_ids)
-      const plan = await getDailyPlan(user.id)
-      const todayVocabIds = (plan.curriculum.vocab_ids ?? []) as number[]
+      // 2) Yeni sözlər — öyrənmə trekinə görə
+      const savedTrack = typeof window !== 'undefined' ? localStorage.getItem('best_english_track') : null
+      const profLevel = (prof?.level ?? 'A1') as string
+      const track = savedTrack === 'general' || savedTrack === 'legal'
+        ? savedTrack
+        : (['A1', 'A2', 'B1'].includes(profLevel) ? 'general' : 'legal')
 
-      // Review-da olanları çıxart, qalan sözləri qarışdırıb seç (sıra hər dəfə fərqli)
-      const newVocabIds = shuffle(todayVocabIds.filter(id => !reviewIds.has(id)))
+      let newVocabIds: number[]
+      if (track === 'general') {
+        // Ümumi trek: istifadəçinin CEFR səviyyəsinə uyğun, hələ görmədiyi sözlər
+        const seen = await getSeenVocabIds(user.id)
+        const pool = (vocabData as VocabItem[]).filter(v =>
+          v.track === 'general' && v.cefr === profLevel &&
+          !seen.has(v.id) && !reviewIds.has(v.id)
+        )
+        newVocabIds = shuffle(pool.map(v => v.id)).slice(0, NEW_WORDS_PER_DAY)
+      } else {
+        // Hüquqi trek: mövcud curriculum davranışı (dəyişmir)
+        const plan = await getDailyPlan(user.id)
+        const todayVocabIds = (plan.curriculum.vocab_ids ?? []) as number[]
+        newVocabIds = shuffle(todayVocabIds.filter(id => !reviewIds.has(id))).slice(0, NEW_WORDS_PER_DAY)
+      }
       const newCards: VocabProgress[] = newVocabIds
-        .slice(0, NEW_WORDS_PER_DAY)
         .map(id => ({ user_id: user.id, vocab_id: id, ...SRS_DEFAULTS }))
 
       // 3) Birləşdir və hamısını qarışdır — sözlər həmişə eyni sıra ilə gəlməsin

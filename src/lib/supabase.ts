@@ -56,6 +56,15 @@ export async function getDueCards(userId: string, limit = 20) {
   return { data, error }
 }
 
+// İstifadəçinin artıq başladığı (gördüyü) bütün söz id-ləri — təkrar daxiletməni önləmək üçün
+export async function getSeenVocabIds(userId: string): Promise<Set<number>> {
+  const { data } = await supabase
+    .from('user_vocab_progress')
+    .select('vocab_id')
+    .eq('user_id', userId)
+  return new Set((data ?? []).map((r: { vocab_id: number }) => r.vocab_id))
+}
+
 // ─── Mnemonika keşi (paylaşılan — hər söz üçün bir dəfə AI ilə generasiya) ──
 export async function getMnemonic(vocabId: number) {
   const { data, error } = await supabase
