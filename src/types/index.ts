@@ -69,6 +69,7 @@ export type VocabTopic =
   | 'Tort Law'
   | 'Property Law'
   | 'Legal Writing & Procedure'
+  | 'Commercial Contracts'
 
 export interface VocabItem {
   id: number

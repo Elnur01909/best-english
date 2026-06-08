@@ -1,0 +1,472 @@
+const fs = require('fs');
+const vocab = require('../src/data/vocab.json');
+
+const newTerms = [
+  {
+    id: 400,
+    term: 'ABSENT / ABSENCE',
+    pos: 'Adjective / Noun',
+    en_def: 'Absent means not being in the place you should be, such as not being at work due to illness. An absence is a single period of time during which a person is not present.',
+    az_translation: 'Yoxluq / işdə olmama – işçinin olması gərəkən yerdə (məsələn, işdə) xəstəlik üzündən olmaması vəziyyəti; tək bir yoxluq dövrü "absence" adlanır',
+    en_example: 'The employee was absent for three days due to illness and provided a medical certificate on return.',
+    az_example: 'İşçi xəstəlik üzündən üç gün işdə olmadı və geri döndükdə tibbi arayış təqdim etdi.',
+    collocations: 'absence from work; absent due to illness; unauthorised absence; absence record; persistent absence',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 401,
+    term: 'ACCRUE / ACCRUAL (Employment)',
+    pos: 'Verb / Noun',
+    en_def: 'To accumulate over time. In employment contracts, used specifically for rights such as paid holiday entitlement that build up during a period of employment.',
+    az_translation: 'Toplanmaq / yığılmaq (əmək hüququ) – zamanla artmaq; əmək müqavilələrindəki çalışma müddəti ərzində tədricən yaranan ödənişli məzuniyyət kimi hüquqların toplanmasını ifadə edir',
+    en_example: 'The employee had accrued 15 days of paid leave entitlement by the end of the six-month probationary period.',
+    az_example: 'İşçi altı aylıq sınaq müddətinin sonuna qədər 15 günlük ödənişli məzuniyyət hüququ toplamışdı.',
+    collocations: 'accrued holiday; accrue leave entitlement; accrued rights; accrual of benefits',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 402,
+    term: 'ADMINISTRATIVE WORK / DUTIES',
+    pos: 'Noun phrase',
+    en_def: 'Office work carried out by secretaries and managers in support of a business. Connected with the paperwork and organisational tasks rather than the main business activity.',
+    az_translation: 'İnzibati iş / vəzifələr – biznesi dəstəkləmək məqsədilə katiblik və menecerlər tərəfindən yerinə yetirilən ofis işi; əsas fəaliyyətin deyil, sənədli işin bir hissəsidir',
+    en_example: 'The role includes both client-facing work and a proportion of administrative duties such as filing and report preparation.',
+    az_example: 'Vəzifə həm müştərilərlə ünsiyyəti, həm də arxivləmə və hesabat hazırlamaq kimi müəyyən həcmdə inzibati işi əhatə edir.',
+    collocations: 'administrative duties; administrative work; office administration; carry out administrative tasks',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 403,
+    term: 'ADVERSE EFFECT',
+    pos: 'Noun phrase',
+    en_def: 'A negative or harmful impact on something or someone. Used in employment law to describe the impact of a condition or policy on an employee.',
+    az_translation: 'Mənfi təsir – bir şeyə və ya kiminsə üzərinə göstərilən neqativ və ya zərərli təsir; əmək hüququnda xəstəlik və ya siyasətin işçiyə olan zərərli tərəfini ifadə etmək üçün işlədilir',
+    en_example: 'The tribunal found that the employer\'s policy had an adverse effect on employees with disabilities.',
+    az_example: 'Tribunal müəyyən etdi ki, işəgötürənin siyasəti əlilliyi olan işçilərə mənfi təsir göstərdi.',
+    collocations: 'adverse effect on; have an adverse effect; adverse impact; detrimental effect',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 404,
+    term: 'AFFECT / EFFECT',
+    pos: 'Verb / Noun',
+    en_def: 'Affect is a verb meaning to have an impact on something. Effect is a noun meaning the result or outcome of an action. A common point of confusion in legal writing.',
+    az_translation: 'Feil / İsim fərqi (affect/effect) – "affect" feildir (təsir etmək, nəticəsini dəyişdirmək); "effect" isimdir (nəticə, təsir); hüquqi yazımda tez-tez qarışdırılan söz cütü',
+    en_example: 'The new law will seriously affect many employers. One major effect will be an increase in discrimination claims.',
+    az_example: 'Yeni qanun bir çox işəgötürənə ciddi təsir edəcək. Əsas nəticələrdən biri ayrı-seçkilik iddialarının artması olacaq.',
+    collocations: 'affect employment; take effect; have an effect; come into effect; adverse effect',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 405,
+    term: 'AGE DISCRIMINATION',
+    pos: 'Noun phrase',
+    en_def: 'Treating a person less favourably because of their age. Illegal at the job application stage and throughout employment. Even phrases like energetic staff required may be interpreted as age discrimination.',
+    az_translation: 'Yaş ayrı-seçkiliyi – insanla yaşına görə daha az əlverişli rəftar; iş müraciəti mərhələsindən başlayaraq işin bütün dövründə qanunsuzdur; "enerjili işçi tələb olunur" kimi ifadələr belə yaş ayrı-seçkiliyi sayıla bilər',
+    en_example: 'The claimant alleged age discrimination after being rejected at interview despite having superior qualifications.',
+    az_example: 'Müddəi üstün ixtisaslara sahib olmasına baxmayaraq müsahibədə rədd edildikdən sonra yaş ayrı-seçkiliyi iddiasını irəli sürdü.',
+    collocations: 'age discrimination claim; age discrimination law; discriminate on grounds of age; direct / indirect age discrimination',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 406,
+    term: 'ALLEGATION',
+    pos: 'Noun',
+    en_def: 'A statement that something has happened, similar to an accusation. The truth of the allegation has not yet been proved.',
+    az_translation: 'İddia / ittiham (allegation) – bir şeyin baş verdiyini bildirən bəyan, ittiham oxşarı; iddianın həqiqəti hələ sübut edilməmişdir',
+    en_example: 'The employee faced serious allegations of misconduct, which were investigated under the disciplinary procedure.',
+    az_example: 'İşçi intizam proseduru çərçivəsindəki araşdırmaya cəlb olunan intizamsızlıq barəsindəki ciddi iddialarla üzləşdi.',
+    collocations: 'allegation of misconduct; make an allegation; investigate an allegation; deny / uphold an allegation',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 407,
+    term: 'APPEAL (Employment)',
+    pos: 'Noun / Verb',
+    en_def: 'A formal request for a decision to be reviewed or changed. In employment law, when an employee is dismissed, they must be given reasons in writing and allowed to appeal the decision.',
+    az_translation: 'Apellyasiya (əmək hüququ) – qərarın yenidən baxılması və ya dəyişdirilməsi üçün rəsmi müraciət; əmək hüququnda işdən çıxarılan işçiyə yazılı əsaslar verilməli və apellyasiya imkanı tanınmalıdır',
+    en_example: 'The dismissed employee exercised her right to appeal within five working days as set out in the disciplinary policy.',
+    az_example: 'İşdən çıxarılan işçi intizam siyasətindəki nəzərdə tutulduğu kimi beş iş günü ərzindəki apellyasiya hüququndan istifadə etdi.',
+    collocations: 'lodge / submit an appeal; appeal hearing; right of appeal; appeal against dismissal; appeal outcome',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 408,
+    term: 'APPLICANT(S)',
+    pos: 'Noun',
+    en_def: 'A person who has formally applied for a job. Also known as a candidate. Applicants should be evaluated only on relevant qualifications and skills.',
+    az_translation: 'Namizəd (iş üçün müraciət edən) – işə rəsmi müraciət etmiş şəxs; "candidate" da deyilir; namizədlər yalnız müvafiq ixtisas və bacarıqlarına görə qiymətləndirilməlidir',
+    en_example: 'All applicants must complete the standard application form and attend a two-stage interview process.',
+    az_example: 'Bütün namizədlər standart müraciət formasını doldurmaq və iki mərhələli müsahibə prosesinə qatılmaq məcburiyyətindədir.',
+    collocations: 'job applicant; short-listed applicant; successful / unsuccessful applicant; applicant pool; screen applicants',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 409,
+    term: 'APPOINTED / APPOINTMENT',
+    pos: 'Verb (past participle) / Noun',
+    en_def: 'Appointment describes the process of selecting and placing a person into a job role. A person is appointed when a suitable candidate has accepted and commenced employment.',
+    az_translation: 'Vəzifəyə təyin edilmək / təyinat – uyğun namizədin vəzifəni qəbul etdikdən sonra işə başlaması prosesi; "appointment" müəyyən bir vəzifə rolunu da ifadə edir',
+    en_example: 'Following the interview panel\'s recommendation, the board confirmed the appointment of the new Head of Legal.',
+    az_example: 'Müsahibə komitəsinin tövsiyəsindən sonra şura yeni Hüquq Şöbəsinin rəhbərinin təyinatını təsdiq etdi.',
+    collocations: 'confirm an appointment; letter of appointment; terms of appointment; appointment to the role; new appointment',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 410,
+    term: 'APPRAISAL',
+    pos: 'Noun',
+    en_def: 'A formal meeting between an employee and their manager during which the employee\'s performance is assessed and discussed. Usually held annually.',
+    az_translation: 'Performans qiymətləndirmə görüşü (appraisal) – işçi ilə meneceri arasında işçinin performansının qiymətləndirildiyi rəsmi görüş; adətən illik keçirilir',
+    en_example: 'The annual appraisal provides an opportunity to set objectives, discuss development needs, and review salary.',
+    az_example: 'İllik performans qiymətləndirmə görüşü məqsədlər müəyyənləşdirmək, inkişaf ehtiyaclarını müzakirə etmək və maaşı nəzərdən keçirmək üçün fürsət yaradır.',
+    collocations: 'annual appraisal; performance appraisal; appraisal meeting; conduct an appraisal; appraisal form / report',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 411,
+    term: 'ASSESSMENT OF PERFORMANCE',
+    pos: 'Noun phrase',
+    en_def: 'The process of evaluating an employee\'s ability to do their job. Common during a probationary period, when the employer decides whether to offer a permanent or longer-term contract.',
+    az_translation: 'Performansın qiymətləndirilməsi – işçinin işini görə bilmə qabiliyyətinin dəyərləndirilməsi prosesi; sınaq müddəti zamanı yaygındır; işəgötürən bu dövrdə daimi müqavilə verməyi qərara alır',
+    en_example: 'A formal assessment of performance will be carried out at the end of the three-month probationary period.',
+    az_example: 'Üç aylıq sınaq müddətinin sonunda rəsmi performans qiymətləndirməsi aparılacaq.',
+    collocations: 'performance assessment; assessment during probation; assess performance; performance review; carry out an assessment',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 412,
+    term: 'ATTRIBUTABLE TO',
+    pos: 'Prepositional phrase',
+    en_def: 'Meaning is the cause of or is the reason for. Used to establish a link between a cause and an effect, such as linking absences to a medical condition.',
+    az_translation: 'Səbəbindən / -ə bağlı (attributable to) – "səbəbi" və ya "nəticəsi" mənasını verir; yoxluqlar kimi səbəb-nəticə əlaqəsini qurmaq üçün işlədilir',
+    en_example: 'The tribunal accepted that the employee\'s absences were attributable to a long-term medical condition.',
+    az_example: 'Tribunal işçinin yoxluqlarının uzunmüddətli tibbi vəziyyətinə bağlı olduğunu qəbul etdi.',
+    collocations: 'attributable to illness; directly attributable to; attributable to a disability; cause attributable to',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 413,
+    term: 'AUTOMATICALLY UNFAIR',
+    pos: 'Adjective phrase',
+    en_def: 'An employer\'s action that employment law does not permit to be considered fair under any circumstances. Dismissing a woman because she is pregnant is automatically unfair dismissal.',
+    az_translation: 'Avtomatik olaraq ədalətsiz – əmək hüququnun heç bir şəraitdə ədalətli hesab edilməsinə icazə vermədiyi işəgötürən hərəkəti; hamilə qadının işdən çıxarılması "avtomatik olaraq ədalətsiz işdən çıxarma" sayılır',
+    en_example: 'Dismissing an employee for whistleblowing is automatically unfair and gives rise to an uncapped compensation award.',
+    az_example: 'İfşaçılıq üçün işçini işdən çıxarmaq avtomatik olaraq ədalətsizdir və məhdudiyyətsiz kompensasiya hüququ yaradır.',
+    collocations: 'automatically unfair dismissal; automatically unfair reason; protected characteristic; no qualifying period',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 414,
+    term: 'BACK PAY / BACK TAXES',
+    pos: 'Noun phrase',
+    en_def: 'Back pay is money owed to an employee that was not paid at the correct time. Back taxes are amounts of tax that should have been paid in the past but were not.',
+    az_translation: 'Ödənilməmiş maaş / gecikmiş vergilər – ödənilməmiş maaş (back pay) vaxtında ödənilməmiş işçi borcu; gecikmiş vergilər (back taxes) keçmişdə ödənilməli olan, lakin ödənilməmiş vergilərdir',
+    en_example: 'The employee successfully claimed back pay after the tribunal found that her salary had been unlawfully reduced.',
+    az_example: 'İşçi tribunal onun maaşının qanunsuz olaraq azaldıldığını müəyyən etdikdən sonra uğurla ödənilməmiş maaş tələbini qaldırdı.',
+    collocations: 'claim back pay; unpaid wages; back pay award; recover back pay; back taxes owed',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 415,
+    term: 'BACKGROUND CHECK',
+    pos: 'Noun phrase',
+    en_def: 'An investigation carried out on a person before they start work. Includes checking criminal convictions, references, and qualifications. Required for roles in policing or working with children.',
+    az_translation: 'Keçmiş yoxlanması (background check) – işə başlamazdan əvvəl şəxs haqqında aparılan araşdırma; cinayət mühakimələrini, tövsiyələri və ixtisasları yoxlamağı əhatə edir; polis işi və uşaqlarla iş üçün tələb olunur',
+    en_example: 'All new employees in the childcare sector must pass a criminal record background check before commencing work.',
+    az_example: 'Uşaq baxım sektorundakı bütün yeni işçilər işə başlamazdan əvvəl cinayət qeydiyyatı yoxlanmasından keçməlidir.',
+    collocations: 'criminal record check; DBS check; background screening; conduct a background check; reference check',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 416,
+    term: 'BANK HOLIDAYS',
+    pos: 'Noun phrase (plural)',
+    en_def: 'Days on which banks are legally required to be closed. Includes standard public holidays such as Christmas and New Year, as well as unexpected occasions such as royal events.',
+    az_translation: 'Dövlət (bank) bayramları – bankların qanunən bağlı olduğu günlər; Milad və Yeni il kimi adi ictimai bayramları, həmçinin kral toyu kimi gözlənilməz hadisə günlərini əhatə edir',
+    en_example: 'The contract states that employees are entitled to all bank holidays in addition to their 25 days of annual leave.',
+    az_example: 'Müqavilədə işçilərin 25 günlük illik məzuniyyətlərinə əlavə olaraq bütün dövlət bayramlarına haqları olduğu bildirilir.',
+    collocations: 'bank holiday entitlement; public holiday; work on a bank holiday; bank holiday pay; statutory holiday',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 417,
+    term: 'BANK TRANSFER',
+    pos: 'Noun phrase',
+    en_def: 'A method of paying salary directly into an employee\'s bank account using their account number and sort code. The standard method of wage payment.',
+    az_translation: 'Bank köçürməsi – işçinin hesab nömrəsi və sort kodu vasitəsilə maaşı birbaşa bank hesabına köçürmə üsulu; ödəniş haqqının standart ödənilmə metodudur',
+    en_example: 'Salary will be paid by bank transfer on the last working day of each calendar month.',
+    az_example: 'Maaş hər təqvim ayının son iş günündə bank köçürməsi yolu ilə ödəniləcək.',
+    collocations: 'bank transfer; salary payment; direct deposit; account number; sort code; BACS payment',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 418,
+    term: 'BANKRUPTCY (Employment Context)',
+    pos: 'Noun',
+    en_def: 'The legal situation of a person who does not have enough money to pay their debts. May disqualify a person from certain public or government roles. Job application forms often ask whether an applicant is currently bankrupt.',
+    az_translation: 'Müflislik (əmək hüququ konteksti) – şəxsin borclarını ödəməyə yetəcək maliyyəsi olmadığı hüquqi vəziyyət; müəyyən dövlət vəzifələrinə qəbuldan çıxarıla bilər; iş müraciət blanklarında çox vaxt cari müflislik soruşulur',
+    en_example: 'The application form requires disclosure of any current or previous bankruptcy as this role involves handling public funds.',
+    az_example: 'Müraciət blankı ictimai vəsaitlərin idarəsi ilə bağlı olan bu vəzifəyə görə cari və ya keçmiş müflisliyin açıqlanmasını tələb edir.',
+    collocations: 'declared bankrupt; undischarged bankrupt; bankruptcy order; disclosure of bankruptcy; disqualify due to bankruptcy',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 419,
+    term: 'BEAR / BORNE (Employment)',
+    pos: 'Verb / Past participle',
+    en_def: 'To accept responsibility for, or to pay for, something. Borne is the past participle. Commonly used in employment contracts to specify who pays for travel, training, or equipment.',
+    az_translation: 'Daşımaq / öz üzərinə götürmək (əmək hüququ) – məsuliyyəti qəbul etmək və ya bir şeyin xərclərini ödəmək. "Borne" keçmiş zaman formasıdır; əmək müqavilələrindəki səyahət, təlim və avadanlıq xərclərinin kimin tərəfindən ödənəcəyini göstərmək üçün işlədilir',
+    en_example: 'All reasonable travel expenses incurred in the performance of duties will be borne by the employer.',
+    az_example: 'Vəzifə öhdəliklərinin yerinə yetirilməsi zamanı çəkilən bütün ağlabatan səyahət xərcləri işəgötürən tərəfindən qarşılanacaq.',
+    collocations: 'costs borne by the employer; bear the cost; borne by the employee; bear the risk; travel costs borne by',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 420,
+    term: 'BENEFITS',
+    pos: 'Noun (plural)',
+    en_def: 'In employment: (1) state payments to those out of work (unemployment benefit); (2) any payment or advantage provided as part of an employment package, such as a pension or health insurance.',
+    az_translation: 'Müavinətlər / güzəştlər – (1) işsizlərə dövlət tərəfindən verilən pul (işsizlik müavinəti); (2) pensiya, sağlamlıq sığortası kimi əmək paketinin bir hissəsi olaraq təqdim edilən hər hansı ödəniş və ya üstünlük',
+    en_example: 'The employment package includes a salary of £45,000 plus benefits such as a pension contribution and private health insurance.',
+    az_example: 'Əmək paketi 45,000 funt sterlinq maaş üstəgəl pensiya töhfəsi və şəxsi sağlamlıq sığortası kimi güzəştlərdən ibarətdir.',
+    collocations: 'employee benefits; benefits package; statutory benefits; unemployment benefit; benefits entitlement',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 421,
+    term: 'BENEFITS IN KIND',
+    pos: 'Noun phrase',
+    en_def: 'Non-cash benefits provided to employees as part of their remuneration, such as a company car, private medical insurance, or free accommodation. Informally called fringe benefits or perks.',
+    az_translation: 'Natura şəklindəki güzəştlər (benefits in kind) – işçilərə əmək haqqının bir hissəsi kimi verilən qeyri-nağd güzəştlər: şirkət avtomobili, şəxsi tibbi sığorta, pulsuz yaşayış. Qeyri-rəsmi olaraq "fringe benefits" və ya "perks" adlanır',
+    en_example: 'Benefits in kind such as a company car and private healthcare are subject to income tax under HMRC rules.',
+    az_example: 'Şirkət avtomobili və şəxsi sağlamlıq xidməti kimi natura güzəştlər HMRC qaydaları çərçivəsindəki gəlir vergisinə tabedir.',
+    collocations: 'benefits in kind; fringe benefits; perks of the job; taxable benefits; non-cash benefits',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 422,
+    term: 'BONUS PAYMENT',
+    pos: 'Noun phrase',
+    en_def: 'An additional payment made to an employee beyond their contractual salary. May be linked to individual or company performance targets, or to a specific occasion such as a Christmas bonus.',
+    az_translation: 'Bonus ödənişi – işçiyə müqavilə maaşından artıq verilən əlavə ödəniş; fərdi və ya şirkət performans hədəflərinə, ya da Milad bonusu kimi müəyyən hadisəyə bağlı ola bilər',
+    en_example: 'The contract provides for a discretionary annual bonus payment of up to 20% of base salary, subject to performance.',
+    az_example: 'Müqavilə performansa bağlı olaraq əsas maaşın 20%-ə qədər mülahizəli illik bonus ödənişini nəzərdə tutur.',
+    collocations: 'annual bonus; discretionary bonus; performance bonus; bonus payment; Christmas bonus; bonus scheme',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 423,
+    term: 'BOUND BY',
+    pos: 'Adjective phrase',
+    en_def: 'Having a legal obligation to keep a promise or comply with contractual or statutory terms. An employee who signs a contract is bound by its terms.',
+    az_translation: 'Hüquqi öhdəlikdə olmaq (bound by) – vəd yerinə yetirmək, müqavilə şərtlərinə və ya qanuni tələblərə riayət etmək üçün hüquqi öhdəlik daşımaq; müqavilə imzalayan işçi onun şərtləri ilə bağlıdır',
+    en_example: 'Both parties are bound by the terms of the employment contract from the date the offer is accepted.',
+    az_example: 'Hər iki tərəf işə qəbul təklifinin qəbul edildiyi tarixdən əmək müqaviləsinin şərtlərini yerinə yetirməklə bağlıdır.',
+    collocations: 'bound by contract; legally bound; bound by the terms; bound by legislation; bound by the agreement',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 424,
+    term: 'BRANCH',
+    pos: 'Noun',
+    en_def: 'A particular office or place of work that forms part of a larger organisation or network. Employment contracts may specify which branch the employee is based at.',
+    az_translation: 'Filial – daha böyük bir qurum və ya şəbəkənin bir hissəsini təşkil edən xüsusi ofis və ya iş yeri; əmək müqavilələrindəki işçinin hansı filialdə çalışdığı göstərilə bilər',
+    en_example: 'The employee was initially assigned to the London branch but was later transferred to the Manchester office.',
+    az_example: 'İşçi əvvəlcə London filialına təyin edildi, lakin sonradan Manchester ofisine köçürüldü.',
+    collocations: 'branch office; branch manager; local branch; transfer to a branch; branch location',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 425,
+    term: 'BREACH OF CONTRACT (Employment)',
+    pos: 'Noun phrase',
+    en_def: 'Failure to fulfil obligations under an employment contract. The legally correct way to refer to breaking a contract, used by both employees and employers.',
+    az_translation: 'Müqavilənin pozulması (əmək hüququ) – əmək müqaviləsi üzrə öhdəlikləri yerinə yetirməmək; müqaviləni "pozmaq" ifadəsinin düzgün hüquqi qarşılığı; həm işçilər, həm də işəgötürənlər tərəfindən istifadə edilir',
+    en_example: 'The employee brought a claim for breach of contract after the employer failed to pay the agreed redundancy payment.',
+    az_example: 'İşçi işəgötürən razılaşdırılmış ixtisar ödənişini ödəmədikdən sonra müqavilənin pozulması iddiasını irəli sürdü.',
+    collocations: 'breach of employment contract; claim for breach; breach by the employer / employee; remedy for breach',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 426,
+    term: 'BULLYING OR INTIMIDATORY CONDUCT',
+    pos: 'Noun phrase',
+    en_def: 'Behaviour directed at an employee that makes them feel frightened, unhappy, or uncomfortable at work. Employers have a legal duty to prevent bullying in the workplace.',
+    az_translation: 'Zorbalıq / intimidasiya davranışı – işçini iş yerindəki qorxudan, narahat edən və ya qeyri-rahat hiss etdirən davranış; işəgötürənin iş yerindəki zorbalığı önləmək üçün qanuni vəzifəsi var',
+    en_example: 'The grievance policy sets out the procedure for reporting bullying or intimidatory conduct by a colleague or manager.',
+    az_example: 'Şikayət siyasəti həmkarı və ya menecerin zorbalıq və ya intimidasiya davranışını bildirmək üçün proseduru müəyyənləşdirir.',
+    collocations: 'workplace bullying; anti-bullying policy; intimidatory behaviour; harassment and bullying; report bullying',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 427,
+    term: 'BUSINESS DAY (Employment)',
+    pos: 'Noun phrase',
+    en_def: 'A normal working day, Monday to Friday, 9am to 5pm, excluding weekends and public or bank holidays. Used in employment contracts for calculating notice periods and appeal deadlines.',
+    az_translation: 'İş günü (əmək hüququ) – həftəsonları və ictimai/bank bayramları istisna olmaqla adi iş günü (bazar ertəsindən cümə gününə qədər, saat 9:00–17:00); bildiriş müddətlərinin və apellyasiya son tarixlərinin hesablanmasında işlədilir',
+    en_example: 'An employee wishing to appeal a dismissal must do so within five business days of receiving the written reasons.',
+    az_example: 'İşdən çıxarılmasına apellyasiya etmək istəyən işçi bunu yazılı əsasları aldıqdan sonra beş iş günü ərzindəki etməlidir.',
+    collocations: 'business day; working day; within X business days; five business days; next business day',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 428,
+    term: 'CAPABILITY',
+    pos: 'Noun',
+    en_def: 'The ability of an employee to perform their job to the required standard. Capability dismissal occurs when an employee is genuinely unable to do their job due to illness or lack of skill.',
+    az_translation: 'Qabiliyyət / iş qabiliyyəti (capability) – işçinin işini tələb olunan standartda görə bilmə bacarığı; "qabiliyyət" əsasında işdən çıxarma xəstəlik və ya bacarıq çatışmazlığı nəticəsindəki real iş görə bilməməyi ifadə edir',
+    en_example: 'The employer followed a fair capability procedure before dismissing the employee on grounds of long-term ill-health.',
+    az_example: 'İşəgötürən uzunmüddətli xəstəlik səbəbindən işçini işdən çıxarmazdan əvvəl ədalətli qabiliyyət prosedurundan istifadə etdi.',
+    collocations: 'capability procedure; capability dismissal; ill-health capability; lack of capability; capability review',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 429,
+    term: 'CASUAL WORKER',
+    pos: 'Noun phrase',
+    en_def: 'A worker who does not have a fixed or guaranteed contract, hired as and when the employer needs them. Also known as a zero-hours worker or irregular worker.',
+    az_translation: 'Müvəqqəti işçi (casual worker) – sabit müqaviləsi olmayan, yalnız işəgötürənin ehtiyac duyduqda işə çağırılan işçi; "sıfır saatlıq işçi" (zero-hours worker) və ya "nizamsız işçi" (irregular worker) da deyilir',
+    en_example: 'The company engaged casual workers during the busy summer period to supplement permanent staff.',
+    az_example: 'Şirkət daimi işçilərini gücləndirmək üçün sıx yay dövründəki müvəqqəti işçiləri cəlb etdi.',
+    collocations: 'casual worker; zero-hours contract; irregular worker; agency worker; casual employment',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 430,
+    term: 'CLAIMANT (Employment Tribunal)',
+    pos: 'Noun',
+    en_def: 'In employment law, the person who brings a claim to an Employment Tribunal. Usually the employee or former employee who alleges that their rights have been breached.',
+    az_translation: 'Şikayətçi / iddia qaldıran tərəf (Əmək Tribunalı) – əmək hüququnda Əmək Tribunalına iddia qaldıran şəxs; adətən hüquqlarının pozulduğunu iddia edən işçi və ya keçmiş işçidir',
+    en_example: 'The claimant submitted her ET1 form to the Employment Tribunal within the statutory three-month time limit.',
+    az_example: 'Şikayətçi ET1 formasını qanunla müəyyən edilmiş üç aylıq müddət ərzindəki Əmək Tribunalına təqdim etdi.',
+    collocations: 'claimant at tribunal; ET1 form; claimant\'s case; successful claimant; claimant\'s representative',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 431,
+    term: 'COLLECTIVE AGREEMENT',
+    pos: 'Noun phrase',
+    en_def: 'An agreement negotiated between an employer (or employers\' association) and a trade union on behalf of a group of employees, covering wages, working hours, and conditions.',
+    az_translation: 'Kollektiv saziş – işəgötürən (və ya işəgötürənlər birliyinin) ilə həmkarlar ittifaqı arasında işçilər adından bağlanan saziş; maaş, iş saatları və çalışma şəraitini əhatə edir',
+    en_example: 'The collective agreement negotiated with the trade union provided for a 3% annual pay increase for all covered employees.',
+    az_example: 'Həmkarlar ittifaqı ilə bağlanan kollektiv saziş əhatə edilən bütün işçilər üçün illik 3% maaş artımı nəzərdə tuturdu.',
+    collocations: 'collective agreement; trade union agreement; collective bargaining; incorporated into contract; collective negotiation',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 432,
+    term: 'COMMISSION',
+    pos: 'Noun',
+    en_def: 'Payment to an employee calculated as a percentage of the value of sales they have made. A common element of remuneration in sales-oriented roles.',
+    az_translation: 'Komissiya haqqı – işçinin həyata keçirdiyi satışların dəyərinin faizi olaraq hesablanan ödəniş; satış sahəli vəzifələrdəki əmək haqqının geniş yayılmış bir komponentidir',
+    en_example: 'The sales executive receives a base salary of £25,000 plus a 5% commission on all new contracts signed.',
+    az_example: 'Satış meneceri 25,000 funt sterlinq əsas maaş üstəgəl bağlanan bütün yeni müqavilələrdən 5% komissiya haqqı alır.',
+    collocations: 'sales commission; commission rate; earn commission; commission-only role; commission structure; commission payment',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 433,
+    term: 'COMPENSATION (Employment)',
+    pos: 'Noun',
+    en_def: 'Money awarded to an employee by a tribunal or court to make up for a loss suffered as a result of the employer\'s unlawful conduct, such as unfair dismissal or discrimination.',
+    az_translation: 'Kompensasiya (əmək hüququ) – işəgötürənin hüquqa zidd davranışı (haqsız işdən çıxarma, ayrı-seçkilik) nəticəsindəki işçinin çəkdiyi zərərə görə tribunal və ya məhkəmə tərəfindən hökm edilən pul məbləği',
+    en_example: 'The Employment Tribunal awarded the claimant compensation of £18,000 for unfair dismissal and injury to feelings.',
+    az_example: 'Əmək Tribunalı şikayətçiyə haqsız işdən çıxarma və hisslərə xəsarət üçün 18,000 funt sterlinq kompensasiya hökm etdi.',
+    collocations: 'compensation award; compensation for unfair dismissal; injury to feelings; basic award; compensatory award',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 434,
+    term: 'COMPROMISE AGREEMENT / SETTLEMENT AGREEMENT',
+    pos: 'Noun phrase',
+    en_def: 'A legally binding agreement between an employer and employee to settle a dispute, usually involving a financial payment in exchange for the employee agreeing not to bring future tribunal claims. Now called a Settlement Agreement in UK law.',
+    az_translation: 'Kompromis saziş / Həll sazişi – işəgötürən ilə işçi arasında mübahisəni həll etmək üçün bağlanan hüquqi bağlayıcı saziş; adətən işçinin gələcək tribunal iddialarından imtina etməsi müqabilindəki pul ödənişini əhatə edir; UK hüququnda indi "Settlement Agreement" adlanır',
+    en_example: 'The parties reached a compromise agreement under which the employee received three months\' pay and waived all tribunal claims.',
+    az_example: 'Tərəflər işçinin üç aylıq maaş aldığı və bütün tribunal iddialarından imtina etdiyi kompromis sazişinə nail oldular.',
+    collocations: 'settlement agreement; compromise agreement; COT3; without prejudice; waive tribunal claims; independent legal advice',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 435,
+    term: 'CONFIDENTIALITY CLAUSE',
+    pos: 'Noun phrase',
+    en_def: 'A clause in an employment contract preventing an employee from disclosing confidential business information to competitors or the public, during or after employment. Also called a non-disclosure agreement (NDA).',
+    az_translation: 'Məxfilik şərti – işçinin iş dövründə və ya sonrasında gizli biznes məlumatlarını rəqiblərə və ya ictimaiyyətə açıqlamasının qarşısını alan əmək müqaviləsinin bəndi; "gizli saxlama müqaviləsi" (NDA) da adlanır',
+    en_example: 'The confidentiality clause in the contract restricts the employee from disclosing client lists or trade secrets after leaving.',
+    az_example: 'Müqavilənin məxfilik şərti işçinin ayrıldıqdan sonra müştəri siyahılarını və ticarət sirlərini açıqlamasını məhdudlaşdırır.',
+    collocations: 'confidentiality clause; non-disclosure agreement; NDA; duty of confidentiality; breach of confidentiality',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 436,
+    term: 'CONSTRUCTIVE DISMISSAL',
+    pos: 'Noun phrase',
+    en_def: 'When an employee resigns because the employer\'s conduct has fundamentally breached the contract, making continued employment impossible. The employee can claim they were effectively dismissed.',
+    az_translation: 'Məcburi istefa (constructive dismissal) – işçinin işəgötürənin davranışının müqaviləni əsaslı şəkildə pozaraq işdə davam etməni qeyri-mümkün etdiyi üçün istefa etməsi; işçi effektiv olaraq "işdən çıxarıldığını" iddia edə bilər',
+    en_example: 'The employee resigned after her manager publicly humiliated her and successfully claimed constructive dismissal.',
+    az_example: 'İşçi meneceri onu ictimai alanda rüsvay etdikdən sonra istefa etdi və uğurla məcburi istefa iddiasını qaldırdı.',
+    collocations: 'claim constructive dismissal; constructive unfair dismissal; fundamental breach; forced to resign; resign in response to breach',
+    level: 'H',
+    topic: 'Employment Law'
+  },
+  {
+    id: 437,
+    term: 'CONTRACT OF EMPLOYMENT',
+    pos: 'Noun phrase',
+    en_def: 'The legal agreement between an employer and an employee setting out the terms and conditions of employment. May be written, oral, or implied, but must include certain statutory particulars.',
+    az_translation: 'Əmək müqaviləsi – işəgötürən ilə işçi arasındakı əmək şərtlərini müəyyən edən hüquqi saziş; yazılı, şifahi və ya nəzərdə tutulmuş ola bilər, lakin müəyyən qanuni məlumatları daxil etməlidir',
+    en_example: 'Every employee is entitled to receive a written statement of the main terms of their contract of employment within two months of starting.',
+    az_example: 'Hər işçi işə başlamasından iki ay ərzindəki əmək müqaviləsinin əsas şərtlərinin yazılı bəyanatını almaq hüququna malikdir.',
+    collocations: 'contract of employment; terms of employment; written statement; employment terms; implied terms; express terms',
+    level: 'F',
+    topic: 'Employment Law'
+  }
+];
+
+const existingIds = new Set(vocab.map(v => v.id));
+const conflicts = newTerms.filter(t => existingIds.has(t.id));
+if (conflicts.length > 0) {
+  console.log('ID conflicts:', conflicts.map(t => t.id));
+  process.exit(1);
+}
+
+const updated = [...vocab, ...newTerms];
+fs.writeFileSync('./src/data/vocab.json', JSON.stringify(updated, null, 2));
+console.log('Done. Added:', newTerms.length, '| New total:', updated.length);
