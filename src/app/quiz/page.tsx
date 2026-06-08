@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { getUser, saveQuizResult } from '@/lib/supabase'
+import { getUser, getUserProfile, saveQuizResult } from '@/lib/supabase'
 import { getRandomMessage } from '@/lib/psychology'
 import { analyzeWeakPoints } from '@/lib/analysis'
 import { explainQuizError } from '@/lib/ai'
@@ -10,13 +10,27 @@ import ProfessorWidget from '@/components/ProfessorWidget'
 import AudioPlayer from '@/components/AudioPlayer'
 import quizData from '@/data/quizzes.json'
 import vocabData from '@/data/vocab.json'
-import type { QuizQuestion, QuizLevel, VocabItem } from '@/types'
+import type { QuizQuestion, VocabItem, CEFRLevel, LearningTrack } from '@/types'
 
-const LEVELS: QuizLevel[] = ['Foundation', 'Higher', 'Advanced']
-const LEVEL_COLORS = {
-  Foundation: 'bg-emerald-600',
-  Higher: 'bg-blue-600',
-  Advanced: 'bg-red-600',
+// ─── CEFR nərdivanı + track ───────────────────────────
+const CEFR_ORDER: CEFRLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+const ALL_QUIZ = quizData as QuizQuestion[]
+const qCount = (t: LearningTrack, c: CEFRLevel) =>
+  ALL_QUIZ.filter((q) => (q.track ?? 'legal') === t && q.cefr === c).length
+const AVAILABLE: Record<LearningTrack, CEFRLevel[]> = {
+  general: CEFR_ORDER.filter((c) => qCount('general', c) > 0),
+  legal: CEFR_ORDER.filter((c) => qCount('legal', c) > 0),
+}
+const CEFR_COLOR: Record<string, string> = {
+  A1: 'bg-green-500', A2: 'bg-emerald-600', B1: 'bg-teal-600',
+  B2: 'bg-blue-600', C1: 'bg-indigo-600', C2: 'bg-red-600',
+}
+const CEFR_DESC: Record<string, string> = {
+  A1: 'Başlanğıc — gündəlik sözlər', A2: 'Elementar', B1: 'Orta',
+  B2: 'Yuxarı-orta', C1: 'İrəli', C2: 'Ustalıq',
+}
+const TRACK_LABEL: Record<LearningTrack, string> = {
+  general: '📚 Ümumi İngilis', legal: '⚖️ Hüquqi (TOLES)',
 }
 
 type Stage = 'select' | 'quiz' | 'result'
@@ -40,7 +54,8 @@ export default function QuizPage() {
   const router = useRouter()
   const [userId, setUserId] = useState<string | null>(null)
   const [stage, setStage] = useState<Stage>('select')
-  const [level, setLevel] = useState<QuizLevel>('Foundation')
+  const [track, setTrack] = useState<LearningTrack>('general')
+  const [cefr, setCefr] = useState<CEFRLevel>('A1')
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentIdx, setCurrentIdx] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
@@ -53,6 +68,15 @@ export default function QuizPage() {
   const [aiExplanation, setAiExplanation] = useState<string | null>(null)
   const [aiLoading, setAiLoading] = useState(false)
   const [aiError, setAiError] = useState<string | null>(null)
+
+  const levelLabel = `${track === 'legal' ? 'Hüquqi' : 'Ümumi'} · ${cefr}`
+
+  // Track dəyişəndə: yadda saxla + cari level həmin trekdə yoxdursa ilk mövcuda keç
+  function chooseTrack(t: LearningTrack) {
+    setTrack(t)
+    if (typeof window !== 'undefined') localStorage.setItem('best_english_track', t)
+    if (!AVAILABLE[t].includes(cefr)) setCefr(AVAILABLE[t][0] ?? 'A1')
+  }
 
   // Zəif nöqtə analizi — result stage-də
   useEffect(() => {
@@ -74,15 +98,28 @@ export default function QuizPage() {
   }, [currentIdx, showAnswer, questions])
 
   useEffect(() => {
-    getUser().then((u) => {
-      if (!u) router.push('/login')
-      else setUserId(u.id)
-    })
+    (async () => {
+      const u = await getUser()
+      if (!u) { router.push('/login'); return }
+      setUserId(u.id)
+      const { data: prof } = await getUserProfile(u.id)
+      const profCefr = ((prof?.level as CEFRLevel) || 'A1')
+      const saved = (typeof window !== 'undefined' ? localStorage.getItem('best_english_track') : null)
+      let t: LearningTrack = saved === 'general' || saved === 'legal'
+        ? saved
+        : (['A1', 'A2', 'B1'].includes(profCefr) ? 'general' : 'legal')
+      let c: CEFRLevel = profCefr
+      if (!AVAILABLE[t].includes(c)) {
+        if (AVAILABLE[t].length) c = AVAILABLE[t][0]
+        else { t = t === 'general' ? 'legal' : 'general'; c = AVAILABLE[t][0] ?? 'A1' }
+      }
+      setTrack(t); setCefr(c)
+    })()
   }, [router])
 
   function startQuiz() {
     const filtered = (quizData as QuizQuestion[])
-      .filter((q) => q.level === level)
+      .filter((q) => (q.track ?? 'legal') === track && q.cefr === cefr)
       .sort(() => Math.random() - 0.5)
       .slice(0, 10)
       // Variantları da qarışdır ki, düzgün cavab həmişə eyni mövqedə olmasın
@@ -141,7 +178,7 @@ export default function QuizPage() {
         current.question,
         current.correct,
         selected ?? '—',
-        level
+        levelLabel
       )
       setAiExplanation(exp)
     } catch (err: any) {
@@ -168,21 +205,36 @@ export default function QuizPage() {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Test Seç</h1>
         <p className="text-gray-500 mb-6 text-sm">Hər test 10 sualdan ibarətdir — cavab açarı ilə</p>
 
-        <div className="space-y-3">
-          {LEVELS.map((l) => (
+        {/* Track seçimi: Ümumi İngilis vs Hüquqi */}
+        <div className="grid grid-cols-2 gap-2 mb-4">
+          {(['general', 'legal'] as LearningTrack[]).map((t) => (
             <button
-              key={l}
-              onClick={() => setLevel(l)}
-              className={`w-full p-4 rounded-xl border-2 text-left transition-all ${
-                level === l ? 'border-blue-500 bg-blue-50 dark:bg-blue-950' : 'border-gray-200 dark:border-gray-700'
+              key={t}
+              onClick={() => chooseTrack(t)}
+              className={`p-3 rounded-xl border-2 text-sm font-semibold transition-all ${
+                track === t
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300'
+                  : 'border-gray-200 dark:border-gray-700 text-gray-500'
               }`}
             >
-              <div className="font-semibold text-gray-900 dark:text-white">{l}</div>
-              <div className="text-sm text-gray-500">
-                {l === 'Foundation' && 'A2–B1 · Lüğət, True/False, Boşluq, Preposisiya'}
-                {l === 'Higher'     && 'B2–C1 · Çoxlu Seçim, Cümlə Tamamlama'}
-                {l === 'Advanced'   && 'C1–C2 · Hüquqi Doktrinalar, M&A, Müqavilə'}
-              </div>
+              {TRACK_LABEL[t]}
+            </button>
+          ))}
+        </div>
+
+        {/* CEFR səviyyə seçimi (yalnız məzmunu olan levellər) */}
+        <div className="space-y-2">
+          {AVAILABLE[track].map((c) => (
+            <button
+              key={c}
+              onClick={() => setCefr(c)}
+              className={`w-full p-3.5 rounded-xl border-2 text-left flex items-center gap-3 transition-all ${
+                cefr === c ? 'border-blue-500 bg-blue-50 dark:bg-blue-950' : 'border-gray-200 dark:border-gray-700'
+              }`}
+            >
+              <span className={`badge text-white border-0 ${CEFR_COLOR[c]}`}>{c}</span>
+              <span className="text-sm text-gray-600 dark:text-gray-300">{CEFR_DESC[c]}</span>
+              <span className="ml-auto text-xs text-gray-400">{qCount(track, c)} sual</span>
             </button>
           ))}
         </div>
@@ -202,7 +254,7 @@ export default function QuizPage() {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
           {score} / {questions.length}
         </h2>
-        <p className="text-gray-500 mb-4">{level} — {pct}% düzgün</p>
+        <p className="text-gray-500 mb-4">{levelLabel} — {pct}% düzgün</p>
 
         <div className="w-full bg-gray-100 rounded-full h-3 mb-6">
           <div
@@ -245,7 +297,7 @@ export default function QuizPage() {
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
         <button onClick={() => setStage('select')} className="text-gray-500">← Çıx</button>
         <div className="flex items-center gap-2">
-          <span className={`badge text-white border-0 ${LEVEL_COLORS[level]}`}>{level}</span>
+          <span className={`badge text-white border-0 ${CEFR_COLOR[cefr]}`}>{levelLabel}</span>
           <span className="text-sm text-gray-500">{currentIdx + 1} / {questions.length}</span>
         </div>
         <span className="text-sm text-green-600">✓ {results.filter(Boolean).length}</span>
@@ -362,7 +414,7 @@ export default function QuizPage() {
           </div>
         )}
       </main>
-      <AITutorChat level={level} />
+      <AITutorChat level={levelLabel} />
     </div>
   )
 }
