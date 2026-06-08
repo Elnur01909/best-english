@@ -10,6 +10,7 @@ import DailySchedule from '@/components/DailySchedule'
 import WeakPoints from '@/components/WeakPoints'
 import AITutorChat from '@/components/AITutorChat'
 import type { UserProfile } from '@/types'
+import lessonsData from '@/data/lessons.json'
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer
 } from 'recharts'
@@ -220,7 +221,7 @@ if (loading) {
               href: '/lessons',
               icon: '📖',
               title: 'Dərslər',
-              desc: '10 mini-dərs: müqavilə, məhkəmə, əmək, tort hüququ...',
+              desc: `${lessonsData.length} mini-dərs: müqavilə, məhkəmə, əmək, tort hüququ...`,
               cta: 'Dərslərə bax →',
               urgent: false,
             },
