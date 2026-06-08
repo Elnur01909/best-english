@@ -95,8 +95,8 @@ create table if not exists public.vocab_deep_dive (
 -- Bax: migrations/add_friends_and_battles.sql
 create table if not exists public.friend_requests (
   id           uuid primary key default gen_random_uuid(),
-  sender_id    uuid references auth.users(id) on delete cascade not null,
-  receiver_id  uuid references auth.users(id) on delete cascade not null,
+  sender_id    uuid references public.user_profiles(id) on delete cascade not null,
+  receiver_id  uuid references public.user_profiles(id) on delete cascade not null,
   status       text not null default 'pending' check (status in ('pending','accepted','declined')),
   created_at   timestamptz default now(),
   responded_at timestamptz,
@@ -107,8 +107,8 @@ create table if not exists public.friend_requests (
 -- ─── 4e. TOLES Mini-Test Yarışı (real-vaxt) ─────────────
 create table if not exists public.battles (
   id            uuid primary key default gen_random_uuid(),
-  creator_id    uuid references auth.users(id) on delete cascade not null,
-  opponent_id   uuid references auth.users(id) on delete cascade not null,
+  creator_id    uuid references public.user_profiles(id) on delete cascade not null,
+  opponent_id   uuid references public.user_profiles(id) on delete cascade not null,
   status        text not null default 'pending'
                   check (status in ('pending','active','completed','declined','cancelled')),
   question_ids  jsonb not null,
@@ -122,7 +122,7 @@ create table if not exists public.battles (
 create table if not exists public.battle_answers (
   id            uuid primary key default gen_random_uuid(),
   battle_id     uuid references public.battles(id) on delete cascade not null,
-  user_id       uuid references auth.users(id) on delete cascade not null,
+  user_id       uuid references public.user_profiles(id) on delete cascade not null,
   q_index       integer not null,
   correct       boolean not null,
   time_taken_ms integer not null default 0,
