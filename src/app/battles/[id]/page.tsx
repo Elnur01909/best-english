@@ -163,7 +163,7 @@ export default function BattlePage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <div className="card max-w-sm w-full text-center">
-          <div className="text-5xl mb-3">{won ? '🏆' : tie ? '🤝' : '🌱'}</div>
+          <div className="text-5xl mb-3">{won ? '🏆' : tie ? '🤝' : '🐣'}</div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
             {won ? 'Sən qazandın!' : tie ? 'Bərabərə!' : 'Bu dəfə alınmadı'}
           </h2>
