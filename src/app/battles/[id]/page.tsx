@@ -17,6 +17,9 @@ interface PlayerState {
   correctCount: number
 }
 
+const TIME_PER_QUESTION = 30 // hər sual üçün saniyə
+const TIMEOUT_SENTINEL = '__TIMEOUT__'
+
 export default function BattlePage() {
   const router = useRouter()
   const params = useParams()
@@ -30,6 +33,7 @@ export default function BattlePage() {
 
   const [qIdx, setQIdx] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
+  const [timeLeft, setTimeLeft] = useState(TIME_PER_QUESTION)
   const [myAnswers, setMyAnswers] = useState<BattleAnswer[]>([])
   const [oppAnswers, setOppAnswers] = useState<BattleAnswer[]>([])
   const [oppName, setOppName] = useState('Rəqib')
@@ -104,13 +108,38 @@ export default function BattlePage() {
     const rec = { battle_id: battleId, user_id: userId, q_index: qIdx, correct, time_taken_ms: timeTaken }
     setMyAnswers((prev) => [...prev, rec as BattleAnswer])
     submitBattleAnswer(rec)
+  }
 
-    setTimeout(() => {
+  // Cavab seçiləndən (və ya vaxt bitəndən) sonra qısa fasilə ilə növbəti suala keç
+  useEffect(() => {
+    if (!selected) return
+    const t = setTimeout(() => {
       setSelected(null)
       setQIdx((i) => i + 1)
       questionStartRef.current = Date.now()
     }, 1100)
-  }
+    return () => clearTimeout(t)
+  }, [selected])
+
+  // Hər sual üçün 30 saniyəlik geri sayım — cavab veriləndə dayanır
+  useEffect(() => {
+    if (!current || selected) return
+    setTimeLeft(TIME_PER_QUESTION)
+    const id = setInterval(() => {
+      setTimeLeft((t) => (t > 0 ? t - 1 : 0))
+    }, 1000)
+    return () => clearInterval(id)
+  }, [qIdx, current, selected])
+
+  // Vaxt bitəndə: sual hələ cavablanmayıbsa "cavabsız" (yanlış) kimi qeyd et və avtomatik keç
+  useEffect(() => {
+    if (timeLeft > 0 || selected || !current || !userId) return
+    const timeTaken = Date.now() - questionStartRef.current
+    const rec = { battle_id: battleId, user_id: userId, q_index: qIdx, correct: false, time_taken_ms: timeTaken }
+    setSelected(TIMEOUT_SENTINEL)
+    setMyAnswers((prev) => (prev.some((a) => a.q_index === qIdx) ? prev : [...prev, rec as BattleAnswer]))
+    submitBattleAnswer(rec)
+  }, [timeLeft, selected, current, userId, qIdx, battleId])
 
   if (loading) return <div className="min-h-screen flex items-center justify-center text-gray-500">Yüklənir...</div>
   if (notFound || !battle) return <div className="min-h-screen flex items-center justify-center text-gray-500">Yarış tapılmadı.</div>
@@ -204,6 +233,15 @@ export default function BattlePage() {
           </div>
         ) : current ? (
           <div className="w-full max-w-lg">
+            <div className="flex items-center justify-end mb-2">
+              <div className={`text-sm font-bold px-3 py-1 rounded-full transition-colors ${
+                timeLeft <= 10
+                  ? 'bg-red-100 text-red-600 dark:bg-red-950 dark:text-red-400 animate-pulse'
+                  : 'bg-blue-50 text-blue-600 dark:bg-blue-950 dark:text-blue-300'
+              }`}>
+                ⏱️ {timeLeft}s
+              </div>
+            </div>
             <div className="flex items-start gap-3 mb-6">
               <h2 className="flex-1 min-w-0 text-xl font-semibold text-gray-900 dark:text-white leading-relaxed">
                 {current.question}
@@ -234,7 +272,9 @@ export default function BattlePage() {
                 )
               })}
             </div>
-            <p className="text-center text-xs text-gray-400 mt-4">{qIdx + 1} / {total}</p>
+            <p className="text-center text-xs text-gray-400 mt-4">
+              {selected === TIMEOUT_SENTINEL ? '⏰ Vaxt bitdi — cavab verilmədi' : `${qIdx + 1} / ${total}`}
+            </p>
           </div>
         ) : null}
       </main>
