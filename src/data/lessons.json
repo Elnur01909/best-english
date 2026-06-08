@@ -468,5 +468,475 @@
         "url": "https://www.bbc.com/learning/english/"
       }
     ]
+  },
+  {
+    "id": 11,
+    "title": "Dərs 11: Contract Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: CONSIDERATION, BREACH OF CONTRACT, WARRANTY, INDEMNITY, RESCISSION, NOVATION, ASSIGNMENT, CONDITION PRECEDENT, LIQUIDATED DAMAGES, MISREPRESENTATION, VOID, VOIDABLE, ESTOPPEL, ANTICIPATORY BREACH, EXCLUSION CLAUSE",
+    "terms": [
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165
+    ],
+    "duration": 30,
+    "level": "H",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Law Glossary və İzahlar",
+        "url": "https://www.lawteacher.net/"
+      },
+      {
+        "type": "podcast",
+        "title": "The Lawyer English Podcast",
+        "url": "https://legalenglishboost.com/"
+      },
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Dərs 12: Tort Law, Company Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: NEGLIGENCE, DUTY OF CARE, DEFAMATION, LIBEL, SLANDER, NUISANCE, TRESPASS, STRICT LIABILITY, CAUSATION, VICARIOUS LIABILITY, CONTRIBUTORY NEGLIGENCE, REMOTENESS OF DAMAGE, ECONOMIC LOSS, SHAREHOLDER, ARTICLES OF ASSOCIATION",
+    "terms": [
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180
+    ],
+    "duration": 30,
+    "level": "A",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Dərs 13: Company Law, Criminal Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: MEMORANDUM OF ASSOCIATION, LIMITED LIABILITY, FIDUCIARY DUTY, MERGER, ACQUISITION, INSOLVENCY, DIVIDEND, PROXY, MINORITY SHAREHOLDER, WINDING UP, MENS REA, ACTUS REUS, ACQUITTAL, CONVICTION, INDICTMENT",
+    "terms": [
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195
+    ],
+    "duration": 30,
+    "level": "A",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      },
+      {
+        "type": "youtube",
+        "title": "Legal English in Practice",
+        "url": "https://www.youtube.com/results?search_query=legal+english+for+lawyers"
+      },
+      {
+        "type": "article",
+        "title": "Law Glossary və İzahlar",
+        "url": "https://www.lawteacher.net/"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Dərs 14: Criminal Law, Court & Litigation",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: PROSECUTION, DEFENDANT, PLEA BARGAIN, MITIGATING CIRCUMSTANCES, AGGRAVATING FACTOR, PLAINTIFF, JURISDICTION, INJUNCTION, SUBPOENA, AFFIDAVIT, APPEAL, VERDICT, CROSS-EXAMINATION, BURDEN OF PROOF, PRECEDENT",
+    "terms": [
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210
+    ],
+    "duration": 30,
+    "level": "H",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Law Glossary və İzahlar",
+        "url": "https://www.lawteacher.net/"
+      },
+      {
+        "type": "podcast",
+        "title": "The Lawyer English Podcast",
+        "url": "https://legalenglishboost.com/"
+      },
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Dərs 15: Court & Litigation, Property Law, Employment Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: DISCOVERY, SETTLEMENT, CLASS ACTION, FREEHOLD, LEASEHOLD, EASEMENT, MORTGAGE, TITLE DEED, TENANCY, CONVEYANCING, ENCUMBRANCE, ADVERSE POSSESSION, RESTRICTIVE COVENANT, RIGHT OF WAY, UNFAIR DISMISSAL",
+    "terms": [
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225
+    ],
+    "duration": 30,
+    "level": "F",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Dərs 16: Employment Law, Intellectual Property, Administrative Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: REDUNDANCY, GROSS MISCONDUCT, NOTICE PERIOD, DISCRIMINATION, COLLECTIVE BARGAINING, GRIEVANCE, SEVERANCE PAY, PATENT, TRADEMARK, COPYRIGHT, INFRINGEMENT, LICENSING, TRADE SECRET, ROYALTY, JUDICIAL REVIEW",
+    "terms": [
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240
+    ],
+    "duration": 30,
+    "level": "H",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      },
+      {
+        "type": "youtube",
+        "title": "Legal English in Practice",
+        "url": "https://www.youtube.com/results?search_query=legal+english+for+lawyers"
+      },
+      {
+        "type": "article",
+        "title": "Law Glossary və İzahlar",
+        "url": "https://www.lawteacher.net/"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Dərs 17: Administrative Law, International Law, Legal Principles",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: DELEGATED LEGISLATION, OMBUDSMAN, ULTRA VIRES, NATURAL JUSTICE, TRIBUNAL, TREATY, SOVEREIGNTY, EXTRADITION, DIPLOMATIC IMMUNITY, CROSS-BORDER JURISDICTION, SANCTIONS, DUE PROCESS, RES JUDICATA, STARE DECISIS, BONA FIDE",
+    "terms": [
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255
+    ],
+    "duration": 30,
+    "level": "A",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Law Glossary və İzahlar",
+        "url": "https://www.lawteacher.net/"
+      },
+      {
+        "type": "podcast",
+        "title": "The Lawyer English Podcast",
+        "url": "https://legalenglishboost.com/"
+      },
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Dərs 18: Legal Principles, Bankruptcy Law, Family Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: PRIMA FACIE, HABEAS CORPUS, NULLITY, LIQUIDATION, RECEIVERSHIP, CREDITOR, DEBTOR, DISCHARGE OF BANKRUPTCY, ADMINISTRATION ORDER, ALIMONY, CUSTODY, ANNULMENT, PRENUPTIAL AGREEMENT, DIVORCE DECREE, GUARDIANSHIP",
+    "terms": [
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270
+    ],
+    "duration": 30,
+    "level": "A",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://www.englishteacher.net/legal-english/"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Dərs 19: Family Law, Tax Law, Immigration Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: ADOPTION, MAINTENANCE ORDER, INHERITANCE TAX, ESTATE TAX, TAX EVASION, TAX AVOIDANCE, CAPITAL GAINS TAX, WITHHOLDING TAX, DOUBLE TAXATION, DEPORTATION, ASYLUM, VISA, NATURALIZATION, RESIDENCY PERMIT, DETENTION",
+    "terms": [
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285
+    ],
+    "duration": 30,
+    "level": "H",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "TOLES Hazırlığı",
+        "url": "https://www.bbc.com/learning/english/"
+      },
+      {
+        "type": "youtube",
+        "title": "Legal English in Practice",
+        "url": "https://www.youtube.com/results?search_query=legal+english+for+lawyers"
+      },
+      {
+        "type": "article",
+        "title": "Law Glossary və İzahlar",
+        "url": "https://www.lawteacher.net/"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Dərs 20: Immigration Law, Maritime Law, Banking & Finance Law",
+    "description": "15 hüquqi terminə dair dərs",
+    "content": "Bu dərsdə aşağıdakı hüquqi terminlər öyrənilən: REFUGEE STATUS, ADMIRALTY LAW, BILL OF LADING, CHARTER PARTY, SALVAGE, MARITIME LIEN, FLAG STATE, DEMURRAGE, COLLATERAL, GUARANTOR, DEFAULT, SECURITIZATION, LETTER OF CREDIT, COVENANT, DUE DILIGENCE",
+    "terms": [
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300
+    ],
+    "duration": 30,
+    "level": "A",
+    "objectives": [
+      "15 hüquqi termininin mənasını öyrən",
+      "Terminlərin praktik istifadə nümunələrini anla",
+      "Terminlərin kollokasiyalarını yadda saxla"
+    ],
+    "immersionLinks": [
+      {
+        "type": "article",
+        "title": "Law Glossary və İzahlar",
+        "url": "https://www.lawteacher.net/"
+      },
+      {
+        "type": "podcast",
+        "title": "The Lawyer English Podcast",
+        "url": "https://legalenglishboost.com/"
+      },
+      {
+        "type": "youtube",
+        "title": "Hüquqi İngilis Sözləri",
+        "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
+      }
+    ]
   }
 ]

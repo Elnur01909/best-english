@@ -88,5 +88,101 @@
       "Kompensasiya nə ola bilər?"
     ],
     "difficulty": "Higher"
+  },
+  {
+    "id": 6,
+    "title": "Boşanma və uşaq üzərində himayə mübahisəsi",
+    "description": "Ayrılan cütlük uşaqlarının himayəsi və nəfəqə məsələlərində razılığa gələ bilmir.",
+    "scenario": "On il evli olan cütlük boşanma qərarına gəlir. Ana iki uşağın tam himayəsini istəyir, ata isə birgə himayə və daha az nəfəqə ödəməyi təklif edir. Tərəflər nikahdan əvvəl bağlanmış sazişin qüvvədə olub-olmaması ilə bağlı da mübahisə edirlər.",
+    "relatedTerms": [
+      50,
+      265,
+      268,
+      269,
+      272
+    ],
+    "questions": [
+      "Məhkəmə uşaqların himayəsi barədə qərar verərkən hansı amilləri nəzərə alır?",
+      "Nəfəqə məbləği necə müəyyən edilir?",
+      "Nikahdan əvvəl bağlanmış saziş bu mübahisəyə necə təsir edə bilər?"
+    ],
+    "difficulty": "Higher"
+  },
+  {
+    "id": 7,
+    "title": "Vergidən yayınma ittihamı",
+    "description": "Sahibkar gəlirini xaricdə gizlətdiyinə görə vergi orqanları tərəfindən araşdırılır.",
+    "scenario": "Yerli sahibkar bir neçə ildir mənfəətinin bir hissəsini xarici hesablarda gizlədərək vergi bəyannaməsində göstərmir. Vergi orqanı araşdırma apararaq onu həm vergidən yayınmada, həm də ikiqat vergitutma sazişinin şərtlərini pozmaqda ittiham edir. Sahibkarın vəkili bunun qanuni vergidən yan keçmə olduğunu iddia edir.",
+    "relatedTerms": [
+      145,
+      276,
+      277,
+      279,
+      273
+    ],
+    "questions": [
+      "Vergidən yayınma ilə vergidən yan keçmə arasında fərq nədir?",
+      "Vergi orqanı hansı sübutlara əsaslana bilər?",
+      "İkiqat vergitutma sazişi bu işdə necə rol oynaya bilər?"
+    ],
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 8,
+    "title": "Sığınacaq müraciəti və deportasiya təhlükəsi",
+    "description": "Öz ölkəsində təqibdən qaçan şəxs sığınacaq üçün müraciət edir, lakin deportasiya əmri ilə üzləşir.",
+    "scenario": "Vətənində siyasi səbəblərdən təqib olunan jurnalist qonşu ölkəyə sığınaraq sığınacaq statusu üçün müraciət edir. Müraciəti araşdırılarkən onun vizasının müddəti bitir və immiqrasiya orqanları onun barəsində saxlanılma və deportasiya prosedurunu başladır. Vəkili qaçqın statusu və beynəlxalq müdafiə prinsiplərinə istinad edərək etiraz edir.",
+    "relatedTerms": [
+      280,
+      281,
+      282,
+      285,
+      286
+    ],
+    "questions": [
+      "Sığınacaq müraciətinin əsas şərtləri hansılardır?",
+      "Deportasiya əmrinə qarşı hansı hüquqi vasitələrdən istifadə edilə bilər?",
+      "Qaçqın statusu əldə etmək üçün hansı meyarlar əsas götürülür?"
+    ],
+    "difficulty": "Higher"
+  },
+  {
+    "id": 9,
+    "title": "Yük gəmisinin gecikməsi və xilasetmə əməliyyatı",
+    "description": "Fırtınaya düşən yük gəmisi xilas edilir, lakin yükün gecikməsi ilə bağlı kommersiya mübahisəsi yaranır.",
+    "scenario": "Çarter müqaviləsi əsasında işləyən yük gəmisi sualtı qəzaya düşərək xilasetmə şirkəti tərəfindən xilas edilir. Xilasetmə şirkəti gəmi üzərində dəniz girovu hüququ irəli sürür. Eyni zamanda, yükün gec çatdırılması səbəbindən alıcı çarterçidən demuraj tələb edir, çarterçi isə konosamentdə göstərilən şərtlərə istinad edərək məsuliyyəti rədd edir.",
+    "relatedTerms": [
+      288,
+      289,
+      290,
+      291,
+      293
+    ],
+    "questions": [
+      "Xilasetmə şirkətinin gəmi üzərindəki hüquqları nədən ibarətdir?",
+      "Demuraj tələbi hansı şərtlər əsasında əsaslandırıla bilər?",
+      "Konosament bu mübahisədə hansı sübut rolunu oynayır?"
+    ],
+    "difficulty": "Advanced"
+  },
+  {
+    "id": 10,
+    "title": "Kredit öhdəliyinin pozulması və girov mübahisəsi",
+    "description": "Kiçik müəssisə bank kreditini ödəyə bilmədiyi üçün girov qoyduğu əmlakını itirmək təhlükəsi ilə üzləşir.",
+    "scenario": "Bir startap genişlənmək üçün bankdan kredit götürür və ofis binasını girov qoyur, atası isə zamin kimi çıxış edir. Maliyyə böhranı zamanı şirkət ödəmələrini vaxtında etmir və öhdəliyini yerinə yetirmir. Bank girovu ələ keçirmək istəyir, lakin şirkət kredit müqaviləsindəki şərt öhdəliklərinin və akkreditiv üzrə hərtərəfli yoxlamanın düzgün aparılmadığını iddia edir.",
+    "relatedTerms": [
+      117,
+      295,
+      296,
+      298,
+      299,
+      300
+    ],
+    "questions": [
+      "Bankın girovu ələ keçirmək hüququ hansı şərtlərlə məhdudlaşa bilər?",
+      "Zaminin məsuliyyəti nə dərəcədə əsas borcluya bağlıdır?",
+      "Hərtərəfli yoxlamanın aparılmaması bankın iddiasına necə təsir edə bilər?"
+    ],
+    "difficulty": "Advanced"
   }
 ]

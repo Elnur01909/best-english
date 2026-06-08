@@ -2098,5 +2098,2105 @@
     "explanation": "LIQUIDATION: The process of winding up a company's affairs by selling its assets and distributing the proceeds to creditors and shareholders.",
     "level": "H",
     "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 151,
+    "question": "Something of value exchanged between parties to a contract, which makes the agreement legally binding.",
+    "options": [
+      "PRECEDENT",
+      "ACQUISITION",
+      "MENS REA",
+      "CONSIDERATION"
+    ],
+    "correct": "CONSIDERATION",
+    "explanation": "CONSIDERATION: Something of value exchanged between parties to a contract, which makes the agreement legally binding.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 152,
+    "question": "Failure, without legal excuse, to perform any promise that forms part of a contract.",
+    "options": [
+      "VOIDABLE",
+      "DIPLOMATIC IMMUNITY",
+      "BREACH OF CONTRACT",
+      "ARBITRATION"
+    ],
+    "correct": "BREACH OF CONTRACT",
+    "explanation": "BREACH OF CONTRACT: Failure, without legal excuse, to perform any promise that forms part of a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 153,
+    "question": "A promise in a contract, the breach of which entitles the injured party to damages but not to terminate the contract.",
+    "options": [
+      "WARRANTY",
+      "FRAUD",
+      "CONVICTION",
+      "MONEY LAUNDERING"
+    ],
+    "correct": "WARRANTY",
+    "explanation": "WARRANTY: A promise in a contract, the breach of which entitles the injured party to damages but not to terminate the contract.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 154,
+    "question": "A contractual obligation of one party to compensate the loss incurred by another party.",
+    "options": [
+      "INDEMNITY",
+      "BAIL",
+      "ACCEPTANCE",
+      "STATUTORY RAPE"
+    ],
+    "correct": "INDEMNITY",
+    "explanation": "INDEMNITY: A contractual obligation of one party to compensate the loss incurred by another party.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 155,
+    "question": "The cancellation of a contract, returning the parties to the position they were in before it was made.",
+    "options": [
+      "VOID",
+      "RESCISSION",
+      "PAROL EVIDENCE",
+      "SALVAGE"
+    ],
+    "correct": "RESCISSION",
+    "explanation": "RESCISSION: The cancellation of a contract, returning the parties to the position they were in before it was made.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 156,
+    "question": "The replacement of one party to a contract with a new party, with the consent of all involved.",
+    "options": [
+      "DETENTION",
+      "NOVATION",
+      "ACQUISITION",
+      "LIQUIDATED DAMAGES"
+    ],
+    "correct": "NOVATION",
+    "explanation": "NOVATION: The replacement of one party to a contract with a new party, with the consent of all involved.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 157,
+    "question": "The transfer of rights or benefits under a contract from one party to another.",
+    "options": [
+      "MISREPRESENTATION",
+      "BURGLARY",
+      "ASSIGNMENT",
+      "MARITIME LIEN"
+    ],
+    "correct": "ASSIGNMENT",
+    "explanation": "ASSIGNMENT: The transfer of rights or benefits under a contract from one party to another.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 158,
+    "question": "An event or term that must occur before a contractual obligation becomes enforceable.",
+    "options": [
+      "MONEY LAUNDERING",
+      "CLAIMANT",
+      "CONDITION PRECEDENT",
+      "STRICT LIABILITY"
+    ],
+    "correct": "CONDITION PRECEDENT",
+    "explanation": "CONDITION PRECEDENT: An event or term that must occur before a contractual obligation becomes enforceable.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 159,
+    "question": "A pre-agreed sum payable as compensation for a specific breach of contract, fixed in advance by the parties.",
+    "options": [
+      "DURESS",
+      "POLLUTION",
+      "ACQUITTAL",
+      "LIQUIDATED DAMAGES"
+    ],
+    "correct": "LIQUIDATED DAMAGES",
+    "explanation": "LIQUIDATED DAMAGES: A pre-agreed sum payable as compensation for a specific breach of contract, fixed in advance by the parties.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 160,
+    "question": "A false statement of fact made by one party which induces the other party to enter into a contract.",
+    "options": [
+      "SENTENCE",
+      "MEDIATION",
+      "APPEAL",
+      "MISREPRESENTATION"
+    ],
+    "correct": "MISREPRESENTATION",
+    "explanation": "MISREPRESENTATION: A false statement of fact made by one party which induces the other party to enter into a contract.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 161,
+    "question": "Having no legal effect from the outset, as if the contract had never existed.",
+    "options": [
+      "VOID",
+      "SHAREHOLDER",
+      "DIVIDEND",
+      "PROSECUTION"
+    ],
+    "correct": "VOID",
+    "explanation": "VOID: Having no legal effect from the outset, as if the contract had never existed.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 162,
+    "question": "Valid until one party elects to cancel it, usually because of a defect such as misrepresentation or duress.",
+    "options": [
+      "VOIDABLE",
+      "ACQUITTAL",
+      "DUE PROCESS",
+      "CONVEYANCING"
+    ],
+    "correct": "VOIDABLE",
+    "explanation": "VOIDABLE: Valid until one party elects to cancel it, usually because of a defect such as misrepresentation or duress.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 163,
+    "question": "A legal principle that prevents a person from going back on a promise or representation that another has relied upon.",
+    "options": [
+      "GUARDIANSHIP",
+      "ESTOPPEL",
+      "AFFIDAVIT",
+      "CLAIMANT"
+    ],
+    "correct": "ESTOPPEL",
+    "explanation": "ESTOPPEL: A legal principle that prevents a person from going back on a promise or representation that another has relied upon.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 164,
+    "question": "A breach of contract occurring when one party indicates, before performance is due, that it will not perform its obligations.",
+    "options": [
+      "ESTATE TAX",
+      "DEPOSITION",
+      "COLLATERAL",
+      "ANTICIPATORY BREACH"
+    ],
+    "correct": "ANTICIPATORY BREACH",
+    "explanation": "ANTICIPATORY BREACH: A breach of contract occurring when one party indicates, before performance is due, that it will not perform its obligations.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 165,
+    "question": "A contractual term that seeks to limit or exclude a party's liability for breach or negligence.",
+    "options": [
+      "EXCLUSION CLAUSE",
+      "EVICTION",
+      "MISREPRESENTATION",
+      "INJUNCTION"
+    ],
+    "correct": "EXCLUSION CLAUSE",
+    "explanation": "EXCLUSION CLAUSE: A contractual term that seeks to limit or exclude a party's liability for breach or negligence.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 166,
+    "question": "Failure to exercise the care that a reasonably prudent person would exercise in similar circumstances, causing harm to another.",
+    "options": [
+      "PERJURY",
+      "ROYALTY",
+      "NEGLIGENCE",
+      "RIGHT OF WAY"
+    ],
+    "correct": "NEGLIGENCE",
+    "explanation": "NEGLIGENCE: Failure to exercise the care that a reasonably prudent person would exercise in similar circumstances, causing harm to another.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 167,
+    "question": "A legal obligation to take reasonable care to avoid causing harm to others who could foreseeably be affected.",
+    "options": [
+      "BREACH OF CONTRACT",
+      "TRIBUNAL",
+      "SLANDER",
+      "DUTY OF CARE"
+    ],
+    "correct": "DUTY OF CARE",
+    "explanation": "DUTY OF CARE: A legal obligation to take reasonable care to avoid causing harm to others who could foreseeably be affected.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 168,
+    "question": "The act of damaging someone's reputation by making a false statement about them to a third party.",
+    "options": [
+      "DEFAMATION",
+      "CROSS-EXAMINATION",
+      "PARTY",
+      "DIVIDEND"
+    ],
+    "correct": "DEFAMATION",
+    "explanation": "DEFAMATION: The act of damaging someone's reputation by making a false statement about them to a third party.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 169,
+    "question": "Defamation in a permanent or written form, such as in print, broadcast, or online publication.",
+    "options": [
+      "RESTITUTION",
+      "UNFAIR DISMISSAL",
+      "LIBEL",
+      "COPYRIGHT"
+    ],
+    "correct": "LIBEL",
+    "explanation": "LIBEL: Defamation in a permanent or written form, such as in print, broadcast, or online publication.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 170,
+    "question": "Defamation made in a transient form, typically through spoken words rather than in writing.",
+    "options": [
+      "REGULATION",
+      "SLANDER",
+      "CUSTODY",
+      "INDEMNITY"
+    ],
+    "correct": "SLANDER",
+    "explanation": "SLANDER: Defamation made in a transient form, typically through spoken words rather than in writing.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 171,
+    "question": "An unreasonable interference with a person's use or enjoyment of their land or with the public's rights.",
+    "options": [
+      "NUISANCE",
+      "WINDING UP",
+      "CUSTODY",
+      "LIQUIDATION"
+    ],
+    "correct": "NUISANCE",
+    "explanation": "NUISANCE: An unreasonable interference with a person's use or enjoyment of their land or with the public's rights.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 172,
+    "question": "Unlawful interference with a person, their property, or their land, without consent or legal justification.",
+    "options": [
+      "UNFAIR DISMISSAL",
+      "LIBEL",
+      "EMBEZZLEMENT",
+      "TRESPASS"
+    ],
+    "correct": "TRESPASS",
+    "explanation": "TRESPASS: Unlawful interference with a person, their property, or their land, without consent or legal justification.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 173,
+    "question": "Liability that does not depend on actual negligence or intent to harm, but is based purely on the breach of an obligation.",
+    "options": [
+      "PRECEDENT",
+      "STRICT LIABILITY",
+      "LIQUIDATED DAMAGES",
+      "EXCLUSION CLAUSE"
+    ],
+    "correct": "STRICT LIABILITY",
+    "explanation": "STRICT LIABILITY: Liability that does not depend on actual negligence or intent to harm, but is based purely on the breach of an obligation.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 174,
+    "question": "The legal requirement to show that the defendant's act or omission actually caused the claimant's loss or injury.",
+    "options": [
+      "CULPABILITY",
+      "CAUSATION",
+      "CUSTODY",
+      "DEPORTATION"
+    ],
+    "correct": "CAUSATION",
+    "explanation": "CAUSATION: The legal requirement to show that the defendant's act or omission actually caused the claimant's loss or injury.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 175,
+    "question": "Legal responsibility imposed on one person for the wrongful acts of another, typically an employer for an employee.",
+    "options": [
+      "RIGHT OF WAY",
+      "UNILATERAL CONTRACT",
+      "VICARIOUS LIABILITY",
+      "SENTENCE"
+    ],
+    "correct": "VICARIOUS LIABILITY",
+    "explanation": "VICARIOUS LIABILITY: Legal responsibility imposed on one person for the wrongful acts of another, typically an employer for an employee.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 176,
+    "question": "A defence arguing that the claimant's own carelessness contributed to the harm they suffered, reducing the damages payable.",
+    "options": [
+      "CONTRIBUTORY NEGLIGENCE",
+      "COLLATERAL",
+      "CROSS-EXAMINATION",
+      "UNFAIR DISMISSAL"
+    ],
+    "correct": "CONTRIBUTORY NEGLIGENCE",
+    "explanation": "CONTRIBUTORY NEGLIGENCE: A defence arguing that the claimant's own carelessness contributed to the harm they suffered, reducing the damages payable.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 177,
+    "question": "A legal test limiting liability to losses that were a reasonably foreseeable consequence of the defendant's conduct.",
+    "options": [
+      "MITIGATING CIRCUMSTANCES",
+      "STATUTE OF FRAUDS",
+      "REMOTENESS OF DAMAGE",
+      "DEFENDANT"
+    ],
+    "correct": "REMOTENESS OF DAMAGE",
+    "explanation": "REMOTENESS OF DAMAGE: A legal test limiting liability to losses that were a reasonably foreseeable consequence of the defendant's conduct.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 178,
+    "question": "Financial loss that does not arise from physical damage to a person or property, often subject to special legal limitations on recovery.",
+    "options": [
+      "VICARIOUS LIABILITY",
+      "PRECEDENT",
+      "ECONOMIC LOSS",
+      "DEFAMATION"
+    ],
+    "correct": "ECONOMIC LOSS",
+    "explanation": "ECONOMIC LOSS: Financial loss that does not arise from physical damage to a person or property, often subject to special legal limitations on recovery.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 179,
+    "question": "A person or entity that owns shares in a company and is therefore entitled to a portion of its profits and voting rights.",
+    "options": [
+      "SHAREHOLDER",
+      "EASEMENT",
+      "APPEAL",
+      "PLEA"
+    ],
+    "correct": "SHAREHOLDER",
+    "explanation": "SHAREHOLDER: A person or entity that owns shares in a company and is therefore entitled to a portion of its profits and voting rights.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 180,
+    "question": "A document that sets out the rules governing the internal management and operation of a company.",
+    "options": [
+      "EASEMENT",
+      "ARTICLES OF ASSOCIATION",
+      "ASSAULT AND BATTERY",
+      "PLAINTIFF"
+    ],
+    "correct": "ARTICLES OF ASSOCIATION",
+    "explanation": "ARTICLES OF ASSOCIATION: A document that sets out the rules governing the internal management and operation of a company.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 181,
+    "question": "A legal document signed by initial shareholders, agreeing to form the company and become its members.",
+    "options": [
+      "COPYRIGHT",
+      "MEMORANDUM OF ASSOCIATION",
+      "EVIDENCE",
+      "NOVATION"
+    ],
+    "correct": "MEMORANDUM OF ASSOCIATION",
+    "explanation": "MEMORANDUM OF ASSOCIATION: A legal document signed by initial shareholders, agreeing to form the company and become its members.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 182,
+    "question": "A legal status in which a company's owners are responsible for its debts only up to the amount they invested.",
+    "options": [
+      "UNILATERAL CONTRACT",
+      "PLAINTIFF",
+      "STATUTE",
+      "LIMITED LIABILITY"
+    ],
+    "correct": "LIMITED LIABILITY",
+    "explanation": "LIMITED LIABILITY: A legal status in which a company's owners are responsible for its debts only up to the amount they invested.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 183,
+    "question": "A legal obligation of one party to act in the best interests of another, such as a director's duty toward the company.",
+    "options": [
+      "FIDUCIARY DUTY",
+      "PATENT",
+      "UNJUST ENRICHMENT",
+      "JUDGMENT"
+    ],
+    "correct": "FIDUCIARY DUTY",
+    "explanation": "FIDUCIARY DUTY: A legal obligation of one party to act in the best interests of another, such as a director's duty toward the company.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 184,
+    "question": "The combination of two or more companies into a single new entity.",
+    "options": [
+      "MERGER",
+      "NATURAL JUSTICE",
+      "MITIGATING CIRCUMSTANCES",
+      "PROPERTY DAMAGE"
+    ],
+    "correct": "MERGER",
+    "explanation": "MERGER: The combination of two or more companies into a single new entity.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 185,
+    "question": "The process of one company taking ownership or control of another company.",
+    "options": [
+      "SOVEREIGNTY",
+      "COMPLAINT",
+      "CROSS-BORDER JURISDICTION",
+      "ACQUISITION"
+    ],
+    "correct": "ACQUISITION",
+    "explanation": "ACQUISITION: The process of one company taking ownership or control of another company.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 186,
+    "question": "The state of being unable to pay debts as they fall due, or having liabilities that exceed assets.",
+    "options": [
+      "CROSS-BORDER JURISDICTION",
+      "SUBPOENA",
+      "INSOLVENCY",
+      "FRAUD"
+    ],
+    "correct": "INSOLVENCY",
+    "explanation": "INSOLVENCY: The state of being unable to pay debts as they fall due, or having liabilities that exceed assets.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 187,
+    "question": "A portion of a company's profits distributed to its shareholders, usually on a regular basis.",
+    "options": [
+      "LARCENY",
+      "DIVIDEND",
+      "CONVEYANCING",
+      "RESCISSION"
+    ],
+    "correct": "DIVIDEND",
+    "explanation": "DIVIDEND: A portion of a company's profits distributed to its shareholders, usually on a regular basis.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 188,
+    "question": "A person authorised to vote on behalf of a shareholder at a company meeting, or the document granting such authority.",
+    "options": [
+      "DEPOSITION",
+      "BURGLARY",
+      "PROXY",
+      "EVICTION"
+    ],
+    "correct": "PROXY",
+    "explanation": "PROXY: A person authorised to vote on behalf of a shareholder at a company meeting, or the document granting such authority.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 189,
+    "question": "A shareholder who owns less than half of a company's shares and therefore lacks control over major decisions.",
+    "options": [
+      "INSOLVENCY",
+      "JURISDICTION",
+      "MINORITY SHAREHOLDER",
+      "RESIDENCY PERMIT"
+    ],
+    "correct": "MINORITY SHAREHOLDER",
+    "explanation": "MINORITY SHAREHOLDER: A shareholder who owns less than half of a company's shares and therefore lacks control over major decisions.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 190,
+    "question": "The formal process of closing down a company, selling its assets, paying creditors, and dissolving it.",
+    "options": [
+      "CONSIDERATION",
+      "WINDING UP",
+      "NULLITY",
+      "SECURITIZATION"
+    ],
+    "correct": "WINDING UP",
+    "explanation": "WINDING UP: The formal process of closing down a company, selling its assets, paying creditors, and dissolving it.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 191,
+    "question": "The mental element of a crime; the intention or knowledge of wrongdoing that constitutes part of a crime.",
+    "options": [
+      "UNJUST ENRICHMENT",
+      "TRESPASS",
+      "LICENSING",
+      "MENS REA"
+    ],
+    "correct": "MENS REA",
+    "explanation": "MENS REA: The mental element of a crime; the intention or knowledge of wrongdoing that constitutes part of a crime.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 192,
+    "question": "The physical act or conduct that constitutes a criminal offence, as opposed to the mental state behind it.",
+    "options": [
+      "UNILATERAL CONTRACT",
+      "CREDITOR",
+      "BANKRUPTCY",
+      "ACTUS REUS"
+    ],
+    "correct": "ACTUS REUS",
+    "explanation": "ACTUS REUS: The physical act or conduct that constitutes a criminal offence, as opposed to the mental state behind it.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 193,
+    "question": "A formal court decision that a person accused of a crime is not guilty.",
+    "options": [
+      "ACQUITTAL",
+      "INTERNATIONAL LAW",
+      "TRIBUNAL",
+      "LARCENY"
+    ],
+    "correct": "ACQUITTAL",
+    "explanation": "ACQUITTAL: A formal court decision that a person accused of a crime is not guilty.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 194,
+    "question": "A formal declaration by a court that someone is guilty of a criminal offence.",
+    "options": [
+      "CONVICTION",
+      "CONTRIBUTORY NEGLIGENCE",
+      "LIEN",
+      "SPECIFIC PERFORMANCE"
+    ],
+    "correct": "CONVICTION",
+    "explanation": "CONVICTION: A formal declaration by a court that someone is guilty of a criminal offence.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 195,
+    "question": "A formal written accusation charging a person with a serious criminal offence, presented to a court.",
+    "options": [
+      "DISCOVERY",
+      "AFFIDAVIT",
+      "INDICTMENT",
+      "NULLITY"
+    ],
+    "correct": "INDICTMENT",
+    "explanation": "INDICTMENT: A formal written accusation charging a person with a serious criminal offence, presented to a court.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 196,
+    "question": "The legal party that brings criminal charges against a defendant in court, representing the state.",
+    "options": [
+      "REDUNDANCY",
+      "PROSECUTION",
+      "POLLUTION",
+      "EXCLUSION CLAUSE"
+    ],
+    "correct": "PROSECUTION",
+    "explanation": "PROSECUTION: The legal party that brings criminal charges against a defendant in court, representing the state.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 197,
+    "question": "A person or party against whom a criminal charge or civil claim is brought.",
+    "options": [
+      "PLEA BARGAIN",
+      "DEFENDANT",
+      "TRADEMARK",
+      "MEMORANDUM OF ASSOCIATION"
+    ],
+    "correct": "DEFENDANT",
+    "explanation": "DEFENDANT: A person or party against whom a criminal charge or civil claim is brought.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 198,
+    "question": "An agreement in which a defendant pleads guilty to a lesser charge in exchange for a more lenient sentence.",
+    "options": [
+      "REDUNDANCY",
+      "PLEA BARGAIN",
+      "LICENSING",
+      "SALVAGE"
+    ],
+    "correct": "PLEA BARGAIN",
+    "explanation": "PLEA BARGAIN: An agreement in which a defendant pleads guilty to a lesser charge in exchange for a more lenient sentence.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 199,
+    "question": "Facts or circumstances that do not justify or excuse an offence but may reduce the severity of the sentence.",
+    "options": [
+      "CROSS-EXAMINATION",
+      "TRADEMARK",
+      "INDICTMENT",
+      "MITIGATING CIRCUMSTANCES"
+    ],
+    "correct": "MITIGATING CIRCUMSTANCES",
+    "explanation": "MITIGATING CIRCUMSTANCES: Facts or circumstances that do not justify or excuse an offence but may reduce the severity of the sentence.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 200,
+    "question": "A circumstance that increases the severity or culpability of a criminal act, leading to a harsher sentence.",
+    "options": [
+      "NATURALIZATION",
+      "AGGRAVATING FACTOR",
+      "MITIGATING CIRCUMSTANCES",
+      "FIDUCIARY DUTY"
+    ],
+    "correct": "AGGRAVATING FACTOR",
+    "explanation": "AGGRAVATING FACTOR: A circumstance that increases the severity or culpability of a criminal act, leading to a harsher sentence.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 201,
+    "question": "The party who initiates a lawsuit by filing a complaint against another party in a civil case.",
+    "options": [
+      "LANDLORD",
+      "DEPOSITION",
+      "COVENANTS",
+      "PLAINTIFF"
+    ],
+    "correct": "PLAINTIFF",
+    "explanation": "PLAINTIFF: The party who initiates a lawsuit by filing a complaint against another party in a civil case.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 202,
+    "question": "The official power of a court to make legal decisions and judgments over a particular area or matter.",
+    "options": [
+      "BURGLARY",
+      "PROBATION",
+      "SUBPOENA",
+      "JURISDICTION"
+    ],
+    "correct": "JURISDICTION",
+    "explanation": "JURISDICTION: The official power of a court to make legal decisions and judgments over a particular area or matter.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 203,
+    "question": "A court order requiring a party to do, or refrain from doing, a specific act.",
+    "options": [
+      "MARITIME LIEN",
+      "INJUNCTION",
+      "OFFER",
+      "DISCRIMINATION"
+    ],
+    "correct": "INJUNCTION",
+    "explanation": "INJUNCTION: A court order requiring a party to do, or refrain from doing, a specific act.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 204,
+    "question": "A legal document ordering a person to attend court or produce documents as evidence.",
+    "options": [
+      "DISCRIMINATION",
+      "PAROL EVIDENCE",
+      "SUBPOENA",
+      "AFFIDAVIT"
+    ],
+    "correct": "SUBPOENA",
+    "explanation": "SUBPOENA: A legal document ordering a person to attend court or produce documents as evidence.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 205,
+    "question": "A written statement of facts confirmed by oath, used as evidence in court proceedings.",
+    "options": [
+      "BURDEN OF PROOF",
+      "AFFIDAVIT",
+      "INTERNATIONAL LAW",
+      "VOID"
+    ],
+    "correct": "AFFIDAVIT",
+    "explanation": "AFFIDAVIT: A written statement of facts confirmed by oath, used as evidence in court proceedings.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 206,
+    "question": "A formal request to a higher court to review and change the decision of a lower court.",
+    "options": [
+      "ARSON",
+      "VICARIOUS LIABILITY",
+      "RESIDENCY PERMIT",
+      "APPEAL"
+    ],
+    "correct": "APPEAL",
+    "explanation": "APPEAL: A formal request to a higher court to review and change the decision of a lower court.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 207,
+    "question": "The formal decision made by a jury or judge on the matters submitted to them in a trial.",
+    "options": [
+      "VERDICT",
+      "VENUE",
+      "CROSS-BORDER JURISDICTION",
+      "INJUNCTION"
+    ],
+    "correct": "VERDICT",
+    "explanation": "VERDICT: The formal decision made by a jury or judge on the matters submitted to them in a trial.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 208,
+    "question": "The questioning of a witness by the opposing party's lawyer during a trial, to test their evidence.",
+    "options": [
+      "SETTLEMENT",
+      "EXTRADITION",
+      "CROSS-EXAMINATION",
+      "MEDIATION"
+    ],
+    "correct": "CROSS-EXAMINATION",
+    "explanation": "CROSS-EXAMINATION: The questioning of a witness by the opposing party's lawyer during a trial, to test their evidence.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 209,
+    "question": "The duty of a party in a legal dispute to prove the facts they are alleging.",
+    "options": [
+      "BURDEN OF PROOF",
+      "BONA FIDE",
+      "STATUTE OF FRAUDS",
+      "CUSTODY"
+    ],
+    "correct": "BURDEN OF PROOF",
+    "explanation": "BURDEN OF PROOF: The duty of a party in a legal dispute to prove the facts they are alleging.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 210,
+    "question": "A previous court decision that is used as an authority for deciding similar cases in the future.",
+    "options": [
+      "PRECEDENT",
+      "TRADEMARK",
+      "SECURITIZATION",
+      "EXTRADITION"
+    ],
+    "correct": "PRECEDENT",
+    "explanation": "PRECEDENT: A previous court decision that is used as an authority for deciding similar cases in the future.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 211,
+    "question": "The pre-trial process in which parties exchange relevant documents and information held by the other side.",
+    "options": [
+      "RESTITUTION",
+      "DIVIDEND",
+      "DISCOVERY",
+      "VICARIOUS LIABILITY"
+    ],
+    "correct": "DISCOVERY",
+    "explanation": "DISCOVERY: The pre-trial process in which parties exchange relevant documents and information held by the other side.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 212,
+    "question": "An agreement reached by parties to a dispute, often resolving the matter without going to trial.",
+    "options": [
+      "INJUNCTIVE RELIEF",
+      "FRAUD",
+      "SETTLEMENT",
+      "CONVEYANCING"
+    ],
+    "correct": "SETTLEMENT",
+    "explanation": "SETTLEMENT: An agreement reached by parties to a dispute, often resolving the matter without going to trial.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 213,
+    "question": "A lawsuit in which a large group of people with a common claim sue collectively as a single party.",
+    "options": [
+      "FIDUCIARY DUTY",
+      "CLASS ACTION",
+      "ROBBERY",
+      "SECURITIZATION"
+    ],
+    "correct": "CLASS ACTION",
+    "explanation": "CLASS ACTION: A lawsuit in which a large group of people with a common claim sue collectively as a single party.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 214,
+    "question": "A form of property ownership in which the owner holds the land and buildings on it indefinitely, with no time limit.",
+    "options": [
+      "APPEAL",
+      "INTELLECTUAL PROPERTY",
+      "FREEHOLD",
+      "BONA FIDE"
+    ],
+    "correct": "FREEHOLD",
+    "explanation": "FREEHOLD: A form of property ownership in which the owner holds the land and buildings on it indefinitely, with no time limit.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 215,
+    "question": "A form of property ownership in which the holder has the right to occupy land or property for a fixed period under a lease.",
+    "options": [
+      "JUDICIAL REVIEW",
+      "LEASEHOLD",
+      "DEPOSITION",
+      "DEFAMATION"
+    ],
+    "correct": "LEASEHOLD",
+    "explanation": "LEASEHOLD: A form of property ownership in which the holder has the right to occupy land or property for a fixed period under a lease.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 216,
+    "question": "A legal right for one landowner to use land belonging to another for a specific limited purpose, such as access.",
+    "options": [
+      "OFFER",
+      "LIBEL",
+      "EVIDENCE",
+      "EASEMENT"
+    ],
+    "correct": "EASEMENT",
+    "explanation": "EASEMENT: A legal right for one landowner to use land belonging to another for a specific limited purpose, such as access.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 217,
+    "question": "A loan secured against property, giving the lender the right to repossess it if repayments are not made.",
+    "options": [
+      "MORTGAGE",
+      "MISREPRESENTATION",
+      "DISCOVERY",
+      "PARTY"
+    ],
+    "correct": "MORTGAGE",
+    "explanation": "MORTGAGE: A loan secured against property, giving the lender the right to repossess it if repayments are not made.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 218,
+    "question": "An official document proving a person's legal ownership of a property or piece of land.",
+    "options": [
+      "VOIDABLE",
+      "TITLE DEED",
+      "JUDICIAL REVIEW",
+      "ECONOMIC LOSS"
+    ],
+    "correct": "TITLE DEED",
+    "explanation": "TITLE DEED: An official document proving a person's legal ownership of a property or piece of land.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 219,
+    "question": "The legal arrangement under which a tenant occupies and uses property owned by a landlord, usually for rent.",
+    "options": [
+      "COMPLAINT",
+      "ADMINISTRATIVE LAW",
+      "PAROL EVIDENCE",
+      "TENANCY"
+    ],
+    "correct": "TENANCY",
+    "explanation": "TENANCY: The legal arrangement under which a tenant occupies and uses property owned by a landlord, usually for rent.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 220,
+    "question": "The legal process of transferring ownership of property from one person to another.",
+    "options": [
+      "NOVATION",
+      "CONVEYANCING",
+      "LITIGATION",
+      "ARSON"
+    ],
+    "correct": "CONVEYANCING",
+    "explanation": "CONVEYANCING: The legal process of transferring ownership of property from one person to another.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 221,
+    "question": "A claim, lien, or liability attached to property, such as a mortgage, that may affect its transfer or value.",
+    "options": [
+      "FORGERY",
+      "SHAREHOLDER",
+      "ENCUMBRANCE",
+      "LIQUIDATED DAMAGES"
+    ],
+    "correct": "ENCUMBRANCE",
+    "explanation": "ENCUMBRANCE: A claim, lien, or liability attached to property, such as a mortgage, that may affect its transfer or value.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 222,
+    "question": "A legal principle allowing a person to claim ownership of land they have occupied for a specified period, without the owner's permission.",
+    "options": [
+      "TRESPASS",
+      "PRENUPTIAL AGREEMENT",
+      "INDICTMENT",
+      "ADVERSE POSSESSION"
+    ],
+    "correct": "ADVERSE POSSESSION",
+    "explanation": "ADVERSE POSSESSION: A legal principle allowing a person to claim ownership of land they have occupied for a specified period, without the owner's permission.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 223,
+    "question": "A clause in a property deed that limits how the owner may use or develop the land.",
+    "options": [
+      "VOID",
+      "PAROL EVIDENCE",
+      "EXCLUSION CLAUSE",
+      "RESTRICTIVE COVENANT"
+    ],
+    "correct": "RESTRICTIVE COVENANT",
+    "explanation": "RESTRICTIVE COVENANT: A clause in a property deed that limits how the owner may use or develop the land.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 224,
+    "question": "A legal right to pass through land or property belonging to someone else.",
+    "options": [
+      "HARASSMENT",
+      "INJUNCTION",
+      "RIGHT OF WAY",
+      "NUISANCE"
+    ],
+    "correct": "RIGHT OF WAY",
+    "explanation": "RIGHT OF WAY: A legal right to pass through land or property belonging to someone else.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 225,
+    "question": "The termination of an employee's contract by an employer in a manner that is not justified or lawful.",
+    "options": [
+      "ARBITRATION",
+      "DAMAGES",
+      "UNFAIR DISMISSAL",
+      "EXPERT WITNESS"
+    ],
+    "correct": "UNFAIR DISMISSAL",
+    "explanation": "UNFAIR DISMISSAL: The termination of an employee's contract by an employer in a manner that is not justified or lawful.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 226,
+    "question": "The termination of employment because the role is no longer needed, rather than because of the employee's conduct.",
+    "options": [
+      "BILL OF LADING",
+      "AFFIDAVIT",
+      "PLEA AGREEMENT",
+      "REDUNDANCY"
+    ],
+    "correct": "REDUNDANCY",
+    "explanation": "REDUNDANCY: The termination of employment because the role is no longer needed, rather than because of the employee's conduct.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 227,
+    "question": "Serious wrongdoing by an employee that justifies immediate dismissal without notice.",
+    "options": [
+      "MORTGAGE",
+      "CUSTODY",
+      "ASSAULT",
+      "GROSS MISCONDUCT"
+    ],
+    "correct": "GROSS MISCONDUCT",
+    "explanation": "GROSS MISCONDUCT: Serious wrongdoing by an employee that justifies immediate dismissal without notice.",
+    "level": "A",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 228,
+    "question": "The length of time an employee or employer must give before ending an employment contract.",
+    "options": [
+      "ASSAULT",
+      "NOTICE PERIOD",
+      "ROBBERY",
+      "TENANCY"
+    ],
+    "correct": "NOTICE PERIOD",
+    "explanation": "NOTICE PERIOD: The length of time an employee or employer must give before ending an employment contract.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 229,
+    "question": "Unfair or unequal treatment of a person based on characteristics such as race, gender, age, or disability.",
+    "options": [
+      "COPYRIGHT",
+      "BURDEN OF PROOF",
+      "DISCRIMINATION",
+      "DETENTION"
+    ],
+    "correct": "DISCRIMINATION",
+    "explanation": "DISCRIMINATION: Unfair or unequal treatment of a person based on characteristics such as race, gender, age, or disability.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 230,
+    "question": "Negotiation between employers and a group of employees, often through a union, to determine pay and working conditions.",
+    "options": [
+      "DEFAMATION",
+      "PATENT",
+      "ASSIGNMENT",
+      "COLLECTIVE BARGAINING"
+    ],
+    "correct": "COLLECTIVE BARGAINING",
+    "explanation": "COLLECTIVE BARGAINING: Negotiation between employers and a group of employees, often through a union, to determine pay and working conditions.",
+    "level": "A",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 231,
+    "question": "A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.",
+    "options": [
+      "UNFAIR DISMISSAL",
+      "DISCOVERY",
+      "GRIEVANCE",
+      "STRICT LIABILITY"
+    ],
+    "correct": "GRIEVANCE",
+    "explanation": "GRIEVANCE: A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 232,
+    "question": "Compensation paid to an employee upon termination of employment, often in addition to any notice pay owed.",
+    "options": [
+      "DAMAGES",
+      "SEVERANCE PAY",
+      "MEMORANDUM OF ASSOCIATION",
+      "CONVICTION"
+    ],
+    "correct": "SEVERANCE PAY",
+    "explanation": "SEVERANCE PAY: Compensation paid to an employee upon termination of employment, often in addition to any notice pay owed.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 233,
+    "question": "An exclusive legal right granted for an invention, preventing others from making, using, or selling it without permission.",
+    "options": [
+      "PATENT",
+      "CONSPIRACY",
+      "DURESS",
+      "FORCE MAJEURE"
+    ],
+    "correct": "PATENT",
+    "explanation": "PATENT: An exclusive legal right granted for an invention, preventing others from making, using, or selling it without permission.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 234,
+    "question": "A recognisable symbol, word, or phrase legally registered to represent a company or product.",
+    "options": [
+      "TRADEMARK",
+      "VICARIOUS LIABILITY",
+      "ACQUITTAL",
+      "ADOPTION"
+    ],
+    "correct": "TRADEMARK",
+    "explanation": "TRADEMARK: A recognisable symbol, word, or phrase legally registered to represent a company or product.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 235,
+    "question": "The legal right of an author or creator to control the reproduction and distribution of their original work.",
+    "options": [
+      "ARTICLES OF ASSOCIATION",
+      "AFFIDAVIT",
+      "COLLATERAL",
+      "COPYRIGHT"
+    ],
+    "correct": "COPYRIGHT",
+    "explanation": "COPYRIGHT: The legal right of an author or creator to control the reproduction and distribution of their original work.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 236,
+    "question": "The unauthorised use or violation of another person's intellectual property rights, such as a patent, trademark, or copyright.",
+    "options": [
+      "DISCOVERY",
+      "INFRINGEMENT",
+      "NOTICE PERIOD",
+      "ADOPTION"
+    ],
+    "correct": "INFRINGEMENT",
+    "explanation": "INFRINGEMENT: The unauthorised use or violation of another person's intellectual property rights, such as a patent, trademark, or copyright.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 237,
+    "question": "The process of granting another party permission to use intellectual property under agreed conditions, often for a fee.",
+    "options": [
+      "LICENSING",
+      "TAX EVASION",
+      "MERGER",
+      "LIQUIDATED DAMAGES"
+    ],
+    "correct": "LICENSING",
+    "explanation": "LICENSING: The process of granting another party permission to use intellectual property under agreed conditions, often for a fee.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 238,
+    "question": "Confidential business information that provides a competitive advantage and is protected from disclosure by law.",
+    "options": [
+      "TRADEMARK",
+      "MANSLAUGHTER",
+      "ASSAULT AND BATTERY",
+      "TRADE SECRET"
+    ],
+    "correct": "TRADE SECRET",
+    "explanation": "TRADE SECRET: Confidential business information that provides a competitive advantage and is protected from disclosure by law.",
+    "level": "A",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 239,
+    "question": "A payment made to the owner of intellectual property for the right to use it, usually based on sales or usage.",
+    "options": [
+      "TRESPASS",
+      "ROYALTY",
+      "EVICTION",
+      "HABEAS CORPUS"
+    ],
+    "correct": "ROYALTY",
+    "explanation": "ROYALTY: A payment made to the owner of intellectual property for the right to use it, usually based on sales or usage.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 240,
+    "question": "The process by which courts examine the lawfulness of decisions or actions taken by public bodies.",
+    "options": [
+      "TITLE DEED",
+      "GROSS MISCONDUCT",
+      "JUDICIAL REVIEW",
+      "SENTENCE"
+    ],
+    "correct": "JUDICIAL REVIEW",
+    "explanation": "JUDICIAL REVIEW: The process by which courts examine the lawfulness of decisions or actions taken by public bodies.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 241,
+    "question": "Laws made by a body other than parliament, under powers granted to it by an Act of Parliament.",
+    "options": [
+      "BILL OF LADING",
+      "DELEGATED LEGISLATION",
+      "FRAUD",
+      "SUBPOENA"
+    ],
+    "correct": "DELEGATED LEGISLATION",
+    "explanation": "DELEGATED LEGISLATION: Laws made by a body other than parliament, under powers granted to it by an Act of Parliament.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 242,
+    "question": "An official appointed to investigate complaints made by individuals against public authorities or organisations.",
+    "options": [
+      "INTELLECTUAL PROPERTY",
+      "OMBUDSMAN",
+      "CUSTODY",
+      "SALVAGE"
+    ],
+    "correct": "OMBUDSMAN",
+    "explanation": "OMBUDSMAN: An official appointed to investigate complaints made by individuals against public authorities or organisations.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 243,
+    "question": "Describing an act done beyond the legal power or authority of the person or body performing it.",
+    "options": [
+      "RES JUDICATA",
+      "CONSIDERATION",
+      "ULTRA VIRES",
+      "PAROLE"
+    ],
+    "correct": "ULTRA VIRES",
+    "explanation": "ULTRA VIRES: Describing an act done beyond the legal power or authority of the person or body performing it.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 244,
+    "question": "Fundamental principles of fairness in legal proceedings, including the right to a fair hearing and freedom from bias.",
+    "options": [
+      "INHERITANCE TAX",
+      "PRENUPTIAL AGREEMENT",
+      "ACQUITTAL",
+      "NATURAL JUSTICE"
+    ],
+    "correct": "NATURAL JUSTICE",
+    "explanation": "NATURAL JUSTICE: Fundamental principles of fairness in legal proceedings, including the right to a fair hearing and freedom from bias.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 245,
+    "question": "A specialised body established to resolve disputes in a particular area, such as employment or tax matters.",
+    "options": [
+      "TRIBUNAL",
+      "MENS REA",
+      "VOIDABLE",
+      "WITHHOLDING TAX"
+    ],
+    "correct": "TRIBUNAL",
+    "explanation": "TRIBUNAL: A specialised body established to resolve disputes in a particular area, such as employment or tax matters.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 246,
+    "question": "A formal written agreement between two or more states or international organisations, governed by international law.",
+    "options": [
+      "TREATY",
+      "HABEAS CORPUS",
+      "TRADE SECRET",
+      "TRADEMARK"
+    ],
+    "correct": "TREATY",
+    "explanation": "TREATY: A formal written agreement between two or more states or international organisations, governed by international law.",
+    "level": "F",
+    "topic": "International Law"
+  },
+  {
+    "id": 247,
+    "question": "The supreme authority of a state to govern itself and make its own laws without external interference.",
+    "options": [
+      "TORTIOUS LIABILITY",
+      "DEFAMATION",
+      "TRADE SECRET",
+      "SOVEREIGNTY"
+    ],
+    "correct": "SOVEREIGNTY",
+    "explanation": "SOVEREIGNTY: The supreme authority of a state to govern itself and make its own laws without external interference.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 248,
+    "question": "The formal process by which one state surrenders a suspected or convicted criminal to another state for trial or punishment.",
+    "options": [
+      "EXTRADITION",
+      "DEFAMATION",
+      "DEBTOR",
+      "REDUNDANCY"
+    ],
+    "correct": "EXTRADITION",
+    "explanation": "EXTRADITION: The formal process by which one state surrenders a suspected or convicted criminal to another state for trial or punishment.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 249,
+    "question": "A legal protection that exempts diplomats from prosecution or lawsuits under the laws of the host country.",
+    "options": [
+      "LANDLORD",
+      "WRONGFUL DISMISSAL",
+      "DIPLOMATIC IMMUNITY",
+      "SANCTIONS"
+    ],
+    "correct": "DIPLOMATIC IMMUNITY",
+    "explanation": "DIPLOMATIC IMMUNITY: A legal protection that exempts diplomats from prosecution or lawsuits under the laws of the host country.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 250,
+    "question": "The authority of a court to hear and decide cases involving parties or events located in more than one country.",
+    "options": [
+      "CROSS-BORDER JURISDICTION",
+      "SLANDER",
+      "INSOLVENCY",
+      "AGGRAVATED ASSAULT"
+    ],
+    "correct": "CROSS-BORDER JURISDICTION",
+    "explanation": "CROSS-BORDER JURISDICTION: The authority of a court to hear and decide cases involving parties or events located in more than one country.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 251,
+    "question": "Penalties or restrictions imposed by one or more states or international bodies against another, often for political reasons.",
+    "options": [
+      "SANCTIONS",
+      "OMBUDSMAN",
+      "ARTICLES OF ASSOCIATION",
+      "STATUTE OF FRAUDS"
+    ],
+    "correct": "SANCTIONS",
+    "explanation": "SANCTIONS: Penalties or restrictions imposed by one or more states or international bodies against another, often for political reasons.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 252,
+    "question": "The legal requirement that the state must respect all of a person's legal rights when depriving them of life, liberty, or property.",
+    "options": [
+      "DUE PROCESS",
+      "EARNEST MONEY",
+      "ADOPTION",
+      "MINORITY SHAREHOLDER"
+    ],
+    "correct": "DUE PROCESS",
+    "explanation": "DUE PROCESS: The legal requirement that the state must respect all of a person's legal rights when depriving them of life, liberty, or property.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 253,
+    "question": "A legal doctrine preventing the same parties from re-litigating a matter that has already been finally decided by a court.",
+    "options": [
+      "ESTOPPEL",
+      "AGGRAVATING FACTOR",
+      "RES JUDICATA",
+      "CUSTODY"
+    ],
+    "correct": "RES JUDICATA",
+    "explanation": "RES JUDICATA: A legal doctrine preventing the same parties from re-litigating a matter that has already been finally decided by a court.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 254,
+    "question": "The legal principle that courts should follow precedents set by previous decisions in similar cases.",
+    "options": [
+      "STARE DECISIS",
+      "LIBEL",
+      "INSOLVENCY",
+      "ARSON"
+    ],
+    "correct": "STARE DECISIS",
+    "explanation": "STARE DECISIS: The legal principle that courts should follow precedents set by previous decisions in similar cases.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 255,
+    "question": "Done in good faith, honestly, and without any intention to deceive.",
+    "options": [
+      "INTELLECTUAL PROPERTY",
+      "BONA FIDE",
+      "DEMURRAGE",
+      "SEVERANCE PAY"
+    ],
+    "correct": "BONA FIDE",
+    "explanation": "BONA FIDE: Done in good faith, honestly, and without any intention to deceive.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 256,
+    "question": "Describing evidence that is sufficient to establish a fact or case unless disproved by further evidence.",
+    "options": [
+      "COVENANT",
+      "ACQUISITION",
+      "PRIMA FACIE",
+      "DIPLOMATIC IMMUNITY"
+    ],
+    "correct": "PRIMA FACIE",
+    "explanation": "PRIMA FACIE: Describing evidence that is sufficient to establish a fact or case unless disproved by further evidence.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 257,
+    "question": "A legal action requiring a person under arrest to be brought before a court to determine whether their detention is lawful.",
+    "options": [
+      "LICENSING",
+      "HABEAS CORPUS",
+      "STATUTE OF FRAUDS",
+      "CULPABILITY"
+    ],
+    "correct": "HABEAS CORPUS",
+    "explanation": "HABEAS CORPUS: A legal action requiring a person under arrest to be brought before a court to determine whether their detention is lawful.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 258,
+    "question": "The state of being legally void, as though it had never existed or taken place.",
+    "options": [
+      "NULLITY",
+      "EARNEST MONEY",
+      "INJUNCTIVE RELIEF",
+      "LARCENY"
+    ],
+    "correct": "NULLITY",
+    "explanation": "NULLITY: The state of being legally void, as though it had never existed or taken place.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 259,
+    "question": "The process of bringing a company to an end by selling its assets to pay off debts before it is dissolved.",
+    "options": [
+      "LIQUIDATION",
+      "INJUNCTIVE RELIEF",
+      "TRIBUNAL",
+      "TAX AVOIDANCE"
+    ],
+    "correct": "LIQUIDATION",
+    "explanation": "LIQUIDATION: The process of bringing a company to an end by selling its assets to pay off debts before it is dissolved.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 260,
+    "question": "A situation in which an insolvent company is placed under the control of a receiver appointed to manage its affairs.",
+    "options": [
+      "CONVICTION",
+      "NEGLIGENCE",
+      "SALVAGE",
+      "RECEIVERSHIP"
+    ],
+    "correct": "RECEIVERSHIP",
+    "explanation": "RECEIVERSHIP: A situation in which an insolvent company is placed under the control of a receiver appointed to manage its affairs.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 261,
+    "question": "A person or organisation to whom money is owed by another party.",
+    "options": [
+      "RESCISSION",
+      "CUSTODY",
+      "INFRINGEMENT",
+      "CREDITOR"
+    ],
+    "correct": "CREDITOR",
+    "explanation": "CREDITOR: A person or organisation to whom money is owed by another party.",
+    "level": "F",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 262,
+    "question": "A person or organisation that owes money to another party.",
+    "options": [
+      "DEBTOR",
+      "LIQUIDATED DAMAGES",
+      "INDICTMENT",
+      "PETITION"
+    ],
+    "correct": "DEBTOR",
+    "explanation": "DEBTOR: A person or organisation that owes money to another party.",
+    "level": "F",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 263,
+    "question": "The release of a bankrupt person from most of their debts, allowing them to make a fresh financial start.",
+    "options": [
+      "FIDUCIARY DUTY",
+      "DISCHARGE OF BANKRUPTCY",
+      "HARASSMENT",
+      "CHARTER PARTY"
+    ],
+    "correct": "DISCHARGE OF BANKRUPTCY",
+    "explanation": "DISCHARGE OF BANKRUPTCY: The release of a bankrupt person from most of their debts, allowing them to make a fresh financial start.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 264,
+    "question": "A court order placing an insolvent company under the management of an administrator to attempt rescue or restructuring.",
+    "options": [
+      "ENCUMBRANCE",
+      "ADMINISTRATION ORDER",
+      "TRIBUNAL",
+      "PRIMA FACIE"
+    ],
+    "correct": "ADMINISTRATION ORDER",
+    "explanation": "ADMINISTRATION ORDER: A court order placing an insolvent company under the management of an administrator to attempt rescue or restructuring.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 265,
+    "question": "Financial support paid by one spouse to another after separation or divorce, to fulfil obligations arising from the marriage.",
+    "options": [
+      "DIPLOMATIC IMMUNITY",
+      "TENANT",
+      "ALIMONY",
+      "DEPOSITION"
+    ],
+    "correct": "ALIMONY",
+    "explanation": "ALIMONY: Financial support paid by one spouse to another after separation or divorce, to fulfil obligations arising from the marriage.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 266,
+    "question": "The legal right and responsibility to care for and make decisions about a child, usually following separation or divorce.",
+    "options": [
+      "VENUE",
+      "GUARANTEE",
+      "CUSTODY",
+      "DUE DILIGENCE"
+    ],
+    "correct": "CUSTODY",
+    "explanation": "CUSTODY: The legal right and responsibility to care for and make decisions about a child, usually following separation or divorce.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 267,
+    "question": "A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.",
+    "options": [
+      "FORCE MAJEURE",
+      "PAROL EVIDENCE",
+      "REMEDIES",
+      "ANNULMENT"
+    ],
+    "correct": "ANNULMENT",
+    "explanation": "ANNULMENT: A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 268,
+    "question": "A contract entered into by a couple before marriage, setting out how their assets will be divided in the event of divorce.",
+    "options": [
+      "PRENUPTIAL AGREEMENT",
+      "INHERITANCE TAX",
+      "EASEMENT",
+      "PROSECUTION"
+    ],
+    "correct": "PRENUPTIAL AGREEMENT",
+    "explanation": "PRENUPTIAL AGREEMENT: A contract entered into by a couple before marriage, setting out how their assets will be divided in the event of divorce.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 269,
+    "question": "An official court order that legally ends a marriage.",
+    "options": [
+      "ARSON",
+      "SEVERANCE PAY",
+      "ESTOPPEL",
+      "DIVORCE DECREE"
+    ],
+    "correct": "DIVORCE DECREE",
+    "explanation": "DIVORCE DECREE: An official court order that legally ends a marriage.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 270,
+    "question": "The legal authority and duty to care for another person, typically a child or someone unable to manage their own affairs.",
+    "options": [
+      "VICARIOUS LIABILITY",
+      "INFRINGEMENT",
+      "DEFENDANT",
+      "GUARDIANSHIP"
+    ],
+    "correct": "GUARDIANSHIP",
+    "explanation": "GUARDIANSHIP: The legal authority and duty to care for another person, typically a child or someone unable to manage their own affairs.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 271,
+    "question": "The legal process by which a person becomes the legal parent of a child who is not their biological offspring.",
+    "options": [
+      "CROSS-EXAMINATION",
+      "ADOPTION",
+      "ESTOPPEL",
+      "ESTATE TAX"
+    ],
+    "correct": "ADOPTION",
+    "explanation": "ADOPTION: The legal process by which a person becomes the legal parent of a child who is not their biological offspring.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 272,
+    "question": "A court order requiring one person to make regular financial payments to support a former spouse or child.",
+    "options": [
+      "MAINTENANCE ORDER",
+      "CROSS-EXAMINATION",
+      "DAMAGES",
+      "VICARIOUS LIABILITY"
+    ],
+    "correct": "MAINTENANCE ORDER",
+    "explanation": "MAINTENANCE ORDER: A court order requiring one person to make regular financial payments to support a former spouse or child.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 273,
+    "question": "A tax levied on the property and money passed on to heirs or beneficiaries after a person's death.",
+    "options": [
+      "CONVICTION",
+      "PETITION",
+      "INHERITANCE TAX",
+      "DISCRIMINATION"
+    ],
+    "correct": "INHERITANCE TAX",
+    "explanation": "INHERITANCE TAX: A tax levied on the property and money passed on to heirs or beneficiaries after a person's death.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 274,
+    "question": "A tax imposed on the total value of a deceased person's assets before they are transferred to their beneficiaries.",
+    "options": [
+      "STATUTE OF FRAUDS",
+      "BAIL",
+      "ESTATE TAX",
+      "DIVORCE DECREE"
+    ],
+    "correct": "ESTATE TAX",
+    "explanation": "ESTATE TAX: A tax imposed on the total value of a deceased person's assets before they are transferred to their beneficiaries.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 275,
+    "question": "The illegal act of deliberately avoiding paying taxes that are legally owed.",
+    "options": [
+      "TAX EVASION",
+      "WINDING UP",
+      "INFRINGEMENT",
+      "UNILATERAL CONTRACT"
+    ],
+    "correct": "TAX EVASION",
+    "explanation": "TAX EVASION: The illegal act of deliberately avoiding paying taxes that are legally owed.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 276,
+    "question": "The legal use of methods to minimise tax liability within the boundaries of the law.",
+    "options": [
+      "COUNTER OFFER",
+      "DIVORCE DECREE",
+      "HABEAS CORPUS",
+      "TAX AVOIDANCE"
+    ],
+    "correct": "TAX AVOIDANCE",
+    "explanation": "TAX AVOIDANCE: The legal use of methods to minimise tax liability within the boundaries of the law.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 277,
+    "question": "A tax on the profit realised from the sale of an asset, such as property or shares, that has increased in value.",
+    "options": [
+      "ASYLUM",
+      "CAPITAL GAINS TAX",
+      "CROSS-BORDER JURISDICTION",
+      "ACTUS REUS"
+    ],
+    "correct": "CAPITAL GAINS TAX",
+    "explanation": "CAPITAL GAINS TAX: A tax on the profit realised from the sale of an asset, such as property or shares, that has increased in value.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 278,
+    "question": "A tax deducted at source from income such as wages, dividends, or royalties before payment is made to the recipient.",
+    "options": [
+      "INJUNCTION",
+      "APPEAL",
+      "COLLATERAL",
+      "WITHHOLDING TAX"
+    ],
+    "correct": "WITHHOLDING TAX",
+    "explanation": "WITHHOLDING TAX: A tax deducted at source from income such as wages, dividends, or royalties before payment is made to the recipient.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 279,
+    "question": "The imposition of tax on the same income or asset by two different jurisdictions.",
+    "options": [
+      "BATTERY",
+      "DOUBLE TAXATION",
+      "LIMITED LIABILITY",
+      "STATUTE OF LIMITATIONS"
+    ],
+    "correct": "DOUBLE TAXATION",
+    "explanation": "DOUBLE TAXATION: The imposition of tax on the same income or asset by two different jurisdictions.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 280,
+    "question": "The formal removal of a foreign national from a country, usually for violating immigration or criminal laws.",
+    "options": [
+      "SENTENCE",
+      "REMEDIES",
+      "CONDITION PRECEDENT",
+      "DEPORTATION"
+    ],
+    "correct": "DEPORTATION",
+    "explanation": "DEPORTATION: The formal removal of a foreign national from a country, usually for violating immigration or criminal laws.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 281,
+    "question": "Protection granted by a state to a person fleeing persecution in their home country.",
+    "options": [
+      "ASSIGNMENT",
+      "COVENANTS",
+      "ASYLUM",
+      "JUDGMENT"
+    ],
+    "correct": "ASYLUM",
+    "explanation": "ASYLUM: Protection granted by a state to a person fleeing persecution in their home country.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 282,
+    "question": "An official document or stamp permitting a person to enter, leave, or stay in a country for a specified purpose and period.",
+    "options": [
+      "POLLUTION",
+      "VISA",
+      "ARBITRATION",
+      "LIBEL"
+    ],
+    "correct": "VISA",
+    "explanation": "VISA: An official document or stamp permitting a person to enter, leave, or stay in a country for a specified purpose and period.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 283,
+    "question": "The legal process by which a foreign national acquires the citizenship of another country.",
+    "options": [
+      "PLAINTIFF",
+      "COVENANT",
+      "VISA",
+      "NATURALIZATION"
+    ],
+    "correct": "NATURALIZATION",
+    "explanation": "NATURALIZATION: The legal process by which a foreign national acquires the citizenship of another country.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 284,
+    "question": "An official authorisation allowing a foreign national to live in a country for a specified period.",
+    "options": [
+      "MERGER",
+      "TENANCY",
+      "INFRINGEMENT",
+      "RESIDENCY PERMIT"
+    ],
+    "correct": "RESIDENCY PERMIT",
+    "explanation": "RESIDENCY PERMIT: An official authorisation allowing a foreign national to live in a country for a specified period.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 285,
+    "question": "The act of officially holding a person in custody, particularly while their immigration status is being determined.",
+    "options": [
+      "DETENTION",
+      "REDUNDANCY",
+      "COMPLAINT",
+      "ADMINISTRATIVE LAW"
+    ],
+    "correct": "DETENTION",
+    "explanation": "DETENTION: The act of officially holding a person in custody, particularly while their immigration status is being determined.",
+    "level": "A",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 286,
+    "question": "Official legal recognition that a person meets the international definition of a refugee and is entitled to protection.",
+    "options": [
+      "DETENTION",
+      "ACTUS REUS",
+      "BURDEN OF PROOF",
+      "REFUGEE STATUS"
+    ],
+    "correct": "REFUGEE STATUS",
+    "explanation": "REFUGEE STATUS: Official legal recognition that a person meets the international definition of a refugee and is entitled to protection.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 287,
+    "question": "The body of law governing maritime activities, including shipping, navigation, and transport of goods and people by sea.",
+    "options": [
+      "ADMIRALTY LAW",
+      "ANTICIPATORY BREACH",
+      "ADMINISTRATION ORDER",
+      "MERGER"
+    ],
+    "correct": "ADMIRALTY LAW",
+    "explanation": "ADMIRALTY LAW: The body of law governing maritime activities, including shipping, navigation, and transport of goods and people by sea.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 288,
+    "question": "A document issued by a carrier acknowledging receipt of goods for shipment and serving as evidence of the contract of carriage.",
+    "options": [
+      "STRICT LIABILITY",
+      "BILL OF LADING",
+      "DAMAGES",
+      "PLEA"
+    ],
+    "correct": "BILL OF LADING",
+    "explanation": "BILL OF LADING: A document issued by a carrier acknowledging receipt of goods for shipment and serving as evidence of the contract of carriage.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 289,
+    "question": "A contract by which a shipowner agrees to lease a vessel to a charterer for transporting goods or passengers.",
+    "options": [
+      "LETTER OF CREDIT",
+      "CHARTER PARTY",
+      "SECURITIZATION",
+      "INSOLVENCY"
+    ],
+    "correct": "CHARTER PARTY",
+    "explanation": "CHARTER PARTY: A contract by which a shipowner agrees to lease a vessel to a charterer for transporting goods or passengers.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 290,
+    "question": "The act of rescuing a ship, its cargo, or crew from danger at sea, often entitling the rescuer to a reward.",
+    "options": [
+      "OFFER",
+      "ASSAULT",
+      "SALVAGE",
+      "PERJURY"
+    ],
+    "correct": "SALVAGE",
+    "explanation": "SALVAGE: The act of rescuing a ship, its cargo, or crew from danger at sea, often entitling the rescuer to a reward.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 291,
+    "question": "A legal claim against a ship that secures a debt or claim arising from its operation, such as unpaid wages or damage.",
+    "options": [
+      "MARITIME LIEN",
+      "CROSS-BORDER JURISDICTION",
+      "MORTGAGE",
+      "SOVEREIGNTY"
+    ],
+    "correct": "MARITIME LIEN",
+    "explanation": "MARITIME LIEN: A legal claim against a ship that secures a debt or claim arising from its operation, such as unpaid wages or damage.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 292,
+    "question": "The country under whose laws a ship is registered, which has primary jurisdiction over the vessel.",
+    "options": [
+      "ASSAULT AND BATTERY",
+      "CONVICTION",
+      "ULTRA VIRES",
+      "FLAG STATE"
+    ],
+    "correct": "FLAG STATE",
+    "explanation": "FLAG STATE: The country under whose laws a ship is registered, which has primary jurisdiction over the vessel.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 293,
+    "question": "A charge payable to a shipowner when loading or unloading takes longer than the time allowed in the charter agreement.",
+    "options": [
+      "DEMURRAGE",
+      "COPYRIGHT",
+      "VOID",
+      "ACTUS REUS"
+    ],
+    "correct": "DEMURRAGE",
+    "explanation": "DEMURRAGE: A charge payable to a shipowner when loading or unloading takes longer than the time allowed in the charter agreement.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 294,
+    "question": "An asset pledged by a borrower to a lender as security for a loan, which may be seized if the loan is not repaid.",
+    "options": [
+      "COLLATERAL",
+      "STRICT LIABILITY",
+      "JUDICIAL REVIEW",
+      "MITIGATING CIRCUMSTANCES"
+    ],
+    "correct": "COLLATERAL",
+    "explanation": "COLLATERAL: An asset pledged by a borrower to a lender as security for a loan, which may be seized if the loan is not repaid.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 295,
+    "question": "A person who agrees to be legally responsible for another person's debt or obligation if they fail to fulfil it.",
+    "options": [
+      "DEPOSITION",
+      "REMOTENESS OF DAMAGE",
+      "GUARANTOR",
+      "PRECEDENT"
+    ],
+    "correct": "GUARANTOR",
+    "explanation": "GUARANTOR: A person who agrees to be legally responsible for another person's debt or obligation if they fail to fulfil it.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 296,
+    "question": "Failure to fulfil an obligation, especially the failure to repay a loan according to its terms.",
+    "options": [
+      "MORTGAGE",
+      "SPECIFIC PERFORMANCE",
+      "DEFAULT",
+      "RESTITUTION"
+    ],
+    "correct": "DEFAULT",
+    "explanation": "DEFAULT: Failure to fulfil an obligation, especially the failure to repay a loan according to its terms.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 297,
+    "question": "The process of pooling financial assets, such as loans, and converting them into tradable securities.",
+    "options": [
+      "SECURITIZATION",
+      "VENUE",
+      "ASSIGNMENT",
+      "REGULATION"
+    ],
+    "correct": "SECURITIZATION",
+    "explanation": "SECURITIZATION: The process of pooling financial assets, such as loans, and converting them into tradable securities.",
+    "level": "A",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 298,
+    "question": "A document issued by a bank guaranteeing payment to a seller on behalf of a buyer, provided certain conditions are met.",
+    "options": [
+      "LETTER OF CREDIT",
+      "COLLATERAL",
+      "GUARANTEE",
+      "LEASE"
+    ],
+    "correct": "LETTER OF CREDIT",
+    "explanation": "LETTER OF CREDIT: A document issued by a bank guaranteeing payment to a seller on behalf of a buyer, provided certain conditions are met.",
+    "level": "H",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 299,
+    "question": "A formal promise in a financial agreement, often requiring the borrower to do or refrain from doing certain things.",
+    "options": [
+      "DIVIDEND",
+      "AGGRAVATED ASSAULT",
+      "MONEY LAUNDERING",
+      "COVENANT"
+    ],
+    "correct": "COVENANT",
+    "explanation": "COVENANT: A formal promise in a financial agreement, often requiring the borrower to do or refrain from doing certain things.",
+    "level": "A",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 300,
+    "question": "A thorough investigation of a business or person before entering into an agreement or transaction, to assess risks.",
+    "options": [
+      "DUE DILIGENCE",
+      "SLANDER",
+      "COLLATERAL",
+      "VENUE"
+    ],
+    "correct": "DUE DILIGENCE",
+    "explanation": "DUE DILIGENCE: A thorough investigation of a business or person before entering into an agreement or transaction, to assess risks.",
+    "level": "H",
+    "topic": "Banking & Finance Law"
   }
 ]
