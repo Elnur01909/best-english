@@ -25,6 +25,7 @@ type Stage = 'select' | 'quiz' | 'result'
 const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
   'gap-fill':       { label: '📝 Boşluğu doldur', cls: 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300' },
   'collocation':    { label: '🔗 Kollokasiya',    cls: 'bg-teal-100 text-teal-700 dark:bg-teal-950 dark:text-teal-300' },
+  'collocation-match': { label: '🧩 Kollokasiya uyğun.', cls: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300' },
   'preposition':    { label: '🔤 Sözönü',         cls: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' },
   'classification': { label: '⚖️ Təsnifat',       cls: 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' },
   'true-false':     { label: '✓✗ Doğru/Yanlış',   cls: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300' },

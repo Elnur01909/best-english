@@ -21915,5 +21915,635 @@
     "explanation": "Yanlış. Trainee solicitor hələ ixtisas almayıb — təcrübə müqaviləsini keçir.",
     "level": "F",
     "topic": "Legal Profession"
+  },
+  {
+    "id": 1538,
+    "type": "collocation",
+    "question": "Hüquqla məşğul olmaq:  ___ law",
+    "options": [
+      "do",
+      "make",
+      "practise",
+      "work"
+    ],
+    "correct": "practise",
+    "explanation": "\"practise law\" — hüquqi fəaliyyətlə məşğul olmaq.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1539,
+    "type": "collocation",
+    "question": "Məhkəmədə işi təqdim etmək:  ___ a case",
+    "options": [
+      "tell",
+      "say",
+      "plead",
+      "speak"
+    ],
+    "correct": "plead",
+    "explanation": "\"plead a case\" — işi məhkəmədə müdafiə/təqdim etmək.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1540,
+    "type": "collocation",
+    "question": "Məhkəmədə iştirak etmək:  ___ in court",
+    "options": [
+      "show",
+      "come",
+      "stand",
+      "appear"
+    ],
+    "correct": "appear",
+    "explanation": "\"appear in court\" — məhkəmədə hazır olmaq/çıxış etmək.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1541,
+    "type": "collocation",
+    "question": "Məhkəmə yolu ilə zərəri geri almaq:  ___ damages",
+    "options": [
+      "repay",
+      "recover",
+      "refund",
+      "return"
+    ],
+    "correct": "recover",
+    "explanation": "\"recover damages\" — kompensasiyanı geri almaq.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1542,
+    "type": "collocation",
+    "question": "Kompensasiya istəmək:  ___ compensation",
+    "options": [
+      "seek",
+      "search",
+      "find",
+      "look"
+    ],
+    "correct": "seek",
+    "explanation": "\"seek compensation\" — kompensasiya axtarmaq/tələb etmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1543,
+    "type": "collocation",
+    "question": "Mübahisəni razılıqla həll etmək:  ___ a dispute",
+    "options": [
+      "close",
+      "fix",
+      "end",
+      "settle"
+    ],
+    "correct": "settle",
+    "explanation": "\"settle a dispute\" — mübahisəni həll etmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1544,
+    "type": "collocation",
+    "question": "Qərarı icra etmək:  ___ a judgment",
+    "options": [
+      "force",
+      "enforce",
+      "apply",
+      "impose"
+    ],
+    "correct": "enforce",
+    "explanation": "\"enforce a judgment\" — qərarı məcburi icra etmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1545,
+    "type": "collocation",
+    "question": "Məhkəmə icraçısı təyin etmək:  ___ a bailiff",
+    "options": [
+      "call",
+      "appoint",
+      "name",
+      "hire"
+    ],
+    "correct": "appoint",
+    "explanation": "\"appoint a bailiff\" — məhkəmə icraçısı təyin etmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1546,
+    "type": "collocation",
+    "question": "Müqavilə şərtlərini danışmaq:  ___ a contract",
+    "options": [
+      "argue",
+      "debate",
+      "discuss",
+      "negotiate"
+    ],
+    "correct": "negotiate",
+    "explanation": "\"negotiate a contract\" — müqaviləni danışıqlarla razılaşdırmaq.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1547,
+    "type": "collocation",
+    "question": "Müqaviləni imzalamaq:  ___ a contract",
+    "options": [
+      "sign",
+      "stamp",
+      "mark",
+      "write"
+    ],
+    "correct": "sign",
+    "explanation": "\"sign a contract\" — müqaviləni imzalamaq.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1548,
+    "type": "collocation",
+    "question": "Müqaviləyə xitam vermək:  ___ a contract",
+    "options": [
+      "finish",
+      "terminate",
+      "break",
+      "stop"
+    ],
+    "correct": "terminate",
+    "explanation": "\"terminate a contract\" — müqaviləni rəsmi sonlandırmaq.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1549,
+    "type": "collocation",
+    "question": "Müqavilə öhdəliklərini yerinə yetirmək:  ___ a contract",
+    "options": [
+      "perform",
+      "act",
+      "do",
+      "complete"
+    ],
+    "correct": "perform",
+    "explanation": "\"perform a contract\" — müqavilə öhdəliklərini icra etmək.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1550,
+    "type": "collocation",
+    "question": "Şirkəti korporativ statusla yaratmaq:  ___ a company",
+    "options": [
+      "open",
+      "incorporate",
+      "register",
+      "build"
+    ],
+    "correct": "incorporate",
+    "explanation": "\"incorporate a company\" — şirkəti rəsmi korporasiya kimi yaratmaq.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1551,
+    "type": "collocation",
+    "question": "Kapital cəlb etmək:  ___ capital",
+    "options": [
+      "gather",
+      "get",
+      "collect",
+      "raise"
+    ],
+    "correct": "raise",
+    "explanation": "\"raise capital\" — investisiya/kapital cəlb etmək.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1552,
+    "type": "collocation",
+    "question": "Kapital qoymaq:  ___ capital",
+    "options": [
+      "put",
+      "spend",
+      "invest",
+      "place"
+    ],
+    "correct": "invest",
+    "explanation": "\"invest capital\" — kapital yatırmaq.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1553,
+    "type": "collocation",
+    "question": "Müflisliyi rəsmi elan etmək:  ___ insolvency",
+    "options": [
+      "declare",
+      "show",
+      "tell",
+      "say"
+    ],
+    "correct": "declare",
+    "explanation": "\"declare insolvency\" — müflisliyi rəsmi bəyan etmək.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1554,
+    "type": "collocation",
+    "question": "İşçini işdən azad etmək:  ___ an employee",
+    "options": [
+      "expel",
+      "dismiss",
+      "fire",
+      "sack"
+    ],
+    "correct": "dismiss",
+    "explanation": "\"dismiss an employee\" — rəsmi registrdə işdən azad etmək (fire/sack qeyri-rəsmi).",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1555,
+    "type": "collocation",
+    "question": "Analıq məzuniyyəti götürmək:  ___ maternity leave",
+    "options": [
+      "do",
+      "put",
+      "make",
+      "take"
+    ],
+    "correct": "take",
+    "explanation": "\"take maternity leave\" — analıq məzuniyyəti götürmək.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1556,
+    "type": "collocation",
+    "question": "Mülkiyyəti başqasına keçirmək:  ___ ownership",
+    "options": [
+      "transfer",
+      "send",
+      "give",
+      "move"
+    ],
+    "correct": "transfer",
+    "explanation": "\"transfer ownership\" — mülkiyyəti ötürmək.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 1557,
+    "type": "collocation",
+    "question": "Kirayə yığmaq (sahib):  ___ rent",
+    "options": [
+      "snatch",
+      "collect",
+      "gather",
+      "grab"
+    ],
+    "correct": "collect",
+    "explanation": "\"collect rent\" — kirayə haqqını yığmaq.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 1558,
+    "type": "collocation",
+    "question": "Ticarət nişanını qeydiyyatdan keçirmək:  ___ a trademark",
+    "options": [
+      "file",
+      "register",
+      "record",
+      "note"
+    ],
+    "correct": "register",
+    "explanation": "\"register a trademark\" — ticarət nişanını qeydə almaq.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 1559,
+    "type": "collocation",
+    "question": "Patent ərizəsi vermək:  ___ a patent application",
+    "options": [
+      "file",
+      "put",
+      "post",
+      "send"
+    ],
+    "correct": "file",
+    "explanation": "\"file a patent application\" — patent ərizəsi təqdim etmək.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 1560,
+    "type": "collocation",
+    "question": "Müəllif hüququnu pozmaq:  ___ copyright",
+    "options": [
+      "break",
+      "damage",
+      "infringe",
+      "breach"
+    ],
+    "correct": "infringe",
+    "explanation": "\"infringe copyright\" — əqli mülkiyyəti pozmaq (\"breach\" müqavilə üçündür).",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 1561,
+    "type": "collocation",
+    "question": "Vərəsəlik əmlakını idarə etmək:  ___ an estate",
+    "options": [
+      "keep",
+      "handle",
+      "run",
+      "administer"
+    ],
+    "correct": "administer",
+    "explanation": "\"administer an estate\" — mərhumun əmlakını idarə etmək.",
+    "level": "A",
+    "topic": "Family Law"
+  },
+  {
+    "id": 1562,
+    "type": "collocation",
+    "question": "Gəmini icarəyə götürmək:  ___ a vessel",
+    "options": [
+      "rent",
+      "charter",
+      "book",
+      "lease"
+    ],
+    "correct": "charter",
+    "explanation": "\"charter a vessel\" — gəmini fraxtlamaq/icarəyə götürmək.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1563,
+    "type": "collocation",
+    "question": "Yükü sığortalamaq:  ___ cargo",
+    "options": [
+      "cover",
+      "insure",
+      "protect",
+      "guard"
+    ],
+    "correct": "insure",
+    "explanation": "\"insure cargo\" — yükü sığortalamaq.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1564,
+    "type": "collocation",
+    "question": "Razılığa gəlmək:  ___ an agreement",
+    "options": [
+      "reach",
+      "find",
+      "take",
+      "get"
+    ],
+    "correct": "reach",
+    "explanation": "\"reach an agreement\" — razılığa gəlmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1565,
+    "type": "collocation",
+    "question": "Təcrübəçilərə nəzarət etmək:  ___ trainees",
+    "options": [
+      "lead",
+      "supervise",
+      "watch",
+      "guide"
+    ],
+    "correct": "supervise",
+    "explanation": "\"supervise trainees\" — təcrübəçilərə rəhbərlik/nəzarət etmək.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1566,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "pen a contract",
+      "draft a contract",
+      "write a contract",
+      "compose a contract"
+    ],
+    "correct": "draft a contract",
+    "explanation": "Düzgün: \"draft a contract\". \"write a contract\" TOLES-də səhvdir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1567,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "honour a contract",
+      "respect a contract",
+      "obey a contract",
+      "admire a contract"
+    ],
+    "correct": "honour a contract",
+    "explanation": "Düzgün: \"honour a contract\". \"respect a contract\" səhvdir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1568,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "crack a contract",
+      "snap a contract",
+      "infringe a contract",
+      "breach a contract"
+    ],
+    "correct": "breach a contract",
+    "explanation": "Düzgün: \"breach a contract\". \"infringe\" hüquq/patent üçündür.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1569,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "post a claim",
+      "issue a claim",
+      "open a claim",
+      "publish a claim"
+    ],
+    "correct": "issue a claim",
+    "explanation": "Düzgün: \"issue a claim\" — iddianı qaldırmaq.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1570,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "do judgment",
+      "give judgment",
+      "tell judgment",
+      "say judgment"
+    ],
+    "correct": "give judgment",
+    "explanation": "Düzgün: \"give judgment\" — qərar elan etmək.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1571,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "owe a duty of care",
+      "take a duty of care",
+      "make a duty of care",
+      "give a duty of care"
+    ],
+    "correct": "owe a duty of care",
+    "explanation": "Düzgün: \"owe a duty of care\" — qayğı vəzifəsi daşımaq.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1572,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "suffer a loss",
+      "catch a loss",
+      "grab a loss",
+      "reach a loss"
+    ],
+    "correct": "suffer a loss",
+    "explanation": "Düzgün: \"suffer a loss\" — itkiyə məruz qalmaq.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1573,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "grow a will",
+      "build a will",
+      "form a will",
+      "make a will"
+    ],
+    "correct": "make a will",
+    "explanation": "Düzgün: \"make a will\" — vəsiyyətnamə tərtib etmək.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 1574,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "make up a business",
+      "stand up a business",
+      "put up a business",
+      "set up a business"
+    ],
+    "correct": "set up a business",
+    "explanation": "Düzgün: \"set up a business\" — biznes qurmaq.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1575,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "push a business",
+      "run a business",
+      "steer a business",
+      "drive a business"
+    ],
+    "correct": "run a business",
+    "explanation": "Düzgün: \"run a business\" — biznesi idarə etmək.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1576,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "stand as a judge",
+      "play as a judge",
+      "lie as a judge",
+      "sit as a judge"
+    ],
+    "correct": "sit as a judge",
+    "explanation": "Düzgün: \"sit as a judge\" — hakim kimi çıxış etmək.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1577,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "grab experience",
+      "gain experience",
+      "reach experience",
+      "catch experience"
+    ],
+    "correct": "gain experience",
+    "explanation": "Düzgün: \"gain experience\" — təcrübə qazanmaq.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1578,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "book a barrister",
+      "instruct a barrister",
+      "order a barrister",
+      "command a barrister"
+    ],
+    "correct": "instruct a barrister",
+    "explanation": "Düzgün: \"instruct a barrister\" — barristeri işə təlimatlandırmaq.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1579,
+    "type": "collocation-match",
+    "question": "Hansı kollokasiya düzgündür?",
+    "options": [
+      "claim damages",
+      "win damages",
+      "perform damages",
+      "do damages"
+    ],
+    "correct": "claim damages",
+    "explanation": "Düzgün: \"claim damages\" — kompensasiya tələb etmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
   }
 ]
