@@ -31071,5 +31071,6665 @@
     "cefr": "A1",
     "track": "general",
     "topic": "Nature & Weather"
+  },
+  {
+    "id": 1907,
+    "type": "definition",
+    "question": "The man a woman is married to.",
+    "options": [
+      "carry",
+      "window",
+      "husband",
+      "answer"
+    ],
+    "correct": "husband",
+    "explanation": "husband = ər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1908,
+    "type": "gap-fill",
+    "question": "Her —————— is a doctor.",
+    "options": [
+      "husband",
+      "neighbour",
+      "arm",
+      "sea"
+    ],
+    "correct": "husband",
+    "explanation": "husband = ər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1909,
+    "type": "matching",
+    "question": "«husband» — düzgün mənasını seç:",
+    "options": [
+      "Air that moves outside.",
+      "The part of your body you see with.",
+      "The meal you eat in the middle of the day.",
+      "The man a woman is married to."
+    ],
+    "correct": "The man a woman is married to.",
+    "explanation": "husband = ər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1910,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«husband» = \"The man a woman is married to.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. husband = ər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1911,
+    "type": "definition",
+    "question": "The woman a man is married to.",
+    "options": [
+      "wife",
+      "morning",
+      "famous",
+      "class"
+    ],
+    "correct": "wife",
+    "explanation": "wife = arvad, həyat yoldaşı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1912,
+    "type": "gap-fill",
+    "question": "His —————— works at a bank.",
+    "options": [
+      "mouth",
+      "wife",
+      "restaurant",
+      "leg"
+    ],
+    "correct": "wife",
+    "explanation": "wife = arvad, həyat yoldaşı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1913,
+    "type": "matching",
+    "question": "«wife» — düzgün mənasını seç:",
+    "options": [
+      "Things you wear, like shirts and trousers.",
+      "Kind and nice to others.",
+      "The room with a bath or shower.",
+      "The woman a man is married to."
+    ],
+    "correct": "The woman a man is married to.",
+    "explanation": "wife = arvad, həyat yoldaşı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1914,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«wife» = \"The early part of the day.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. wife = arvad, həyat yoldaşı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1915,
+    "type": "definition",
+    "question": "Someone’s male child.",
+    "options": [
+      "television",
+      "son",
+      "different",
+      "sky"
+    ],
+    "correct": "son",
+    "explanation": "son = oğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1916,
+    "type": "gap-fill",
+    "question": "They have one ——————.",
+    "options": [
+      "meet",
+      "tomorrow",
+      "bring",
+      "son"
+    ],
+    "correct": "son",
+    "explanation": "son = oğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1917,
+    "type": "matching",
+    "question": "«son» — düzgün mənasını seç:",
+    "options": [
+      "Someone’s female child.",
+      "A mother and a father.",
+      "Someone’s male child.",
+      "A small paper that lets you travel or enter."
+    ],
+    "correct": "Someone’s male child.",
+    "explanation": "son = oğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1918,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«son» = \"Someone’s male child.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. son = oğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1919,
+    "type": "definition",
+    "question": "Someone’s female child.",
+    "options": [
+      "sea",
+      "friendly",
+      "vegetable",
+      "daughter"
+    ],
+    "correct": "daughter",
+    "explanation": "daughter = qız (övlad)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1920,
+    "type": "gap-fill",
+    "question": "My —————— is at school.",
+    "options": [
+      "daughter",
+      "lunch",
+      "begin",
+      "bedroom"
+    ],
+    "correct": "daughter",
+    "explanation": "daughter = qız (övlad)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1921,
+    "type": "matching",
+    "question": "«daughter» — düzgün mənasını seç:",
+    "options": [
+      "Someone’s female child.",
+      "The work that someone does for money.",
+      "To pay attention to a sound.",
+      "A round food from a bird, like a chicken."
+    ],
+    "correct": "Someone’s female child.",
+    "explanation": "daughter = qız (övlad)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1922,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«daughter» = \"The part of your body from shoulder to hand.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. daughter = qız (övlad)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1923,
+    "type": "definition",
+    "question": "A mother and a father.",
+    "options": [
+      "close",
+      "hotel",
+      "parents",
+      "morning"
+    ],
+    "correct": "parents",
+    "explanation": "parents = valideynlər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1924,
+    "type": "gap-fill",
+    "question": "I live with my ——————.",
+    "options": [
+      "parents",
+      "television",
+      "close",
+      "answer"
+    ],
+    "correct": "parents",
+    "explanation": "parents = valideynlər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1925,
+    "type": "matching",
+    "question": "«parents» — düzgün mənasını seç:",
+    "options": [
+      "A mother and a father.",
+      "One of the hard white things in your mouth.",
+      "A period of sixty seconds.",
+      "Free from dirt."
+    ],
+    "correct": "A mother and a father.",
+    "explanation": "parents = valideynlər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1926,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«parents» = \"A mother and a father.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. parents = valideynlər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1927,
+    "type": "definition",
+    "question": "The mother of your mother or father.",
+    "options": [
+      "clock",
+      "grandmother",
+      "week",
+      "glass"
+    ],
+    "correct": "grandmother",
+    "explanation": "grandmother = nənə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1928,
+    "type": "gap-fill",
+    "question": "My —————— makes good food.",
+    "options": [
+      "son",
+      "weekend",
+      "grandmother",
+      "bathroom"
+    ],
+    "correct": "grandmother",
+    "explanation": "grandmother = nənə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1929,
+    "type": "matching",
+    "question": "«grandmother» — düzgün mənasını seç:",
+    "options": [
+      "One of the hard white things in your mouth.",
+      "The part of your body from shoulder to hand.",
+      "To shut something.",
+      "The mother of your mother or father."
+    ],
+    "correct": "The mother of your mother or father.",
+    "explanation": "grandmother = nənə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1930,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«grandmother» = \"To start to be something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. grandmother = nənə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1931,
+    "type": "definition",
+    "question": "The father of your mother or father.",
+    "options": [
+      "egg",
+      "grandfather",
+      "animal",
+      "restaurant"
+    ],
+    "correct": "grandfather",
+    "explanation": "grandfather = baba",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1932,
+    "type": "gap-fill",
+    "question": "My —————— is eighty.",
+    "options": [
+      "lesson",
+      "dangerous",
+      "map",
+      "grandfather"
+    ],
+    "correct": "grandfather",
+    "explanation": "grandfather = baba",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1933,
+    "type": "matching",
+    "question": "«grandfather» — düzgün mənasını seç:",
+    "options": [
+      "Someone’s male child.",
+      "A land with its own government, like France.",
+      "One of the twelve parts of a year.",
+      "The father of your mother or father."
+    ],
+    "correct": "The father of your mother or father.",
+    "explanation": "grandfather = baba",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1934,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«grandfather» = \"The father of your mother or father.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. grandfather = baba",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1935,
+    "type": "definition",
+    "question": "A person who lives near you.",
+    "options": [
+      "hospital",
+      "lunch",
+      "tired",
+      "neighbour"
+    ],
+    "correct": "neighbour",
+    "explanation": "neighbour = qonşu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1936,
+    "type": "gap-fill",
+    "question": "Our —————— is very kind.",
+    "options": [
+      "busy",
+      "neighbour",
+      "leg",
+      "letter"
+    ],
+    "correct": "neighbour",
+    "explanation": "neighbour = qonşu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1937,
+    "type": "matching",
+    "question": "«neighbour» — düzgün mənasını seç:",
+    "options": [
+      "A place where trains or buses stop.",
+      "Sweet food that grows on plants, like apples.",
+      "A person who lives near you.",
+      "A room or building where people work."
+    ],
+    "correct": "A person who lives near you.",
+    "explanation": "neighbour = qonşu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1938,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«neighbour» = \"To notice a sound with your ears.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. neighbour = qonşu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1939,
+    "type": "definition",
+    "question": "An opening in a wall with glass.",
+    "options": [
+      "window",
+      "bedroom",
+      "expensive",
+      "job"
+    ],
+    "correct": "window",
+    "explanation": "window = pəncərə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1940,
+    "type": "gap-fill",
+    "question": "Please open the ——————.",
+    "options": [
+      "egg",
+      "window",
+      "computer",
+      "enjoy"
+    ],
+    "correct": "window",
+    "explanation": "window = pəncərə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1941,
+    "type": "matching",
+    "question": "«window» — düzgün mənasını seç:",
+    "options": [
+      "A period of sixty seconds.",
+      "One of the hard white things in your mouth.",
+      "A cup made of clear material for drinking.",
+      "An opening in a wall with glass."
+    ],
+    "correct": "An opening in a wall with glass.",
+    "explanation": "window = pəncərə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1942,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«window» = \"An opening in a wall with glass.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. window = pəncərə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1943,
+    "type": "definition",
+    "question": "The room where you cook food.",
+    "options": [
+      "letter",
+      "busy",
+      "kitchen",
+      "job"
+    ],
+    "correct": "kitchen",
+    "explanation": "kitchen = mətbəx",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1944,
+    "type": "gap-fill",
+    "question": "She is cooking in the ——————.",
+    "options": [
+      "decide",
+      "wind",
+      "bathroom",
+      "kitchen"
+    ],
+    "correct": "kitchen",
+    "explanation": "kitchen = mətbəx",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1945,
+    "type": "matching",
+    "question": "«kitchen» — düzgün mənasını seç:",
+    "options": [
+      "The room where you cook food.",
+      "A land with its own government, like France.",
+      "What you say when someone asks you something.",
+      "A written message you send by post."
+    ],
+    "correct": "The room where you cook food.",
+    "explanation": "kitchen = mətbəx",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1946,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«kitchen» = \"The room with a bath or shower.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. kitchen = mətbəx",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1947,
+    "type": "definition",
+    "question": "The room where you sleep.",
+    "options": [
+      "become",
+      "minute",
+      "bedroom",
+      "daughter"
+    ],
+    "correct": "bedroom",
+    "explanation": "bedroom = yataq otağı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1948,
+    "type": "gap-fill",
+    "question": "My —————— is small.",
+    "options": [
+      "dangerous",
+      "clean",
+      "daughter",
+      "bedroom"
+    ],
+    "correct": "bedroom",
+    "explanation": "bedroom = yataq otağı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1949,
+    "type": "matching",
+    "question": "«bedroom» — düzgün mənasını seç:",
+    "options": [
+      "One of the hard white things in your mouth.",
+      "To choose what to do.",
+      "The meal you eat in the middle of the day.",
+      "The room where you sleep."
+    ],
+    "correct": "The room where you sleep.",
+    "explanation": "bedroom = yataq otağı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1950,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«bedroom» = \"The room where you sleep.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. bedroom = yataq otağı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1951,
+    "type": "definition",
+    "question": "The room with a bath or shower.",
+    "options": [
+      "bathroom",
+      "expensive",
+      "job",
+      "find"
+    ],
+    "correct": "bathroom",
+    "explanation": "bathroom = hamam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1952,
+    "type": "gap-fill",
+    "question": "The —————— is upstairs.",
+    "options": [
+      "egg",
+      "library",
+      "begin",
+      "bathroom"
+    ],
+    "correct": "bathroom",
+    "explanation": "bathroom = hamam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1953,
+    "type": "matching",
+    "question": "«bathroom» — düzgün mənasını seç:",
+    "options": [
+      "To choose what to do.",
+      "To control a car.",
+      "The space above you when you look up.",
+      "The room with a bath or shower."
+    ],
+    "correct": "The room with a bath or shower.",
+    "explanation": "bathroom = hamam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1954,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«bathroom» = \"Free from dirt.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. bathroom = hamam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1955,
+    "type": "definition",
+    "question": "A thing that shows the time.",
+    "options": [
+      "close",
+      "parents",
+      "clock",
+      "son"
+    ],
+    "correct": "clock",
+    "explanation": "clock = saat (divar)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1956,
+    "type": "gap-fill",
+    "question": "The —————— is on the wall.",
+    "options": [
+      "friendly",
+      "animal",
+      "lunch",
+      "clock"
+    ],
+    "correct": "clock",
+    "explanation": "clock = saat (divar)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1957,
+    "type": "matching",
+    "question": "«clock» — düzgün mənasını seç:",
+    "options": [
+      "The part of your face you eat and speak with.",
+      "Needing rest or sleep.",
+      "A thing that shows the time.",
+      "Able to hurt or harm you."
+    ],
+    "correct": "A thing that shows the time.",
+    "explanation": "clock = saat (divar)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1958,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«clock» = \"A thing that shows the time.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. clock = saat (divar)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1959,
+    "type": "definition",
+    "question": "A small metal thing that opens a lock.",
+    "options": [
+      "key",
+      "snow",
+      "plane",
+      "juice"
+    ],
+    "correct": "key",
+    "explanation": "key = açar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1960,
+    "type": "matching",
+    "question": "«key» — düzgün mənasını seç:",
+    "options": [
+      "A small place in the countryside.",
+      "To come together with someone.",
+      "To take something to a place or person.",
+      "A small metal thing that opens a lock."
+    ],
+    "correct": "A small metal thing that opens a lock.",
+    "explanation": "key = açar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1961,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«key» = \"To start to be something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. key = açar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1962,
+    "type": "definition",
+    "question": "A written message you send by post.",
+    "options": [
+      "evening",
+      "vegetable",
+      "rice",
+      "letter"
+    ],
+    "correct": "letter",
+    "explanation": "letter = məktub",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1963,
+    "type": "gap-fill",
+    "question": "I wrote a —————— to my friend.",
+    "options": [
+      "answer",
+      "dangerous",
+      "letter",
+      "tomorrow"
+    ],
+    "correct": "letter",
+    "explanation": "letter = məktub",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1964,
+    "type": "matching",
+    "question": "«letter» — düzgün mənasını seç:",
+    "options": [
+      "A written message you send by post.",
+      "A time when you learn something.",
+      "To discover where something is.",
+      "Saturday and Sunday."
+    ],
+    "correct": "A written message you send by post.",
+    "explanation": "letter = məktub",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1965,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«letter» = \"A written message you send by post.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. letter = məktub",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1966,
+    "type": "definition",
+    "question": "A drawing or photo of something.",
+    "options": [
+      "country",
+      "lunch",
+      "picture",
+      "restaurant"
+    ],
+    "correct": "picture",
+    "explanation": "picture = şəkil",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1967,
+    "type": "gap-fill",
+    "question": "There is a —————— on the wall.",
+    "options": [
+      "picture",
+      "beautiful",
+      "bedroom",
+      "beach"
+    ],
+    "correct": "picture",
+    "explanation": "picture = şəkil",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1968,
+    "type": "matching",
+    "question": "«picture» — düzgün mənasını seç:",
+    "options": [
+      "A drawing or photo of something.",
+      "A drawing that shows where places are.",
+      "To make something different.",
+      "The room with a bath or shower."
+    ],
+    "correct": "A drawing or photo of something.",
+    "explanation": "picture = şəkil",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1969,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«picture» = \"A vehicle that flies in the sky.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. picture = şəkil",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1970,
+    "type": "definition",
+    "question": "A device for watching programmes.",
+    "options": [
+      "cheap",
+      "village",
+      "television",
+      "enjoy"
+    ],
+    "correct": "television",
+    "explanation": "television = televizor",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1971,
+    "type": "gap-fill",
+    "question": "We watch —————— at night.",
+    "options": [
+      "tired",
+      "sea",
+      "television",
+      "study"
+    ],
+    "correct": "television",
+    "explanation": "television = televizor",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1972,
+    "type": "matching",
+    "question": "«television» — düzgün mənasını seç:",
+    "options": [
+      "To control a car.",
+      "A device for watching programmes.",
+      "A room or building where people work.",
+      "Soft white pieces of frozen water that fall."
+    ],
+    "correct": "A device for watching programmes.",
+    "explanation": "television = televizor",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1973,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«television» = \"A device for watching programmes.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. television = televizor",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1974,
+    "type": "definition",
+    "question": "A machine that stores and uses data.",
+    "options": [
+      "computer",
+      "vegetable",
+      "window",
+      "sugar"
+    ],
+    "correct": "computer",
+    "explanation": "computer = kompüter",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1975,
+    "type": "gap-fill",
+    "question": "I work on my ——————.",
+    "options": [
+      "computer",
+      "television",
+      "ticket",
+      "enjoy"
+    ],
+    "correct": "computer",
+    "explanation": "computer = kompüter",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1976,
+    "type": "matching",
+    "question": "«computer» — düzgün mənasını seç:",
+    "options": [
+      "What you say when someone asks you something.",
+      "Costing a lot of money.",
+      "A machine that stores and uses data.",
+      "A drink made from fruit."
+    ],
+    "correct": "A machine that stores and uses data.",
+    "explanation": "computer = kompüter",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1977,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«computer» = \"Free from dirt.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. computer = kompüter",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1978,
+    "type": "definition",
+    "question": "Things you wear, like shirts and trousers.",
+    "options": [
+      "kitchen",
+      "carry",
+      "clothes",
+      "close"
+    ],
+    "correct": "clothes",
+    "explanation": "clothes = geyim, paltar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1979,
+    "type": "gap-fill",
+    "question": "I buy new ——————.",
+    "options": [
+      "clothes",
+      "sugar",
+      "train",
+      "office"
+    ],
+    "correct": "clothes",
+    "explanation": "clothes = geyim, paltar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1980,
+    "type": "matching",
+    "question": "«clothes» — düzgün mənasını seç:",
+    "options": [
+      "Very nice to look at.",
+      "A place where you pay to sleep when travelling.",
+      "Things you wear, like shirts and trousers.",
+      "The room where you sleep."
+    ],
+    "correct": "Things you wear, like shirts and trousers.",
+    "explanation": "clothes = geyim, paltar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1981,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«clothes» = \"Things you wear, like shirts and trousers.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. clothes = geyim, paltar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1982,
+    "type": "definition",
+    "question": "A cup made of clear material for drinking.",
+    "options": [
+      "study",
+      "sea",
+      "glass",
+      "dinner"
+    ],
+    "correct": "glass",
+    "explanation": "glass = stəkan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1983,
+    "type": "gap-fill",
+    "question": "I drank a —————— of water.",
+    "options": [
+      "glass",
+      "computer",
+      "close",
+      "begin"
+    ],
+    "correct": "glass",
+    "explanation": "glass = stəkan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1984,
+    "type": "matching",
+    "question": "«glass» — düzgün mənasını seç:",
+    "options": [
+      "The time at the end of the day.",
+      "A plant we eat, like a carrot or potato.",
+      "A cup made of clear material for drinking.",
+      "Making you want to know more."
+    ],
+    "correct": "A cup made of clear material for drinking.",
+    "explanation": "glass = stəkan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1985,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«glass» = \"To shut something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. glass = stəkan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1986,
+    "type": "definition",
+    "question": "The first meal of the day.",
+    "options": [
+      "breakfast",
+      "answer",
+      "morning",
+      "weekend"
+    ],
+    "correct": "breakfast",
+    "explanation": "breakfast = səhər yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1987,
+    "type": "gap-fill",
+    "question": "I eat —————— at eight.",
+    "options": [
+      "breakfast",
+      "close",
+      "hotel",
+      "mouth"
+    ],
+    "correct": "breakfast",
+    "explanation": "breakfast = səhər yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1988,
+    "type": "matching",
+    "question": "«breakfast» — düzgün mənasını seç:",
+    "options": [
+      "Land with sand next to the sea.",
+      "The early part of the day.",
+      "The first meal of the day.",
+      "Something you ask."
+    ],
+    "correct": "The first meal of the day.",
+    "explanation": "breakfast = səhər yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1989,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«breakfast» = \"The first meal of the day.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. breakfast = səhər yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1990,
+    "type": "definition",
+    "question": "The meal you eat in the middle of the day.",
+    "options": [
+      "morning",
+      "lunch",
+      "listen",
+      "rice"
+    ],
+    "correct": "lunch",
+    "explanation": "lunch = nahar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1991,
+    "type": "gap-fill",
+    "question": "We have —————— at one.",
+    "options": [
+      "interesting",
+      "fruit",
+      "lunch",
+      "station"
+    ],
+    "correct": "lunch",
+    "explanation": "lunch = nahar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1992,
+    "type": "matching",
+    "question": "«lunch» — düzgün mənasını seç:",
+    "options": [
+      "To help someone learn something.",
+      "Someone’s male child.",
+      "The meal you eat in the middle of the day.",
+      "A place with many books to read or borrow."
+    ],
+    "correct": "The meal you eat in the middle of the day.",
+    "explanation": "lunch = nahar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1993,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«lunch» = \"The space above you when you look up.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. lunch = nahar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1994,
+    "type": "definition",
+    "question": "The main meal, usually in the evening.",
+    "options": [
+      "dinner",
+      "dangerous",
+      "evening",
+      "study"
+    ],
+    "correct": "dinner",
+    "explanation": "dinner = şam yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1995,
+    "type": "gap-fill",
+    "question": "—————— is ready.",
+    "options": [
+      "call",
+      "university",
+      "cheap",
+      "dinner"
+    ],
+    "correct": "dinner",
+    "explanation": "dinner = şam yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1996,
+    "type": "matching",
+    "question": "«dinner» — düzgün mənasını seç:",
+    "options": [
+      "The coloured part of a plant.",
+      "The room with a bath or shower.",
+      "The main meal, usually in the evening.",
+      "A period of sixty seconds."
+    ],
+    "correct": "The main meal, usually in the evening.",
+    "explanation": "dinner = şam yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1997,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«dinner» = \"The main meal, usually in the evening.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. dinner = şam yeməyi",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1998,
+    "type": "definition",
+    "question": "A round food from a bird, like a chicken.",
+    "options": [
+      "mouth",
+      "leg",
+      "egg",
+      "enjoy"
+    ],
+    "correct": "egg",
+    "explanation": "egg = yumurta",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1999,
+    "type": "matching",
+    "question": "«egg» — düzgün mənasını seç:",
+    "options": [
+      "A round food from a bird, like a chicken.",
+      "A vehicle that flies in the sky.",
+      "Something you ask.",
+      "Small white grains that we cook and eat."
+    ],
+    "correct": "A round food from a bird, like a chicken.",
+    "explanation": "egg = yumurta",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2000,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«egg» = \"Air that moves outside.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. egg = yumurta",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2001,
+    "type": "definition",
+    "question": "Small white grains that we cook and eat.",
+    "options": [
+      "animal",
+      "bring",
+      "rice",
+      "fruit"
+    ],
+    "correct": "rice",
+    "explanation": "rice = düyü, plov",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2002,
+    "type": "gap-fill",
+    "question": "We eat —————— with meat.",
+    "options": [
+      "wife",
+      "clock",
+      "rice",
+      "busy"
+    ],
+    "correct": "rice",
+    "explanation": "rice = düyü, plov",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2003,
+    "type": "matching",
+    "question": "«rice» — düzgün mənasını seç:",
+    "options": [
+      "Small white grains that we cook and eat.",
+      "The meal you eat in the middle of the day.",
+      "Needing rest or sleep.",
+      "Very nice to look at."
+    ],
+    "correct": "Small white grains that we cook and eat.",
+    "explanation": "rice = düyü, plov",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2004,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«rice» = \"Small white grains that we cook and eat.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. rice = düyü, plov",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2005,
+    "type": "definition",
+    "question": "A sweet white food we add to drinks.",
+    "options": [
+      "wind",
+      "sugar",
+      "market",
+      "drive"
+    ],
+    "correct": "sugar",
+    "explanation": "sugar = şəkər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2006,
+    "type": "gap-fill",
+    "question": "I take —————— in my tea.",
+    "options": [
+      "window",
+      "holiday",
+      "sugar",
+      "plane"
+    ],
+    "correct": "sugar",
+    "explanation": "sugar = şəkər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2007,
+    "type": "matching",
+    "question": "«sugar» — düzgün mənasını seç:",
+    "options": [
+      "To hold and move something.",
+      "A sweet white food we add to drinks.",
+      "A land with its own government, like France.",
+      "A vehicle that flies in the sky."
+    ],
+    "correct": "A sweet white food we add to drinks.",
+    "explanation": "sugar = şəkər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2008,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«sugar» = \"To shut something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. sugar = şəkər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2009,
+    "type": "definition",
+    "question": "Sweet food that grows on plants, like apples.",
+    "options": [
+      "daughter",
+      "fruit",
+      "country",
+      "grandmother"
+    ],
+    "correct": "fruit",
+    "explanation": "fruit = meyvə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2010,
+    "type": "gap-fill",
+    "question": "—————— is good for you.",
+    "options": [
+      "fruit",
+      "wind",
+      "finish",
+      "enjoy"
+    ],
+    "correct": "fruit",
+    "explanation": "fruit = meyvə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2011,
+    "type": "matching",
+    "question": "«fruit» — düzgün mənasını seç:",
+    "options": [
+      "A period of sixty seconds.",
+      "To get pleasure from something.",
+      "The space above you when you look up.",
+      "Sweet food that grows on plants, like apples."
+    ],
+    "correct": "Sweet food that grows on plants, like apples.",
+    "explanation": "fruit = meyvə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2012,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«fruit» = \"Sweet food that grows on plants, like apples.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. fruit = meyvə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2013,
+    "type": "definition",
+    "question": "A plant we eat, like a carrot or potato.",
+    "options": [
+      "bring",
+      "drive",
+      "vegetable",
+      "neighbour"
+    ],
+    "correct": "vegetable",
+    "explanation": "vegetable = tərəvəz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2014,
+    "type": "matching",
+    "question": "«vegetable» — düzgün mənasını seç:",
+    "options": [
+      "A drink made from fruit.",
+      "The part of your body from shoulder to hand.",
+      "A place with many books to read or borrow.",
+      "A plant we eat, like a carrot or potato."
+    ],
+    "correct": "A plant we eat, like a carrot or potato.",
+    "explanation": "vegetable = tərəvəz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2015,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«vegetable» = \"What you say when someone asks you something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. vegetable = tərəvəz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2016,
+    "type": "definition",
+    "question": "A drink made from fruit.",
+    "options": [
+      "juice",
+      "letter",
+      "decide",
+      "daughter"
+    ],
+    "correct": "juice",
+    "explanation": "juice = şirə, cu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2017,
+    "type": "gap-fill",
+    "question": "I like orange ——————.",
+    "options": [
+      "friendly",
+      "juice",
+      "train",
+      "find"
+    ],
+    "correct": "juice",
+    "explanation": "juice = şirə, cu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2018,
+    "type": "matching",
+    "question": "«juice» — düzgün mənasını seç:",
+    "options": [
+      "A drink made from fruit.",
+      "Making you want to know more.",
+      "Able to hurt or harm you.",
+      "The main meal, usually in the evening."
+    ],
+    "correct": "A drink made from fruit.",
+    "explanation": "juice = şirə, cu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2019,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«juice» = \"A drink made from fruit.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. juice = şirə, cu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 2020,
+    "type": "definition",
+    "question": "A place where you buy and eat meals.",
+    "options": [
+      "teach",
+      "bring",
+      "restaurant",
+      "different"
+    ],
+    "correct": "restaurant",
+    "explanation": "restaurant = restoran",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2021,
+    "type": "gap-fill",
+    "question": "We ate at a ——————.",
+    "options": [
+      "restaurant",
+      "cheap",
+      "busy",
+      "hear"
+    ],
+    "correct": "restaurant",
+    "explanation": "restaurant = restoran",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2022,
+    "type": "matching",
+    "question": "«restaurant» — düzgün mənasını seç:",
+    "options": [
+      "A place where you buy and eat meals.",
+      "A vehicle that flies in the sky.",
+      "The room where you sleep.",
+      "To go away from a place."
+    ],
+    "correct": "A place where you buy and eat meals.",
+    "explanation": "restaurant = restoran",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2023,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«restaurant» = \"A place where trains or buses stop.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. restaurant = restoran",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2024,
+    "type": "definition",
+    "question": "A room or building where people work.",
+    "options": [
+      "office",
+      "hear",
+      "decide",
+      "sea"
+    ],
+    "correct": "office",
+    "explanation": "office = ofis",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2025,
+    "type": "gap-fill",
+    "question": "My father works in an ——————.",
+    "options": [
+      "office",
+      "cheap",
+      "expensive",
+      "daughter"
+    ],
+    "correct": "office",
+    "explanation": "office = ofis",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2026,
+    "type": "matching",
+    "question": "«office» — düzgün mənasını seç:",
+    "options": [
+      "Mattering a lot.",
+      "A group of students who learn together.",
+      "A place where you buy and eat meals.",
+      "A room or building where people work."
+    ],
+    "correct": "A room or building where people work.",
+    "explanation": "office = ofis",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2027,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«office» = \"A room or building where people work.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. office = ofis",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2028,
+    "type": "definition",
+    "question": "The work that someone does for money.",
+    "options": [
+      "question",
+      "job",
+      "sugar",
+      "plane"
+    ],
+    "correct": "job",
+    "explanation": "job = iş, peşə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2029,
+    "type": "gap-fill",
+    "question": "She has a good ——————.",
+    "options": [
+      "job",
+      "juice",
+      "expensive",
+      "picture"
+    ],
+    "correct": "job",
+    "explanation": "job = iş, peşə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2030,
+    "type": "matching",
+    "question": "«job» — düzgün mənasını seç:",
+    "options": [
+      "The work that someone does for money.",
+      "Able to hurt or harm you.",
+      "Sweet food that grows on plants, like apples.",
+      "The room with a bath or shower."
+    ],
+    "correct": "The work that someone does for money.",
+    "explanation": "job = iş, peşə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2031,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«job» = \"The main meal, usually in the evening.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. job = iş, peşə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2032,
+    "type": "definition",
+    "question": "A time when you learn something.",
+    "options": [
+      "call",
+      "neighbour",
+      "leave",
+      "lesson"
+    ],
+    "correct": "lesson",
+    "explanation": "lesson = dərs",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2033,
+    "type": "gap-fill",
+    "question": "The English —————— is at ten.",
+    "options": [
+      "lesson",
+      "sky",
+      "country",
+      "computer"
+    ],
+    "correct": "lesson",
+    "explanation": "lesson = dərs",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2034,
+    "type": "matching",
+    "question": "«lesson» — düzgün mənasını seç:",
+    "options": [
+      "A group of students who learn together.",
+      "A time when you learn something.",
+      "To notice a sound with your ears.",
+      "To telephone someone."
+    ],
+    "correct": "A time when you learn something.",
+    "explanation": "lesson = dərs",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2035,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«lesson» = \"A time when you learn something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. lesson = dərs",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2036,
+    "type": "definition",
+    "question": "A group of students who learn together.",
+    "options": [
+      "hotel",
+      "wife",
+      "class",
+      "enjoy"
+    ],
+    "correct": "class",
+    "explanation": "class = sinif",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2037,
+    "type": "gap-fill",
+    "question": "There are twenty students in my ——————.",
+    "options": [
+      "minute",
+      "bedroom",
+      "class",
+      "month"
+    ],
+    "correct": "class",
+    "explanation": "class = sinif",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2038,
+    "type": "matching",
+    "question": "«class» — düzgün mənasını seç:",
+    "options": [
+      "Not the same.",
+      "The part of your face you eat and speak with.",
+      "A group of students who learn together.",
+      "Able to hurt or harm you."
+    ],
+    "correct": "A group of students who learn together.",
+    "explanation": "class = sinif",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2039,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«class» = \"To make something different.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. class = sinif",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2040,
+    "type": "definition",
+    "question": "A place to study after school.",
+    "options": [
+      "parents",
+      "cheap",
+      "university",
+      "sea"
+    ],
+    "correct": "university",
+    "explanation": "university = universitet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2041,
+    "type": "gap-fill",
+    "question": "He studies at ——————.",
+    "options": [
+      "clothes",
+      "evening",
+      "bring",
+      "university"
+    ],
+    "correct": "university",
+    "explanation": "university = universitet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2042,
+    "type": "matching",
+    "question": "«university» — düzgün mənasını seç:",
+    "options": [
+      "A long vehicle on rails that carries people.",
+      "To start to be something.",
+      "A place to study after school.",
+      "A vehicle that flies in the sky."
+    ],
+    "correct": "A place to study after school.",
+    "explanation": "university = universitet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2043,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«university» = \"A place to study after school.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. university = universitet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2044,
+    "type": "definition",
+    "question": "A place with many books to read or borrow.",
+    "options": [
+      "library",
+      "train",
+      "important",
+      "country"
+    ],
+    "correct": "library",
+    "explanation": "library = kitabxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2045,
+    "type": "gap-fill",
+    "question": "I read in the ——————.",
+    "options": [
+      "fruit",
+      "answer",
+      "listen",
+      "library"
+    ],
+    "correct": "library",
+    "explanation": "library = kitabxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2046,
+    "type": "matching",
+    "question": "«library» — düzgün mənasını seç:",
+    "options": [
+      "A place where trains or buses stop.",
+      "A place with many books to read or borrow.",
+      "Someone’s female child.",
+      "To complete something; to end."
+    ],
+    "correct": "A place with many books to read or borrow.",
+    "explanation": "library = kitabxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2047,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«library» = \"What you say when someone asks you something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. library = kitabxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2048,
+    "type": "definition",
+    "question": "Something you ask.",
+    "options": [
+      "vegetable",
+      "famous",
+      "snow",
+      "question"
+    ],
+    "correct": "question",
+    "explanation": "question = sual",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2049,
+    "type": "gap-fill",
+    "question": "Can I ask a ——————?",
+    "options": [
+      "question",
+      "bedroom",
+      "job",
+      "weekend"
+    ],
+    "correct": "question",
+    "explanation": "question = sual",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2050,
+    "type": "matching",
+    "question": "«question» — düzgün mənasını seç:",
+    "options": [
+      "To get pleasure from something.",
+      "The mother of your mother or father.",
+      "Something you ask.",
+      "The woman a man is married to."
+    ],
+    "correct": "Something you ask.",
+    "explanation": "question = sual",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2051,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«question» = \"Something you ask.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. question = sual",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2052,
+    "type": "definition",
+    "question": "What you say when someone asks you something.",
+    "options": [
+      "mouth",
+      "answer",
+      "market",
+      "weather"
+    ],
+    "correct": "answer",
+    "explanation": "answer = cavab",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2053,
+    "type": "gap-fill",
+    "question": "I know the ——————.",
+    "options": [
+      "bedroom",
+      "eye",
+      "holiday",
+      "answer"
+    ],
+    "correct": "answer",
+    "explanation": "answer = cavab",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2054,
+    "type": "matching",
+    "question": "«answer» — düzgün mənasını seç:",
+    "options": [
+      "The man a woman is married to.",
+      "What you say when someone asks you something.",
+      "To hold and move something.",
+      "On the day after today."
+    ],
+    "correct": "What you say when someone asks you something.",
+    "explanation": "answer = cavab",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2055,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«answer» = \"An opening in a wall with glass.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. answer = cavab",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2056,
+    "type": "definition",
+    "question": "To learn about something, often by reading.",
+    "options": [
+      "meet",
+      "university",
+      "market",
+      "study"
+    ],
+    "correct": "study",
+    "explanation": "study = oxumaq, öyrənmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2057,
+    "type": "gap-fill",
+    "question": "I —————— every evening.",
+    "options": [
+      "month",
+      "country",
+      "window",
+      "study"
+    ],
+    "correct": "study",
+    "explanation": "study = oxumaq, öyrənmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2058,
+    "type": "matching",
+    "question": "«study» — düzgün mənasını seç:",
+    "options": [
+      "To start to be something.",
+      "Things you wear, like shirts and trousers.",
+      "Land with sand next to the sea.",
+      "To learn about something, often by reading."
+    ],
+    "correct": "To learn about something, often by reading.",
+    "explanation": "study = oxumaq, öyrənmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2059,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«study» = \"To learn about something, often by reading.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. study = oxumaq, öyrənmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2060,
+    "type": "definition",
+    "question": "To help someone learn something.",
+    "options": [
+      "teach",
+      "week",
+      "interesting",
+      "holiday"
+    ],
+    "correct": "teach",
+    "explanation": "teach = öyrətmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2061,
+    "type": "matching",
+    "question": "«teach» — düzgün mənasını seç:",
+    "options": [
+      "To start.",
+      "A small metal thing that opens a lock.",
+      "To learn about something, often by reading.",
+      "To help someone learn something."
+    ],
+    "correct": "To help someone learn something.",
+    "explanation": "teach = öyrətmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2062,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«teach» = \"On the day after today.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. teach = öyrətmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2063,
+    "type": "definition",
+    "question": "A place where planes take off and land.",
+    "options": [
+      "village",
+      "window",
+      "airport",
+      "friendly"
+    ],
+    "correct": "airport",
+    "explanation": "airport = hava limanı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2064,
+    "type": "gap-fill",
+    "question": "We arrived at the —————— early.",
+    "options": [
+      "hour",
+      "listen",
+      "airport",
+      "eye"
+    ],
+    "correct": "airport",
+    "explanation": "airport = hava limanı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2065,
+    "type": "matching",
+    "question": "«airport» — düzgün mənasını seç:",
+    "options": [
+      "To learn about something, often by reading.",
+      "Very nice to look at.",
+      "To discover where something is.",
+      "A place where planes take off and land."
+    ],
+    "correct": "A place where planes take off and land.",
+    "explanation": "airport = hava limanı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2066,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«airport» = \"A place where planes take off and land.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. airport = hava limanı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2067,
+    "type": "definition",
+    "question": "A place where trains or buses stop.",
+    "options": [
+      "week",
+      "station",
+      "egg",
+      "weekend"
+    ],
+    "correct": "station",
+    "explanation": "station = vağzal, stansiya",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2068,
+    "type": "gap-fill",
+    "question": "I waited at the ——————.",
+    "options": [
+      "station",
+      "busy",
+      "dangerous",
+      "computer"
+    ],
+    "correct": "station",
+    "explanation": "station = vağzal, stansiya",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2069,
+    "type": "matching",
+    "question": "«station» — düzgün mənasını seç:",
+    "options": [
+      "A place where trains or buses stop.",
+      "To go away from a place.",
+      "A place to study after school.",
+      "The part of your body you see with."
+    ],
+    "correct": "A place where trains or buses stop.",
+    "explanation": "station = vağzal, stansiya",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2070,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«station» = \"A room or building where people work.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. station = vağzal, stansiya",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2071,
+    "type": "definition",
+    "question": "A long vehicle on rails that carries people.",
+    "options": [
+      "kitchen",
+      "train",
+      "dangerous",
+      "week"
+    ],
+    "correct": "train",
+    "explanation": "train = qatar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2072,
+    "type": "gap-fill",
+    "question": "The —————— is late.",
+    "options": [
+      "call",
+      "train",
+      "market",
+      "weather"
+    ],
+    "correct": "train",
+    "explanation": "train = qatar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2073,
+    "type": "matching",
+    "question": "«train» — düzgün mənasını seç:",
+    "options": [
+      "A long vehicle on rails that carries people.",
+      "A group of students who learn together.",
+      "The part of your body you see with.",
+      "A drawing or photo of something."
+    ],
+    "correct": "A long vehicle on rails that carries people.",
+    "explanation": "train = qatar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2074,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«train» = \"A long vehicle on rails that carries people.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. train = qatar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2075,
+    "type": "definition",
+    "question": "A vehicle that flies in the sky.",
+    "options": [
+      "plane",
+      "medicine",
+      "tired",
+      "cheap"
+    ],
+    "correct": "plane",
+    "explanation": "plane = təyyarə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2076,
+    "type": "gap-fill",
+    "question": "The —————— is very fast.",
+    "options": [
+      "husband",
+      "plane",
+      "tired",
+      "important"
+    ],
+    "correct": "plane",
+    "explanation": "plane = təyyarə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2077,
+    "type": "matching",
+    "question": "«plane» — düzgün mənasını seç:",
+    "options": [
+      "To hold and move something.",
+      "A drawing or photo of something.",
+      "A land with its own government, like France.",
+      "A vehicle that flies in the sky."
+    ],
+    "correct": "A vehicle that flies in the sky.",
+    "explanation": "plane = təyyarə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2078,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«plane» = \"A drawing that shows where places are.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. plane = təyyarə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2079,
+    "type": "definition",
+    "question": "A small paper that lets you travel or enter.",
+    "options": [
+      "ticket",
+      "drive",
+      "question",
+      "decide"
+    ],
+    "correct": "ticket",
+    "explanation": "ticket = bilet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2080,
+    "type": "gap-fill",
+    "question": "I bought a ——————.",
+    "options": [
+      "close",
+      "ticket",
+      "clock",
+      "son"
+    ],
+    "correct": "ticket",
+    "explanation": "ticket = bilet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2081,
+    "type": "matching",
+    "question": "«ticket» — düzgün mənasını seç:",
+    "options": [
+      "A small metal thing that opens a lock.",
+      "A small paper that lets you travel or enter.",
+      "A sweet white food we add to drinks.",
+      "A period of seven days."
+    ],
+    "correct": "A small paper that lets you travel or enter.",
+    "explanation": "ticket = bilet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2082,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ticket» = \"A small paper that lets you travel or enter.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. ticket = bilet",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2083,
+    "type": "definition",
+    "question": "A place where you pay to sleep when travelling.",
+    "options": [
+      "computer",
+      "famous",
+      "hotel",
+      "tired"
+    ],
+    "correct": "hotel",
+    "explanation": "hotel = otel",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2084,
+    "type": "gap-fill",
+    "question": "We stayed at a ——————.",
+    "options": [
+      "interesting",
+      "lunch",
+      "hotel",
+      "parents"
+    ],
+    "correct": "hotel",
+    "explanation": "hotel = otel",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2085,
+    "type": "matching",
+    "question": "«hotel» — düzgün mənasını seç:",
+    "options": [
+      "A long vehicle on rails that carries people.",
+      "A living thing that can move, like a dog.",
+      "A place where you pay to sleep when travelling.",
+      "To start to be something."
+    ],
+    "correct": "A place where you pay to sleep when travelling.",
+    "explanation": "hotel = otel",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2086,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«hotel» = \"A plant we eat, like a carrot or potato.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. hotel = otel",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2087,
+    "type": "definition",
+    "question": "A drawing that shows where places are.",
+    "options": [
+      "map",
+      "country",
+      "neighbour",
+      "friendly"
+    ],
+    "correct": "map",
+    "explanation": "map = xəritə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2088,
+    "type": "gap-fill",
+    "question": "Look at the ——————.",
+    "options": [
+      "picture",
+      "snow",
+      "map",
+      "bring"
+    ],
+    "correct": "map",
+    "explanation": "map = xəritə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2089,
+    "type": "matching",
+    "question": "«map» — düzgün mənasını seç:",
+    "options": [
+      "A drawing that shows where places are.",
+      "A period of seven days.",
+      "A land with its own government, like France.",
+      "The early part of the day."
+    ],
+    "correct": "A drawing that shows where places are.",
+    "explanation": "map = xəritə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2090,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«map» = \"A drawing that shows where places are.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. map = xəritə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2091,
+    "type": "definition",
+    "question": "A land with its own government, like France.",
+    "options": [
+      "lesson",
+      "country",
+      "begin",
+      "friendly"
+    ],
+    "correct": "country",
+    "explanation": "country = ölkə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2092,
+    "type": "matching",
+    "question": "«country» — düzgün mənasını seç:",
+    "options": [
+      "Making you want to know more.",
+      "A room or building where people work.",
+      "A white or grey shape in the sky.",
+      "A land with its own government, like France."
+    ],
+    "correct": "A land with its own government, like France.",
+    "explanation": "country = ölkə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2093,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«country» = \"A drawing that shows where places are.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. country = ölkə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2094,
+    "type": "definition",
+    "question": "A small place in the countryside.",
+    "options": [
+      "breakfast",
+      "listen",
+      "village",
+      "lunch"
+    ],
+    "correct": "village",
+    "explanation": "village = kənd",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2095,
+    "type": "gap-fill",
+    "question": "My grandmother lives in a ——————.",
+    "options": [
+      "dinner",
+      "train",
+      "village",
+      "leave"
+    ],
+    "correct": "village",
+    "explanation": "village = kənd",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2096,
+    "type": "matching",
+    "question": "«village» — düzgün mənasını seç:",
+    "options": [
+      "To choose what to do.",
+      "A small place in the countryside.",
+      "One of the hard white things in your mouth.",
+      "To shut something."
+    ],
+    "correct": "A small place in the countryside.",
+    "explanation": "village = kənd",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2097,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«village» = \"A small place in the countryside.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. village = kənd",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2098,
+    "type": "definition",
+    "question": "A place where people buy and sell things.",
+    "options": [
+      "market",
+      "television",
+      "dangerous",
+      "weekend"
+    ],
+    "correct": "market",
+    "explanation": "market = bazar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2099,
+    "type": "gap-fill",
+    "question": "I buy fruit at the ——————.",
+    "options": [
+      "university",
+      "market",
+      "letter",
+      "dinner"
+    ],
+    "correct": "market",
+    "explanation": "market = bazar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2100,
+    "type": "matching",
+    "question": "«market» — düzgün mənasını seç:",
+    "options": [
+      "To make something different.",
+      "A vehicle that flies in the sky.",
+      "A place where people buy and sell things.",
+      "To discover where something is."
+    ],
+    "correct": "A place where people buy and sell things.",
+    "explanation": "market = bazar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2101,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«market» = \"The man a woman is married to.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. market = bazar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2102,
+    "type": "definition",
+    "question": "Land with sand next to the sea.",
+    "options": [
+      "change",
+      "ticket",
+      "beach",
+      "parents"
+    ],
+    "correct": "beach",
+    "explanation": "beach = çimərlik",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2103,
+    "type": "gap-fill",
+    "question": "We played on the ——————.",
+    "options": [
+      "sky",
+      "tired",
+      "busy",
+      "beach"
+    ],
+    "correct": "beach",
+    "explanation": "beach = çimərlik",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2104,
+    "type": "matching",
+    "question": "«beach» — düzgün mənasını seç:",
+    "options": [
+      "A small metal thing that opens a lock.",
+      "To pay attention to a sound.",
+      "A land with its own government, like France.",
+      "Land with sand next to the sea."
+    ],
+    "correct": "Land with sand next to the sea.",
+    "explanation": "beach = çimərlik",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2105,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«beach» = \"Land with sand next to the sea.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. beach = çimərlik",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2106,
+    "type": "definition",
+    "question": "A time when you do not work and rest or travel.",
+    "options": [
+      "holiday",
+      "weekend",
+      "plane",
+      "cloud"
+    ],
+    "correct": "holiday",
+    "explanation": "holiday = tətil, bayram",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2107,
+    "type": "gap-fill",
+    "question": "We go on —————— in summer.",
+    "options": [
+      "grandmother",
+      "holiday",
+      "lesson",
+      "cheap"
+    ],
+    "correct": "holiday",
+    "explanation": "holiday = tətil, bayram",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2108,
+    "type": "matching",
+    "question": "«holiday» — düzgün mənasını seç:",
+    "options": [
+      "A place where you pay to sleep when travelling.",
+      "Very nice to look at.",
+      "A living thing that can move, like a dog.",
+      "A time when you do not work and rest or travel."
+    ],
+    "correct": "A time when you do not work and rest or travel.",
+    "explanation": "holiday = tətil, bayram",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2109,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«holiday» = \"A white or grey shape in the sky.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. holiday = tətil, bayram",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2110,
+    "type": "definition",
+    "question": "A period of sixty minutes.",
+    "options": [
+      "meet",
+      "hour",
+      "university",
+      "hear"
+    ],
+    "correct": "hour",
+    "explanation": "hour = saat (60 dəq)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2111,
+    "type": "matching",
+    "question": "«hour» — düzgün mənasını seç:",
+    "options": [
+      "A cup made of clear material for drinking.",
+      "The part of your body from shoulder to hand.",
+      "Kind and nice to others.",
+      "A period of sixty minutes."
+    ],
+    "correct": "A period of sixty minutes.",
+    "explanation": "hour = saat (60 dəq)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2112,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«hour» = \"A period of sixty minutes.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. hour = saat (60 dəq)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2113,
+    "type": "definition",
+    "question": "A period of sixty seconds.",
+    "options": [
+      "minute",
+      "clock",
+      "wind",
+      "wife"
+    ],
+    "correct": "minute",
+    "explanation": "minute = dəqiqə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2114,
+    "type": "gap-fill",
+    "question": "Wait a ——————, please.",
+    "options": [
+      "lesson",
+      "bring",
+      "ticket",
+      "minute"
+    ],
+    "correct": "minute",
+    "explanation": "minute = dəqiqə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2115,
+    "type": "matching",
+    "question": "«minute» — düzgün mənasını seç:",
+    "options": [
+      "A period of seven days.",
+      "A plant we eat, like a carrot or potato.",
+      "To get pleasure from something.",
+      "A period of sixty seconds."
+    ],
+    "correct": "A period of sixty seconds.",
+    "explanation": "minute = dəqiqə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2116,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«minute» = \"The work that someone does for money.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. minute = dəqiqə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2117,
+    "type": "definition",
+    "question": "A period of seven days.",
+    "options": [
+      "grandfather",
+      "week",
+      "restaurant",
+      "animal"
+    ],
+    "correct": "week",
+    "explanation": "week = həftə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2118,
+    "type": "gap-fill",
+    "question": "I see her every ——————.",
+    "options": [
+      "week",
+      "clothes",
+      "office",
+      "son"
+    ],
+    "correct": "week",
+    "explanation": "week = həftə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2119,
+    "type": "matching",
+    "question": "«week» — düzgün mənasını seç:",
+    "options": [
+      "Not costing a lot of money.",
+      "To shut something.",
+      "The space above you when you look up.",
+      "A period of seven days."
+    ],
+    "correct": "A period of seven days.",
+    "explanation": "week = həftə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2120,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«week» = \"A period of seven days.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. week = həftə",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2121,
+    "type": "definition",
+    "question": "One of the twelve parts of a year.",
+    "options": [
+      "university",
+      "hour",
+      "month",
+      "important"
+    ],
+    "correct": "month",
+    "explanation": "month = ay (təqvim)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2122,
+    "type": "gap-fill",
+    "question": "My birthday is next ——————.",
+    "options": [
+      "fruit",
+      "mouth",
+      "month",
+      "egg"
+    ],
+    "correct": "month",
+    "explanation": "month = ay (təqvim)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2123,
+    "type": "matching",
+    "question": "«month» — düzgün mənasını seç:",
+    "options": [
+      "Land with sand next to the sea.",
+      "One of the twelve parts of a year.",
+      "The first meal of the day.",
+      "Costing a lot of money."
+    ],
+    "correct": "One of the twelve parts of a year.",
+    "explanation": "month = ay (təqvim)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2124,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«month» = \"Land with sand next to the sea.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. month = ay (təqvim)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2125,
+    "type": "definition",
+    "question": "The early part of the day.",
+    "options": [
+      "morning",
+      "month",
+      "key",
+      "begin"
+    ],
+    "correct": "morning",
+    "explanation": "morning = səhər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2126,
+    "type": "gap-fill",
+    "question": "I run every ——————.",
+    "options": [
+      "kitchen",
+      "bedroom",
+      "morning",
+      "bathroom"
+    ],
+    "correct": "morning",
+    "explanation": "morning = səhər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2127,
+    "type": "matching",
+    "question": "«morning» — düzgün mənasını seç:",
+    "options": [
+      "The part of your body from shoulder to hand.",
+      "A small paper that lets you travel or enter.",
+      "A place where you buy and eat meals.",
+      "The early part of the day."
+    ],
+    "correct": "The early part of the day.",
+    "explanation": "morning = səhər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2128,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«morning» = \"The early part of the day.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. morning = səhər",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2129,
+    "type": "definition",
+    "question": "The time at the end of the day.",
+    "options": [
+      "evening",
+      "lunch",
+      "different",
+      "grandmother"
+    ],
+    "correct": "evening",
+    "explanation": "evening = axşam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2130,
+    "type": "gap-fill",
+    "question": "We talk in the ——————.",
+    "options": [
+      "evening",
+      "carry",
+      "morning",
+      "flower"
+    ],
+    "correct": "evening",
+    "explanation": "evening = axşam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2131,
+    "type": "matching",
+    "question": "«evening» — düzgün mənasını seç:",
+    "options": [
+      "A small paper that lets you travel or enter.",
+      "A period of sixty seconds.",
+      "The time at the end of the day.",
+      "Soft white pieces of frozen water that fall."
+    ],
+    "correct": "The time at the end of the day.",
+    "explanation": "evening = axşam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2132,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«evening» = \"What you say when someone asks you something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. evening = axşam",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2133,
+    "type": "definition",
+    "question": "On the day after today.",
+    "options": [
+      "tooth",
+      "tired",
+      "tomorrow",
+      "grandmother"
+    ],
+    "correct": "tomorrow",
+    "explanation": "tomorrow = sabah",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2134,
+    "type": "gap-fill",
+    "question": "See you ——————.",
+    "options": [
+      "egg",
+      "television",
+      "tomorrow",
+      "market"
+    ],
+    "correct": "tomorrow",
+    "explanation": "tomorrow = sabah",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2135,
+    "type": "matching",
+    "question": "«tomorrow» — düzgün mənasını seç:",
+    "options": [
+      "A period of sixty seconds.",
+      "The space above you when you look up.",
+      "On the day after today.",
+      "A sweet white food we add to drinks."
+    ],
+    "correct": "On the day after today.",
+    "explanation": "tomorrow = sabah",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2136,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«tomorrow» = \"On the day after today.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. tomorrow = sabah",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2137,
+    "type": "definition",
+    "question": "Saturday and Sunday.",
+    "options": [
+      "letter",
+      "window",
+      "weekend",
+      "answer"
+    ],
+    "correct": "weekend",
+    "explanation": "weekend = həftəsonu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2138,
+    "type": "gap-fill",
+    "question": "I rest at the ——————.",
+    "options": [
+      "train",
+      "decide",
+      "weekend",
+      "holiday"
+    ],
+    "correct": "weekend",
+    "explanation": "weekend = həftəsonu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2139,
+    "type": "matching",
+    "question": "«weekend» — düzgün mənasını seç:",
+    "options": [
+      "Saturday and Sunday.",
+      "The room where you sleep.",
+      "To start.",
+      "A small metal thing that opens a lock."
+    ],
+    "correct": "Saturday and Sunday.",
+    "explanation": "weekend = həftəsonu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2140,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«weekend» = \"A place with many books to read or borrow.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. weekend = həftəsonu",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 2141,
+    "type": "definition",
+    "question": "To start to be something.",
+    "options": [
+      "different",
+      "become",
+      "lesson",
+      "television"
+    ],
+    "correct": "become",
+    "explanation": "become = olmaq, çevrilmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2142,
+    "type": "gap-fill",
+    "question": "She wants to —————— a doctor.",
+    "options": [
+      "market",
+      "rice",
+      "find",
+      "become"
+    ],
+    "correct": "become",
+    "explanation": "become = olmaq, çevrilmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2143,
+    "type": "matching",
+    "question": "«become» — düzgün mənasını seç:",
+    "options": [
+      "Sweet food that grows on plants, like apples.",
+      "A time when you learn something.",
+      "To start to be something.",
+      "Making you want to know more."
+    ],
+    "correct": "To start to be something.",
+    "explanation": "become = olmaq, çevrilmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2144,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«become» = \"To start to be something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. become = olmaq, çevrilmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2145,
+    "type": "definition",
+    "question": "To start.",
+    "options": [
+      "son",
+      "begin",
+      "map",
+      "flower"
+    ],
+    "correct": "begin",
+    "explanation": "begin = başlamaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2146,
+    "type": "matching",
+    "question": "«begin» — düzgün mənasını seç:",
+    "options": [
+      "A place where trains or buses stop.",
+      "Having a lot to do.",
+      "To start.",
+      "A period of sixty minutes."
+    ],
+    "correct": "To start.",
+    "explanation": "begin = başlamaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2147,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«begin» = \"Sweet food that grows on plants, like apples.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. begin = başlamaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2148,
+    "type": "definition",
+    "question": "To take something to a place or person.",
+    "options": [
+      "dinner",
+      "fruit",
+      "hour",
+      "bring"
+    ],
+    "correct": "bring",
+    "explanation": "bring = gətirmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2149,
+    "type": "gap-fill",
+    "question": "—————— your book, please.",
+    "options": [
+      "drive",
+      "bring",
+      "university",
+      "clothes"
+    ],
+    "correct": "bring",
+    "explanation": "bring = gətirmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2150,
+    "type": "matching",
+    "question": "«bring» — düzgün mənasını seç:",
+    "options": [
+      "To come together with someone.",
+      "A plant we eat, like a carrot or potato.",
+      "To take something to a place or person.",
+      "Needing rest or sleep."
+    ],
+    "correct": "To take something to a place or person.",
+    "explanation": "bring = gətirmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2151,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«bring» = \"To take something to a place or person.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. bring = gətirmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2152,
+    "type": "definition",
+    "question": "To telephone someone.",
+    "options": [
+      "kitchen",
+      "call",
+      "letter",
+      "minute"
+    ],
+    "correct": "call",
+    "explanation": "call = zəng etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2153,
+    "type": "gap-fill",
+    "question": "I will —————— you later.",
+    "options": [
+      "teach",
+      "clock",
+      "dangerous",
+      "call"
+    ],
+    "correct": "call",
+    "explanation": "call = zəng etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2154,
+    "type": "matching",
+    "question": "«call» — düzgün mənasını seç:",
+    "options": [
+      "A place where planes take off and land.",
+      "To shut something.",
+      "Kind and nice to others.",
+      "To telephone someone."
+    ],
+    "correct": "To telephone someone.",
+    "explanation": "call = zəng etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2155,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«call» = \"To help someone learn something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. call = zəng etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2156,
+    "type": "definition",
+    "question": "To hold and move something.",
+    "options": [
+      "carry",
+      "decide",
+      "university",
+      "tired"
+    ],
+    "correct": "carry",
+    "explanation": "carry = daşımaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2157,
+    "type": "gap-fill",
+    "question": "Can you —————— this bag?",
+    "options": [
+      "bring",
+      "train",
+      "carry",
+      "station"
+    ],
+    "correct": "carry",
+    "explanation": "carry = daşımaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2158,
+    "type": "matching",
+    "question": "«carry» — düzgün mənasını seç:",
+    "options": [
+      "To hold and move something.",
+      "A cup made of clear material for drinking.",
+      "To discover where something is.",
+      "One of the hard white things in your mouth."
+    ],
+    "correct": "To hold and move something.",
+    "explanation": "carry = daşımaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2159,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«carry» = \"To hold and move something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. carry = daşımaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2160,
+    "type": "definition",
+    "question": "To make something different.",
+    "options": [
+      "teach",
+      "letter",
+      "change",
+      "neighbour"
+    ],
+    "correct": "change",
+    "explanation": "change = dəyişmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2161,
+    "type": "gap-fill",
+    "question": "I want to —————— my plan.",
+    "options": [
+      "clock",
+      "change",
+      "carry",
+      "parents"
+    ],
+    "correct": "change",
+    "explanation": "change = dəyişmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2162,
+    "type": "matching",
+    "question": "«change» — düzgün mənasını seç:",
+    "options": [
+      "The front part of your head.",
+      "A place to study after school.",
+      "To make something different.",
+      "The first meal of the day."
+    ],
+    "correct": "To make something different.",
+    "explanation": "change = dəyişmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2163,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«change» = \"To learn about something, often by reading.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. change = dəyişmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2164,
+    "type": "definition",
+    "question": "To shut something.",
+    "options": [
+      "grandmother",
+      "village",
+      "close",
+      "important"
+    ],
+    "correct": "close",
+    "explanation": "close = bağlamaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2165,
+    "type": "gap-fill",
+    "question": "Please —————— the door.",
+    "options": [
+      "vegetable",
+      "evening",
+      "close",
+      "juice"
+    ],
+    "correct": "close",
+    "explanation": "close = bağlamaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2166,
+    "type": "matching",
+    "question": "«close» — düzgün mənasını seç:",
+    "options": [
+      "The room with a bath or shower.",
+      "A vehicle that flies in the sky.",
+      "To shut something.",
+      "Kind and nice to others."
+    ],
+    "correct": "To shut something.",
+    "explanation": "close = bağlamaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2167,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«close» = \"To shut something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. close = bağlamaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2168,
+    "type": "definition",
+    "question": "To choose what to do.",
+    "options": [
+      "face",
+      "morning",
+      "decide",
+      "kitchen"
+    ],
+    "correct": "decide",
+    "explanation": "decide = qərar vermək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2169,
+    "type": "matching",
+    "question": "«decide» — düzgün mənasını seç:",
+    "options": [
+      "To choose what to do.",
+      "The main meal, usually in the evening.",
+      "The man a woman is married to.",
+      "A person who lives near you."
+    ],
+    "correct": "To choose what to do.",
+    "explanation": "decide = qərar vermək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2170,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«decide» = \"A place with many books to read or borrow.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. decide = qərar vermək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2171,
+    "type": "definition",
+    "question": "To control a car.",
+    "options": [
+      "son",
+      "drive",
+      "clock",
+      "office"
+    ],
+    "correct": "drive",
+    "explanation": "drive = sürmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2172,
+    "type": "matching",
+    "question": "«drive» — düzgün mənasını seç:",
+    "options": [
+      "Not the same.",
+      "To notice a sound with your ears.",
+      "The room with a bath or shower.",
+      "To control a car."
+    ],
+    "correct": "To control a car.",
+    "explanation": "drive = sürmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2173,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«drive» = \"To control a car.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. drive = sürmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2174,
+    "type": "definition",
+    "question": "To get pleasure from something.",
+    "options": [
+      "enjoy",
+      "different",
+      "snow",
+      "cloud"
+    ],
+    "correct": "enjoy",
+    "explanation": "enjoy = həzz almaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2175,
+    "type": "gap-fill",
+    "question": "I —————— music.",
+    "options": [
+      "enjoy",
+      "medicine",
+      "clean",
+      "computer"
+    ],
+    "correct": "enjoy",
+    "explanation": "enjoy = həzz almaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2176,
+    "type": "matching",
+    "question": "«enjoy» — düzgün mənasını seç:",
+    "options": [
+      "A drawing that shows where places are.",
+      "To start to be something.",
+      "To help someone learn something.",
+      "To get pleasure from something."
+    ],
+    "correct": "To get pleasure from something.",
+    "explanation": "enjoy = həzz almaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2177,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«enjoy» = \"How hot, cold, wet, or dry it is outside.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. enjoy = həzz almaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2178,
+    "type": "definition",
+    "question": "To discover where something is.",
+    "options": [
+      "morning",
+      "weekend",
+      "dinner",
+      "find"
+    ],
+    "correct": "find",
+    "explanation": "find = tapmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2179,
+    "type": "gap-fill",
+    "question": "I cannot —————— my keys.",
+    "options": [
+      "animal",
+      "close",
+      "find",
+      "different"
+    ],
+    "correct": "find",
+    "explanation": "find = tapmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2180,
+    "type": "matching",
+    "question": "«find» — düzgün mənasını seç:",
+    "options": [
+      "Someone’s male child.",
+      "Known by many people.",
+      "To discover where something is.",
+      "A place where planes take off and land."
+    ],
+    "correct": "To discover where something is.",
+    "explanation": "find = tapmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2181,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«find» = \"To discover where something is.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. find = tapmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2182,
+    "type": "definition",
+    "question": "To complete something; to end.",
+    "options": [
+      "wife",
+      "find",
+      "letter",
+      "finish"
+    ],
+    "correct": "finish",
+    "explanation": "finish = bitirmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2183,
+    "type": "matching",
+    "question": "«finish» — düzgün mənasını seç:",
+    "options": [
+      "To choose what to do.",
+      "To complete something; to end.",
+      "The woman a man is married to.",
+      "Very nice to look at."
+    ],
+    "correct": "To complete something; to end.",
+    "explanation": "finish = bitirmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2184,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«finish» = \"Free from dirt.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. finish = bitirmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2185,
+    "type": "definition",
+    "question": "To notice a sound with your ears.",
+    "options": [
+      "study",
+      "hear",
+      "answer",
+      "different"
+    ],
+    "correct": "hear",
+    "explanation": "hear = eşitmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2186,
+    "type": "gap-fill",
+    "question": "I can —————— music.",
+    "options": [
+      "window",
+      "market",
+      "hear",
+      "interesting"
+    ],
+    "correct": "hear",
+    "explanation": "hear = eşitmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2187,
+    "type": "matching",
+    "question": "«hear» — düzgün mənasını seç:",
+    "options": [
+      "The early part of the day.",
+      "Someone’s male child.",
+      "What you say when someone asks you something.",
+      "To notice a sound with your ears."
+    ],
+    "correct": "To notice a sound with your ears.",
+    "explanation": "hear = eşitmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2188,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«hear» = \"To notice a sound with your ears.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. hear = eşitmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2189,
+    "type": "definition",
+    "question": "To go away from a place.",
+    "options": [
+      "leave",
+      "tooth",
+      "beautiful",
+      "enjoy"
+    ],
+    "correct": "leave",
+    "explanation": "leave = tərk etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2190,
+    "type": "gap-fill",
+    "question": "I —————— home at seven.",
+    "options": [
+      "leave",
+      "arm",
+      "mouth",
+      "university"
+    ],
+    "correct": "leave",
+    "explanation": "leave = tərk etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2191,
+    "type": "matching",
+    "question": "«leave» — düzgün mənasını seç:",
+    "options": [
+      "Costing a lot of money.",
+      "Soft white pieces of frozen water that fall.",
+      "To go away from a place.",
+      "A period of sixty minutes."
+    ],
+    "correct": "To go away from a place.",
+    "explanation": "leave = tərk etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2192,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«leave» = \"Mattering a lot.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. leave = tərk etmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2193,
+    "type": "definition",
+    "question": "To pay attention to a sound.",
+    "options": [
+      "computer",
+      "clock",
+      "beautiful",
+      "listen"
+    ],
+    "correct": "listen",
+    "explanation": "listen = qulaq asmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2194,
+    "type": "gap-fill",
+    "question": "—————— to me, please.",
+    "options": [
+      "eye",
+      "listen",
+      "daughter",
+      "clock"
+    ],
+    "correct": "listen",
+    "explanation": "listen = qulaq asmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2195,
+    "type": "matching",
+    "question": "«listen» — düzgün mənasını seç:",
+    "options": [
+      "To go away from a place.",
+      "To pay attention to a sound.",
+      "A device for watching programmes.",
+      "A period of seven days."
+    ],
+    "correct": "To pay attention to a sound.",
+    "explanation": "listen = qulaq asmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2196,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«listen» = \"To pay attention to a sound.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. listen = qulaq asmaq",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2197,
+    "type": "definition",
+    "question": "To come together with someone.",
+    "options": [
+      "famous",
+      "clothes",
+      "meet",
+      "job"
+    ],
+    "correct": "meet",
+    "explanation": "meet = görüşmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2198,
+    "type": "gap-fill",
+    "question": "Let’s —————— tomorrow.",
+    "options": [
+      "enjoy",
+      "ticket",
+      "decide",
+      "meet"
+    ],
+    "correct": "meet",
+    "explanation": "meet = görüşmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2199,
+    "type": "matching",
+    "question": "«meet» — düzgün mənasını seç:",
+    "options": [
+      "Making you want to know more.",
+      "A drawing that shows where places are.",
+      "Something you take to feel better when ill.",
+      "To come together with someone."
+    ],
+    "correct": "To come together with someone.",
+    "explanation": "meet = görüşmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2200,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«meet» = \"A place where people buy and sell things.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. meet = görüşmək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2201,
+    "type": "definition",
+    "question": "Very nice to look at.",
+    "options": [
+      "arm",
+      "weekend",
+      "country",
+      "beautiful"
+    ],
+    "correct": "beautiful",
+    "explanation": "beautiful = gözəl",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2202,
+    "type": "gap-fill",
+    "question": "What a —————— garden!",
+    "options": [
+      "become",
+      "beautiful",
+      "egg",
+      "medicine"
+    ],
+    "correct": "beautiful",
+    "explanation": "beautiful = gözəl",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2203,
+    "type": "matching",
+    "question": "«beautiful» — düzgün mənasını seç:",
+    "options": [
+      "A sweet white food we add to drinks.",
+      "Very nice to look at.",
+      "A device for watching programmes.",
+      "A place where trains or buses stop."
+    ],
+    "correct": "Very nice to look at.",
+    "explanation": "beautiful = gözəl",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2204,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«beautiful» = \"Very nice to look at.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. beautiful = gözəl",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2205,
+    "type": "definition",
+    "question": "Having a lot to do.",
+    "options": [
+      "class",
+      "wind",
+      "busy",
+      "clock"
+    ],
+    "correct": "busy",
+    "explanation": "busy = məşğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2206,
+    "type": "gap-fill",
+    "question": "I am —————— today.",
+    "options": [
+      "restaurant",
+      "busy",
+      "wind",
+      "drive"
+    ],
+    "correct": "busy",
+    "explanation": "busy = məşğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2207,
+    "type": "matching",
+    "question": "«busy» — düzgün mənasını seç:",
+    "options": [
+      "The part of your face you eat and speak with.",
+      "A thing that shows the time.",
+      "Having a lot to do.",
+      "Free from dirt."
+    ],
+    "correct": "Having a lot to do.",
+    "explanation": "busy = məşğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2208,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«busy» = \"A person who lives near you.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. busy = məşğul",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2209,
+    "type": "definition",
+    "question": "Not costing a lot of money.",
+    "options": [
+      "study",
+      "grandmother",
+      "clock",
+      "cheap"
+    ],
+    "correct": "cheap",
+    "explanation": "cheap = ucuz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2210,
+    "type": "gap-fill",
+    "question": "This shirt is ——————.",
+    "options": [
+      "station",
+      "study",
+      "office",
+      "cheap"
+    ],
+    "correct": "cheap",
+    "explanation": "cheap = ucuz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2211,
+    "type": "matching",
+    "question": "«cheap» — düzgün mənasını seç:",
+    "options": [
+      "To complete something; to end.",
+      "Not costing a lot of money.",
+      "To choose what to do.",
+      "The first meal of the day."
+    ],
+    "correct": "Not costing a lot of money.",
+    "explanation": "cheap = ucuz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2212,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«cheap» = \"Not costing a lot of money.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. cheap = ucuz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2213,
+    "type": "definition",
+    "question": "Free from dirt.",
+    "options": [
+      "egg",
+      "ticket",
+      "clean",
+      "picture"
+    ],
+    "correct": "clean",
+    "explanation": "clean = təmiz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2214,
+    "type": "gap-fill",
+    "question": "My room is ——————.",
+    "options": [
+      "glass",
+      "drive",
+      "clean",
+      "study"
+    ],
+    "correct": "clean",
+    "explanation": "clean = təmiz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2215,
+    "type": "matching",
+    "question": "«clean» — düzgün mənasını seç:",
+    "options": [
+      "The part of your body you walk on.",
+      "A machine that stores and uses data.",
+      "To help someone learn something.",
+      "Free from dirt."
+    ],
+    "correct": "Free from dirt.",
+    "explanation": "clean = təmiz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2216,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«clean» = \"A place where people buy and sell things.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. clean = təmiz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2217,
+    "type": "definition",
+    "question": "Able to hurt or harm you.",
+    "options": [
+      "hour",
+      "bring",
+      "answer",
+      "dangerous"
+    ],
+    "correct": "dangerous",
+    "explanation": "dangerous = təhlükəli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2218,
+    "type": "gap-fill",
+    "question": "That road is ——————.",
+    "options": [
+      "son",
+      "dangerous",
+      "minute",
+      "famous"
+    ],
+    "correct": "dangerous",
+    "explanation": "dangerous = təhlükəli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2219,
+    "type": "matching",
+    "question": "«dangerous» — düzgün mənasını seç:",
+    "options": [
+      "The man a woman is married to.",
+      "Not costing a lot of money.",
+      "Able to hurt or harm you.",
+      "The early part of the day."
+    ],
+    "correct": "Able to hurt or harm you.",
+    "explanation": "dangerous = təhlükəli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2220,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«dangerous» = \"Able to hurt or harm you.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. dangerous = təhlükəli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2221,
+    "type": "definition",
+    "question": "Not the same.",
+    "options": [
+      "neighbour",
+      "different",
+      "dinner",
+      "kitchen"
+    ],
+    "correct": "different",
+    "explanation": "different = fərqli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2222,
+    "type": "gap-fill",
+    "question": "These two bags are ——————.",
+    "options": [
+      "different",
+      "weekend",
+      "television",
+      "son"
+    ],
+    "correct": "different",
+    "explanation": "different = fərqli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2223,
+    "type": "matching",
+    "question": "«different» — düzgün mənasını seç:",
+    "options": [
+      "Not the same.",
+      "Kind and nice to others.",
+      "A period of sixty minutes.",
+      "A thing that shows the time."
+    ],
+    "correct": "Not the same.",
+    "explanation": "different = fərqli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2224,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«different» = \"One of the hard white things in your mouth.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. different = fərqli",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2225,
+    "type": "definition",
+    "question": "Costing a lot of money.",
+    "options": [
+      "expensive",
+      "country",
+      "husband",
+      "university"
+    ],
+    "correct": "expensive",
+    "explanation": "expensive = baha",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2226,
+    "type": "gap-fill",
+    "question": "This car is ——————.",
+    "options": [
+      "expensive",
+      "parents",
+      "finish",
+      "office"
+    ],
+    "correct": "expensive",
+    "explanation": "expensive = baha",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2227,
+    "type": "matching",
+    "question": "«expensive» — düzgün mənasını seç:",
+    "options": [
+      "The coloured part of a plant.",
+      "To go away from a place.",
+      "A place where sick people are treated.",
+      "Costing a lot of money."
+    ],
+    "correct": "Costing a lot of money.",
+    "explanation": "expensive = baha",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2228,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«expensive» = \"Costing a lot of money.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. expensive = baha",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2229,
+    "type": "definition",
+    "question": "Known by many people.",
+    "options": [
+      "hour",
+      "famous",
+      "hear",
+      "library"
+    ],
+    "correct": "famous",
+    "explanation": "famous = məşhur",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2230,
+    "type": "gap-fill",
+    "question": "He is a —————— singer.",
+    "options": [
+      "sea",
+      "famous",
+      "library",
+      "bring"
+    ],
+    "correct": "famous",
+    "explanation": "famous = məşhur",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2231,
+    "type": "matching",
+    "question": "«famous» — düzgün mənasını seç:",
+    "options": [
+      "The early part of the day.",
+      "To come together with someone.",
+      "Known by many people.",
+      "Free from dirt."
+    ],
+    "correct": "Known by many people.",
+    "explanation": "famous = məşhur",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2232,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«famous» = \"A vehicle that flies in the sky.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. famous = məşhur",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2233,
+    "type": "definition",
+    "question": "Kind and nice to others.",
+    "options": [
+      "friendly",
+      "minute",
+      "window",
+      "sky"
+    ],
+    "correct": "friendly",
+    "explanation": "friendly = mehriban, dost canlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2234,
+    "type": "gap-fill",
+    "question": "The people here are ——————.",
+    "options": [
+      "friendly",
+      "cloud",
+      "airport",
+      "face"
+    ],
+    "correct": "friendly",
+    "explanation": "friendly = mehriban, dost canlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2235,
+    "type": "matching",
+    "question": "«friendly» — düzgün mənasını seç:",
+    "options": [
+      "A mother and a father.",
+      "A cup made of clear material for drinking.",
+      "Saturday and Sunday.",
+      "Kind and nice to others."
+    ],
+    "correct": "Kind and nice to others.",
+    "explanation": "friendly = mehriban, dost canlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2236,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«friendly» = \"Kind and nice to others.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. friendly = mehriban, dost canlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2237,
+    "type": "definition",
+    "question": "Mattering a lot.",
+    "options": [
+      "enjoy",
+      "holiday",
+      "office",
+      "important"
+    ],
+    "correct": "important",
+    "explanation": "important = vacib",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2238,
+    "type": "gap-fill",
+    "question": "This is an —————— question.",
+    "options": [
+      "leg",
+      "important",
+      "study",
+      "busy"
+    ],
+    "correct": "important",
+    "explanation": "important = vacib",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2239,
+    "type": "matching",
+    "question": "«important» — düzgün mənasını seç:",
+    "options": [
+      "Something you take to feel better when ill.",
+      "To help someone learn something.",
+      "Mattering a lot.",
+      "A cup made of clear material for drinking."
+    ],
+    "correct": "Mattering a lot.",
+    "explanation": "important = vacib",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2240,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«important» = \"Costing a lot of money.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. important = vacib",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2241,
+    "type": "definition",
+    "question": "Making you want to know more.",
+    "options": [
+      "interesting",
+      "juice",
+      "weather",
+      "library"
+    ],
+    "correct": "interesting",
+    "explanation": "interesting = maraqlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2242,
+    "type": "gap-fill",
+    "question": "The book is ——————.",
+    "options": [
+      "interesting",
+      "picture",
+      "question",
+      "important"
+    ],
+    "correct": "interesting",
+    "explanation": "interesting = maraqlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2243,
+    "type": "matching",
+    "question": "«interesting» — düzgün mənasını seç:",
+    "options": [
+      "Making you want to know more.",
+      "A small paper that lets you travel or enter.",
+      "Kind and nice to others.",
+      "A period of seven days."
+    ],
+    "correct": "Making you want to know more.",
+    "explanation": "interesting = maraqlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2244,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«interesting» = \"Making you want to know more.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. interesting = maraqlı",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2245,
+    "type": "definition",
+    "question": "Needing rest or sleep.",
+    "options": [
+      "clean",
+      "arm",
+      "tired",
+      "tomorrow"
+    ],
+    "correct": "tired",
+    "explanation": "tired = yorğun",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2246,
+    "type": "gap-fill",
+    "question": "I am —————— tonight.",
+    "options": [
+      "juice",
+      "lesson",
+      "tired",
+      "become"
+    ],
+    "correct": "tired",
+    "explanation": "tired = yorğun",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2247,
+    "type": "matching",
+    "question": "«tired» — düzgün mənasını seç:",
+    "options": [
+      "Needing rest or sleep.",
+      "To notice a sound with your ears.",
+      "The man a woman is married to.",
+      "To get pleasure from something."
+    ],
+    "correct": "Needing rest or sleep.",
+    "explanation": "tired = yorğun",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2248,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«tired» = \"A written message you send by post.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. tired = yorğun",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2249,
+    "type": "definition",
+    "question": "The part of your body from shoulder to hand.",
+    "options": [
+      "egg",
+      "office",
+      "arm",
+      "television"
+    ],
+    "correct": "arm",
+    "explanation": "arm = qol",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2250,
+    "type": "gap-fill",
+    "question": "My —————— hurts.",
+    "options": [
+      "different",
+      "bathroom",
+      "medicine",
+      "arm"
+    ],
+    "correct": "arm",
+    "explanation": "arm = qol",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2251,
+    "type": "matching",
+    "question": "«arm» — düzgün mənasını seç:",
+    "options": [
+      "The part of your body from shoulder to hand.",
+      "A group of students who learn together.",
+      "Sweet food that grows on plants, like apples.",
+      "A small place in the countryside."
+    ],
+    "correct": "The part of your body from shoulder to hand.",
+    "explanation": "arm = qol",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2252,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«arm» = \"The part of your body from shoulder to hand.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. arm = qol",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2253,
+    "type": "definition",
+    "question": "The part of your body you walk on.",
+    "options": [
+      "clock",
+      "medicine",
+      "country",
+      "leg"
+    ],
+    "correct": "leg",
+    "explanation": "leg = ayaq (bud)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2254,
+    "type": "gap-fill",
+    "question": "He broke his ——————.",
+    "options": [
+      "beach",
+      "hour",
+      "leg",
+      "eye"
+    ],
+    "correct": "leg",
+    "explanation": "leg = ayaq (bud)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2255,
+    "type": "matching",
+    "question": "«leg» — düzgün mənasını seç:",
+    "options": [
+      "A place with many books to read or borrow.",
+      "A white or grey shape in the sky.",
+      "To start.",
+      "The part of your body you walk on."
+    ],
+    "correct": "The part of your body you walk on.",
+    "explanation": "leg = ayaq (bud)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2256,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«leg» = \"A group of students who learn together.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. leg = ayaq (bud)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2257,
+    "type": "definition",
+    "question": "The part of your body you see with.",
+    "options": [
+      "eye",
+      "village",
+      "key",
+      "bedroom"
+    ],
+    "correct": "eye",
+    "explanation": "eye = göz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2258,
+    "type": "matching",
+    "question": "«eye» — düzgün mənasını seç:",
+    "options": [
+      "A land with its own government, like France.",
+      "Small white grains that we cook and eat.",
+      "Air that moves outside.",
+      "The part of your body you see with."
+    ],
+    "correct": "The part of your body you see with.",
+    "explanation": "eye = göz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2259,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«eye» = \"The part of your body you see with.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. eye = göz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2260,
+    "type": "definition",
+    "question": "The front part of your head.",
+    "options": [
+      "interesting",
+      "face",
+      "station",
+      "become"
+    ],
+    "correct": "face",
+    "explanation": "face = üz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2261,
+    "type": "gap-fill",
+    "question": "Wash your ——————.",
+    "options": [
+      "medicine",
+      "sea",
+      "rice",
+      "face"
+    ],
+    "correct": "face",
+    "explanation": "face = üz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2262,
+    "type": "matching",
+    "question": "«face» — düzgün mənasını seç:",
+    "options": [
+      "A place where people buy and sell things.",
+      "Small white grains that we cook and eat.",
+      "The front part of your head.",
+      "Needing rest or sleep."
+    ],
+    "correct": "The front part of your head.",
+    "explanation": "face = üz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2263,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«face» = \"The part of your body you see with.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. face = üz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2264,
+    "type": "definition",
+    "question": "The part of your face you eat and speak with.",
+    "options": [
+      "bedroom",
+      "picture",
+      "job",
+      "mouth"
+    ],
+    "correct": "mouth",
+    "explanation": "mouth = ağız",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2265,
+    "type": "gap-fill",
+    "question": "Open your ——————.",
+    "options": [
+      "answer",
+      "medicine",
+      "change",
+      "mouth"
+    ],
+    "correct": "mouth",
+    "explanation": "mouth = ağız",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2266,
+    "type": "matching",
+    "question": "«mouth» — düzgün mənasını seç:",
+    "options": [
+      "Not costing a lot of money.",
+      "The part of your face you eat and speak with.",
+      "The main meal, usually in the evening.",
+      "Able to hurt or harm you."
+    ],
+    "correct": "The part of your face you eat and speak with.",
+    "explanation": "mouth = ağız",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2267,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«mouth» = \"The part of your face you eat and speak with.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. mouth = ağız",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2268,
+    "type": "definition",
+    "question": "One of the hard white things in your mouth.",
+    "options": [
+      "cheap",
+      "tooth",
+      "leg",
+      "beach"
+    ],
+    "correct": "tooth",
+    "explanation": "tooth = diş",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2269,
+    "type": "gap-fill",
+    "question": "My —————— hurts.",
+    "options": [
+      "tooth",
+      "egg",
+      "animal",
+      "lesson"
+    ],
+    "correct": "tooth",
+    "explanation": "tooth = diş",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2270,
+    "type": "matching",
+    "question": "«tooth» — düzgün mənasını seç:",
+    "options": [
+      "To start.",
+      "A drawing that shows where places are.",
+      "One of the hard white things in your mouth.",
+      "To complete something; to end."
+    ],
+    "correct": "One of the hard white things in your mouth.",
+    "explanation": "tooth = diş",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2271,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«tooth» = \"A long vehicle on rails that carries people.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. tooth = diş",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2272,
+    "type": "definition",
+    "question": "A place where sick people are treated.",
+    "options": [
+      "hospital",
+      "library",
+      "station",
+      "bring"
+    ],
+    "correct": "hospital",
+    "explanation": "hospital = xəstəxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2273,
+    "type": "gap-fill",
+    "question": "He is in ——————.",
+    "options": [
+      "busy",
+      "flower",
+      "hospital",
+      "letter"
+    ],
+    "correct": "hospital",
+    "explanation": "hospital = xəstəxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2274,
+    "type": "matching",
+    "question": "«hospital» — düzgün mənasını seç:",
+    "options": [
+      "A place where sick people are treated.",
+      "The first meal of the day.",
+      "A written message you send by post.",
+      "A drawing or photo of something."
+    ],
+    "correct": "A place where sick people are treated.",
+    "explanation": "hospital = xəstəxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2275,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«hospital» = \"A place where sick people are treated.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. hospital = xəstəxana",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2276,
+    "type": "definition",
+    "question": "Something you take to feel better when ill.",
+    "options": [
+      "plane",
+      "medicine",
+      "job",
+      "study"
+    ],
+    "correct": "medicine",
+    "explanation": "medicine = dərman",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2277,
+    "type": "gap-fill",
+    "question": "Take this ——————.",
+    "options": [
+      "medicine",
+      "picture",
+      "different",
+      "kitchen"
+    ],
+    "correct": "medicine",
+    "explanation": "medicine = dərman",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2278,
+    "type": "matching",
+    "question": "«medicine» — düzgün mənasını seç:",
+    "options": [
+      "Something you take to feel better when ill.",
+      "A vehicle that flies in the sky.",
+      "Able to hurt or harm you.",
+      "To start."
+    ],
+    "correct": "Something you take to feel better when ill.",
+    "explanation": "medicine = dərman",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2279,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«medicine» = \"The mother of your mother or father.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. medicine = dərman",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2280,
+    "type": "definition",
+    "question": "The space above you when you look up.",
+    "options": [
+      "decide",
+      "sky",
+      "cloud",
+      "sea"
+    ],
+    "correct": "sky",
+    "explanation": "sky = göy, səma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2281,
+    "type": "gap-fill",
+    "question": "The —————— is blue today.",
+    "options": [
+      "lesson",
+      "meet",
+      "juice",
+      "sky"
+    ],
+    "correct": "sky",
+    "explanation": "sky = göy, səma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2282,
+    "type": "matching",
+    "question": "«sky» — düzgün mənasını seç:",
+    "options": [
+      "Someone’s female child.",
+      "The space above you when you look up.",
+      "To come together with someone.",
+      "The early part of the day."
+    ],
+    "correct": "The space above you when you look up.",
+    "explanation": "sky = göy, səma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2283,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«sky» = \"The space above you when you look up.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. sky = göy, səma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2284,
+    "type": "definition",
+    "question": "A large area of salt water.",
+    "options": [
+      "medicine",
+      "dangerous",
+      "letter",
+      "sea"
+    ],
+    "correct": "sea",
+    "explanation": "sea = dəniz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2285,
+    "type": "gap-fill",
+    "question": "We swam in the ——————.",
+    "options": [
+      "husband",
+      "beautiful",
+      "sea",
+      "sky"
+    ],
+    "correct": "sea",
+    "explanation": "sea = dəniz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2286,
+    "type": "matching",
+    "question": "«sea» — düzgün mənasını seç:",
+    "options": [
+      "A room or building where people work.",
+      "A place where sick people are treated.",
+      "A large area of salt water.",
+      "The main meal, usually in the evening."
+    ],
+    "correct": "A large area of salt water.",
+    "explanation": "sea = dəniz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2287,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«sea» = \"Kind and nice to others.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. sea = dəniz",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2288,
+    "type": "definition",
+    "question": "Soft white pieces of frozen water that fall.",
+    "options": [
+      "bring",
+      "mouth",
+      "snow",
+      "lesson"
+    ],
+    "correct": "snow",
+    "explanation": "snow = qar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2289,
+    "type": "gap-fill",
+    "question": "I like the ——————.",
+    "options": [
+      "parents",
+      "famous",
+      "week",
+      "snow"
+    ],
+    "correct": "snow",
+    "explanation": "snow = qar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2290,
+    "type": "matching",
+    "question": "«snow» — düzgün mənasını seç:",
+    "options": [
+      "Saturday and Sunday.",
+      "The time at the end of the day.",
+      "The main meal, usually in the evening.",
+      "Soft white pieces of frozen water that fall."
+    ],
+    "correct": "Soft white pieces of frozen water that fall.",
+    "explanation": "snow = qar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2291,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«snow» = \"Soft white pieces of frozen water that fall.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. snow = qar",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2292,
+    "type": "definition",
+    "question": "Air that moves outside.",
+    "options": [
+      "plane",
+      "study",
+      "important",
+      "wind"
+    ],
+    "correct": "wind",
+    "explanation": "wind = külək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2293,
+    "type": "gap-fill",
+    "question": "The —————— is strong today.",
+    "options": [
+      "important",
+      "grandfather",
+      "answer",
+      "wind"
+    ],
+    "correct": "wind",
+    "explanation": "wind = külək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2294,
+    "type": "matching",
+    "question": "«wind» — düzgün mənasını seç:",
+    "options": [
+      "Air that moves outside.",
+      "Not costing a lot of money.",
+      "The space above you when you look up.",
+      "To pay attention to a sound."
+    ],
+    "correct": "Air that moves outside.",
+    "explanation": "wind = külək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2295,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«wind» = \"To learn about something, often by reading.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. wind = külək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2296,
+    "type": "definition",
+    "question": "How hot, cold, wet, or dry it is outside.",
+    "options": [
+      "clean",
+      "arm",
+      "weather",
+      "become"
+    ],
+    "correct": "weather",
+    "explanation": "weather = hava (təbiət)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2297,
+    "type": "gap-fill",
+    "question": "The —————— is nice today.",
+    "options": [
+      "weather",
+      "expensive",
+      "university",
+      "parents"
+    ],
+    "correct": "weather",
+    "explanation": "weather = hava (təbiət)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2298,
+    "type": "matching",
+    "question": "«weather» — düzgün mənasını seç:",
+    "options": [
+      "To control a car.",
+      "How hot, cold, wet, or dry it is outside.",
+      "A period of sixty minutes.",
+      "A place where sick people are treated."
+    ],
+    "correct": "How hot, cold, wet, or dry it is outside.",
+    "explanation": "weather = hava (təbiət)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2299,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«weather» = \"How hot, cold, wet, or dry it is outside.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. weather = hava (təbiət)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2300,
+    "type": "definition",
+    "question": "A white or grey shape in the sky.",
+    "options": [
+      "airport",
+      "call",
+      "cloud",
+      "beautiful"
+    ],
+    "correct": "cloud",
+    "explanation": "cloud = bulud",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2301,
+    "type": "matching",
+    "question": "«cloud» — düzgün mənasını seç:",
+    "options": [
+      "A drawing or photo of something.",
+      "Not the same.",
+      "A white or grey shape in the sky.",
+      "Costing a lot of money."
+    ],
+    "correct": "A white or grey shape in the sky.",
+    "explanation": "cloud = bulud",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2302,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«cloud» = \"To shut something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. cloud = bulud",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2303,
+    "type": "definition",
+    "question": "The coloured part of a plant.",
+    "options": [
+      "rice",
+      "holiday",
+      "flower",
+      "hour"
+    ],
+    "correct": "flower",
+    "explanation": "flower = gül, çiçək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2304,
+    "type": "gap-fill",
+    "question": "She gave me a ——————.",
+    "options": [
+      "flower",
+      "cheap",
+      "dinner",
+      "begin"
+    ],
+    "correct": "flower",
+    "explanation": "flower = gül, çiçək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2305,
+    "type": "matching",
+    "question": "«flower» — düzgün mənasını seç:",
+    "options": [
+      "The coloured part of a plant.",
+      "The room where you cook food.",
+      "A drink made from fruit.",
+      "To get pleasure from something."
+    ],
+    "correct": "The coloured part of a plant.",
+    "explanation": "flower = gül, çiçək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2306,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«flower» = \"The coloured part of a plant.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. flower = gül, çiçək",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2307,
+    "type": "definition",
+    "question": "A living thing that can move, like a dog.",
+    "options": [
+      "call",
+      "dinner",
+      "animal",
+      "begin"
+    ],
+    "correct": "animal",
+    "explanation": "animal = heyvan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2308,
+    "type": "gap-fill",
+    "question": "A dog is a friendly ——————.",
+    "options": [
+      "animal",
+      "village",
+      "vegetable",
+      "neighbour"
+    ],
+    "correct": "animal",
+    "explanation": "animal = heyvan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2309,
+    "type": "matching",
+    "question": "«animal» — düzgün mənasını seç:",
+    "options": [
+      "A living thing that can move, like a dog.",
+      "A round food from a bird, like a chicken.",
+      "One of the twelve parts of a year.",
+      "To get pleasure from something."
+    ],
+    "correct": "A living thing that can move, like a dog.",
+    "explanation": "animal = heyvan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2310,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«animal» = \"The meal you eat in the middle of the day.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. animal = heyvan",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Nature & Weather"
   }
 ]
