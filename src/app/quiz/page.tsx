@@ -245,7 +245,14 @@ export default function QuizPage() {
           <div>
             <div className="flex items-start gap-3 mb-6">
               <div className="flex-1 min-w-0">
-                <p className="text-sm text-gray-400 mb-2 uppercase tracking-wide">{current.topic}</p>
+                <div className="flex items-center gap-2 mb-2">
+                  <p className="text-sm text-gray-400 uppercase tracking-wide">{current.topic}</p>
+                  {current.type === 'gap-fill' && (
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300">
+                      📝 Boşluğu doldur
+                    </span>
+                  )}
+                </div>
                 <h2 className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
                   {current.question}
                 </h2>

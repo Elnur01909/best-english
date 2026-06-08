@@ -4814,5 +4814,5015 @@
     "explanation": "CARELESSNESS: A failure to take proper care, which may amount to negligence in law.",
     "level": "H",
     "topic": "Tort Law"
+  },
+  {
+    "id": 345,
+    "type": "gap-fill",
+    "question": "The supplier made an —————— to deliver 500 units at a fixed price within 30 days.",
+    "options": [
+      "EVICTION",
+      "PATENT",
+      "MEDIATION",
+      "OFFER"
+    ],
+    "correct": "OFFER",
+    "explanation": "OFFER: A clear proposal made by one party to another, expressing willingness to enter into a contract on specific terms.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 346,
+    "type": "gap-fill",
+    "question": "Her —————— of the counteroffer was communicated by email on 14 March.",
+    "options": [
+      "ACCEPTANCE",
+      "DISCOVERY",
+      "ULTRA VIRES",
+      "PROPERTY DAMAGE"
+    ],
+    "correct": "ACCEPTANCE",
+    "explanation": "ACCEPTANCE: An unconditional agreement to all the terms of an offer, which creates a binding contract when communicated to the offeror.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 347,
+    "type": "gap-fill",
+    "question": "Without valid ——————, the agreement cannot be enforced as a contract.",
+    "options": [
+      "INHERITANCE TAX",
+      "CONSIDERATION",
+      "PERJURY",
+      "RESCISSION"
+    ],
+    "correct": "CONSIDERATION",
+    "explanation": "CONSIDERATION: Something of value exchanged between parties to a contract — typically money, goods, services, or a promise.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 348,
+    "type": "gap-fill",
+    "question": "The defendant was found liable for —————— after failing to deliver the goods.",
+    "options": [
+      "INDICTMENT",
+      "WINDING UP",
+      "TORTIOUS LIABILITY",
+      "BREACH OF CONTRACT"
+    ],
+    "correct": "BREACH OF CONTRACT",
+    "explanation": "BREACH OF CONTRACT: A failure by one or more parties to fulfil their obligations under a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 349,
+    "type": "gap-fill",
+    "question": "The surgeon was found liable in —————— for failing to warn the patient of the known risks.",
+    "options": [
+      "TERMINATION",
+      "UNILATERAL CONTRACT",
+      "DEPORTATION",
+      "NEGLIGENCE"
+    ],
+    "correct": "NEGLIGENCE",
+    "explanation": "NEGLIGENCE: A tort arising where a person fails to exercise the standard of care that a reasonably prudent person would exercise, causing damage to another.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 350,
+    "type": "gap-fill",
+    "question": "The —————— filed a claim in the High Court seeking £2 million in damages.",
+    "options": [
+      "STATUTE OF LIMITATIONS",
+      "WRONGFUL DISMISSAL",
+      "CLAIMANT",
+      "LIQUIDATION"
+    ],
+    "correct": "CLAIMANT",
+    "explanation": "CLAIMANT: The party who initiates civil legal proceedings against another party in order to seek a remedy.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 351,
+    "type": "gap-fill",
+    "question": "The —————— denied all allegations and filed a detailed defence.",
+    "options": [
+      "ACTUS REUS",
+      "ASSIGNMENT",
+      "DEFENDANT",
+      "CREDITOR"
+    ],
+    "correct": "DEFENDANT",
+    "explanation": "DEFENDANT: The party against whom a civil or criminal claim is brought.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 352,
+    "type": "gap-fill",
+    "question": "The court awarded the claimant £50,000 in —————— for breach of contract.",
+    "options": [
+      "DAMAGES",
+      "CORPORATE GOVERNANCE",
+      "EXPERT WITNESS",
+      "BURGLARY"
+    ],
+    "correct": "DAMAGES",
+    "explanation": "DAMAGES: Money claimed by a claimant from a defendant as compensation for loss or injury suffered.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 353,
+    "type": "gap-fill",
+    "question": "The court granted an emergency —————— to prevent the defendant from destroying documents.",
+    "options": [
+      "INJUNCTION",
+      "DUTY OF CARE",
+      "DAMAGES",
+      "SHAREHOLDER"
+    ],
+    "correct": "INJUNCTION",
+    "explanation": "INJUNCTION: A court order requiring a party to do something or to refrain from doing something.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 354,
+    "type": "gap-fill",
+    "question": "The director breached her —————— by approving a contract that personally benefited her.",
+    "options": [
+      "ACCOMPLICE",
+      "FIDUCIARY DUTY",
+      "ASYLUM",
+      "COVENANT"
+    ],
+    "correct": "FIDUCIARY DUTY",
+    "explanation": "FIDUCIARY DUTY: An obligation to act in the best interests of another party, characterised by trust and loyalty.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 355,
+    "type": "gap-fill",
+    "question": "The seller was liable for —————— after falsely claiming the building was structural sound.",
+    "options": [
+      "COLLATERAL",
+      "SPECIALISE",
+      "MISREPRESENTATION",
+      "ADMINISTRATION ORDER"
+    ],
+    "correct": "MISREPRESENTATION",
+    "explanation": "MISREPRESENTATION: A false or misleading statement of fact made by one party to induce another to enter into a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 356,
+    "type": "gap-fill",
+    "question": "The contract was voidable because the claimant signed it under —————— after being threatened.",
+    "options": [
+      "DURESS",
+      "SETTLEMENT",
+      "PROCEEDINGS",
+      "LITIGATION"
+    ],
+    "correct": "DURESS",
+    "explanation": "DURESS: Unlawful pressure or threats exerted on a person to force them into a contract against their will.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 357,
+    "type": "gap-fill",
+    "question": "The will was set aside because the deceased had executed it under —————— from their carer.",
+    "options": [
+      "QUANTUM MERUIT",
+      "UNDUE INFLUENCE",
+      "LEASEHOLD",
+      "AGGRAVATED ASSAULT"
+    ],
+    "correct": "UNDUE INFLUENCE",
+    "explanation": "UNDUE INFLUENCE: Improper pressure exerted on a person by someone in a position of trust to induce them to enter into a transaction.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 358,
+    "type": "gap-fill",
+    "question": "The contract was —————— ab initio because it lacked essential terms.",
+    "options": [
+      "VOID",
+      "TENANT",
+      "BILL OF LADING",
+      "PAROL EVIDENCE"
+    ],
+    "correct": "VOID",
+    "explanation": "VOID: (Of a contract or transaction) having no legal effect; invalid from the beginning.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 359,
+    "type": "gap-fill",
+    "question": "The contract is —————— at the option of the innocent party if the other party committed misrepresentation.",
+    "options": [
+      "INJUNCTIVE RELIEF",
+      "PROXY",
+      "VOIDABLE",
+      "NO WIN NO FEE"
+    ],
+    "correct": "VOIDABLE",
+    "explanation": "VOIDABLE: (Of a contract) technically valid but capable of being cancelled or set aside by one of the parties.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 360,
+    "type": "gap-fill",
+    "question": "All —————— to the contract must agree before any amendments can be made.",
+    "options": [
+      "ASSAULT AND BATTERY",
+      "ASYLUM",
+      "PARTY",
+      "INDEMNITY"
+    ],
+    "correct": "PARTY",
+    "explanation": "PARTY: A person, company, or other legal entity that enters into a contract or legal proceeding.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 361,
+    "type": "gap-fill",
+    "question": "The contractor provided an —————— against any claims arising from defective materials.",
+    "options": [
+      "INDEMNITY",
+      "ASSIGNMENT",
+      "HABEAS CORPUS",
+      "ACCEPTANCE"
+    ],
+    "correct": "INDEMNITY",
+    "explanation": "INDEMNITY: A contractual obligation by one party to protect another against specific losses or liabilities.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 362,
+    "type": "gap-fill",
+    "question": "The manufacturer provided a limited —————— covering all defects for one year.",
+    "options": [
+      "COMPENSATION",
+      "WARRANTY",
+      "INTERNATIONAL LAW",
+      "BANKRUPTCY"
+    ],
+    "correct": "WARRANTY",
+    "explanation": "WARRANTY: A guarantee by one party that certain facts or conditions are true or will be fulfilled.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 363,
+    "type": "gap-fill",
+    "question": "The seller exercised the right of —————— after the buyer failed to pay within 30 days.",
+    "options": [
+      "ENCUMBRANCE",
+      "TERMINATION",
+      "VALID",
+      "SPECIALISE"
+    ],
+    "correct": "TERMINATION",
+    "explanation": "TERMINATION: The act of bringing a contract or agreement to an end, either by agreement or in accordance with its terms.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 364,
+    "type": "gap-fill",
+    "question": "The newspaper was sued for —————— after publishing false allegations about the company.",
+    "options": [
+      "SLANDER",
+      "RESIDENCY PERMIT",
+      "ADVOCACY",
+      "DEFAMATION"
+    ],
+    "correct": "DEFAMATION",
+    "explanation": "DEFAMATION: A false and damaging statement that harms the reputation of a person or organisation.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 365,
+    "type": "gap-fill",
+    "question": "The publisher was held liable for —————— after printing false and damaging statements about the plaintiff.",
+    "options": [
+      "PATENT",
+      "FLAG STATE",
+      "BAIL",
+      "LIBEL"
+    ],
+    "correct": "LIBEL",
+    "explanation": "LIBEL: A defamatory statement made in permanent form, typically in writing or through media, that injures someone's reputation.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 366,
+    "type": "gap-fill",
+    "question": "She sued her former colleague for —————— after he made damaging comments about her at a business conference.",
+    "options": [
+      "LEGAL PRACTICE",
+      "ACQUISITION",
+      "SLANDER",
+      "COLLATERAL"
+    ],
+    "correct": "SLANDER",
+    "explanation": "SLANDER: A false and defamatory statement made orally that damages a person's reputation.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 367,
+    "type": "gap-fill",
+    "question": "The security guard was sued for —————— when he locked a customer in the store overnight.",
+    "options": [
+      "FALSE IMPRISONMENT",
+      "SLANDER",
+      "ADMIRALTY LAW",
+      "EMBEZZLEMENT"
+    ],
+    "correct": "FALSE IMPRISONMENT",
+    "explanation": "FALSE IMPRISONMENT: A tort in which a person is deliberately and unlawfully confined or restricted of their freedom of movement.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 368,
+    "type": "gap-fill",
+    "question": "The claimant brought a claim for —————— after the defendant raised his fist threateningly, even though no contact was made.",
+    "options": [
+      "INDEMNITY",
+      "ASSAULT",
+      "PRECEDENT",
+      "WAIVER"
+    ],
+    "correct": "ASSAULT",
+    "explanation": "ASSAULT: A tort or crime in which a person intentionally creates an apprehension in another of imminent harmful or offensive contact. Physical contact is NOT required — only the reasonable fear of it.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 369,
+    "type": "gap-fill",
+    "question": "The defendant was liable for —————— after deliberately pushing the claimant into the wall — physical contact made it battery, not merely assault.",
+    "options": [
+      "CONDITION PRECEDENT",
+      "BATTERY",
+      "PUPILLAGE",
+      "DEMURRAGE"
+    ],
+    "correct": "BATTERY",
+    "explanation": "BATTERY: A tort or crime in which a person intentionally and without lawful justification makes harmful or offensive contact with another's body. Unlike assault, physical contact IS required — but it need not cause injury; even offensive touching suffices.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 370,
+    "type": "gap-fill",
+    "question": "The farmer sued for —————— when the developer entered his land without permission to survey the property.",
+    "options": [
+      "CLASS ACTION",
+      "TRESPASS",
+      "DEBTOR",
+      "FORGERY"
+    ],
+    "correct": "TRESPASS",
+    "explanation": "TRESPASS: An unlawful entry upon or interference with another's land or property without permission.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 371,
+    "type": "gap-fill",
+    "question": "The tenant was ordered to pay for —————— caused by negligence during his occupancy of the apartment.",
+    "options": [
+      "MEMORANDUM OF ASSOCIATION",
+      "FREEHOLD",
+      "EXTRADITION",
+      "PROPERTY DAMAGE"
+    ],
+    "correct": "PROPERTY DAMAGE",
+    "explanation": "PROPERTY DAMAGE: Physical harm inflicted on property belonging to another, for which the owner may seek compensation.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 372,
+    "type": "gap-fill",
+    "question": "The hospital was found liable on a —————— basis for the surgeon's negligence.",
+    "options": [
+      "VICARIOUS LIABILITY",
+      "NOVATION",
+      "EXTRADITION",
+      "TENANT"
+    ],
+    "correct": "VICARIOUS LIABILITY",
+    "explanation": "VICARIOUS LIABILITY: The legal responsibility of one party for the wrongful acts of another, typically an employer for an employee's actions.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 373,
+    "type": "gap-fill",
+    "question": "The manufacturer is subject to —————— for any defects in the product, regardless of fault.",
+    "options": [
+      "STRICT LIABILITY",
+      "TORTIOUS LIABILITY",
+      "ACQUITTAL",
+      "ADVERSE POSSESSION"
+    ],
+    "correct": "STRICT LIABILITY",
+    "explanation": "STRICT LIABILITY: Legal responsibility for harm caused, even if the defendant was not negligent or acting with intent.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 374,
+    "type": "gap-fill",
+    "question": "The plaintiff lost the right to sue when the —————— expired three years after the incident.",
+    "options": [
+      "STATUTE OF LIMITATIONS",
+      "CREDITOR",
+      "PAROLE",
+      "DUE DILIGENCE"
+    ],
+    "correct": "STATUTE OF LIMITATIONS",
+    "explanation": "STATUTE OF LIMITATIONS: A legal time limit within which a claim must be filed or legal action must be initiated.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 375,
+    "type": "gap-fill",
+    "question": "The court determined that it had —————— to hear the case because the defendant was domiciled in that county.",
+    "options": [
+      "MENS REA",
+      "EMPLOYMENT CONTRACT",
+      "JURISDICTION",
+      "INTERNATIONAL LAW"
+    ],
+    "correct": "JURISDICTION",
+    "explanation": "JURISDICTION: The authority of a court to hear and decide a case based on location, the parties, or the subject matter.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 376,
+    "type": "gap-fill",
+    "question": "The case was transferred to a different —————— because the trial court lacked proper venue.",
+    "options": [
+      "MATTER",
+      "MONEY LAUNDERING",
+      "VENUE",
+      "INJUNCTIVE RELIEF"
+    ],
+    "correct": "VENUE",
+    "explanation": "VENUE: The proper location or district in which a legal case should be heard based on procedural rules.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 377,
+    "type": "gap-fill",
+    "question": "The witness provided an —————— detailing the events of the accident to support the claimant's case.",
+    "options": [
+      "AFFIDAVIT",
+      "WINDING UP",
+      "ACCOMPLICE",
+      "RECEIVERSHIP"
+    ],
+    "correct": "AFFIDAVIT",
+    "explanation": "AFFIDAVIT: A written statement of fact confirmed by oath or affirmation before a notary or court official.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 378,
+    "type": "gap-fill",
+    "question": "During ——————, the defendant was required to produce all relevant emails and communications related to the contract breach.",
+    "options": [
+      "FREEHOLD",
+      "LICENSING",
+      "PATENT",
+      "DISCOVERY"
+    ],
+    "correct": "DISCOVERY",
+    "explanation": "DISCOVERY: The pre-trial process in which parties disclose documents and information relevant to the case to each other.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 379,
+    "type": "gap-fill",
+    "question": "The judge entered —————— in favour of the claimant, ordering the defendant to pay £100,000.",
+    "options": [
+      "COMPLAINT",
+      "JUDGMENT",
+      "RESIDENCY PERMIT",
+      "EARNEST MONEY"
+    ],
+    "correct": "JUDGMENT",
+    "explanation": "JUDGMENT: The final decision of a court in a case, determining the rights and liabilities of the parties.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 380,
+    "type": "gap-fill",
+    "question": "The defendant filed an —————— arguing that the trial court made errors in applying the law.",
+    "options": [
+      "REMEDIES",
+      "APPEAL",
+      "PAROL EVIDENCE",
+      "BAILIFF"
+    ],
+    "correct": "APPEAL",
+    "explanation": "APPEAL: A legal proceeding in which a higher court reviews a lower court's decision to determine if it was correct.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 381,
+    "type": "gap-fill",
+    "question": "The court was bound by the —————— established in the earlier Supreme Court decision on this issue.",
+    "options": [
+      "MITIGATING CIRCUMSTANCES",
+      "FORMATION OF A BUSINESS",
+      "PRECEDENT",
+      "LEASE"
+    ],
+    "correct": "PRECEDENT",
+    "explanation": "PRECEDENT: A legal principle or decision established in a previous case that is used as a guide for deciding similar cases in the future.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 382,
+    "type": "gap-fill",
+    "question": "In civil cases, the claimant bears the —————— on the balance of probabilities.",
+    "options": [
+      "LAW FIRM",
+      "BURDEN OF PROOF",
+      "TAX EVASION",
+      "COPYRIGHT"
+    ],
+    "correct": "BURDEN OF PROOF",
+    "explanation": "BURDEN OF PROOF: The obligation on a party to establish the truth of its allegations or claims in court proceedings.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 383,
+    "type": "gap-fill",
+    "question": "The witness testimony provided key —————— that the defendant was present at the scene.",
+    "options": [
+      "FORMATION OF A BUSINESS",
+      "JUDICIAL REVIEW",
+      "EVIDENCE",
+      "COLLECTIVE BARGAINING"
+    ],
+    "correct": "EVIDENCE",
+    "explanation": "EVIDENCE: Information, documents, or testimony presented in court to prove or disprove an allegation.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 384,
+    "type": "gap-fill",
+    "question": "The —————— testified about the medical cause of the plaintiff's injuries.",
+    "options": [
+      "COMPENSATION",
+      "NATURALIZATION",
+      "EXPERT WITNESS",
+      "BATTERY"
+    ],
+    "correct": "EXPERT WITNESS",
+    "explanation": "EXPERT WITNESS: A person with specialized knowledge or skills who provides testimony in court regarding technical, scientific, or professional matters.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 385,
+    "type": "gap-fill",
+    "question": "The key —————— testified that she had seen the defendant leaving the building at 10 p.m.",
+    "options": [
+      "STATUTE OF LIMITATIONS",
+      "CLIENT",
+      "WITNESS",
+      "EXCLUSION CLAUSE"
+    ],
+    "correct": "WITNESS",
+    "explanation": "WITNESS: A person who has knowledge of facts relevant to a case and gives testimony under oath.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 386,
+    "type": "gap-fill",
+    "question": "The witness was charged with —————— after he admitted that his testimony was false.",
+    "options": [
+      "PERJURY",
+      "MISREPRESENTATION",
+      "FIDUCIARY DUTY",
+      "GRIEVANCE"
+    ],
+    "correct": "PERJURY",
+    "explanation": "PERJURY: The crime of deliberately giving false testimony under oath in a court proceeding.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 387,
+    "type": "gap-fill",
+    "question": "The defendant's —————— for fraud was upheld on appeal.",
+    "options": [
+      "AGGRAVATING FACTOR",
+      "CIVIL LAW",
+      "ACCESSORY",
+      "CONVICTION"
+    ],
+    "correct": "CONVICTION",
+    "explanation": "CONVICTION: A formal judgment that a person is guilty of a criminal offense.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 388,
+    "type": "gap-fill",
+    "question": "The jury returned a verdict of ——————, and the defendant was released immediately.",
+    "options": [
+      "OBLIGATION",
+      "BARRISTER",
+      "REDUNDANCY",
+      "ACQUITTAL"
+    ],
+    "correct": "ACQUITTAL",
+    "explanation": "ACQUITTAL: A judgment by a court that a defendant is not guilty of the charged offense.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 389,
+    "type": "gap-fill",
+    "question": "The defendant entered a —————— of guilty and was sentenced to two years imprisonment.",
+    "options": [
+      "VOID",
+      "PLEA",
+      "RESCISSION",
+      "JURISDICTION"
+    ],
+    "correct": "PLEA",
+    "explanation": "PLEA: A defendant's formal response to criminal charges, typically guilty, not guilty, or no contest.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 390,
+    "type": "gap-fill",
+    "question": "The defendant accepted a —————— that reduced the charges from robbery to theft in exchange for a guilty plea.",
+    "options": [
+      "FIDUCIARY DUTY",
+      "PLEA AGREEMENT",
+      "COVENANT",
+      "SEVERANCE PAY"
+    ],
+    "correct": "PLEA AGREEMENT",
+    "explanation": "PLEA AGREEMENT: A negotiated settlement between a prosecutor and defendant in which the defendant agrees to plead guilty in exchange for concessions.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 391,
+    "type": "gap-fill",
+    "question": "The judge imposed a —————— of five years imprisonment for the assault conviction.",
+    "options": [
+      "OBLIGATION",
+      "SANCTIONS",
+      "RESCISSION",
+      "SENTENCE"
+    ],
+    "correct": "SENTENCE",
+    "explanation": "SENTENCE: The punishment imposed by a court on a person convicted of a criminal offense.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 392,
+    "type": "gap-fill",
+    "question": "The court set —————— at £10,000, and the defendant was released after posting the amount.",
+    "options": [
+      "BAIL",
+      "WILL",
+      "ACTUS REUS",
+      "COLLECTIVE BARGAINING"
+    ],
+    "correct": "BAIL",
+    "explanation": "BAIL: Money or property offered to a court to secure a defendant's release from custody pending trial.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 393,
+    "type": "gap-fill",
+    "question": "The defendant was held in —————— for three months before his trial.",
+    "options": [
+      "DISCRIMINATION",
+      "SEVERANCE PAY",
+      "CUSTODY",
+      "ROBBERY"
+    ],
+    "correct": "CUSTODY",
+    "explanation": "CUSTODY: The state of being held in prison or under police control pending trial or following conviction.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 394,
+    "type": "gap-fill",
+    "question": "After serving half of his sentence, the prisoner was released on —————— with restrictions.",
+    "options": [
+      "PAROLE",
+      "SLANDER",
+      "FORMATION OF A BUSINESS",
+      "VALID"
+    ],
+    "correct": "PAROLE",
+    "explanation": "PAROLE: Conditional release of a prisoner before the completion of their full sentence, with supervision by an officer.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 395,
+    "type": "gap-fill",
+    "question": "The judge sentenced the offender to —————— for two years instead of imprisonment.",
+    "options": [
+      "PROBATION",
+      "REFUGEE STATUS",
+      "BURDEN OF PROOF",
+      "APPEAL"
+    ],
+    "correct": "PROBATION",
+    "explanation": "PROBATION: A sentence whereby a convicted person is required to behave well under supervision but is not imprisoned.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 396,
+    "type": "gap-fill",
+    "question": "The court ordered the defendant to pay —————— of £5,000 to the victim for the damage caused.",
+    "options": [
+      "WAIVER",
+      "ARBITRATION",
+      "OWNERSHIP",
+      "RESTITUTION"
+    ],
+    "correct": "RESTITUTION",
+    "explanation": "RESTITUTION: Compensation paid by an offender to a victim for harm or loss suffered.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 397,
+    "type": "gap-fill",
+    "question": "The two banks announced a —————— that would create the largest financial institution in the country.",
+    "options": [
+      "MERGER",
+      "BONA FIDE",
+      "ESCROW",
+      "TRADEMARK"
+    ],
+    "correct": "MERGER",
+    "explanation": "MERGER: The combination of two or more companies into a single entity, with one company surviving and continuing as the combined entity.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 398,
+    "type": "gap-fill",
+    "question": "The —————— was completed after the shareholders approved the transaction at an extraordinary general meeting.",
+    "options": [
+      "ACQUISITION",
+      "NEGLIGENCE",
+      "CAPITAL GAINS TAX",
+      "FORMATION OF A BUSINESS"
+    ],
+    "correct": "ACQUISITION",
+    "explanation": "ACQUISITION: The purchase or transfer of control of one company by another, typically resulting in the acquired company becoming a subsidiary.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 399,
+    "type": "gap-fill",
+    "question": "The board of directors reviewed the company's —————— policies to ensure compliance with regulatory requirements.",
+    "options": [
+      "SICK PAY",
+      "COMPENSATION",
+      "CUSTODY",
+      "CORPORATE GOVERNANCE"
+    ],
+    "correct": "CORPORATE GOVERNANCE",
+    "explanation": "CORPORATE GOVERNANCE: The system of rules, practices, and processes through which a company is directed and controlled.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 400,
+    "type": "gap-fill",
+    "question": "The major —————— exercised their voting rights at the annual general meeting to approve the dividend distribution.",
+    "options": [
+      "CONVICTION",
+      "SUE",
+      "SHAREHOLDER",
+      "LAW FIRM"
+    ],
+    "correct": "SHAREHOLDER",
+    "explanation": "SHAREHOLDER: A person or entity that owns one or more shares of a company and has a stake in its ownership.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 401,
+    "type": "gap-fill",
+    "question": "The company announced a —————— of 5 pence per share payable to all shareholders on record.",
+    "options": [
+      "BAILIFF",
+      "DOUBLE TAXATION",
+      "CROSS-BORDER JURISDICTION",
+      "DIVIDEND"
+    ],
+    "correct": "DIVIDEND",
+    "explanation": "DIVIDEND: A distribution of profits by a company to its shareholders, usually in the form of cash or additional shares.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 402,
+    "type": "gap-fill",
+    "question": "The board of —————— approved the company's annual budget and strategic plan.",
+    "options": [
+      "EXTRADITION",
+      "STARE DECISIS",
+      "DIRECTOR",
+      "NOVATION"
+    ],
+    "correct": "DIRECTOR",
+    "explanation": "DIRECTOR: A person appointed to the board of a company and responsible for its management and decision-making.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 403,
+    "type": "gap-fill",
+    "question": "The —————— meets quarterly to review the company's performance and approve major business decisions.",
+    "options": [
+      "EXTRADITION",
+      "SPECIFIC PERFORMANCE",
+      "ATTORNEY",
+      "BOARD OF DIRECTORS"
+    ],
+    "correct": "BOARD OF DIRECTORS",
+    "explanation": "BOARD OF DIRECTORS: The group of individuals elected by shareholders to oversee the company's affairs and set its policies.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 404,
+    "type": "gap-fill",
+    "question": "The company registered its —————— to protect its brand identity and prevent unauthorized use.",
+    "options": [
+      "VICARIOUS LIABILITY",
+      "ACTUS REUS",
+      "ADMIRALTY LAW",
+      "TRADEMARK"
+    ],
+    "correct": "TRADEMARK",
+    "explanation": "TRADEMARK: A distinctive sign, symbol, or name used to identify and distinguish a company's products or services from competitors.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 405,
+    "type": "gap-fill",
+    "question": "The publisher held the —————— to the novel and could take legal action against any unauthorized reproductions.",
+    "options": [
+      "SHAREHOLDER",
+      "DOUBLE TAXATION",
+      "MARITIME LIEN",
+      "COPYRIGHT"
+    ],
+    "correct": "COPYRIGHT",
+    "explanation": "COPYRIGHT: The exclusive legal right granted to the author or creator of a work to reproduce, distribute, and display their original creation.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 406,
+    "type": "gap-fill",
+    "question": "The company filed a —————— application to protect its innovative technology from competitors.",
+    "options": [
+      "BAILIFF",
+      "LIQUIDATION",
+      "FLAG STATE",
+      "PATENT"
+    ],
+    "correct": "PATENT",
+    "explanation": "PATENT: An exclusive right granted by a government to an inventor, allowing them to prevent others from making, using, or selling the invention for a specified period.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 407,
+    "type": "gap-fill",
+    "question": "The company's —————— assets included patents, trademarks, and proprietary software.",
+    "options": [
+      "INTELLECTUAL PROPERTY",
+      "JURISDICTION",
+      "VENUE",
+      "VOID"
+    ],
+    "correct": "INTELLECTUAL PROPERTY",
+    "explanation": "INTELLECTUAL PROPERTY: Legal rights protecting creations of the mind, including inventions, literary works, designs, symbols, and trademarks.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 408,
+    "type": "gap-fill",
+    "question": "The court found the defendant liable for copyright —————— after producing unauthorized copies of the software.",
+    "options": [
+      "COMMON LAW",
+      "INFRINGEMENT",
+      "REFUGEE STATUS",
+      "PLAINTIFF"
+    ],
+    "correct": "INFRINGEMENT",
+    "explanation": "INFRINGEMENT: A violation of someone's legal rights, particularly in relation to intellectual property, patents, or copyrights.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 409,
+    "type": "gap-fill",
+    "question": "The —————— specified the employee's salary, benefits, and responsibilities.",
+    "options": [
+      "QUANTUM MERUIT",
+      "EMPLOYMENT CONTRACT",
+      "BAILIFF",
+      "BANKRUPTCY"
+    ],
+    "correct": "EMPLOYMENT CONTRACT",
+    "explanation": "EMPLOYMENT CONTRACT: A legal agreement between an employer and employee that defines the terms and conditions of employment.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 410,
+    "type": "gap-fill",
+    "question": "The employee sued the company for —————— after being terminated without notice or severance pay.",
+    "options": [
+      "CONVEYANCING",
+      "CIVIL LAW",
+      "LAW FIRM",
+      "WRONGFUL DISMISSAL"
+    ],
+    "correct": "WRONGFUL DISMISSAL",
+    "explanation": "WRONGFUL DISMISSAL: The termination of an employee's employment contract without legal justification or proper procedures.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 411,
+    "type": "gap-fill",
+    "question": "The employee filed a —————— claim alleging that she was passed over for promotion because of her age.",
+    "options": [
+      "DISCRIMINATION",
+      "REFUGEE STATUS",
+      "OWNERSHIP",
+      "ARBITRATION"
+    ],
+    "correct": "DISCRIMINATION",
+    "explanation": "DISCRIMINATION: Unfair or prejudicial treatment of a person based on protected characteristics such as race, gender, age, or disability.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 412,
+    "type": "gap-fill",
+    "question": "The company implemented anti-—————— policies after several employees complained of workplace harassment.",
+    "options": [
+      "SLANDER",
+      "MEDIATION",
+      "ATTORNEY",
+      "HARASSMENT"
+    ],
+    "correct": "HARASSMENT",
+    "explanation": "HARASSMENT: Unwanted and repeated behavior that creates a hostile, offensive, or intimidating environment, particularly in the workplace.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 413,
+    "type": "gap-fill",
+    "question": "The —————— reported the company's fraudulent accounting practices to the regulatory authorities.",
+    "options": [
+      "WHISTLEBLOWER",
+      "CORPORATE GOVERNANCE",
+      "BURGLARY",
+      "PUPILLAGE"
+    ],
+    "correct": "WHISTLEBLOWER",
+    "explanation": "WHISTLEBLOWER: An employee who discloses illegal, unethical, or unsafe practices by their employer or organization to authorities or the public.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 414,
+    "type": "gap-fill",
+    "question": "The tribunal awarded the claimant compensation for —————— after finding the dismissal was not properly conducted.",
+    "options": [
+      "SPECIALISE",
+      "LIMITED LIABILITY",
+      "LEASE",
+      "UNFAIR DISMISSAL"
+    ],
+    "correct": "UNFAIR DISMISSAL",
+    "explanation": "UNFAIR DISMISSAL: Termination of an employee without a fair reason, proper notice, or adherence to fair procedures.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 415,
+    "type": "gap-fill",
+    "question": "The company announced compulsory —————— as a result of declining sales and financial difficulties.",
+    "options": [
+      "WITHHOLDING TAX",
+      "TITLE DEED",
+      "REDUNDANCY",
+      "DETENTION"
+    ],
+    "correct": "REDUNDANCY",
+    "explanation": "REDUNDANCY: The dismissal of employees due to the elimination of their job position, typically because the role is no longer needed.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 416,
+    "type": "gap-fill",
+    "question": "—————— in the jurisdiction determines the rights and obligations of property owners and tenants.",
+    "options": [
+      "BREACH OF CONTRACT",
+      "PLEA",
+      "LAND LAW",
+      "THE BAR"
+    ],
+    "correct": "LAND LAW",
+    "explanation": "LAND LAW: The branch of law dealing with ownership, transfer, and use of real property and land.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 417,
+    "type": "gap-fill",
+    "question": "The buyer obtained full legal —————— to the property upon completion of the purchase.",
+    "options": [
+      "PATENT",
+      "MATERNITY LEAVE",
+      "TITLE",
+      "OFFER"
+    ],
+    "correct": "TITLE",
+    "explanation": "TITLE: Legal ownership or right to possession of property, including land and buildings.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 418,
+    "type": "gap-fill",
+    "question": "The mechanic placed a —————— on the vehicle until the repair costs were fully paid.",
+    "options": [
+      "SHAREHOLDER",
+      "RESIDENCY PERMIT",
+      "LIEN",
+      "SANCTIONS"
+    ],
+    "correct": "LIEN",
+    "explanation": "LIEN: A legal claim or security interest held by one party over another's property to secure payment of a debt.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 419,
+    "type": "gap-fill",
+    "question": "The tenant signed a three-year —————— for the office space at a monthly rent of £5,000.",
+    "options": [
+      "VICARIOUS LIABILITY",
+      "AGGRAVATING FACTOR",
+      "DAMAGES",
+      "LEASE"
+    ],
+    "correct": "LEASE",
+    "explanation": "LEASE: A contractual agreement in which a property owner (landlord) grants temporary possession of property to another (tenant) in exchange for rent.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 420,
+    "type": "gap-fill",
+    "question": "The —————— is responsible for paying rent on time and maintaining the property in good condition.",
+    "options": [
+      "TENANT",
+      "DEFAMATION",
+      "GUARANTEE",
+      "REAL ESTATE"
+    ],
+    "correct": "TENANT",
+    "explanation": "TENANT: A person who rents and occupies property owned by another person or entity (the landlord).",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 421,
+    "type": "gap-fill",
+    "question": "The —————— is required by law to maintain the property in a habitable condition and respect the tenant's right to quiet enjoyment.",
+    "options": [
+      "LANDLORD",
+      "CREDITOR",
+      "DRAFT",
+      "DISCHARGE OF BANKRUPTCY"
+    ],
+    "correct": "LANDLORD",
+    "explanation": "LANDLORD: A person or entity who owns property and rents or leases it to another person (the tenant).",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 422,
+    "type": "gap-fill",
+    "question": "The landlord initiated —————— proceedings after the tenant failed to pay rent for three consecutive months.",
+    "options": [
+      "DISCHARGE OF BANKRUPTCY",
+      "LEASEHOLD",
+      "EVICTION",
+      "OMBUDSMAN"
+    ],
+    "correct": "EVICTION",
+    "explanation": "EVICTION: The legal process of removing a tenant from rental property, typically due to non-payment of rent or breach of lease terms.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 423,
+    "type": "gap-fill",
+    "question": "The solicitor handled the —————— of the property, ensuring all legal documents were properly executed and registered.",
+    "options": [
+      "OMBUDSMAN",
+      "PENALTY CLAUSE",
+      "CONVEYANCING",
+      "THE BAR"
+    ],
+    "correct": "CONVEYANCING",
+    "explanation": "CONVEYANCING: The legal process of transferring ownership of property from one party to another.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 424,
+    "type": "gap-fill",
+    "question": "The bank provided a —————— for the purchase of the house, with the property serving as collateral.",
+    "options": [
+      "BURDEN OF PROOF",
+      "MORTGAGE",
+      "GUARANTEE",
+      "PROMISSORY NOTE"
+    ],
+    "correct": "MORTGAGE",
+    "explanation": "MORTGAGE: A loan secured by real property, whereby the lender holds an interest in the property until the loan is repaid.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 425,
+    "type": "gap-fill",
+    "question": "The property owner granted an —————— to the utility company to access and maintain underground pipes.",
+    "options": [
+      "RES JUDICATA",
+      "LEASE",
+      "CHARTER PARTY",
+      "EASEMENT"
+    ],
+    "correct": "EASEMENT",
+    "explanation": "EASEMENT: A legal right that allows one property owner to use another's property for a specific purpose, such as access or utilities.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 426,
+    "type": "gap-fill",
+    "question": "The factory was prosecuted for environmental —————— after it released toxic chemicals into the river.",
+    "options": [
+      "LIMITED LIABILITY",
+      "POLLUTION",
+      "DIRECTOR",
+      "PROSECUTION"
+    ],
+    "correct": "POLLUTION",
+    "explanation": "POLLUTION: The introduction of harmful substances or agents into the environment, causing damage to air, water, soil, or living organisms.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 427,
+    "type": "gap-fill",
+    "question": "—————— establishes procedures for public inquiries, licensing, and appeals against government decisions.",
+    "options": [
+      "TRESPASS",
+      "PENALTY CLAUSE",
+      "ADMINISTRATIVE LAW",
+      "PLEA"
+    ],
+    "correct": "ADMINISTRATIVE LAW",
+    "explanation": "ADMINISTRATIVE LAW: The body of law governing the activities and decision-making of government agencies and their relationship with citizens.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 428,
+    "type": "gap-fill",
+    "question": "The residents filed a —————— with the environmental agency requesting an investigation into the factory's waste disposal practices.",
+    "options": [
+      "ADMIRALTY LAW",
+      "OBLIGATION",
+      "PETITION",
+      "TRADE SECRET"
+    ],
+    "correct": "PETITION",
+    "explanation": "PETITION: A formal written request submitted to a court, government official, or authority seeking a particular remedy or action.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 429,
+    "type": "gap-fill",
+    "question": "The new environmental —————— set strict standards for emissions and waste management.",
+    "options": [
+      "DUE DILIGENCE",
+      "ALLEGATION",
+      "LARCENY",
+      "REGULATION"
+    ],
+    "correct": "REGULATION",
+    "explanation": "REGULATION: An official rule or order issued by a government agency to control conduct or establish procedures.",
+    "level": "F",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 430,
+    "type": "gap-fill",
+    "question": "The claimant sought —————— to prevent the defendant from disclosing confidential information.",
+    "options": [
+      "STATUTE",
+      "COUNTER OFFER",
+      "INJUNCTIVE RELIEF",
+      "HONOUR"
+    ],
+    "correct": "INJUNCTIVE RELIEF",
+    "explanation": "INJUNCTIVE RELIEF: A court's authority to issue an injunction, an order requiring a party to do or refrain from doing something.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 431,
+    "type": "gap-fill",
+    "question": "The two parties reached a —————— worth £250,000 to end the contract dispute.",
+    "options": [
+      "SETTLEMENT",
+      "PROSECUTION",
+      "BILATERAL CONTRACT",
+      "LIQUIDATION"
+    ],
+    "correct": "SETTLEMENT",
+    "explanation": "SETTLEMENT: An agreement between disputing parties to resolve their dispute without going to trial, typically involving compensation or changed behavior.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 432,
+    "type": "gap-fill",
+    "question": "The parties agreed to —————— before proceeding to litigation in an attempt to resolve their differences.",
+    "options": [
+      "MEDIATION",
+      "LIBEL",
+      "DISCOVERY",
+      "SERVE"
+    ],
+    "correct": "MEDIATION",
+    "explanation": "MEDIATION: A dispute resolution process in which a neutral third party (mediator) helps parties reach a mutually acceptable agreement.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 433,
+    "type": "gap-fill",
+    "question": "The contract included an —————— clause requiring the parties to submit disputes to binding arbitration rather than court.",
+    "options": [
+      "ARBITRATION",
+      "DISCRIMINATION",
+      "STRICT LIABILITY",
+      "PARTNERSHIP"
+    ],
+    "correct": "ARBITRATION",
+    "explanation": "ARBITRATION: A private dispute resolution process in which an independent arbitrator hears evidence and makes a binding decision.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 434,
+    "type": "gap-fill",
+    "question": "After failed negotiations, the company decided to pursue —————— to recover the unpaid debt.",
+    "options": [
+      "BOARD OF DIRECTORS",
+      "MERGER",
+      "DISCRIMINATION",
+      "LITIGATION"
+    ],
+    "correct": "LITIGATION",
+    "explanation": "LITIGATION: The process of taking legal action through the courts to resolve a dispute or enforce a right.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 435,
+    "type": "gap-fill",
+    "question": "The claimant filed a —————— alleging breach of contract and seeking damages of £500,000.",
+    "options": [
+      "ACCEPTANCE",
+      "COMPLAINT",
+      "CROSS-EXAMINATION",
+      "CONSIDERATION"
+    ],
+    "correct": "COMPLAINT",
+    "explanation": "COMPLAINT: A formal written statement filed in court detailing a plaintiff's allegations and the relief sought against a defendant.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 436,
+    "type": "gap-fill",
+    "question": "During ——————, the defence lawyer challenged the witness's account of the events.",
+    "options": [
+      "ASSIGNMENT",
+      "ASSAULT",
+      "DUE DILIGENCE",
+      "CROSS-EXAMINATION"
+    ],
+    "correct": "CROSS-EXAMINATION",
+    "explanation": "CROSS-EXAMINATION: The questioning of a witness by the opposing party's lawyer during a trial, aimed at challenging the witness's credibility or testimony.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 437,
+    "type": "gap-fill",
+    "question": "The witness gave a —————— in the law office, which would later be used as evidence in the trial.",
+    "options": [
+      "JUDGMENT",
+      "DEPOSITION",
+      "COUNTER OFFER",
+      "VOID"
+    ],
+    "correct": "DEPOSITION",
+    "explanation": "DEPOSITION: A formal recorded testimony given by a witness before trial under oath, typically conducted outside of court.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 438,
+    "type": "gap-fill",
+    "question": "The new —————— amends the regulations governing employment discrimination and extends protections to additional categories.",
+    "options": [
+      "STATUTORY RAPE",
+      "SECURITIZATION",
+      "STATUTE",
+      "INJUNCTION"
+    ],
+    "correct": "STATUTE",
+    "explanation": "STATUTE: A law formally enacted by a legislative body, such as a parliament or congress.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 439,
+    "type": "gap-fill",
+    "question": "The United Kingdom's legal system is built on —————— principles, where court decisions establish binding precedents.",
+    "options": [
+      "ESCROW",
+      "COMMON LAW",
+      "LEGAL COSTS",
+      "DAMAGES"
+    ],
+    "correct": "COMMON LAW",
+    "explanation": "COMMON LAW: A legal system based on written statutes and the court decisions (precedents) that have developed over time.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 440,
+    "type": "gap-fill",
+    "question": "Many European countries follow a —————— system where laws are codified in detailed legal codes.",
+    "options": [
+      "RESCISSION",
+      "REDUNDANCY",
+      "GRIEVANCE",
+      "CIVIL LAW"
+    ],
+    "correct": "CIVIL LAW",
+    "explanation": "CIVIL LAW: A legal system primarily based on comprehensive written codes and statutes, rather than court precedents.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 441,
+    "type": "gap-fill",
+    "question": "—————— defines the separation of powers among the executive, legislative, and judicial branches.",
+    "options": [
+      "DEFAMATION",
+      "INTELLECTUAL PROPERTY",
+      "CONSTITUTIONAL LAW",
+      "NUISANCE"
+    ],
+    "correct": "CONSTITUTIONAL LAW",
+    "explanation": "CONSTITUTIONAL LAW: The body of law governing the structure and powers of government and the rights of citizens within the state.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 442,
+    "type": "gap-fill",
+    "question": "—————— includes treaties, conventions, and customary practices that regulate relations between sovereign nations.",
+    "options": [
+      "INTERNATIONAL LAW",
+      "SPECIALISE",
+      "STATUTE",
+      "EXTRADITION"
+    ],
+    "correct": "INTERNATIONAL LAW",
+    "explanation": "INTERNATIONAL LAW: The system of rules, agreements, and treaties that govern relations between countries and international disputes.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 443,
+    "type": "gap-fill",
+    "question": "The court granted various —————— to the claimant, including damages and an injunction against future breaches.",
+    "options": [
+      "ESTOPPEL",
+      "CLIENT",
+      "REMEDIES",
+      "CONSIDERATION"
+    ],
+    "correct": "REMEDIES",
+    "explanation": "REMEDIES: Legal means or actions available to a party to enforce their rights or to obtain compensation for loss or harm.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 444,
+    "type": "gap-fill",
+    "question": "The parties entered into a —————— to purchase and sell the commercial property for £2 million.",
+    "options": [
+      "CUSTODY",
+      "FORMATION OF A BUSINESS",
+      "INSOLVENCY",
+      "CONTRACT"
+    ],
+    "correct": "CONTRACT",
+    "explanation": "CONTRACT: A legally binding agreement between two or more parties in which each party agrees to fulfill certain obligations.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 445,
+    "type": "gap-fill",
+    "question": "A —————— is formed when both the buyer and seller promise to exchange money for goods.",
+    "options": [
+      "PRENUPTIAL AGREEMENT",
+      "INTELLECTUAL PROPERTY",
+      "BILATERAL CONTRACT",
+      "LIQUIDATED DAMAGES"
+    ],
+    "correct": "BILATERAL CONTRACT",
+    "explanation": "BILATERAL CONTRACT: A contract in which both parties make mutual promises or obligations to each other.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 446,
+    "type": "gap-fill",
+    "question": "A reward offer is an example of a ——————, where the offeror promises payment if someone finds a lost item.",
+    "options": [
+      "VICARIOUS LIABILITY",
+      "UNILATERAL CONTRACT",
+      "VOIDABLE",
+      "WILL"
+    ],
+    "correct": "UNILATERAL CONTRACT",
+    "explanation": "UNILATERAL CONTRACT: A contract in which only one party makes a binding promise in exchange for the performance of an act by the other party.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 447,
+    "type": "gap-fill",
+    "question": "The contractor invoked the —————— clause to excuse non-performance due to the unexpected natural disaster.",
+    "options": [
+      "TORT",
+      "TRAINING CONTRACT",
+      "FORCE MAJEURE",
+      "GUARDIANSHIP"
+    ],
+    "correct": "FORCE MAJEURE",
+    "explanation": "FORCE MAJEURE: A contractual provision that relieves parties from liability when performance becomes impossible due to unforeseen circumstances beyond their control.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 448,
+    "type": "gap-fill",
+    "question": "The court granted —————— of the contract due to the defendant's fraudulent misrepresentation.",
+    "options": [
+      "PERJURY",
+      "RESCISSION",
+      "ATTORNEY",
+      "BAIL"
+    ],
+    "correct": "RESCISSION",
+    "explanation": "RESCISSION: The cancellation or annulment of a contract, returning the parties to their original position as if the contract had never existed.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 449,
+    "type": "gap-fill",
+    "question": "The court ordered —————— to undo the unjust enrichment caused by the defendant's breach of fiduciary duty.",
+    "options": [
+      "SEVERANCE PAY",
+      "LICENSING",
+      "DEBTOR",
+      "RESTITUTION"
+    ],
+    "correct": "RESTITUTION",
+    "explanation": "RESTITUTION: A remedy requiring one party to restore or return property or value to another party following unjust enrichment or breach.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 450,
+    "type": "gap-fill",
+    "question": "The doctrine of —————— prevented the landlord from denying the tenant's right to occupancy after previously accepting rent payments.",
+    "options": [
+      "ESTOPPEL",
+      "BAILIFF",
+      "ACQUITTAL",
+      "TORTIOUS LIABILITY"
+    ],
+    "correct": "ESTOPPEL",
+    "explanation": "ESTOPPEL: A legal principle that prevents a party from taking a position or making a claim that contradicts a previous statement or conduct.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 451,
+    "type": "gap-fill",
+    "question": "The parent company provided a —————— for the subsidiary's bank loan, ensuring repayment if the subsidiary could not pay.",
+    "options": [
+      "TORTIOUS LIABILITY",
+      "POLLUTION",
+      "GUARANTEE",
+      "DISCRIMINATION"
+    ],
+    "correct": "GUARANTEE",
+    "explanation": "GUARANTEE: A promise by a third party (guarantor) to be responsible for the debt or obligation of another if the primary debtor defaults.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 452,
+    "type": "gap-fill",
+    "question": "The buyer deposited —————— of £20,000 to secure the property purchase, which would be forfeited if the offer was withdrawn.",
+    "options": [
+      "ARSON",
+      "ADOPTION",
+      "EARNEST MONEY",
+      "LAW FIRM"
+    ],
+    "correct": "EARNEST MONEY",
+    "explanation": "EARNEST MONEY: A deposit paid by a buyer to demonstrate commitment to a purchase agreement, usually forfeited if the buyer fails to proceed.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 453,
+    "type": "gap-fill",
+    "question": "The purchase price was held in —————— until the surveyor confirmed that the property met all contractual requirements.",
+    "options": [
+      "CONVICTION",
+      "COMPLAINT",
+      "VOIDABLE",
+      "ESCROW"
+    ],
+    "correct": "ESCROW",
+    "explanation": "ESCROW: A financial arrangement in which a third party holds funds or documents during a transaction until conditions are met.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 454,
+    "type": "gap-fill",
+    "question": "The director disclosed a —————— when the company considered entering into a transaction with a company he personally owned.",
+    "options": [
+      "OFFER",
+      "COVENANT",
+      "LIQUIDATION",
+      "CONFLICT OF INTEREST"
+    ],
+    "correct": "CONFLICT OF INTEREST",
+    "explanation": "CONFLICT OF INTEREST: A situation in which a person's personal interests conflict with their professional or fiduciary duties.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 455,
+    "type": "gap-fill",
+    "question": "The bank required the borrower to pledge the business assets as —————— for the commercial loan.",
+    "options": [
+      "STATUTE",
+      "BANKRUPTCY",
+      "COLLATERAL",
+      "AFFIDAVIT"
+    ],
+    "correct": "COLLATERAL",
+    "explanation": "COLLATERAL: Property or assets pledged by a borrower to a lender as security for a loan, to be forfeited if the loan is not repaid.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 456,
+    "type": "gap-fill",
+    "question": "The lender required a —————— signed by the borrower as evidence of the loan obligation.",
+    "options": [
+      "ASSAULT AND BATTERY",
+      "CULPABILITY",
+      "VICARIOUS LIABILITY",
+      "PROMISSORY NOTE"
+    ],
+    "correct": "PROMISSORY NOTE",
+    "explanation": "PROMISSORY NOTE: A written promise to pay a specified sum of money to a named party at a future date, typically used in loan transactions.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 457,
+    "type": "gap-fill",
+    "question": "Under the ——————, a contract for the sale of land must be in writing to be valid and enforceable.",
+    "options": [
+      "STATUTE OF FRAUDS",
+      "COURT FEE",
+      "PATENT",
+      "VICARIOUS LIABILITY"
+    ],
+    "correct": "STATUTE OF FRAUDS",
+    "explanation": "STATUTE OF FRAUDS: A legal requirement that certain types of contracts must be evidenced in writing to be enforceable.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 458,
+    "type": "gap-fill",
+    "question": "When no contract price was agreed, the contractor sought payment on a —————— basis for the work completed.",
+    "options": [
+      "QUANTUM MERUIT",
+      "DEPORTATION",
+      "VENUE",
+      "INTELLECTUAL PROPERTY"
+    ],
+    "correct": "QUANTUM MERUIT",
+    "explanation": "QUANTUM MERUIT: A legal principle allowing recovery for services rendered or work completed, even without a formal contract, based on the reasonable value provided.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 459,
+    "type": "gap-fill",
+    "question": "The claimant brought a claim for —————— after the defendant retained profits from the use of the claimant's intellectual property without payment.",
+    "options": [
+      "UNJUST ENRICHMENT",
+      "TORT",
+      "SHAREHOLDER",
+      "CREDITOR"
+    ],
+    "correct": "UNJUST ENRICHMENT",
+    "explanation": "UNJUST ENRICHMENT: A principle of law that prevents one party from retaining benefits obtained at the expense of another party without providing compensation.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 460,
+    "type": "gap-fill",
+    "question": "The contract specified —————— of £10,000 per day for each day of late delivery.",
+    "options": [
+      "LIQUIDATED DAMAGES",
+      "DIRECTOR",
+      "PATENT",
+      "RESTRICTIVE COVENANT"
+    ],
+    "correct": "LIQUIDATED DAMAGES",
+    "explanation": "LIQUIDATED DAMAGES: A predetermined amount agreed upon by contracting parties as compensation for breach, rather than actual damages.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 461,
+    "type": "gap-fill",
+    "question": "The court refused to enforce the —————— because the amount was grossly disproportionate to the actual loss.",
+    "options": [
+      "PENALTY CLAUSE",
+      "ADVOCACY",
+      "INFRINGEMENT",
+      "PERJURY"
+    ],
+    "correct": "PENALTY CLAUSE",
+    "explanation": "PENALTY CLAUSE: A contractual provision imposing an excessive or disproportionate penalty for breach, which may be unenforceable.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 462,
+    "type": "gap-fill",
+    "question": "The claimant sought ——————, requiring the defendant to deliver the unique artwork as promised under the contract.",
+    "options": [
+      "ASYLUM",
+      "INHERITANCE TAX",
+      "LAND LAW",
+      "SPECIFIC PERFORMANCE"
+    ],
+    "correct": "SPECIFIC PERFORMANCE",
+    "explanation": "SPECIFIC PERFORMANCE: A court order requiring a party to actually perform its contractual obligations rather than paying damages.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 463,
+    "type": "gap-fill",
+    "question": "The contract included —————— requiring the tenant to maintain the property and not use it for commercial purposes.",
+    "options": [
+      "CHARTER PARTY",
+      "COVENANTS",
+      "LEASE",
+      "CONSIDERATION"
+    ],
+    "correct": "COVENANTS",
+    "explanation": "COVENANTS: Binding promises or agreements in a contract that a party commits to perform or refrain from performing certain acts.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 464,
+    "type": "gap-fill",
+    "question": "The parties agreed to —————— of the original loan agreement, replacing the creditor with a new lender.",
+    "options": [
+      "CAPITAL",
+      "INDEMNITY",
+      "VICARIOUS LIABILITY",
+      "NOVATION"
+    ],
+    "correct": "NOVATION",
+    "explanation": "NOVATION: The substitution of a new contract for an existing one, with the agreement of all parties, effectively ending the original obligation.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 465,
+    "type": "gap-fill",
+    "question": "The court applied the —————— rule to exclude oral testimony that contradicted the written terms of the contract.",
+    "options": [
+      "GUARANTEE",
+      "PAROL EVIDENCE",
+      "DISCRIMINATION",
+      "TRESPASS"
+    ],
+    "correct": "PAROL EVIDENCE",
+    "explanation": "PAROL EVIDENCE: Oral or external evidence offered to vary, explain, or contradict the terms of a written contract.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 466,
+    "type": "gap-fill",
+    "question": "The prosecutor must prove the defendant's —————— beyond reasonable doubt to secure a conviction.",
+    "options": [
+      "BILATERAL CONTRACT",
+      "DETENTION",
+      "CULPABILITY",
+      "TENANCY"
+    ],
+    "correct": "CULPABILITY",
+    "explanation": "CULPABILITY: Legal responsibility or blameworthiness for wrongful conduct, often considered in determining criminal guilt.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 467,
+    "type": "gap-fill",
+    "question": "The —————— of theft is the unauthorized taking and carrying away of someone else's property.",
+    "options": [
+      "DISCHARGE OF BANKRUPTCY",
+      "LIQUIDATION",
+      "ACTUS REUS",
+      "DOUBLE TAXATION"
+    ],
+    "correct": "ACTUS REUS",
+    "explanation": "ACTUS REUS: The guilty act or criminal conduct itself, one of the essential elements required to prove a crime.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 468,
+    "type": "gap-fill",
+    "question": "The prosecution must prove that the defendant had the requisite —————— to establish a conviction for murder.",
+    "options": [
+      "BREACH OF CONTRACT",
+      "MENS REA",
+      "EMBEZZLEMENT",
+      "UNDUE INFLUENCE"
+    ],
+    "correct": "MENS REA",
+    "explanation": "MENS REA: The guilty mind or criminal intent required to establish liability for many crimes.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 469,
+    "type": "gap-fill",
+    "question": "The —————— was convicted of robbery for providing the getaway car used by the principal offender.",
+    "options": [
+      "JURISDICTION",
+      "DETENTION",
+      "GROSS MISCONDUCT",
+      "ACCOMPLICE"
+    ],
+    "correct": "ACCOMPLICE",
+    "explanation": "ACCOMPLICE: A person who knowingly participates in the commission of a crime, either as a principal or an accessory.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 470,
+    "type": "gap-fill",
+    "question": "The defendant was charged as an —————— after the fact for helping the fugitive escape.",
+    "options": [
+      "ACCESSORY",
+      "DEBTOR",
+      "PRECEDENT",
+      "DUE PROCESS"
+    ],
+    "correct": "ACCESSORY",
+    "explanation": "ACCESSORY: A person who aids, abets, or encourages the commission of a crime without being the principal perpetrator.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 471,
+    "type": "gap-fill",
+    "question": "The accountant was prosecuted for —————— after she was caught diverting company funds to a personal account.",
+    "options": [
+      "RESIDENCY PERMIT",
+      "AFFIDAVIT",
+      "MORTGAGE",
+      "EMBEZZLEMENT"
+    ],
+    "correct": "EMBEZZLEMENT",
+    "explanation": "EMBEZZLEMENT: The unlawful taking of funds or property by someone in a position of trust, such as an employee or official.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 472,
+    "type": "gap-fill",
+    "question": "The defendant was charged with grand —————— for stealing merchandise worth £5,000 from the store.",
+    "options": [
+      "MEDIATION",
+      "PLEA",
+      "LARCENY",
+      "DIVORCE DECREE"
+    ],
+    "correct": "LARCENY",
+    "explanation": "LARCENY: The unlawful taking and carrying away of another person's personal property with the intent to permanently deprive them of it.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 473,
+    "type": "gap-fill",
+    "question": "The defendant was charged with —————— for creating fake cheques and attempting to cash them at the bank.",
+    "options": [
+      "INSOLVENCY",
+      "GUARDIANSHIP",
+      "FORGERY",
+      "DEFAULT"
+    ],
+    "correct": "FORGERY",
+    "explanation": "FORGERY: The unlawful creation or alteration of a document with the intent to use it fraudulently.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 474,
+    "type": "gap-fill",
+    "question": "The suspect was arrested on suspicion of —————— after three buildings caught fire under suspicious circumstances.",
+    "options": [
+      "TAX EVASION",
+      "ARSON",
+      "INDEMNITY",
+      "CORPORATE GOVERNANCE"
+    ],
+    "correct": "ARSON",
+    "explanation": "ARSON: The unlawful and intentional setting of a fire or causing an explosion to damage property.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 475,
+    "type": "gap-fill",
+    "question": "The defendant was convicted of involuntary —————— when his reckless driving caused the death of a pedestrian.",
+    "options": [
+      "UNFAIR DISMISSAL",
+      "TRIBUNAL",
+      "MANSLAUGHTER",
+      "WAIVER"
+    ],
+    "correct": "MANSLAUGHTER",
+    "explanation": "MANSLAUGHTER: The unlawful killing of a human being without the intent to kill, distinguished from murder by the absence of malice.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 476,
+    "type": "gap-fill",
+    "question": "The defendant was convicted of —————— for punching the victim in the face.",
+    "options": [
+      "MEMORANDUM OF ASSOCIATION",
+      "RESTITUTION",
+      "INJUNCTIVE RELIEF",
+      "ASSAULT AND BATTERY"
+    ],
+    "correct": "ASSAULT AND BATTERY",
+    "explanation": "ASSAULT AND BATTERY: A combination of two offenses: assault (threat of harm) and battery (actual harmful contact).",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 477,
+    "type": "gap-fill",
+    "question": "The defendant was charged with —————— when he used a knife during the confrontation.",
+    "options": [
+      "NATURAL JUSTICE",
+      "ANTICIPATORY BREACH",
+      "MEDIATION",
+      "AGGRAVATED ASSAULT"
+    ],
+    "correct": "AGGRAVATED ASSAULT",
+    "explanation": "AGGRAVATED ASSAULT: An assault that is more serious or violent, often involving a weapon or causing severe bodily harm.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 478,
+    "type": "gap-fill",
+    "question": "The defendant was convicted of —————— for engaging in sexual intercourse with a minor.",
+    "options": [
+      "STATUTORY RAPE",
+      "TRADE SECRET",
+      "TORT",
+      "SUBPOENA"
+    ],
+    "correct": "STATUTORY RAPE",
+    "explanation": "STATUTORY RAPE: Sexual intercourse with a person below the legal age of consent, regardless of consent or force.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 479,
+    "type": "gap-fill",
+    "question": "The suspect was arrested and charged with armed —————— after threatening a bank employee with a gun.",
+    "options": [
+      "PROBATION",
+      "ROBBERY",
+      "LIMITED LIABILITY",
+      "JUDICIAL REVIEW"
+    ],
+    "correct": "ROBBERY",
+    "explanation": "ROBBERY: The taking of property from a person by force, threat, or intimidation.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 480,
+    "type": "gap-fill",
+    "question": "The defendant was charged with —————— after breaking into a store with the intent to steal merchandise.",
+    "options": [
+      "MARITIME LIEN",
+      "MANSLAUGHTER",
+      "BURGLARY",
+      "QUALIFIED"
+    ],
+    "correct": "BURGLARY",
+    "explanation": "BURGLARY: The unlawful entry into a building with the intent to commit a crime, typically theft.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 481,
+    "type": "gap-fill",
+    "question": "The company was convicted of —————— for misrepresenting the quality of its products to customers.",
+    "options": [
+      "MATTER",
+      "FRAUD",
+      "VOIDABLE",
+      "WHISTLEBLOWER"
+    ],
+    "correct": "FRAUD",
+    "explanation": "FRAUD: The intentional deception or misrepresentation of facts to deprive someone of property or money.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 482,
+    "type": "gap-fill",
+    "question": "The witness was charged with —————— after admitting that his testimony at trial was false.",
+    "options": [
+      "EXPERT WITNESS",
+      "REMOTENESS OF DAMAGE",
+      "PERJURY",
+      "TAX EVASION"
+    ],
+    "correct": "PERJURY",
+    "explanation": "PERJURY: The deliberate giving of false testimony under oath in a court proceeding.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 483,
+    "type": "gap-fill",
+    "question": "The company was prosecuted for —————— after the authorities discovered unreported income and fictitious deductions.",
+    "options": [
+      "VICARIOUS LIABILITY",
+      "CAPITAL",
+      "TAX EVASION",
+      "HARASSMENT"
+    ],
+    "correct": "TAX EVASION",
+    "explanation": "TAX EVASION: The deliberate non-payment or underpayment of taxes owed, as opposed to tax avoidance, which is legal.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 484,
+    "type": "gap-fill",
+    "question": "The criminal organization was convicted of —————— for transferring drug proceeds through legitimate businesses.",
+    "options": [
+      "MONEY LAUNDERING",
+      "FIDUCIARY DUTY",
+      "TRESPASS",
+      "ALIMONY"
+    ],
+    "correct": "MONEY LAUNDERING",
+    "explanation": "MONEY LAUNDERING: The process of concealing the origins of illegally obtained money by transferring it through complex transactions to make it appear legitimate.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 485,
+    "type": "gap-fill",
+    "question": "The defendant was charged with —————— to commit fraud after planning the scheme with his business partners.",
+    "options": [
+      "CONSPIRACY",
+      "BANKRUPTCY",
+      "DISCHARGE OF BANKRUPTCY",
+      "TERMINATION"
+    ],
+    "correct": "CONSPIRACY",
+    "explanation": "CONSPIRACY: An agreement between two or more persons to commit a crime or accomplish an unlawful purpose.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 486,
+    "type": "gap-fill",
+    "question": "The company filed for bankruptcy after reaching a state of ——————, unable to meet its financial obligations.",
+    "options": [
+      "COLLECTIVE BARGAINING",
+      "REFUGEE STATUS",
+      "PUPILLAGE",
+      "INSOLVENCY"
+    ],
+    "correct": "INSOLVENCY",
+    "explanation": "INSOLVENCY: The financial condition in which a person or company is unable to pay debts as they become due.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 487,
+    "type": "gap-fill",
+    "question": "The individual filed for personal —————— to address massive debt accumulated from failed business ventures.",
+    "options": [
+      "LAWYER",
+      "CONFLICT OF INTEREST",
+      "TRESPASS",
+      "BANKRUPTCY"
+    ],
+    "correct": "BANKRUPTCY",
+    "explanation": "BANKRUPTCY: A legal process through which a person or company is relieved of debts they cannot pay, subject to court supervision.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 488,
+    "type": "gap-fill",
+    "question": "The court ordered the —————— of the failed company, with creditors receiving a percentage of their claims from the asset sales.",
+    "options": [
+      "TRADE SECRET",
+      "OMBUDSMAN",
+      "LIQUIDATION",
+      "OFFER"
+    ],
+    "correct": "LIQUIDATION",
+    "explanation": "LIQUIDATION: The process of winding up a company's affairs by selling its assets and distributing the proceeds to creditors and shareholders.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 489,
+    "type": "gap-fill",
+    "question": "The court held that a peppercorn can constitute valid ——————.",
+    "options": [
+      "CONSIDERATION",
+      "PARTNERSHIP",
+      "LEGAL COSTS",
+      "TITLE"
+    ],
+    "correct": "CONSIDERATION",
+    "explanation": "CONSIDERATION: Something of value exchanged between parties to a contract, which makes the agreement legally binding.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 490,
+    "type": "gap-fill",
+    "question": "The supplier's late delivery amounted to a ——————.",
+    "options": [
+      "ADOPTION",
+      "SENTENCE",
+      "DEFENDANT",
+      "BREACH OF CONTRACT"
+    ],
+    "correct": "BREACH OF CONTRACT",
+    "explanation": "BREACH OF CONTRACT: Failure, without legal excuse, to perform any promise that forms part of a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 491,
+    "type": "gap-fill",
+    "question": "The seller gave a —————— that the goods were free from defects.",
+    "options": [
+      "WARRANTY",
+      "SERVE",
+      "WRONGFUL DISMISSAL",
+      "STATUTE OF LIMITATIONS"
+    ],
+    "correct": "WARRANTY",
+    "explanation": "WARRANTY: A promise in a contract, the breach of which entitles the injured party to damages but not to terminate the contract.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 492,
+    "type": "gap-fill",
+    "question": "The contract included an —————— clause covering third-party claims.",
+    "options": [
+      "SERVE",
+      "COVENANT",
+      "ANNULMENT",
+      "INDEMNITY"
+    ],
+    "correct": "INDEMNITY",
+    "explanation": "INDEMNITY: A contractual obligation of one party to compensate the loss incurred by another party.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 493,
+    "type": "gap-fill",
+    "question": "The buyer sought —————— of the contract on the grounds of misrepresentation.",
+    "options": [
+      "COMMON LAW",
+      "LEGAL PRACTICE",
+      "WITHHOLDING TAX",
+      "RESCISSION"
+    ],
+    "correct": "RESCISSION",
+    "explanation": "RESCISSION: The cancellation of a contract, returning the parties to the position they were in before it was made.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 494,
+    "type": "gap-fill",
+    "question": "The original contractor was replaced by ——————, with the client's agreement.",
+    "options": [
+      "SETTLEMENT",
+      "ESCROW",
+      "FIDUCIARY DUTY",
+      "NOVATION"
+    ],
+    "correct": "NOVATION",
+    "explanation": "NOVATION: The replacement of one party to a contract with a new party, with the consent of all involved.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 495,
+    "type": "gap-fill",
+    "question": "The lease prohibited —————— of the tenancy without the landlord's consent.",
+    "options": [
+      "PROPERTY DAMAGE",
+      "PATENT",
+      "TENANCY",
+      "ASSIGNMENT"
+    ],
+    "correct": "ASSIGNMENT",
+    "explanation": "ASSIGNMENT: The transfer of rights or benefits under a contract from one party to another.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 496,
+    "type": "gap-fill",
+    "question": "Payment was a —————— to the transfer of ownership.",
+    "options": [
+      "CONDITION PRECEDENT",
+      "AGGRAVATING FACTOR",
+      "HABEAS CORPUS",
+      "LEASEHOLD"
+    ],
+    "correct": "CONDITION PRECEDENT",
+    "explanation": "CONDITION PRECEDENT: An event or term that must occur before a contractual obligation becomes enforceable.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 497,
+    "type": "gap-fill",
+    "question": "The contract specified —————— of $500 per day of delay.",
+    "options": [
+      "EXCLUSION CLAUSE",
+      "LIQUIDATED DAMAGES",
+      "PUPILLAGE",
+      "HABEAS CORPUS"
+    ],
+    "correct": "LIQUIDATED DAMAGES",
+    "explanation": "LIQUIDATED DAMAGES: A pre-agreed sum payable as compensation for a specific breach of contract, fixed in advance by the parties.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 498,
+    "type": "gap-fill",
+    "question": "The buyer rescinded the contract on the basis of fraudulent ——————.",
+    "options": [
+      "PERJURY",
+      "MANSLAUGHTER",
+      "MISREPRESENTATION",
+      "SETTLEMENT"
+    ],
+    "correct": "MISREPRESENTATION",
+    "explanation": "MISREPRESENTATION: A false statement of fact made by one party which induces the other party to enter into a contract.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 499,
+    "type": "gap-fill",
+    "question": "A contract formed for an illegal purpose is —————— from the start.",
+    "options": [
+      "TRADEMARK",
+      "VOID",
+      "GROUNDS",
+      "INSOLVENCY"
+    ],
+    "correct": "VOID",
+    "explanation": "VOID: Having no legal effect from the outset, as if the contract had never existed.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 500,
+    "type": "gap-fill",
+    "question": "A contract signed under duress is —————— at the option of the injured party.",
+    "options": [
+      "GRIEVANCE",
+      "SANCTIONS",
+      "NATURAL JUSTICE",
+      "VOIDABLE"
+    ],
+    "correct": "VOIDABLE",
+    "explanation": "VOIDABLE: Valid until one party elects to cancel it, usually because of a defect such as misrepresentation or duress.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 501,
+    "type": "gap-fill",
+    "question": "The tenant relied on promissory —————— to enforce the landlord's promise.",
+    "options": [
+      "DEFAULT",
+      "HARASSMENT",
+      "ESTOPPEL",
+      "DRAFT"
+    ],
+    "correct": "ESTOPPEL",
+    "explanation": "ESTOPPEL: A legal principle that prevents a person from going back on a promise or representation that another has relied upon.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 502,
+    "type": "gap-fill",
+    "question": "The buyer's refusal to accept delivery before the due date was an ——————.",
+    "options": [
+      "GUARANTEE",
+      "NEGLIGENCE",
+      "ADMINISTRATIVE LAW",
+      "ANTICIPATORY BREACH"
+    ],
+    "correct": "ANTICIPATORY BREACH",
+    "explanation": "ANTICIPATORY BREACH: A breach of contract occurring when one party indicates, before performance is due, that it will not perform its obligations.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 503,
+    "type": "gap-fill",
+    "question": "The —————— was held to be unreasonable and therefore unenforceable.",
+    "options": [
+      "TAX EVASION",
+      "EXCLUSION CLAUSE",
+      "DUE DILIGENCE",
+      "MARITIME LIEN"
+    ],
+    "correct": "EXCLUSION CLAUSE",
+    "explanation": "EXCLUSION CLAUSE: A contractual term that seeks to limit or exclude a party's liability for breach or negligence.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 504,
+    "type": "gap-fill",
+    "question": "The hospital was found liable for —————— after the patient was injured.",
+    "options": [
+      "TRADE SECRET",
+      "DEFAULT",
+      "PRIMA FACIE",
+      "NEGLIGENCE"
+    ],
+    "correct": "NEGLIGENCE",
+    "explanation": "NEGLIGENCE: Failure to exercise the care that a reasonably prudent person would exercise in similar circumstances, causing harm to another.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 505,
+    "type": "gap-fill",
+    "question": "Doctors owe a —————— to their patients at all times.",
+    "options": [
+      "MENS REA",
+      "NOVATION",
+      "DEFAMATION",
+      "DUTY OF CARE"
+    ],
+    "correct": "DUTY OF CARE",
+    "explanation": "DUTY OF CARE: A legal obligation to take reasonable care to avoid causing harm to others who could foreseeably be affected.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 506,
+    "type": "gap-fill",
+    "question": "The newspaper was sued for —————— after publishing the false allegations.",
+    "options": [
+      "DEFAMATION",
+      "SENTENCE",
+      "HONOUR",
+      "CUSTODY"
+    ],
+    "correct": "DEFAMATION",
+    "explanation": "DEFAMATION: The act of damaging someone's reputation by making a false statement about them to a third party.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 507,
+    "type": "gap-fill",
+    "question": "The article was found to contain —————— against the company's director.",
+    "options": [
+      "NOVATION",
+      "PAROL EVIDENCE",
+      "LEASEHOLD",
+      "LIBEL"
+    ],
+    "correct": "LIBEL",
+    "explanation": "LIBEL: Defamation in a permanent or written form, such as in print, broadcast, or online publication.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 508,
+    "type": "gap-fill",
+    "question": "He brought a claim for —————— after the false accusations were made at the meeting.",
+    "options": [
+      "DAMAGES",
+      "SLANDER",
+      "PATENT",
+      "MENS REA"
+    ],
+    "correct": "SLANDER",
+    "explanation": "SLANDER: Defamation made in a transient form, typically through spoken words rather than in writing.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 509,
+    "type": "gap-fill",
+    "question": "The factory's constant noise was held to be a private ——————.",
+    "options": [
+      "RESPOND",
+      "CONDITION PRECEDENT",
+      "SHAREHOLDER",
+      "NUISANCE"
+    ],
+    "correct": "NUISANCE",
+    "explanation": "NUISANCE: An unreasonable interference with a person's use or enjoyment of their land or with the public's rights.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 510,
+    "type": "gap-fill",
+    "question": "Walking across the farmer's field without permission amounted to ——————.",
+    "options": [
+      "TRESPASS",
+      "SECURITIZATION",
+      "EARNEST MONEY",
+      "BONA FIDE"
+    ],
+    "correct": "TRESPASS",
+    "explanation": "TRESPASS: Unlawful interference with a person, their property, or their land, without consent or legal justification.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 511,
+    "type": "gap-fill",
+    "question": "Manufacturers can face —————— for defective products that cause injury.",
+    "options": [
+      "RIGHT OF WAY",
+      "STRICT LIABILITY",
+      "MONEY LAUNDERING",
+      "INFRINGEMENT"
+    ],
+    "correct": "STRICT LIABILITY",
+    "explanation": "STRICT LIABILITY: Liability that does not depend on actual negligence or intent to harm, but is based purely on the breach of an obligation.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 512,
+    "type": "gap-fill",
+    "question": "The claimant had to establish —————— between the negligence and the injury.",
+    "options": [
+      "PARTY",
+      "MATTER",
+      "CAUSATION",
+      "ASSIGNMENT"
+    ],
+    "correct": "CAUSATION",
+    "explanation": "CAUSATION: The legal requirement to show that the defendant's act or omission actually caused the claimant's loss or injury.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 513,
+    "type": "gap-fill",
+    "question": "The damages were reduced by 30% due to the claimant's ——————.",
+    "options": [
+      "TRIBUNAL",
+      "MATERNITY LEAVE",
+      "ACQUITTAL",
+      "CONTRIBUTORY NEGLIGENCE"
+    ],
+    "correct": "CONTRIBUTORY NEGLIGENCE",
+    "explanation": "CONTRIBUTORY NEGLIGENCE: A defence arguing that the claimant's own carelessness contributed to the harm they suffered, reducing the damages payable.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 514,
+    "type": "gap-fill",
+    "question": "The court applied the test of —————— to limit the defendant's liability.",
+    "options": [
+      "STATUTORY RAPE",
+      "AGGRAVATED ASSAULT",
+      "MENS REA",
+      "REMOTENESS OF DAMAGE"
+    ],
+    "correct": "REMOTENESS OF DAMAGE",
+    "explanation": "REMOTENESS OF DAMAGE: A legal test limiting liability to losses that were a reasonably foreseeable consequence of the defendant's conduct.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 515,
+    "type": "gap-fill",
+    "question": "The court refused to award damages for pure —————— in this case.",
+    "options": [
+      "BOARD OF DIRECTORS",
+      "CUSTODY",
+      "ECONOMIC LOSS",
+      "TENANCY"
+    ],
+    "correct": "ECONOMIC LOSS",
+    "explanation": "ECONOMIC LOSS: Financial loss that does not arise from physical damage to a person or property, often subject to special legal limitations on recovery.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 516,
+    "type": "gap-fill",
+    "question": "The —————— voted to approve the merger at the annual general meeting.",
+    "options": [
+      "MAINTENANCE ORDER",
+      "SHAREHOLDER",
+      "AGGRAVATING FACTOR",
+      "VERDICT"
+    ],
+    "correct": "SHAREHOLDER",
+    "explanation": "SHAREHOLDER: A person or entity that owns shares in a company and is therefore entitled to a portion of its profits and voting rights.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 517,
+    "type": "gap-fill",
+    "question": "The —————— set out the procedure for appointing directors.",
+    "options": [
+      "ASSIGNMENT",
+      "ARTICLES OF ASSOCIATION",
+      "FIDUCIARY DUTY",
+      "CREDITOR"
+    ],
+    "correct": "ARTICLES OF ASSOCIATION",
+    "explanation": "ARTICLES OF ASSOCIATION: A document that sets out the rules governing the internal management and operation of a company.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 518,
+    "type": "gap-fill",
+    "question": "The —————— confirmed the company's founding members.",
+    "options": [
+      "OMBUDSMAN",
+      "TRAINING CONTRACT",
+      "MEMORANDUM OF ASSOCIATION",
+      "PERJURY"
+    ],
+    "correct": "MEMORANDUM OF ASSOCIATION",
+    "explanation": "MEMORANDUM OF ASSOCIATION: A legal document signed by initial shareholders, agreeing to form the company and become its members.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 519,
+    "type": "gap-fill",
+    "question": "—————— protects shareholders' personal assets from company debts.",
+    "options": [
+      "DOUBLE TAXATION",
+      "TRADEMARK",
+      "RES JUDICATA",
+      "LIMITED LIABILITY"
+    ],
+    "correct": "LIMITED LIABILITY",
+    "explanation": "LIMITED LIABILITY: A legal status in which a company's owners are responsible for its debts only up to the amount they invested.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 520,
+    "type": "gap-fill",
+    "question": "Directors owe a —————— to act in the company's best interests.",
+    "options": [
+      "LANDLORD",
+      "FIDUCIARY DUTY",
+      "DUE PROCESS",
+      "REFUGEE STATUS"
+    ],
+    "correct": "FIDUCIARY DUTY",
+    "explanation": "FIDUCIARY DUTY: A legal obligation of one party to act in the best interests of another, such as a director's duty toward the company.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 521,
+    "type": "gap-fill",
+    "question": "The —————— created one of the largest law firms in the region.",
+    "options": [
+      "RESCISSION",
+      "MERGER",
+      "ASSAULT",
+      "ESCROW"
+    ],
+    "correct": "MERGER",
+    "explanation": "MERGER: The combination of two or more companies into a single new entity.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 522,
+    "type": "gap-fill",
+    "question": "The —————— of the start-up was completed for $50 million.",
+    "options": [
+      "ACQUISITION",
+      "CUSTODY",
+      "MEDIATION",
+      "SPECIFIC PERFORMANCE"
+    ],
+    "correct": "ACQUISITION",
+    "explanation": "ACQUISITION: The process of one company taking ownership or control of another company.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 523,
+    "type": "gap-fill",
+    "question": "The directors filed for —————— after the company's main client withdrew.",
+    "options": [
+      "VOID",
+      "INSOLVENCY",
+      "ESTOPPEL",
+      "ACQUISITION"
+    ],
+    "correct": "INSOLVENCY",
+    "explanation": "INSOLVENCY: The state of being unable to pay debts as they fall due, or having liabilities that exceed assets.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 524,
+    "type": "gap-fill",
+    "question": "The board declared a —————— of $2 per share for the financial year.",
+    "options": [
+      "ADVOCACY",
+      "DIVIDEND",
+      "CLAIM",
+      "EVIDENCE"
+    ],
+    "correct": "DIVIDEND",
+    "explanation": "DIVIDEND: A portion of a company's profits distributed to its shareholders, usually on a regular basis.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 525,
+    "type": "gap-fill",
+    "question": "Shareholders unable to attend could appoint a —————— to vote for them.",
+    "options": [
+      "TENANCY",
+      "PROXY",
+      "TAX EVASION",
+      "TITLE"
+    ],
+    "correct": "PROXY",
+    "explanation": "PROXY: A person authorised to vote on behalf of a shareholder at a company meeting, or the document granting such authority.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 526,
+    "type": "gap-fill",
+    "question": "The court ordered the —————— of the company due to its inability to pay debts.",
+    "options": [
+      "TENANT",
+      "WINDING UP",
+      "DETENTION",
+      "LICENSING"
+    ],
+    "correct": "WINDING UP",
+    "explanation": "WINDING UP: The formal process of closing down a company, selling its assets, paying creditors, and dissolving it.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 527,
+    "type": "gap-fill",
+    "question": "The prosecution had to prove both the act and the —————— of the defendant.",
+    "options": [
+      "RESTRICTIVE COVENANT",
+      "CUSTODY",
+      "MENS REA",
+      "SOVEREIGNTY"
+    ],
+    "correct": "MENS REA",
+    "explanation": "MENS REA: The mental element of a crime; the intention or knowledge of wrongdoing that constitutes part of a crime.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 528,
+    "type": "gap-fill",
+    "question": "The defence argued that there was no —————— because the act was involuntary.",
+    "options": [
+      "CROSS-EXAMINATION",
+      "VENUE",
+      "ACTUS REUS",
+      "COPYRIGHT"
+    ],
+    "correct": "ACTUS REUS",
+    "explanation": "ACTUS REUS: The physical act or conduct that constitutes a criminal offence, as opposed to the mental state behind it.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 529,
+    "type": "gap-fill",
+    "question": "The jury returned a verdict of —————— after two days of deliberation.",
+    "options": [
+      "ACQUITTAL",
+      "ADMINISTRATION ORDER",
+      "CORPORATE GOVERNANCE",
+      "SLANDER"
+    ],
+    "correct": "ACQUITTAL",
+    "explanation": "ACQUITTAL: A formal court decision that a person accused of a crime is not guilty.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 530,
+    "type": "gap-fill",
+    "question": "His previous —————— was taken into account when determining the sentence.",
+    "options": [
+      "INDEMNIFICATION",
+      "CONVICTION",
+      "REAL ESTATE",
+      "ACCOMPLICE"
+    ],
+    "correct": "CONVICTION",
+    "explanation": "CONVICTION: A formal declaration by a court that someone is guilty of a criminal offence.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 531,
+    "type": "gap-fill",
+    "question": "The grand jury issued an —————— against the company's former CEO.",
+    "options": [
+      "LITIGATION",
+      "WARRANTY",
+      "RESCISSION",
+      "INDICTMENT"
+    ],
+    "correct": "INDICTMENT",
+    "explanation": "INDICTMENT: A formal written accusation charging a person with a serious criminal offence, presented to a court.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 532,
+    "type": "gap-fill",
+    "question": "The —————— presented strong forensic evidence against the accused.",
+    "options": [
+      "WITNESS",
+      "LEASEHOLD",
+      "PROSECUTION",
+      "INJUNCTION"
+    ],
+    "correct": "PROSECUTION",
+    "explanation": "PROSECUTION: The legal party that brings criminal charges against a defendant in court, representing the state.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 533,
+    "type": "gap-fill",
+    "question": "The —————— pleaded not guilty to all charges brought against him.",
+    "options": [
+      "OWNERSHIP",
+      "DEFENDANT",
+      "BREACH OF CONTRACT",
+      "LIBEL"
+    ],
+    "correct": "DEFENDANT",
+    "explanation": "DEFENDANT: A person or party against whom a criminal charge or civil claim is brought.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 534,
+    "type": "gap-fill",
+    "question": "He accepted a —————— and received a reduced sentence.",
+    "options": [
+      "ENCUMBRANCE",
+      "ESTOPPEL",
+      "PLEA BARGAIN",
+      "INHERITANCE TAX"
+    ],
+    "correct": "PLEA BARGAIN",
+    "explanation": "PLEA BARGAIN: An agreement in which a defendant pleads guilty to a lesser charge in exchange for a more lenient sentence.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 535,
+    "type": "gap-fill",
+    "question": "The judge took the defendant's —————— into account before sentencing.",
+    "options": [
+      "AGGRAVATING FACTOR",
+      "MITIGATING CIRCUMSTANCES",
+      "GUARANTEE",
+      "INJUNCTIVE RELIEF"
+    ],
+    "correct": "MITIGATING CIRCUMSTANCES",
+    "explanation": "MITIGATING CIRCUMSTANCES: Facts or circumstances that do not justify or excuse an offence but may reduce the severity of the sentence.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 536,
+    "type": "gap-fill",
+    "question": "The use of a weapon was treated as an —————— in sentencing.",
+    "options": [
+      "LEASEHOLD",
+      "AGGRAVATING FACTOR",
+      "DUE PROCESS",
+      "POLLUTION"
+    ],
+    "correct": "AGGRAVATING FACTOR",
+    "explanation": "AGGRAVATING FACTOR: A circumstance that increases the severity or culpability of a criminal act, leading to a harsher sentence.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 537,
+    "type": "gap-fill",
+    "question": "The —————— sought damages for breach of contract.",
+    "options": [
+      "ADOPTION",
+      "VERDICT",
+      "PLAINTIFF",
+      "CONSIDERATION"
+    ],
+    "correct": "PLAINTIFF",
+    "explanation": "PLAINTIFF: The party who initiates a lawsuit by filing a complaint against another party in a civil case.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 538,
+    "type": "gap-fill",
+    "question": "The court ruled that it had no —————— to hear the case.",
+    "options": [
+      "DIRECTOR",
+      "JURISDICTION",
+      "FALSE IMPRISONMENT",
+      "ESCROW"
+    ],
+    "correct": "JURISDICTION",
+    "explanation": "JURISDICTION: The official power of a court to make legal decisions and judgments over a particular area or matter.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 539,
+    "type": "gap-fill",
+    "question": "The court granted an —————— to stop the publication of the confidential report.",
+    "options": [
+      "INJUNCTION",
+      "ASSIGNMENT",
+      "REPRESENT",
+      "EXCLUSION CLAUSE"
+    ],
+    "correct": "INJUNCTION",
+    "explanation": "INJUNCTION: A court order requiring a party to do, or refrain from doing, a specific act.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 540,
+    "type": "gap-fill",
+    "question": "The witness was served with a —————— to testify at the trial.",
+    "options": [
+      "SUBPOENA",
+      "RESTITUTION",
+      "SEVERANCE PAY",
+      "NEGLIGENCE"
+    ],
+    "correct": "SUBPOENA",
+    "explanation": "SUBPOENA: A legal document ordering a person to attend court or produce documents as evidence.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 541,
+    "type": "gap-fill",
+    "question": "She submitted an —————— confirming the events of that evening.",
+    "options": [
+      "AFFIDAVIT",
+      "CONTRIBUTORY NEGLIGENCE",
+      "ENCUMBRANCE",
+      "ANNULMENT"
+    ],
+    "correct": "AFFIDAVIT",
+    "explanation": "AFFIDAVIT: A written statement of facts confirmed by oath, used as evidence in court proceedings.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 542,
+    "type": "gap-fill",
+    "question": "The defendant lodged an —————— against the conviction.",
+    "options": [
+      "ALIMONY",
+      "APPEAL",
+      "JUDICIAL REVIEW",
+      "PLAINTIFF"
+    ],
+    "correct": "APPEAL",
+    "explanation": "APPEAL: A formal request to a higher court to review and change the decision of a lower court.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 543,
+    "type": "gap-fill",
+    "question": "The jury reached a unanimous —————— of guilty.",
+    "options": [
+      "EMPLOYMENT CONTRACT",
+      "VERDICT",
+      "DISCHARGE OF BANKRUPTCY",
+      "LITIGATION"
+    ],
+    "correct": "VERDICT",
+    "explanation": "VERDICT: The formal decision made by a jury or judge on the matters submitted to them in a trial.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 544,
+    "type": "gap-fill",
+    "question": "The witness's account fell apart under ——————.",
+    "options": [
+      "CROSS-EXAMINATION",
+      "TRAINING CONTRACT",
+      "ACQUITTAL",
+      "COLLATERAL"
+    ],
+    "correct": "CROSS-EXAMINATION",
+    "explanation": "CROSS-EXAMINATION: The questioning of a witness by the opposing party's lawyer during a trial, to test their evidence.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 545,
+    "type": "gap-fill",
+    "question": "In criminal cases, the —————— lies with the prosecution.",
+    "options": [
+      "CAPITAL",
+      "BURDEN OF PROOF",
+      "DUTY OF CARE",
+      "AFFIDAVIT"
+    ],
+    "correct": "BURDEN OF PROOF",
+    "explanation": "BURDEN OF PROOF: The duty of a party in a legal dispute to prove the facts they are alleging.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 546,
+    "type": "gap-fill",
+    "question": "The judge relied on —————— set by the Supreme Court in a similar case.",
+    "options": [
+      "ACQUISITION",
+      "PRECEDENT",
+      "ACCOMPLICE",
+      "BONA FIDE"
+    ],
+    "correct": "PRECEDENT",
+    "explanation": "PRECEDENT: A previous court decision that is used as an authority for deciding similar cases in the future.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 547,
+    "type": "gap-fill",
+    "question": "During ——————, the company was required to disclose internal emails.",
+    "options": [
+      "DELEGATED LEGISLATION",
+      "MEDIATION",
+      "LEASEHOLD",
+      "DISCOVERY"
+    ],
+    "correct": "DISCOVERY",
+    "explanation": "DISCOVERY: The pre-trial process in which parties exchange relevant documents and information held by the other side.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 548,
+    "type": "gap-fill",
+    "question": "The parties reached a —————— just before the trial was due to begin.",
+    "options": [
+      "RESIDENCY PERMIT",
+      "SETTLEMENT",
+      "DEFAMATION",
+      "CLASS ACTION"
+    ],
+    "correct": "SETTLEMENT",
+    "explanation": "SETTLEMENT: An agreement reached by parties to a dispute, often resolving the matter without going to trial.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 549,
+    "type": "gap-fill",
+    "question": "Thousands of consumers joined the —————— against the manufacturer.",
+    "options": [
+      "DEPOSITION",
+      "VISA",
+      "SEVERANCE PAY",
+      "CLASS ACTION"
+    ],
+    "correct": "CLASS ACTION",
+    "explanation": "CLASS ACTION: A lawsuit in which a large group of people with a common claim sue collectively as a single party.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 550,
+    "type": "gap-fill",
+    "question": "She purchased the —————— of the house, giving her full ownership of the land.",
+    "options": [
+      "DETENTION",
+      "LETTER OF CREDIT",
+      "CAPITAL GAINS TAX",
+      "FREEHOLD"
+    ],
+    "correct": "FREEHOLD",
+    "explanation": "FREEHOLD: A form of property ownership in which the owner holds the land and buildings on it indefinitely, with no time limit.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 551,
+    "type": "gap-fill",
+    "question": "The flat is sold on a —————— basis with 99 years remaining on the lease.",
+    "options": [
+      "ALLEGATION",
+      "LEASEHOLD",
+      "PARTNERSHIP",
+      "TENANCY"
+    ],
+    "correct": "LEASEHOLD",
+    "explanation": "LEASEHOLD: A form of property ownership in which the holder has the right to occupy land or property for a fixed period under a lease.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 552,
+    "type": "gap-fill",
+    "question": "The neighbour was granted an —————— to access the road through the property.",
+    "options": [
+      "BONA FIDE",
+      "NOTICE PERIOD",
+      "ACQUITTAL",
+      "EASEMENT"
+    ],
+    "correct": "EASEMENT",
+    "explanation": "EASEMENT: A legal right for one landowner to use land belonging to another for a specific limited purpose, such as access.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 553,
+    "type": "gap-fill",
+    "question": "The bank approved a —————— covering 80% of the property's value.",
+    "options": [
+      "DAMAGES",
+      "INSOLVENCY",
+      "MORTGAGE",
+      "ROBBERY"
+    ],
+    "correct": "MORTGAGE",
+    "explanation": "MORTGAGE: A loan secured against property, giving the lender the right to repossess it if repayments are not made.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 554,
+    "type": "gap-fill",
+    "question": "The —————— confirmed that the land had been registered in her name.",
+    "options": [
+      "PETITION",
+      "PROMISSORY NOTE",
+      "RESCISSION",
+      "TITLE DEED"
+    ],
+    "correct": "TITLE DEED",
+    "explanation": "TITLE DEED: An official document proving a person's legal ownership of a property or piece of land.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 555,
+    "type": "gap-fill",
+    "question": "The —————— agreement specified a notice period of two months.",
+    "options": [
+      "CULPABILITY",
+      "TENANCY",
+      "COMMON LAW",
+      "ANNULMENT"
+    ],
+    "correct": "TENANCY",
+    "explanation": "TENANCY: The legal arrangement under which a tenant occupies and uses property owned by a landlord, usually for rent.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 556,
+    "type": "gap-fill",
+    "question": "A solicitor handled the —————— for the purchase of the new house.",
+    "options": [
+      "CROSS-EXAMINATION",
+      "CONVEYANCING",
+      "MORTGAGE",
+      "HONOUR"
+    ],
+    "correct": "CONVEYANCING",
+    "explanation": "CONVEYANCING: The legal process of transferring ownership of property from one person to another.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 557,
+    "type": "gap-fill",
+    "question": "The buyer checked the register to ensure the property was free from ——————.",
+    "options": [
+      "ASSAULT",
+      "MATERNITY LEAVE",
+      "ENCUMBRANCE",
+      "PROMISSORY NOTE"
+    ],
+    "correct": "ENCUMBRANCE",
+    "explanation": "ENCUMBRANCE: A claim, lien, or liability attached to property, such as a mortgage, that may affect its transfer or value.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 558,
+    "type": "gap-fill",
+    "question": "He claimed ownership of the disused land through ——————.",
+    "options": [
+      "FORMATION OF A BUSINESS",
+      "PLAINTIFF",
+      "ADVERSE POSSESSION",
+      "MEDIATION"
+    ],
+    "correct": "ADVERSE POSSESSION",
+    "explanation": "ADVERSE POSSESSION: A legal principle allowing a person to claim ownership of land they have occupied for a specified period, without the owner's permission.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 559,
+    "type": "gap-fill",
+    "question": "A —————— prevented the owner from building on the land.",
+    "options": [
+      "RESTRICTIVE COVENANT",
+      "ASSAULT",
+      "NATURALIZATION",
+      "MEMORANDUM OF ASSOCIATION"
+    ],
+    "correct": "RESTRICTIVE COVENANT",
+    "explanation": "RESTRICTIVE COVENANT: A clause in a property deed that limits how the owner may use or develop the land.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 560,
+    "type": "gap-fill",
+    "question": "The deed granted a —————— across the neighbouring farm.",
+    "options": [
+      "DRAFT",
+      "TENANCY",
+      "RIGHT OF WAY",
+      "ASYLUM"
+    ],
+    "correct": "RIGHT OF WAY",
+    "explanation": "RIGHT OF WAY: A legal right to pass through land or property belonging to someone else.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 561,
+    "type": "gap-fill",
+    "question": "The tribunal found that the employee had been the victim of ——————.",
+    "options": [
+      "UNFAIR DISMISSAL",
+      "PLEA",
+      "FREEHOLD",
+      "MAINTENANCE ORDER"
+    ],
+    "correct": "UNFAIR DISMISSAL",
+    "explanation": "UNFAIR DISMISSAL: The termination of an employee's contract by an employer in a manner that is not justified or lawful.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 562,
+    "type": "gap-fill",
+    "question": "Theft from the company was treated as ——————, leading to instant dismissal.",
+    "options": [
+      "GROSS MISCONDUCT",
+      "PLEA",
+      "MITIGATING CIRCUMSTANCES",
+      "SLANDER"
+    ],
+    "correct": "GROSS MISCONDUCT",
+    "explanation": "GROSS MISCONDUCT: Serious wrongdoing by an employee that justifies immediate dismissal without notice.",
+    "level": "A",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 563,
+    "type": "gap-fill",
+    "question": "Her contract required a three-month —————— before resignation.",
+    "options": [
+      "NOTICE PERIOD",
+      "BREACH OF CONTRACT",
+      "PERJURY",
+      "AFFIDAVIT"
+    ],
+    "correct": "NOTICE PERIOD",
+    "explanation": "NOTICE PERIOD: The length of time an employee or employer must give before ending an employment contract.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 564,
+    "type": "gap-fill",
+    "question": "The company faced a lawsuit for age —————— in its hiring process.",
+    "options": [
+      "BOARD OF DIRECTORS",
+      "DISCRIMINATION",
+      "STRICT LIABILITY",
+      "TORT"
+    ],
+    "correct": "DISCRIMINATION",
+    "explanation": "DISCRIMINATION: Unfair or unequal treatment of a person based on characteristics such as race, gender, age, or disability.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 565,
+    "type": "gap-fill",
+    "question": "The new wages were agreed through —————— with the union.",
+    "options": [
+      "HONOUR",
+      "STARE DECISIS",
+      "COLLECTIVE BARGAINING",
+      "INTELLECTUAL PROPERTY"
+    ],
+    "correct": "COLLECTIVE BARGAINING",
+    "explanation": "COLLECTIVE BARGAINING: Negotiation between employers and a group of employees, often through a union, to determine pay and working conditions.",
+    "level": "A",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 566,
+    "type": "gap-fill",
+    "question": "She raised a formal —————— against her manager for unfair treatment.",
+    "options": [
+      "GRIEVANCE",
+      "WILL",
+      "TRADE SECRET",
+      "TRESPASS"
+    ],
+    "correct": "GRIEVANCE",
+    "explanation": "GRIEVANCE: A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 567,
+    "type": "gap-fill",
+    "question": "The departing director received a generous —————— package.",
+    "options": [
+      "UNILATERAL CONTRACT",
+      "POLLUTION",
+      "BARRISTER",
+      "SEVERANCE PAY"
+    ],
+    "correct": "SEVERANCE PAY",
+    "explanation": "SEVERANCE PAY: Compensation paid to an employee upon termination of employment, often in addition to any notice pay owed.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 568,
+    "type": "gap-fill",
+    "question": "The company filed a —————— application to protect its new technology.",
+    "options": [
+      "PATENT",
+      "DELEGATED LEGISLATION",
+      "BURDEN OF PROOF",
+      "SHAREHOLDER"
+    ],
+    "correct": "PATENT",
+    "explanation": "PATENT: An exclusive legal right granted for an invention, preventing others from making, using, or selling it without permission.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 569,
+    "type": "gap-fill",
+    "question": "The logo was registered as a —————— to prevent imitation.",
+    "options": [
+      "CORPORATE GOVERNANCE",
+      "TRADEMARK",
+      "DETENTION",
+      "LICENSING"
+    ],
+    "correct": "TRADEMARK",
+    "explanation": "TRADEMARK: A recognisable symbol, word, or phrase legally registered to represent a company or product.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 570,
+    "type": "gap-fill",
+    "question": "—————— protects the author's novel from being copied without permission.",
+    "options": [
+      "STARE DECISIS",
+      "UNFAIR DISMISSAL",
+      "CARELESSNESS",
+      "COPYRIGHT"
+    ],
+    "correct": "COPYRIGHT",
+    "explanation": "COPYRIGHT: The legal right of an author or creator to control the reproduction and distribution of their original work.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 571,
+    "type": "gap-fill",
+    "question": "The court ruled that the rival product constituted patent ——————.",
+    "options": [
+      "PROCEEDINGS",
+      "PRECEDENT",
+      "ESTOPPEL",
+      "INFRINGEMENT"
+    ],
+    "correct": "INFRINGEMENT",
+    "explanation": "INFRINGEMENT: The unauthorised use or violation of another person's intellectual property rights, such as a patent, trademark, or copyright.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 572,
+    "type": "gap-fill",
+    "question": "The software company entered into a —————— agreement with a foreign distributor.",
+    "options": [
+      "SOVEREIGNTY",
+      "FORMATION OF A BUSINESS",
+      "REDUNDANCY",
+      "LICENSING"
+    ],
+    "correct": "LICENSING",
+    "explanation": "LICENSING: The process of granting another party permission to use intellectual property under agreed conditions, often for a fee.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 573,
+    "type": "gap-fill",
+    "question": "The recipe was kept as a —————— for over a century.",
+    "options": [
+      "TRADE SECRET",
+      "REDUNDANCY",
+      "LIQUIDATED DAMAGES",
+      "REAL ESTATE"
+    ],
+    "correct": "TRADE SECRET",
+    "explanation": "TRADE SECRET: Confidential business information that provides a competitive advantage and is protected from disclosure by law.",
+    "level": "A",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 574,
+    "type": "gap-fill",
+    "question": "The author receives a —————— on every copy of the book sold.",
+    "options": [
+      "CIVIL LAW",
+      "ROYALTY",
+      "WILL",
+      "ANNULMENT"
+    ],
+    "correct": "ROYALTY",
+    "explanation": "ROYALTY: A payment made to the owner of intellectual property for the right to use it, usually based on sales or usage.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 575,
+    "type": "gap-fill",
+    "question": "The campaign group applied for —————— of the council's decision.",
+    "options": [
+      "LAW FIRM",
+      "LIQUIDATED DAMAGES",
+      "VOIDABLE",
+      "JUDICIAL REVIEW"
+    ],
+    "correct": "JUDICIAL REVIEW",
+    "explanation": "JUDICIAL REVIEW: The process by which courts examine the lawfulness of decisions or actions taken by public bodies.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 576,
+    "type": "gap-fill",
+    "question": "The minister issued regulations under —————— to implement the new policy.",
+    "options": [
+      "PARTY",
+      "BREACH OF CONTRACT",
+      "VICARIOUS LIABILITY",
+      "DELEGATED LEGISLATION"
+    ],
+    "correct": "DELEGATED LEGISLATION",
+    "explanation": "DELEGATED LEGISLATION: Laws made by a body other than parliament, under powers granted to it by an Act of Parliament.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 577,
+    "type": "gap-fill",
+    "question": "The complaint was referred to the —————— for an independent investigation.",
+    "options": [
+      "ESTATE TAX",
+      "OMBUDSMAN",
+      "STATUTE OF FRAUDS",
+      "ACQUISITION"
+    ],
+    "correct": "OMBUDSMAN",
+    "explanation": "OMBUDSMAN: An official appointed to investigate complaints made by individuals against public authorities or organisations.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 578,
+    "type": "gap-fill",
+    "question": "The court declared the council's decision —————— and therefore void.",
+    "options": [
+      "LEGAL COSTS",
+      "LANDLORD",
+      "COMPENSATION",
+      "ULTRA VIRES"
+    ],
+    "correct": "ULTRA VIRES",
+    "explanation": "ULTRA VIRES: Describing an act done beyond the legal power or authority of the person or body performing it.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 579,
+    "type": "gap-fill",
+    "question": "The tribunal's decision was overturned for breaching the rules of ——————.",
+    "options": [
+      "SLANDER",
+      "EASEMENT",
+      "SENTENCE",
+      "NATURAL JUSTICE"
+    ],
+    "correct": "NATURAL JUSTICE",
+    "explanation": "NATURAL JUSTICE: Fundamental principles of fairness in legal proceedings, including the right to a fair hearing and freedom from bias.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 580,
+    "type": "gap-fill",
+    "question": "The case was heard before an employment ——————.",
+    "options": [
+      "TRIBUNAL",
+      "PETITION",
+      "WAIVER",
+      "TERMINATION"
+    ],
+    "correct": "TRIBUNAL",
+    "explanation": "TRIBUNAL: A specialised body established to resolve disputes in a particular area, such as employment or tax matters.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 581,
+    "type": "gap-fill",
+    "question": "The two countries signed a —————— to reduce tariffs on imported goods.",
+    "options": [
+      "TITLE",
+      "TREATY",
+      "DEPORTATION",
+      "INDEMNITY"
+    ],
+    "correct": "TREATY",
+    "explanation": "TREATY: A formal written agreement between two or more states or international organisations, governed by international law.",
+    "level": "F",
+    "topic": "International Law"
+  },
+  {
+    "id": 582,
+    "type": "gap-fill",
+    "question": "The dispute raised questions about national —————— over the disputed territory.",
+    "options": [
+      "NATURAL JUSTICE",
+      "REDUNDANCY",
+      "PROXY",
+      "SOVEREIGNTY"
+    ],
+    "correct": "SOVEREIGNTY",
+    "explanation": "SOVEREIGNTY: The supreme authority of a state to govern itself and make its own laws without external interference.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 583,
+    "type": "gap-fill",
+    "question": "The government requested the —————— of the fugitive from a neighbouring country.",
+    "options": [
+      "FORCE MAJEURE",
+      "EXTRADITION",
+      "STATUTORY RAPE",
+      "PAROLE"
+    ],
+    "correct": "EXTRADITION",
+    "explanation": "EXTRADITION: The formal process by which one state surrenders a suspected or convicted criminal to another state for trial or punishment.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 584,
+    "type": "gap-fill",
+    "question": "The diplomat could not be prosecuted because he had ——————.",
+    "options": [
+      "PERJURY",
+      "QUALIFIED",
+      "DISCRIMINATION",
+      "DIPLOMATIC IMMUNITY"
+    ],
+    "correct": "DIPLOMATIC IMMUNITY",
+    "explanation": "DIPLOMATIC IMMUNITY: A legal protection that exempts diplomats from prosecution or lawsuits under the laws of the host country.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 585,
+    "type": "gap-fill",
+    "question": "The dispute raised complex issues of —————— between the two legal systems.",
+    "options": [
+      "FLAG STATE",
+      "CROSS-EXAMINATION",
+      "LICENSING",
+      "CROSS-BORDER JURISDICTION"
+    ],
+    "correct": "CROSS-BORDER JURISDICTION",
+    "explanation": "CROSS-BORDER JURISDICTION: The authority of a court to hear and decide cases involving parties or events located in more than one country.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 586,
+    "type": "gap-fill",
+    "question": "The international community imposed economic —————— on the regime.",
+    "options": [
+      "DEFAULT",
+      "TRADE SECRET",
+      "SANCTIONS",
+      "ACTUS REUS"
+    ],
+    "correct": "SANCTIONS",
+    "explanation": "SANCTIONS: Penalties or restrictions imposed by one or more states or international bodies against another, often for political reasons.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 587,
+    "type": "gap-fill",
+    "question": "The defendant argued that he had been denied —————— during the investigation.",
+    "options": [
+      "DUE PROCESS",
+      "RESTITUTION",
+      "UNJUST ENRICHMENT",
+      "BATTERY"
+    ],
+    "correct": "DUE PROCESS",
+    "explanation": "DUE PROCESS: The legal requirement that the state must respect all of a person's legal rights when depriving them of life, liberty, or property.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 588,
+    "type": "gap-fill",
+    "question": "The court dismissed the case on the grounds of ——————.",
+    "options": [
+      "RESCISSION",
+      "SEVERANCE PAY",
+      "RIGHT OF WAY",
+      "RES JUDICATA"
+    ],
+    "correct": "RES JUDICATA",
+    "explanation": "RES JUDICATA: A legal doctrine preventing the same parties from re-litigating a matter that has already been finally decided by a court.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 589,
+    "type": "gap-fill",
+    "question": "Under the doctrine of ——————, the lower court was bound by the appellate ruling.",
+    "options": [
+      "INHERITANCE TAX",
+      "THE BAR",
+      "STARE DECISIS",
+      "PAROLE"
+    ],
+    "correct": "STARE DECISIS",
+    "explanation": "STARE DECISIS: The legal principle that courts should follow precedents set by previous decisions in similar cases.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 590,
+    "type": "gap-fill",
+    "question": "The court accepted that the purchase had been made in —————— belief that the seller owned the goods.",
+    "options": [
+      "QUALIFIED",
+      "RECEIVERSHIP",
+      "BONA FIDE",
+      "REMEDIES"
+    ],
+    "correct": "BONA FIDE",
+    "explanation": "BONA FIDE: Done in good faith, honestly, and without any intention to deceive.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 591,
+    "type": "gap-fill",
+    "question": "The prosecution presented a —————— case against the defendant.",
+    "options": [
+      "REAL ESTATE",
+      "PRIMA FACIE",
+      "COURT FEE",
+      "ENCUMBRANCE"
+    ],
+    "correct": "PRIMA FACIE",
+    "explanation": "PRIMA FACIE: Describing evidence that is sufficient to establish a fact or case unless disproved by further evidence.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 592,
+    "type": "gap-fill",
+    "question": "Her lawyers filed a writ of —————— to challenge her detention.",
+    "options": [
+      "APPEAL",
+      "LIBEL",
+      "HABEAS CORPUS",
+      "PRECEDENT"
+    ],
+    "correct": "HABEAS CORPUS",
+    "explanation": "HABEAS CORPUS: A legal action requiring a person under arrest to be brought before a court to determine whether their detention is lawful.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 593,
+    "type": "gap-fill",
+    "question": "The marriage was declared a —————— due to one party's lack of capacity to consent.",
+    "options": [
+      "NULLITY",
+      "STATUTE",
+      "DEFENDANT",
+      "ARTICLES OF ASSOCIATION"
+    ],
+    "correct": "NULLITY",
+    "explanation": "NULLITY: The state of being legally void, as though it had never existed or taken place.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 594,
+    "type": "gap-fill",
+    "question": "The firm went into —————— after failing to secure new investment.",
+    "options": [
+      "MAINTENANCE ORDER",
+      "LIQUIDATION",
+      "REMEDIES",
+      "COURT FEE"
+    ],
+    "correct": "LIQUIDATION",
+    "explanation": "LIQUIDATION: The process of bringing a company to an end by selling its assets to pay off debts before it is dissolved.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 595,
+    "type": "gap-fill",
+    "question": "The struggling retailer was put into —————— by its creditors.",
+    "options": [
+      "RECEIVERSHIP",
+      "MENS REA",
+      "ACTUS REUS",
+      "DRAFT"
+    ],
+    "correct": "RECEIVERSHIP",
+    "explanation": "RECEIVERSHIP: A situation in which an insolvent company is placed under the control of a receiver appointed to manage its affairs.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 596,
+    "type": "gap-fill",
+    "question": "The —————— agreed to a repayment plan to recover part of the debt.",
+    "options": [
+      "TITLE",
+      "SALVAGE",
+      "ASSAULT AND BATTERY",
+      "CREDITOR"
+    ],
+    "correct": "CREDITOR",
+    "explanation": "CREDITOR: A person or organisation to whom money is owed by another party.",
+    "level": "F",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 597,
+    "type": "gap-fill",
+    "question": "The —————— was given sixty days to settle the outstanding balance.",
+    "options": [
+      "INDICTMENT",
+      "WITNESS",
+      "DEBTOR",
+      "ALLEGATION"
+    ],
+    "correct": "DEBTOR",
+    "explanation": "DEBTOR: A person or organisation that owes money to another party.",
+    "level": "F",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 598,
+    "type": "gap-fill",
+    "question": "After three years, he received his ——————.",
+    "options": [
+      "RESIDENCY PERMIT",
+      "DISCHARGE OF BANKRUPTCY",
+      "ESCROW",
+      "VALID"
+    ],
+    "correct": "DISCHARGE OF BANKRUPTCY",
+    "explanation": "DISCHARGE OF BANKRUPTCY: The release of a bankrupt person from most of their debts, allowing them to make a fresh financial start.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 599,
+    "type": "gap-fill",
+    "question": "The court granted an —————— to give the company a chance to restructure.",
+    "options": [
+      "ADMINISTRATION ORDER",
+      "DEMURRAGE",
+      "INJUNCTION",
+      "SEVERANCE PAY"
+    ],
+    "correct": "ADMINISTRATION ORDER",
+    "explanation": "ADMINISTRATION ORDER: A court order placing an insolvent company under the management of an administrator to attempt rescue or restructuring.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 600,
+    "type": "gap-fill",
+    "question": "The court ordered him to pay —————— to his former wife for five years.",
+    "options": [
+      "INDICTMENT",
+      "ALIMONY",
+      "TERMINATION",
+      "REAL ESTATE"
+    ],
+    "correct": "ALIMONY",
+    "explanation": "ALIMONY: Financial support paid by one spouse to another after separation or divorce, to fulfil obligations arising from the marriage.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 601,
+    "type": "gap-fill",
+    "question": "The mother was awarded sole —————— of the children.",
+    "options": [
+      "DISCOVERY",
+      "OMBUDSMAN",
+      "SENTENCE",
+      "CUSTODY"
+    ],
+    "correct": "CUSTODY",
+    "explanation": "CUSTODY: The legal right and responsibility to care for and make decisions about a child, usually following separation or divorce.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 602,
+    "type": "gap-fill",
+    "question": "She applied for an —————— on the grounds that the marriage had never been consummated.",
+    "options": [
+      "ANNULMENT",
+      "TITLE DEED",
+      "CREDITOR",
+      "INJUNCTIVE RELIEF"
+    ],
+    "correct": "ANNULMENT",
+    "explanation": "ANNULMENT: A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 603,
+    "type": "gap-fill",
+    "question": "They signed a —————— before the wedding to protect their separate assets.",
+    "options": [
+      "INJUNCTION",
+      "COMPENSATION",
+      "TRADEMARK",
+      "PRENUPTIAL AGREEMENT"
+    ],
+    "correct": "PRENUPTIAL AGREEMENT",
+    "explanation": "PRENUPTIAL AGREEMENT: A contract entered into by a couple before marriage, setting out how their assets will be divided in the event of divorce.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 604,
+    "type": "gap-fill",
+    "question": "The —————— was finalised after a six-month waiting period.",
+    "options": [
+      "RESIDENCY PERMIT",
+      "EASEMENT",
+      "DIVORCE DECREE",
+      "SUBPOENA"
+    ],
+    "correct": "DIVORCE DECREE",
+    "explanation": "DIVORCE DECREE: An official court order that legally ends a marriage.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 605,
+    "type": "gap-fill",
+    "question": "The couple completed the —————— process after months of assessment.",
+    "options": [
+      "ENCUMBRANCE",
+      "AGGRAVATED ASSAULT",
+      "ADOPTION",
+      "TITLE DEED"
+    ],
+    "correct": "ADOPTION",
+    "explanation": "ADOPTION: The legal process by which a person becomes the legal parent of a child who is not their biological offspring.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 606,
+    "type": "gap-fill",
+    "question": "The father was issued a —————— requiring monthly payments for his children.",
+    "options": [
+      "INDICTMENT",
+      "PROPERTY DAMAGE",
+      "SHAREHOLDER",
+      "MAINTENANCE ORDER"
+    ],
+    "correct": "MAINTENANCE ORDER",
+    "explanation": "MAINTENANCE ORDER: A court order requiring one person to make regular financial payments to support a former spouse or child.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 607,
+    "type": "gap-fill",
+    "question": "The estate had to pay —————— before the assets could be distributed.",
+    "options": [
+      "PATENT",
+      "MATERNITY LEAVE",
+      "INHERITANCE TAX",
+      "REPRESENT"
+    ],
+    "correct": "INHERITANCE TAX",
+    "explanation": "INHERITANCE TAX: A tax levied on the property and money passed on to heirs or beneficiaries after a person's death.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 608,
+    "type": "gap-fill",
+    "question": "The —————— significantly reduced the value of assets passed to the heirs.",
+    "options": [
+      "DISCHARGE OF BANKRUPTCY",
+      "OWNERSHIP",
+      "PRECEDENT",
+      "ESTATE TAX"
+    ],
+    "correct": "ESTATE TAX",
+    "explanation": "ESTATE TAX: A tax imposed on the total value of a deceased person's assets before they are transferred to their beneficiaries.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 609,
+    "type": "gap-fill",
+    "question": "He was charged with —————— after hiding income in offshore accounts.",
+    "options": [
+      "LIBEL",
+      "PRECEDENT",
+      "TAX EVASION",
+      "LARCENY"
+    ],
+    "correct": "TAX EVASION",
+    "explanation": "TAX EVASION: The illegal act of deliberately avoiding paying taxes that are legally owed.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 610,
+    "type": "gap-fill",
+    "question": "The company used legitimate —————— schemes to reduce its liabilities.",
+    "options": [
+      "TAX AVOIDANCE",
+      "DIVORCE DECREE",
+      "DUTY OF CARE",
+      "CONVEYANCING"
+    ],
+    "correct": "TAX AVOIDANCE",
+    "explanation": "TAX AVOIDANCE: The legal use of methods to minimise tax liability within the boundaries of the law.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 611,
+    "type": "gap-fill",
+    "question": "She had to pay —————— on the profit from selling her second property.",
+    "options": [
+      "TRADEMARK",
+      "EXCLUSION CLAUSE",
+      "CAPITAL GAINS TAX",
+      "COMMON LAW"
+    ],
+    "correct": "CAPITAL GAINS TAX",
+    "explanation": "CAPITAL GAINS TAX: A tax on the profit realised from the sale of an asset, such as property or shares, that has increased in value.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 612,
+    "type": "gap-fill",
+    "question": "The bank deducted —————— from the interest paid to foreign investors.",
+    "options": [
+      "STARE DECISIS",
+      "SLANDER",
+      "WITHHOLDING TAX",
+      "CUSTODY"
+    ],
+    "correct": "WITHHOLDING TAX",
+    "explanation": "WITHHOLDING TAX: A tax deducted at source from income such as wages, dividends, or royalties before payment is made to the recipient.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 613,
+    "type": "gap-fill",
+    "question": "The treaty was signed to prevent —————— of cross-border income.",
+    "options": [
+      "COLLATERAL",
+      "COPYRIGHT",
+      "DOUBLE TAXATION",
+      "LAWYER"
+    ],
+    "correct": "DOUBLE TAXATION",
+    "explanation": "DOUBLE TAXATION: The imposition of tax on the same income or asset by two different jurisdictions.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 614,
+    "type": "gap-fill",
+    "question": "He faced —————— after his visa was revoked.",
+    "options": [
+      "BANKRUPTCY",
+      "ADOPTION",
+      "MORTGAGE",
+      "DEPORTATION"
+    ],
+    "correct": "DEPORTATION",
+    "explanation": "DEPORTATION: The formal removal of a foreign national from a country, usually for violating immigration or criminal laws.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 615,
+    "type": "gap-fill",
+    "question": "She applied for —————— after fleeing political persecution in her homeland.",
+    "options": [
+      "STATUTORY RAPE",
+      "AFFIDAVIT",
+      "BARRISTER",
+      "ASYLUM"
+    ],
+    "correct": "ASYLUM",
+    "explanation": "ASYLUM: Protection granted by a state to a person fleeing persecution in their home country.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 616,
+    "type": "gap-fill",
+    "question": "He had to renew his work —————— before it expired.",
+    "options": [
+      "BILATERAL CONTRACT",
+      "LIQUIDATION",
+      "INFRINGEMENT",
+      "VISA"
+    ],
+    "correct": "VISA",
+    "explanation": "VISA: An official document or stamp permitting a person to enter, leave, or stay in a country for a specified purpose and period.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 617,
+    "type": "gap-fill",
+    "question": "After ten years of residency, she was eligible to apply for ——————.",
+    "options": [
+      "CONVICTION",
+      "NATURALIZATION",
+      "SUE",
+      "OBLIGATION"
+    ],
+    "correct": "NATURALIZATION",
+    "explanation": "NATURALIZATION: The legal process by which a foreign national acquires the citizenship of another country.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 618,
+    "type": "gap-fill",
+    "question": "His —————— was extended for another two years.",
+    "options": [
+      "RESIDENCY PERMIT",
+      "VENUE",
+      "MINORITY SHAREHOLDER",
+      "ALIMONY"
+    ],
+    "correct": "RESIDENCY PERMIT",
+    "explanation": "RESIDENCY PERMIT: An official authorisation allowing a foreign national to live in a country for a specified period.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 619,
+    "type": "gap-fill",
+    "question": "Migrants were held in —————— while their applications were processed.",
+    "options": [
+      "SICK PAY",
+      "BILATERAL CONTRACT",
+      "DETENTION",
+      "VICARIOUS LIABILITY"
+    ],
+    "correct": "DETENTION",
+    "explanation": "DETENTION: The act of officially holding a person in custody, particularly while their immigration status is being determined.",
+    "level": "A",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 620,
+    "type": "gap-fill",
+    "question": "The tribunal granted her —————— based on the risk of persecution.",
+    "options": [
+      "REFUGEE STATUS",
+      "CONVEYANCING",
+      "DIVIDEND",
+      "COVENANTS"
+    ],
+    "correct": "REFUGEE STATUS",
+    "explanation": "REFUGEE STATUS: Official legal recognition that a person meets the international definition of a refugee and is entitled to protection.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 621,
+    "type": "gap-fill",
+    "question": "The collision case was heard under —————— in the maritime court.",
+    "options": [
+      "WRONGFUL DISMISSAL",
+      "ADMIRALTY LAW",
+      "CAPITAL GAINS TAX",
+      "ENCUMBRANCE"
+    ],
+    "correct": "ADMIRALTY LAW",
+    "explanation": "ADMIRALTY LAW: The body of law governing maritime activities, including shipping, navigation, and transport of goods and people by sea.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 622,
+    "type": "gap-fill",
+    "question": "The exporter presented the —————— to claim payment under the letter of credit.",
+    "options": [
+      "NOVATION",
+      "BILL OF LADING",
+      "MONEY LAUNDERING",
+      "VENUE"
+    ],
+    "correct": "BILL OF LADING",
+    "explanation": "BILL OF LADING: A document issued by a carrier acknowledging receipt of goods for shipment and serving as evidence of the contract of carriage.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 623,
+    "type": "gap-fill",
+    "question": "The —————— set out the freight rate and the duration of the hire.",
+    "options": [
+      "CHARTER PARTY",
+      "ACTUS REUS",
+      "UNFAIR DISMISSAL",
+      "TAX EVASION"
+    ],
+    "correct": "CHARTER PARTY",
+    "explanation": "CHARTER PARTY: A contract by which a shipowner agrees to lease a vessel to a charterer for transporting goods or passengers.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 624,
+    "type": "gap-fill",
+    "question": "The —————— company was awarded a substantial fee for rescuing the stranded tanker.",
+    "options": [
+      "GUARANTEE",
+      "BILATERAL CONTRACT",
+      "SALVAGE",
+      "GROUNDS"
+    ],
+    "correct": "SALVAGE",
+    "explanation": "SALVAGE: The act of rescuing a ship, its cargo, or crew from danger at sea, often entitling the rescuer to a reward.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 625,
+    "type": "gap-fill",
+    "question": "The crew asserted a —————— over the vessel for unpaid wages.",
+    "options": [
+      "CAUSATION",
+      "MARITIME LIEN",
+      "DOUBLE TAXATION",
+      "CAPITAL GAINS TAX"
+    ],
+    "correct": "MARITIME LIEN",
+    "explanation": "MARITIME LIEN: A legal claim against a ship that secures a debt or claim arising from its operation, such as unpaid wages or damage.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 626,
+    "type": "gap-fill",
+    "question": "The vessel was required to comply with the safety regulations of its ——————.",
+    "options": [
+      "ESCROW",
+      "NULLITY",
+      "FLAG STATE",
+      "REDUNDANCY"
+    ],
+    "correct": "FLAG STATE",
+    "explanation": "FLAG STATE: The country under whose laws a ship is registered, which has primary jurisdiction over the vessel.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 627,
+    "type": "gap-fill",
+    "question": "The charterer was liable to pay —————— for the delay in unloading the cargo.",
+    "options": [
+      "UNFAIR DISMISSAL",
+      "WARRANTY",
+      "DEMURRAGE",
+      "SICK PAY"
+    ],
+    "correct": "DEMURRAGE",
+    "explanation": "DEMURRAGE: A charge payable to a shipowner when loading or unloading takes longer than the time allowed in the charter agreement.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 628,
+    "type": "gap-fill",
+    "question": "The bank required the company to provide property as —————— for the loan.",
+    "options": [
+      "SETTLEMENT",
+      "ADOPTION",
+      "COLLATERAL",
+      "SPECIFIC PERFORMANCE"
+    ],
+    "correct": "COLLATERAL",
+    "explanation": "COLLATERAL: An asset pledged by a borrower to a lender as security for a loan, which may be seized if the loan is not repaid.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 629,
+    "type": "gap-fill",
+    "question": "His father agreed to act as —————— for the loan repayments.",
+    "options": [
+      "LICENSING",
+      "GUARANTOR",
+      "DISCHARGE OF BANKRUPTCY",
+      "GRIEVANCE"
+    ],
+    "correct": "GUARANTOR",
+    "explanation": "GUARANTOR: A person who agrees to be legally responsible for another person's debt or obligation if they fail to fulfil it.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 630,
+    "type": "gap-fill",
+    "question": "The borrower —————— on the loan after losing his job.",
+    "options": [
+      "SUE",
+      "STARE DECISIS",
+      "DEFAULT",
+      "DISCRIMINATION"
+    ],
+    "correct": "DEFAULT",
+    "explanation": "DEFAULT: Failure to fulfil an obligation, especially the failure to repay a loan according to its terms.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 631,
+    "type": "gap-fill",
+    "question": "The bank used —————— to free up capital for new lending.",
+    "options": [
+      "RESCISSION",
+      "SECURITIZATION",
+      "CAPITAL GAINS TAX",
+      "JUDICIAL REVIEW"
+    ],
+    "correct": "SECURITIZATION",
+    "explanation": "SECURITIZATION: The process of pooling financial assets, such as loans, and converting them into tradable securities.",
+    "level": "A",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 632,
+    "type": "gap-fill",
+    "question": "Payment for the shipment was secured through an irrevocable ——————.",
+    "options": [
+      "ASSAULT",
+      "LETTER OF CREDIT",
+      "ENCUMBRANCE",
+      "STARE DECISIS"
+    ],
+    "correct": "LETTER OF CREDIT",
+    "explanation": "LETTER OF CREDIT: A document issued by a bank guaranteeing payment to a seller on behalf of a buyer, provided certain conditions are met.",
+    "level": "H",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 633,
+    "type": "gap-fill",
+    "question": "The loan agreement contained —————— restricting further borrowing.",
+    "options": [
+      "PUPILLAGE",
+      "EXPERT WITNESS",
+      "COVENANT",
+      "FALSE IMPRISONMENT"
+    ],
+    "correct": "COVENANT",
+    "explanation": "COVENANT: A formal promise in a financial agreement, often requiring the borrower to do or refrain from doing certain things.",
+    "level": "A",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 634,
+    "type": "gap-fill",
+    "question": "The investors carried out —————— before agreeing to fund the start-up.",
+    "options": [
+      "TENANCY",
+      "CONVEYANCING",
+      "DUE DILIGENCE",
+      "TRADE SECRET"
+    ],
+    "correct": "DUE DILIGENCE",
+    "explanation": "DUE DILIGENCE: A thorough investigation of a business or person before entering into an agreement or transaction, to assess risks.",
+    "level": "H",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 635,
+    "type": "gap-fill",
+    "question": "She qualified as a —————— after completing her training contract.",
+    "options": [
+      "MORTGAGE",
+      "LAWYER",
+      "ROYALTY",
+      "ACQUITTAL"
+    ],
+    "correct": "LAWYER",
+    "explanation": "LAWYER: A general term for a person who is qualified to practise law and advise clients on legal matters.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 636,
+    "type": "gap-fill",
+    "question": "The —————— advised her client to settle the dispute out of court.",
+    "options": [
+      "SOLICITOR",
+      "PATENT",
+      "CHARTER PARTY",
+      "LIQUIDATED DAMAGES"
+    ],
+    "correct": "SOLICITOR",
+    "explanation": "SOLICITOR: A lawyer who gives legal advice, deals directly with clients, drafts documents and may instruct barristers; usually works in a law firm.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 637,
+    "type": "gap-fill",
+    "question": "The solicitor instructed a —————— to represent the client at trial.",
+    "options": [
+      "APPEAL",
+      "DOUBLE TAXATION",
+      "BARRISTER",
+      "WITNESS"
+    ],
+    "correct": "BARRISTER",
+    "explanation": "BARRISTER: A specialist advocate who represents clients in court, is usually self-employed and is instructed by solicitors.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 638,
+    "type": "gap-fill",
+    "question": "In the United States, the defendant's —————— filed a motion to dismiss.",
+    "options": [
+      "MONEY LAUNDERING",
+      "ATTORNEY",
+      "TORT",
+      "CAPITAL"
+    ],
+    "correct": "ATTORNEY",
+    "explanation": "ATTORNEY: The American term for a lawyer; a person legally appointed to act on behalf of another.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 639,
+    "type": "gap-fill",
+    "question": "Barristers are trained in —————— to present arguments effectively in court.",
+    "options": [
+      "LIQUIDATION",
+      "INTELLECTUAL PROPERTY",
+      "ADVOCACY",
+      "SHAREHOLDER"
+    ],
+    "correct": "ADVOCACY",
+    "explanation": "ADVOCACY: The work of representing and pleading a client's case, especially in a court of law.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 640,
+    "type": "gap-fill",
+    "question": "She works for a large international —————— specialising in commercial law.",
+    "options": [
+      "LAW FIRM",
+      "GUARANTEE",
+      "AFFIDAVIT",
+      "STARE DECISIS"
+    ],
+    "correct": "LAW FIRM",
+    "explanation": "LAW FIRM: A business formed by one or more lawyers to provide legal services to clients.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 641,
+    "type": "gap-fill",
+    "question": "He secured a —————— at a leading firm after graduating.",
+    "options": [
+      "TRESPASS",
+      "LAWYER",
+      "ADMINISTRATION ORDER",
+      "TRAINING CONTRACT"
+    ],
+    "correct": "TRAINING CONTRACT",
+    "explanation": "TRAINING CONTRACT: A period of supervised practical training that a trainee must complete to qualify as a solicitor.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 642,
+    "type": "gap-fill",
+    "question": "After the bar course, she began her —————— in a set of chambers.",
+    "options": [
+      "CONDITION PRECEDENT",
+      "BONA FIDE",
+      "PUPILLAGE",
+      "NOTICE PERIOD"
+    ],
+    "correct": "PUPILLAGE",
+    "explanation": "PUPILLAGE: The final, practical stage of training for a barrister, spent working under the supervision of an experienced barrister.",
+    "level": "A",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 643,
+    "type": "gap-fill",
+    "question": "The claimant issued a —————— for breach of contract.",
+    "options": [
+      "LEGAL COSTS",
+      "CLAIM",
+      "VOIDABLE",
+      "ADVERSE POSSESSION"
+    ],
+    "correct": "CLAIM",
+    "explanation": "CLAIM: A court action brought by a claimant seeking a remedy, such as money or an order, against a defendant.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 644,
+    "type": "gap-fill",
+    "question": "Legal —————— were issued against the company for unpaid debts.",
+    "options": [
+      "PROCEEDINGS",
+      "ACTUS REUS",
+      "INTELLECTUAL PROPERTY",
+      "BREACH OF CONTRACT"
+    ],
+    "correct": "PROCEEDINGS",
+    "explanation": "PROCEEDINGS: The formal series of steps and actions making up a legal case before a court.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 645,
+    "type": "gap-fill",
+    "question": "The losing party was ordered to pay the other side's ——————.",
+    "options": [
+      "DUTY OF CARE",
+      "COVENANT",
+      "SLANDER",
+      "LEGAL COSTS"
+    ],
+    "correct": "LEGAL COSTS",
+    "explanation": "LEGAL COSTS: The expenses incurred in pursuing or defending a legal case, including lawyers' fees and court charges.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 646,
+    "type": "gap-fill",
+    "question": "A —————— must be paid when the claim is first issued.",
+    "options": [
+      "BANKRUPTCY",
+      "EMPLOYMENT CONTRACT",
+      "CORPORATE GOVERNANCE",
+      "COURT FEE"
+    ],
+    "correct": "COURT FEE",
+    "explanation": "COURT FEE: A charge payable to the court for issuing a claim or carrying out a particular step in proceedings.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 647,
+    "type": "gap-fill",
+    "question": "The —————— was sent to enforce the judgment and recover the debt.",
+    "options": [
+      "ULTRA VIRES",
+      "ESTOPPEL",
+      "PLEA",
+      "BAILIFF"
+    ],
+    "correct": "BAILIFF",
+    "explanation": "BAILIFF: An officer of the court responsible for enforcing judgments, such as by seizing goods or recovering debts.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 648,
+    "type": "gap-fill",
+    "question": "The customer threatened to —————— the company for the faulty product.",
+    "options": [
+      "DEFAMATION",
+      "SUE",
+      "EXCLUSION CLAUSE",
+      "CONVEYANCING"
+    ],
+    "correct": "SUE",
+    "explanation": "SUE: To bring a legal claim against a person or organisation in a court of law.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 649,
+    "type": "gap-fill",
+    "question": "The appeal was allowed on the —————— of procedural unfairness.",
+    "options": [
+      "GROUNDS",
+      "NOVATION",
+      "PENALTY CLAUSE",
+      "WARRANTY"
+    ],
+    "correct": "GROUNDS",
+    "explanation": "GROUNDS: The legal basis or reasons on which a claim, defence, or appeal is founded.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 650,
+    "type": "gap-fill",
+    "question": "Many personal injury cases are taken on a —————— basis.",
+    "options": [
+      "DRAFT",
+      "NO WIN NO FEE",
+      "TRADEMARK",
+      "CONVICTION"
+    ],
+    "correct": "NO WIN NO FEE",
+    "explanation": "NO WIN NO FEE: An arrangement in which a client pays the lawyer's fee only if the legal claim is successful.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 651,
+    "type": "gap-fill",
+    "question": "The contract included a clause on how any —————— should be resolved.",
+    "options": [
+      "PETITION",
+      "FIDUCIARY DUTY",
+      "DISPUTE",
+      "ACCESSORY"
+    ],
+    "correct": "DISPUTE",
+    "explanation": "DISPUTE: A disagreement or argument between parties, especially one that may lead to legal action.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 652,
+    "type": "gap-fill",
+    "question": "Negligence is the most common type of —————— in personal injury cases.",
+    "options": [
+      "CAPITAL GAINS TAX",
+      "CORPORATE GOVERNANCE",
+      "TAX EVASION",
+      "TORT"
+    ],
+    "correct": "TORT",
+    "explanation": "TORT: A civil wrong that causes harm or loss to another person, giving rise to legal liability.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 653,
+    "type": "gap-fill",
+    "question": "The court awarded —————— to the injured worker.",
+    "options": [
+      "COMPENSATION",
+      "LIBEL",
+      "COURT FEE",
+      "CONVEYANCING"
+    ],
+    "correct": "COMPENSATION",
+    "explanation": "COMPENSATION: Money awarded to a person to make up for loss, injury, or damage they have suffered.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 654,
+    "type": "gap-fill",
+    "question": "She took six months of —————— after the birth of her son.",
+    "options": [
+      "VOID",
+      "FORCE MAJEURE",
+      "ADMINISTRATION ORDER",
+      "MATERNITY LEAVE"
+    ],
+    "correct": "MATERNITY LEAVE",
+    "explanation": "MATERNITY LEAVE: A protected period of leave from work granted to a mother before and after the birth of her child.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 655,
+    "type": "gap-fill",
+    "question": "Employees are entitled to statutory —————— after a qualifying period.",
+    "options": [
+      "CUSTODY",
+      "CROSS-BORDER JURISDICTION",
+      "CONVICTION",
+      "SICK PAY"
+    ],
+    "correct": "SICK PAY",
+    "explanation": "SICK PAY: Money paid by an employer to an employee who is unable to work because of illness.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 656,
+    "type": "gap-fill",
+    "question": "The founders raised —————— from investors to launch the company.",
+    "options": [
+      "LIBEL",
+      "UNJUST ENRICHMENT",
+      "CAPITAL",
+      "CAPITAL GAINS TAX"
+    ],
+    "correct": "CAPITAL",
+    "explanation": "CAPITAL: The money or assets invested in a business to enable it to operate and grow.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 657,
+    "type": "gap-fill",
+    "question": "A solicitor advised the partners on the ——————.",
+    "options": [
+      "INFRINGEMENT",
+      "FORMATION OF A BUSINESS",
+      "VOIDABLE",
+      "PATENT"
+    ],
+    "correct": "FORMATION OF A BUSINESS",
+    "explanation": "FORMATION OF A BUSINESS: The legal process of creating and registering a new business entity.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 658,
+    "type": "gap-fill",
+    "question": "The two lawyers formed a —————— to set up their own firm.",
+    "options": [
+      "BREACH",
+      "PARTNERSHIP",
+      "ESTATE TAX",
+      "TAX EVASION"
+    ],
+    "correct": "PARTNERSHIP",
+    "explanation": "PARTNERSHIP: A business owned and run by two or more people who share its profits and liabilities.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 659,
+    "type": "gap-fill",
+    "question": "He invested most of his savings in commercial ——————.",
+    "options": [
+      "ENCUMBRANCE",
+      "HONOUR",
+      "GUARANTOR",
+      "REAL ESTATE"
+    ],
+    "correct": "REAL ESTATE",
+    "explanation": "REAL ESTATE: Property consisting of land and the buildings on it, together with associated rights.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 660,
+    "type": "gap-fill",
+    "question": "Each party must perform its —————— under the agreement.",
+    "options": [
+      "PRECEDENT",
+      "ESTOPPEL",
+      "PROXY",
+      "OBLIGATION"
+    ],
+    "correct": "OBLIGATION",
+    "explanation": "OBLIGATION: A legal duty to do or refrain from doing something, often arising under a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 661,
+    "type": "gap-fill",
+    "question": "For a contract to be ——————, there must be offer, acceptance and consideration.",
+    "options": [
+      "ACTUS REUS",
+      "SERVE",
+      "VALID",
+      "ROYALTY"
+    ],
+    "correct": "VALID",
+    "explanation": "VALID: Legally binding and having full legal force or effect.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 662,
+    "type": "gap-fill",
+    "question": "She made a —————— leaving her entire estate to her children.",
+    "options": [
+      "INHERITANCE TAX",
+      "WITNESS",
+      "WILL",
+      "NOTICE PERIOD"
+    ],
+    "correct": "WILL",
+    "explanation": "WILL: A legal document setting out how a person's property and assets should be distributed after their death.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 663,
+    "type": "gap-fill",
+    "question": "—————— of the land passed to the buyer on completion.",
+    "options": [
+      "MANSLAUGHTER",
+      "OWNERSHIP",
+      "CONVICTION",
+      "VERDICT"
+    ],
+    "correct": "OWNERSHIP",
+    "explanation": "OWNERSHIP: The legal right to possess, use and dispose of property or assets.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 664,
+    "type": "gap-fill",
+    "question": "Failing to deliver the goods on time was a —————— of the agreement.",
+    "options": [
+      "LETTER OF CREDIT",
+      "BREACH",
+      "DUE PROCESS",
+      "LIBEL"
+    ],
+    "correct": "BREACH",
+    "explanation": "BREACH: An act of breaking or failing to observe a law, agreement, or duty.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 665,
+    "type": "gap-fill",
+    "question": "The solicitor was asked to —————— the employment contract.",
+    "options": [
+      "FLAG STATE",
+      "DRAFT",
+      "CONSIDERATION",
+      "MATERNITY LEAVE"
+    ],
+    "correct": "DRAFT",
+    "explanation": "DRAFT: To prepare a first or formal version of a legal document such as a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 666,
+    "type": "gap-fill",
+    "question": "The company —————— its obligations under the contract.",
+    "options": [
+      "TITLE DEED",
+      "ARTICLES OF ASSOCIATION",
+      "HONOUR",
+      "BREACH"
+    ],
+    "correct": "HONOUR",
+    "explanation": "HONOUR: To fulfil or carry out an obligation or the terms of an agreement.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 667,
+    "type": "gap-fill",
+    "question": "The contract concerned the sale of —————— to a foreign buyer.",
+    "options": [
+      "DUE DILIGENCE",
+      "RESTITUTION",
+      "CONVICTION",
+      "GOODS"
+    ],
+    "correct": "GOODS",
+    "explanation": "GOODS: Movable physical items that can be bought and sold, especially in commercial transactions.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 668,
+    "type": "gap-fill",
+    "question": "The solicitor met the —————— to discuss the case.",
+    "options": [
+      "DISCOVERY",
+      "CLIENT",
+      "CONFLICT OF INTEREST",
+      "TENANCY"
+    ],
+    "correct": "CLIENT",
+    "explanation": "CLIENT: A person or organisation that receives professional legal services from a lawyer.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 669,
+    "type": "gap-fill",
+    "question": "The barrister will —————— the defendant in court.",
+    "options": [
+      "COURT FEE",
+      "REPRESENT",
+      "ASSIGNMENT",
+      "EMPLOYMENT CONTRACT"
+    ],
+    "correct": "REPRESENT",
+    "explanation": "REPRESENT: To act on behalf of a client, especially by speaking for them in legal proceedings.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 670,
+    "type": "gap-fill",
+    "question": "She decided to —————— in intellectual property law.",
+    "options": [
+      "WITHHOLDING TAX",
+      "VALID",
+      "SPECIALISE",
+      "MENS REA"
+    ],
+    "correct": "SPECIALISE",
+    "explanation": "SPECIALISE: To concentrate on and become an expert in a particular area of law.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 671,
+    "type": "gap-fill",
+    "question": "She is a fully —————— solicitor with five years' experience.",
+    "options": [
+      "ACTUS REUS",
+      "QUALIFIED",
+      "COLLATERAL",
+      "GROSS MISCONDUCT"
+    ],
+    "correct": "QUALIFIED",
+    "explanation": "QUALIFIED: Having the necessary training, examinations and certification to practise as a lawyer.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 672,
+    "type": "gap-fill",
+    "question": "He set up his own —————— after years at a large firm.",
+    "options": [
+      "MEDIATION",
+      "PERJURY",
+      "LEGAL PRACTICE",
+      "PATENT"
+    ],
+    "correct": "LEGAL PRACTICE",
+    "explanation": "LEGAL PRACTICE: The professional work of providing legal services, or a business through which it is carried out.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 673,
+    "type": "gap-fill",
+    "question": "She was called to —————— after completing her training.",
+    "options": [
+      "RECEIVERSHIP",
+      "LIBEL",
+      "THE BAR",
+      "RESIDENCY PERMIT"
+    ],
+    "correct": "THE BAR",
+    "explanation": "THE BAR: The collective term for the profession of barristers, or the process of qualifying as one.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 674,
+    "type": "gap-fill",
+    "question": "The claim form must be —————— on the defendant within four months.",
+    "options": [
+      "ARTICLES OF ASSOCIATION",
+      "CONSTITUTIONAL LAW",
+      "VOIDABLE",
+      "SERVE"
+    ],
+    "correct": "SERVE",
+    "explanation": "SERVE: To formally deliver legal documents, such as a claim, to the party concerned.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 675,
+    "type": "gap-fill",
+    "question": "The defendant has 14 days to —————— to the claim.",
+    "options": [
+      "FORGERY",
+      "RESCISSION",
+      "RESPOND",
+      "ACTUS REUS"
+    ],
+    "correct": "RESPOND",
+    "explanation": "RESPOND: To formally reply to a legal claim, usually by filing a defence or acknowledgement.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 676,
+    "type": "gap-fill",
+    "question": "The company denied all —————— of misconduct.",
+    "options": [
+      "DIVIDEND",
+      "JURISDICTION",
+      "ALLEGATION",
+      "UNDUE INFLUENCE"
+    ],
+    "correct": "ALLEGATION",
+    "explanation": "ALLEGATION: A claim or assertion that someone has done something wrong, typically made without proof at first.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 677,
+    "type": "gap-fill",
+    "question": "The solicitor is handling several —————— for the same client.",
+    "options": [
+      "INSOLVENCY",
+      "CIVIL LAW",
+      "REGULATION",
+      "MATTER"
+    ],
+    "correct": "MATTER",
+    "explanation": "MATTER: A legal case, issue or piece of business that a lawyer is dealing with.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 678,
+    "type": "gap-fill",
+    "question": "The accident was caused by the driver's ——————.",
+    "options": [
+      "NO WIN NO FEE",
+      "SPECIALISE",
+      "VISA",
+      "CARELESSNESS"
+    ],
+    "correct": "CARELESSNESS",
+    "explanation": "CARELESSNESS: A failure to take proper care, which may amount to negligence in law.",
+    "level": "H",
+    "topic": "Tort Law"
   }
 ]

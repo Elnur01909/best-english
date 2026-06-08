@@ -122,6 +122,7 @@ export interface QuizQuestion {
   explanation: string
   level: string
   topic: string
+  type?: 'definition' | 'gap-fill'  // boşluq doldurma sualları üçün
 }
 
 export interface QuizResult {
