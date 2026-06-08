@@ -122,7 +122,7 @@ export interface QuizQuestion {
   explanation: string
   level: string
   topic: string
-  type?: 'definition' | 'gap-fill' | 'collocation' | 'preposition' | 'classification' | 'true-false'  // sual formatı
+  type?: 'definition' | 'gap-fill' | 'collocation' | 'preposition' | 'classification' | 'true-false' | 'sentence' | 'matching'  // sual formatı
 }
 
 export interface QuizResult {

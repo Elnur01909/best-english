@@ -54,9 +54,12 @@ Unit 1A mənbəsi **tam çıxarıldı** — həm lüğət, həm də bütün mə�
 > dəyişiklik olmadan bütün yeni formatları render edir. `type` sahəsi yalnız
 > vizual nişan (badge) üçündür — məntiq eynidir.
 
-## ⏳ Sual formatları (status)
-- ✅ Boşluq doldurma (gap-fill) — əlavə edildi
-- ✅ Kollokasiya, Sözönü, Təsnifat — əlavə edildi (Unit 1A tam)
-- ✅ **True/False** — əlavə edildi (avtomatik tərif-əsaslı + Unit 1A faktlarından əl ilə)
+## ⏳ Sual formatları (status) — 8 format
+- ✅ 📖 Tərif → termin (klassik)
+- ✅ 📝 Boşluq doldurma (gap-fill)
+- ✅ 🔗 Kollokasiya · 🔤 Sözönü · ⚖️ Təsnifat (Unit 1A tam)
+- ✅ ✓✗ True/False (avtomatik tərif-əsaslı + Unit 1A faktlarından əl ilə)
+- ✅ 🔀 Uyğunlaşdırma (termin → düzgün tərif, "tərif→termin"in əksi)
+- ✅ 📑 Cümlə tamamlama (sentence completion — ifadə-səviyyəli, curated)
 
 #modul #db #legal-english #toles #foundation

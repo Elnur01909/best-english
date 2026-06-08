@@ -28,7 +28,12 @@ const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
   'preposition':    { label: '🔤 Sözönü',         cls: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' },
   'classification': { label: '⚖️ Təsnifat',       cls: 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' },
   'true-false':     { label: '✓✗ Doğru/Yanlış',   cls: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300' },
+  'sentence':       { label: '📑 Cümlə tamamlama', cls: 'bg-violet-100 text-violet-700 dark:bg-violet-950 dark:text-violet-300' },
+  'matching':       { label: '🔀 Uyğunlaşdırma',   cls: 'bg-lime-100 text-lime-700 dark:bg-lime-950 dark:text-lime-300' },
 }
+
+// Səsləndirmə yalnız variantları söz/termin olan formatlarda göstərilir
+const AUDIO_TYPES = new Set(['definition', 'gap-fill', 'collocation', 'preposition'])
 
 export default function QuizPage() {
   const router = useRouter()
@@ -301,8 +306,8 @@ export default function QuizPage() {
                     <button onClick={() => handleSelect(opt)} className={cls}>
                       {isCorrect && showAnswer ? '✓ ' : isSelected && showAnswer ? '✗ ' : ''}{opt}
                     </button>
-                    {/* Səsləndirmə — yalnız söz/termin variantlarında (T/F və təsnifatda gizli) */}
-                    {current.type !== 'true-false' && current.type !== 'classification' && (
+                    {/* Səsləndirmə — yalnız variantları söz/termin olan formatlarda */}
+                    {(!current.type || AUDIO_TYPES.has(current.type)) && (
                       <AudioPlayer word={opt} variant="icon" />
                     )}
                   </div>
