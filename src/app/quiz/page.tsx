@@ -262,7 +262,7 @@ export default function QuizPage() {
                     </span>
                   )}
                 </div>
-                <h2 className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed whitespace-pre-line">
                   {current.question}
                 </h2>
               </div>
@@ -301,8 +301,10 @@ export default function QuizPage() {
                     <button onClick={() => handleSelect(opt)} className={cls}>
                       {isCorrect && showAnswer ? '✓ ' : isSelected && showAnswer ? '✗ ' : ''}{opt}
                     </button>
-                    {/* Səsləndirmə — sağda (bütün test səhifələrində eyni) */}
-                    <AudioPlayer word={opt} variant="icon" />
+                    {/* Səsləndirmə — yalnız söz/termin variantlarında (T/F və təsnifatda gizli) */}
+                    {current.type !== 'true-false' && current.type !== 'classification' && (
+                      <AudioPlayer word={opt} variant="icon" />
+                    )}
                   </div>
                 )
               })}

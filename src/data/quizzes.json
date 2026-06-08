@@ -10142,5 +10142,4711 @@
     "explanation": "Cinayət hüququ — fırıldaqçılıq dövlətə qarşı cinayətdir.",
     "level": "F",
     "topic": "Legal Principles"
+  },
+  {
+    "id": 701,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BREACH» = \"An act of breaking or failing to observe a law, agreement, or duty.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «BREACH» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 702,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MAINTENANCE ORDER» = \"The legal right and responsibility to care for and make decisions about a child, usually following separation or divorce.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MAINTENANCE ORDER» əslində: \"A court order requiring one person to make regular financial payments to support a former spouse or child.\" Göstərilən tərif isə «CUSTODY»-ə aiddir.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 703,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PARTNERSHIP» = \"A business owned and run by two or more people who share its profits and liabilities.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PARTNERSHIP» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 704,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONSTITUTIONAL LAW» = \"The voluntary relinquishment or abandonment of a known legal right or claim.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CONSTITUTIONAL LAW» əslində: \"The body of law governing the structure and powers of government and the rights of citizens within the state.\" Göstərilən tərif isə «WAIVER»-ə aiddir.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 705,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MEDIATION» = \"A dispute resolution process in which a neutral third party (mediator) helps parties reach a mutually acceptable agreement.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «MEDIATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 706,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«OMBUDSMAN» = \"An official rule or order issued by a government agency to control conduct or establish procedures.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «OMBUDSMAN» əslində: \"An official appointed to investigate complaints made by individuals against public authorities or organisations.\" Göstərilən tərif isə «REGULATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 707,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SENTENCE» = \"The punishment imposed by a court on a person convicted of a criminal offense.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SENTENCE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 708,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MORTGAGE» = \"A legal right to pass through land or property belonging to someone else.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MORTGAGE» əslində: \"A loan secured against property, giving the lender the right to repossess it if repayments are not made.\" Göstərilən tərif isə «RIGHT OF WAY»-ə aiddir.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 709,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«STATUTE OF LIMITATIONS» = \"A legal time limit within which a claim must be filed or legal action must be initiated.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «STATUTE OF LIMITATIONS» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 710,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WHISTLEBLOWER» = \"Serious wrongdoing by an employee that justifies immediate dismissal without notice.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «WHISTLEBLOWER» əslində: \"An employee who discloses illegal, unethical, or unsafe practices by their employer or organization to authorities or the public.\" Göstərilən tərif isə «GROSS MISCONDUCT»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 711,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VOIDABLE» = \"Valid until one party elects to cancel it, usually because of a defect such as misrepresentation or duress.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «VOIDABLE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 712,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIQUIDATED DAMAGES» = \"Property or assets pledged by a borrower to a lender as security for a loan, to be forfeited if the loan is not repaid.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «LIQUIDATED DAMAGES» əslində: \"A pre-agreed sum payable as compensation for a specific breach of contract, fixed in advance by the parties.\" Göstərilən tərif isə «COLLATERAL»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 713,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FREEHOLD» = \"A form of property ownership in which the owner holds the land and buildings on it indefinitely, with no time limit.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «FREEHOLD» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 714,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RIGHT OF WAY» = \"A person who rents and occupies property owned by another person or entity (the landlord).\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «RIGHT OF WAY» əslində: \"A legal right to pass through land or property belonging to someone else.\" Göstərilən tərif isə «TENANT»-ə aiddir.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 715,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FORMATION OF A BUSINESS» = \"The legal process of creating and registering a new business entity.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «FORMATION OF A BUSINESS» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 716,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DIRECTOR» = \"The group of individuals elected by shareholders to oversee the company's affairs and set its policies.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DIRECTOR» əslində: \"A person appointed to the board of a company and responsible for its management and decision-making.\" Göstərilən tərif isə «BOARD OF DIRECTORS»-ə aiddir.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 717,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COLLECTIVE BARGAINING» = \"Negotiation between employers and a group of employees, often through a union, to determine pay and working conditions.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «COLLECTIVE BARGAINING» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 718,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DETENTION» = \"Official legal recognition that a person meets the international definition of a refugee and is entitled to protection.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DETENTION» əslində: \"The act of officially holding a person in custody, particularly while their immigration status is being determined.\" Göstərilən tərif isə «REFUGEE STATUS»-ə aiddir.",
+    "level": "A",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 719,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PRIMA FACIE» = \"Describing evidence that is sufficient to establish a fact or case unless disproved by further evidence.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PRIMA FACIE» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 720,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MATTER» = \"A general term for a person who is qualified to practise law and advise clients on legal matters.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MATTER» əslində: \"A legal case, issue or piece of business that a lawyer is dealing with.\" Göstərilən tərif isə «LAWYER»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 721,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LEGAL COSTS» = \"The expenses incurred in pursuing or defending a legal case, including lawyers' fees and court charges.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LEGAL COSTS» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 722,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRESPASS» = \"Legal responsibility imposed on one person for the wrongful acts of another, typically an employer for an employee.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «TRESPASS» əslində: \"Unlawful interference with a person, their property, or their land, without consent or legal justification.\" Göstərilən tərif isə «VICARIOUS LIABILITY»-ə aiddir.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 723,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PROBATION» = \"A sentence whereby a convicted person is required to behave well under supervision but is not imprisoned.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PROBATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 724,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TORTIOUS LIABILITY» = \"A false and defamatory statement made orally that damages a person's reputation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «TORTIOUS LIABILITY» əslində: \"Legal responsibility for wrongful conduct that causes harm or loss to another, independent of contract.\" Göstərilən tərif isə «SLANDER»-ə aiddir.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 725,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SETTLEMENT» = \"An agreement between disputing parties to resolve their dispute without going to trial, typically involving compensation or changed behavior.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SETTLEMENT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 726,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COPYRIGHT» = \"A recognisable symbol, word, or phrase legally registered to represent a company or product.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «COPYRIGHT» əslində: \"The legal right of an author or creator to control the reproduction and distribution of their original work.\" Göstərilən tərif isə «TRADEMARK»-ə aiddir.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 727,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEMURRAGE» = \"A charge payable to a shipowner when loading or unloading takes longer than the time allowed in the charter agreement.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DEMURRAGE» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 728,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ENCUMBRANCE» = \"The branch of law dealing with ownership, transfer, and use of real property and land.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ENCUMBRANCE» əslində: \"A claim, lien, or liability attached to property, such as a mortgage, that may affect its transfer or value.\" Göstərilən tərif isə «LAND LAW»-ə aiddir.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 729,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ADVOCACY» = \"The work of representing and pleading a client's case, especially in a court of law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ADVOCACY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 730,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COLLATERAL» = \"The act of bringing a contract or agreement to an end, either by agreement or in accordance with its terms.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «COLLATERAL» əslində: \"Property or assets pledged by a borrower to a lender as security for a loan, to be forfeited if the loan is not repaid.\" Göstərilən tərif isə «TERMINATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 731,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONSIDERATION» = \"Something of value exchanged between parties to a contract — typically money, goods, services, or a promise.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CONSIDERATION» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 732,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«GUARDIANSHIP» = \"A court order requiring one person to make regular financial payments to support a former spouse or child.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «GUARDIANSHIP» əslində: \"The legal authority and duty to care for another person, typically a child or someone unable to manage their own affairs.\" Göstərilən tərif isə «MAINTENANCE ORDER»-ə aiddir.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 733,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«POLLUTION» = \"The introduction of harmful substances or agents into the environment, causing damage to air, water, soil, or living organisms.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «POLLUTION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 734,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PLEA AGREEMENT» = \"Compensation paid by an offender to a victim for harm or loss suffered.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PLEA AGREEMENT» əslində: \"A negotiated settlement between a prosecutor and defendant in which the defendant agrees to plead guilty in exchange for concessions.\" Göstərilən tərif isə «RESTITUTION»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 735,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CLAIM» = \"A court action brought by a claimant seeking a remedy, such as money or an order, against a defendant.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CLAIM» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 736,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INFRINGEMENT» = \"An exclusive right granted by a government to an inventor, allowing them to prevent others from making, using, or selling the invention for a specified period.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INFRINGEMENT» əslində: \"A violation of someone's legal rights, particularly in relation to intellectual property, patents, or copyrights.\" Göstərilən tərif isə «PATENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 737,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BONA FIDE» = \"Done in good faith, honestly, and without any intention to deceive.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «BONA FIDE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 738,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«GRIEVANCE» = \"Unfair or prejudicial treatment of a person based on protected characteristics such as race, gender, age, or disability.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «GRIEVANCE» əslində: \"A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.\" Göstərilən tərif isə «DISCRIMINATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 739,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«STARE DECISIS» = \"The legal principle that courts should follow precedents set by previous decisions in similar cases.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «STARE DECISIS» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 740,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WARRANTY» = \"Oral or external evidence offered to vary, explain, or contradict the terms of a written contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «WARRANTY» əslində: \"A promise in a contract, the breach of which entitles the injured party to damages but not to terminate the contract.\" Göstərilən tərif isə «PAROL EVIDENCE»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 741,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEPOSITION» = \"A formal recorded testimony given by a witness before trial under oath, typically conducted outside of court.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DEPOSITION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 742,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«UNFAIR DISMISSAL» = \"A protected period of leave from work granted to a mother before and after the birth of her child.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «UNFAIR DISMISSAL» əslində: \"Termination of an employee without a fair reason, proper notice, or adherence to fair procedures.\" Göstərilən tərif isə «MATERNITY LEAVE»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 743,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TAX EVASION» = \"The illegal act of deliberately avoiding paying taxes that are legally owed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TAX EVASION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 744,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DURESS» = \"A predetermined amount agreed upon by contracting parties as compensation for breach, rather than actual damages.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DURESS» əslində: \"Unlawful pressure or threats exerted on a person to force them into a contract against their will.\" Göstərilən tərif isə «LIQUIDATED DAMAGES»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 745,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VENUE» = \"The proper location or district in which a legal case should be heard based on procedural rules.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «VENUE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 746,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ROBBERY» = \"A formal declaration by a court that someone is guilty of a criminal offence.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ROBBERY» əslində: \"The taking of property from a person by force, threat, or intimidation.\" Göstərilən tərif isə «CONVICTION»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 747,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FALSE IMPRISONMENT» = \"A tort in which a person is deliberately and unlawfully confined or restricted of their freedom of movement.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «FALSE IMPRISONMENT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 748,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WINDING UP» = \"The purchase or transfer of control of one company by another, typically resulting in the acquired company becoming a subsidiary.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «WINDING UP» əslində: \"The formal process of closing down a company, selling its assets, paying creditors, and dissolving it.\" Göstərilən tərif isə «ACQUISITION»-ə aiddir.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 749,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«STATUTE» = \"A law formally enacted by a legislative body, such as a parliament or congress.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «STATUTE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 750,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ADOPTION» = \"The legal authority and duty to care for another person, typically a child or someone unable to manage their own affairs.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ADOPTION» əslində: \"The legal process by which a person becomes the legal parent of a child who is not their biological offspring.\" Göstərilən tərif isə «GUARDIANSHIP»-ə aiddir.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 751,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NOVATION» = \"The substitution of a new contract for an existing one, with the agreement of all parties, effectively ending the original obligation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «NOVATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 752,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONVICTION» = \"The intentional deception or misrepresentation of facts to deprive someone of property or money.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CONVICTION» əslində: \"A formal judgment that a person is guilty of a criminal offense.\" Göstərilən tərif isə «FRAUD»-ə aiddir.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 753,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MINORITY SHAREHOLDER» = \"A shareholder who owns less than half of a company's shares and therefore lacks control over major decisions.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «MINORITY SHAREHOLDER» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 754,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BURDEN OF PROOF» = \"A person with specialized knowledge or skills who provides testimony in court regarding technical, scientific, or professional matters.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BURDEN OF PROOF» əslində: \"The duty of a party in a legal dispute to prove the facts they are alleging.\" Göstərilən tərif isə «EXPERT WITNESS»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 755,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACQUITTAL» = \"A formal court decision that a person accused of a crime is not guilty.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ACQUITTAL» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 756,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ALIMONY» = \"A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ALIMONY» əslində: \"Financial support paid by one spouse to another after separation or divorce, to fulfil obligations arising from the marriage.\" Göstərilən tərif isə «ANNULMENT»-ə aiddir.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 757,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ADMINISTRATIVE LAW» = \"The body of law governing the activities and decision-making of government agencies and their relationship with citizens.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ADMINISTRATIVE LAW» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 758,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PRECEDENT» = \"The party against whom a civil or criminal claim is brought.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PRECEDENT» əslində: \"A previous court decision that is used as an authority for deciding similar cases in the future.\" Göstərilən tərif isə «DEFENDANT»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 759,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACCOMPLICE» = \"A person who knowingly participates in the commission of a crime, either as a principal or an accessory.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ACCOMPLICE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 760,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CAUSATION» = \"A tort arising where a person fails to exercise the standard of care that a reasonably prudent person would exercise, causing damage to another.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CAUSATION» əslində: \"The legal requirement to show that the defendant's act or omission actually caused the claimant's loss or injury.\" Göstərilən tərif isə «NEGLIGENCE»-ə aiddir.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 761,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRAINING CONTRACT» = \"A period of supervised practical training that a trainee must complete to qualify as a solicitor.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TRAINING CONTRACT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 762,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«AGGRAVATING FACTOR» = \"The mental element of a crime; the intention or knowledge of wrongdoing that constitutes part of a crime.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «AGGRAVATING FACTOR» əslində: \"A circumstance that increases the severity or culpability of a criminal act, leading to a harsher sentence.\" Göstərilən tərif isə «MENS REA»-ə aiddir.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 763,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VISA» = \"An official document or stamp permitting a person to enter, leave, or stay in a country for a specified purpose and period.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «VISA» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 764,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DISCHARGE OF BANKRUPTCY» = \"The financial condition in which a person or company is unable to pay debts as they become due.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DISCHARGE OF BANKRUPTCY» əslində: \"The release of a bankrupt person from most of their debts, allowing them to make a fresh financial start.\" Göstərilən tərif isə «INSOLVENCY»-ə aiddir.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 765,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEFENDANT» = \"The party against whom a civil or criminal claim is brought.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DEFENDANT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 766,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REDUNDANCY» = \"The length of time an employee or employer must give before ending an employment contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «REDUNDANCY» əslində: \"The termination of employment because the role is no longer needed, rather than because of the employee's conduct.\" Göstərilən tərif isə «NOTICE PERIOD»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 767,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TITLE» = \"Legal ownership or right to possession of property, including land and buildings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TITLE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 768,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SLANDER» = \"Defamation in a permanent or written form, such as in print, broadcast, or online publication.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SLANDER» əslində: \"Defamation made in a transient form, typically through spoken words rather than in writing.\" Göstərilən tərif isə «LIBEL»-ə aiddir.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 769,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PATENT» = \"An exclusive right granted by a government to an inventor, allowing them to prevent others from making, using, or selling the invention for a specified period.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PATENT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 770,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEFAMATION» = \"Failure to exercise the care that a reasonably prudent person would exercise in similar circumstances, causing harm to another.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DEFAMATION» əslində: \"The act of damaging someone's reputation by making a false statement about them to a third party.\" Göstərilən tərif isə «NEGLIGENCE»-ə aiddir.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 771,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FORCE MAJEURE» = \"A contractual provision that relieves parties from liability when performance becomes impossible due to unforeseen circumstances beyond their control.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «FORCE MAJEURE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 772,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COMMON LAW» = \"A remedy requiring one party to restore or return property or value to another party following unjust enrichment or breach.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «COMMON LAW» əslində: \"A legal system based on written statutes and the court decisions (precedents) that have developed over time.\" Göstərilən tərif isə «RESTITUTION»-ə aiddir.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 773,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«HABEAS CORPUS» = \"A legal action requiring a person under arrest to be brought before a court to determine whether their detention is lawful.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «HABEAS CORPUS» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 774,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FORGERY» = \"A negotiated settlement between a prosecutor and defendant in which the defendant agrees to plead guilty in exchange for concessions.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «FORGERY» əslində: \"The unlawful creation or alteration of a document with the intent to use it fraudulently.\" Göstərilən tərif isə «PLEA AGREEMENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 775,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INDICTMENT» = \"A formal written accusation charging a person with a serious criminal offence, presented to a court.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «INDICTMENT» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 776,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONVEYANCING» = \"A legal claim or security interest held by one party over another's property to secure payment of a debt.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CONVEYANCING» əslində: \"The legal process of transferring ownership of property from one party to another.\" Göstərilən tərif isə «LIEN»-ə aiddir.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 777,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LEGAL PRACTICE» = \"The professional work of providing legal services, or a business through which it is carried out.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LEGAL PRACTICE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 778,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SANCTIONS» = \"A formal written agreement between two or more states or international organisations, governed by international law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SANCTIONS» əslində: \"Penalties or restrictions imposed by one or more states or international bodies against another, often for political reasons.\" Göstərilən tərif isə «TREATY»-ə aiddir.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 779,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EARNEST MONEY» = \"A deposit paid by a buyer to demonstrate commitment to a purchase agreement, usually forfeited if the buyer fails to proceed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «EARNEST MONEY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 780,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«GROUNDS» = \"The party who initiates civil legal proceedings against another party in order to seek a remedy.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «GROUNDS» əslində: \"The legal basis or reasons on which a claim, defence, or appeal is founded.\" Göstərilən tərif isə «CLAIMANT»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 781,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INDEMNITY» = \"A contractual obligation of one party to compensate the loss incurred by another party.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «INDEMNITY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 782,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COVENANTS» = \"A legal duty to do or refrain from doing something, often arising under a contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «COVENANTS» əslində: \"Binding promises or agreements in a contract that a party commits to perform or refrain from performing certain acts.\" Göstərilən tərif isə «OBLIGATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 783,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MERGER» = \"The combination of two or more companies into a single new entity.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «MERGER» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 784,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FLAG STATE» = \"A document issued by a carrier acknowledging receipt of goods for shipment and serving as evidence of the contract of carriage.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «FLAG STATE» əslində: \"The country under whose laws a ship is registered, which has primary jurisdiction over the vessel.\" Göstərilən tərif isə «BILL OF LADING»-ə aiddir.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 785,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PLAINTIFF» = \"The party who initiates a lawsuit by filing a complaint against another party in a civil case.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PLAINTIFF» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 786,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ATTORNEY» = \"To act on behalf of a client, especially by speaking for them in legal proceedings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ATTORNEY» əslində: \"The American term for a lawyer; a person legally appointed to act on behalf of another.\" Göstərilən tərif isə «REPRESENT»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 787,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EVICTION» = \"The legal process of removing a tenant from rental property, typically due to non-payment of rent or breach of lease terms.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «EVICTION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 788,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BANKRUPTCY» = \"The release of a bankrupt person from most of their debts, allowing them to make a fresh financial start.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BANKRUPTCY» əslində: \"A legal process through which a person or company is relieved of debts they cannot pay, subject to court supervision.\" Göstərilən tərif isə «DISCHARGE OF BANKRUPTCY»-ə aiddir.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 789,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LARCENY» = \"The unlawful taking and carrying away of another person's personal property with the intent to permanently deprive them of it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LARCENY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 790,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REMOTENESS OF DAMAGE» = \"Legal responsibility for wrongful conduct that causes harm or loss to another, independent of contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «REMOTENESS OF DAMAGE» əslində: \"A legal test limiting liability to losses that were a reasonably foreseeable consequence of the defendant's conduct.\" Göstərilən tərif isə «TORTIOUS LIABILITY»-ə aiddir.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 791,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIBEL» = \"Defamation in a permanent or written form, such as in print, broadcast, or online publication.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LIBEL» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 792,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INDEMNITY» = \"A contract in which both parties make mutual promises or obligations to each other.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INDEMNITY» əslində: \"A contractual obligation by one party to protect another against specific losses or liabilities.\" Göstərilən tərif isə «BILATERAL CONTRACT»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 793,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PROCEEDINGS» = \"The formal series of steps and actions making up a legal case before a court.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PROCEEDINGS» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 794,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TREATY» = \"The system of rules, agreements, and treaties that govern relations between countries and international disputes.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «TREATY» əslində: \"A formal written agreement between two or more states or international organisations, governed by international law.\" Göstərilən tərif isə «INTERNATIONAL LAW»-ə aiddir.",
+    "level": "F",
+    "topic": "International Law"
+  },
+  {
+    "id": 795,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ASYLUM» = \"Protection granted by a state to a person fleeing persecution in their home country.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ASYLUM» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 796,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONVICTION» = \"The unlawful entry into a building with the intent to commit a crime, typically theft.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CONVICTION» əslində: \"A formal declaration by a court that someone is guilty of a criminal offence.\" Göstərilən tərif isə «BURGLARY»-ə aiddir.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 797,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PLEA» = \"A defendant's formal response to criminal charges, typically guilty, not guilty, or no contest.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PLEA» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 798,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«GUARANTEE» = \"A legal principle that prevents a person from going back on a promise or representation that another has relied upon.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «GUARANTEE» əslində: \"A promise by a third party (guarantor) to be responsible for the debt or obligation of another if the primary debtor defaults.\" Göstərilən tərif isə «ESTOPPEL»-ə aiddir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 799,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«AGGRAVATED ASSAULT» = \"An assault that is more serious or violent, often involving a weapon or causing severe bodily harm.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «AGGRAVATED ASSAULT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 800,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PERJURY» = \"Conditional release of a prisoner before the completion of their full sentence, with supervision by an officer.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PERJURY» əslində: \"The deliberate giving of false testimony under oath in a court proceeding.\" Göstərilən tərif isə «PAROLE»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 801,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VICARIOUS LIABILITY» = \"Legal responsibility imposed on one person for the wrongful acts of another, typically an employer for an employee.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «VICARIOUS LIABILITY» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 802,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«STRICT LIABILITY» = \"Unlawful interference with a person, their property, or their land, without consent or legal justification.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «STRICT LIABILITY» əslində: \"Liability that does not depend on actual negligence or intent to harm, but is based purely on the breach of an obligation.\" Göstərilən tərif isə «TRESPASS»-ə aiddir.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 803,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONTRACT» = \"A legally binding agreement between two or more parties in which each party agrees to fulfill certain obligations.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CONTRACT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 804,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CULPABILITY» = \"Money or property offered to a court to secure a defendant's release from custody pending trial.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CULPABILITY» əslində: \"Legal responsibility or blameworthiness for wrongful conduct, often considered in determining criminal guilt.\" Göstərilən tərif isə «BAIL»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 805,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EMBEZZLEMENT» = \"The unlawful taking of funds or property by someone in a position of trust, such as an employee or official.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «EMBEZZLEMENT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 806,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DISCOVERY» = \"A person who has knowledge of facts relevant to a case and gives testimony under oath.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DISCOVERY» əslində: \"The pre-trial process in which parties exchange relevant documents and information held by the other side.\" Göstərilən tərif isə «WITNESS»-ə aiddir.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 807,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CAPITAL GAINS TAX» = \"A tax on the profit realised from the sale of an asset, such as property or shares, that has increased in value.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CAPITAL GAINS TAX» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 808,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEBTOR» = \"A situation in which an insolvent company is placed under the control of a receiver appointed to manage its affairs.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DEBTOR» əslində: \"A person or organisation that owes money to another party.\" Göstərilən tərif isə «RECEIVERSHIP»-ə aiddir.",
+    "level": "F",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 809,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PETITION» = \"A formal written request submitted to a court, government official, or authority seeking a particular remedy or action.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PETITION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 810,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«APPEAL» = \"The final decision of a court in a case, determining the rights and liabilities of the parties.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «APPEAL» əslində: \"A formal request to a higher court to review and change the decision of a lower court.\" Göstərilən tərif isə «JUDGMENT»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 811,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NULLITY» = \"The state of being legally void, as though it had never existed or taken place.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «NULLITY» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 812,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEFENDANT» = \"A person who aids, abets, or encourages the commission of a crime without being the principal perpetrator.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DEFENDANT» əslində: \"A person or party against whom a criminal charge or civil claim is brought.\" Göstərilən tərif isə «ACCESSORY»-ə aiddir.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 813,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CREDITOR» = \"A person or organisation to whom money is owed by another party.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CREDITOR» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 814,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«JUDICIAL REVIEW» = \"Describing an act done beyond the legal power or authority of the person or body performing it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «JUDICIAL REVIEW» əslində: \"The process by which courts examine the lawfulness of decisions or actions taken by public bodies.\" Göstərilən tərif isə «ULTRA VIRES»-ə aiddir.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 815,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SALVAGE» = \"The act of rescuing a ship, its cargo, or crew from danger at sea, often entitling the rescuer to a reward.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SALVAGE» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 816,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SPECIALISE» = \"A lawyer who gives legal advice, deals directly with clients, drafts documents and may instruct barristers; usually works in a law firm.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SPECIALISE» əslində: \"To concentrate on and become an expert in a particular area of law.\" Göstərilən tərif isə «SOLICITOR»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 817,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ASSAULT» = \"A tort or crime in which a person intentionally creates an apprehension in another of imminent harmful or offensive contact. Physical contact is NOT required — only the reasonable fear of it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ASSAULT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 818,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BREACH OF CONTRACT» = \"A contract in which both parties make mutual promises or obligations to each other.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BREACH OF CONTRACT» əslində: \"Failure, without legal excuse, to perform any promise that forms part of a contract.\" Göstərilən tərif isə «BILATERAL CONTRACT»-ə aiddir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 819,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CLAIMANT» = \"The party who initiates civil legal proceedings against another party in order to seek a remedy.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CLAIMANT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 820,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CLIENT» = \"A legal case, issue or piece of business that a lawyer is dealing with.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CLIENT» əslində: \"A person or organisation that receives professional legal services from a lawyer.\" Göstərilən tərif isə «MATTER»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 821,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COMPENSATION» = \"Money awarded to a person to make up for loss, injury, or damage they have suffered.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «COMPENSATION» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 822,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«OFFER» = \"A contractual obligation to compensate or reimburse another party for loss, damage, or liability incurred.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «OFFER» əslində: \"A clear proposal made by one party to another, expressing willingness to enter into a contract on specific terms.\" Göstərilən tərif isə «INDEMNIFICATION»-ə aiddir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 823,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIMITED LIABILITY» = \"A legal status in which a company's owners are responsible for its debts only up to the amount they invested.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LIMITED LIABILITY» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 824,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ESTOPPEL» = \"The legal requirement that the state must respect all of a person's legal rights when depriving them of life, liberty, or property.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ESTOPPEL» əslində: \"A legal principle that prevents a party from taking a position or making a claim that contradicts a previous statement or conduct.\" Göstərilən tərif isə «DUE PROCESS»-ə aiddir.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 825,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LICENSING» = \"The formal permission or authorization granted by a government body or authority to operate a business or conduct a specific activity.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LICENSING» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 826,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MEMORANDUM OF ASSOCIATION» = \"The system of rules, practices, and processes through which a company is directed and controlled.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MEMORANDUM OF ASSOCIATION» əslində: \"A legal document signed by initial shareholders, agreeing to form the company and become its members.\" Göstərilən tərif isə «CORPORATE GOVERNANCE»-ə aiddir.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 827,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«GOODS» = \"Movable physical items that can be bought and sold, especially in commercial transactions.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «GOODS» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 828,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«STRICT LIABILITY» = \"Defamation made in a transient form, typically through spoken words rather than in writing.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «STRICT LIABILITY» əslində: \"Legal responsibility for harm caused, even if the defendant was not negligent or acting with intent.\" Göstərilən tərif isə «SLANDER»-ə aiddir.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 829,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BATTERY» = \"A tort or crime in which a person intentionally and without lawful justification makes harmful or offensive contact with another's body. Unlike assault, physical contact IS required — but it need not cause injury; even offensive touching suffices.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «BATTERY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 830,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PAROLE» = \"The process of concealing the origins of illegally obtained money by transferring it through complex transactions to make it appear legitimate.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PAROLE» əslində: \"Conditional release of a prisoner before the completion of their full sentence, with supervision by an officer.\" Göstərilən tərif isə «MONEY LAUNDERING»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 831,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«STATUTE OF FRAUDS» = \"A legal requirement that certain types of contracts must be evidenced in writing to be enforceable.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «STATUTE OF FRAUDS» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 832,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«QUALIFIED» = \"A specialist advocate who represents clients in court, is usually self-employed and is instructed by solicitors.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «QUALIFIED» əslində: \"Having the necessary training, examinations and certification to practise as a lawyer.\" Göstərilən tərif isə «BARRISTER»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 833,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PAROL EVIDENCE» = \"Oral or external evidence offered to vary, explain, or contradict the terms of a written contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PAROL EVIDENCE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 834,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NO WIN NO FEE» = \"A court order requiring a party to do something or to refrain from doing something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «NO WIN NO FEE» əslində: \"An arrangement in which a client pays the lawyer's fee only if the legal claim is successful.\" Göstərilən tərif isə «INJUNCTION»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 835,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CARELESSNESS» = \"A failure to take proper care, which may amount to negligence in law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CARELESSNESS» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 836,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ESTATE TAX» = \"A tax on the profit realised from the sale of an asset, such as property or shares, that has increased in value.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ESTATE TAX» əslində: \"A tax imposed on the total value of a deceased person's assets before they are transferred to their beneficiaries.\" Göstərilən tərif isə «CAPITAL GAINS TAX»-ə aiddir.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 837,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COVENANT» = \"A formal promise in a financial agreement, often requiring the borrower to do or refrain from doing certain things.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «COVENANT» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 838,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ASSAULT AND BATTERY» = \"A circumstance that increases the severity or culpability of a criminal act, leading to a harsher sentence.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ASSAULT AND BATTERY» əslində: \"A combination of two offenses: assault (threat of harm) and battery (actual harmful contact).\" Göstərilən tərif isə «AGGRAVATING FACTOR»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 839,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COLLATERAL» = \"An asset pledged by a borrower to a lender as security for a loan, which may be seized if the loan is not repaid.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «COLLATERAL» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 840,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SOVEREIGNTY» = \"A formal written agreement between two or more states or international organisations, governed by international law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SOVEREIGNTY» əslində: \"The supreme authority of a state to govern itself and make its own laws without external interference.\" Göstərilən tərif isə «TREATY»-ə aiddir.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 841,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RESTITUTION» = \"A remedy requiring one party to restore or return property or value to another party following unjust enrichment or breach.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «RESTITUTION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 842,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REGULATION» = \"Laws made by a body other than parliament, under powers granted to it by an Act of Parliament.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «REGULATION» əslində: \"An official rule or order issued by a government agency to control conduct or establish procedures.\" Göstərilən tərif isə «DELEGATED LEGISLATION»-ə aiddir.",
+    "level": "F",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 843,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONTRIBUTORY NEGLIGENCE» = \"A defence arguing that the claimant's own carelessness contributed to the harm they suffered, reducing the damages payable.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CONTRIBUTORY NEGLIGENCE» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 844,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VALID» = \"An unconditional agreement to all the terms of an offer, which creates a binding contract when communicated to the offeror.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «VALID» əslində: \"Legally binding and having full legal force or effect.\" Göstərilən tərif isə «ACCEPTANCE»-ə aiddir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 845,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEFAMATION» = \"A false and damaging statement that harms the reputation of a person or organisation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DEFAMATION» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 846,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ALLEGATION» = \"A court order requiring a party to do, or refrain from doing, a specific act.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ALLEGATION» əslində: \"A claim or assertion that someone has done something wrong, typically made without proof at first.\" Göstərilən tərif isə «INJUNCTION»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 847,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIBEL» = \"A defamatory statement made in permanent form, typically in writing or through media, that injures someone's reputation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LIBEL» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 848,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LEASE» = \"A legal principle allowing a person to claim ownership of land they have occupied for a specified period, without the owner's permission.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «LEASE» əslində: \"A contractual agreement in which a property owner (landlord) grants temporary possession of property to another (tenant) in exchange for rent.\" Göstərilən tərif isə «ADVERSE POSSESSION»-ə aiddir.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 849,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CORPORATE GOVERNANCE» = \"The system of rules, practices, and processes through which a company is directed and controlled.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CORPORATE GOVERNANCE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 850,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BAILIFF» = \"A formal request to a higher court to review and change the decision of a lower court.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BAILIFF» əslində: \"An officer of the court responsible for enforcing judgments, such as by seizing goods or recovering debts.\" Göstərilən tərif isə «APPEAL»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 851,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TAX EVASION» = \"The deliberate non-payment or underpayment of taxes owed, as opposed to tax avoidance, which is legal.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TAX EVASION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 852,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SOLICITOR» = \"To act on behalf of a client, especially by speaking for them in legal proceedings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SOLICITOR» əslində: \"A lawyer who gives legal advice, deals directly with clients, drafts documents and may instruct barristers; usually works in a law firm.\" Göstərilən tərif isə «REPRESENT»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 853,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NATURAL JUSTICE» = \"Fundamental principles of fairness in legal proceedings, including the right to a fair hearing and freedom from bias.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «NATURAL JUSTICE» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 854,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PROXY» = \"A person or entity that owns shares in a company and is therefore entitled to a portion of its profits and voting rights.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PROXY» əslində: \"A person authorised to vote on behalf of a shareholder at a company meeting, or the document granting such authority.\" Göstərilən tərif isə «SHAREHOLDER»-ə aiddir.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 855,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«UNDUE INFLUENCE» = \"Improper pressure exerted on a person by someone in a position of trust to induce them to enter into a transaction.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «UNDUE INFLUENCE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 856,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DUE DILIGENCE» = \"The process of pooling financial assets, such as loans, and converting them into tradable securities.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DUE DILIGENCE» əslində: \"A thorough investigation of a business or person before entering into an agreement or transaction, to assess risks.\" Göstərilən tərif isə «SECURITIZATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 857,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DRAFT» = \"To prepare a first or formal version of a legal document such as a contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DRAFT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 858,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INFRINGEMENT» = \"An exclusive right granted by a government to an inventor, allowing them to prevent others from making, using, or selling the invention for a specified period.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INFRINGEMENT» əslində: \"The unauthorised use or violation of another person's intellectual property rights, such as a patent, trademark, or copyright.\" Göstərilən tərif isə «PATENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 859,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MERGER» = \"The combination of two or more companies into a single entity, with one company surviving and continuing as the combined entity.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «MERGER» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 860,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ASSIGNMENT» = \"A deposit paid by a buyer to demonstrate commitment to a purchase agreement, usually forfeited if the buyer fails to proceed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ASSIGNMENT» əslində: \"The transfer of rights or benefits under a contract from one party to another.\" Göstərilən tərif isə «EARNEST MONEY»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 861,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REAL ESTATE» = \"Property consisting of land and the buildings on it, together with associated rights.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «REAL ESTATE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 862,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MONEY LAUNDERING» = \"An agreement in which a defendant pleads guilty to a lesser charge in exchange for a more lenient sentence.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MONEY LAUNDERING» əslində: \"The process of concealing the origins of illegally obtained money by transferring it through complex transactions to make it appear legitimate.\" Göstərilən tərif isə «PLEA BARGAIN»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 863,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CHARTER PARTY» = \"A contract by which a shipowner agrees to lease a vessel to a charterer for transporting goods or passengers.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CHARTER PARTY» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 864,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MISREPRESENTATION» = \"(Of a contract) technically valid but capable of being cancelled or set aside by one of the parties.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MISREPRESENTATION» əslində: \"A false or misleading statement of fact made by one party to induce another to enter into a contract.\" Göstərilən tərif isə «VOIDABLE»-ə aiddir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 865,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACCEPTANCE» = \"An unconditional agreement to all the terms of an offer, which creates a binding contract when communicated to the offeror.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ACCEPTANCE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 866,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DUTY OF CARE» = \"A false and damaging statement that harms the reputation of a person or organisation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DUTY OF CARE» əslində: \"A legal obligation to take reasonable care to avoid causing harm to others who could foreseeably be affected.\" Göstərilən tərif isə «DEFAMATION»-ə aiddir.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 867,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RESIDENCY PERMIT» = \"An official authorisation allowing a foreign national to live in a country for a specified period.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «RESIDENCY PERMIT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 868,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TENANT» = \"The legal process of transferring ownership of property from one person to another.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «TENANT» əslində: \"A person who rents and occupies property owned by another person or entity (the landlord).\" Göstərilən tərif isə «CONVEYANCING»-ə aiddir.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 869,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BREACH OF CONTRACT» = \"A failure by one or more parties to fulfil their obligations under a contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «BREACH OF CONTRACT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 870,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LANDLORD» = \"A loan secured against property, giving the lender the right to repossess it if repayments are not made.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «LANDLORD» əslində: \"A person or entity who owns property and rents or leases it to another person (the tenant).\" Göstərilən tərif isə «MORTGAGE»-ə aiddir.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 871,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LAWYER» = \"A general term for a person who is qualified to practise law and advise clients on legal matters.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LAWYER» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 872,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INTELLECTUAL PROPERTY» = \"A violation of someone's legal rights, particularly in relation to intellectual property, patents, or copyrights.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INTELLECTUAL PROPERTY» əslində: \"Legal rights protecting creations of the mind, including inventions, literary works, designs, symbols, and trademarks.\" Göstərilən tərif isə «INFRINGEMENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 873,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ARTICLES OF ASSOCIATION» = \"A document that sets out the rules governing the internal management and operation of a company.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ARTICLES OF ASSOCIATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 874,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INSOLVENCY» = \"A legal process through which a person or company is relieved of debts they cannot pay, subject to court supervision.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INSOLVENCY» əslində: \"The financial condition in which a person or company is unable to pay debts as they become due.\" Göstərilən tərif isə «BANKRUPTCY»-ə aiddir.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 875,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIQUIDATION» = \"The process of bringing a company to an end by selling its assets to pay off debts before it is dissolved.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LIQUIDATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 876,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ADVERSE POSSESSION» = \"A form of property ownership in which the owner holds the land and buildings on it indefinitely, with no time limit.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ADVERSE POSSESSION» əslində: \"A legal principle allowing a person to claim ownership of land they have occupied for a specified period, without the owner's permission.\" Göstərilən tərif isə «FREEHOLD»-ə aiddir.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 877,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PROSECUTION» = \"The legal party that brings criminal charges against a defendant in court, representing the state.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PROSECUTION» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 878,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DIVORCE DECREE» = \"A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DIVORCE DECREE» əslində: \"An official court order that legally ends a marriage.\" Göstərilən tərif isə «ANNULMENT»-ə aiddir.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 879,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CIVIL LAW» = \"A legal system primarily based on comprehensive written codes and statutes, rather than court precedents.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CIVIL LAW» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 880,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BILATERAL CONTRACT» = \"The act of bringing a contract or agreement to an end, either by agreement or in accordance with its terms.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BILATERAL CONTRACT» əslində: \"A contract in which both parties make mutual promises or obligations to each other.\" Göstərilən tərif isə «TERMINATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 881,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BILL OF LADING» = \"A document issued by a carrier acknowledging receipt of goods for shipment and serving as evidence of the contract of carriage.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «BILL OF LADING» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 882,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PARTY» = \"Having no legal effect from the outset, as if the contract had never existed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PARTY» əslində: \"A person, company, or other legal entity that enters into a contract or legal proceeding.\" Göstərilən tərif isə «VOID»-ə aiddir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 883,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DIPLOMATIC IMMUNITY» = \"A legal protection that exempts diplomats from prosecution or lawsuits under the laws of the host country.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DIPLOMATIC IMMUNITY» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 884,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ADMINISTRATION ORDER» = \"A situation in which an insolvent company is placed under the control of a receiver appointed to manage its affairs.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ADMINISTRATION ORDER» əslində: \"A court order placing an insolvent company under the management of an administrator to attempt rescue or restructuring.\" Göstərilən tərif isə «RECEIVERSHIP»-ə aiddir.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 885,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SETTLEMENT» = \"An agreement reached by parties to a dispute, often resolving the matter without going to trial.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SETTLEMENT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 886,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EXTRADITION» = \"The authority of a court to hear and decide cases involving parties or events located in more than one country.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «EXTRADITION» əslində: \"The formal process by which one state surrenders a suspected or convicted criminal to another state for trial or punishment.\" Göstərilən tərif isə «CROSS-BORDER JURISDICTION»-ə aiddir.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 887,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CROSS-EXAMINATION» = \"The questioning of a witness by the opposing party's lawyer during a trial, aimed at challenging the witness's credibility or testimony.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CROSS-EXAMINATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 888,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MARITIME LIEN» = \"The act of rescuing a ship, its cargo, or crew from danger at sea, often entitling the rescuer to a reward.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MARITIME LIEN» əslində: \"A legal claim against a ship that secures a debt or claim arising from its operation, such as unpaid wages or damage.\" Göstərilən tərif isə «SALVAGE»-ə aiddir.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 889,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NEGLIGENCE» = \"A tort arising where a person fails to exercise the standard of care that a reasonably prudent person would exercise, causing damage to another.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «NEGLIGENCE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 890,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ESTOPPEL» = \"A promise by a third party (guarantor) to be responsible for the debt or obligation of another if the primary debtor defaults.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ESTOPPEL» əslində: \"A legal principle that prevents a person from going back on a promise or representation that another has relied upon.\" Göstərilən tərif isə «GUARANTEE»-ə aiddir.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 891,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LAND LAW» = \"The branch of law dealing with ownership, transfer, and use of real property and land.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LAND LAW» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 892,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«UNILATERAL CONTRACT» = \"Unlawful pressure or threats exerted on a person to force them into a contract against their will.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «UNILATERAL CONTRACT» əslində: \"A contract in which only one party makes a binding promise in exchange for the performance of an act by the other party.\" Göstərilən tərif isə «DURESS»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 893,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DISCOVERY» = \"The pre-trial process in which parties disclose documents and information relevant to the case to each other.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DISCOVERY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 894,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LICENSING» = \"The exclusive legal right granted to the author or creator of a work to reproduce, distribute, and display their original creation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «LICENSING» əslində: \"The process of granting another party permission to use intellectual property under agreed conditions, often for a fee.\" Göstərilən tərif isə «COPYRIGHT»-ə aiddir.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 895,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VOID» = \"(Of a contract or transaction) having no legal effect; invalid from the beginning.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «VOID» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 896,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VERDICT» = \"To formally reply to a legal claim, usually by filing a defence or acknowledgement.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «VERDICT» əslində: \"The formal decision made by a jury or judge on the matters submitted to them in a trial.\" Göstərilən tərif isə «RESPOND»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 897,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WAIVER» = \"The voluntary relinquishment or abandonment of a known legal right or claim.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «WAIVER» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 898,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EXCLUSION CLAUSE» = \"A predetermined amount agreed upon by contracting parties as compensation for breach, rather than actual damages.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «EXCLUSION CLAUSE» əslində: \"A contractual term that seeks to limit or exclude a party's liability for breach or negligence.\" Göstərilən tərif isə «LIQUIDATED DAMAGES»-ə aiddir.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 899,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INJUNCTIVE RELIEF» = \"A court's authority to issue an injunction, an order requiring a party to do or refrain from doing something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «INJUNCTIVE RELIEF» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 900,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RESPOND» = \"The pre-trial process in which parties disclose documents and information relevant to the case to each other.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «RESPOND» əslində: \"To formally reply to a legal claim, usually by filing a defence or acknowledgement.\" Göstərilən tərif isə «DISCOVERY»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 901,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REMEDIES» = \"Legal means or actions available to a party to enforce their rights or to obtain compensation for loss or harm.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «REMEDIES» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 902,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PATENT» = \"A recognisable symbol, word, or phrase legally registered to represent a company or product.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PATENT» əslində: \"An exclusive legal right granted for an invention, preventing others from making, using, or selling it without permission.\" Göstərilən tərif isə «TRADEMARK»-ə aiddir.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 903,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LAW FIRM» = \"A business formed by one or more lawyers to provide legal services to clients.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LAW FIRM» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 904,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WRONGFUL DISMISSAL» = \"The termination of employment because the role is no longer needed, rather than because of the employee's conduct.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «WRONGFUL DISMISSAL» əslində: \"The termination of an employee's employment contract without legal justification or proper procedures.\" Göstərilən tərif isə «REDUNDANCY»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 905,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VOID» = \"Having no legal effect from the outset, as if the contract had never existed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «VOID» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 906,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONFLICT OF INTEREST» = \"A person or entity that owns shares in a company and is therefore entitled to a portion of its profits and voting rights.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CONFLICT OF INTEREST» əslində: \"A situation in which a person's personal interests conflict with their professional or fiduciary duties.\" Göstərilən tərif isə «SHAREHOLDER»-ə aiddir.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 907,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIQUIDATION» = \"The process of winding up a company's affairs by selling its assets and distributing the proceeds to creditors and shareholders.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LIQUIDATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 908,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACTUS REUS» = \"The mental element of a crime; the intention or knowledge of wrongdoing that constitutes part of a crime.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ACTUS REUS» əslində: \"The guilty act or criminal conduct itself, one of the essential elements required to prove a crime.\" Göstərilən tərif isə «MENS REA»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 909,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COURT FEE» = \"A charge payable to the court for issuing a claim or carrying out a particular step in proceedings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «COURT FEE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 910,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DISCRIMINATION» = \"Termination of an employee without a fair reason, proper notice, or adherence to fair procedures.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DISCRIMINATION» əslində: \"Unfair or unequal treatment of a person based on characteristics such as race, gender, age, or disability.\" Göstərilən tərif isə «UNFAIR DISMISSAL»-ə aiddir.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 911,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FIDUCIARY DUTY» = \"A legal obligation of one party to act in the best interests of another, such as a director's duty toward the company.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «FIDUCIARY DUTY» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Company Law"
+  },
+  {
+    "id": 912,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEFAULT» = \"A thorough investigation of a business or person before entering into an agreement or transaction, to assess risks.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DEFAULT» əslində: \"Failure to fulfil an obligation, especially the failure to repay a loan according to its terms.\" Göstərilən tərif isə «DUE DILIGENCE»-ə aiddir.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 913,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MENS REA» = \"The guilty mind or criminal intent required to establish liability for many crimes.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «MENS REA» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 914,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COPYRIGHT» = \"The process of granting another party permission to use intellectual property under agreed conditions, often for a fee.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «COPYRIGHT» əslində: \"The exclusive legal right granted to the author or creator of a work to reproduce, distribute, and display their original creation.\" Göstərilən tərif isə «LICENSING»-ə aiddir.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 915,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TITLE DEED» = \"An official document proving a person's legal ownership of a property or piece of land.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TITLE DEED» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 916,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VOIDABLE» = \"A contractual provision that relieves parties from liability when performance becomes impossible due to unforeseen circumstances beyond their control.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «VOIDABLE» əslində: \"(Of a contract) technically valid but capable of being cancelled or set aside by one of the parties.\" Göstərilən tərif isə «FORCE MAJEURE»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 917,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DISCRIMINATION» = \"Unfair or prejudicial treatment of a person based on protected characteristics such as race, gender, age, or disability.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DISCRIMINATION» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 918,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BURDEN OF PROOF» = \"The final decision of a court in a case, determining the rights and liabilities of the parties.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BURDEN OF PROOF» əslində: \"The obligation on a party to establish the truth of its allegations or claims in court proceedings.\" Göstərilən tərif isə «JUDGMENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 919,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SLANDER» = \"A false and defamatory statement made orally that damages a person's reputation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SLANDER» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 920,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONVEYANCING» = \"A loan secured by real property, whereby the lender holds an interest in the property until the loan is repaid.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CONVEYANCING» əslində: \"The legal process of transferring ownership of property from one person to another.\" Göstərilən tərif isə «MORTGAGE»-ə aiddir.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 921,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NOVATION» = \"The replacement of one party to a contract with a new party, with the consent of all involved.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «NOVATION» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 922,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MATERNITY LEAVE» = \"An employee who discloses illegal, unethical, or unsafe practices by their employer or organization to authorities or the public.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MATERNITY LEAVE» əslində: \"A protected period of leave from work granted to a mother before and after the birth of her child.\" Göstərilən tərif isə «WHISTLEBLOWER»-ə aiddir.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 923,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«AFFIDAVIT» = \"A written statement of fact confirmed by oath or affirmation before a notary or court official.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «AFFIDAVIT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 924,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«JURISDICTION» = \"A court action brought by a claimant seeking a remedy, such as money or an order, against a defendant.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «JURISDICTION» əslində: \"The authority of a court to hear and decide a case based on location, the parties, or the subject matter.\" Göstərilən tərif isə «CLAIM»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 925,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RECEIVERSHIP» = \"A situation in which an insolvent company is placed under the control of a receiver appointed to manage its affairs.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «RECEIVERSHIP» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Bankruptcy Law"
+  },
+  {
+    "id": 926,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«OBLIGATION» = \"A guarantee by one party that certain facts or conditions are true or will be fulfilled.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «OBLIGATION» əslində: \"A legal duty to do or refrain from doing something, often arising under a contract.\" Göstərilən tərif isə «WARRANTY»-ə aiddir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 927,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NOTICE PERIOD» = \"The length of time an employee or employer must give before ending an employment contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «NOTICE PERIOD» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 928,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ESCROW» = \"A pre-agreed sum payable as compensation for a specific breach of contract, fixed in advance by the parties.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ESCROW» əslində: \"A financial arrangement in which a third party holds funds or documents during a transaction until conditions are met.\" Göstərilən tərif isə «LIQUIDATED DAMAGES»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 929,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TAX AVOIDANCE» = \"The legal use of methods to minimise tax liability within the boundaries of the law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TAX AVOIDANCE» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 930,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ASSIGNMENT» = \"A breach of contract occurring when one party indicates, before performance is due, that it will not perform its obligations.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ASSIGNMENT» əslində: \"The transfer of a right, obligation, or property from one party to another.\" Göstərilən tərif isə «ANTICIPATORY BREACH»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 931,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LEASEHOLD» = \"A form of property ownership in which the holder has the right to occupy land or property for a fixed period under a lease.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LEASEHOLD» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 932,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RESCISSION» = \"The transfer of rights or benefits under a contract from one party to another.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «RESCISSION» əslində: \"The cancellation or annulment of a contract, returning the parties to their original position as if the contract had never existed.\" Göstərilən tərif isə «ASSIGNMENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 933,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MISREPRESENTATION» = \"A false statement of fact made by one party which induces the other party to enter into a contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «MISREPRESENTATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 934,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INDEMNIFICATION» = \"Oral or external evidence offered to vary, explain, or contradict the terms of a written contract.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INDEMNIFICATION» əslində: \"A contractual obligation to compensate or reimburse another party for loss, damage, or liability incurred.\" Göstərilən tərif isə «PAROL EVIDENCE»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 935,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONDITION PRECEDENT» = \"An event or term that must occur before a contractual obligation becomes enforceable.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CONDITION PRECEDENT» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 936,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NEGLIGENCE» = \"Money awarded to a person to make up for loss, injury, or damage they have suffered.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «NEGLIGENCE» əslində: \"Failure to exercise the care that a reasonably prudent person would exercise in similar circumstances, causing harm to another.\" Göstərilən tərif isə «COMPENSATION»-ə aiddir.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 937,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«UNJUST ENRICHMENT» = \"A principle of law that prevents one party from retaining benefits obtained at the expense of another party without providing compensation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «UNJUST ENRICHMENT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 938,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«QUANTUM MERUIT» = \"A contractual obligation by one party to protect another against specific losses or liabilities.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «QUANTUM MERUIT» əslində: \"A legal principle allowing recovery for services rendered or work completed, even without a formal contract, based on the reasonable value provided.\" Göstərilən tərif isə «INDEMNITY»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 939,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DEPORTATION» = \"The formal removal of a foreign national from a country, usually for violating immigration or criminal laws.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DEPORTATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 940,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INSOLVENCY» = \"The process of one company taking ownership or control of another company.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INSOLVENCY» əslində: \"The state of being unable to pay debts as they fall due, or having liabilities that exceed assets.\" Göstərilən tərif isə «ACQUISITION»-ə aiddir.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 941,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EXPERT WITNESS» = \"A person with specialized knowledge or skills who provides testimony in court regarding technical, scientific, or professional matters.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «EXPERT WITNESS» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 942,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«HARASSMENT» = \"A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «HARASSMENT» əslində: \"Unwanted and repeated behavior that creates a hostile, offensive, or intimidating environment, particularly in the workplace.\" Göstərilən tərif isə «GRIEVANCE»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 943,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NATURALIZATION» = \"The legal process by which a foreign national acquires the citizenship of another country.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «NATURALIZATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 944,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«VICARIOUS LIABILITY» = \"A legal test limiting liability to losses that were a reasonably foreseeable consequence of the defendant's conduct.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «VICARIOUS LIABILITY» əslində: \"The legal responsibility of one party for the wrongful acts of another, typically an employer for an employee's actions.\" Göstərilən tərif isə «REMOTENESS OF DAMAGE»-ə aiddir.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 945,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SUBPOENA» = \"A legal document ordering a person to attend court or produce documents as evidence.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SUBPOENA» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 946,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PENALTY CLAUSE» = \"Something of value exchanged between parties to a contract — typically money, goods, services, or a promise.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PENALTY CLAUSE» əslində: \"A contractual provision imposing an excessive or disproportionate penalty for breach, which may be unenforceable.\" Göstərilən tərif isə «CONSIDERATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 947,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CUSTODY» = \"The state of being held in prison or under police control pending trial or following conviction.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CUSTODY» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 948,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIEN» = \"Legal ownership or right to possession of property, including land and buildings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «LIEN» əslində: \"A legal claim or security interest held by one party over another's property to secure payment of a debt.\" Göstərilən tərif isə «TITLE»-ə aiddir.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 949,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ARBITRATION» = \"A private dispute resolution process in which an independent arbitrator hears evidence and makes a binding decision.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ARBITRATION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 950,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COMPLAINT» = \"An officer of the court responsible for enforcing judgments, such as by seizing goods or recovering debts.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «COMPLAINT» əslində: \"A formal written statement filed in court detailing a plaintiff's allegations and the relief sought against a defendant.\" Göstərilən tərif isə «BAILIFF»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 951,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EASEMENT» = \"A legal right that allows one property owner to use another's property for a specific purpose, such as access or utilities.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «EASEMENT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 952,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EVIDENCE» = \"A lawsuit in which a large group of people with a common claim sue collectively as a single party.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «EVIDENCE» əslində: \"Information, documents, or testimony presented in court to prove or disprove an allegation.\" Göstərilən tərif isə «CLASS ACTION»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 953,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BURGLARY» = \"The unlawful entry into a building with the intent to commit a crime, typically theft.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «BURGLARY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 954,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ARSON» = \"The physical act or conduct that constitutes a criminal offence, as opposed to the mental state behind it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ARSON» əslində: \"The unlawful and intentional setting of a fire or causing an explosion to damage property.\" Göstərilən tərif isə «ACTUS REUS»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 955,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INJUNCTION» = \"A court order requiring a party to do something or to refrain from doing something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «INJUNCTION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 956,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EMPLOYMENT CONTRACT» = \"Termination of an employee without a fair reason, proper notice, or adherence to fair procedures.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «EMPLOYMENT CONTRACT» əslində: \"A legal agreement between an employer and employee that defines the terms and conditions of employment.\" Göstərilən tərif isə «UNFAIR DISMISSAL»-ə aiddir.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 957,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WARRANTY» = \"A guarantee by one party that certain facts or conditions are true or will be fulfilled.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «WARRANTY» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 958,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRESPASS» = \"Defamation made in a transient form, typically through spoken words rather than in writing.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «TRESPASS» əslində: \"An unlawful entry upon or interference with another's land or property without permission.\" Göstərilən tərif isə «SLANDER»-ə aiddir.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 959,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MITIGATING CIRCUMSTANCES» = \"Facts or circumstances that do not justify or excuse an offence but may reduce the severity of the sentence.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «MITIGATING CIRCUMSTANCES» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 960,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CAPITAL» = \"A person appointed to the board of a company and responsible for its management and decision-making.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CAPITAL» əslində: \"The money or assets invested in a business to enable it to operate and grow.\" Göstərilən tərif isə «DIRECTOR»-ə aiddir.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 961,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRADEMARK» = \"A distinctive sign, symbol, or name used to identify and distinguish a company's products or services from competitors.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TRADEMARK» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 962,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONSIDERATION» = \"A contractual provision that relieves parties from liability when performance becomes impossible due to unforeseen circumstances beyond their control.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CONSIDERATION» əslində: \"Something of value exchanged between parties to a contract, which makes the agreement legally binding.\" Göstərilən tərif isə «FORCE MAJEURE»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 963,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«THE BAR» = \"The collective term for the profession of barristers, or the process of qualifying as one.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «THE BAR» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 964,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SEVERANCE PAY» = \"Unfair or prejudicial treatment of a person based on protected characteristics such as race, gender, age, or disability.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SEVERANCE PAY» əslində: \"Compensation paid to an employee upon termination of employment, often in addition to any notice pay owed.\" Göstərilən tərif isə «DISCRIMINATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 965,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«OWNERSHIP» = \"The legal right to possess, use and dispose of property or assets.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «OWNERSHIP» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 966,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MENS REA» = \"A person or party against whom a criminal charge or civil claim is brought.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MENS REA» əslində: \"The mental element of a crime; the intention or knowledge of wrongdoing that constitutes part of a crime.\" Göstərilən tərif isə «DEFENDANT»-ə aiddir.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 967,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SHAREHOLDER» = \"A person or entity that owns shares in a company and is therefore entitled to a portion of its profits and voting rights.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SHAREHOLDER» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 968,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ANTICIPATORY BREACH» = \"Legally binding and having full legal force or effect.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ANTICIPATORY BREACH» əslində: \"A breach of contract occurring when one party indicates, before performance is due, that it will not perform its obligations.\" Göstərilən tərif isə «VALID»-ə aiddir.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 969,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COUNTER OFFER» = \"A response to an offer in which a party rejects the original offer and proposes different terms.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «COUNTER OFFER» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 970,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SECURITIZATION» = \"An asset pledged by a borrower to a lender as security for a loan, which may be seized if the loan is not repaid.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SECURITIZATION» əslində: \"The process of pooling financial assets, such as loans, and converting them into tradable securities.\" Göstərilən tərif isə «COLLATERAL»-ə aiddir.",
+    "level": "A",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 971,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LIQUIDATED DAMAGES» = \"A predetermined amount agreed upon by contracting parties as compensation for breach, rather than actual damages.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «LIQUIDATED DAMAGES» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 972,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BARRISTER» = \"To concentrate on and become an expert in a particular area of law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BARRISTER» əslində: \"A specialist advocate who represents clients in court, is usually self-employed and is instructed by solicitors.\" Göstərilən tərif isə «SPECIALISE»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 973,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SERVE» = \"To formally deliver legal documents, such as a claim, to the party concerned.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SERVE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 974,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EASEMENT» = \"Property consisting of land and the buildings on it, together with associated rights.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «EASEMENT» əslində: \"A legal right for one landowner to use land belonging to another for a specific limited purpose, such as access.\" Göstərilən tərif isə «REAL ESTATE»-ə aiddir.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 975,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«APPEAL» = \"A legal proceeding in which a higher court reviews a lower court's decision to determine if it was correct.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «APPEAL» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 976,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RESTRICTIVE COVENANT» = \"An official document proving a person's legal ownership of a property or piece of land.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «RESTRICTIVE COVENANT» əslində: \"A clause in a property deed that limits how the owner may use or develop the land.\" Göstərilən tərif isə «TITLE DEED»-ə aiddir.",
+    "level": "A",
+    "topic": "Property Law"
+  },
+  {
+    "id": 977,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«UNFAIR DISMISSAL» = \"The termination of an employee's contract by an employer in a manner that is not justified or lawful.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «UNFAIR DISMISSAL» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 978,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INJUNCTION» = \"A lawsuit in which a large group of people with a common claim sue collectively as a single party.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INJUNCTION» əslində: \"A court order requiring a party to do, or refrain from doing, a specific act.\" Göstərilən tərif isə «CLASS ACTION»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 979,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CONSPIRACY» = \"An agreement between two or more persons to commit a crime or accomplish an unlawful purpose.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CONSPIRACY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 980,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PRENUPTIAL AGREEMENT» = \"A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PRENUPTIAL AGREEMENT» əslində: \"A contract entered into by a couple before marriage, setting out how their assets will be divided in the event of divorce.\" Göstərilən tərif isə «ANNULMENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 981,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«AFFIDAVIT» = \"A written statement of facts confirmed by oath, used as evidence in court proceedings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «AFFIDAVIT» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 982,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«STATUTORY RAPE» = \"The unlawful killing of a human being without the intent to kill, distinguished from murder by the absence of malice.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «STATUTORY RAPE» əslində: \"Sexual intercourse with a person below the legal age of consent, regardless of consent or force.\" Göstərilən tərif isə «MANSLAUGHTER»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 983,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RESTITUTION» = \"Compensation paid by an offender to a victim for harm or loss suffered.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «RESTITUTION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 984,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MORTGAGE» = \"A clause in a property deed that limits how the owner may use or develop the land.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MORTGAGE» əslində: \"A loan secured by real property, whereby the lender holds an interest in the property until the loan is repaid.\" Göstərilən tərif isə «RESTRICTIVE COVENANT»-ə aiddir.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 985,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRADE SECRET» = \"Confidential business information that provides a competitive advantage and is protected from disclosure by law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TRADE SECRET» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 986,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PERJURY» = \"A claim or assertion that someone has done something wrong, typically made without proof at first.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PERJURY» əslində: \"The crime of deliberately giving false testimony under oath in a court proceeding.\" Göstərilən tərif isə «ALLEGATION»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 987,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CUSTODY» = \"The legal right and responsibility to care for and make decisions about a child, usually following separation or divorce.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CUSTODY» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 988,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INHERITANCE TAX» = \"A tax deducted at source from income such as wages, dividends, or royalties before payment is made to the recipient.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «INHERITANCE TAX» əslində: \"A tax levied on the property and money passed on to heirs or beneficiaries after a person's death.\" Göstərilən tərif isə «WITHHOLDING TAX»-ə aiddir.",
+    "level": "H",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 989,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«GROSS MISCONDUCT» = \"Serious wrongdoing by an employee that justifies immediate dismissal without notice.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «GROSS MISCONDUCT» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 990,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RESCISSION» = \"A legally binding agreement between two or more parties in which each party agrees to fulfill certain obligations.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «RESCISSION» əslində: \"The cancellation of a contract, returning the parties to the position they were in before it was made.\" Göstərilən tərif isə «CONTRACT»-ə aiddir.",
+    "level": "A",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 991,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FIDUCIARY DUTY» = \"An obligation to act in the best interests of another party, characterised by trust and loyalty.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «FIDUCIARY DUTY» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 992,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACQUISITION» = \"The combination of two or more companies into a single entity, with one company surviving and continuing as the combined entity.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ACQUISITION» əslində: \"The purchase or transfer of control of one company by another, typically resulting in the acquired company becoming a subsidiary.\" Göstərilən tərif isə «MERGER»-ə aiddir.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 993,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DAMAGES» = \"Money claimed by a claimant from a defendant as compensation for loss or injury suffered.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DAMAGES» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 994,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ANNULMENT» = \"An official court order that legally ends a marriage.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ANNULMENT» əslində: \"A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.\" Göstərilən tərif isə «DIVORCE DECREE»-ə aiddir.",
+    "level": "H",
+    "topic": "Family Law"
+  },
+  {
+    "id": 995,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PUPILLAGE» = \"The final, practical stage of training for a barrister, spent working under the supervision of an experienced barrister.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PUPILLAGE» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 996,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DISPUTE» = \"The obligation on a party to establish the truth of its allegations or claims in court proceedings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DISPUTE» əslində: \"A disagreement or argument between parties, especially one that may lead to legal action.\" Göstərilən tərif isə «BURDEN OF PROOF»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 997,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WITHHOLDING TAX» = \"A tax deducted at source from income such as wages, dividends, or royalties before payment is made to the recipient.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «WITHHOLDING TAX» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 998,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LITIGATION» = \"A disagreement or argument between parties, especially one that may lead to legal action.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «LITIGATION» əslində: \"The process of taking legal action through the courts to resolve a dispute or enforce a right.\" Göstərilən tərif isə «DISPUTE»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 999,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REPRESENT» = \"To act on behalf of a client, especially by speaking for them in legal proceedings.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «REPRESENT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1000,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DIVIDEND» = \"The group of individuals elected by shareholders to oversee the company's affairs and set its policies.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DIVIDEND» əslində: \"A portion of a company's profits distributed to its shareholders, usually on a regular basis.\" Göstərilən tərif isə «BOARD OF DIRECTORS»-ə aiddir.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1001,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SPECIFIC PERFORMANCE» = \"A court order requiring a party to actually perform its contractual obligations rather than paying damages.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SPECIFIC PERFORMANCE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1002,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DUE PROCESS» = \"A legal action requiring a person under arrest to be brought before a court to determine whether their detention is lawful.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «DUE PROCESS» əslində: \"The legal requirement that the state must respect all of a person's legal rights when depriving them of life, liberty, or property.\" Göstərilən tərif isə «HABEAS CORPUS»-ə aiddir.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1003,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«INTERNATIONAL LAW» = \"The system of rules, agreements, and treaties that govern relations between countries and international disputes.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «INTERNATIONAL LAW» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 1004,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SICK PAY» = \"A protected period of leave from work granted to a mother before and after the birth of her child.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SICK PAY» əslində: \"Money paid by an employer to an employee who is unable to work because of illness.\" Göstərilən tərif isə «MATERNITY LEAVE»-ə aiddir.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1005,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ULTRA VIRES» = \"Describing an act done beyond the legal power or authority of the person or body performing it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ULTRA VIRES» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 1006,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«HONOUR» = \"Unlawful pressure or threats exerted on a person to force them into a contract against their will.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «HONOUR» əslində: \"To fulfil or carry out an obligation or the terms of an agreement.\" Göstərilən tərif isə «DURESS»-ə aiddir.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1007,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CROSS-BORDER JURISDICTION» = \"The authority of a court to hear and decide cases involving parties or events located in more than one country.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CROSS-BORDER JURISDICTION» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "International Law"
+  },
+  {
+    "id": 1008,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«LETTER OF CREDIT» = \"A person who agrees to be legally responsible for another person's debt or obligation if they fail to fulfil it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «LETTER OF CREDIT» əslində: \"A document issued by a bank guaranteeing payment to a seller on behalf of a buyer, provided certain conditions are met.\" Göstərilən tərif isə «GUARANTOR»-ə aiddir.",
+    "level": "H",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 1009,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRIBUNAL» = \"A specialised body established to resolve disputes in a particular area, such as employment or tax matters.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TRIBUNAL» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 1010,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«FRAUD» = \"A defendant's formal response to criminal charges, typically guilty, not guilty, or no contest.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «FRAUD» əslində: \"The intentional deception or misrepresentation of facts to deprive someone of property or money.\" Göstərilən tərif isə «PLEA»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1011,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«GUARANTOR» = \"A person who agrees to be legally responsible for another person's debt or obligation if they fail to fulfil it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «GUARANTOR» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 1012,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SUE» = \"The authority of a court to hear and decide a case based on location, the parties, or the subject matter.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SUE» əslində: \"To bring a legal claim against a person or organisation in a court of law.\" Göstərilən tərif isə «JURISDICTION»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1013,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TORT» = \"A civil wrong that causes harm or loss to another person, giving rise to legal liability.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TORT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1014,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PROPERTY DAMAGE» = \"Legal responsibility for harm caused, even if the defendant was not negligent or acting with intent.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PROPERTY DAMAGE» əslində: \"Physical harm inflicted on property belonging to another, for which the owner may seek compensation.\" Göstərilən tərif isə «STRICT LIABILITY»-ə aiddir.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1015,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TENANCY» = \"The legal arrangement under which a tenant occupies and uses property owned by a landlord, usually for rent.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TENANCY» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 1016,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WITNESS» = \"The proper location or district in which a legal case should be heard based on procedural rules.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «WITNESS» əslində: \"A person who has knowledge of facts relevant to a case and gives testimony under oath.\" Göstərilən tərif isə «VENUE»-ə aiddir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1017,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RES JUDICATA» = \"A legal doctrine preventing the same parties from re-litigating a matter that has already been finally decided by a court.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «RES JUDICATA» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1018,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ROYALTY» = \"Confidential business information that provides a competitive advantage and is protected from disclosure by law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ROYALTY» əslində: \"A payment made to the owner of intellectual property for the right to use it, usually based on sales or usage.\" Göstərilən tərif isə «TRADE SECRET»-ə aiddir.",
+    "level": "H",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 1019,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DELEGATED LEGISLATION» = \"Laws made by a body other than parliament, under powers granted to it by an Act of Parliament.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DELEGATED LEGISLATION» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Administrative Law"
+  },
+  {
+    "id": 1020,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACQUISITION» = \"The money or assets invested in a business to enable it to operate and grow.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ACQUISITION» əslində: \"The process of one company taking ownership or control of another company.\" Göstərilən tərif isə «CAPITAL»-ə aiddir.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1021,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«JURISDICTION» = \"The official power of a court to make legal decisions and judgments over a particular area or matter.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «JURISDICTION» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1022,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REDUNDANCY» = \"Unwanted and repeated behavior that creates a hostile, offensive, or intimidating environment, particularly in the workplace.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «REDUNDANCY» əslində: \"The dismissal of employees due to the elimination of their job position, typically because the role is no longer needed.\" Göstərilən tərif isə «HARASSMENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1023,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ECONOMIC LOSS» = \"Financial loss that does not arise from physical damage to a person or property, often subject to special legal limitations on recovery.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ECONOMIC LOSS» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1024,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRADEMARK» = \"A violation of someone's legal rights, particularly in relation to intellectual property, patents, or copyrights.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «TRADEMARK» əslində: \"A recognisable symbol, word, or phrase legally registered to represent a company or product.\" Göstərilən tərif isə «INFRINGEMENT»-ə aiddir.",
+    "level": "F",
+    "topic": "Intellectual Property"
+  },
+  {
+    "id": 1025,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BAIL» = \"Money or property offered to a court to secure a defendant's release from custody pending trial.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «BAIL» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1026,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«REFUGEE STATUS» = \"An official document or stamp permitting a person to enter, leave, or stay in a country for a specified purpose and period.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «REFUGEE STATUS» əslində: \"Official legal recognition that a person meets the international definition of a refugee and is entitled to protection.\" Göstərilən tərif isə «VISA»-ə aiddir.",
+    "level": "H",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 1027,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DOUBLE TAXATION» = \"The imposition of tax on the same income or asset by two different jurisdictions.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DOUBLE TAXATION» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Tax Law"
+  },
+  {
+    "id": 1028,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CROSS-EXAMINATION» = \"To bring a legal claim against a person or organisation in a court of law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CROSS-EXAMINATION» əslində: \"The questioning of a witness by the opposing party's lawyer during a trial, to test their evidence.\" Göstərilən tərif isə «SUE»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1029,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PROMISSORY NOTE» = \"A written promise to pay a specified sum of money to a named party at a future date, typically used in loan transactions.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PROMISSORY NOTE» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1030,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACCESSORY» = \"The unlawful killing of a human being without the intent to kill, distinguished from murder by the absence of malice.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ACCESSORY» əslində: \"A person who aids, abets, or encourages the commission of a crime without being the principal perpetrator.\" Göstərilən tərif isə «MANSLAUGHTER»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1031,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CLASS ACTION» = \"A lawsuit in which a large group of people with a common claim sue collectively as a single party.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CLASS ACTION» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1032,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«BOARD OF DIRECTORS» = \"A person authorised to vote on behalf of a shareholder at a company meeting, or the document granting such authority.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «BOARD OF DIRECTORS» əslində: \"The group of individuals elected by shareholders to oversee the company's affairs and set its policies.\" Göstərilən tərif isə «PROXY»-ə aiddir.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1033,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WILL» = \"A legal document setting out how a person's property and assets should be distributed after their death.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «WILL» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 1034,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«NUISANCE» = \"A failure to take proper care, which may amount to negligence in law.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «NUISANCE» əslində: \"An unreasonable interference with a person's use or enjoyment of their land or with the public's rights.\" Göstərilən tərif isə «CARELESSNESS»-ə aiddir.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1035,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACTUS REUS» = \"The physical act or conduct that constitutes a criminal offence, as opposed to the mental state behind it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ACTUS REUS» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1036,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SHAREHOLDER» = \"A person appointed to the board of a company and responsible for its management and decision-making.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «SHAREHOLDER» əslində: \"A person or entity that owns one or more shares of a company and has a stake in its ownership.\" Göstərilən tərif isə «DIRECTOR»-ə aiddir.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1037,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TERMINATION» = \"The act of bringing a contract or agreement to an end, either by agreement or in accordance with its terms.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «TERMINATION» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1038,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«MANSLAUGHTER» = \"The unlawful and intentional setting of a fire or causing an explosion to damage property.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «MANSLAUGHTER» əslində: \"The unlawful killing of a human being without the intent to kill, distinguished from murder by the absence of malice.\" Göstərilən tərif isə «ARSON»-ə aiddir.",
+    "level": "H",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1039,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DIVIDEND» = \"A distribution of profits by a company to its shareholders, usually in the form of cash or additional shares.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DIVIDEND» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1040,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ACQUITTAL» = \"The legal party that brings criminal charges against a defendant in court, representing the state.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ACQUITTAL» əslində: \"A judgment by a court that a defendant is not guilty of the charged offense.\" Göstərilən tərif isə «PROSECUTION»-ə aiddir.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1041,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«JUDGMENT» = \"The final decision of a court in a case, determining the rights and liabilities of the parties.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «JUDGMENT» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1042,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PLEA BARGAIN» = \"A person who knowingly participates in the commission of a crime, either as a principal or an accessory.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PLEA BARGAIN» əslində: \"An agreement in which a defendant pleads guilty to a lesser charge in exchange for a more lenient sentence.\" Göstərilən tərif isə «ACCOMPLICE»-ə aiddir.",
+    "level": "A",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1043,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ADMIRALTY LAW» = \"The body of law governing maritime activities, including shipping, navigation, and transport of goods and people by sea.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «ADMIRALTY LAW» həqiqətən bu cür tərif olunur.",
+    "level": "A",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1044,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PRECEDENT» = \"A legal time limit within which a claim must be filed or legal action must be initiated.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «PRECEDENT» əslində: \"A legal principle or decision established in a previous case that is used as a guide for deciding similar cases in the future.\" Göstərilən tərif isə «STATUTE OF LIMITATIONS»-ə aiddir.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1045,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Barristers are usually instructed by solicitors.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Barristerlər adətən birbaşa müştəri ilə yox, solisitorlar vasitəsilə işə cəlb olunur.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1046,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Solicitors normally meet clients directly.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Solisitorlar müştərilərlə birbaşa görüşür və məsləhət verir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1047,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Only qualified lawyers may practise law.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Yalnız ixtisaslı hüquqşünaslar hüquqi fəaliyyətlə məşğul ola bilər.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1048,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«In England, there is only one branch of the legal profession.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. İngiltərədə iki qol var: solicitors və barristers.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1049,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A barrister usually works directly with the client without a solicitor.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Barrister adətən solisitor tərəfindən təlimatlandırılır.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1050,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«\"Attorney\" is the American term for a lawyer.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. \"Attorney\" — Amerikada hüquqşünas üçün işlədilən termindir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1051,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A solicitor automatically has rights of audience in all higher courts.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Yuxarı məhkəmələrdə çıxış hüququ (rights of audience) əsasən barristerlərdədir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1052,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A tort is a civil wrong causing harm or loss.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Delikt (tort) — zərər vuran mülki hüquq pozuntusudur.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1053,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Theft is dealt with under civil law.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Oğurluq cinayət hüququna (criminal law) aiddir.",
+    "level": "F",
+    "topic": "Criminal Law"
+  },
+  {
+    "id": 1054,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A breach of contract is normally a criminal matter.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Müqavilənin pozulması mülki (civil) məsələdir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1055,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Damages are money awarded by the court to compensate the injured party.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Damages — zərərçəkənə kompensasiya üçün məhkəmənin təyin etdiyi pul.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1056,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Under a \"no win no fee\" arrangement, the client pays the lawyer only if the claim succeeds.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. \"No win no fee\" — yalnız iddia uğurlu olsa, müştəri ödəyir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1057,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«In a civil claim, the claimant is the person defending the claim.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. İddianı qaldıran — claimant; müdafiə edən — defendant-dır.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1058,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A bailiff is responsible for enforcing a judgment.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Bailiff (məhkəmə icraçısı) qərarın icrasına cavabdehdir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1059,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Negligence requires a duty of care that has been breached, causing damage.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Səhlənkarlıq: qayğı vəzifəsi var → pozulur → zərər yaranır → pozuntu zərərə səbəb olur.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1060,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Conveyancing is the process of transferring ownership of property.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Conveyancing — mülkiyyətin ötürülməsinin hüquqi prosesidir.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 1061,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A merger is the combination of two or more companies into one.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Merger — iki və ya daha çox şirkətin birləşməsidir.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1062,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Insolvency means a company is able to pay all its debts on time.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Insolvency (müflisləşmə) — borcları ödəyə bilməmək vəziyyətidir.",
+    "level": "F",
+    "topic": "Company Law"
   }
 ]

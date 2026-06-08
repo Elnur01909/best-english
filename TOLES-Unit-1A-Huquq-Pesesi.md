@@ -54,9 +54,9 @@ Unit 1A mənbəsi **tam çıxarıldı** — həm lüğət, həm də bütün mə�
 > dəyişiklik olmadan bütün yeni formatları render edir. `type` sahəsi yalnız
 > vizual nişan (badge) üçündür — məntiq eynidir.
 
-## ⏳ Növbəti format
+## ⏳ Sual formatları (status)
 - ✅ Boşluq doldurma (gap-fill) — əlavə edildi
 - ✅ Kollokasiya, Sözönü, Təsnifat — əlavə edildi (Unit 1A tam)
-- ⬜ **True/False** — növbəti addım
+- ✅ **True/False** — əlavə edildi (avtomatik tərif-əsaslı + Unit 1A faktlarından əl ilə)
 
 #modul #db #legal-english #toles #foundation
