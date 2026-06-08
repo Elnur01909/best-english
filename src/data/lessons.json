@@ -1417,5 +1417,341 @@
         "url": "https://www.youtube.com/results?search_query=english+grammar+Possessives"
       }
     ]
+  },
+  {
+    "id": 36,
+    "title": "A2 Qrammatika: was / were (keçmiş \"to be\")",
+    "description": "\"to be\" felinin keçmiş forması.",
+    "content": "\"to be\" felinin keçmiş (past) forması:\n\n• I / he / she / it → was   →  I was happy. She was at home.\n• you / we / they → were    →  They were friends.\n\nİnkar: wasn't (was not) / weren't (were not).\nSual: Were you there? — Yes, I was. / No, I wasn't.",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "was və were arasında seç",
+      "İnkar (wasn't/weren't) qur",
+      "Sual forması qur"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "was / were — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+was%20%2F%20were"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title": "A2 Qrammatika: Past Simple (keçmiş sadə zaman)",
+    "description": "Keçmişdə bitmiş hərəkət. -ed və qaydasız fellər.",
+    "content": "Past Simple keçmişdə bitmiş hərəkəti bildirir:\n\n• Qaydalı fellərə -ed:  work → worked, play → played, watch → watched.\n• Qaydasız fellər (əzbərlə):  go → went, see → saw, have → had,\n  eat → ate, make → made, come → came, take → took.\n\nİnkar: didn't + əsas forma  →  I didn't go.\nSual: Did you go? — Yes, I did. / No, I didn't.\nDiqqət: did/didn't işlənəndə fel ƏSAS formada qalır.",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "Qaydalı fellərə -ed əlavə et",
+      "Qaydasız fellləri tanı",
+      "didn't / Did ilə inkar və sual"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Past Simple — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Past%20Simple"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "title": "A2 Qrammatika: Present Continuous (indi davam edən)",
+    "description": "Danışıq anında baş verən hərəkət. am/is/are + -ing.",
+    "content": "Present Continuous indi (danışıq anında) baş verən hərəkəti bildirir:\n\nam / is / are + fel-ing:\n• I am working.   • She is reading.   • They are playing.\n\nİnkar: I'm not working.   Sual: Are you working?\nYazı qaydaları: make → making, run → running, write → writing.",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "am/is/are düzgün seç",
+      "felə -ing əlavə et",
+      "Sual və inkar qur"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Present Continuous — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Present%20Continuous"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "title": "A2 Qrammatika: Müqayisə (bigger, the biggest)",
+    "description": "Sifətlərin müqayisə dərəcələri.",
+    "content": "Sifətlərin müqayisəsi:\n\n• Qısa sifətlər: -er / the -est\n   big → bigger → the biggest,  old → older → the oldest.\n• Uzun sifətlər: more / the most\n   expensive → more expensive → the most expensive.\n• Qaydasız:  good → better → the best,  bad → worse → the worst.\n\n\"than\" müqayisədə işlənir:  He is taller than me.",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "-er / more arasında seç",
+      "the -est / the most işlət",
+      "Qaydasız formaları bil"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Comparatives & Superlatives — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Comparatives%20%26%20Superlatives"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "title": "A2 Qrammatika: \"going to\" (planlaşdırılmış gələcək)",
+    "description": "Plan və niyyət. am/is/are + going to + fel.",
+    "content": "\"going to\" planlaşdırılmış gələcəyi və niyyəti bildirir:\n\nam / is / are + going to + əsas fel:\n• I am going to study tonight.\n• She is going to travel next year.\n\nİnkar: I'm not going to...   Sual: Are you going to come?",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "am/is/are going to qur",
+      "going to + əsas fel işlət",
+      "Sual forması qur"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "going to (future) — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+going%20to%20(future)"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "title": "A2 Qrammatika: some / any",
+    "description": "Müəyyən olmayan miqdar: müsbət vs sual/inkar.",
+    "content": "\"some\" və \"any\" müəyyən olmayan miqdarı bildirir:\n\n• some → müsbət cümlələrdə:  I have some money.\n• any → inkar və suallarda:  I don't have any money.  Do you have any questions?\n\nİstisna: təklif/xahişdə \"some\" → Would you like some tea?",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "some müsbətdə",
+      "any inkar və sualda",
+      "Təkliflərdə some"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "some / any — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+some%20%2F%20any"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "title": "A2 Qrammatika: much / many / a lot of",
+    "description": "Miqdar: sayılan vs sayılmayan.",
+    "content": "Miqdar sözləri:\n\n• many → sayıla bilən cəm isimlərlə:  many books, many people.\n• much → sayılmayan isimlərlə (əsasən sual/inkar):  much money, much water.\n• a lot of → hər ikisi ilə:  a lot of books, a lot of money.",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "many sayılanla",
+      "much sayılmayanla",
+      "a lot of universal"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "much / many — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+much%20%2F%20many"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "title": "A2 Qrammatika: Tezlik zərfləri (always, never...)",
+    "description": "Hərəkətin nə qədər tez-tez olduğu.",
+    "content": "Tezlik zərfləri hərəkətin nə qədər tez-tez olduğunu bildirir:\n\nalways (həmişə) > usually (adətən) > often (tez-tez) >\nsometimes (bəzən) > never (heç vaxt).\n\nYer: əsas feldən ƏVVƏL, amma \"to be\"-dən SONRA.\n• I always drink coffee.   • She is never late.",
+    "terms": [],
+    "duration": 12,
+    "level": "A2",
+    "objectives": [
+      "Tezlik zərflərini bil",
+      "Cümlədə düzgün yerə qoy",
+      "to be ilə sıra"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Adverbs of frequency — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Adverbs%20of%20frequency"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "title": "B1 Qrammatika: Present Perfect (have/has + V3)",
+    "description": "Keçmişi indi ilə bağlayan zaman.",
+    "content": "Present Perfect keçmişlə indini bağlayır:  have / has + V3 (past participle).\n\n• Təcrübə: I have been to London.\n• Yaxın keçmiş / nəticə: He has lost his keys.\n• ever / never / just / already / yet ilə işlənir.\n\nİnkar: haven't / hasn't.   Sual: Have you ever...?\nQaydasız V3: go → gone, see → seen, do → done, eat → eaten.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "have/has düzgün seç",
+      "V3 (past participle) işlət",
+      "ever/just/yet işlət"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Present Perfect — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Present%20Perfect"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "title": "B1 Qrammatika: Present Perfect vs Past Simple",
+    "description": "Hansını nə vaxt işlətməli.",
+    "content": "İki zaman arasındakı fərq:\n\n• Past Simple → bitmiş, MÜƏYYƏN keçmiş vaxt (yesterday, last week, in 2010, ago):\n   I saw him yesterday.\n• Present Perfect → vaxt deyilmir və ya indi ilə bağlıdır:\n   I have seen that film. / I have lived here since 2020.\n\nAçar sözlər: yesterday/ago/last → Past Simple;  ever/never/just/yet/since/for → Present Perfect.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "Açar sözlərə görə zaman seç",
+      "Müəyyən vaxtla Past Simple",
+      "since/for ilə Present Perfect"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Present Perfect vs Past Simple — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Present%20Perfect%20vs%20Past%20Simple"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "title": "B1 Qrammatika: Past Continuous (was/were + -ing)",
+    "description": "Keçmişdə müəyyən anda davam edən hərəkət.",
+    "content": "Past Continuous keçmişdə müəyyən anda davam edən hərəkəti bildirir:\n\nwas / were + fel-ing:\n• I was sleeping at 10 pm.\n• They were playing when I called.\n\nÇox vaxt Past Simple ilə birlikdə:\nWhile I was reading, the phone rang.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "was/were + -ing qur",
+      "Davam edən keçmişi ifadə et",
+      "Past Simple ilə birləşdir"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Past Continuous — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Past%20Continuous"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "title": "B1 Qrammatika: will vs going to (gələcək)",
+    "description": "Ani qərar/proqnoz vs plan.",
+    "content": "Gələcək üçün iki yol:\n\n• will → ani qərar, proqnoz, vəd:  I will help you. It will rain.\n• going to → əvvəlcədən plan, görünən əlamət:  I'm going to study. (plan)\n\n\"will\" + əsas fel (will go, won't go).\n\"going to\" = am/is/are + going to + əsas fel.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "will ani qərar/proqnoz",
+      "going to plan",
+      "Düzgün forma seç"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "will vs going to — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+will%20vs%20going%20to"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "title": "B1 Qrammatika: Birinci şərt (First Conditional)",
+    "description": "Real, mümkün gələcək. If + Present, will.",
+    "content": "Birinci şərt cümləsi real, mümkün gələcəyi bildirir:\n\nIf + Present Simple, ... will + əsas fel.\n• If it rains, I will stay home.\n• If you study, you will pass.\n\nDiqqət: \"if\" hissəsində gələcək (will) İŞLƏNMİR — Present Simple işlənir.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "If + Present qur",
+      "Əsas hissədə will",
+      "Real şərti ifadə et"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "First Conditional — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+First%20Conditional"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "title": "B1 Qrammatika: Modal fellər (should, must, might)",
+    "description": "Tövsiyə, məcburiyyət, ehtimal.",
+    "content": "Modal fellər:\n\n• should → tövsiyə:  You should rest.\n• must → güclü məcburiyyət/qanun:  You must stop at a red light.\n• might → ehtimal (bəlkə):  It might rain.\n\nHamısı əsas fel ilə işlənir (should go), -s ƏLAVƏ OLUNMUR.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "should tövsiyə",
+      "must məcburiyyət",
+      "might ehtimal"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Modals (should/must/might) — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Modals%20(should%2Fmust%2Fmight)"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "title": "B1 Qrammatika: Əlaqə əvəzlikləri (who/which/that)",
+    "description": "İki cümləni birləşdirmək.",
+    "content": "Əlaqə əvəzlikləri iki cümləni birləşdirir:\n\n• who → insanlar üçün:  The man who called is here.\n• which → əşyalar üçün:  The book which I read.\n• that → hər ikisi üçün:  The car that he bought.\n• where → yer üçün:  The house where I live.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "who insan üçün",
+      "which əşya üçün",
+      "where yer üçün"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Relative clauses — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Relative%20clauses"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "title": "B1 Qrammatika: Passiv (Passive voice)",
+    "description": "Hərəkətin obyekti vacib olanda. to be + V3.",
+    "content": "Passiv cümlədə hərəkəti edən deyil, hərəkətin OBYEKTİ vacibdir:\n\nto be + V3 (past participle):\n• Active: They make cars here. → Passive: Cars are made here.\n• English is spoken in many countries.\n• The letter was written yesterday.\n\nZaman \"to be\" ilə dəyişir: is/are made, was/were made.",
+    "terms": [],
+    "duration": 12,
+    "level": "B1",
+    "objectives": [
+      "to be + V3 qur",
+      "Zaman to be ilə",
+      "Aktiv→passiv çevir"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Passive voice — izah",
+        "url": "https://www.youtube.com/results?search_query=english+grammar+Passive%20voice"
+      }
+    ]
   }
 ]

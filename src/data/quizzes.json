@@ -44934,5 +44934,2181 @@
     "cefr": "A1",
     "track": "general",
     "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2746,
+    "type": "grammar",
+    "question": "I ___ at home yesterday.",
+    "options": [
+      "am",
+      "is",
+      "was",
+      "were"
+    ],
+    "correct": "was",
+    "explanation": "I → was",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2747,
+    "type": "grammar",
+    "question": "They ___ very happy.",
+    "options": [
+      "was",
+      "were",
+      "are",
+      "is"
+    ],
+    "correct": "were",
+    "explanation": "they → were",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2748,
+    "type": "grammar",
+    "question": "She ___ a teacher.",
+    "options": [
+      "was",
+      "are",
+      "is",
+      "were"
+    ],
+    "correct": "was",
+    "explanation": "she → was",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2749,
+    "type": "grammar",
+    "question": "We ___ at school.",
+    "options": [
+      "are",
+      "was",
+      "is",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "we → were",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2750,
+    "type": "grammar",
+    "question": "He ___ tired.",
+    "options": [
+      "was",
+      "are",
+      "is",
+      "were"
+    ],
+    "correct": "was",
+    "explanation": "he → was",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2751,
+    "type": "grammar",
+    "question": "You ___ late.",
+    "options": [
+      "is",
+      "are",
+      "was",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "you → were",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2752,
+    "type": "grammar",
+    "question": "It ___ cold.",
+    "options": [
+      "are",
+      "is",
+      "was",
+      "were"
+    ],
+    "correct": "was",
+    "explanation": "it → was",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2753,
+    "type": "grammar",
+    "question": "___ you there?",
+    "options": [
+      "Were",
+      "Are",
+      "Did",
+      "Was"
+    ],
+    "correct": "Were",
+    "explanation": "you → Were",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2754,
+    "type": "grammar",
+    "question": "I ___ to school yesterday. (go)",
+    "options": [
+      "went",
+      "go",
+      "gone",
+      "goed"
+    ],
+    "correct": "went",
+    "explanation": "go → went",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2755,
+    "type": "grammar",
+    "question": "She ___ TV last night. (watch)",
+    "options": [
+      "watched",
+      "watching",
+      "watches",
+      "watch"
+    ],
+    "correct": "watched",
+    "explanation": "-ed",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2756,
+    "type": "grammar",
+    "question": "They ___ football. (play)",
+    "options": [
+      "plays",
+      "plaied",
+      "play",
+      "played"
+    ],
+    "correct": "played",
+    "explanation": "-ed",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2757,
+    "type": "grammar",
+    "question": "He ___ a sandwich. (eat)",
+    "options": [
+      "eaten",
+      "ate",
+      "eat",
+      "eated"
+    ],
+    "correct": "ate",
+    "explanation": "eat → ate",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2758,
+    "type": "grammar",
+    "question": "We ___ a film. (see)",
+    "options": [
+      "saw",
+      "seed",
+      "see",
+      "seen"
+    ],
+    "correct": "saw",
+    "explanation": "see → saw",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2759,
+    "type": "grammar",
+    "question": "I ___ go to work yesterday.",
+    "options": [
+      "wasn't",
+      "not",
+      "didn't",
+      "don't"
+    ],
+    "correct": "didn't",
+    "explanation": "inkar → didn't",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2760,
+    "type": "grammar",
+    "question": "___ you call her?",
+    "options": [
+      "Were",
+      "Was",
+      "Do",
+      "Did"
+    ],
+    "correct": "Did",
+    "explanation": "sual → Did",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2761,
+    "type": "grammar",
+    "question": "My father ___ a new car. (have)",
+    "options": [
+      "has",
+      "have",
+      "haved",
+      "had"
+    ],
+    "correct": "had",
+    "explanation": "have → had",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2762,
+    "type": "grammar",
+    "question": "I ___ working now.",
+    "options": [
+      "is",
+      "do",
+      "am",
+      "are"
+    ],
+    "correct": "am",
+    "explanation": "I → am",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2763,
+    "type": "grammar",
+    "question": "She ___ reading a book.",
+    "options": [
+      "are",
+      "does",
+      "is",
+      "am"
+    ],
+    "correct": "is",
+    "explanation": "she → is",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2764,
+    "type": "grammar",
+    "question": "They ___ playing football.",
+    "options": [
+      "are",
+      "is",
+      "do",
+      "am"
+    ],
+    "correct": "are",
+    "explanation": "they → are",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2765,
+    "type": "grammar",
+    "question": "Look! It ___ raining.",
+    "options": [
+      "am",
+      "is",
+      "be",
+      "are"
+    ],
+    "correct": "is",
+    "explanation": "it → is",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2766,
+    "type": "grammar",
+    "question": "We ___ watching TV.",
+    "options": [
+      "are",
+      "am",
+      "is",
+      "do"
+    ],
+    "correct": "are",
+    "explanation": "we → are",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2767,
+    "type": "grammar",
+    "question": "He is ___ now. (run)",
+    "options": [
+      "runing",
+      "runned",
+      "running",
+      "runs"
+    ],
+    "correct": "running",
+    "explanation": "run → running",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2768,
+    "type": "grammar",
+    "question": "I am ___ a letter. (write)",
+    "options": [
+      "writes",
+      "wrote",
+      "writing",
+      "writeing"
+    ],
+    "correct": "writing",
+    "explanation": "write → writing",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2769,
+    "type": "grammar",
+    "question": "What ___ you doing?",
+    "options": [
+      "do",
+      "are",
+      "is",
+      "am"
+    ],
+    "correct": "are",
+    "explanation": "you → are",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2770,
+    "type": "grammar",
+    "question": "An elephant is ___ than a cat. (big)",
+    "options": [
+      "biggest",
+      "more big",
+      "big",
+      "bigger"
+    ],
+    "correct": "bigger",
+    "explanation": "qısa → -er",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2771,
+    "type": "grammar",
+    "question": "This book is ___ than that one. (interesting)",
+    "options": [
+      "more interesting",
+      "interesting",
+      "most interesting",
+      "interestinger"
+    ],
+    "correct": "more interesting",
+    "explanation": "uzun → more",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2772,
+    "type": "grammar",
+    "question": "He is the ___ student in the class. (good)",
+    "options": [
+      "better",
+      "best",
+      "most good",
+      "goodest"
+    ],
+    "correct": "best",
+    "explanation": "good → the best",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2773,
+    "type": "grammar",
+    "question": "Today is ___ than yesterday. (cold)",
+    "options": [
+      "colder",
+      "coldest",
+      "more cold",
+      "cold"
+    ],
+    "correct": "colder",
+    "explanation": "qısa → -er",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2774,
+    "type": "grammar",
+    "question": "This is the ___ car here. (expensive)",
+    "options": [
+      "more expensive",
+      "expensivest",
+      "expensive",
+      "most expensive"
+    ],
+    "correct": "most expensive",
+    "explanation": "uzun → the most",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2775,
+    "type": "grammar",
+    "question": "My bag is ___ than yours. (heavy)",
+    "options": [
+      "heavyer",
+      "heaviest",
+      "more heavy",
+      "heavier"
+    ],
+    "correct": "heavier",
+    "explanation": "y → -ier",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2776,
+    "type": "grammar",
+    "question": "She is a ___ singer than him. (good)",
+    "options": [
+      "best",
+      "gooder",
+      "better",
+      "more good"
+    ],
+    "correct": "better",
+    "explanation": "good → better",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2777,
+    "type": "grammar",
+    "question": "Everest is the ___ mountain. (high)",
+    "options": [
+      "high",
+      "higher",
+      "most high",
+      "highest"
+    ],
+    "correct": "highest",
+    "explanation": "qısa → the -est",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 2778,
+    "type": "grammar",
+    "question": "I ___ going to study tonight.",
+    "options": [
+      "is",
+      "are",
+      "will",
+      "am"
+    ],
+    "correct": "am",
+    "explanation": "I → am going to",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2779,
+    "type": "grammar",
+    "question": "She is going to ___ a doctor. (become)",
+    "options": [
+      "became",
+      "becoming",
+      "becomes",
+      "become"
+    ],
+    "correct": "become",
+    "explanation": "going to + əsas forma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2780,
+    "type": "grammar",
+    "question": "They ___ going to travel.",
+    "options": [
+      "are",
+      "am",
+      "is",
+      "will"
+    ],
+    "correct": "are",
+    "explanation": "they → are going to",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2781,
+    "type": "grammar",
+    "question": "We are going to ___ a film. (watch)",
+    "options": [
+      "watch",
+      "watches",
+      "watched",
+      "watching"
+    ],
+    "correct": "watch",
+    "explanation": "going to + əsas forma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2782,
+    "type": "grammar",
+    "question": "He ___ going to buy a car.",
+    "options": [
+      "is",
+      "will",
+      "am",
+      "are"
+    ],
+    "correct": "is",
+    "explanation": "he → is going to",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2783,
+    "type": "grammar",
+    "question": "___ you going to come?",
+    "options": [
+      "Is",
+      "Will",
+      "Do",
+      "Are"
+    ],
+    "correct": "Are",
+    "explanation": "you → Are",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2784,
+    "type": "grammar",
+    "question": "It is going to ___. (rain)",
+    "options": [
+      "rained",
+      "raining",
+      "rains",
+      "rain"
+    ],
+    "correct": "rain",
+    "explanation": "going to + əsas forma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2785,
+    "type": "grammar",
+    "question": "I am going to ___ English. (learn)",
+    "options": [
+      "learn",
+      "learns",
+      "learned",
+      "learning"
+    ],
+    "correct": "learn",
+    "explanation": "going to + əsas forma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 2786,
+    "type": "grammar",
+    "question": "I have ___ money.",
+    "options": [
+      "much",
+      "a",
+      "any",
+      "some"
+    ],
+    "correct": "some",
+    "explanation": "müsbət → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2787,
+    "type": "grammar",
+    "question": "I don't have ___ money.",
+    "options": [
+      "a",
+      "some",
+      "much",
+      "any"
+    ],
+    "correct": "any",
+    "explanation": "inkar → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2788,
+    "type": "grammar",
+    "question": "Do you have ___ questions?",
+    "options": [
+      "a",
+      "any",
+      "some",
+      "much"
+    ],
+    "correct": "any",
+    "explanation": "sual → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2789,
+    "type": "grammar",
+    "question": "There are ___ books on the table.",
+    "options": [
+      "some",
+      "any",
+      "much",
+      "a"
+    ],
+    "correct": "some",
+    "explanation": "müsbət → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2790,
+    "type": "grammar",
+    "question": "She doesn't have ___ friends here.",
+    "options": [
+      "any",
+      "much",
+      "a",
+      "some"
+    ],
+    "correct": "any",
+    "explanation": "inkar → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2791,
+    "type": "grammar",
+    "question": "Would you like ___ tea?",
+    "options": [
+      "some",
+      "a",
+      "any",
+      "much"
+    ],
+    "correct": "some",
+    "explanation": "təklif → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2792,
+    "type": "grammar",
+    "question": "Is there ___ milk?",
+    "options": [
+      "some",
+      "any",
+      "many",
+      "a"
+    ],
+    "correct": "any",
+    "explanation": "sual → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2793,
+    "type": "grammar",
+    "question": "We need ___ help.",
+    "options": [
+      "some",
+      "a",
+      "many",
+      "any"
+    ],
+    "correct": "some",
+    "explanation": "müsbət → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 2794,
+    "type": "grammar",
+    "question": "How ___ books do you have?",
+    "options": [
+      "much",
+      "many",
+      "a",
+      "any"
+    ],
+    "correct": "many",
+    "explanation": "books (sayılan) → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2795,
+    "type": "grammar",
+    "question": "How ___ money do you need?",
+    "options": [
+      "many",
+      "any",
+      "a",
+      "much"
+    ],
+    "correct": "much",
+    "explanation": "money (sayılmaz) → much",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2796,
+    "type": "grammar",
+    "question": "There are ___ people here.",
+    "options": [
+      "much",
+      "any",
+      "a",
+      "many"
+    ],
+    "correct": "many",
+    "explanation": "people (sayılan) → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2797,
+    "type": "grammar",
+    "question": "I don't have ___ time.",
+    "options": [
+      "many",
+      "a",
+      "much",
+      "any"
+    ],
+    "correct": "much",
+    "explanation": "time (sayılmaz) → much",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2798,
+    "type": "grammar",
+    "question": "She has ___ friends.",
+    "options": [
+      "much",
+      "any",
+      "many",
+      "a"
+    ],
+    "correct": "many",
+    "explanation": "friends (sayılan) → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2799,
+    "type": "grammar",
+    "question": "There isn't ___ water.",
+    "options": [
+      "much",
+      "a",
+      "many",
+      "any"
+    ],
+    "correct": "much",
+    "explanation": "water (sayılmaz) → much",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2800,
+    "type": "grammar",
+    "question": "We have ___ of work.",
+    "options": [
+      "much",
+      "a lot",
+      "any",
+      "many"
+    ],
+    "correct": "a lot",
+    "explanation": "a lot of → universal",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2801,
+    "type": "grammar",
+    "question": "How ___ students are there?",
+    "options": [
+      "a",
+      "many",
+      "any",
+      "much"
+    ],
+    "correct": "many",
+    "explanation": "students (sayılan) → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 2802,
+    "type": "grammar",
+    "question": "I ___ drink coffee in the morning. (həmişə)",
+    "options": [
+      "sometimes",
+      "never",
+      "often",
+      "always"
+    ],
+    "correct": "always",
+    "explanation": "həmişə → always",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2803,
+    "type": "grammar",
+    "question": "She is ___ late. (heç vaxt)",
+    "options": [
+      "often",
+      "always",
+      "usually",
+      "never"
+    ],
+    "correct": "never",
+    "explanation": "heç vaxt → never",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2804,
+    "type": "grammar",
+    "question": "We ___ go to the cinema. (bəzən)",
+    "options": [
+      "never",
+      "sometimes",
+      "always",
+      "usually"
+    ],
+    "correct": "sometimes",
+    "explanation": "bəzən → sometimes",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2805,
+    "type": "grammar",
+    "question": "He ___ plays football. (adətən)",
+    "options": [
+      "always",
+      "sometimes",
+      "usually",
+      "never"
+    ],
+    "correct": "usually",
+    "explanation": "adətən → usually",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2806,
+    "type": "grammar",
+    "question": "I ___ eat breakfast. (həmişə)",
+    "options": [
+      "never am",
+      "always",
+      "am always",
+      "always am"
+    ],
+    "correct": "always",
+    "explanation": "əsas feldən əvvəl",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2807,
+    "type": "grammar",
+    "question": "They are ___ happy. (həmişə)",
+    "options": [
+      "am always",
+      "always",
+      "always are",
+      "be always"
+    ],
+    "correct": "always",
+    "explanation": "to be-dən sonra",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2808,
+    "type": "grammar",
+    "question": "I ___ watch TV. (tez-tez)",
+    "options": [
+      "often",
+      "never",
+      "always",
+      "am"
+    ],
+    "correct": "often",
+    "explanation": "tez-tez → often",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2809,
+    "type": "grammar",
+    "question": "Dogs ___ talk. (heç vaxt)",
+    "options": [
+      "always",
+      "never",
+      "often",
+      "usually"
+    ],
+    "correct": "never",
+    "explanation": "heç vaxt → never",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 2810,
+    "type": "grammar",
+    "question": "I ___ finished my homework.",
+    "options": [
+      "am",
+      "did",
+      "have",
+      "has"
+    ],
+    "correct": "have",
+    "explanation": "I → have",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2811,
+    "type": "grammar",
+    "question": "She ___ gone to school.",
+    "options": [
+      "have",
+      "did",
+      "is",
+      "has"
+    ],
+    "correct": "has",
+    "explanation": "she → has",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2812,
+    "type": "grammar",
+    "question": "They ___ lived here for years.",
+    "options": [
+      "did",
+      "are",
+      "have",
+      "has"
+    ],
+    "correct": "have",
+    "explanation": "they → have",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2813,
+    "type": "grammar",
+    "question": "He has ___ his keys. (lose)",
+    "options": [
+      "lose",
+      "losed",
+      "lost",
+      "losing"
+    ],
+    "correct": "lost",
+    "explanation": "lose → lost (V3)",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2814,
+    "type": "grammar",
+    "question": "Have you ___ been to Paris?",
+    "options": [
+      "ever",
+      "just",
+      "yet",
+      "never"
+    ],
+    "correct": "ever",
+    "explanation": "sualda → ever",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2815,
+    "type": "grammar",
+    "question": "I have ___ eaten.",
+    "options": [
+      "ever",
+      "yet",
+      "since",
+      "just"
+    ],
+    "correct": "just",
+    "explanation": "yenicə → just",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2816,
+    "type": "grammar",
+    "question": "We ___ seen that film.",
+    "options": [
+      "have",
+      "did",
+      "are",
+      "has"
+    ],
+    "correct": "have",
+    "explanation": "we → have",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2817,
+    "type": "grammar",
+    "question": "She ___ finished yet.",
+    "options": [
+      "isn't",
+      "hasn't",
+      "didn't",
+      "haven't"
+    ],
+    "correct": "hasn't",
+    "explanation": "she → hasn't",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 2818,
+    "type": "grammar",
+    "question": "I ___ him yesterday. (see)",
+    "options": [
+      "seen",
+      "saw",
+      "see",
+      "have seen"
+    ],
+    "correct": "saw",
+    "explanation": "yesterday → Past Simple",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2819,
+    "type": "grammar",
+    "question": "I ___ already eaten.",
+    "options": [
+      "have",
+      "was",
+      "did",
+      "am"
+    ],
+    "correct": "have",
+    "explanation": "already → Present Perfect",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2820,
+    "type": "grammar",
+    "question": "She ___ to Paris in 2019. (go)",
+    "options": [
+      "go",
+      "went",
+      "has gone",
+      "gone"
+    ],
+    "correct": "went",
+    "explanation": "in 2019 → Past Simple",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2821,
+    "type": "grammar",
+    "question": "They have ___ been here.",
+    "options": [
+      "never",
+      "ago",
+      "last",
+      "yesterday"
+    ],
+    "correct": "never",
+    "explanation": "never → Present Perfect",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2822,
+    "type": "grammar",
+    "question": "We ___ the film last night. (watch)",
+    "options": [
+      "watching",
+      "watched",
+      "have watched",
+      "watch"
+    ],
+    "correct": "watched",
+    "explanation": "last night → Past Simple",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2823,
+    "type": "grammar",
+    "question": "He ___ just arrived.",
+    "options": [
+      "did",
+      "has",
+      "was",
+      "is"
+    ],
+    "correct": "has",
+    "explanation": "just → Present Perfect",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2824,
+    "type": "grammar",
+    "question": "Did you ___ her last week? (see)",
+    "options": [
+      "seeing",
+      "saw",
+      "seen",
+      "see"
+    ],
+    "correct": "see",
+    "explanation": "Did + əsas forma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2825,
+    "type": "grammar",
+    "question": "I ___ lived here since 2020.",
+    "options": [
+      "did",
+      "am",
+      "was",
+      "have"
+    ],
+    "correct": "have",
+    "explanation": "since → Present Perfect",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 2826,
+    "type": "grammar",
+    "question": "I ___ sleeping at 10 pm.",
+    "options": [
+      "were",
+      "was",
+      "am",
+      "did"
+    ],
+    "correct": "was",
+    "explanation": "I → was",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2827,
+    "type": "grammar",
+    "question": "They ___ playing football.",
+    "options": [
+      "was",
+      "are",
+      "were",
+      "did"
+    ],
+    "correct": "were",
+    "explanation": "they → were",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2828,
+    "type": "grammar",
+    "question": "She ___ cooking when I arrived.",
+    "options": [
+      "were",
+      "was",
+      "is",
+      "did"
+    ],
+    "correct": "was",
+    "explanation": "she → was",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2829,
+    "type": "grammar",
+    "question": "We ___ watching TV.",
+    "options": [
+      "was",
+      "are",
+      "did",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "we → were",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2830,
+    "type": "grammar",
+    "question": "He was ___ a book. (read)",
+    "options": [
+      "reads",
+      "read",
+      "reading",
+      "readed"
+    ],
+    "correct": "reading",
+    "explanation": "-ing",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2831,
+    "type": "grammar",
+    "question": "While I ___ walking, it rained.",
+    "options": [
+      "was",
+      "were",
+      "did",
+      "am"
+    ],
+    "correct": "was",
+    "explanation": "I → was",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2832,
+    "type": "grammar",
+    "question": "What ___ you doing?",
+    "options": [
+      "are",
+      "did",
+      "was",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "you → were",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2833,
+    "type": "grammar",
+    "question": "The kids ___ sleeping.",
+    "options": [
+      "are",
+      "did",
+      "was",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "kids (cəm) → were",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 2834,
+    "type": "grammar",
+    "question": "I think it ___ rain tomorrow.",
+    "options": [
+      "is going",
+      "will",
+      "going to",
+      "is"
+    ],
+    "correct": "will",
+    "explanation": "proqnoz → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2835,
+    "type": "grammar",
+    "question": "Wait, I ___ help you. (ani qərar)",
+    "options": [
+      "going",
+      "am going",
+      "will",
+      "am"
+    ],
+    "correct": "will",
+    "explanation": "ani qərar → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2836,
+    "type": "grammar",
+    "question": "She is ___ to travel next year.",
+    "options": [
+      "going",
+      "go",
+      "will",
+      "gone"
+    ],
+    "correct": "going",
+    "explanation": "plan → going to",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2837,
+    "type": "grammar",
+    "question": "Don't worry, I ___ call you.",
+    "options": [
+      "go",
+      "going to",
+      "will",
+      "am going"
+    ],
+    "correct": "will",
+    "explanation": "vəd → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2838,
+    "type": "grammar",
+    "question": "Look at the clouds! It ___ going to rain.",
+    "options": [
+      "are",
+      "is",
+      "be",
+      "will"
+    ],
+    "correct": "is",
+    "explanation": "əlamət → is going to",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2839,
+    "type": "grammar",
+    "question": "We ___ going to the party.",
+    "options": [
+      "am",
+      "will",
+      "are",
+      "is"
+    ],
+    "correct": "are",
+    "explanation": "we → are going to",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2840,
+    "type": "grammar",
+    "question": "He ___ be here soon.",
+    "options": [
+      "are",
+      "going",
+      "is going",
+      "will"
+    ],
+    "correct": "will",
+    "explanation": "proqnoz → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2841,
+    "type": "grammar",
+    "question": "They are going to ___ a house. (buy)",
+    "options": [
+      "buy",
+      "buying",
+      "bought",
+      "buys"
+    ],
+    "correct": "buy",
+    "explanation": "going to + əsas forma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 2842,
+    "type": "grammar",
+    "question": "If it ___, I will stay home. (rain)",
+    "options": [
+      "rains",
+      "will rain",
+      "raining",
+      "rained"
+    ],
+    "correct": "rains",
+    "explanation": "if → Present Simple",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2843,
+    "type": "grammar",
+    "question": "If you study, you ___ pass.",
+    "options": [
+      "are",
+      "will",
+      "would",
+      "do"
+    ],
+    "correct": "will",
+    "explanation": "əsas hissə → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2844,
+    "type": "grammar",
+    "question": "If I have time, I ___ help you.",
+    "options": [
+      "do",
+      "will",
+      "am",
+      "would"
+    ],
+    "correct": "will",
+    "explanation": "əsas hissə → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2845,
+    "type": "grammar",
+    "question": "She will come if you ___ her. (ask)",
+    "options": [
+      "asks",
+      "ask",
+      "will ask",
+      "asked"
+    ],
+    "correct": "ask",
+    "explanation": "if + Present (you)",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2846,
+    "type": "grammar",
+    "question": "If he ___ hard, he will succeed. (work)",
+    "options": [
+      "works",
+      "working",
+      "worked",
+      "will work"
+    ],
+    "correct": "works",
+    "explanation": "he → works",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2847,
+    "type": "grammar",
+    "question": "We will go if it ___ sunny. (be)",
+    "options": [
+      "will be",
+      "was",
+      "is",
+      "being"
+    ],
+    "correct": "is",
+    "explanation": "if → is",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2848,
+    "type": "grammar",
+    "question": "If they win, they ___ celebrate.",
+    "options": [
+      "do",
+      "will",
+      "would",
+      "are"
+    ],
+    "correct": "will",
+    "explanation": "əsas hissə → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2849,
+    "type": "grammar",
+    "question": "If I ___ you, I will call. (see)",
+    "options": [
+      "see",
+      "saw",
+      "will see",
+      "seen"
+    ],
+    "correct": "see",
+    "explanation": "if + Present",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 2850,
+    "type": "grammar",
+    "question": "You ___ see a doctor. (tövsiyə)",
+    "options": [
+      "might",
+      "will",
+      "must",
+      "should"
+    ],
+    "correct": "should",
+    "explanation": "tövsiyə → should",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2851,
+    "type": "grammar",
+    "question": "You ___ stop at a red light. (qanun)",
+    "options": [
+      "can",
+      "might",
+      "must",
+      "should"
+    ],
+    "correct": "must",
+    "explanation": "məcburiyyət → must",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2852,
+    "type": "grammar",
+    "question": "It ___ rain later. (bəlkə)",
+    "options": [
+      "might",
+      "should",
+      "will",
+      "must"
+    ],
+    "correct": "might",
+    "explanation": "ehtimal → might",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2853,
+    "type": "grammar",
+    "question": "He should ___ more. (study)",
+    "options": [
+      "study",
+      "studies",
+      "studying",
+      "studied"
+    ],
+    "correct": "study",
+    "explanation": "modal + əsas forma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2854,
+    "type": "grammar",
+    "question": "You must ___ your passport. (show)",
+    "options": [
+      "show",
+      "shows",
+      "showed",
+      "showing"
+    ],
+    "correct": "show",
+    "explanation": "modal + əsas forma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2855,
+    "type": "grammar",
+    "question": "I ___ go, I'm not sure. (bəlkə)",
+    "options": [
+      "should",
+      "might",
+      "must",
+      "will"
+    ],
+    "correct": "might",
+    "explanation": "ehtimal → might",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2856,
+    "type": "grammar",
+    "question": "Students ___ do their homework. (tövsiyə)",
+    "options": [
+      "can",
+      "should",
+      "might",
+      "will"
+    ],
+    "correct": "should",
+    "explanation": "tövsiyə → should",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2857,
+    "type": "grammar",
+    "question": "She ___ be tired; she worked all day. (ehtimal)",
+    "options": [
+      "might",
+      "should",
+      "must",
+      "will"
+    ],
+    "correct": "might",
+    "explanation": "ehtimal → might",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 2858,
+    "type": "grammar",
+    "question": "The man ___ called is my friend.",
+    "options": [
+      "whose",
+      "which",
+      "where",
+      "who"
+    ],
+    "correct": "who",
+    "explanation": "insan → who",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2859,
+    "type": "grammar",
+    "question": "The book ___ I read was good.",
+    "options": [
+      "where",
+      "which",
+      "who",
+      "whom"
+    ],
+    "correct": "which",
+    "explanation": "əşya → which",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2860,
+    "type": "grammar",
+    "question": "This is the house ___ I live.",
+    "options": [
+      "who",
+      "where",
+      "when",
+      "which"
+    ],
+    "correct": "where",
+    "explanation": "yer → where",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2861,
+    "type": "grammar",
+    "question": "The woman ___ helps us is kind.",
+    "options": [
+      "what",
+      "who",
+      "which",
+      "where"
+    ],
+    "correct": "who",
+    "explanation": "insan → who",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2862,
+    "type": "grammar",
+    "question": "I like the car ___ is red.",
+    "options": [
+      "who",
+      "which",
+      "whom",
+      "where"
+    ],
+    "correct": "which",
+    "explanation": "əşya → which",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2863,
+    "type": "grammar",
+    "question": "The student ___ won is happy.",
+    "options": [
+      "which",
+      "where",
+      "what",
+      "who"
+    ],
+    "correct": "who",
+    "explanation": "insan → who",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2864,
+    "type": "grammar",
+    "question": "The city ___ I was born is small.",
+    "options": [
+      "which",
+      "where",
+      "who",
+      "when"
+    ],
+    "correct": "where",
+    "explanation": "yer → where",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2865,
+    "type": "grammar",
+    "question": "The phone ___ I bought is new.",
+    "options": [
+      "where",
+      "whom",
+      "who",
+      "that"
+    ],
+    "correct": "that",
+    "explanation": "əşya → that/which",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 2866,
+    "type": "grammar",
+    "question": "English ___ spoken here.",
+    "options": [
+      "does",
+      "has",
+      "are",
+      "is"
+    ],
+    "correct": "is",
+    "explanation": "English (təkün) → is",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2867,
+    "type": "grammar",
+    "question": "Cars ___ made in Japan.",
+    "options": [
+      "is",
+      "are",
+      "does",
+      "has"
+    ],
+    "correct": "are",
+    "explanation": "cars (cəm) → are",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2868,
+    "type": "grammar",
+    "question": "The book ___ written in 2010.",
+    "options": [
+      "were",
+      "was",
+      "has",
+      "is"
+    ],
+    "correct": "was",
+    "explanation": "keçmiş təkün → was",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2869,
+    "type": "grammar",
+    "question": "Coffee is ___ in Brazil. (grow)",
+    "options": [
+      "grow",
+      "growing",
+      "grown",
+      "grew"
+    ],
+    "correct": "grown",
+    "explanation": "grow → grown (V3)",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2870,
+    "type": "grammar",
+    "question": "These houses ___ built last year.",
+    "options": [
+      "were",
+      "has",
+      "was",
+      "are"
+    ],
+    "correct": "were",
+    "explanation": "keçmiş cəm → were",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2871,
+    "type": "grammar",
+    "question": "The room ___ cleaned every day.",
+    "options": [
+      "is",
+      "has",
+      "does",
+      "are"
+    ],
+    "correct": "is",
+    "explanation": "room (təkün) → is",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2872,
+    "type": "grammar",
+    "question": "Many languages ___ spoken there.",
+    "options": [
+      "are",
+      "does",
+      "is",
+      "has"
+    ],
+    "correct": "are",
+    "explanation": "languages (cəm) → are",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2873,
+    "type": "grammar",
+    "question": "The window was ___ by the boy. (break)",
+    "options": [
+      "broke",
+      "broken",
+      "break",
+      "breaking"
+    ],
+    "correct": "broken",
+    "explanation": "break → broken (V3)",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
   }
 ]
