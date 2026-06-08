@@ -41,8 +41,22 @@ Bu qeyd autentik TOLES Foundation mənbəsindən götürülmüş Unit 1A məzmun
 - grounds **for** a claim · claim **against** somebody · apply **for** something
 
 ## 📥 Platformaya təsir
-- `vocab.json`: 300 → **327** termin (8-i yeni *Legal Profession* mövzusu)
-- `quizzes.json`: 300 → **327** sual
+Unit 1A mənbəsi **tam çıxarıldı** — həm lüğət, həm də bütün məşq formatları:
+- `vocab.json`: +44 termin (Legal Profession mövzusu + mülki iddia + Foundation terminlər)
+- `quizzes.json`: bu mənbədən **4 fərqli sual formatı** əlavə edildi:
+  - 📖 **Tərif → termin** (klassik)
+  - 🔗 **Kollokasiya** (draft/honour/breach a contract — write/respect/infringe səhvdir)
+  - 🔤 **Sözönü/Preposisiya** (qualify **as** a lawyer, specialise **in** law, act **for** a client)
+  - ⚖️ **Mülki/Cinayət təsnifatı** (theft → Criminal, unpaid invoice → Civil)
 - `lessons.json`: 20 → **21** dərs (*Dərs 21: Hüquq Peşəsi və Mülki İddia*)
+
+> 💡 **Dərs:** Mövcud test mühərriki (`question/options/correct` schema) heç bir
+> dəyişiklik olmadan bütün yeni formatları render edir. `type` sahəsi yalnız
+> vizual nişan (badge) üçündür — məntiq eynidir.
+
+## ⏳ Növbəti format
+- ✅ Boşluq doldurma (gap-fill) — əlavə edildi
+- ✅ Kollokasiya, Sözönü, Təsnifat — əlavə edildi (Unit 1A tam)
+- ⬜ **True/False** — növbəti addım
 
 #modul #db #legal-english #toles #foundation

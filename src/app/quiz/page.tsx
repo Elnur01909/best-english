@@ -21,6 +21,15 @@ const LEVEL_COLORS = {
 
 type Stage = 'select' | 'quiz' | 'result'
 
+// Sual formatı nişanları
+const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
+  'gap-fill':       { label: '📝 Boşluğu doldur', cls: 'bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300' },
+  'collocation':    { label: '🔗 Kollokasiya',    cls: 'bg-teal-100 text-teal-700 dark:bg-teal-950 dark:text-teal-300' },
+  'preposition':    { label: '🔤 Sözönü',         cls: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300' },
+  'classification': { label: '⚖️ Təsnifat',       cls: 'bg-rose-100 text-rose-700 dark:bg-rose-950 dark:text-rose-300' },
+  'true-false':     { label: '✓✗ Doğru/Yanlış',   cls: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300' },
+}
+
 export default function QuizPage() {
   const router = useRouter()
   const [userId, setUserId] = useState<string | null>(null)
@@ -247,9 +256,9 @@ export default function QuizPage() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-2">
                   <p className="text-sm text-gray-400 uppercase tracking-wide">{current.topic}</p>
-                  {current.type === 'gap-fill' && (
-                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-950 dark:text-amber-300">
-                      📝 Boşluğu doldur
+                  {current.type && TYPE_BADGE[current.type] && (
+                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${TYPE_BADGE[current.type].cls}`}>
+                      {TYPE_BADGE[current.type].label}
                     </span>
                   )}
                 </div>

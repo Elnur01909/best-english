@@ -9824,5 +9824,323 @@
     "explanation": "CARELESSNESS: A failure to take proper care, which may amount to negligence in law.",
     "level": "H",
     "topic": "Tort Law"
+  },
+  {
+    "id": 679,
+    "type": "preposition",
+    "question": "Hüquqşünas kimi ixtisaslaşmaq:  qualify ___ a lawyer",
+    "options": [
+      "for",
+      "to",
+      "in",
+      "as"
+    ],
+    "correct": "as",
+    "explanation": "qualify AS a lawyer — peşəyə yiyələnmək mənasında \"as\" işlənir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 680,
+    "type": "preposition",
+    "question": "Hüququn bir sahəsində ixtisaslaşmaq:  specialise ___ law",
+    "options": [
+      "in",
+      "for",
+      "on",
+      "at"
+    ],
+    "correct": "in",
+    "explanation": "specialise IN a field — sahə üçün həmişə \"in\".",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 681,
+    "type": "preposition",
+    "question": "Hüquq firmasında çalışmaq:  work ___ a law firm",
+    "options": [
+      "by",
+      "for",
+      "to",
+      "of"
+    ],
+    "correct": "for",
+    "explanation": "work FOR a firm — bir təşkilata işləmək \"for\" ilə.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 682,
+    "type": "preposition",
+    "question": "Müştərini təmsil etmək:  act ___ a client",
+    "options": [
+      "to",
+      "on",
+      "for",
+      "with"
+    ],
+    "correct": "for",
+    "explanation": "act FOR a client — müştəri adından hərəkət etmək.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 683,
+    "type": "preposition",
+    "question": "İddia üçün əsas:  grounds ___ a claim",
+    "options": [
+      "of",
+      "for",
+      "on",
+      "to"
+    ],
+    "correct": "for",
+    "explanation": "grounds FOR a claim — iddianın əsası \"for\" ilə.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 684,
+    "type": "preposition",
+    "question": "Kiməsə qarşı iddia qaldırmaq:  claim ___ somebody",
+    "options": [
+      "for",
+      "against",
+      "to",
+      "with"
+    ],
+    "correct": "against",
+    "explanation": "claim AGAINST somebody — kiməsə qarşı \"against\".",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 685,
+    "type": "preposition",
+    "question": "Kiməsə qarşı məhkəmə prosesi aparmaq:  proceed ___ somebody",
+    "options": [
+      "to",
+      "against",
+      "for",
+      "with"
+    ],
+    "correct": "against",
+    "explanation": "proceed AGAINST somebody — kiməsə qarşı icraat \"against\".",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 686,
+    "type": "preposition",
+    "question": "Nəyəsə müraciət etmək:  apply ___ something",
+    "options": [
+      "for",
+      "to",
+      "at",
+      "on"
+    ],
+    "correct": "for",
+    "explanation": "apply FOR something — müraciət \"for\" ilə.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 687,
+    "type": "preposition",
+    "question": "Kiməsə pul ödəmək:  pay money ___ somebody",
+    "options": [
+      "to",
+      "with",
+      "at",
+      "for"
+    ],
+    "correct": "to",
+    "explanation": "pay money TO somebody — ödəniş yönəlmə \"to\" ilə.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 688,
+    "type": "collocation",
+    "question": "Müqaviləni hazırlamaq (hüquqi sənəd yazmaq):  ___ a contract",
+    "options": [
+      "compose",
+      "type",
+      "draft",
+      "write"
+    ],
+    "correct": "draft",
+    "explanation": "\"draft a contract\" düzgündür. \"write a contract\" TOLES-də səhv sayılır.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 689,
+    "type": "collocation",
+    "question": "Müqavilənin şərtlərini yerinə yetirmək:  ___ a contract",
+    "options": [
+      "follow",
+      "obey",
+      "honour",
+      "respect"
+    ],
+    "correct": "honour",
+    "explanation": "\"honour a contract\" düzgündür. \"respect a contract\" səhvdir.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 690,
+    "type": "collocation",
+    "question": "Müqaviləni pozmaq:  ___ a contract",
+    "options": [
+      "damage",
+      "breach",
+      "infringe",
+      "hurt"
+    ],
+    "correct": "breach",
+    "explanation": "\"breach a contract\" düzgündür. \"infringe\" isə hüquq/patent ilə işlənir (infringe a right/patent).",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 691,
+    "type": "collocation",
+    "question": "Məhkəmə prosesini başlatmaq:  ___ a claim",
+    "options": [
+      "issue",
+      "read",
+      "sign",
+      "write"
+    ],
+    "correct": "issue",
+    "explanation": "\"issue a claim\" = start proceedings (iddianı qaldırmaq / icraatı başlatmaq).",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 692,
+    "type": "collocation",
+    "question": "İmtahan vermək:  ___ an exam",
+    "options": [
+      "give",
+      "take",
+      "make",
+      "do"
+    ],
+    "correct": "take",
+    "explanation": "\"take (və ya sit) an exam\" düzgündür. \"make/give an exam\" səhvdir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 693,
+    "type": "collocation",
+    "question": "Hakim qismində çıxış etmək:  ___ as a judge",
+    "options": [
+      "play",
+      "work",
+      "sit",
+      "stand"
+    ],
+    "correct": "sit",
+    "explanation": "\"sit as a judge\" — hakim kimi fəaliyyət göstərmək.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 694,
+    "type": "collocation",
+    "question": "Təcrübə qazanmaq:  ___ experience",
+    "options": [
+      "win",
+      "catch",
+      "gain",
+      "reach"
+    ],
+    "correct": "gain",
+    "explanation": "\"gain experience\" (və ya get experience) — təcrübə toplamaq.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 695,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  Ödənilməmiş hesab-faktura (unpaid invoice)",
+    "options": [
+      "Criminal Law",
+      "Civil Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — fərdlər/təşkilatlar arasındakı borc və pul mübahisələri.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 696,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  Müqavilənin pozulması (breach of contract)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — müqavilə mübahisələri tərəflər arasında həll olunur.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 697,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  Əmlaka ziyan mübahisəsi (property damage dispute)",
+    "options": [
+      "Criminal Law",
+      "Civil Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — əmlak mübahisələri mülki iddia ilə həll olunur.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 698,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  Oğurluq (theft)",
+    "options": [
+      "Criminal Law",
+      "Civil Law"
+    ],
+    "correct": "Criminal Law",
+    "explanation": "Cinayət hüququ — oğurluq dövlətə qarşı cinayət sayılır.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 699,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  Polis istintaqı (police investigation)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Criminal Law",
+    "explanation": "Cinayət hüququ — polis istintaqı cinayət işləri ilə bağlıdır.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 700,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  Fırıldaqçılıq (fraud)",
+    "options": [
+      "Criminal Law",
+      "Civil Law"
+    ],
+    "correct": "Criminal Law",
+    "explanation": "Cinayət hüququ — fırıldaqçılıq dövlətə qarşı cinayətdir.",
+    "level": "F",
+    "topic": "Legal Principles"
   }
 ]
