@@ -4576,5 +4576,243 @@
     "explanation": "VALID: Legally binding and having full legal force or effect.",
     "level": "F",
     "topic": "Contract Law"
+  },
+  {
+    "id": 328,
+    "question": "A legal document setting out how a person's property and assets should be distributed after their death.",
+    "options": [
+      "PERJURY",
+      "CONVEYANCING",
+      "BILL OF LADING",
+      "WILL"
+    ],
+    "correct": "WILL",
+    "explanation": "WILL: A legal document setting out how a person's property and assets should be distributed after their death.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 329,
+    "question": "The legal right to possess, use and dispose of property or assets.",
+    "options": [
+      "PRECEDENT",
+      "SPECIALISE",
+      "OWNERSHIP",
+      "DEBTOR"
+    ],
+    "correct": "OWNERSHIP",
+    "explanation": "OWNERSHIP: The legal right to possess, use and dispose of property or assets.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 330,
+    "question": "An act of breaking or failing to observe a law, agreement, or duty.",
+    "options": [
+      "DURESS",
+      "LEASEHOLD",
+      "ESTOPPEL",
+      "BREACH"
+    ],
+    "correct": "BREACH",
+    "explanation": "BREACH: An act of breaking or failing to observe a law, agreement, or duty.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 331,
+    "question": "To prepare a first or formal version of a legal document such as a contract.",
+    "options": [
+      "SETTLEMENT",
+      "CONVICTION",
+      "DRAFT",
+      "JURISDICTION"
+    ],
+    "correct": "DRAFT",
+    "explanation": "DRAFT: To prepare a first or formal version of a legal document such as a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 332,
+    "question": "To fulfil or carry out an obligation or the terms of an agreement.",
+    "options": [
+      "VISA",
+      "HONOUR",
+      "ATTORNEY",
+      "BAIL"
+    ],
+    "correct": "HONOUR",
+    "explanation": "HONOUR: To fulfil or carry out an obligation or the terms of an agreement.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 333,
+    "question": "Movable physical items that can be bought and sold, especially in commercial transactions.",
+    "options": [
+      "ACQUITTAL",
+      "CROSS-EXAMINATION",
+      "GOODS",
+      "PUPILLAGE"
+    ],
+    "correct": "GOODS",
+    "explanation": "GOODS: Movable physical items that can be bought and sold, especially in commercial transactions.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 334,
+    "question": "A person or organisation that receives professional legal services from a lawyer.",
+    "options": [
+      "LICENSING",
+      "ULTRA VIRES",
+      "EARNEST MONEY",
+      "CLIENT"
+    ],
+    "correct": "CLIENT",
+    "explanation": "CLIENT: A person or organisation that receives professional legal services from a lawyer.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 335,
+    "question": "To act on behalf of a client, especially by speaking for them in legal proceedings.",
+    "options": [
+      "REFUGEE STATUS",
+      "REPRESENT",
+      "JURISDICTION",
+      "ALIMONY"
+    ],
+    "correct": "REPRESENT",
+    "explanation": "REPRESENT: To act on behalf of a client, especially by speaking for them in legal proceedings.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 336,
+    "question": "To concentrate on and become an expert in a particular area of law.",
+    "options": [
+      "INDICTMENT",
+      "SPECIALISE",
+      "BOARD OF DIRECTORS",
+      "PROSECUTION"
+    ],
+    "correct": "SPECIALISE",
+    "explanation": "SPECIALISE: To concentrate on and become an expert in a particular area of law.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 337,
+    "question": "Having the necessary training, examinations and certification to practise as a lawyer.",
+    "options": [
+      "SICK PAY",
+      "FRAUD",
+      "QUALIFIED",
+      "ACCEPTANCE"
+    ],
+    "correct": "QUALIFIED",
+    "explanation": "QUALIFIED: Having the necessary training, examinations and certification to practise as a lawyer.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 338,
+    "question": "The professional work of providing legal services, or a business through which it is carried out.",
+    "options": [
+      "LEGAL PRACTICE",
+      "WILL",
+      "MENS REA",
+      "INFRINGEMENT"
+    ],
+    "correct": "LEGAL PRACTICE",
+    "explanation": "LEGAL PRACTICE: The professional work of providing legal services, or a business through which it is carried out.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 339,
+    "question": "The collective term for the profession of barristers, or the process of qualifying as one.",
+    "options": [
+      "LITIGATION",
+      "THE BAR",
+      "ACCOMPLICE",
+      "PRECEDENT"
+    ],
+    "correct": "THE BAR",
+    "explanation": "THE BAR: The collective term for the profession of barristers, or the process of qualifying as one.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 340,
+    "question": "To formally deliver legal documents, such as a claim, to the party concerned.",
+    "options": [
+      "NUISANCE",
+      "SERVE",
+      "ACQUITTAL",
+      "TRADEMARK"
+    ],
+    "correct": "SERVE",
+    "explanation": "SERVE: To formally deliver legal documents, such as a claim, to the party concerned.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 341,
+    "question": "To formally reply to a legal claim, usually by filing a defence or acknowledgement.",
+    "options": [
+      "COLLECTIVE BARGAINING",
+      "REDUNDANCY",
+      "RESPOND",
+      "MENS REA"
+    ],
+    "correct": "RESPOND",
+    "explanation": "RESPOND: To formally reply to a legal claim, usually by filing a defence or acknowledgement.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 342,
+    "question": "A claim or assertion that someone has done something wrong, typically made without proof at first.",
+    "options": [
+      "ALLEGATION",
+      "AGGRAVATED ASSAULT",
+      "UNFAIR DISMISSAL",
+      "DUE DILIGENCE"
+    ],
+    "correct": "ALLEGATION",
+    "explanation": "ALLEGATION: A claim or assertion that someone has done something wrong, typically made without proof at first.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 343,
+    "question": "A legal case, issue or piece of business that a lawyer is dealing with.",
+    "options": [
+      "INTERNATIONAL LAW",
+      "ACTUS REUS",
+      "SPECIALISE",
+      "MATTER"
+    ],
+    "correct": "MATTER",
+    "explanation": "MATTER: A legal case, issue or piece of business that a lawyer is dealing with.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 344,
+    "question": "A failure to take proper care, which may amount to negligence in law.",
+    "options": [
+      "ASSIGNMENT",
+      "DEFAMATION",
+      "MERGER",
+      "CARELESSNESS"
+    ],
+    "correct": "CARELESSNESS",
+    "explanation": "CARELESSNESS: A failure to take proper care, which may amount to negligence in law.",
+    "level": "H",
+    "topic": "Tort Law"
   }
 ]
