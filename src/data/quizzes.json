@@ -26008,5 +26008,5068 @@
     "topic": "Commercial Contracts",
     "track": "legal",
     "cefr": "C1"
+  },
+  {
+    "id": 1600,
+    "type": "definition",
+    "question": "A group of people who are related, like parents and children.",
+    "options": [
+      "buy",
+      "day",
+      "family",
+      "fish"
+    ],
+    "correct": "family",
+    "explanation": "family = ailə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1601,
+    "type": "gap-fill",
+    "question": "I love my —————— very much.",
+    "options": [
+      "day",
+      "go",
+      "family",
+      "easy"
+    ],
+    "correct": "family",
+    "explanation": "family = ailə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1602,
+    "type": "matching",
+    "question": "«family» — düzgün mənasını seç:",
+    "options": [
+      "A group of people who are related, like parents and children.",
+      "To put food in your mouth and swallow it.",
+      "Having a low temperature.",
+      "A road in a town with houses."
+    ],
+    "correct": "A group of people who are related, like parents and children.",
+    "explanation": "family = ailə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1603,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«family» = \"A group of people who are related, like parents and children.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. family = ailə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1604,
+    "type": "definition",
+    "question": "A female parent.",
+    "options": [
+      "time",
+      "mother",
+      "hand",
+      "coffee"
+    ],
+    "correct": "mother",
+    "explanation": "mother = ana",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1605,
+    "type": "gap-fill",
+    "question": "My —————— is a teacher.",
+    "options": [
+      "city",
+      "bad",
+      "cold",
+      "mother"
+    ],
+    "correct": "mother",
+    "explanation": "mother = ana",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1606,
+    "type": "matching",
+    "question": "«mother» — düzgün mənasını seç:",
+    "options": [
+      "Little in size.",
+      "To get new knowledge or a skill.",
+      "To look at words and understand them.",
+      "A female parent."
+    ],
+    "correct": "A female parent.",
+    "explanation": "mother = ana",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1607,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«mother» = \"A person who studies at a school.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. mother = ana",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1608,
+    "type": "definition",
+    "question": "A male parent.",
+    "options": [
+      "sleep",
+      "father",
+      "sun",
+      "big"
+    ],
+    "correct": "father",
+    "explanation": "father = ata",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1609,
+    "type": "gap-fill",
+    "question": "His —————— works in a shop.",
+    "options": [
+      "like",
+      "fish",
+      "father",
+      "shop"
+    ],
+    "correct": "father",
+    "explanation": "father = ata",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1610,
+    "type": "matching",
+    "question": "«father» — düzgün mənasını seç:",
+    "options": [
+      "A female parent.",
+      "A male parent.",
+      "To create or produce something.",
+      "A piece of furniture with a flat top and legs."
+    ],
+    "correct": "A male parent.",
+    "explanation": "father = ata",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1611,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«father» = \"A male parent.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. father = ata",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1612,
+    "type": "definition",
+    "question": "A boy or man who has the same parents as you.",
+    "options": [
+      "brother",
+      "sun",
+      "open",
+      "room"
+    ],
+    "correct": "brother",
+    "explanation": "brother = qardaş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1613,
+    "type": "gap-fill",
+    "question": "I have one ——————.",
+    "options": [
+      "big",
+      "bad",
+      "cold",
+      "brother"
+    ],
+    "correct": "brother",
+    "explanation": "brother = qardaş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1614,
+    "type": "matching",
+    "question": "«brother» — düzgün mənasını seç:",
+    "options": [
+      "Water that falls from the sky.",
+      "Not good; of low quality.",
+      "To move something so it is not closed.",
+      "A boy or man who has the same parents as you."
+    ],
+    "correct": "A boy or man who has the same parents as you.",
+    "explanation": "brother = qardaş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1615,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«brother» = \"Feeling good and pleased.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. brother = qardaş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1616,
+    "type": "definition",
+    "question": "A girl or woman who has the same parents as you.",
+    "options": [
+      "father",
+      "help",
+      "sister",
+      "sun"
+    ],
+    "correct": "sister",
+    "explanation": "sister = bacı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1617,
+    "type": "gap-fill",
+    "question": "My —————— is ten years old.",
+    "options": [
+      "sister",
+      "fish",
+      "come",
+      "meat"
+    ],
+    "correct": "sister",
+    "explanation": "sister = bacı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1618,
+    "type": "matching",
+    "question": "«sister» — düzgün mənasını seç:",
+    "options": [
+      "A girl or woman who has the same parents as you.",
+      "The part of your body at the end of your arm.",
+      "More than one person.",
+      "An adult female person."
+    ],
+    "correct": "A girl or woman who has the same parents as you.",
+    "explanation": "sister = bacı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1619,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«sister» = \"A girl or woman who has the same parents as you.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. sister = bacı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1620,
+    "type": "definition",
+    "question": "A person you like and know well.",
+    "options": [
+      "home",
+      "friend",
+      "learn",
+      "shop"
+    ],
+    "correct": "friend",
+    "explanation": "friend = dost",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1621,
+    "type": "gap-fill",
+    "question": "She is my best ——————.",
+    "options": [
+      "speak",
+      "friend",
+      "woman",
+      "hot"
+    ],
+    "correct": "friend",
+    "explanation": "friend = dost",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1622,
+    "type": "matching",
+    "question": "«friend» — düzgün mənasını seç:",
+    "options": [
+      "A person you like and know well.",
+      "To do a job to earn money.",
+      "To do something fun, like a game.",
+      "To own or possess something."
+    ],
+    "correct": "A person you like and know well.",
+    "explanation": "friend = dost",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1623,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«friend» = \"An adult male person.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. friend = dost",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1624,
+    "type": "definition",
+    "question": "An adult male person.",
+    "options": [
+      "new",
+      "man",
+      "brother",
+      "hand"
+    ],
+    "correct": "man",
+    "explanation": "man = kişi",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1625,
+    "type": "gap-fill",
+    "question": "The —————— is tall.",
+    "options": [
+      "come",
+      "man",
+      "coffee",
+      "work"
+    ],
+    "correct": "man",
+    "explanation": "man = kişi",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1626,
+    "type": "matching",
+    "question": "«man» — düzgün mənasını seç:",
+    "options": [
+      "An adult male person.",
+      "A male parent.",
+      "Made or bought recently; not old.",
+      "Things that people and animals eat."
+    ],
+    "correct": "An adult male person.",
+    "explanation": "man = kişi",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1627,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«man» = \"An adult male person.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. man = kişi",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1628,
+    "type": "definition",
+    "question": "An adult female person.",
+    "options": [
+      "child",
+      "cold",
+      "woman",
+      "see"
+    ],
+    "correct": "woman",
+    "explanation": "woman = qadın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1629,
+    "type": "gap-fill",
+    "question": "The —————— is reading a book.",
+    "options": [
+      "woman",
+      "bad",
+      "student",
+      "mother"
+    ],
+    "correct": "woman",
+    "explanation": "woman = qadın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1630,
+    "type": "matching",
+    "question": "«woman» — düzgün mənasını seç:",
+    "options": [
+      "Not difficult to do.",
+      "A basic food made from flour.",
+      "A period of twelve months.",
+      "An adult female person."
+    ],
+    "correct": "An adult female person.",
+    "explanation": "woman = qadın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1631,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«woman» = \"The part of your body at the end of your arm.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. woman = qadın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1632,
+    "type": "definition",
+    "question": "A young boy or girl.",
+    "options": [
+      "money",
+      "child",
+      "friend",
+      "hot"
+    ],
+    "correct": "child",
+    "explanation": "child = uşaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1633,
+    "type": "gap-fill",
+    "question": "The —————— is playing.",
+    "options": [
+      "mother",
+      "family",
+      "child",
+      "good"
+    ],
+    "correct": "child",
+    "explanation": "child = uşaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1634,
+    "type": "matching",
+    "question": "«child» — düzgün mənasını seç:",
+    "options": [
+      "To look at words and understand them.",
+      "To get something by paying money.",
+      "What clocks measure (hours, minutes).",
+      "A young boy or girl."
+    ],
+    "correct": "A young boy or girl.",
+    "explanation": "child = uşaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1635,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«child» = \"A young boy or girl.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. child = uşaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1636,
+    "type": "definition",
+    "question": "More than one person.",
+    "options": [
+      "hot",
+      "city",
+      "rain",
+      "people"
+    ],
+    "correct": "people",
+    "explanation": "people = insanlar",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1637,
+    "type": "gap-fill",
+    "question": "Many —————— live in the city.",
+    "options": [
+      "people",
+      "phone",
+      "hand",
+      "read"
+    ],
+    "correct": "people",
+    "explanation": "people = insanlar",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1638,
+    "type": "matching",
+    "question": "«people» — düzgün mənasını seç:",
+    "options": [
+      "Pages with words that you read.",
+      "More than one person.",
+      "To get something by paying money.",
+      "Made or bought recently; not old."
+    ],
+    "correct": "More than one person.",
+    "explanation": "people = insanlar",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1639,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«people» = \"To move something so it is not closed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. people = insanlar",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1640,
+    "type": "definition",
+    "question": "What someone or something is called.",
+    "options": [
+      "small",
+      "name",
+      "sister",
+      "milk"
+    ],
+    "correct": "name",
+    "explanation": "name = ad",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1641,
+    "type": "gap-fill",
+    "question": "My —————— is Ali.",
+    "options": [
+      "name",
+      "make",
+      "today",
+      "phone"
+    ],
+    "correct": "name",
+    "explanation": "name = ad",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1642,
+    "type": "matching",
+    "question": "«name» — düzgün mənasını seç:",
+    "options": [
+      "What someone or something is called.",
+      "To rest with your eyes closed at night.",
+      "A place where children learn.",
+      "Not good; of low quality."
+    ],
+    "correct": "What someone or something is called.",
+    "explanation": "name = ad",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1643,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«name» = \"What someone or something is called.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. name = ad",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "People & Family"
+  },
+  {
+    "id": 1644,
+    "type": "definition",
+    "question": "A building where people live.",
+    "options": [
+      "home",
+      "house",
+      "meat",
+      "friend"
+    ],
+    "correct": "house",
+    "explanation": "house = ev",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1645,
+    "type": "gap-fill",
+    "question": "They live in a small ——————.",
+    "options": [
+      "see",
+      "cold",
+      "go",
+      "house"
+    ],
+    "correct": "house",
+    "explanation": "house = ev",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1646,
+    "type": "matching",
+    "question": "«house» — düzgün mənasını seç:",
+    "options": [
+      "A large and important town.",
+      "A building where people live.",
+      "The part of your body at the end of your arm.",
+      "A part of a building with walls."
+    ],
+    "correct": "A building where people live.",
+    "explanation": "house = ev",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1647,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«house» = \"A girl or woman who has the same parents as you.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. house = ev",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1648,
+    "type": "definition",
+    "question": "The place where you live.",
+    "options": [
+      "door",
+      "small",
+      "home",
+      "fish"
+    ],
+    "correct": "home",
+    "explanation": "home = ev, yurd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1649,
+    "type": "gap-fill",
+    "question": "I am at —————— now.",
+    "options": [
+      "today",
+      "drink",
+      "child",
+      "home"
+    ],
+    "correct": "home",
+    "explanation": "home = ev, yurd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1650,
+    "type": "matching",
+    "question": "«home» — düzgün mənasını seç:",
+    "options": [
+      "To create or produce something.",
+      "The place where you live.",
+      "A place where you buy things.",
+      "To make letters or words with a pen."
+    ],
+    "correct": "The place where you live.",
+    "explanation": "home = ev, yurd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1651,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«home» = \"The place where you live.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. home = ev, yurd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1652,
+    "type": "definition",
+    "question": "A part of a building with walls.",
+    "options": [
+      "room",
+      "want",
+      "sister",
+      "easy"
+    ],
+    "correct": "room",
+    "explanation": "room = otaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1653,
+    "type": "gap-fill",
+    "question": "My —————— is very clean.",
+    "options": [
+      "room",
+      "home",
+      "good",
+      "hot"
+    ],
+    "correct": "room",
+    "explanation": "room = otaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1654,
+    "type": "matching",
+    "question": "«room» — düzgün mənasını seç:",
+    "options": [
+      "A part of a building with walls.",
+      "A place where you buy things.",
+      "To notice something with your eyes.",
+      "To do something fun, like a game."
+    ],
+    "correct": "A part of a building with walls.",
+    "explanation": "room = otaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1655,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«room» = \"To notice something with your eyes.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. room = otaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1656,
+    "type": "definition",
+    "question": "You open and close it to enter a room.",
+    "options": [
+      "door",
+      "have",
+      "small",
+      "student"
+    ],
+    "correct": "door",
+    "explanation": "door = qapı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1657,
+    "type": "gap-fill",
+    "question": "Please close the ——————.",
+    "options": [
+      "door",
+      "home",
+      "easy",
+      "like"
+    ],
+    "correct": "door",
+    "explanation": "door = qapı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1658,
+    "type": "matching",
+    "question": "«door» — düzgün mənasını seç:",
+    "options": [
+      "You open and close it to enter a room.",
+      "A vehicle with four wheels for driving.",
+      "A period of twelve months.",
+      "A female parent."
+    ],
+    "correct": "You open and close it to enter a room.",
+    "explanation": "door = qapı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1659,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«door» = \"You open and close it to enter a room.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. door = qapı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1660,
+    "type": "definition",
+    "question": "A piece of furniture with a flat top and legs.",
+    "options": [
+      "milk",
+      "car",
+      "table",
+      "bread"
+    ],
+    "correct": "table",
+    "explanation": "table = masa",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1661,
+    "type": "gap-fill",
+    "question": "The book is on the ——————.",
+    "options": [
+      "day",
+      "table",
+      "brother",
+      "family"
+    ],
+    "correct": "table",
+    "explanation": "table = masa",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1662,
+    "type": "matching",
+    "question": "«table» — düzgün mənasını seç:",
+    "options": [
+      "A place where you buy things.",
+      "A piece of furniture with a flat top and legs.",
+      "Pages with words that you read.",
+      "Not difficult to do."
+    ],
+    "correct": "A piece of furniture with a flat top and legs.",
+    "explanation": "table = masa",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1663,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«table» = \"To move something so it is not closed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. table = masa",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1664,
+    "type": "definition",
+    "question": "A clear liquid that we drink.",
+    "options": [
+      "work",
+      "shop",
+      "go",
+      "water"
+    ],
+    "correct": "water",
+    "explanation": "water = su",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1665,
+    "type": "gap-fill",
+    "question": "I drink a lot of ——————.",
+    "options": [
+      "water",
+      "fish",
+      "day",
+      "eat"
+    ],
+    "correct": "water",
+    "explanation": "water = su",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1666,
+    "type": "matching",
+    "question": "«water» — düzgün mənasını seç:",
+    "options": [
+      "To take liquid into your mouth and swallow.",
+      "To rest with your eyes closed at night.",
+      "To make letters or words with a pen.",
+      "A clear liquid that we drink."
+    ],
+    "correct": "A clear liquid that we drink.",
+    "explanation": "water = su",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1667,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«water» = \"A clear liquid that we drink.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. water = su",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1668,
+    "type": "definition",
+    "question": "Coins and notes used to buy things.",
+    "options": [
+      "woman",
+      "sun",
+      "people",
+      "money"
+    ],
+    "correct": "money",
+    "explanation": "money = pul",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1669,
+    "type": "gap-fill",
+    "question": "I have no —————— today.",
+    "options": [
+      "book",
+      "see",
+      "money",
+      "easy"
+    ],
+    "correct": "money",
+    "explanation": "money = pul",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1670,
+    "type": "matching",
+    "question": "«money» — düzgün mənasını seç:",
+    "options": [
+      "A girl or woman who has the same parents as you.",
+      "On this present day.",
+      "Coins and notes used to buy things.",
+      "To make letters or words with a pen."
+    ],
+    "correct": "Coins and notes used to buy things.",
+    "explanation": "money = pul",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1671,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«money» = \"To move toward a place or person.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. money = pul",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1672,
+    "type": "definition",
+    "question": "A device used to talk to people far away.",
+    "options": [
+      "phone",
+      "new",
+      "cold",
+      "make"
+    ],
+    "correct": "phone",
+    "explanation": "phone = telefon",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1673,
+    "type": "gap-fill",
+    "question": "My —————— is new.",
+    "options": [
+      "read",
+      "learn",
+      "phone",
+      "shop"
+    ],
+    "correct": "phone",
+    "explanation": "phone = telefon",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1674,
+    "type": "matching",
+    "question": "«phone» — düzgün mənasını seç:",
+    "options": [
+      "To rest with your eyes closed at night.",
+      "To hand something to someone.",
+      "A device used to talk to people far away.",
+      "To own or possess something."
+    ],
+    "correct": "A device used to talk to people far away.",
+    "explanation": "phone = telefon",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1675,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«phone» = \"A device used to talk to people far away.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. phone = telefon",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1676,
+    "type": "definition",
+    "question": "A vehicle with four wheels for driving.",
+    "options": [
+      "read",
+      "like",
+      "car",
+      "tree"
+    ],
+    "correct": "car",
+    "explanation": "car = maşın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1677,
+    "type": "gap-fill",
+    "question": "He has a red ——————.",
+    "options": [
+      "car",
+      "head",
+      "bread",
+      "day"
+    ],
+    "correct": "car",
+    "explanation": "car = maşın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1678,
+    "type": "matching",
+    "question": "«car» — düzgün mənasını seç:",
+    "options": [
+      "A white drink that comes from cows.",
+      "An adult male person.",
+      "A vehicle with four wheels for driving.",
+      "An adult female person."
+    ],
+    "correct": "A vehicle with four wheels for driving.",
+    "explanation": "car = maşın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1679,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«car» = \"To hand something to someone.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. car = maşın",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1680,
+    "type": "definition",
+    "question": "Pages with words that you read.",
+    "options": [
+      "friend",
+      "man",
+      "time",
+      "book"
+    ],
+    "correct": "book",
+    "explanation": "book = kitab",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1681,
+    "type": "gap-fill",
+    "question": "This —————— is interesting.",
+    "options": [
+      "home",
+      "give",
+      "book",
+      "sleep"
+    ],
+    "correct": "book",
+    "explanation": "book = kitab",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1682,
+    "type": "matching",
+    "question": "«book» — düzgün mənasını seç:",
+    "options": [
+      "Pages with words that you read.",
+      "A piece of furniture with a flat top and legs.",
+      "Little in size.",
+      "A girl or woman who has the same parents as you."
+    ],
+    "correct": "Pages with words that you read.",
+    "explanation": "book = kitab",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1683,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«book» = \"Pages with words that you read.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. book = kitab",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1684,
+    "type": "definition",
+    "question": "You put things in it to carry them.",
+    "options": [
+      "time",
+      "bag",
+      "eat",
+      "brother"
+    ],
+    "correct": "bag",
+    "explanation": "bag = çanta",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1685,
+    "type": "gap-fill",
+    "question": "My —————— is heavy.",
+    "options": [
+      "table",
+      "bag",
+      "mother",
+      "play"
+    ],
+    "correct": "bag",
+    "explanation": "bag = çanta",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1686,
+    "type": "matching",
+    "question": "«bag» — düzgün mənasını seç:",
+    "options": [
+      "The dark part of the day.",
+      "You put things in it to carry them.",
+      "A male parent.",
+      "An animal that lives in water; also a food."
+    ],
+    "correct": "You put things in it to carry them.",
+    "explanation": "bag = çanta",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1687,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«bag» = \"To hand something to someone.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. bag = çanta",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 1688,
+    "type": "definition",
+    "question": "Things that people and animals eat.",
+    "options": [
+      "want",
+      "man",
+      "go",
+      "food"
+    ],
+    "correct": "food",
+    "explanation": "food = yemək, qida",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1689,
+    "type": "gap-fill",
+    "question": "The —————— is very good.",
+    "options": [
+      "friend",
+      "new",
+      "food",
+      "phone"
+    ],
+    "correct": "food",
+    "explanation": "food = yemək, qida",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1690,
+    "type": "matching",
+    "question": "«food» — düzgün mənasını seç:",
+    "options": [
+      "Things that people and animals eat.",
+      "A boy or man who has the same parents as you.",
+      "A building where people live.",
+      "A clear liquid that we drink."
+    ],
+    "correct": "Things that people and animals eat.",
+    "explanation": "food = yemək, qida",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1691,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«food» = \"Things that people and animals eat.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. food = yemək, qida",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1692,
+    "type": "definition",
+    "question": "A basic food made from flour.",
+    "options": [
+      "tree",
+      "go",
+      "money",
+      "bread"
+    ],
+    "correct": "bread",
+    "explanation": "bread = çörək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1693,
+    "type": "gap-fill",
+    "question": "I eat —————— every morning.",
+    "options": [
+      "bread",
+      "fish",
+      "school",
+      "bad"
+    ],
+    "correct": "bread",
+    "explanation": "bread = çörək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1694,
+    "type": "matching",
+    "question": "«bread» — düzgün mənasını seç:",
+    "options": [
+      "A building where people live.",
+      "A basic food made from flour.",
+      "To create or produce something.",
+      "A big plant with a trunk and leaves."
+    ],
+    "correct": "A basic food made from flour.",
+    "explanation": "bread = çörək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1695,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«bread» = \"The place where you live.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. bread = çörək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1696,
+    "type": "definition",
+    "question": "A white drink that comes from cows.",
+    "options": [
+      "sister",
+      "city",
+      "milk",
+      "big"
+    ],
+    "correct": "milk",
+    "explanation": "milk = süd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1697,
+    "type": "gap-fill",
+    "question": "Children drink ——————.",
+    "options": [
+      "man",
+      "milk",
+      "go",
+      "make"
+    ],
+    "correct": "milk",
+    "explanation": "milk = süd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1698,
+    "type": "matching",
+    "question": "«milk» — düzgün mənasını seç:",
+    "options": [
+      "A male parent.",
+      "A white drink that comes from cows.",
+      "The top part of your body with your face.",
+      "A person who studies at a school."
+    ],
+    "correct": "A white drink that comes from cows.",
+    "explanation": "milk = süd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1699,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«milk» = \"A white drink that comes from cows.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. milk = süd",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1700,
+    "type": "definition",
+    "question": "A round fruit, usually red or green.",
+    "options": [
+      "hot",
+      "buy",
+      "time",
+      "apple"
+    ],
+    "correct": "apple",
+    "explanation": "apple = alma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1701,
+    "type": "gap-fill",
+    "question": "She eats an ——————.",
+    "options": [
+      "doctor",
+      "work",
+      "drink",
+      "apple"
+    ],
+    "correct": "apple",
+    "explanation": "apple = alma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1702,
+    "type": "matching",
+    "question": "«apple» — düzgün mənasını seç:",
+    "options": [
+      "A place where children learn.",
+      "To look at words and understand them.",
+      "A round fruit, usually red or green.",
+      "Large in size."
+    ],
+    "correct": "A round fruit, usually red or green.",
+    "explanation": "apple = alma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1703,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«apple» = \"To get something by paying money.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. apple = alma",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1704,
+    "type": "definition",
+    "question": "A hot brown drink with caffeine.",
+    "options": [
+      "man",
+      "head",
+      "time",
+      "coffee"
+    ],
+    "correct": "coffee",
+    "explanation": "coffee = qəhvə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1705,
+    "type": "gap-fill",
+    "question": "I drink —————— in the morning.",
+    "options": [
+      "coffee",
+      "play",
+      "new",
+      "phone"
+    ],
+    "correct": "coffee",
+    "explanation": "coffee = qəhvə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1706,
+    "type": "matching",
+    "question": "«coffee» — düzgün mənasını seç:",
+    "options": [
+      "A boy or man who has the same parents as you.",
+      "The 24 hours from one midnight to the next.",
+      "A hot brown drink with caffeine.",
+      "To move something so it is not closed."
+    ],
+    "correct": "A hot brown drink with caffeine.",
+    "explanation": "coffee = qəhvə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1707,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«coffee» = \"A hot brown drink with caffeine.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. coffee = qəhvə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1708,
+    "type": "definition",
+    "question": "A hot drink made from leaves.",
+    "options": [
+      "book",
+      "tea",
+      "bread",
+      "food"
+    ],
+    "correct": "tea",
+    "explanation": "tea = çay",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1709,
+    "type": "gap-fill",
+    "question": "Would you like some ——————?",
+    "options": [
+      "school",
+      "happy",
+      "tea",
+      "speak"
+    ],
+    "correct": "tea",
+    "explanation": "tea = çay",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1710,
+    "type": "matching",
+    "question": "«tea» — düzgün mənasını seç:",
+    "options": [
+      "A hot drink made from leaves.",
+      "A hot brown drink with caffeine.",
+      "A round fruit, usually red or green.",
+      "More than one person."
+    ],
+    "correct": "A hot drink made from leaves.",
+    "explanation": "tea = çay",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1711,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«tea» = \"The star that gives us light and heat.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. tea = çay",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1712,
+    "type": "definition",
+    "question": "Food that comes from animals.",
+    "options": [
+      "bad",
+      "bag",
+      "meat",
+      "school"
+    ],
+    "correct": "meat",
+    "explanation": "meat = ət",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1713,
+    "type": "gap-fill",
+    "question": "We eat —————— for dinner.",
+    "options": [
+      "milk",
+      "buy",
+      "meat",
+      "sleep"
+    ],
+    "correct": "meat",
+    "explanation": "meat = ət",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1714,
+    "type": "matching",
+    "question": "«meat» — düzgün mənasını seç:",
+    "options": [
+      "Food that comes from animals.",
+      "A device used to talk to people far away.",
+      "To move something so it is not closed.",
+      "Pages with words that you read."
+    ],
+    "correct": "Food that comes from animals.",
+    "explanation": "meat = ət",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1715,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«meat» = \"Food that comes from animals.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. meat = ət",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1716,
+    "type": "definition",
+    "question": "An animal that lives in water; also a food.",
+    "options": [
+      "new",
+      "home",
+      "fish",
+      "hand"
+    ],
+    "correct": "fish",
+    "explanation": "fish = balıq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1717,
+    "type": "gap-fill",
+    "question": "I like ——————.",
+    "options": [
+      "bag",
+      "fish",
+      "today",
+      "shop"
+    ],
+    "correct": "fish",
+    "explanation": "fish = balıq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1718,
+    "type": "matching",
+    "question": "«fish» — düzgün mənasını seç:",
+    "options": [
+      "A device used to talk to people far away.",
+      "Made or bought recently; not old.",
+      "An animal that lives in water; also a food.",
+      "To create or produce something."
+    ],
+    "correct": "An animal that lives in water; also a food.",
+    "explanation": "fish = balıq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1719,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«fish» = \"A big plant with a trunk and leaves.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. fish = balıq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Food & Drink"
+  },
+  {
+    "id": 1720,
+    "type": "definition",
+    "question": "To move from one place to another.",
+    "options": [
+      "child",
+      "rain",
+      "fish",
+      "go"
+    ],
+    "correct": "go",
+    "explanation": "go = getmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1721,
+    "type": "gap-fill",
+    "question": "I —————— to school every day.",
+    "options": [
+      "doctor",
+      "car",
+      "buy",
+      "go"
+    ],
+    "correct": "go",
+    "explanation": "go = getmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1722,
+    "type": "matching",
+    "question": "«go» — düzgün mənasını seç:",
+    "options": [
+      "To move from one place to another.",
+      "An adult male person.",
+      "The 24 hours from one midnight to the next.",
+      "A vehicle with four wheels for driving."
+    ],
+    "correct": "To move from one place to another.",
+    "explanation": "go = getmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1723,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«go» = \"To move from one place to another.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. go = getmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1724,
+    "type": "definition",
+    "question": "To move toward a place or person.",
+    "options": [
+      "sister",
+      "happy",
+      "come",
+      "open"
+    ],
+    "correct": "come",
+    "explanation": "come = gəlmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1725,
+    "type": "gap-fill",
+    "question": "Please —————— here.",
+    "options": [
+      "come",
+      "small",
+      "write",
+      "home"
+    ],
+    "correct": "come",
+    "explanation": "come = gəlmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1726,
+    "type": "matching",
+    "question": "«come» — düzgün mənasını seç:",
+    "options": [
+      "A basic food made from flour.",
+      "To move toward a place or person.",
+      "Little in size.",
+      "To rest with your eyes closed at night."
+    ],
+    "correct": "To move toward a place or person.",
+    "explanation": "come = gəlmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1727,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«come» = \"A group of people who are related, like parents and children.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. come = gəlmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1728,
+    "type": "definition",
+    "question": "To put food in your mouth and swallow it.",
+    "options": [
+      "time",
+      "big",
+      "sun",
+      "eat"
+    ],
+    "correct": "eat",
+    "explanation": "eat = yemək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1729,
+    "type": "gap-fill",
+    "question": "We —————— dinner at seven.",
+    "options": [
+      "day",
+      "work",
+      "eat",
+      "speak"
+    ],
+    "correct": "eat",
+    "explanation": "eat = yemək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1730,
+    "type": "matching",
+    "question": "«eat» — düzgün mənasını seç:",
+    "options": [
+      "Large in size.",
+      "What clocks measure (hours, minutes).",
+      "A group of people who are related, like parents and children.",
+      "To put food in your mouth and swallow it."
+    ],
+    "correct": "To put food in your mouth and swallow it.",
+    "explanation": "eat = yemək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1731,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«eat» = \"To put food in your mouth and swallow it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. eat = yemək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1732,
+    "type": "definition",
+    "question": "To take liquid into your mouth and swallow.",
+    "options": [
+      "drink",
+      "house",
+      "water",
+      "bread"
+    ],
+    "correct": "drink",
+    "explanation": "drink = içmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1733,
+    "type": "gap-fill",
+    "question": "I —————— water.",
+    "options": [
+      "drink",
+      "help",
+      "brother",
+      "school"
+    ],
+    "correct": "drink",
+    "explanation": "drink = içmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1734,
+    "type": "matching",
+    "question": "«drink» — düzgün mənasını seç:",
+    "options": [
+      "To hand something to someone.",
+      "Little in size.",
+      "Not good; of low quality.",
+      "To take liquid into your mouth and swallow."
+    ],
+    "correct": "To take liquid into your mouth and swallow.",
+    "explanation": "drink = içmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1735,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«drink» = \"Feeling good and pleased.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. drink = içmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1736,
+    "type": "definition",
+    "question": "To rest with your eyes closed at night.",
+    "options": [
+      "old",
+      "room",
+      "sleep",
+      "give"
+    ],
+    "correct": "sleep",
+    "explanation": "sleep = yatmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1737,
+    "type": "gap-fill",
+    "question": "I —————— eight hours.",
+    "options": [
+      "sleep",
+      "woman",
+      "drink",
+      "brother"
+    ],
+    "correct": "sleep",
+    "explanation": "sleep = yatmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1738,
+    "type": "matching",
+    "question": "«sleep» — düzgün mənasını seç:",
+    "options": [
+      "Food that comes from animals.",
+      "To rest with your eyes closed at night.",
+      "A hot drink made from leaves.",
+      "A device used to talk to people far away."
+    ],
+    "correct": "To rest with your eyes closed at night.",
+    "explanation": "sleep = yatmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1739,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«sleep» = \"To rest with your eyes closed at night.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. sleep = yatmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1740,
+    "type": "definition",
+    "question": "To do a job to earn money.",
+    "options": [
+      "work",
+      "city",
+      "father",
+      "make"
+    ],
+    "correct": "work",
+    "explanation": "work = işləmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1741,
+    "type": "matching",
+    "question": "«work» — düzgün mənasını seç:",
+    "options": [
+      "A large vehicle that carries many people.",
+      "A large and important town.",
+      "To do a job to earn money.",
+      "A piece of furniture with a flat top and legs."
+    ],
+    "correct": "To do a job to earn money.",
+    "explanation": "work = işləmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1742,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«work» = \"To look at words and understand them.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. work = işləmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1743,
+    "type": "definition",
+    "question": "To do something fun, like a game.",
+    "options": [
+      "play",
+      "day",
+      "fish",
+      "bus"
+    ],
+    "correct": "play",
+    "explanation": "play = oynamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1744,
+    "type": "gap-fill",
+    "question": "The children —————— in the park.",
+    "options": [
+      "old",
+      "go",
+      "play",
+      "table"
+    ],
+    "correct": "play",
+    "explanation": "play = oynamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1745,
+    "type": "matching",
+    "question": "«play» — düzgün mənasını seç:",
+    "options": [
+      "To do something fun, like a game.",
+      "To own or possess something.",
+      "A group of people who are related, like parents and children.",
+      "To wish to have or do something."
+    ],
+    "correct": "To do something fun, like a game.",
+    "explanation": "play = oynamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1746,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«play» = \"To do something fun, like a game.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. play = oynamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1747,
+    "type": "definition",
+    "question": "To look at words and understand them.",
+    "options": [
+      "meat",
+      "small",
+      "read",
+      "good"
+    ],
+    "correct": "read",
+    "explanation": "read = oxumaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1748,
+    "type": "gap-fill",
+    "question": "I —————— every night.",
+    "options": [
+      "read",
+      "help",
+      "child",
+      "water"
+    ],
+    "correct": "read",
+    "explanation": "read = oxumaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1749,
+    "type": "matching",
+    "question": "«read» — düzgün mənasını seç:",
+    "options": [
+      "To notice something with your eyes.",
+      "To look at words and understand them.",
+      "A vehicle with four wheels for driving.",
+      "A round fruit, usually red or green."
+    ],
+    "correct": "To look at words and understand them.",
+    "explanation": "read = oxumaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1750,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«read» = \"To wish to have or do something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. read = oxumaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1751,
+    "type": "definition",
+    "question": "To make letters or words with a pen.",
+    "options": [
+      "hot",
+      "teacher",
+      "write",
+      "play"
+    ],
+    "correct": "write",
+    "explanation": "write = yazmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1752,
+    "type": "gap-fill",
+    "question": "Please —————— your name.",
+    "options": [
+      "go",
+      "read",
+      "water",
+      "write"
+    ],
+    "correct": "write",
+    "explanation": "write = yazmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1753,
+    "type": "matching",
+    "question": "«write» — düzgün mənasını seç:",
+    "options": [
+      "Not difficult to do.",
+      "To make letters or words with a pen.",
+      "A white drink that comes from cows.",
+      "The dark part of the day."
+    ],
+    "correct": "To make letters or words with a pen.",
+    "explanation": "write = yazmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1754,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«write» = \"To make letters or words with a pen.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. write = yazmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1755,
+    "type": "definition",
+    "question": "To notice something with your eyes.",
+    "options": [
+      "fish",
+      "see",
+      "brother",
+      "woman"
+    ],
+    "correct": "see",
+    "explanation": "see = görmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1756,
+    "type": "gap-fill",
+    "question": "I —————— a bird.",
+    "options": [
+      "see",
+      "brother",
+      "play",
+      "water"
+    ],
+    "correct": "see",
+    "explanation": "see = görmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1757,
+    "type": "matching",
+    "question": "«see» — düzgün mənasını seç:",
+    "options": [
+      "To look at words and understand them.",
+      "Of high quality; nice.",
+      "To notice something with your eyes.",
+      "To find someone or something nice."
+    ],
+    "correct": "To notice something with your eyes.",
+    "explanation": "see = görmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1758,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«see» = \"A girl or woman who has the same parents as you.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. see = görmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1759,
+    "type": "definition",
+    "question": "To wish to have or do something.",
+    "options": [
+      "open",
+      "meat",
+      "give",
+      "want"
+    ],
+    "correct": "want",
+    "explanation": "want = istəmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1760,
+    "type": "gap-fill",
+    "question": "I —————— some water.",
+    "options": [
+      "man",
+      "learn",
+      "open",
+      "want"
+    ],
+    "correct": "want",
+    "explanation": "want = istəmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1761,
+    "type": "matching",
+    "question": "«want» — düzgün mənasını seç:",
+    "options": [
+      "To wish to have or do something.",
+      "A person whose job is to teach.",
+      "A round fruit, usually red or green.",
+      "A person who studies at a school."
+    ],
+    "correct": "To wish to have or do something.",
+    "explanation": "want = istəmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1762,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«want» = \"To wish to have or do something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. want = istəmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1763,
+    "type": "definition",
+    "question": "To find someone or something nice.",
+    "options": [
+      "like",
+      "milk",
+      "name",
+      "woman"
+    ],
+    "correct": "like",
+    "explanation": "like = xoşlamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1764,
+    "type": "gap-fill",
+    "question": "I —————— music.",
+    "options": [
+      "family",
+      "coffee",
+      "like",
+      "hand"
+    ],
+    "correct": "like",
+    "explanation": "like = xoşlamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1765,
+    "type": "matching",
+    "question": "«like» — düzgün mənasını seç:",
+    "options": [
+      "To get something by paying money.",
+      "The part of your body at the end of your arm.",
+      "A young boy or girl.",
+      "To find someone or something nice."
+    ],
+    "correct": "To find someone or something nice.",
+    "explanation": "like = xoşlamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1766,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«like» = \"To get new knowledge or a skill.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. like = xoşlamaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1767,
+    "type": "definition",
+    "question": "To own or possess something.",
+    "options": [
+      "have",
+      "car",
+      "eat",
+      "want"
+    ],
+    "correct": "have",
+    "explanation": "have = sahib olmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1768,
+    "type": "gap-fill",
+    "question": "I —————— two cats.",
+    "options": [
+      "room",
+      "door",
+      "have",
+      "tree"
+    ],
+    "correct": "have",
+    "explanation": "have = sahib olmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1769,
+    "type": "matching",
+    "question": "«have» — düzgün mənasını seç:",
+    "options": [
+      "To own or possess something.",
+      "A boy or man who has the same parents as you.",
+      "A group of people who are related, like parents and children.",
+      "A person whose job is to teach."
+    ],
+    "correct": "To own or possess something.",
+    "explanation": "have = sahib olmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1770,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«have» = \"To own or possess something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. have = sahib olmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1771,
+    "type": "definition",
+    "question": "To create or produce something.",
+    "options": [
+      "small",
+      "make",
+      "shop",
+      "man"
+    ],
+    "correct": "make",
+    "explanation": "make = etmək, düzəltmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1772,
+    "type": "matching",
+    "question": "«make» — düzgün mənasını seç:",
+    "options": [
+      "The top part of your body with your face.",
+      "To create or produce something.",
+      "A group of people who are related, like parents and children.",
+      "A young boy or girl."
+    ],
+    "correct": "To create or produce something.",
+    "explanation": "make = etmək, düzəltmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1773,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«make» = \"A person who helps sick people.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. make = etmək, düzəltmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1774,
+    "type": "definition",
+    "question": "To hand something to someone.",
+    "options": [
+      "come",
+      "fish",
+      "doctor",
+      "give"
+    ],
+    "correct": "give",
+    "explanation": "give = vermək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1775,
+    "type": "gap-fill",
+    "question": "—————— me the book, please.",
+    "options": [
+      "student",
+      "buy",
+      "hand",
+      "give"
+    ],
+    "correct": "give",
+    "explanation": "give = vermək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1776,
+    "type": "matching",
+    "question": "«give» — düzgün mənasını seç:",
+    "options": [
+      "To do something useful for someone.",
+      "To hand something to someone.",
+      "What clocks measure (hours, minutes).",
+      "To rest with your eyes closed at night."
+    ],
+    "correct": "To hand something to someone.",
+    "explanation": "give = vermək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1777,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«give» = \"To hand something to someone.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. give = vermək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1778,
+    "type": "definition",
+    "question": "To get something by paying money.",
+    "options": [
+      "year",
+      "buy",
+      "happy",
+      "bus"
+    ],
+    "correct": "buy",
+    "explanation": "buy = almaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1779,
+    "type": "gap-fill",
+    "question": "I want to —————— bread.",
+    "options": [
+      "hot",
+      "buy",
+      "woman",
+      "city"
+    ],
+    "correct": "buy",
+    "explanation": "buy = almaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1780,
+    "type": "matching",
+    "question": "«buy» — düzgün mənasını seç:",
+    "options": [
+      "To wish to have or do something.",
+      "Not difficult to do.",
+      "The star that gives us light and heat.",
+      "To get something by paying money."
+    ],
+    "correct": "To get something by paying money.",
+    "explanation": "buy = almaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1781,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«buy» = \"A large and important town.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. buy = almaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1782,
+    "type": "definition",
+    "question": "To do something useful for someone.",
+    "options": [
+      "sun",
+      "speak",
+      "woman",
+      "help"
+    ],
+    "correct": "help",
+    "explanation": "help = kömək etmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1783,
+    "type": "gap-fill",
+    "question": "Can you —————— me?",
+    "options": [
+      "cold",
+      "want",
+      "today",
+      "help"
+    ],
+    "correct": "help",
+    "explanation": "help = kömək etmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1784,
+    "type": "matching",
+    "question": "«help» — düzgün mənasını seç:",
+    "options": [
+      "To do something useful for someone.",
+      "To notice something with your eyes.",
+      "You open and close it to enter a room.",
+      "To rest with your eyes closed at night."
+    ],
+    "correct": "To do something useful for someone.",
+    "explanation": "help = kömək etmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1785,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«help» = \"To do something useful for someone.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. help = kömək etmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1786,
+    "type": "definition",
+    "question": "To say words; to talk.",
+    "options": [
+      "bad",
+      "room",
+      "speak",
+      "table"
+    ],
+    "correct": "speak",
+    "explanation": "speak = danışmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1787,
+    "type": "gap-fill",
+    "question": "I —————— English.",
+    "options": [
+      "learn",
+      "speak",
+      "head",
+      "school"
+    ],
+    "correct": "speak",
+    "explanation": "speak = danışmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1788,
+    "type": "matching",
+    "question": "«speak» — düzgün mənasını seç:",
+    "options": [
+      "A place where you buy things.",
+      "To say words; to talk.",
+      "To move toward a place or person.",
+      "To find someone or something nice."
+    ],
+    "correct": "To say words; to talk.",
+    "explanation": "speak = danışmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1789,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«speak» = \"The top part of your body with your face.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. speak = danışmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1790,
+    "type": "definition",
+    "question": "To move something so it is not closed.",
+    "options": [
+      "small",
+      "open",
+      "brother",
+      "hot"
+    ],
+    "correct": "open",
+    "explanation": "open = açmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1791,
+    "type": "gap-fill",
+    "question": "—————— the window, please.",
+    "options": [
+      "door",
+      "room",
+      "open",
+      "food"
+    ],
+    "correct": "open",
+    "explanation": "open = açmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1792,
+    "type": "matching",
+    "question": "«open» — düzgün mənasını seç:",
+    "options": [
+      "To notice something with your eyes.",
+      "A male parent.",
+      "To move something so it is not closed.",
+      "A period of twelve months."
+    ],
+    "correct": "To move something so it is not closed.",
+    "explanation": "open = açmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1793,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«open» = \"To move something so it is not closed.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. open = açmaq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 1794,
+    "type": "definition",
+    "question": "Large in size.",
+    "options": [
+      "big",
+      "meat",
+      "people",
+      "street"
+    ],
+    "correct": "big",
+    "explanation": "big = böyük",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1795,
+    "type": "gap-fill",
+    "question": "That is a —————— house.",
+    "options": [
+      "come",
+      "see",
+      "bread",
+      "big"
+    ],
+    "correct": "big",
+    "explanation": "big = böyük",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1796,
+    "type": "matching",
+    "question": "«big» — düzgün mənasını seç:",
+    "options": [
+      "To wish to have or do something.",
+      "To rest with your eyes closed at night.",
+      "A group of people who are related, like parents and children.",
+      "Large in size."
+    ],
+    "correct": "Large in size.",
+    "explanation": "big = böyük",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1797,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«big» = \"The dark part of the day.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. big = böyük",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1798,
+    "type": "definition",
+    "question": "Little in size.",
+    "options": [
+      "small",
+      "open",
+      "speak",
+      "milk"
+    ],
+    "correct": "small",
+    "explanation": "small = kiçik",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1799,
+    "type": "gap-fill",
+    "question": "I have a —————— car.",
+    "options": [
+      "speak",
+      "cold",
+      "give",
+      "small"
+    ],
+    "correct": "small",
+    "explanation": "small = kiçik",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1800,
+    "type": "matching",
+    "question": "«small» — düzgün mənasını seç:",
+    "options": [
+      "A person who studies at a school.",
+      "A female parent.",
+      "Little in size.",
+      "Made or bought recently; not old."
+    ],
+    "correct": "Little in size.",
+    "explanation": "small = kiçik",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1801,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«small» = \"Little in size.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. small = kiçik",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1802,
+    "type": "definition",
+    "question": "Of high quality; nice.",
+    "options": [
+      "easy",
+      "school",
+      "good",
+      "drink"
+    ],
+    "correct": "good",
+    "explanation": "good = yaxşı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1803,
+    "type": "gap-fill",
+    "question": "This is a —————— book.",
+    "options": [
+      "city",
+      "good",
+      "like",
+      "day"
+    ],
+    "correct": "good",
+    "explanation": "good = yaxşı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1804,
+    "type": "matching",
+    "question": "«good» — düzgün mənasını seç:",
+    "options": [
+      "Pages with words that you read.",
+      "Of high quality; nice.",
+      "The 24 hours from one midnight to the next.",
+      "A period of twelve months."
+    ],
+    "correct": "Of high quality; nice.",
+    "explanation": "good = yaxşı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1805,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«good» = \"Having lived a long time; not new.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. good = yaxşı",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1806,
+    "type": "definition",
+    "question": "Not good; of low quality.",
+    "options": [
+      "bad",
+      "meat",
+      "happy",
+      "rain"
+    ],
+    "correct": "bad",
+    "explanation": "bad = pis",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1807,
+    "type": "gap-fill",
+    "question": "The weather is —————— today.",
+    "options": [
+      "happy",
+      "bad",
+      "like",
+      "shop"
+    ],
+    "correct": "bad",
+    "explanation": "bad = pis",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1808,
+    "type": "matching",
+    "question": "«bad» — düzgün mənasını seç:",
+    "options": [
+      "Not good; of low quality.",
+      "A place where you buy things.",
+      "To make letters or words with a pen.",
+      "A part of a building with walls."
+    ],
+    "correct": "Not good; of low quality.",
+    "explanation": "bad = pis",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1809,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«bad» = \"Not good; of low quality.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. bad = pis",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1810,
+    "type": "definition",
+    "question": "Having a high temperature.",
+    "options": [
+      "apple",
+      "have",
+      "year",
+      "hot"
+    ],
+    "correct": "hot",
+    "explanation": "hot = isti",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1811,
+    "type": "gap-fill",
+    "question": "The tea is ——————.",
+    "options": [
+      "help",
+      "open",
+      "hot",
+      "night"
+    ],
+    "correct": "hot",
+    "explanation": "hot = isti",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1812,
+    "type": "matching",
+    "question": "«hot» — düzgün mənasını seç:",
+    "options": [
+      "Having a high temperature.",
+      "To get new knowledge or a skill.",
+      "A person whose job is to teach.",
+      "To create or produce something."
+    ],
+    "correct": "Having a high temperature.",
+    "explanation": "hot = isti",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1813,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«hot» = \"A boy or man who has the same parents as you.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. hot = isti",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1814,
+    "type": "definition",
+    "question": "Having a low temperature.",
+    "options": [
+      "hot",
+      "cold",
+      "year",
+      "rain"
+    ],
+    "correct": "cold",
+    "explanation": "cold = soyuq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1815,
+    "type": "gap-fill",
+    "question": "The water is ——————.",
+    "options": [
+      "head",
+      "cold",
+      "phone",
+      "teacher"
+    ],
+    "correct": "cold",
+    "explanation": "cold = soyuq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1816,
+    "type": "matching",
+    "question": "«cold» — düzgün mənasını seç:",
+    "options": [
+      "Water that falls from the sky.",
+      "A period of twelve months.",
+      "Having a low temperature.",
+      "A girl or woman who has the same parents as you."
+    ],
+    "correct": "Having a low temperature.",
+    "explanation": "cold = soyuq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1817,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«cold» = \"Having a low temperature.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. cold = soyuq",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1818,
+    "type": "definition",
+    "question": "Made or bought recently; not old.",
+    "options": [
+      "new",
+      "coffee",
+      "car",
+      "milk"
+    ],
+    "correct": "new",
+    "explanation": "new = yeni",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1819,
+    "type": "gap-fill",
+    "question": "I have a —————— phone.",
+    "options": [
+      "book",
+      "house",
+      "new",
+      "sleep"
+    ],
+    "correct": "new",
+    "explanation": "new = yeni",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1820,
+    "type": "matching",
+    "question": "«new» — düzgün mənasını seç:",
+    "options": [
+      "A building where people live.",
+      "Made or bought recently; not old.",
+      "An adult female person.",
+      "Things that people and animals eat."
+    ],
+    "correct": "Made or bought recently; not old.",
+    "explanation": "new = yeni",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1821,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«new» = \"Food that comes from animals.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. new = yeni",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1822,
+    "type": "definition",
+    "question": "Having lived a long time; not new.",
+    "options": [
+      "year",
+      "old",
+      "name",
+      "sun"
+    ],
+    "correct": "old",
+    "explanation": "old = köhnə, qoca",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1823,
+    "type": "gap-fill",
+    "question": "This is an —————— house.",
+    "options": [
+      "have",
+      "woman",
+      "bag",
+      "old"
+    ],
+    "correct": "old",
+    "explanation": "old = köhnə, qoca",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1824,
+    "type": "matching",
+    "question": "«old» — düzgün mənasını seç:",
+    "options": [
+      "A group of people who are related, like parents and children.",
+      "To move something so it is not closed.",
+      "The 24 hours from one midnight to the next.",
+      "Having lived a long time; not new."
+    ],
+    "correct": "Having lived a long time; not new.",
+    "explanation": "old = köhnə, qoca",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1825,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«old» = \"Having lived a long time; not new.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. old = köhnə, qoca",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1826,
+    "type": "definition",
+    "question": "Feeling good and pleased.",
+    "options": [
+      "old",
+      "water",
+      "woman",
+      "happy"
+    ],
+    "correct": "happy",
+    "explanation": "happy = xoşbəxt",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1827,
+    "type": "gap-fill",
+    "question": "I am very —————— today.",
+    "options": [
+      "happy",
+      "sleep",
+      "drink",
+      "cold"
+    ],
+    "correct": "happy",
+    "explanation": "happy = xoşbəxt",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1828,
+    "type": "matching",
+    "question": "«happy» — düzgün mənasını seç:",
+    "options": [
+      "A period of twelve months.",
+      "Feeling good and pleased.",
+      "A white drink that comes from cows.",
+      "To take liquid into your mouth and swallow."
+    ],
+    "correct": "Feeling good and pleased.",
+    "explanation": "happy = xoşbəxt",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1829,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«happy» = \"To do something fun, like a game.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. happy = xoşbəxt",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1830,
+    "type": "definition",
+    "question": "Not difficult to do.",
+    "options": [
+      "easy",
+      "year",
+      "name",
+      "book"
+    ],
+    "correct": "easy",
+    "explanation": "easy = asan",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1831,
+    "type": "gap-fill",
+    "question": "This question is ——————.",
+    "options": [
+      "easy",
+      "tree",
+      "bus",
+      "make"
+    ],
+    "correct": "easy",
+    "explanation": "easy = asan",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1832,
+    "type": "matching",
+    "question": "«easy» — düzgün mənasını seç:",
+    "options": [
+      "To do a job to earn money.",
+      "Having a low temperature.",
+      "Not difficult to do.",
+      "A female parent."
+    ],
+    "correct": "Not difficult to do.",
+    "explanation": "easy = asan",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1833,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«easy» = \"Not difficult to do.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. easy = asan",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 1834,
+    "type": "definition",
+    "question": "The 24 hours from one midnight to the next.",
+    "options": [
+      "day",
+      "play",
+      "go",
+      "student"
+    ],
+    "correct": "day",
+    "explanation": "day = gün",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1835,
+    "type": "matching",
+    "question": "«day» — düzgün mənasını seç:",
+    "options": [
+      "A group of people who are related, like parents and children.",
+      "To notice something with your eyes.",
+      "The 24 hours from one midnight to the next.",
+      "The place where you live."
+    ],
+    "correct": "The 24 hours from one midnight to the next.",
+    "explanation": "day = gün",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1836,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«day» = \"To make letters or words with a pen.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. day = gün",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1837,
+    "type": "definition",
+    "question": "The dark part of the day.",
+    "options": [
+      "father",
+      "help",
+      "sun",
+      "night"
+    ],
+    "correct": "night",
+    "explanation": "night = gecə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1838,
+    "type": "gap-fill",
+    "question": "I sleep at ——————.",
+    "options": [
+      "night",
+      "bag",
+      "write",
+      "easy"
+    ],
+    "correct": "night",
+    "explanation": "night = gecə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1839,
+    "type": "matching",
+    "question": "«night» — düzgün mənasını seç:",
+    "options": [
+      "To rest with your eyes closed at night.",
+      "A person who studies at a school.",
+      "A hot drink made from leaves.",
+      "The dark part of the day."
+    ],
+    "correct": "The dark part of the day.",
+    "explanation": "night = gecə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1840,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«night» = \"The dark part of the day.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. night = gecə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1841,
+    "type": "definition",
+    "question": "On this present day.",
+    "options": [
+      "today",
+      "good",
+      "see",
+      "tea"
+    ],
+    "correct": "today",
+    "explanation": "today = bu gün",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1842,
+    "type": "gap-fill",
+    "question": "—————— is Monday.",
+    "options": [
+      "rain",
+      "today",
+      "see",
+      "easy"
+    ],
+    "correct": "today",
+    "explanation": "today = bu gün",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1843,
+    "type": "matching",
+    "question": "«today» — düzgün mənasını seç:",
+    "options": [
+      "The 24 hours from one midnight to the next.",
+      "On this present day.",
+      "Coins and notes used to buy things.",
+      "A hot drink made from leaves."
+    ],
+    "correct": "On this present day.",
+    "explanation": "today = bu gün",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1844,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«today» = \"To do something useful for someone.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. today = bu gün",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1845,
+    "type": "definition",
+    "question": "What clocks measure (hours, minutes).",
+    "options": [
+      "time",
+      "help",
+      "water",
+      "drink"
+    ],
+    "correct": "time",
+    "explanation": "time = vaxt, zaman",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1846,
+    "type": "gap-fill",
+    "question": "What —————— is it?",
+    "options": [
+      "city",
+      "friend",
+      "father",
+      "time"
+    ],
+    "correct": "time",
+    "explanation": "time = vaxt, zaman",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1847,
+    "type": "matching",
+    "question": "«time» — düzgün mənasını seç:",
+    "options": [
+      "A female parent.",
+      "To hand something to someone.",
+      "The top part of your body with your face.",
+      "What clocks measure (hours, minutes)."
+    ],
+    "correct": "What clocks measure (hours, minutes).",
+    "explanation": "time = vaxt, zaman",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1848,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«time» = \"What clocks measure (hours, minutes).\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. time = vaxt, zaman",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1849,
+    "type": "definition",
+    "question": "A period of twelve months.",
+    "options": [
+      "year",
+      "milk",
+      "father",
+      "good"
+    ],
+    "correct": "year",
+    "explanation": "year = il",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1850,
+    "type": "matching",
+    "question": "«year» — düzgün mənasını seç:",
+    "options": [
+      "A group of people who are related, like parents and children.",
+      "A period of twelve months.",
+      "A girl or woman who has the same parents as you.",
+      "A round fruit, usually red or green."
+    ],
+    "correct": "A period of twelve months.",
+    "explanation": "year = il",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1851,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«year» = \"You open and close it to enter a room.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. year = il",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Time & Numbers"
+  },
+  {
+    "id": 1852,
+    "type": "definition",
+    "question": "A place where children learn.",
+    "options": [
+      "food",
+      "learn",
+      "school",
+      "mother"
+    ],
+    "correct": "school",
+    "explanation": "school = məktəb",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1853,
+    "type": "gap-fill",
+    "question": "The children go to ——————.",
+    "options": [
+      "student",
+      "happy",
+      "father",
+      "school"
+    ],
+    "correct": "school",
+    "explanation": "school = məktəb",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1854,
+    "type": "matching",
+    "question": "«school» — düzgün mənasını seç:",
+    "options": [
+      "Having a low temperature.",
+      "Little in size.",
+      "A place where children learn.",
+      "A person who helps sick people."
+    ],
+    "correct": "A place where children learn.",
+    "explanation": "school = məktəb",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1855,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«school» = \"A place where children learn.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. school = məktəb",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1856,
+    "type": "definition",
+    "question": "A place where you buy things.",
+    "options": [
+      "tea",
+      "happy",
+      "year",
+      "shop"
+    ],
+    "correct": "shop",
+    "explanation": "shop = mağaza",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1857,
+    "type": "gap-fill",
+    "question": "I buy food at the ——————.",
+    "options": [
+      "come",
+      "shop",
+      "happy",
+      "rain"
+    ],
+    "correct": "shop",
+    "explanation": "shop = mağaza",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1858,
+    "type": "matching",
+    "question": "«shop» — düzgün mənasını seç:",
+    "options": [
+      "A building where people live.",
+      "A place where you buy things.",
+      "To own or possess something.",
+      "A person who helps sick people."
+    ],
+    "correct": "A place where you buy things.",
+    "explanation": "shop = mağaza",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1859,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«shop» = \"Coins and notes used to buy things.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. shop = mağaza",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1860,
+    "type": "definition",
+    "question": "A large and important town.",
+    "options": [
+      "city",
+      "new",
+      "year",
+      "doctor"
+    ],
+    "correct": "city",
+    "explanation": "city = şəhər",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1861,
+    "type": "gap-fill",
+    "question": "Baku is a big ——————.",
+    "options": [
+      "time",
+      "read",
+      "milk",
+      "city"
+    ],
+    "correct": "city",
+    "explanation": "city = şəhər",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1862,
+    "type": "matching",
+    "question": "«city» — düzgün mənasını seç:",
+    "options": [
+      "A large and important town.",
+      "A period of twelve months.",
+      "Water that falls from the sky.",
+      "Not difficult to do."
+    ],
+    "correct": "A large and important town.",
+    "explanation": "city = şəhər",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1863,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«city» = \"A large and important town.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. city = şəhər",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1864,
+    "type": "definition",
+    "question": "A road in a town with houses.",
+    "options": [
+      "tea",
+      "street",
+      "phone",
+      "man"
+    ],
+    "correct": "street",
+    "explanation": "street = küçə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1865,
+    "type": "gap-fill",
+    "question": "I live on this ——————.",
+    "options": [
+      "bus",
+      "year",
+      "sister",
+      "street"
+    ],
+    "correct": "street",
+    "explanation": "street = küçə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1866,
+    "type": "matching",
+    "question": "«street» — düzgün mənasını seç:",
+    "options": [
+      "The 24 hours from one midnight to the next.",
+      "A road in a town with houses.",
+      "Pages with words that you read.",
+      "To move something so it is not closed."
+    ],
+    "correct": "A road in a town with houses.",
+    "explanation": "street = küçə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1867,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«street» = \"You open and close it to enter a room.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. street = küçə",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1868,
+    "type": "definition",
+    "question": "A large vehicle that carries many people.",
+    "options": [
+      "door",
+      "man",
+      "book",
+      "bus"
+    ],
+    "correct": "bus",
+    "explanation": "bus = avtobus",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1869,
+    "type": "gap-fill",
+    "question": "I go to work by ——————.",
+    "options": [
+      "car",
+      "bus",
+      "shop",
+      "money"
+    ],
+    "correct": "bus",
+    "explanation": "bus = avtobus",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1870,
+    "type": "matching",
+    "question": "«bus» — düzgün mənasını seç:",
+    "options": [
+      "Having a low temperature.",
+      "Pages with words that you read.",
+      "A group of people who are related, like parents and children.",
+      "A large vehicle that carries many people."
+    ],
+    "correct": "A large vehicle that carries many people.",
+    "explanation": "bus = avtobus",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1871,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«bus» = \"A large vehicle that carries many people.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. bus = avtobus",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 1872,
+    "type": "definition",
+    "question": "The top part of your body with your face.",
+    "options": [
+      "home",
+      "head",
+      "milk",
+      "today"
+    ],
+    "correct": "head",
+    "explanation": "head = baş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1873,
+    "type": "gap-fill",
+    "question": "My —————— hurts.",
+    "options": [
+      "head",
+      "school",
+      "make",
+      "name"
+    ],
+    "correct": "head",
+    "explanation": "head = baş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1874,
+    "type": "matching",
+    "question": "«head» — düzgün mənasını seç:",
+    "options": [
+      "The top part of your body with your face.",
+      "A period of twelve months.",
+      "A part of a building with walls.",
+      "A vehicle with four wheels for driving."
+    ],
+    "correct": "The top part of your body with your face.",
+    "explanation": "head = baş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1875,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«head» = \"A part of a building with walls.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. head = baş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1876,
+    "type": "definition",
+    "question": "The part of your body at the end of your arm.",
+    "options": [
+      "hand",
+      "cold",
+      "street",
+      "drink"
+    ],
+    "correct": "hand",
+    "explanation": "hand = əl",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1877,
+    "type": "matching",
+    "question": "«hand» — düzgün mənasını seç:",
+    "options": [
+      "You put things in it to carry them.",
+      "To do something useful for someone.",
+      "A clear liquid that we drink.",
+      "The part of your body at the end of your arm."
+    ],
+    "correct": "The part of your body at the end of your arm.",
+    "explanation": "hand = əl",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1878,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«hand» = \"The part of your body at the end of your arm.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. hand = əl",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1879,
+    "type": "definition",
+    "question": "A person who helps sick people.",
+    "options": [
+      "name",
+      "come",
+      "doctor",
+      "buy"
+    ],
+    "correct": "doctor",
+    "explanation": "doctor = həkim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1880,
+    "type": "gap-fill",
+    "question": "I see the —————— today.",
+    "options": [
+      "doctor",
+      "car",
+      "come",
+      "bad"
+    ],
+    "correct": "doctor",
+    "explanation": "doctor = həkim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1881,
+    "type": "matching",
+    "question": "«doctor» — düzgün mənasını seç:",
+    "options": [
+      "A period of twelve months.",
+      "Coins and notes used to buy things.",
+      "A person who helps sick people.",
+      "To get new knowledge or a skill."
+    ],
+    "correct": "A person who helps sick people.",
+    "explanation": "doctor = həkim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1882,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«doctor» = \"To put food in your mouth and swallow it.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. doctor = həkim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 1883,
+    "type": "definition",
+    "question": "A person whose job is to teach.",
+    "options": [
+      "teacher",
+      "have",
+      "give",
+      "student"
+    ],
+    "correct": "teacher",
+    "explanation": "teacher = müəllim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1884,
+    "type": "gap-fill",
+    "question": "My —————— is very kind.",
+    "options": [
+      "family",
+      "teacher",
+      "coffee",
+      "meat"
+    ],
+    "correct": "teacher",
+    "explanation": "teacher = müəllim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1885,
+    "type": "matching",
+    "question": "«teacher» — düzgün mənasını seç:",
+    "options": [
+      "Little in size.",
+      "Having a high temperature.",
+      "To wish to have or do something.",
+      "A person whose job is to teach."
+    ],
+    "correct": "A person whose job is to teach.",
+    "explanation": "teacher = müəllim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1886,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«teacher» = \"A person whose job is to teach.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. teacher = müəllim",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1887,
+    "type": "definition",
+    "question": "A person who studies at a school.",
+    "options": [
+      "speak",
+      "student",
+      "doctor",
+      "big"
+    ],
+    "correct": "student",
+    "explanation": "student = tələbə, şagird",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1888,
+    "type": "gap-fill",
+    "question": "She is a good ——————.",
+    "options": [
+      "door",
+      "bus",
+      "student",
+      "buy"
+    ],
+    "correct": "student",
+    "explanation": "student = tələbə, şagird",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1889,
+    "type": "matching",
+    "question": "«student» — düzgün mənasını seç:",
+    "options": [
+      "A person who studies at a school.",
+      "To notice something with your eyes.",
+      "To look at words and understand them.",
+      "The star that gives us light and heat."
+    ],
+    "correct": "A person who studies at a school.",
+    "explanation": "student = tələbə, şagird",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1890,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«student» = \"What someone or something is called.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. student = tələbə, şagird",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1891,
+    "type": "definition",
+    "question": "To get new knowledge or a skill.",
+    "options": [
+      "learn",
+      "house",
+      "car",
+      "hand"
+    ],
+    "correct": "learn",
+    "explanation": "learn = öyrənmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1892,
+    "type": "gap-fill",
+    "question": "I want to —————— English.",
+    "options": [
+      "new",
+      "family",
+      "work",
+      "learn"
+    ],
+    "correct": "learn",
+    "explanation": "learn = öyrənmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1893,
+    "type": "matching",
+    "question": "«learn» — düzgün mənasını seç:",
+    "options": [
+      "An animal that lives in water; also a food.",
+      "To hand something to someone.",
+      "To get new knowledge or a skill.",
+      "A group of people who are related, like parents and children."
+    ],
+    "correct": "To get new knowledge or a skill.",
+    "explanation": "learn = öyrənmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1894,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«learn» = \"To get new knowledge or a skill.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. learn = öyrənmək",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 1895,
+    "type": "definition",
+    "question": "The star that gives us light and heat.",
+    "options": [
+      "sun",
+      "brother",
+      "day",
+      "water"
+    ],
+    "correct": "sun",
+    "explanation": "sun = günəş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1896,
+    "type": "gap-fill",
+    "question": "The —————— is hot.",
+    "options": [
+      "today",
+      "good",
+      "sleep",
+      "sun"
+    ],
+    "correct": "sun",
+    "explanation": "sun = günəş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1897,
+    "type": "matching",
+    "question": "«sun» — düzgün mənasını seç:",
+    "options": [
+      "A big plant with a trunk and leaves.",
+      "A boy or man who has the same parents as you.",
+      "The star that gives us light and heat.",
+      "A building where people live."
+    ],
+    "correct": "The star that gives us light and heat.",
+    "explanation": "sun = günəş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1898,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«sun» = \"To find someone or something nice.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. sun = günəş",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1899,
+    "type": "definition",
+    "question": "Water that falls from the sky.",
+    "options": [
+      "car",
+      "milk",
+      "family",
+      "rain"
+    ],
+    "correct": "rain",
+    "explanation": "rain = yağış",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1900,
+    "type": "gap-fill",
+    "question": "I do not like the ——————.",
+    "options": [
+      "tea",
+      "student",
+      "rain",
+      "name"
+    ],
+    "correct": "rain",
+    "explanation": "rain = yağış",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1901,
+    "type": "matching",
+    "question": "«rain» — düzgün mənasını seç:",
+    "options": [
+      "Water that falls from the sky.",
+      "More than one person.",
+      "Not good; of low quality.",
+      "The part of your body at the end of your arm."
+    ],
+    "correct": "Water that falls from the sky.",
+    "explanation": "rain = yağış",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1902,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«rain» = \"Water that falls from the sky.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. rain = yağış",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1903,
+    "type": "definition",
+    "question": "A big plant with a trunk and leaves.",
+    "options": [
+      "tree",
+      "go",
+      "bread",
+      "money"
+    ],
+    "correct": "tree",
+    "explanation": "tree = ağac",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1904,
+    "type": "gap-fill",
+    "question": "There is a —————— in the garden.",
+    "options": [
+      "mother",
+      "meat",
+      "tree",
+      "like"
+    ],
+    "correct": "tree",
+    "explanation": "tree = ağac",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1905,
+    "type": "matching",
+    "question": "«tree» — düzgün mənasını seç:",
+    "options": [
+      "A hot brown drink with caffeine.",
+      "A road in a town with houses.",
+      "A big plant with a trunk and leaves.",
+      "More than one person."
+    ],
+    "correct": "A big plant with a trunk and leaves.",
+    "explanation": "tree = ağac",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 1906,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«tree» = \"An adult male person.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. tree = ağac",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Nature & Weather"
   }
 ]
