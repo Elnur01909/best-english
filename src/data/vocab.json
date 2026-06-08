@@ -1296,18 +1296,6 @@
     "topic": "Contract Law"
   },
   {
-    "id": 109,
-    "term": "RESTITUTION",
-    "pos": "Noun",
-    "en_def": "A remedy requiring one party to restore or return property or value to another party following unjust enrichment or breach.",
-    "az_translation": "Bərpa (restitusiya) – haqsız zənginləşmə və ya pozuntunun ardından bir tərəfin digər tərəfə mülkiyyəti və ya dəyəri qaytarmasını tələb edən hüquqi vasitə",
-    "en_example": "The court ordered restitution to undo the unjust enrichment caused by the defendant's breach of fiduciary duty.",
-    "az_example": "Məhkəmə cavabdehin etibarlılıq borcunu pozması nəticəsindəki haqsız zənginləşməni aradan qaldırmaq üçün restitusiya tətbiq etdi.",
-    "collocations": "restitution remedy; restitution claim; restitution order; unjust enrichment restitution",
-    "level": "H",
-    "topic": "Legal Principles"
-  },
-  {
     "id": 110,
     "term": "ESTOPPEL",
     "pos": "Noun",
@@ -1716,18 +1704,6 @@
     "topic": "Criminal Law"
   },
   {
-    "id": 144,
-    "term": "PERJURY",
-    "pos": "Noun",
-    "en_def": "The deliberate giving of false testimony under oath in a court proceeding.",
-    "az_translation": "Bilə-bilə yalan ifadə vermə – məhkəmə prosesində and içərək qəsdən yalan ifadə vermə cinayəti",
-    "en_example": "The witness was charged with perjury after admitting that his testimony at trial was false.",
-    "az_example": "Şahid məhkəmədəki ifadəsinin yalan olduğunu etiraf etdikdən sonra yalançı şəhadətdə ittiham altına alındı.",
-    "collocations": "perjury charge; perjury conviction; perjury prosecution; perjury under oath",
-    "level": "H",
-    "topic": "Criminal Law"
-  },
-  {
     "id": 145,
     "term": "TAX EVASION",
     "pos": "Noun phrase",
@@ -1801,90 +1777,6 @@
     "topic": "Bankruptcy Law"
   },
   {
-    "id": 151,
-    "term": "CONSIDERATION",
-    "pos": "Noun",
-    "en_def": "Something of value exchanged between parties to a contract, which makes the agreement legally binding.",
-    "az_translation": "Əvəz – müqavilə tərəflərinin bir-birinə verdiyi, sazişi hüquqi cəhətdən bağlayıcı edən dəyər",
-    "en_example": "The court held that a peppercorn can constitute valid consideration.",
-    "az_example": "Məhkəmə qərara aldı ki, simvolik ödəniş belə etibarlı əvəz sayıla bilər.",
-    "collocations": "valid / sufficient / past consideration",
-    "level": "H",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 152,
-    "term": "BREACH OF CONTRACT",
-    "pos": "Noun phrase",
-    "en_def": "Failure, without legal excuse, to perform any promise that forms part of a contract.",
-    "az_translation": "Müqavilənin pozulması – hüquqi əsas olmadan müqavilə öhdəliyinin yerinə yetirilməməsi",
-    "en_example": "The supplier's late delivery amounted to a breach of contract.",
-    "az_example": "Tədarükçünün gecikmiş çatdırılması müqavilənin pozulması sayıldı.",
-    "collocations": "fundamental / anticipatory / material breach of contract",
-    "level": "F",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 153,
-    "term": "WARRANTY",
-    "pos": "Noun",
-    "en_def": "A promise in a contract, the breach of which entitles the injured party to damages but not to terminate the contract.",
-    "az_translation": "Zəmanət şərti – müqavilədə vəd, onun pozulması zərərçəkən tərəfə kompensasiya hüququ verir, lakin müqaviləni ləğv etmir",
-    "en_example": "The seller gave a warranty that the goods were free from defects.",
-    "az_example": "Satıcı malların qüsursuz olması barədə zəmanət verdi.",
-    "collocations": "express / implied / breach of warranty",
-    "level": "H",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 154,
-    "term": "INDEMNITY",
-    "pos": "Noun",
-    "en_def": "A contractual obligation of one party to compensate the loss incurred by another party.",
-    "az_translation": "Təminat (kompensasiya öhdəliyi) – bir tərəfin digərinin dəyəcəyi zərəri ödəmək üzrə müqavilə öhdəliyi",
-    "en_example": "The contract included an indemnity clause covering third-party claims.",
-    "az_example": "Müqaviləyə üçüncü şəxslərin iddialarını əhatə edən təminat bəndi daxil edildi.",
-    "collocations": "indemnity clause / to provide an indemnity / mutual indemnity",
-    "level": "H",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 155,
-    "term": "RESCISSION",
-    "pos": "Noun",
-    "en_def": "The cancellation of a contract, returning the parties to the position they were in before it was made.",
-    "az_translation": "Müqavilədən imtina (ləğvi) – tərəfləri müqavilədən əvvəlki vəziyyətə qaytaran ləğvetmə",
-    "en_example": "The buyer sought rescission of the contract on the grounds of misrepresentation.",
-    "az_example": "Alıcı yanlış məlumat verilməsi əsasında müqavilənin ləğvini tələb etdi.",
-    "collocations": "to seek / grant / claim rescission",
-    "level": "A",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 156,
-    "term": "NOVATION",
-    "pos": "Noun",
-    "en_def": "The replacement of one party to a contract with a new party, with the consent of all involved.",
-    "az_translation": "Novasiya – tərəflərin razılığı ilə müqavilədəki bir tərəfin yenisi ilə əvəz olunması",
-    "en_example": "The original contractor was replaced by novation, with the client's agreement.",
-    "az_example": "İlkin podratçı novasiya yolu ilə, müştərinin razılığı ilə əvəz olundu.",
-    "collocations": "deed of novation / to agree to a novation",
-    "level": "A",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 157,
-    "term": "ASSIGNMENT",
-    "pos": "Noun",
-    "en_def": "The transfer of rights or benefits under a contract from one party to another.",
-    "az_translation": "Güzəşt (hüquqların verilməsi) – müqavilə üzrə hüquq və ya mənfəətlərin başqa tərəfə ötürülməsi",
-    "en_example": "The lease prohibited assignment of the tenancy without the landlord's consent.",
-    "az_example": "İcarə müqaviləsi sahibinin razılığı olmadan icarə hüququnun güzəştini qadağan edirdi.",
-    "collocations": "assignment of rights / deed of assignment / to assign a contract",
-    "level": "H",
-    "topic": "Contract Law"
-  },
-  {
     "id": 158,
     "term": "CONDITION PRECEDENT",
     "pos": "Noun phrase",
@@ -1893,66 +1785,6 @@
     "en_example": "Payment was a condition precedent to the transfer of ownership.",
     "az_example": "Ödəniş mülkiyyət hüququnun keçməsi üçün ilkin şərt idi.",
     "collocations": "to satisfy / fulfil a condition precedent",
-    "level": "A",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 159,
-    "term": "LIQUIDATED DAMAGES",
-    "pos": "Noun phrase",
-    "en_def": "A pre-agreed sum payable as compensation for a specific breach of contract, fixed in advance by the parties.",
-    "az_translation": "Qabaqcadan razılaşdırılmış zərərin əvəzi – tərəflərin əvvəlcədən razılaşdığı, konkret pozuntu üçün ödəniləcək məbləğ",
-    "en_example": "The contract specified liquidated damages of $500 per day of delay.",
-    "az_example": "Müqavilədə hər gecikmə günü üçün 500 dollar məbləğində razılaşdırılmış zərər nəzərdə tutulmuşdu.",
-    "collocations": "liquidated damages clause / to claim liquidated damages",
-    "level": "H",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 160,
-    "term": "MISREPRESENTATION",
-    "pos": "Noun",
-    "en_def": "A false statement of fact made by one party which induces the other party to enter into a contract.",
-    "az_translation": "Yanlış məlumat vermə – bir tərəfin digərini müqavilə bağlamağa sövq edən yalan faktiki bəyanatı",
-    "en_example": "The buyer rescinded the contract on the basis of fraudulent misrepresentation.",
-    "az_example": "Alıcı fırıldaqçı yanlış məlumat əsasında müqaviləni ləğv etdi.",
-    "collocations": "fraudulent / negligent / innocent misrepresentation",
-    "level": "H",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 161,
-    "term": "VOID",
-    "pos": "Adjective",
-    "en_def": "Having no legal effect from the outset, as if the contract had never existed.",
-    "az_translation": "Etibarsız (əvvəldən) – elə əvvəldən heç bir hüquqi qüvvəyə malik olmayan",
-    "en_example": "A contract formed for an illegal purpose is void from the start.",
-    "az_example": "Qanunsuz məqsədlə bağlanan müqavilə əvvəldən etibarsız sayılır.",
-    "collocations": "void contract / null and void / void ab initio",
-    "level": "F",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 162,
-    "term": "VOIDABLE",
-    "pos": "Adjective",
-    "en_def": "Valid until one party elects to cancel it, usually because of a defect such as misrepresentation or duress.",
-    "az_translation": "Mübahisəli (etibarsız edilə bilən) – bir tərəf onu ləğv edənə qədər qüvvədə olan, adətən qüsur (yanlış məlumat, təzyiq) səbəbilə",
-    "en_example": "A contract signed under duress is voidable at the option of the injured party.",
-    "az_example": "Təzyiq altında imzalanan müqavilə zərərçəkən tərəfin seçiminə görə etibarsız edilə bilər.",
-    "collocations": "voidable contract / to avoid a voidable agreement",
-    "level": "H",
-    "topic": "Contract Law"
-  },
-  {
-    "id": 163,
-    "term": "ESTOPPEL",
-    "pos": "Noun",
-    "en_def": "A legal principle that prevents a person from going back on a promise or representation that another has relied upon.",
-    "az_translation": "Estoppel (əksinə çıxmanın qadağası) – şəxsin etibar olunan vədindən və ya bəyanatından geri çəkilməsini qadağan edən hüquqi prinsip",
-    "en_example": "The tenant relied on promissory estoppel to enforce the landlord's promise.",
-    "az_example": "İcarəçi sahibinin vədini həyata keçirtmək üçün vədə əsaslanan estoppel-ə istinad etdi.",
-    "collocations": "promissory / proprietary estoppel / to plead estoppel",
     "level": "A",
     "topic": "Contract Law"
   },
@@ -1981,18 +1813,6 @@
     "topic": "Contract Law"
   },
   {
-    "id": 166,
-    "term": "NEGLIGENCE",
-    "pos": "Noun",
-    "en_def": "Failure to exercise the care that a reasonably prudent person would exercise in similar circumstances, causing harm to another.",
-    "az_translation": "Səhlənkarlıq – ağlabatan ehtiyatlı şəxsin oxşar şəraitdə göstərəcəyi qayğının göstərilməməsi nəticəsində başqasına zərər vurulması",
-    "en_example": "The hospital was found liable for negligence after the patient was injured.",
-    "az_example": "Xəstə zədələndikdən sonra xəstəxana səhlənkarlığa görə məsuliyyətli tanındı.",
-    "collocations": "gross / contributory / professional negligence",
-    "level": "F",
-    "topic": "Tort Law"
-  },
-  {
     "id": 167,
     "term": "DUTY OF CARE",
     "pos": "Noun phrase",
@@ -2002,42 +1822,6 @@
     "az_example": "Həkimlər həmişə öz xəstələri qarşısında qayğı göstərmək vəzifəsi daşıyırlar.",
     "collocations": "to owe / breach a duty of care",
     "level": "F",
-    "topic": "Tort Law"
-  },
-  {
-    "id": 168,
-    "term": "DEFAMATION",
-    "pos": "Noun",
-    "en_def": "The act of damaging someone's reputation by making a false statement about them to a third party.",
-    "az_translation": "Şərəf və ləyaqətin ləkələnməsi – şəxs barədə üçüncü tərəfə yalan məlumat yayaraq onun nüfuzuna xələl gətirmək",
-    "en_example": "The newspaper was sued for defamation after publishing the false allegations.",
-    "az_example": "Qəzet yalan ittihamları dərc etdikdən sonra şərəf və ləyaqətin ləkələnməsinə görə məhkəməyə verildi.",
-    "collocations": "to sue for / claim defamation",
-    "level": "H",
-    "topic": "Tort Law"
-  },
-  {
-    "id": 169,
-    "term": "LIBEL",
-    "pos": "Noun",
-    "en_def": "Defamation in a permanent or written form, such as in print, broadcast, or online publication.",
-    "az_translation": "Yazılı böhtan (libel) – çap, yayım və ya internet kimi daimi formada yayılan şərəfi ləkələyən ifadə",
-    "en_example": "The article was found to contain libel against the company's director.",
-    "az_example": "Məqalənin şirkət direktoru əleyhinə yazılı böhtan ehtiva etdiyi müəyyən edildi.",
-    "collocations": "to commit / publish libel",
-    "level": "H",
-    "topic": "Tort Law"
-  },
-  {
-    "id": 170,
-    "term": "SLANDER",
-    "pos": "Noun",
-    "en_def": "Defamation made in a transient form, typically through spoken words rather than in writing.",
-    "az_translation": "Şifahi böhtan (slander) – əsasən şifahi şəkildə, müvəqqəti formada yayılan şərəfi ləkələyən ifadə",
-    "en_example": "He brought a claim for slander after the false accusations were made at the meeting.",
-    "az_example": "Yığıncaqda yalan ittihamlar səsləndirildikdən sonra o, şifahi böhtana görə iddia qaldırdı.",
-    "collocations": "to be guilty of slander / slander action",
-    "level": "H",
     "topic": "Tort Law"
   },
   {
@@ -2053,30 +1837,6 @@
     "topic": "Tort Law"
   },
   {
-    "id": 172,
-    "term": "TRESPASS",
-    "pos": "Noun",
-    "en_def": "Unlawful interference with a person, their property, or their land, without consent or legal justification.",
-    "az_translation": "Hüquqazidd müdaxilə (trespass) – razılıq və ya qanuni əsas olmadan şəxsin, əmlakının və ya torpağının toxunulmazlığının pozulması",
-    "en_example": "Walking across the farmer's field without permission amounted to trespass.",
-    "az_example": "Fermerin tarlasından icazəsiz keçmək hüquqazidd müdaxilə sayıldı.",
-    "collocations": "trespass to land / trespass to person",
-    "level": "F",
-    "topic": "Tort Law"
-  },
-  {
-    "id": 173,
-    "term": "STRICT LIABILITY",
-    "pos": "Noun phrase",
-    "en_def": "Liability that does not depend on actual negligence or intent to harm, but is based purely on the breach of an obligation.",
-    "az_translation": "Qətiyyən (sübutsuz) məsuliyyət – təqsir və ya zərər vurmaq niyyətindən asılı olmayan, sadəcə öhdəliyin pozulmasına əsaslanan məsuliyyət",
-    "en_example": "Manufacturers can face strict liability for defective products that cause injury.",
-    "az_example": "İstehsalçılar zədəyə səbəb olan qüsurlu məhsullara görə qətiyyən məsuliyyət daşıya bilər.",
-    "collocations": "strict liability offence / to impose strict liability",
-    "level": "A",
-    "topic": "Tort Law"
-  },
-  {
     "id": 174,
     "term": "CAUSATION",
     "pos": "Noun",
@@ -2085,18 +1845,6 @@
     "en_example": "The claimant had to establish causation between the negligence and the injury.",
     "az_example": "İddiaçı səhlənkarlıqla zədə arasında səbəbiyyət əlaqəsini sübut etməli idi.",
     "collocations": "to establish / prove causation / chain of causation",
-    "level": "A",
-    "topic": "Tort Law"
-  },
-  {
-    "id": 175,
-    "term": "VICARIOUS LIABILITY",
-    "pos": "Noun phrase",
-    "en_def": "Legal responsibility imposed on one person for the wrongful acts of another, typically an employer for an employee.",
-    "az_translation": "Əvəzedici məsuliyyət – bir şəxsin başqasının (adətən işəgötürənin işçisinin) hərəkətlərinə görə daşıdığı hüquqi məsuliyyət",
-    "en_example": "The company was held vicariously liable for its driver's negligent conduct.",
-    "az_example": "Şirkət sürücüsünün səhlənkar davranışına görə əvəzedici məsuliyyət daşıdı.",
-    "collocations": "to be vicariously liable / doctrine of vicarious liability",
     "level": "A",
     "topic": "Tort Law"
   },
@@ -2137,18 +1885,6 @@
     "topic": "Tort Law"
   },
   {
-    "id": 179,
-    "term": "SHAREHOLDER",
-    "pos": "Noun",
-    "en_def": "A person or entity that owns shares in a company and is therefore entitled to a portion of its profits and voting rights.",
-    "az_translation": "Səhmdar – şirkətin səhmlərinə sahib olan və buna görə mənfəətdə pay və səs hüququna malik şəxs",
-    "en_example": "The shareholders voted to approve the merger at the annual general meeting.",
-    "az_example": "Səhmdarlar illik ümumi yığıncaqda birləşməni təsdiqləmək üçün səs verdilər.",
-    "collocations": "majority / minority shareholder / shareholder agreement",
-    "level": "F",
-    "topic": "Company Law"
-  },
-  {
     "id": 180,
     "term": "ARTICLES OF ASSOCIATION",
     "pos": "Noun phrase",
@@ -2181,66 +1917,6 @@
     "en_example": "Limited liability protects shareholders' personal assets from company debts.",
     "az_example": "Məhdud məsuliyyət səhmdarların şəxsi əmlakını şirkətin borclarından qoruyur.",
     "collocations": "limited liability company / limited liability partnership",
-    "level": "F",
-    "topic": "Company Law"
-  },
-  {
-    "id": 183,
-    "term": "FIDUCIARY DUTY",
-    "pos": "Noun phrase",
-    "en_def": "A legal obligation of one party to act in the best interests of another, such as a director's duty toward the company.",
-    "az_translation": "Etibar münasibətindən irəli gələn vəzifə – bir tərəfin digərinin mənafeyini ən yaxşı şəkildə müdafiə etmək öhdəliyi (məs. direktorun şirkət qarşısında)",
-    "en_example": "Directors owe a fiduciary duty to act in the company's best interests.",
-    "az_example": "Direktorlar şirkətin mənafeyinə uyğun hərəkət etmək üzrə etibar vəzifəsi daşıyırlar.",
-    "collocations": "to breach / owe a fiduciary duty",
-    "level": "A",
-    "topic": "Company Law"
-  },
-  {
-    "id": 184,
-    "term": "MERGER",
-    "pos": "Noun",
-    "en_def": "The combination of two or more companies into a single new entity.",
-    "az_translation": "Birləşmə (merger) – iki və ya daha çox şirkətin vahid yeni qurum kimi birləşməsi",
-    "en_example": "The merger created one of the largest law firms in the region.",
-    "az_example": "Birləşmə nəticəsində regionun ən böyük hüquq firmalarından biri yarandı.",
-    "collocations": "merger and acquisition / to approve a merger",
-    "level": "H",
-    "topic": "Company Law"
-  },
-  {
-    "id": 185,
-    "term": "ACQUISITION",
-    "pos": "Noun",
-    "en_def": "The process of one company taking ownership or control of another company.",
-    "az_translation": "Satınalma (acquisition) – bir şirkətin başqa şirkətin mülkiyyətinə və ya idarəsinə nəzarəti ələ keçirməsi",
-    "en_example": "The acquisition of the start-up was completed for $50 million.",
-    "az_example": "Startapın satın alınması 50 milyon dollara başa çatdırıldı.",
-    "collocations": "hostile / friendly acquisition / acquisition deal",
-    "level": "H",
-    "topic": "Company Law"
-  },
-  {
-    "id": 186,
-    "term": "INSOLVENCY",
-    "pos": "Noun",
-    "en_def": "The state of being unable to pay debts as they fall due, or having liabilities that exceed assets.",
-    "az_translation": "Müflisləşmə (insolvency) – borcları vaxtında ödəyə bilməmək və ya öhdəliklərin aktivlərdən çox olması vəziyyəti",
-    "en_example": "The directors filed for insolvency after the company's main client withdrew.",
-    "az_example": "Şirkətin əsas müştərisi əlaqəni kəsdikdən sonra direktorlar müflisləşmə üçün müraciət etdilər.",
-    "collocations": "insolvency proceedings / to declare insolvency",
-    "level": "H",
-    "topic": "Company Law"
-  },
-  {
-    "id": 187,
-    "term": "DIVIDEND",
-    "pos": "Noun",
-    "en_def": "A portion of a company's profits distributed to its shareholders, usually on a regular basis.",
-    "az_translation": "Dividend – şirkətin mənfəətinin səhmdarlar arasında, adətən müntəzəm şəkildə bölüşdürülən hissəsi",
-    "en_example": "The board declared a dividend of $2 per share for the financial year.",
-    "az_example": "İdarə heyəti maliyyə ili üçün hər səhmə 2 dollar dividend elan etdi.",
-    "collocations": "to declare / pay a dividend / dividend yield",
     "level": "F",
     "topic": "Company Law"
   },
@@ -2281,54 +1957,6 @@
     "topic": "Company Law"
   },
   {
-    "id": 191,
-    "term": "MENS REA",
-    "pos": "Noun (Latin)",
-    "en_def": "The mental element of a crime; the intention or knowledge of wrongdoing that constitutes part of a crime.",
-    "az_translation": "Mens rea (təqsirli niyyət) – cinayətin tərkib hissəsi olan, qəsdən hərəkət etmə və ya günahkarlığını anlama halı",
-    "en_example": "The prosecution had to prove both the act and the mens rea of the defendant.",
-    "az_example": "İttiham tərəfi həm hərəkəti, həm də cavabdehin təqsirli niyyətini sübut etməli idi.",
-    "collocations": "to establish / prove mens rea",
-    "level": "A",
-    "topic": "Criminal Law"
-  },
-  {
-    "id": 192,
-    "term": "ACTUS REUS",
-    "pos": "Noun (Latin)",
-    "en_def": "The physical act or conduct that constitutes a criminal offence, as opposed to the mental state behind it.",
-    "az_translation": "Actus reus (cinayət əməli) – cinayəti təşkil edən fiziki hərəkət və ya davranış, niyyətdən fərqli olaraq",
-    "en_example": "The defence argued that there was no actus reus because the act was involuntary.",
-    "az_example": "Müdafiə tərəfi bildirdi ki, hərəkət iradədən asılı olmadığı üçün cinayət əməli yoxdur.",
-    "collocations": "to constitute the actus reus",
-    "level": "A",
-    "topic": "Criminal Law"
-  },
-  {
-    "id": 193,
-    "term": "ACQUITTAL",
-    "pos": "Noun",
-    "en_def": "A formal court decision that a person accused of a crime is not guilty.",
-    "az_translation": "Bəraət – şəxsin cinayətdə təqsirli olmadığına dair rəsmi məhkəmə qərarı",
-    "en_example": "The jury returned a verdict of acquittal after two days of deliberation.",
-    "az_example": "Münsiflər heyəti iki günlük müzakirədən sonra bəraət hökmü çıxardı.",
-    "collocations": "to secure / direct an acquittal",
-    "level": "F",
-    "topic": "Criminal Law"
-  },
-  {
-    "id": 194,
-    "term": "CONVICTION",
-    "pos": "Noun",
-    "en_def": "A formal declaration by a court that someone is guilty of a criminal offence.",
-    "az_translation": "İttiham hökmü (məhkumiyyət) – məhkəmənin şəxsin cinayət törətdiyini rəsmən bəyan etməsi",
-    "en_example": "His previous conviction was taken into account when determining the sentence.",
-    "az_example": "Cəza təyin edilərkən onun əvvəlki məhkumiyyəti nəzərə alındı.",
-    "collocations": "criminal / previous conviction / to overturn a conviction",
-    "level": "F",
-    "topic": "Criminal Law"
-  },
-  {
     "id": 195,
     "term": "INDICTMENT",
     "pos": "Noun",
@@ -2349,18 +1977,6 @@
     "en_example": "The prosecution presented strong forensic evidence against the accused.",
     "az_example": "İttiham tərəfi təqsirləndirilən şəxs əleyhinə güclü ekspertiza sübutları təqdim etdi.",
     "collocations": "to bring a prosecution / public prosecutor",
-    "level": "F",
-    "topic": "Criminal Law"
-  },
-  {
-    "id": 197,
-    "term": "DEFENDANT",
-    "pos": "Noun",
-    "en_def": "A person or party against whom a criminal charge or civil claim is brought.",
-    "az_translation": "Cavabdeh (təqsirləndirilən şəxs) – əleyhinə cinayət ittihamı və ya mülki iddia irəli sürülən şəxs",
-    "en_example": "The defendant pleaded not guilty to all charges brought against him.",
-    "az_example": "Cavabdeh ona qarşı irəli sürülən bütün ittihamlarda özünü təqsirli saymadı.",
-    "collocations": "co-defendant / to represent a defendant",
     "level": "F",
     "topic": "Criminal Law"
   },
@@ -2413,30 +2029,6 @@
     "topic": "Court & Litigation"
   },
   {
-    "id": 202,
-    "term": "JURISDICTION",
-    "pos": "Noun",
-    "en_def": "The official power of a court to make legal decisions and judgments over a particular area or matter.",
-    "az_translation": "Yurisdiksiya (səlahiyyət dairəsi) – məhkəmənin müəyyən sahə və ya məsələ üzrə hüquqi qərar qəbul etmək rəsmi səlahiyyəti",
-    "en_example": "The court ruled that it had no jurisdiction to hear the case.",
-    "az_example": "Məhkəmə bu işə baxmaq səlahiyyətinin olmadığını qərara aldı.",
-    "collocations": "to have / lack jurisdiction / territorial jurisdiction",
-    "level": "H",
-    "topic": "Court & Litigation"
-  },
-  {
-    "id": 203,
-    "term": "INJUNCTION",
-    "pos": "Noun",
-    "en_def": "A court order requiring a party to do, or refrain from doing, a specific act.",
-    "az_translation": "Məhkəmə qadağası (injunction) – tərəfdən müəyyən hərəkəti etməyi və ya etməməyi tələb edən məhkəmə əmri",
-    "en_example": "The court granted an injunction to stop the publication of the confidential report.",
-    "az_example": "Məhkəmə məxfi hesabatın dərc olunmasının qarşısını almaq üçün qadağa qoydu.",
-    "collocations": "interim / permanent injunction / to seek an injunction",
-    "level": "H",
-    "topic": "Court & Litigation"
-  },
-  {
     "id": 204,
     "term": "SUBPOENA",
     "pos": "Noun",
@@ -2449,30 +2041,6 @@
     "topic": "Court & Litigation"
   },
   {
-    "id": 205,
-    "term": "AFFIDAVIT",
-    "pos": "Noun",
-    "en_def": "A written statement of facts confirmed by oath, used as evidence in court proceedings.",
-    "az_translation": "And içmə bəyanatı (affidavit) – məhkəmə proseslərində sübut kimi istifadə edilən, and içərək təsdiqlənmiş yazılı bəyanat",
-    "en_example": "She submitted an affidavit confirming the events of that evening.",
-    "az_example": "O, həmin axşamın hadisələrini təsdiqləyən and içmə bəyanatı təqdim etdi.",
-    "collocations": "to swear / file an affidavit",
-    "level": "H",
-    "topic": "Court & Litigation"
-  },
-  {
-    "id": 206,
-    "term": "APPEAL",
-    "pos": "Noun/Verb",
-    "en_def": "A formal request to a higher court to review and change the decision of a lower court.",
-    "az_translation": "Apellyasiya şikayəti – aşağı instansiya məhkəməsinin qərarına yenidən baxılması üçün yuxarı məhkəməyə rəsmi müraciət",
-    "en_example": "The defendant lodged an appeal against the conviction.",
-    "az_example": "Cavabdeh məhkumiyyət hökmündən apellyasiya şikayəti verdi.",
-    "collocations": "to lodge / dismiss / allow an appeal",
-    "level": "F",
-    "topic": "Court & Litigation"
-  },
-  {
     "id": 207,
     "term": "VERDICT",
     "pos": "Noun",
@@ -2481,66 +2049,6 @@
     "en_example": "The jury reached a unanimous verdict of guilty.",
     "az_example": "Münsiflər heyəti yekdilliklə təqsirli olduğu barədə hökm çıxardı.",
     "collocations": "guilty / not guilty verdict / to deliver a verdict",
-    "level": "F",
-    "topic": "Court & Litigation"
-  },
-  {
-    "id": 208,
-    "term": "CROSS-EXAMINATION",
-    "pos": "Noun",
-    "en_def": "The questioning of a witness by the opposing party's lawyer during a trial, to test their evidence.",
-    "az_translation": "Çarpaz dindirmə – məhkəmə prosesində şahidin qarşı tərəfin vəkili tərəfindən ifadəsini yoxlamaq üçün sorğu-suala tutulması",
-    "en_example": "The witness's account fell apart under cross-examination.",
-    "az_example": "Şahidin ifadəsi çarpaz dindirmə zamanı çürüdüldü.",
-    "collocations": "to conduct / withstand cross-examination",
-    "level": "H",
-    "topic": "Court & Litigation"
-  },
-  {
-    "id": 209,
-    "term": "BURDEN OF PROOF",
-    "pos": "Noun phrase",
-    "en_def": "The duty of a party in a legal dispute to prove the facts they are alleging.",
-    "az_translation": "Sübutetmə vəzifəsi – mübahisə tərəfinin öz iddia etdiyi faktları sübuta yetirmək öhdəliyi",
-    "en_example": "In criminal cases, the burden of proof lies with the prosecution.",
-    "az_example": "Cinayət işlərində sübutetmə vəzifəsi ittiham tərəfinin üzərinə düşür.",
-    "collocations": "to bear / discharge the burden of proof",
-    "level": "H",
-    "topic": "Court & Litigation"
-  },
-  {
-    "id": 210,
-    "term": "PRECEDENT",
-    "pos": "Noun",
-    "en_def": "A previous court decision that is used as an authority for deciding similar cases in the future.",
-    "az_translation": "Presedent – gələcəkdə oxşar işlərə baxılarkən əsas götürülən əvvəlki məhkəmə qərarı",
-    "en_example": "The judge relied on precedent set by the Supreme Court in a similar case.",
-    "az_example": "Hakim oxşar işdə Ali Məhkəmənin yaratdığı presedentə əsaslandı.",
-    "collocations": "to set / follow / overturn a precedent",
-    "level": "H",
-    "topic": "Court & Litigation"
-  },
-  {
-    "id": 211,
-    "term": "DISCOVERY",
-    "pos": "Noun",
-    "en_def": "The pre-trial process in which parties exchange relevant documents and information held by the other side.",
-    "az_translation": "Sübutların açıqlanması (discovery) – məhkəmə prosesindən əvvəl tərəflərin bir-birinin əlindəki müvafiq sənəd və məlumatları mübadilə etməsi",
-    "en_example": "During discovery, the company was required to disclose internal emails.",
-    "az_example": "Sübutların açıqlanması mərhələsində şirkət daxili yazışmaları açıqlamalı oldu.",
-    "collocations": "discovery process / to obtain documents through discovery",
-    "level": "A",
-    "topic": "Court & Litigation"
-  },
-  {
-    "id": 212,
-    "term": "SETTLEMENT",
-    "pos": "Noun",
-    "en_def": "An agreement reached by parties to a dispute, often resolving the matter without going to trial.",
-    "az_translation": "Sülh sazişi (settlement) – mübahisə tərəflərinin, çox vaxt məhkəməyə getmədən, razılığa gəlməsi",
-    "en_example": "The parties reached a settlement just before the trial was due to begin.",
-    "az_example": "Tərəflər məhkəmə prosesi başlamazdan qısa müddət əvvəl sülh sazişinə gəldilər.",
-    "collocations": "out-of-court settlement / to reach / negotiate a settlement",
     "level": "F",
     "topic": "Court & Litigation"
   },
@@ -2581,30 +2089,6 @@
     "topic": "Property Law"
   },
   {
-    "id": 216,
-    "term": "EASEMENT",
-    "pos": "Noun",
-    "en_def": "A legal right for one landowner to use land belonging to another for a specific limited purpose, such as access.",
-    "az_translation": "Servitut (easement) – bir torpaq sahibinin başqasının torpağından müəyyən məqsəd üçün (məs. keçid üçün) istifadə hüququ",
-    "en_example": "The neighbour was granted an easement to access the road through the property.",
-    "az_example": "Qonşuya əmlak ərazisindən yola çıxış üçün servitut hüququ verildi.",
-    "collocations": "right of way easement / to grant an easement",
-    "level": "H",
-    "topic": "Property Law"
-  },
-  {
-    "id": 217,
-    "term": "MORTGAGE",
-    "pos": "Noun",
-    "en_def": "A loan secured against property, giving the lender the right to repossess it if repayments are not made.",
-    "az_translation": "İpoteka – əmlakla təmin olunmuş kredit, ödənişlər edilmədikdə kreditora əmlakı geri almaq hüququ verir",
-    "en_example": "The bank approved a mortgage covering 80% of the property's value.",
-    "az_example": "Bank əmlakın dəyərinin 80%-ni əhatə edən ipoteka krediti təsdiqlədi.",
-    "collocations": "to take out / repay a mortgage / mortgage default",
-    "level": "F",
-    "topic": "Property Law"
-  },
-  {
     "id": 218,
     "term": "TITLE DEED",
     "pos": "Noun phrase",
@@ -2626,18 +2110,6 @@
     "az_example": "İcarə müqaviləsində iki aylıq xəbərdarlıq müddəti müəyyən edilmişdi.",
     "collocations": "joint tenancy / periodic tenancy / to terminate a tenancy",
     "level": "F",
-    "topic": "Property Law"
-  },
-  {
-    "id": 220,
-    "term": "CONVEYANCING",
-    "pos": "Noun",
-    "en_def": "The legal process of transferring ownership of property from one person to another.",
-    "az_translation": "Əmlakın hüquqi rəsmiləşdirilməsi (conveyancing) – mülkiyyət hüququnun bir şəxsdən digərinə hüquqi qaydada keçirilməsi prosesi",
-    "en_example": "A solicitor handled the conveyancing for the purchase of the new house.",
-    "az_example": "Yeni evin alınması üçün hüquqi rəsmiləşdirmə prosesini vəkil həyata keçirdi.",
-    "collocations": "conveyancing solicitor / conveyancing process",
-    "level": "H",
     "topic": "Property Law"
   },
   {
@@ -2689,30 +2161,6 @@
     "topic": "Property Law"
   },
   {
-    "id": 225,
-    "term": "UNFAIR DISMISSAL",
-    "pos": "Noun phrase",
-    "en_def": "The termination of an employee's contract by an employer in a manner that is not justified or lawful.",
-    "az_translation": "Qeyri-qanuni işdən çıxarma (unfair dismissal) – işəgötürənin işçinin müqaviləsini əsassız və ya qanunsuz şəkildə xitam etməsi",
-    "en_example": "The tribunal found that the employee had been the victim of unfair dismissal.",
-    "az_example": "Tribunal işçinin qeyri-qanuni işdən çıxarmaya məruz qaldığını müəyyən etdi.",
-    "collocations": "to claim / find unfair dismissal",
-    "level": "H",
-    "topic": "Employment Law"
-  },
-  {
-    "id": 226,
-    "term": "REDUNDANCY",
-    "pos": "Noun",
-    "en_def": "The termination of employment because the role is no longer needed, rather than because of the employee's conduct.",
-    "az_translation": "Ştat ixtisarı (redundancy) – işçinin davranışına görə deyil, vəzifənin artıq lazım olmaması səbəbilə işdən azad edilməsi",
-    "en_example": "The company made fifty staff redundant due to restructuring.",
-    "az_example": "Şirkət yenidənqurma səbəbilə əlli işçini ştat ixtisarına saldı.",
-    "collocations": "redundancy payment / compulsory redundancy",
-    "level": "H",
-    "topic": "Employment Law"
-  },
-  {
     "id": 227,
     "term": "GROSS MISCONDUCT",
     "pos": "Noun phrase",
@@ -2733,18 +2181,6 @@
     "en_example": "Her contract required a three-month notice period before resignation.",
     "az_example": "Onun müqaviləsi istefa üçün üç aylıq xəbərdarlıq müddəti tələb edirdi.",
     "collocations": "to serve / waive a notice period",
-    "level": "F",
-    "topic": "Employment Law"
-  },
-  {
-    "id": 229,
-    "term": "DISCRIMINATION",
-    "pos": "Noun",
-    "en_def": "Unfair or unequal treatment of a person based on characteristics such as race, gender, age, or disability.",
-    "az_translation": "Ayrı-seçkilik (discrimination) – şəxsə irq, cins, yaş və ya əlillik kimi xüsusiyyətlərə görə qeyri-bərabər münasibət",
-    "en_example": "The company faced a lawsuit for age discrimination in its hiring process.",
-    "az_example": "Şirkət işə qəbul prosesində yaşa görə ayrı-seçkiliyə görə məhkəməyə verildi.",
-    "collocations": "direct / indirect discrimination / to face discrimination",
     "level": "F",
     "topic": "Employment Law"
   },
@@ -2783,66 +2219,6 @@
     "collocations": "severance pay package / to negotiate severance pay",
     "level": "H",
     "topic": "Employment Law"
-  },
-  {
-    "id": 233,
-    "term": "PATENT",
-    "pos": "Noun",
-    "en_def": "An exclusive legal right granted for an invention, preventing others from making, using, or selling it without permission.",
-    "az_translation": "Patent – ixtiraya verilən, başqalarının icazəsiz istehsal, istifadə və ya satışını qadağan edən müstəsna hüquq",
-    "en_example": "The company filed a patent application to protect its new technology.",
-    "az_example": "Şirkət yeni texnologiyasını qorumaq üçün patent ərizəsi təqdim etdi.",
-    "collocations": "to file / grant / infringe a patent",
-    "level": "F",
-    "topic": "Intellectual Property"
-  },
-  {
-    "id": 234,
-    "term": "TRADEMARK",
-    "pos": "Noun",
-    "en_def": "A recognisable symbol, word, or phrase legally registered to represent a company or product.",
-    "az_translation": "Ticarət nişanı (trademark) – şirkət və ya məhsulu təmsil etmək üçün hüquqi qeydiyyatdan keçmiş tanınan simvol, söz və ya ifadə",
-    "en_example": "The logo was registered as a trademark to prevent imitation.",
-    "az_example": "Loqo təqlidin qarşısını almaq üçün ticarət nişanı kimi qeydə alındı.",
-    "collocations": "registered trademark / to register / infringe a trademark",
-    "level": "F",
-    "topic": "Intellectual Property"
-  },
-  {
-    "id": 235,
-    "term": "COPYRIGHT",
-    "pos": "Noun",
-    "en_def": "The legal right of an author or creator to control the reproduction and distribution of their original work.",
-    "az_translation": "Müəllif hüququ (copyright) – müəllifin öz orijinal əsərinin çoxaldılması və yayılmasına nəzarət hüququ",
-    "en_example": "Copyright protects the author's novel from being copied without permission.",
-    "az_example": "Müəllif hüququ yazıçının romanının icazəsiz kopyalanmasının qarşısını alır.",
-    "collocations": "copyright infringement / to hold / waive copyright",
-    "level": "F",
-    "topic": "Intellectual Property"
-  },
-  {
-    "id": 236,
-    "term": "INFRINGEMENT",
-    "pos": "Noun",
-    "en_def": "The unauthorised use or violation of another person's intellectual property rights, such as a patent, trademark, or copyright.",
-    "az_translation": "Pozuntu (infringement) – başqasının patent, ticarət nişanı və ya müəllif hüququ kimi əqli mülkiyyət hüquqlarının icazəsiz istifadəsi",
-    "en_example": "The court ruled that the rival product constituted patent infringement.",
-    "az_example": "Məhkəmə rəqib məhsulun patent pozuntusu təşkil etdiyinə qərar verdi.",
-    "collocations": "to commit / claim infringement / infringement proceedings",
-    "level": "H",
-    "topic": "Intellectual Property"
-  },
-  {
-    "id": 237,
-    "term": "LICENSING",
-    "pos": "Noun",
-    "en_def": "The process of granting another party permission to use intellectual property under agreed conditions, often for a fee.",
-    "az_translation": "Lisenziyalaşdırma (licensing) – əqli mülkiyyətdən razılaşdırılmış şərtlərlə, adətən ödəniş müqabilində istifadə üçün icazə vermə prosesi",
-    "en_example": "The software company entered into a licensing agreement with a foreign distributor.",
-    "az_example": "Proqram təminatı şirkəti xarici distribütorla lisenziya sazişi bağladı.",
-    "collocations": "licensing agreement / exclusive licensing",
-    "level": "H",
-    "topic": "Intellectual Property"
   },
   {
     "id": 238,
@@ -3097,18 +2473,6 @@
     "topic": "Legal Principles"
   },
   {
-    "id": 259,
-    "term": "LIQUIDATION",
-    "pos": "Noun",
-    "en_def": "The process of bringing a company to an end by selling its assets to pay off debts before it is dissolved.",
-    "az_translation": "Ləğvetmə (liquidation) – şirkətin borclarını ödəmək üçün aktivlərinin satılması və sonra buraxılması prosesi",
-    "en_example": "The firm went into liquidation after failing to secure new investment.",
-    "az_example": "Şirkət yeni investisiya əldə edə bilmədikdən sonra ləğvetmə prosesinə düşdü.",
-    "collocations": "compulsory / voluntary liquidation / to enter liquidation",
-    "level": "H",
-    "topic": "Bankruptcy Law"
-  },
-  {
     "id": 260,
     "term": "RECEIVERSHIP",
     "pos": "Noun",
@@ -3177,18 +2541,6 @@
     "en_example": "The court ordered him to pay alimony to his former wife for five years.",
     "az_example": "Məhkəmə ona keçmiş həyat yoldaşına beş il müddətinə nəfəqə ödəməyi əmr etdi.",
     "collocations": "to pay / claim alimony / alimony payments",
-    "level": "F",
-    "topic": "Family Law"
-  },
-  {
-    "id": 266,
-    "term": "CUSTODY",
-    "pos": "Noun",
-    "en_def": "The legal right and responsibility to care for and make decisions about a child, usually following separation or divorce.",
-    "az_translation": "Hüquqi himayə (custody) – adətən ayrılma və ya boşanmadan sonra uşağa qulluq etmək və onunla bağlı qərar vermək hüququ və məsuliyyəti",
-    "en_example": "The mother was awarded sole custody of the children.",
-    "az_example": "Anaya uşaqlar üzərində tam hüquqi himayə verildi.",
-    "collocations": "joint / sole custody / custody battle",
     "level": "F",
     "topic": "Family Law"
   },
@@ -3286,18 +2638,6 @@
     "az_example": "Vərəsəlik vergisi varislərə keçən aktivlərin dəyərini xeyli azaltdı.",
     "collocations": "to assess / collect estate tax / estate tax exemption",
     "level": "A",
-    "topic": "Tax Law"
-  },
-  {
-    "id": 275,
-    "term": "TAX EVASION",
-    "pos": "Noun phrase",
-    "en_def": "The illegal act of deliberately avoiding paying taxes that are legally owed.",
-    "az_translation": "Vergidən yayınma (tax evasion) – qanuni olaraq ödənilməli olan vergidən qəsdən qanunsuz şəkildə yayınma",
-    "en_example": "He was charged with tax evasion after hiding income in offshore accounts.",
-    "az_example": "Gəlirini ofşor hesablarda gizlətdiyi üçün vergidən yayınmaya görə ittiham olundu.",
-    "collocations": "to be guilty of / convicted of tax evasion",
-    "level": "H",
     "topic": "Tax Law"
   },
   {
@@ -3515,18 +2855,6 @@
     "collocations": "to incur / pay demurrage / demurrage charges",
     "level": "A",
     "topic": "Maritime Law"
-  },
-  {
-    "id": 294,
-    "term": "COLLATERAL",
-    "pos": "Noun",
-    "en_def": "An asset pledged by a borrower to a lender as security for a loan, which may be seized if the loan is not repaid.",
-    "az_translation": "Girov (collateral) – borcalanın kreditora kredit təminatı kimi verdiyi, ödəniş edilmədikdə ələ keçirilə bilən aktiv",
-    "en_example": "The bank required the company to provide property as collateral for the loan.",
-    "az_example": "Bank şirkətdən kredit üçün girov kimi əmlak təqdim etməyi tələb etdi.",
-    "collocations": "to provide / pledge collateral / collateral security",
-    "level": "F",
-    "topic": "Banking & Finance Law"
   },
   {
     "id": 295,
@@ -4513,18 +3841,6 @@
     "topic": "Commercial Contracts"
   },
   {
-    "id": 377,
-    "term": "BILL OF LADING",
-    "pos": "Noun phrase",
-    "en_def": "A document issued when goods are transported by ship. It lists the goods, states the terms of carriage, and serves as evidence of ownership during transit.",
-    "az_translation": "Yük konosamenti – mallar gəmi ilə daşınarkən verilən sənəd; malların siyahısını, daşıma şərtlərini əks etdirir və tranzit zamanı mülkiyyətin sübutu kimi xidmət edir",
-    "en_example": "The seller presented a clean bill of lading as evidence that the goods had been shipped in good condition.",
-    "az_example": "Satıcı malların qənaətbəxş vəziyyətdə göndərildiyini sübut etmək üçün təmiz yük konosamenti təqdim etdi.",
-    "collocations": "bill of lading; clean bill of lading; issue a bill of lading; bill of lading terms",
-    "level": "A",
-    "topic": "Commercial Contracts"
-  },
-  {
     "id": 378,
     "term": "BOARD (Commercial Context)",
     "pos": "Noun",
@@ -4705,18 +4021,6 @@
     "topic": "Commercial Contracts"
   },
   {
-    "id": 393,
-    "term": "CONFLICT OF INTEREST",
-    "pos": "Noun phrase",
-    "en_def": "A situation where a person in a position of trust or authority stands to personally benefit from a decision they make, due to connections with the parties involved.",
-    "az_translation": "Maraqların toqquşması – etibar və ya nüfuz mövqeyindəki şəxsin iştirak edən tərəflərlə əlaqəsi sayəsindən qəbul etdiyi qərardan şəxsən faydalana biləcəyi vəziyyət",
-    "en_example": "Every director must disclose any actual or potential conflict of interest before the board votes on the matter.",
-    "az_example": "Hər bir direktor şura məsələyə səs vermədən əvvəl hər hansı real və ya potensial maraqların toqquşmasını açıqlamalıdır.",
-    "collocations": "conflict of interest; declare / disclose a conflict; conflict of interest policy; related party transaction",
-    "level": "H",
-    "topic": "Commercial Contracts"
-  },
-  {
     "id": 394,
     "term": "CONSEQUENTIAL LOSS",
     "pos": "Noun phrase",
@@ -4857,18 +4161,6 @@
     "en_example": "The claimant alleged age discrimination after being rejected at interview despite having superior qualifications.",
     "az_example": "Müddəi üstün ixtisaslara sahib olmasına baxmayaraq müsahibədə rədd edildikdən sonra yaş ayrı-seçkiliyi iddiasını irəli sürdü.",
     "collocations": "age discrimination claim; age discrimination law; discriminate on grounds of age; direct / indirect age discrimination",
-    "level": "H",
-    "topic": "Employment Law"
-  },
-  {
-    "id": 406,
-    "term": "ALLEGATION",
-    "pos": "Noun",
-    "en_def": "A statement that something has happened, similar to an accusation. The truth of the allegation has not yet been proved.",
-    "az_translation": "İddia / ittiham (allegation) – bir şeyin baş verdiyini bildirən bəyan, ittiham oxşarı; iddianın həqiqəti hələ sübut edilməmişdir",
-    "en_example": "The employee faced serious allegations of misconduct, which were investigated under the disciplinary procedure.",
-    "az_example": "İşçi intizam proseduru çərçivəsindəki araşdırmaya cəlb olunan intizamsızlıq barəsindəki ciddi iddialarla üzləşdi.",
-    "collocations": "allegation of misconduct; make an allegation; investigate an allegation; deny / uphold an allegation",
     "level": "H",
     "topic": "Employment Law"
   },

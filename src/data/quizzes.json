@@ -12185,19 +12185,6 @@
     "topic": "Contract Law"
   },
   {
-    "id": 858,
-    "type": "true-false",
-    "question": "Doğru, yoxsa yanlış?\n\n«INFRINGEMENT» = \"An exclusive right granted by a government to an inventor, allowing them to prevent others from making, using, or selling the invention for a specified period.\"",
-    "options": [
-      "Doğru",
-      "Yanlış"
-    ],
-    "correct": "Yanlış",
-    "explanation": "Yanlış. «INFRINGEMENT» əslində: \"The unauthorised use or violation of another person's intellectual property rights, such as a patent, trademark, or copyright.\" Göstərilən tərif isə «PATENT»-ə aiddir.",
-    "level": "H",
-    "topic": "Intellectual Property"
-  },
-  {
     "id": 859,
     "type": "true-false",
     "question": "Doğru, yoxsa yanlış?\n\n«MERGER» = \"The combination of two or more companies into a single entity, with one company surviving and continuing as the combined entity.\"",
