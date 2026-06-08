@@ -5,12 +5,59 @@ export type TOLESLevel = 'Foundation' | 'Higher' | 'Advanced'
 export interface UserProfile {
   id: string
   email: string
+  display_name?: string | null
   level: CEFRLevel
   toles_level: TOLESLevel
   streak: number
   total_points: number
   last_active: string
   created_at: string
+}
+
+// ─── Dostlar ──────────────────────────────────────────
+export type FriendRequestStatus = 'pending' | 'accepted' | 'declined'
+
+export interface FriendRequest {
+  id: string
+  sender_id: string
+  receiver_id: string
+  status: FriendRequestStatus
+  created_at: string
+  responded_at: string | null
+}
+
+export interface FriendProfile {
+  id: string
+  email: string
+  display_name?: string | null
+  level: CEFRLevel
+  toles_level: TOLESLevel
+  streak: number
+}
+
+// ─── TOLES Mini-Test Yarışı ───────────────────────────
+export type BattleStatus = 'pending' | 'active' | 'completed' | 'declined' | 'cancelled'
+
+export interface Battle {
+  id: string
+  creator_id: string
+  opponent_id: string
+  status: BattleStatus
+  question_ids: number[]
+  toles_level: TOLESLevel
+  created_at: string
+  started_at: string | null
+  completed_at: string | null
+}
+
+export interface BattleAnswer {
+  id: string
+  battle_id: string
+  user_id: string
+  q_index: number
+  correct: boolean
+  time_taken_ms: number
+  answered_at: string
 }
 
 // ─── Lüğət ────────────────────────────────────────────

@@ -209,6 +209,14 @@ if (loading) {
               urgent: false,
             },
             {
+              href: '/friends',
+              icon: '👥',
+              title: 'Dostlar & Yarış',
+              desc: 'Email ilə dost tap, dostluq qur və TOLES Mini-Test yarışında canlı yarış!',
+              cta: 'Dostlara bax →',
+              urgent: false,
+            },
+            {
               href: '/lessons',
               icon: '📖',
               title: 'Dərslər',
