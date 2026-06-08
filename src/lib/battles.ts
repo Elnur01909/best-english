@@ -150,10 +150,14 @@ export function subscribeToBattle(
   return () => { supabase.removeChannel(channel) }
 }
 
-// Dostlar siyahısında: gələn yarış dəvətlərini canlı izləmək üçün
+// Gələn yarış dəvətlərini canlı izləmək üçün (həm /friends səhifəsi, həm də
+// qlobal BattleChallengePopup eyni anda abunə ola bilər — Supabase eyni adlı
+// kanala 2-ci dəfə abunə olmağa icazə vermədiyi üçün, hər çağırışda unikal
+// kanal adı yaradılır ki, "...after subscribe()" xətası baş verməsin).
 export function subscribeToIncomingBattles(userId: string, onInsert: (row: Battle) => void) {
+  const uniqueId = Math.random().toString(36).slice(2, 10)
   const channel = supabase
-    .channel(`incoming-battles:${userId}`)
+    .channel(`incoming-battles:${userId}:${uniqueId}`)
     .on(
       'postgres_changes',
       { event: 'INSERT', schema: 'public', table: 'battles', filter: `opponent_id=eq.${userId}` },
