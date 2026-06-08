@@ -65,6 +65,15 @@ export async function getSeenVocabIds(userId: string): Promise<Set<number>> {
   return new Set((data ?? []).map((r: { vocab_id: number }) => r.vocab_id))
 }
 
+// Bütün söz irəliləyişi (nərdivan/mənimsəmə hesablamaq üçün)
+export async function getAllVocabProgress(userId: string): Promise<Array<{ vocab_id: number; repetitions: number; interval: number }>> {
+  const { data } = await supabase
+    .from('user_vocab_progress')
+    .select('vocab_id, repetitions, interval')
+    .eq('user_id', userId)
+  return (data ?? []) as Array<{ vocab_id: number; repetitions: number; interval: number }>
+}
+
 // ─── Mnemonika keşi (paylaşılan — hər söz üçün bir dəfə AI ilə generasiya) ──
 export async function getMnemonic(vocabId: number) {
   const { data, error } = await supabase

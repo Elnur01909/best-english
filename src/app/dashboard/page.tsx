@@ -8,6 +8,7 @@ import { getTOLESProgress, TOLES_LEVELS } from '@/lib/toles'
 import { PROFICIENCY_HOURS, TOTAL_PATHWAY } from '@/lib/hours'
 import DailySchedule from '@/components/DailySchedule'
 import WeakPoints from '@/components/WeakPoints'
+import CEFRLadder from '@/components/CEFRLadder'
 import AITutorChat from '@/components/AITutorChat'
 import type { UserProfile } from '@/types'
 import lessonsData from '@/data/lessons.json'
@@ -137,6 +138,9 @@ if (loading) {
             </div>
           </div>
         )}
+
+        {/* CEFR Səviyyə Nərdivanı */}
+        <CEFRLadder />
 
         {/* Zəif Nöqtə Drilleri */}
         <WeakPoints />

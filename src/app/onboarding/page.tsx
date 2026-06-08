@@ -12,9 +12,15 @@ const WHY_OPTIONS = [
   { id: 'family', emoji: '👨‍👩‍👧', title: 'Ailə', desc: 'Sevdiklərimiz ilə əlaqə' },
 ]
 
+const GOAL_OPTIONS: { id: 'general' | 'legal'; emoji: string; title: string; desc: string }[] = [
+  { id: 'general', emoji: '📚', title: 'Ümumi İngilis', desc: 'A1-dən başla — gündəlik ingiliscə, qrammatika, addım-addım irəlilə (A1→C2)' },
+  { id: 'legal', emoji: '⚖️', title: 'TOLES / Hüquqi İngilis', desc: 'Hüquqi ingilis və TOLES imtahanına hazırlıq (orta səviyyə tələb olunur — B1+)' },
+]
+
 export default function OnboardingPage() {
   const router = useRouter()
   const [selectedWhy, setSelectedWhy] = useState<string | null>(null)
+  const [selectedTrack, setSelectedTrack] = useState<'general' | 'legal' | null>(null)
   const [step, setStep] = useState(1)
   const [loading, setLoading] = useState(false)
 
@@ -25,22 +31,19 @@ export default function OnboardingPage() {
   }, [router])
 
   async function handleContinue() {
-    if (!selectedWhy) return
+    if (!selectedWhy || !selectedTrack) return
 
     setLoading(true)
     const user = await getUser()
     if (!user) return
 
-    // Supabase profile-a "why" saxla
-    await supabase
-      .from('user_profiles')
-      .update({ learning_motivation: selectedWhy })
-      .eq('id', user.id)
+    // Öyrənmə trekini (məqsəd) yadda saxla — quiz/SRS bunu oxuyur
+    if (typeof window !== 'undefined') localStorage.setItem('best_english_track', selectedTrack)
 
-    // Onboarding-u tamamlanmış kimi işarələ
+    // Supabase profile-a "why" saxla + onboarding-u tamamlanmış işarələ
     await supabase
       .from('user_profiles')
-      .update({ onboarded: true })
+      .update({ learning_motivation: selectedWhy, onboarded: true })
       .eq('id', user.id)
 
     router.push('/placement')
@@ -102,7 +105,7 @@ export default function OnboardingPage() {
     )
   }
 
-  return (
+  if (step === 2) return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white dark:from-green-950 dark:to-gray-950 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
@@ -138,8 +141,49 @@ export default function OnboardingPage() {
           </div>
         </div>
 
-        <button onClick={handleContinue} disabled={loading} className="btn-primary w-full">
-          {loading ? 'Başlamaq...' : 'Başlamağa Hazırım! →'}
+        <button onClick={() => setStep(3)} className="btn-primary w-full">
+          Davam Et →
+        </button>
+      </div>
+    </div>
+  )
+
+  // ─── Step 3: Məqsəd (öyrənmə treki) ───────────────────
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-blue-950 dark:to-gray-950 flex items-center justify-center px-4">
+      <div className="w-full max-w-md">
+        <div className="text-center mb-8">
+          <div className="text-5xl mb-3">🎯</div>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Məqsədin nədir?</h1>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Bunu istənilən vaxt dəyişə bilərsən. Sənə uyğun məzmun göstərəcəyik.
+          </p>
+        </div>
+
+        <div className="space-y-3 mb-8">
+          {GOAL_OPTIONS.map((opt) => (
+            <button
+              key={opt.id}
+              onClick={() => setSelectedTrack(opt.id)}
+              className={`w-full p-4 rounded-xl border-2 transition-all text-left ${
+                selectedTrack === opt.id
+                  ? 'border-blue-500 bg-blue-50 dark:bg-blue-950'
+                  : 'border-gray-200 dark:border-gray-700 hover:border-gray-300'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">{opt.emoji}</span>
+                <div>
+                  <div className="font-semibold text-gray-900 dark:text-white">{opt.title}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">{opt.desc}</div>
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        <button onClick={handleContinue} disabled={loading || !selectedTrack} className="btn-primary w-full">
+          {loading ? 'Başlanır...' : 'Başlamağa Hazırım! →'}
         </button>
       </div>
     </div>
