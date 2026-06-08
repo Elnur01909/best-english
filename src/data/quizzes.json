@@ -37731,5 +37731,6120 @@
     "cefr": "A2",
     "track": "general",
     "topic": "Nature & Weather"
+  },
+  {
+    "id": 2311,
+    "type": "definition",
+    "question": "The fact that someone is able to do something.",
+    "options": [
+      "develop",
+      "realize",
+      "ability",
+      "knowledge"
+    ],
+    "correct": "ability",
+    "explanation": "ability = qabiliyyət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2312,
+    "type": "gap-fill",
+    "question": "She has the —————— to lead.",
+    "options": [
+      "ability",
+      "climate",
+      "continue",
+      "effort"
+    ],
+    "correct": "ability",
+    "explanation": "ability = qabiliyyət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2313,
+    "type": "matching",
+    "question": "«ability» — düzgün mənasını seç:",
+    "options": [
+      "To say you will certainly do something.",
+      "Physical activity to stay healthy.",
+      "A part of a country or the world.",
+      "The fact that someone is able to do something."
+    ],
+    "correct": "The fact that someone is able to do something.",
+    "explanation": "ability = qabiliyyət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2314,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ability» = \"The fact that someone is able to do something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. ability = qabiliyyət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2315,
+    "type": "definition",
+    "question": "Something that helps you or is useful.",
+    "options": [
+      "salary",
+      "advantage",
+      "serious",
+      "fact"
+    ],
+    "correct": "advantage",
+    "explanation": "advantage = üstünlük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2316,
+    "type": "gap-fill",
+    "question": "Speaking English is a big ——————.",
+    "options": [
+      "amount",
+      "advice",
+      "earth",
+      "advantage"
+    ],
+    "correct": "advantage",
+    "explanation": "advantage = üstünlük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2317,
+    "type": "matching",
+    "question": "«advantage» — düzgün mənasını seç:",
+    "options": [
+      "To agree to take or receive something.",
+      "Something that helps you or is useful.",
+      "The condition of your body.",
+      "To say that something is true, often unwillingly."
+    ],
+    "correct": "Something that helps you or is useful.",
+    "explanation": "advantage = üstünlük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2318,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«advantage» = \"A qualification from a university.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. advantage = üstünlük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2319,
+    "type": "definition",
+    "question": "An opinion about what someone should do.",
+    "options": [
+      "curious",
+      "mistake",
+      "energy",
+      "advice"
+    ],
+    "correct": "advice",
+    "explanation": "advice = məsləhət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2320,
+    "type": "gap-fill",
+    "question": "Can you give me some ——————?",
+    "options": [
+      "business",
+      "advice",
+      "energy",
+      "border"
+    ],
+    "correct": "advice",
+    "explanation": "advice = məsləhət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2321,
+    "type": "matching",
+    "question": "«advice» — düzgün mənasını seç:",
+    "options": [
+      "From another country.",
+      "An opinion about what someone should do.",
+      "The money you are paid for your job.",
+      "To find something for the first time."
+    ],
+    "correct": "An opinion about what someone should do.",
+    "explanation": "advice = məsləhət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2322,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«advice» = \"An opinion about what someone should do.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. advice = məsləhət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2323,
+    "type": "definition",
+    "question": "When people have the same opinion or a deal.",
+    "options": [
+      "agreement",
+      "improve",
+      "distance",
+      "brave"
+    ],
+    "correct": "agreement",
+    "explanation": "agreement = razılaşma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2324,
+    "type": "gap-fill",
+    "question": "We reached an ——————.",
+    "options": [
+      "agreement",
+      "similar",
+      "develop",
+      "abroad"
+    ],
+    "correct": "agreement",
+    "explanation": "agreement = razılaşma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2325,
+    "type": "matching",
+    "question": "«agreement» — düzgün mənasını seç:",
+    "options": [
+      "Hard work to do something.",
+      "When people have the same opinion or a deal.",
+      "To give someone hope or confidence.",
+      "To say you will certainly do something."
+    ],
+    "correct": "When people have the same opinion or a deal.",
+    "explanation": "agreement = razılaşma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2326,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«agreement» = \"To say that something is true, often unwillingly.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. agreement = razılaşma",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2327,
+    "type": "definition",
+    "question": "How much there is of something.",
+    "options": [
+      "amount",
+      "confident",
+      "excellent",
+      "blood"
+    ],
+    "correct": "amount",
+    "explanation": "amount = miqdar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2328,
+    "type": "gap-fill",
+    "question": "A large —————— of money.",
+    "options": [
+      "amount",
+      "familiar",
+      "journey",
+      "avoid"
+    ],
+    "correct": "amount",
+    "explanation": "amount = miqdar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2329,
+    "type": "matching",
+    "question": "«amount» — düzgün mənasını seç:",
+    "options": [
+      "How much there is of something.",
+      "A person who controls a business or team.",
+      "Very good; of high quality.",
+      "The condition of your body."
+    ],
+    "correct": "How much there is of something.",
+    "explanation": "amount = miqdar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2330,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«amount» = \"How much there is of something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. amount = miqdar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2331,
+    "type": "definition",
+    "question": "The way a person acts.",
+    "options": [
+      "behaviour",
+      "proud",
+      "skin",
+      "advice"
+    ],
+    "correct": "behaviour",
+    "explanation": "behaviour = davranış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2332,
+    "type": "gap-fill",
+    "question": "His —————— was very polite.",
+    "options": [
+      "behaviour",
+      "continue",
+      "familiar",
+      "brave"
+    ],
+    "correct": "behaviour",
+    "explanation": "behaviour = davranış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2333,
+    "type": "matching",
+    "question": "«behaviour» — düzgün mənasını seç:",
+    "options": [
+      "The outer layer of your body.",
+      "A change caused by something.",
+      "The way a person acts.",
+      "A chance to do something good."
+    ],
+    "correct": "The way a person acts.",
+    "explanation": "behaviour = davranış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2334,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«behaviour» = \"An ability to do something well.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. behaviour = davranış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2335,
+    "type": "definition",
+    "question": "A helpful or good effect.",
+    "options": [
+      "benefit",
+      "energy",
+      "belong",
+      "polite"
+    ],
+    "correct": "benefit",
+    "explanation": "benefit = fayda",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2336,
+    "type": "matching",
+    "question": "«benefit» — düzgün mənasını seç:",
+    "options": [
+      "A helpful or good effect.",
+      "Not afraid of danger.",
+      "Simple and most important.",
+      "From another country."
+    ],
+    "correct": "A helpful or good effect.",
+    "explanation": "benefit = fayda",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2337,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«benefit» = \"A helpful or good effect.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. benefit = fayda",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2338,
+    "type": "definition",
+    "question": "A possibility that something will happen.",
+    "options": [
+      "disease",
+      "chance",
+      "brain",
+      "salary"
+    ],
+    "correct": "chance",
+    "explanation": "chance = imkan, şans",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2339,
+    "type": "gap-fill",
+    "question": "There is a —————— of rain.",
+    "options": [
+      "allow",
+      "journey",
+      "advice",
+      "chance"
+    ],
+    "correct": "chance",
+    "explanation": "chance = imkan, şans",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2340,
+    "type": "matching",
+    "question": "«chance» — düzgün mənasını seç:",
+    "options": [
+      "From another country.",
+      "A possibility that something will happen.",
+      "Able to be used or got.",
+      "To grow or make something better."
+    ],
+    "correct": "A possibility that something will happen.",
+    "explanation": "chance = imkan, şans",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2341,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«chance» = \"Known to you; not strange.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. chance = imkan, şans",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2342,
+    "type": "definition",
+    "question": "The act of choosing between things.",
+    "options": [
+      "available",
+      "choice",
+      "calm",
+      "attend"
+    ],
+    "correct": "choice",
+    "explanation": "choice = seçim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2343,
+    "type": "gap-fill",
+    "question": "You have a ——————.",
+    "options": [
+      "salary",
+      "choice",
+      "ocean",
+      "exercise"
+    ],
+    "correct": "choice",
+    "explanation": "choice = seçim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2344,
+    "type": "matching",
+    "question": "«choice» — düzgün mənasını seç:",
+    "options": [
+      "Extremely large.",
+      "Something that helps you or is useful.",
+      "The act of choosing between things.",
+      "To get better or make better."
+    ],
+    "correct": "The act of choosing between things.",
+    "explanation": "choice = seçim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2345,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«choice» = \"The act of choosing between things.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. choice = seçim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2346,
+    "type": "definition",
+    "question": "A choice that you make after thinking.",
+    "options": [
+      "continue",
+      "decision",
+      "abroad",
+      "disease"
+    ],
+    "correct": "decision",
+    "explanation": "decision = qərar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2347,
+    "type": "gap-fill",
+    "question": "It was a hard ——————.",
+    "options": [
+      "confident",
+      "ocean",
+      "decision",
+      "detail"
+    ],
+    "correct": "decision",
+    "explanation": "decision = qərar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2348,
+    "type": "matching",
+    "question": "«decision» — düzgün mənasını seç:",
+    "options": [
+      "Known to you; not strange.",
+      "In or to a foreign country.",
+      "A choice that you make after thinking.",
+      "Almost the same."
+    ],
+    "correct": "A choice that you make after thinking.",
+    "explanation": "decision = qərar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2349,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«decision» = \"To succeed in doing something difficult; to control.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. decision = qərar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2350,
+    "type": "definition",
+    "question": "A small fact or piece of information.",
+    "options": [
+      "honest",
+      "detail",
+      "effort",
+      "ordinary"
+    ],
+    "correct": "detail",
+    "explanation": "detail = təfərrüat",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2351,
+    "type": "matching",
+    "question": "«detail» — düzgün mənasını seç:",
+    "options": [
+      "A part of a country or the world.",
+      "The act of choosing between things.",
+      "A small fact or piece of information.",
+      "An organisation that sells things or services."
+    ],
+    "correct": "A small fact or piece of information.",
+    "explanation": "detail = təfərrüat",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2352,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«detail» = \"A small fact or piece of information.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. detail = təfərrüat",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2353,
+    "type": "definition",
+    "question": "The way two things are not the same.",
+    "options": [
+      "ordinary",
+      "difference",
+      "certain",
+      "encourage"
+    ],
+    "correct": "difference",
+    "explanation": "difference = fərq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2354,
+    "type": "gap-fill",
+    "question": "What is the ——————?",
+    "options": [
+      "education",
+      "difference",
+      "habit",
+      "ocean"
+    ],
+    "correct": "difference",
+    "explanation": "difference = fərq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2355,
+    "type": "matching",
+    "question": "«difference» — düzgün mənasını seç:",
+    "options": [
+      "Sure; without doubt.",
+      "To be owned by someone.",
+      "The line between two countries.",
+      "The way two things are not the same."
+    ],
+    "correct": "The way two things are not the same.",
+    "explanation": "difference = fərq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2356,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«difference» = \"Normal; not special.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. difference = fərq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2357,
+    "type": "definition",
+    "question": "A change caused by something.",
+    "options": [
+      "confident",
+      "foreign",
+      "effect",
+      "advantage"
+    ],
+    "correct": "effect",
+    "explanation": "effect = təsir, nəticə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2358,
+    "type": "gap-fill",
+    "question": "The medicine had a good ——————.",
+    "options": [
+      "business",
+      "arrange",
+      "chance",
+      "effect"
+    ],
+    "correct": "effect",
+    "explanation": "effect = təsir, nəticə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2359,
+    "type": "matching",
+    "question": "«effect» — düzgün mənasını seç:",
+    "options": [
+      "A change caused by something.",
+      "The money you are paid for your job.",
+      "To find something for the first time.",
+      "The activity of buying and selling; a company."
+    ],
+    "correct": "A change caused by something.",
+    "explanation": "effect = təsir, nəticə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2360,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«effect» = \"A change caused by something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. effect = təsir, nəticə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2361,
+    "type": "definition",
+    "question": "Hard work to do something.",
+    "options": [
+      "achieve",
+      "mistake",
+      "effort",
+      "proud"
+    ],
+    "correct": "effort",
+    "explanation": "effort = səy",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2362,
+    "type": "gap-fill",
+    "question": "He made a great ——————.",
+    "options": [
+      "planet",
+      "effort",
+      "amount",
+      "brain"
+    ],
+    "correct": "effort",
+    "explanation": "effort = səy",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2363,
+    "type": "matching",
+    "question": "«effort» — düzgün mənasını seç:",
+    "options": [
+      "To go to an event, like a class.",
+      "Something you do often, almost without thinking.",
+      "Sure; without doubt.",
+      "Hard work to do something."
+    ],
+    "correct": "Hard work to do something.",
+    "explanation": "effort = səy",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2364,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«effort» = \"Something done wrong; an error.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. effort = səy",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2365,
+    "type": "definition",
+    "question": "The power to be active and do things.",
+    "options": [
+      "decision",
+      "avoid",
+      "proud",
+      "energy"
+    ],
+    "correct": "energy",
+    "explanation": "energy = enerji",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2366,
+    "type": "gap-fill",
+    "question": "Children have a lot of ——————.",
+    "options": [
+      "degree",
+      "advantage",
+      "business",
+      "energy"
+    ],
+    "correct": "energy",
+    "explanation": "energy = enerji",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2367,
+    "type": "matching",
+    "question": "«energy» — düzgün mənasını seç:",
+    "options": [
+      "To grow or make something better.",
+      "The power to be active and do things.",
+      "A helpful or good effect.",
+      "The money you are paid for your job."
+    ],
+    "correct": "The power to be active and do things.",
+    "explanation": "energy = enerji",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2368,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«energy» = \"The power to be active and do things.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. energy = enerji",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2369,
+    "type": "definition",
+    "question": "A thing that shows what others are like.",
+    "options": [
+      "example",
+      "advantage",
+      "ability",
+      "expect"
+    ],
+    "correct": "example",
+    "explanation": "example = nümunə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2370,
+    "type": "gap-fill",
+    "question": "Give me an ——————.",
+    "options": [
+      "suggest",
+      "example",
+      "company",
+      "opinion"
+    ],
+    "correct": "example",
+    "explanation": "example = nümunə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2371,
+    "type": "matching",
+    "question": "«example» — düzgün mənasını seç:",
+    "options": [
+      "A thing that shows what others are like.",
+      "The planet we live on; the ground.",
+      "Feeling fear; worried.",
+      "To let someone do something."
+    ],
+    "correct": "A thing that shows what others are like.",
+    "explanation": "example = nümunə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2372,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«example» = \"The organ in your head that you think with.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. example = nümunə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2373,
+    "type": "definition",
+    "question": "Knowledge or skill from doing something.",
+    "options": [
+      "foreign",
+      "similar",
+      "experience",
+      "business"
+    ],
+    "correct": "experience",
+    "explanation": "experience = təcrübə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2374,
+    "type": "gap-fill",
+    "question": "She has years of ——————.",
+    "options": [
+      "habit",
+      "experience",
+      "polite",
+      "fact"
+    ],
+    "correct": "experience",
+    "explanation": "experience = təcrübə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2375,
+    "type": "matching",
+    "question": "«experience» — düzgün mənasını seç:",
+    "options": [
+      "Sure of yourself and your abilities.",
+      "Knowledge or skill from doing something.",
+      "The activity of buying and selling; a company.",
+      "Able to be used or got."
+    ],
+    "correct": "Knowledge or skill from doing something.",
+    "explanation": "experience = təcrübə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2376,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«experience» = \"Knowledge or skill from doing something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. experience = təcrübə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2377,
+    "type": "definition",
+    "question": "Something that is true.",
+    "options": [
+      "achieve",
+      "fact",
+      "brave",
+      "behaviour"
+    ],
+    "correct": "fact",
+    "explanation": "fact = fakt, həqiqət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2378,
+    "type": "gap-fill",
+    "question": "That is a well-known ——————.",
+    "options": [
+      "fact",
+      "brave",
+      "effort",
+      "curious"
+    ],
+    "correct": "fact",
+    "explanation": "fact = fakt, həqiqət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2379,
+    "type": "matching",
+    "question": "«fact» — düzgün mənasını seç:",
+    "options": [
+      "In or to a foreign country.",
+      "A possibility that something will happen.",
+      "Something that is true.",
+      "To think that something will happen."
+    ],
+    "correct": "Something that is true.",
+    "explanation": "fact = fakt, həqiqət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2380,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«fact» = \"To say something is good and worth doing.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. fact = fakt, həqiqət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2381,
+    "type": "definition",
+    "question": "Something you do often, almost without thinking.",
+    "options": [
+      "habit",
+      "describe",
+      "suggest",
+      "business"
+    ],
+    "correct": "habit",
+    "explanation": "habit = vərdiş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2382,
+    "type": "gap-fill",
+    "question": "Reading is a good ——————.",
+    "options": [
+      "habit",
+      "improve",
+      "proud",
+      "choice"
+    ],
+    "correct": "habit",
+    "explanation": "habit = vərdiş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2383,
+    "type": "matching",
+    "question": "«habit» — düzgün mənasını seç:",
+    "options": [
+      "To see or become aware of something.",
+      "Something you do often, almost without thinking.",
+      "The power to be active and do things.",
+      "A small fact or piece of information."
+    ],
+    "correct": "Something you do often, almost without thinking.",
+    "explanation": "habit = vərdiş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2384,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«habit» = \"Something you do often, almost without thinking.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. habit = vərdiş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2385,
+    "type": "definition",
+    "question": "A thought or plan in your mind.",
+    "options": [
+      "manager",
+      "degree",
+      "idea",
+      "polite"
+    ],
+    "correct": "idea",
+    "explanation": "idea = fikir, ideya",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2386,
+    "type": "gap-fill",
+    "question": "I have a good ——————.",
+    "options": [
+      "idea",
+      "region",
+      "business",
+      "earth"
+    ],
+    "correct": "idea",
+    "explanation": "idea = fikir, ideya",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2387,
+    "type": "matching",
+    "question": "«idea» — düzgün mənasını seç:",
+    "options": [
+      "To go to an event, like a class.",
+      "A thought or plan in your mind.",
+      "What you think about something.",
+      "The jobs you do in your working life."
+    ],
+    "correct": "A thought or plan in your mind.",
+    "explanation": "idea = fikir, ideya",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2388,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«idea» = \"The act of choosing between things.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. idea = fikir, ideya",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2389,
+    "type": "definition",
+    "question": "The information and understanding you have.",
+    "options": [
+      "example",
+      "climate",
+      "knowledge",
+      "experience"
+    ],
+    "correct": "knowledge",
+    "explanation": "knowledge = bilik",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2390,
+    "type": "gap-fill",
+    "question": "He has good —————— of history.",
+    "options": [
+      "salary",
+      "introduce",
+      "knowledge",
+      "choice"
+    ],
+    "correct": "knowledge",
+    "explanation": "knowledge = bilik",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2391,
+    "type": "matching",
+    "question": "«knowledge» — düzgün mənasını seç:",
+    "options": [
+      "Able to be used or got.",
+      "To become larger in number or size.",
+      "In or to a foreign country.",
+      "The information and understanding you have."
+    ],
+    "correct": "The information and understanding you have.",
+    "explanation": "knowledge = bilik",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2392,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«knowledge» = \"The information and understanding you have.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. knowledge = bilik",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2393,
+    "type": "definition",
+    "question": "Something done wrong; an error.",
+    "options": [
+      "mistake",
+      "sudden",
+      "polite",
+      "expect"
+    ],
+    "correct": "mistake",
+    "explanation": "mistake = səhv",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2394,
+    "type": "matching",
+    "question": "«mistake» — düzgün mənasını seç:",
+    "options": [
+      "Something done wrong; an error.",
+      "A thought or plan in your mind.",
+      "The amount of space between two places.",
+      "Feeling fear; worried."
+    ],
+    "correct": "Something done wrong; an error.",
+    "explanation": "mistake = səhv",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2395,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«mistake» = \"A helpful or good effect.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. mistake = səhv",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2396,
+    "type": "definition",
+    "question": "What you think about something.",
+    "options": [
+      "opinion",
+      "curious",
+      "health",
+      "belong"
+    ],
+    "correct": "opinion",
+    "explanation": "opinion = rəy, fikir",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2397,
+    "type": "gap-fill",
+    "question": "In my ——————, this is best.",
+    "options": [
+      "realize",
+      "opinion",
+      "afraid",
+      "ocean"
+    ],
+    "correct": "opinion",
+    "explanation": "opinion = rəy, fikir",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2398,
+    "type": "matching",
+    "question": "«opinion» — düzgün mənasını seç:",
+    "options": [
+      "The jobs you do in your working life.",
+      "What you think about something.",
+      "To be owned by someone.",
+      "To think carefully about something."
+    ],
+    "correct": "What you think about something.",
+    "explanation": "opinion = rəy, fikir",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2399,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«opinion» = \"What you think about something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. opinion = rəy, fikir",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Everyday Life"
+  },
+  {
+    "id": 2400,
+    "type": "definition",
+    "question": "A chance to do something good.",
+    "options": [
+      "business",
+      "realize",
+      "opportunity",
+      "excellent"
+    ],
+    "correct": "opportunity",
+    "explanation": "opportunity = imkan, fürsət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2401,
+    "type": "gap-fill",
+    "question": "This is a great ——————.",
+    "options": [
+      "opportunity",
+      "climate",
+      "consider",
+      "brain"
+    ],
+    "correct": "opportunity",
+    "explanation": "opportunity = imkan, fürsət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2402,
+    "type": "matching",
+    "question": "«opportunity» — düzgün mənasını seç:",
+    "options": [
+      "The activity of buying and selling; a company.",
+      "A large round object in space, like Earth.",
+      "A chance to do something good.",
+      "Something done wrong; an error."
+    ],
+    "correct": "A chance to do something good.",
+    "explanation": "opportunity = imkan, fürsət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2403,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«opportunity» = \"To keep away from something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. opportunity = imkan, fürsət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2404,
+    "type": "definition",
+    "question": "To agree to take or receive something.",
+    "options": [
+      "distance",
+      "accept",
+      "business",
+      "advantage"
+    ],
+    "correct": "accept",
+    "explanation": "accept = qəbul etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2405,
+    "type": "gap-fill",
+    "question": "I —————— your offer.",
+    "options": [
+      "accept",
+      "recommend",
+      "improve",
+      "experience"
+    ],
+    "correct": "accept",
+    "explanation": "accept = qəbul etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2406,
+    "type": "matching",
+    "question": "«accept» — düzgün mənasını seç:",
+    "options": [
+      "To agree to take or receive something.",
+      "Telling the truth; not lying.",
+      "A change caused by something.",
+      "An illness."
+    ],
+    "correct": "To agree to take or receive something.",
+    "explanation": "accept = qəbul etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2407,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«accept» = \"To agree to take or receive something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. accept = qəbul etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2408,
+    "type": "definition",
+    "question": "To succeed in doing something after effort.",
+    "options": [
+      "distance",
+      "advice",
+      "achieve",
+      "advantage"
+    ],
+    "correct": "achieve",
+    "explanation": "achieve = nail olmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2409,
+    "type": "matching",
+    "question": "«achieve» — düzgün mənasını seç:",
+    "options": [
+      "To succeed in doing something after effort.",
+      "The outer layer of your body.",
+      "A chance to do something good.",
+      "Hard work to do something."
+    ],
+    "correct": "To succeed in doing something after effort.",
+    "explanation": "achieve = nail olmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2410,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«achieve» = \"What you think about something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. achieve = nail olmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2411,
+    "type": "definition",
+    "question": "To say that something is true, often unwillingly.",
+    "options": [
+      "admit",
+      "example",
+      "distance",
+      "fact"
+    ],
+    "correct": "admit",
+    "explanation": "admit = etiraf etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2412,
+    "type": "matching",
+    "question": "«admit» — düzgün mənasını seç:",
+    "options": [
+      "To say that something is true, often unwillingly.",
+      "Happening quickly and unexpectedly.",
+      "A small fact or piece of information.",
+      "An ability to do something well."
+    ],
+    "correct": "To say that something is true, often unwillingly.",
+    "explanation": "admit = etiraf etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2413,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«admit» = \"To say that something is true, often unwillingly.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. admit = etiraf etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2414,
+    "type": "definition",
+    "question": "To let someone do something.",
+    "options": [
+      "allow",
+      "choice",
+      "distance",
+      "decision"
+    ],
+    "correct": "allow",
+    "explanation": "allow = icazə vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2415,
+    "type": "gap-fill",
+    "question": "My parents —————— me to travel.",
+    "options": [
+      "describe",
+      "continue",
+      "allow",
+      "attend"
+    ],
+    "correct": "allow",
+    "explanation": "allow = icazə vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2416,
+    "type": "matching",
+    "question": "«allow» — düzgün mənasını seç:",
+    "options": [
+      "To let someone do something.",
+      "To make people know each other for the first time.",
+      "To find something for the first time.",
+      "An organisation that sells things or services."
+    ],
+    "correct": "To let someone do something.",
+    "explanation": "allow = icazə vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2417,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«allow» = \"An opinion about what someone should do.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. allow = icazə vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2418,
+    "type": "definition",
+    "question": "To plan or organize something.",
+    "options": [
+      "introduce",
+      "arrange",
+      "enormous",
+      "similar"
+    ],
+    "correct": "arrange",
+    "explanation": "arrange = təşkil etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2419,
+    "type": "gap-fill",
+    "question": "Let’s —————— a meeting.",
+    "options": [
+      "available",
+      "complain",
+      "arrange",
+      "example"
+    ],
+    "correct": "arrange",
+    "explanation": "arrange = təşkil etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2420,
+    "type": "matching",
+    "question": "«arrange» — düzgün mənasını seç:",
+    "options": [
+      "A choice that you make after thinking.",
+      "To say that something is true, often unwillingly.",
+      "To say something is good and worth doing.",
+      "To plan or organize something."
+    ],
+    "correct": "To plan or organize something.",
+    "explanation": "arrange = təşkil etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2421,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«arrange» = \"To plan or organize something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. arrange = təşkil etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2422,
+    "type": "definition",
+    "question": "To go to an event, like a class.",
+    "options": [
+      "mistake",
+      "attend",
+      "proud",
+      "business"
+    ],
+    "correct": "attend",
+    "explanation": "attend = iştirak etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2423,
+    "type": "gap-fill",
+    "question": "I —————— English classes.",
+    "options": [
+      "attend",
+      "afraid",
+      "region",
+      "effort"
+    ],
+    "correct": "attend",
+    "explanation": "attend = iştirak etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2424,
+    "type": "matching",
+    "question": "«attend» — düzgün mənasını seç:",
+    "options": [
+      "A thought or plan in your mind.",
+      "To keep someone or something safe.",
+      "The jobs you do in your working life.",
+      "To go to an event, like a class."
+    ],
+    "correct": "To go to an event, like a class.",
+    "explanation": "attend = iştirak etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2425,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«attend» = \"An opinion about what someone should do.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. attend = iştirak etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2426,
+    "type": "definition",
+    "question": "To keep away from something.",
+    "options": [
+      "honest",
+      "forest",
+      "choice",
+      "avoid"
+    ],
+    "correct": "avoid",
+    "explanation": "avoid = qaçınmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2427,
+    "type": "gap-fill",
+    "question": "Try to —————— mistakes.",
+    "options": [
+      "region",
+      "blood",
+      "prevent",
+      "avoid"
+    ],
+    "correct": "avoid",
+    "explanation": "avoid = qaçınmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2428,
+    "type": "matching",
+    "question": "«avoid» — düzgün mənasını seç:",
+    "options": [
+      "To keep someone or something safe.",
+      "An illness.",
+      "Something done wrong; an error.",
+      "To keep away from something."
+    ],
+    "correct": "To keep away from something.",
+    "explanation": "avoid = qaçınmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2429,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«avoid» = \"To keep away from something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. avoid = qaçınmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2430,
+    "type": "definition",
+    "question": "To be owned by someone.",
+    "options": [
+      "exercise",
+      "distance",
+      "prevent",
+      "belong"
+    ],
+    "correct": "belong",
+    "explanation": "belong = aid olmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2431,
+    "type": "matching",
+    "question": "«belong» — düzgün mənasını seç:",
+    "options": [
+      "To be owned by someone.",
+      "To let someone do something.",
+      "To agree to take or receive something.",
+      "A thought or plan in your mind."
+    ],
+    "correct": "To be owned by someone.",
+    "explanation": "belong = aid olmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2432,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«belong» = \"Happening quickly and unexpectedly.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. belong = aid olmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2433,
+    "type": "definition",
+    "question": "To take something and return it later.",
+    "options": [
+      "ordinary",
+      "afraid",
+      "amount",
+      "borrow"
+    ],
+    "correct": "borrow",
+    "explanation": "borrow = borc almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2434,
+    "type": "gap-fill",
+    "question": "Can I —————— your pen?",
+    "options": [
+      "suggest",
+      "ocean",
+      "borrow",
+      "difference"
+    ],
+    "correct": "borrow",
+    "explanation": "borrow = borc almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2435,
+    "type": "matching",
+    "question": "«borrow» — düzgün mənasını seç:",
+    "options": [
+      "Telling the truth; not lying.",
+      "To take something and return it later.",
+      "Very big.",
+      "Wanting to know or learn something."
+    ],
+    "correct": "To take something and return it later.",
+    "explanation": "borrow = borc almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2436,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«borrow» = \"To take something and return it later.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. borrow = borc almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2437,
+    "type": "definition",
+    "question": "To say you are not happy about something.",
+    "options": [
+      "allow",
+      "detail",
+      "decision",
+      "complain"
+    ],
+    "correct": "complain",
+    "explanation": "complain = şikayət etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2438,
+    "type": "matching",
+    "question": "«complain» — düzgün mənasını seç:",
+    "options": [
+      "To say you are not happy about something.",
+      "To give someone hope or confidence.",
+      "A qualification from a university.",
+      "To say what someone or something is like."
+    ],
+    "correct": "To say you are not happy about something.",
+    "explanation": "complain = şikayət etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2439,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«complain» = \"To become larger in number or size.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. complain = şikayət etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2440,
+    "type": "definition",
+    "question": "To think carefully about something.",
+    "options": [
+      "promise",
+      "education",
+      "exercise",
+      "consider"
+    ],
+    "correct": "consider",
+    "explanation": "consider = nəzərdən keçirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2441,
+    "type": "gap-fill",
+    "question": "I will —————— your idea.",
+    "options": [
+      "habit",
+      "blood",
+      "accept",
+      "consider"
+    ],
+    "correct": "consider",
+    "explanation": "consider = nəzərdən keçirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2442,
+    "type": "matching",
+    "question": "«consider» — düzgün mənasını seç:",
+    "options": [
+      "To grow or make something better.",
+      "An act of travelling from one place to another.",
+      "A large round object in space, like Earth.",
+      "To think carefully about something."
+    ],
+    "correct": "To think carefully about something.",
+    "explanation": "consider = nəzərdən keçirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2443,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«consider» = \"To think carefully about something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. consider = nəzərdən keçirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2444,
+    "type": "definition",
+    "question": "To keep doing something.",
+    "options": [
+      "abroad",
+      "continue",
+      "huge",
+      "blood"
+    ],
+    "correct": "continue",
+    "explanation": "continue = davam etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2445,
+    "type": "gap-fill",
+    "question": "Please —————— your work.",
+    "options": [
+      "consider",
+      "honest",
+      "continue",
+      "effect"
+    ],
+    "correct": "continue",
+    "explanation": "continue = davam etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2446,
+    "type": "matching",
+    "question": "«continue» — düzgün mənasını seç:",
+    "options": [
+      "A chance to do something good.",
+      "Important; not joking.",
+      "To keep doing something.",
+      "To find something for the first time."
+    ],
+    "correct": "To keep doing something.",
+    "explanation": "continue = davam etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2447,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«continue» = \"A thought or plan in your mind.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. continue = davam etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2448,
+    "type": "definition",
+    "question": "To say what someone or something is like.",
+    "options": [
+      "promise",
+      "amount",
+      "achieve",
+      "describe"
+    ],
+    "correct": "describe",
+    "explanation": "describe = təsvir etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2449,
+    "type": "gap-fill",
+    "question": "Can you —————— him?",
+    "options": [
+      "improve",
+      "skin",
+      "degree",
+      "describe"
+    ],
+    "correct": "describe",
+    "explanation": "describe = təsvir etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2450,
+    "type": "matching",
+    "question": "«describe» — düzgün mənasını seç:",
+    "options": [
+      "The process of teaching and learning.",
+      "Wanting to know or learn something.",
+      "To say what someone or something is like.",
+      "Happening quickly and unexpectedly."
+    ],
+    "correct": "To say what someone or something is like.",
+    "explanation": "describe = təsvir etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2451,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«describe» = \"To say what someone or something is like.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. describe = təsvir etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2452,
+    "type": "definition",
+    "question": "To grow or make something better.",
+    "options": [
+      "develop",
+      "encourage",
+      "familiar",
+      "forest"
+    ],
+    "correct": "develop",
+    "explanation": "develop = inkişaf etdirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2453,
+    "type": "gap-fill",
+    "question": "I want to —————— my skills.",
+    "options": [
+      "develop",
+      "blood",
+      "choice",
+      "detail"
+    ],
+    "correct": "develop",
+    "explanation": "develop = inkişaf etdirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2454,
+    "type": "matching",
+    "question": "«develop» — düzgün mənasını seç:",
+    "options": [
+      "To grow or make something better.",
+      "In or to a foreign country.",
+      "Almost the same.",
+      "Important; not joking."
+    ],
+    "correct": "To grow or make something better.",
+    "explanation": "develop = inkişaf etdirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2455,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«develop» = \"A large area covered with trees.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. develop = inkişaf etdirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2456,
+    "type": "definition",
+    "question": "To find something for the first time.",
+    "options": [
+      "achieve",
+      "encourage",
+      "polite",
+      "discover"
+    ],
+    "correct": "discover",
+    "explanation": "discover = kəşf etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2457,
+    "type": "matching",
+    "question": "«discover» — düzgün mənasını seç:",
+    "options": [
+      "Simple and most important.",
+      "To find something for the first time.",
+      "A possibility that something will happen.",
+      "An illness."
+    ],
+    "correct": "To find something for the first time.",
+    "explanation": "discover = kəşf etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2458,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«discover» = \"To find something for the first time.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. discover = kəşf etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2459,
+    "type": "definition",
+    "question": "To give someone hope or confidence.",
+    "options": [
+      "border",
+      "encourage",
+      "company",
+      "develop"
+    ],
+    "correct": "encourage",
+    "explanation": "encourage = həvəsləndirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2460,
+    "type": "matching",
+    "question": "«encourage» — düzgün mənasını seç:",
+    "options": [
+      "A part of a country or the world.",
+      "How much there is of something.",
+      "To give someone hope or confidence.",
+      "The way a person acts."
+    ],
+    "correct": "To give someone hope or confidence.",
+    "explanation": "encourage = həvəsləndirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2461,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«encourage» = \"To say you will certainly do something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. encourage = həvəsləndirmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2462,
+    "type": "definition",
+    "question": "To think that something will happen.",
+    "options": [
+      "effort",
+      "expect",
+      "proud",
+      "afraid"
+    ],
+    "correct": "expect",
+    "explanation": "expect = gözləmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2463,
+    "type": "gap-fill",
+    "question": "I —————— good news.",
+    "options": [
+      "choice",
+      "skill",
+      "expect",
+      "serious"
+    ],
+    "correct": "expect",
+    "explanation": "expect = gözləmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2464,
+    "type": "matching",
+    "question": "«expect» — düzgün mənasını seç:",
+    "options": [
+      "To think that something will happen.",
+      "The usual weather of a place.",
+      "A change caused by something.",
+      "The amount of space between two places."
+    ],
+    "correct": "To think that something will happen.",
+    "explanation": "expect = gözləmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2465,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«expect» = \"To think that something will happen.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. expect = gözləmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2466,
+    "type": "definition",
+    "question": "To get better or make better.",
+    "options": [
+      "advantage",
+      "improve",
+      "encourage",
+      "familiar"
+    ],
+    "correct": "improve",
+    "explanation": "improve = yaxşılaşdırmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2467,
+    "type": "gap-fill",
+    "question": "I want to —————— my English.",
+    "options": [
+      "distance",
+      "ocean",
+      "improve",
+      "planet"
+    ],
+    "correct": "improve",
+    "explanation": "improve = yaxşılaşdırmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2468,
+    "type": "matching",
+    "question": "«improve» — düzgün mənasını seç:",
+    "options": [
+      "To take something and return it later.",
+      "To get better or make better.",
+      "To give someone hope or confidence.",
+      "To keep away from something."
+    ],
+    "correct": "To get better or make better.",
+    "explanation": "improve = yaxşılaşdırmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2469,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«improve» = \"A large round object in space, like Earth.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. improve = yaxşılaşdırmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2470,
+    "type": "definition",
+    "question": "To become larger in number or size.",
+    "options": [
+      "chance",
+      "abroad",
+      "increase",
+      "experience"
+    ],
+    "correct": "increase",
+    "explanation": "increase = artmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2471,
+    "type": "gap-fill",
+    "question": "Prices —————— every year.",
+    "options": [
+      "expect",
+      "increase",
+      "protect",
+      "advantage"
+    ],
+    "correct": "increase",
+    "explanation": "increase = artmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2472,
+    "type": "matching",
+    "question": "«increase» — düzgün mənasını seç:",
+    "options": [
+      "Having good manners.",
+      "A thing that shows what others are like.",
+      "Wanting to know or learn something.",
+      "To become larger in number or size."
+    ],
+    "correct": "To become larger in number or size.",
+    "explanation": "increase = artmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2473,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«increase» = \"To become larger in number or size.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. increase = artmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2474,
+    "type": "definition",
+    "question": "To make people know each other for the first time.",
+    "options": [
+      "opportunity",
+      "introduce",
+      "chance",
+      "curious"
+    ],
+    "correct": "introduce",
+    "explanation": "introduce = təqdim etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2475,
+    "type": "gap-fill",
+    "question": "Let me —————— my friend.",
+    "options": [
+      "introduce",
+      "prevent",
+      "brave",
+      "admit"
+    ],
+    "correct": "introduce",
+    "explanation": "introduce = təqdim etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2476,
+    "type": "matching",
+    "question": "«introduce» — düzgün mənasını seç:",
+    "options": [
+      "To make people know each other for the first time.",
+      "Normal; not special.",
+      "In or to a foreign country.",
+      "Quiet and not worried."
+    ],
+    "correct": "To make people know each other for the first time.",
+    "explanation": "introduce = təqdim etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2477,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«introduce» = \"The red liquid in your body.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. introduce = təqdim etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2478,
+    "type": "definition",
+    "question": "To succeed in doing something difficult; to control.",
+    "options": [
+      "recommend",
+      "manage",
+      "ordinary",
+      "blood"
+    ],
+    "correct": "manage",
+    "explanation": "manage = idarə etmək, bacarmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2479,
+    "type": "matching",
+    "question": "«manage» — düzgün mənasını seç:",
+    "options": [
+      "To succeed in doing something difficult; to control.",
+      "Happening quickly and unexpectedly.",
+      "An opinion about what someone should do.",
+      "Very big."
+    ],
+    "correct": "To succeed in doing something difficult; to control.",
+    "explanation": "manage = idarə etmək, bacarmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2480,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«manage» = \"To succeed in doing something difficult; to control.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. manage = idarə etmək, bacarmaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2481,
+    "type": "definition",
+    "question": "To see or become aware of something.",
+    "options": [
+      "example",
+      "skin",
+      "notice",
+      "salary"
+    ],
+    "correct": "notice",
+    "explanation": "notice = fərq etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2482,
+    "type": "matching",
+    "question": "«notice» — düzgün mənasını seç:",
+    "options": [
+      "Knowledge or skill from doing something.",
+      "A possibility that something will happen.",
+      "Quiet and not worried.",
+      "To see or become aware of something."
+    ],
+    "correct": "To see or become aware of something.",
+    "explanation": "notice = fərq etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2483,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«notice» = \"Knowledge or skill from doing something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. notice = fərq etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2484,
+    "type": "definition",
+    "question": "To stop something from happening.",
+    "options": [
+      "prevent",
+      "skill",
+      "available",
+      "serious"
+    ],
+    "correct": "prevent",
+    "explanation": "prevent = qarşısını almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2485,
+    "type": "gap-fill",
+    "question": "We must —————— accidents.",
+    "options": [
+      "prevent",
+      "education",
+      "opportunity",
+      "career"
+    ],
+    "correct": "prevent",
+    "explanation": "prevent = qarşısını almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2486,
+    "type": "matching",
+    "question": "«prevent» — düzgün mənasını seç:",
+    "options": [
+      "Wanting to know or learn something.",
+      "To stop something from happening.",
+      "A choice that you make after thinking.",
+      "The money you are paid for your job."
+    ],
+    "correct": "To stop something from happening.",
+    "explanation": "prevent = qarşısını almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2487,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«prevent» = \"To stop something from happening.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. prevent = qarşısını almaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2488,
+    "type": "definition",
+    "question": "To say you will certainly do something.",
+    "options": [
+      "similar",
+      "familiar",
+      "promise",
+      "salary"
+    ],
+    "correct": "promise",
+    "explanation": "promise = söz vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2489,
+    "type": "gap-fill",
+    "question": "I —————— to help you.",
+    "options": [
+      "promise",
+      "available",
+      "afraid",
+      "develop"
+    ],
+    "correct": "promise",
+    "explanation": "promise = söz vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2490,
+    "type": "matching",
+    "question": "«promise» — düzgün mənasını seç:",
+    "options": [
+      "To find something for the first time.",
+      "To say you will certainly do something.",
+      "A thing that shows what others are like.",
+      "The way a person acts."
+    ],
+    "correct": "To say you will certainly do something.",
+    "explanation": "promise = söz vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2491,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«promise» = \"A person who controls a business or team.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. promise = söz vermək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2492,
+    "type": "definition",
+    "question": "To keep someone or something safe.",
+    "options": [
+      "protect",
+      "habit",
+      "afraid",
+      "choice"
+    ],
+    "correct": "protect",
+    "explanation": "protect = qorumaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2493,
+    "type": "gap-fill",
+    "question": "We must —————— nature.",
+    "options": [
+      "career",
+      "proud",
+      "company",
+      "protect"
+    ],
+    "correct": "protect",
+    "explanation": "protect = qorumaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2494,
+    "type": "matching",
+    "question": "«protect» — düzgün mənasını seç:",
+    "options": [
+      "What you think about something.",
+      "To keep someone or something safe.",
+      "Almost the same.",
+      "Something you do often, almost without thinking."
+    ],
+    "correct": "To keep someone or something safe.",
+    "explanation": "protect = qorumaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2495,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«protect» = \"To keep someone or something safe.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. protect = qorumaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2496,
+    "type": "definition",
+    "question": "To understand something clearly.",
+    "options": [
+      "realize",
+      "earth",
+      "suggest",
+      "similar"
+    ],
+    "correct": "realize",
+    "explanation": "realize = anlamaq, dərk etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2497,
+    "type": "matching",
+    "question": "«realize» — düzgün mənasını seç:",
+    "options": [
+      "To grow or make something better.",
+      "A person who controls a business or team.",
+      "To understand something clearly.",
+      "Normal; not special."
+    ],
+    "correct": "To understand something clearly.",
+    "explanation": "realize = anlamaq, dərk etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2498,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«realize» = \"The red liquid in your body.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. realize = anlamaq, dərk etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2499,
+    "type": "definition",
+    "question": "To say something is good and worth doing.",
+    "options": [
+      "recommend",
+      "complain",
+      "curious",
+      "manager"
+    ],
+    "correct": "recommend",
+    "explanation": "recommend = tövsiyə etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2500,
+    "type": "gap-fill",
+    "question": "I —————— this book.",
+    "options": [
+      "exercise",
+      "excellent",
+      "continue",
+      "recommend"
+    ],
+    "correct": "recommend",
+    "explanation": "recommend = tövsiyə etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2501,
+    "type": "matching",
+    "question": "«recommend» — düzgün mənasını seç:",
+    "options": [
+      "To say something is good and worth doing.",
+      "To succeed in doing something difficult; to control.",
+      "From another country.",
+      "Something done wrong; an error."
+    ],
+    "correct": "To say something is good and worth doing.",
+    "explanation": "recommend = tövsiyə etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2502,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«recommend» = \"To say something is good and worth doing.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. recommend = tövsiyə etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2503,
+    "type": "definition",
+    "question": "To offer an idea or plan.",
+    "options": [
+      "curious",
+      "suggest",
+      "manager",
+      "proud"
+    ],
+    "correct": "suggest",
+    "explanation": "suggest = təklif etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2504,
+    "type": "gap-fill",
+    "question": "I —————— we leave now.",
+    "options": [
+      "sudden",
+      "ability",
+      "suggest",
+      "borrow"
+    ],
+    "correct": "suggest",
+    "explanation": "suggest = təklif etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2505,
+    "type": "matching",
+    "question": "«suggest» — düzgün mənasını seç:",
+    "options": [
+      "To offer an idea or plan.",
+      "When people have the same opinion or a deal.",
+      "To understand something clearly.",
+      "The activity of buying and selling; a company."
+    ],
+    "correct": "To offer an idea or plan.",
+    "explanation": "suggest = təklif etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2506,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«suggest» = \"Quiet and not worried.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. suggest = təklif etmək",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Verbs & Actions"
+  },
+  {
+    "id": 2507,
+    "type": "definition",
+    "question": "Feeling fear; worried.",
+    "options": [
+      "detail",
+      "behaviour",
+      "prevent",
+      "afraid"
+    ],
+    "correct": "afraid",
+    "explanation": "afraid = qorxan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2508,
+    "type": "gap-fill",
+    "question": "I am —————— of dogs.",
+    "options": [
+      "accept",
+      "energy",
+      "continue",
+      "afraid"
+    ],
+    "correct": "afraid",
+    "explanation": "afraid = qorxan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2509,
+    "type": "matching",
+    "question": "«afraid» — düzgün mənasını seç:",
+    "options": [
+      "Feeling fear; worried.",
+      "The organ in your head that you think with.",
+      "To understand something clearly.",
+      "An ability to do something well."
+    ],
+    "correct": "Feeling fear; worried.",
+    "explanation": "afraid = qorxan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2510,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«afraid» = \"Feeling fear; worried.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. afraid = qorxan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2511,
+    "type": "definition",
+    "question": "Able to be used or got.",
+    "options": [
+      "available",
+      "behaviour",
+      "avoid",
+      "planet"
+    ],
+    "correct": "available",
+    "explanation": "available = əlçatan, mövcud",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2512,
+    "type": "gap-fill",
+    "question": "Is this seat ——————?",
+    "options": [
+      "develop",
+      "ability",
+      "available",
+      "curious"
+    ],
+    "correct": "available",
+    "explanation": "available = əlçatan, mövcud",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2513,
+    "type": "matching",
+    "question": "«available» — düzgün mənasını seç:",
+    "options": [
+      "Normal; not special.",
+      "Able to be used or got.",
+      "Sure; without doubt.",
+      "To say that something is true, often unwillingly."
+    ],
+    "correct": "Able to be used or got.",
+    "explanation": "available = əlçatan, mövcud",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2514,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«available» = \"The money you are paid for your job.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. available = əlçatan, mövcud",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2515,
+    "type": "definition",
+    "question": "Simple and most important.",
+    "options": [
+      "basic",
+      "prevent",
+      "climate",
+      "education"
+    ],
+    "correct": "basic",
+    "explanation": "basic = əsas, sadə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2516,
+    "type": "gap-fill",
+    "question": "I know —————— English.",
+    "options": [
+      "abroad",
+      "afraid",
+      "basic",
+      "achieve"
+    ],
+    "correct": "basic",
+    "explanation": "basic = əsas, sadə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2517,
+    "type": "matching",
+    "question": "«basic» — düzgün mənasını seç:",
+    "options": [
+      "A person who controls a business or team.",
+      "Simple and most important.",
+      "To keep away from something.",
+      "Very good; of high quality."
+    ],
+    "correct": "Simple and most important.",
+    "explanation": "basic = əsas, sadə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2518,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«basic» = \"Simple and most important.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. basic = əsas, sadə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2519,
+    "type": "definition",
+    "question": "Not afraid of danger.",
+    "options": [
+      "avoid",
+      "opinion",
+      "brave",
+      "company"
+    ],
+    "correct": "brave",
+    "explanation": "brave = cəsur",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2520,
+    "type": "gap-fill",
+    "question": "He is a —————— soldier.",
+    "options": [
+      "improve",
+      "brave",
+      "amount",
+      "describe"
+    ],
+    "correct": "brave",
+    "explanation": "brave = cəsur",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2521,
+    "type": "matching",
+    "question": "«brave» — düzgün mənasını seç:",
+    "options": [
+      "Not afraid of danger.",
+      "Having good manners.",
+      "Pleased about something you did.",
+      "A thing that shows what others are like."
+    ],
+    "correct": "Not afraid of danger.",
+    "explanation": "brave = cəsur",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2522,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«brave» = \"The way two things are not the same.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. brave = cəsur",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2523,
+    "type": "definition",
+    "question": "Quiet and not worried.",
+    "options": [
+      "ability",
+      "abroad",
+      "calm",
+      "curious"
+    ],
+    "correct": "calm",
+    "explanation": "calm = sakit",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2524,
+    "type": "gap-fill",
+    "question": "Stay ——————, please.",
+    "options": [
+      "promise",
+      "calm",
+      "brain",
+      "education"
+    ],
+    "correct": "calm",
+    "explanation": "calm = sakit",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2525,
+    "type": "matching",
+    "question": "«calm» — düzgün mənasını seç:",
+    "options": [
+      "When people have the same opinion or a deal.",
+      "Quiet and not worried.",
+      "Happening quickly and unexpectedly.",
+      "The act of choosing between things."
+    ],
+    "correct": "Quiet and not worried.",
+    "explanation": "calm = sakit",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2526,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«calm» = \"Quiet and not worried.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. calm = sakit",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2527,
+    "type": "definition",
+    "question": "Sure; without doubt.",
+    "options": [
+      "sudden",
+      "certain",
+      "distance",
+      "region"
+    ],
+    "correct": "certain",
+    "explanation": "certain = əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2528,
+    "type": "gap-fill",
+    "question": "I am —————— about this.",
+    "options": [
+      "consider",
+      "certain",
+      "excellent",
+      "detail"
+    ],
+    "correct": "certain",
+    "explanation": "certain = əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2529,
+    "type": "matching",
+    "question": "«certain» — düzgün mənasını seç:",
+    "options": [
+      "Hard work to do something.",
+      "To take something and return it later.",
+      "Sure; without doubt.",
+      "To give someone hope or confidence."
+    ],
+    "correct": "Sure; without doubt.",
+    "explanation": "certain = əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2530,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«certain» = \"A large area covered with trees.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. certain = əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2531,
+    "type": "definition",
+    "question": "Sure of yourself and your abilities.",
+    "options": [
+      "confident",
+      "manage",
+      "realize",
+      "accept"
+    ],
+    "correct": "confident",
+    "explanation": "confident = özünə əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2532,
+    "type": "gap-fill",
+    "question": "She is —————— on stage.",
+    "options": [
+      "skill",
+      "ability",
+      "confident",
+      "ordinary"
+    ],
+    "correct": "confident",
+    "explanation": "confident = özünə əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2533,
+    "type": "matching",
+    "question": "«confident» — düzgün mənasını seç:",
+    "options": [
+      "Sure of yourself and your abilities.",
+      "The red liquid in your body.",
+      "A thought or plan in your mind.",
+      "A very large area of sea."
+    ],
+    "correct": "Sure of yourself and your abilities.",
+    "explanation": "confident = özünə əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2534,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«confident» = \"Sure of yourself and your abilities.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. confident = özünə əmin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2535,
+    "type": "definition",
+    "question": "Wanting to know or learn something.",
+    "options": [
+      "discover",
+      "journey",
+      "curious",
+      "notice"
+    ],
+    "correct": "curious",
+    "explanation": "curious = maraqlanan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2536,
+    "type": "gap-fill",
+    "question": "Children are naturally ——————.",
+    "options": [
+      "skill",
+      "knowledge",
+      "curious",
+      "region"
+    ],
+    "correct": "curious",
+    "explanation": "curious = maraqlanan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2537,
+    "type": "matching",
+    "question": "«curious» — düzgün mənasını seç:",
+    "options": [
+      "To offer an idea or plan.",
+      "To say what someone or something is like.",
+      "To take something and return it later.",
+      "Wanting to know or learn something."
+    ],
+    "correct": "Wanting to know or learn something.",
+    "explanation": "curious = maraqlanan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2538,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«curious» = \"Something that helps you or is useful.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. curious = maraqlanan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2539,
+    "type": "definition",
+    "question": "Very big.",
+    "options": [
+      "confident",
+      "calm",
+      "border",
+      "enormous"
+    ],
+    "correct": "enormous",
+    "explanation": "enormous = nəhəng",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2540,
+    "type": "gap-fill",
+    "question": "They live in an —————— house.",
+    "options": [
+      "belong",
+      "habit",
+      "enormous",
+      "detail"
+    ],
+    "correct": "enormous",
+    "explanation": "enormous = nəhəng",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2541,
+    "type": "matching",
+    "question": "«enormous» — düzgün mənasını seç:",
+    "options": [
+      "Very big.",
+      "The fact that someone is able to do something.",
+      "A large round object in space, like Earth.",
+      "The amount of space between two places."
+    ],
+    "correct": "Very big.",
+    "explanation": "enormous = nəhəng",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2542,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«enormous» = \"Very big.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. enormous = nəhəng",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2543,
+    "type": "definition",
+    "question": "Very good; of high quality.",
+    "options": [
+      "borrow",
+      "excellent",
+      "health",
+      "serious"
+    ],
+    "correct": "excellent",
+    "explanation": "excellent = əla",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2544,
+    "type": "gap-fill",
+    "question": "Your work is ——————.",
+    "options": [
+      "advantage",
+      "continue",
+      "notice",
+      "excellent"
+    ],
+    "correct": "excellent",
+    "explanation": "excellent = əla",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2545,
+    "type": "matching",
+    "question": "«excellent» — düzgün mənasını seç:",
+    "options": [
+      "Almost the same.",
+      "The amount of space between two places.",
+      "Very good; of high quality.",
+      "Very big."
+    ],
+    "correct": "Very good; of high quality.",
+    "explanation": "excellent = əla",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2546,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«excellent» = \"Something that helps you or is useful.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. excellent = əla",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2547,
+    "type": "definition",
+    "question": "Known to you; not strange.",
+    "options": [
+      "familiar",
+      "recommend",
+      "health",
+      "realize"
+    ],
+    "correct": "familiar",
+    "explanation": "familiar = tanış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2548,
+    "type": "gap-fill",
+    "question": "Her face is ——————.",
+    "options": [
+      "familiar",
+      "describe",
+      "decision",
+      "idea"
+    ],
+    "correct": "familiar",
+    "explanation": "familiar = tanış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2549,
+    "type": "matching",
+    "question": "«familiar» — düzgün mənasını seç:",
+    "options": [
+      "A large area covered with trees.",
+      "To grow or make something better.",
+      "Extremely large.",
+      "Known to you; not strange."
+    ],
+    "correct": "Known to you; not strange.",
+    "explanation": "familiar = tanış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2550,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«familiar» = \"Known to you; not strange.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. familiar = tanış",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2551,
+    "type": "definition",
+    "question": "From another country.",
+    "options": [
+      "skin",
+      "manager",
+      "company",
+      "foreign"
+    ],
+    "correct": "foreign",
+    "explanation": "foreign = xarici",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2552,
+    "type": "gap-fill",
+    "question": "I am learning a —————— language.",
+    "options": [
+      "mistake",
+      "energy",
+      "sudden",
+      "foreign"
+    ],
+    "correct": "foreign",
+    "explanation": "foreign = xarici",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2553,
+    "type": "matching",
+    "question": "«foreign» — düzgün mənasını seç:",
+    "options": [
+      "To plan or organize something.",
+      "To say you are not happy about something.",
+      "From another country.",
+      "How much there is of something."
+    ],
+    "correct": "From another country.",
+    "explanation": "foreign = xarici",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2554,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«foreign» = \"To understand something clearly.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. foreign = xarici",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2555,
+    "type": "definition",
+    "question": "Telling the truth; not lying.",
+    "options": [
+      "degree",
+      "afraid",
+      "borrow",
+      "honest"
+    ],
+    "correct": "honest",
+    "explanation": "honest = dürüst",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2556,
+    "type": "gap-fill",
+    "question": "He is an —————— man.",
+    "options": [
+      "honest",
+      "effect",
+      "degree",
+      "similar"
+    ],
+    "correct": "honest",
+    "explanation": "honest = dürüst",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2557,
+    "type": "matching",
+    "question": "«honest» — düzgün mənasını seç:",
+    "options": [
+      "An opinion about what someone should do.",
+      "A helpful or good effect.",
+      "Telling the truth; not lying.",
+      "To give someone hope or confidence."
+    ],
+    "correct": "Telling the truth; not lying.",
+    "explanation": "honest = dürüst",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2558,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«honest» = \"Telling the truth; not lying.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. honest = dürüst",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2559,
+    "type": "definition",
+    "question": "Extremely large.",
+    "options": [
+      "improve",
+      "expect",
+      "huge",
+      "develop"
+    ],
+    "correct": "huge",
+    "explanation": "huge = nəhəng, böyük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2560,
+    "type": "gap-fill",
+    "question": "There was a —————— crowd.",
+    "options": [
+      "allow",
+      "business",
+      "huge",
+      "certain"
+    ],
+    "correct": "huge",
+    "explanation": "huge = nəhəng, böyük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2561,
+    "type": "matching",
+    "question": "«huge» — düzgün mənasını seç:",
+    "options": [
+      "Known to you; not strange.",
+      "Something you do often, almost without thinking.",
+      "To become larger in number or size.",
+      "Extremely large."
+    ],
+    "correct": "Extremely large.",
+    "explanation": "huge = nəhəng, böyük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2562,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«huge» = \"The information and understanding you have.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. huge = nəhəng, böyük",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2563,
+    "type": "definition",
+    "question": "Normal; not special.",
+    "options": [
+      "company",
+      "proud",
+      "ordinary",
+      "chance"
+    ],
+    "correct": "ordinary",
+    "explanation": "ordinary = adi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2564,
+    "type": "gap-fill",
+    "question": "It was an —————— day.",
+    "options": [
+      "serious",
+      "ordinary",
+      "excellent",
+      "opportunity"
+    ],
+    "correct": "ordinary",
+    "explanation": "ordinary = adi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2565,
+    "type": "matching",
+    "question": "«ordinary» — düzgün mənasını seç:",
+    "options": [
+      "Normal; not special.",
+      "To plan or organize something.",
+      "When people have the same opinion or a deal.",
+      "To keep doing something."
+    ],
+    "correct": "Normal; not special.",
+    "explanation": "ordinary = adi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2566,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ordinary» = \"Normal; not special.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. ordinary = adi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2567,
+    "type": "definition",
+    "question": "Having good manners.",
+    "options": [
+      "polite",
+      "foreign",
+      "career",
+      "energy"
+    ],
+    "correct": "polite",
+    "explanation": "polite = nəzakətli",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2568,
+    "type": "gap-fill",
+    "question": "Please be ——————.",
+    "options": [
+      "agreement",
+      "polite",
+      "borrow",
+      "develop"
+    ],
+    "correct": "polite",
+    "explanation": "polite = nəzakətli",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2569,
+    "type": "matching",
+    "question": "«polite» — düzgün mənasını seç:",
+    "options": [
+      "To think carefully about something.",
+      "To make people know each other for the first time.",
+      "The activity of buying and selling; a company.",
+      "Having good manners."
+    ],
+    "correct": "Having good manners.",
+    "explanation": "polite = nəzakətli",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2570,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«polite» = \"A qualification from a university.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. polite = nəzakətli",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2571,
+    "type": "definition",
+    "question": "Pleased about something you did.",
+    "options": [
+      "mistake",
+      "proud",
+      "protect",
+      "prevent"
+    ],
+    "correct": "proud",
+    "explanation": "proud = qürurlu",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2572,
+    "type": "gap-fill",
+    "question": "I am —————— of you.",
+    "options": [
+      "difference",
+      "attend",
+      "proud",
+      "basic"
+    ],
+    "correct": "proud",
+    "explanation": "proud = qürurlu",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2573,
+    "type": "matching",
+    "question": "«proud» — düzgün mənasını seç:",
+    "options": [
+      "Very big.",
+      "A possibility that something will happen.",
+      "Pleased about something you did.",
+      "Simple and most important."
+    ],
+    "correct": "Pleased about something you did.",
+    "explanation": "proud = qürurlu",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2574,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«proud» = \"Pleased about something you did.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. proud = qürurlu",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2575,
+    "type": "definition",
+    "question": "Important; not joking.",
+    "options": [
+      "achieve",
+      "advice",
+      "serious",
+      "fact"
+    ],
+    "correct": "serious",
+    "explanation": "serious = ciddi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2576,
+    "type": "gap-fill",
+    "question": "This is a —————— problem.",
+    "options": [
+      "serious",
+      "career",
+      "expect",
+      "blood"
+    ],
+    "correct": "serious",
+    "explanation": "serious = ciddi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2577,
+    "type": "matching",
+    "question": "«serious» — düzgün mənasını seç:",
+    "options": [
+      "To keep doing something.",
+      "Important; not joking.",
+      "The fact that someone is able to do something.",
+      "A choice that you make after thinking."
+    ],
+    "correct": "Important; not joking.",
+    "explanation": "serious = ciddi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2578,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«serious» = \"Something done wrong; an error.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. serious = ciddi",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2579,
+    "type": "definition",
+    "question": "Almost the same.",
+    "options": [
+      "effort",
+      "prevent",
+      "similar",
+      "benefit"
+    ],
+    "correct": "similar",
+    "explanation": "similar = oxşar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2580,
+    "type": "gap-fill",
+    "question": "Our ideas are ——————.",
+    "options": [
+      "planet",
+      "idea",
+      "brain",
+      "similar"
+    ],
+    "correct": "similar",
+    "explanation": "similar = oxşar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2581,
+    "type": "matching",
+    "question": "«similar» — düzgün mənasını seç:",
+    "options": [
+      "Almost the same.",
+      "To stop something from happening.",
+      "Something you do often, almost without thinking.",
+      "To think that something will happen."
+    ],
+    "correct": "Almost the same.",
+    "explanation": "similar = oxşar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2582,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«similar» = \"Almost the same.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. similar = oxşar",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2583,
+    "type": "definition",
+    "question": "Happening quickly and unexpectedly.",
+    "options": [
+      "chance",
+      "sudden",
+      "fact",
+      "salary"
+    ],
+    "correct": "sudden",
+    "explanation": "sudden = qəfil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2584,
+    "type": "gap-fill",
+    "question": "There was a —————— noise.",
+    "options": [
+      "sudden",
+      "forest",
+      "belong",
+      "choice"
+    ],
+    "correct": "sudden",
+    "explanation": "sudden = qəfil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2585,
+    "type": "matching",
+    "question": "«sudden» — düzgün mənasını seç:",
+    "options": [
+      "The usual weather of a place.",
+      "A choice that you make after thinking.",
+      "Happening quickly and unexpectedly.",
+      "Feeling fear; worried."
+    ],
+    "correct": "Happening quickly and unexpectedly.",
+    "explanation": "sudden = qəfil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2586,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«sudden» = \"Quiet and not worried.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. sudden = qəfil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Describing Words"
+  },
+  {
+    "id": 2587,
+    "type": "definition",
+    "question": "The activity of buying and selling; a company.",
+    "options": [
+      "business",
+      "recommend",
+      "opportunity",
+      "realize"
+    ],
+    "correct": "business",
+    "explanation": "business = biznes",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2588,
+    "type": "gap-fill",
+    "question": "He runs a small ——————.",
+    "options": [
+      "abroad",
+      "business",
+      "certain",
+      "border"
+    ],
+    "correct": "business",
+    "explanation": "business = biznes",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2589,
+    "type": "matching",
+    "question": "«business» — düzgün mənasını seç:",
+    "options": [
+      "The money you are paid for your job.",
+      "To make people know each other for the first time.",
+      "A helpful or good effect.",
+      "The activity of buying and selling; a company."
+    ],
+    "correct": "The activity of buying and selling; a company.",
+    "explanation": "business = biznes",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2590,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«business» = \"The activity of buying and selling; a company.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. business = biznes",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2591,
+    "type": "definition",
+    "question": "The jobs you do in your working life.",
+    "options": [
+      "career",
+      "familiar",
+      "describe",
+      "polite"
+    ],
+    "correct": "career",
+    "explanation": "career = karyera",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2592,
+    "type": "gap-fill",
+    "question": "She has a successful ——————.",
+    "options": [
+      "disease",
+      "allow",
+      "blood",
+      "career"
+    ],
+    "correct": "career",
+    "explanation": "career = karyera",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2593,
+    "type": "matching",
+    "question": "«career» — düzgün mənasını seç:",
+    "options": [
+      "How much there is of something.",
+      "Knowledge or skill from doing something.",
+      "The jobs you do in your working life.",
+      "Sure; without doubt."
+    ],
+    "correct": "The jobs you do in your working life.",
+    "explanation": "career = karyera",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2594,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«career» = \"A thought or plan in your mind.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. career = karyera",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2595,
+    "type": "definition",
+    "question": "An organisation that sells things or services.",
+    "options": [
+      "fact",
+      "career",
+      "company",
+      "forest"
+    ],
+    "correct": "company",
+    "explanation": "company = şirkət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2596,
+    "type": "gap-fill",
+    "question": "I work for a big ——————.",
+    "options": [
+      "company",
+      "allow",
+      "polite",
+      "basic"
+    ],
+    "correct": "company",
+    "explanation": "company = şirkət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2597,
+    "type": "matching",
+    "question": "«company» — düzgün mənasını seç:",
+    "options": [
+      "Having good manners.",
+      "Simple and most important.",
+      "An organisation that sells things or services.",
+      "To succeed in doing something difficult; to control."
+    ],
+    "correct": "An organisation that sells things or services.",
+    "explanation": "company = şirkət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2598,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«company» = \"An organisation that sells things or services.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. company = şirkət",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2599,
+    "type": "definition",
+    "question": "A qualification from a university.",
+    "options": [
+      "climate",
+      "education",
+      "effect",
+      "degree"
+    ],
+    "correct": "degree",
+    "explanation": "degree = diplom, dərəcə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2600,
+    "type": "gap-fill",
+    "question": "He has a —————— in law.",
+    "options": [
+      "confident",
+      "degree",
+      "avoid",
+      "agreement"
+    ],
+    "correct": "degree",
+    "explanation": "degree = diplom, dərəcə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2601,
+    "type": "matching",
+    "question": "«degree» — düzgün mənasını seç:",
+    "options": [
+      "Hard work to do something.",
+      "An illness.",
+      "A qualification from a university.",
+      "Sure of yourself and your abilities."
+    ],
+    "correct": "A qualification from a university.",
+    "explanation": "degree = diplom, dərəcə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2602,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«degree» = \"Physical activity to stay healthy.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. degree = diplom, dərəcə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2603,
+    "type": "definition",
+    "question": "The process of teaching and learning.",
+    "options": [
+      "certain",
+      "expect",
+      "education",
+      "ability"
+    ],
+    "correct": "education",
+    "explanation": "education = təhsil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2604,
+    "type": "gap-fill",
+    "question": "—————— is very important.",
+    "options": [
+      "knowledge",
+      "manager",
+      "education",
+      "example"
+    ],
+    "correct": "education",
+    "explanation": "education = təhsil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2605,
+    "type": "matching",
+    "question": "«education» — düzgün mənasını seç:",
+    "options": [
+      "The process of teaching and learning.",
+      "The usual weather of a place.",
+      "To grow or make something better.",
+      "A possibility that something will happen."
+    ],
+    "correct": "The process of teaching and learning.",
+    "explanation": "education = təhsil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2606,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«education» = \"The process of teaching and learning.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. education = təhsil",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2607,
+    "type": "definition",
+    "question": "A person who controls a business or team.",
+    "options": [
+      "planet",
+      "belong",
+      "manager",
+      "complain"
+    ],
+    "correct": "manager",
+    "explanation": "manager = menecer",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2608,
+    "type": "gap-fill",
+    "question": "The —————— is in a meeting.",
+    "options": [
+      "benefit",
+      "manager",
+      "afraid",
+      "journey"
+    ],
+    "correct": "manager",
+    "explanation": "manager = menecer",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2609,
+    "type": "matching",
+    "question": "«manager» — düzgün mənasını seç:",
+    "options": [
+      "A person who controls a business or team.",
+      "A choice that you make after thinking.",
+      "Something done wrong; an error.",
+      "To get better or make better."
+    ],
+    "correct": "A person who controls a business or team.",
+    "explanation": "manager = menecer",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2610,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«manager» = \"A possibility that something will happen.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. manager = menecer",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2611,
+    "type": "definition",
+    "question": "The money you are paid for your job.",
+    "options": [
+      "accept",
+      "manage",
+      "salary",
+      "admit"
+    ],
+    "correct": "salary",
+    "explanation": "salary = maaş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2612,
+    "type": "gap-fill",
+    "question": "He earns a good ——————.",
+    "options": [
+      "earth",
+      "sudden",
+      "salary",
+      "basic"
+    ],
+    "correct": "salary",
+    "explanation": "salary = maaş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2613,
+    "type": "matching",
+    "question": "«salary» — düzgün mənasını seç:",
+    "options": [
+      "The money you are paid for your job.",
+      "Able to be used or got.",
+      "To offer an idea or plan.",
+      "To agree to take or receive something."
+    ],
+    "correct": "The money you are paid for your job.",
+    "explanation": "salary = maaş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2614,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«salary» = \"The money you are paid for your job.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. salary = maaş",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2615,
+    "type": "definition",
+    "question": "An ability to do something well.",
+    "options": [
+      "effort",
+      "skill",
+      "behaviour",
+      "earth"
+    ],
+    "correct": "skill",
+    "explanation": "skill = bacarıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2616,
+    "type": "gap-fill",
+    "question": "Cooking is a useful ——————.",
+    "options": [
+      "blood",
+      "skill",
+      "opportunity",
+      "business"
+    ],
+    "correct": "skill",
+    "explanation": "skill = bacarıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2617,
+    "type": "matching",
+    "question": "«skill» — düzgün mənasını seç:",
+    "options": [
+      "To say something is good and worth doing.",
+      "An ability to do something well.",
+      "Quiet and not worried.",
+      "Having good manners."
+    ],
+    "correct": "An ability to do something well.",
+    "explanation": "skill = bacarıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2618,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«skill» = \"To grow or make something better.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. skill = bacarıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Work & School"
+  },
+  {
+    "id": 2619,
+    "type": "definition",
+    "question": "In or to a foreign country.",
+    "options": [
+      "honest",
+      "notice",
+      "abroad",
+      "idea"
+    ],
+    "correct": "abroad",
+    "explanation": "abroad = xaricdə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2620,
+    "type": "gap-fill",
+    "question": "I want to study ——————.",
+    "options": [
+      "ability",
+      "honest",
+      "benefit",
+      "abroad"
+    ],
+    "correct": "abroad",
+    "explanation": "abroad = xaricdə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2621,
+    "type": "matching",
+    "question": "«abroad» — düzgün mənasını seç:",
+    "options": [
+      "In or to a foreign country.",
+      "Feeling fear; worried.",
+      "Hard work to do something.",
+      "Quiet and not worried."
+    ],
+    "correct": "In or to a foreign country.",
+    "explanation": "abroad = xaricdə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2622,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«abroad» = \"In or to a foreign country.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. abroad = xaricdə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2623,
+    "type": "definition",
+    "question": "The line between two countries.",
+    "options": [
+      "border",
+      "arrange",
+      "suggest",
+      "confident"
+    ],
+    "correct": "border",
+    "explanation": "border = sərhəd",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2624,
+    "type": "gap-fill",
+    "question": "We crossed the ——————.",
+    "options": [
+      "example",
+      "border",
+      "idea",
+      "knowledge"
+    ],
+    "correct": "border",
+    "explanation": "border = sərhəd",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2625,
+    "type": "matching",
+    "question": "«border» — düzgün mənasını seç:",
+    "options": [
+      "To keep doing something.",
+      "A very large area of sea.",
+      "The line between two countries.",
+      "Very big."
+    ],
+    "correct": "The line between two countries.",
+    "explanation": "border = sərhəd",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2626,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«border» = \"A large round object in space, like Earth.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. border = sərhəd",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2627,
+    "type": "definition",
+    "question": "The amount of space between two places.",
+    "options": [
+      "huge",
+      "notice",
+      "mistake",
+      "distance"
+    ],
+    "correct": "distance",
+    "explanation": "distance = məsafə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2628,
+    "type": "gap-fill",
+    "question": "The —————— is ten kilometres.",
+    "options": [
+      "notice",
+      "distance",
+      "confident",
+      "serious"
+    ],
+    "correct": "distance",
+    "explanation": "distance = məsafə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2629,
+    "type": "matching",
+    "question": "«distance» — düzgün mənasını seç:",
+    "options": [
+      "A person who controls a business or team.",
+      "The amount of space between two places.",
+      "To be owned by someone.",
+      "From another country."
+    ],
+    "correct": "The amount of space between two places.",
+    "explanation": "distance = məsafə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2630,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«distance» = \"The amount of space between two places.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. distance = məsafə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2631,
+    "type": "definition",
+    "question": "An act of travelling from one place to another.",
+    "options": [
+      "sudden",
+      "energy",
+      "journey",
+      "manage"
+    ],
+    "correct": "journey",
+    "explanation": "journey = səyahət, yol",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2632,
+    "type": "gap-fill",
+    "question": "It was a long ——————.",
+    "options": [
+      "attend",
+      "brain",
+      "journey",
+      "sudden"
+    ],
+    "correct": "journey",
+    "explanation": "journey = səyahət, yol",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2633,
+    "type": "matching",
+    "question": "«journey» — düzgün mənasını seç:",
+    "options": [
+      "The usual weather of a place.",
+      "The money you are paid for your job.",
+      "To let someone do something.",
+      "An act of travelling from one place to another."
+    ],
+    "correct": "An act of travelling from one place to another.",
+    "explanation": "journey = səyahət, yol",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2634,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«journey» = \"To say you are not happy about something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. journey = səyahət, yol",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2635,
+    "type": "definition",
+    "question": "A part of a country or the world.",
+    "options": [
+      "border",
+      "region",
+      "available",
+      "protect"
+    ],
+    "correct": "region",
+    "explanation": "region = bölgə, region",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2636,
+    "type": "gap-fill",
+    "question": "It is a beautiful ——————.",
+    "options": [
+      "avoid",
+      "ocean",
+      "region",
+      "energy"
+    ],
+    "correct": "region",
+    "explanation": "region = bölgə, region",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2637,
+    "type": "matching",
+    "question": "«region» — düzgün mənasını seç:",
+    "options": [
+      "The usual weather of a place.",
+      "Physical activity to stay healthy.",
+      "A part of a country or the world.",
+      "A choice that you make after thinking."
+    ],
+    "correct": "A part of a country or the world.",
+    "explanation": "region = bölgə, region",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2638,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«region» = \"A part of a country or the world.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. region = bölgə, region",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Travel & Places"
+  },
+  {
+    "id": 2639,
+    "type": "definition",
+    "question": "The red liquid in your body.",
+    "options": [
+      "forest",
+      "proud",
+      "blood",
+      "serious"
+    ],
+    "correct": "blood",
+    "explanation": "blood = qan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2640,
+    "type": "gap-fill",
+    "question": "He lost a lot of ——————.",
+    "options": [
+      "detail",
+      "proud",
+      "blood",
+      "behaviour"
+    ],
+    "correct": "blood",
+    "explanation": "blood = qan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2641,
+    "type": "matching",
+    "question": "«blood» — düzgün mənasını seç:",
+    "options": [
+      "To make people know each other for the first time.",
+      "Something that helps you or is useful.",
+      "The red liquid in your body.",
+      "Simple and most important."
+    ],
+    "correct": "The red liquid in your body.",
+    "explanation": "blood = qan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2642,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«blood» = \"To keep someone or something safe.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. blood = qan",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2643,
+    "type": "definition",
+    "question": "The organ in your head that you think with.",
+    "options": [
+      "brain",
+      "basic",
+      "allow",
+      "curious"
+    ],
+    "correct": "brain",
+    "explanation": "brain = beyin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2644,
+    "type": "gap-fill",
+    "question": "The —————— controls the body.",
+    "options": [
+      "idea",
+      "brain",
+      "experience",
+      "education"
+    ],
+    "correct": "brain",
+    "explanation": "brain = beyin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2645,
+    "type": "matching",
+    "question": "«brain» — düzgün mənasını seç:",
+    "options": [
+      "The organ in your head that you think with.",
+      "The process of teaching and learning.",
+      "To make people know each other for the first time.",
+      "Happening quickly and unexpectedly."
+    ],
+    "correct": "The organ in your head that you think with.",
+    "explanation": "brain = beyin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2646,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«brain» = \"The organ in your head that you think with.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. brain = beyin",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2647,
+    "type": "definition",
+    "question": "An illness.",
+    "options": [
+      "avoid",
+      "sudden",
+      "disease",
+      "discover"
+    ],
+    "correct": "disease",
+    "explanation": "disease = xəstəlik",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2648,
+    "type": "matching",
+    "question": "«disease» — düzgün mənasını seç:",
+    "options": [
+      "The outer layer of your body.",
+      "To plan or organize something.",
+      "An illness.",
+      "The way two things are not the same."
+    ],
+    "correct": "An illness.",
+    "explanation": "disease = xəstəlik",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2649,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«disease» = \"A very large area of sea.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. disease = xəstəlik",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2650,
+    "type": "definition",
+    "question": "Physical activity to stay healthy.",
+    "options": [
+      "forest",
+      "effort",
+      "enormous",
+      "exercise"
+    ],
+    "correct": "exercise",
+    "explanation": "exercise = məşq, idman",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2651,
+    "type": "gap-fill",
+    "question": "I do —————— every day.",
+    "options": [
+      "effect",
+      "exercise",
+      "complain",
+      "suggest"
+    ],
+    "correct": "exercise",
+    "explanation": "exercise = məşq, idman",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2652,
+    "type": "matching",
+    "question": "«exercise» — düzgün mənasını seç:",
+    "options": [
+      "Physical activity to stay healthy.",
+      "The way a person acts.",
+      "A chance to do something good.",
+      "A very large area of sea."
+    ],
+    "correct": "Physical activity to stay healthy.",
+    "explanation": "exercise = məşq, idman",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2653,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«exercise» = \"Physical activity to stay healthy.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. exercise = məşq, idman",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2654,
+    "type": "definition",
+    "question": "The condition of your body.",
+    "options": [
+      "opportunity",
+      "health",
+      "manager",
+      "climate"
+    ],
+    "correct": "health",
+    "explanation": "health = sağlamlıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2655,
+    "type": "gap-fill",
+    "question": "—————— is more important than money.",
+    "options": [
+      "health",
+      "business",
+      "certain",
+      "difference"
+    ],
+    "correct": "health",
+    "explanation": "health = sağlamlıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2656,
+    "type": "matching",
+    "question": "«health» — düzgün mənasını seç:",
+    "options": [
+      "The way a person acts.",
+      "To make people know each other for the first time.",
+      "The condition of your body.",
+      "To see or become aware of something."
+    ],
+    "correct": "The condition of your body.",
+    "explanation": "health = sağlamlıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2657,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«health» = \"Not afraid of danger.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. health = sağlamlıq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2658,
+    "type": "definition",
+    "question": "The outer layer of your body.",
+    "options": [
+      "accept",
+      "salary",
+      "skill",
+      "skin"
+    ],
+    "correct": "skin",
+    "explanation": "skin = dəri",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2659,
+    "type": "gap-fill",
+    "question": "Protect your —————— from the sun.",
+    "options": [
+      "introduce",
+      "available",
+      "allow",
+      "skin"
+    ],
+    "correct": "skin",
+    "explanation": "skin = dəri",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2660,
+    "type": "matching",
+    "question": "«skin» — düzgün mənasını seç:",
+    "options": [
+      "Sure of yourself and your abilities.",
+      "To think that something will happen.",
+      "The outer layer of your body.",
+      "Almost the same."
+    ],
+    "correct": "The outer layer of your body.",
+    "explanation": "skin = dəri",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2661,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«skin» = \"The outer layer of your body.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. skin = dəri",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Health & Body"
+  },
+  {
+    "id": 2662,
+    "type": "definition",
+    "question": "The usual weather of a place.",
+    "options": [
+      "enormous",
+      "opportunity",
+      "climate",
+      "sudden"
+    ],
+    "correct": "climate",
+    "explanation": "climate = iqlim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2663,
+    "type": "gap-fill",
+    "question": "The —————— here is warm.",
+    "options": [
+      "manager",
+      "continue",
+      "climate",
+      "manage"
+    ],
+    "correct": "climate",
+    "explanation": "climate = iqlim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2664,
+    "type": "matching",
+    "question": "«climate» — düzgün mənasını seç:",
+    "options": [
+      "A thing that shows what others are like.",
+      "To think that something will happen.",
+      "Something done wrong; an error.",
+      "The usual weather of a place."
+    ],
+    "correct": "The usual weather of a place.",
+    "explanation": "climate = iqlim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2665,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«climate» = \"From another country.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. climate = iqlim",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2666,
+    "type": "definition",
+    "question": "The planet we live on; the ground.",
+    "options": [
+      "exercise",
+      "certain",
+      "border",
+      "earth"
+    ],
+    "correct": "earth",
+    "explanation": "earth = Yer (planet), torpaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2667,
+    "type": "gap-fill",
+    "question": "The —————— goes around the Sun.",
+    "options": [
+      "suggest",
+      "attend",
+      "earth",
+      "detail"
+    ],
+    "correct": "earth",
+    "explanation": "earth = Yer (planet), torpaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2668,
+    "type": "matching",
+    "question": "«earth» — düzgün mənasını seç:",
+    "options": [
+      "The condition of your body.",
+      "Knowledge or skill from doing something.",
+      "A qualification from a university.",
+      "The planet we live on; the ground."
+    ],
+    "correct": "The planet we live on; the ground.",
+    "explanation": "earth = Yer (planet), torpaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2669,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«earth» = \"The planet we live on; the ground.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. earth = Yer (planet), torpaq",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2670,
+    "type": "definition",
+    "question": "A large area covered with trees.",
+    "options": [
+      "education",
+      "forest",
+      "attend",
+      "advice"
+    ],
+    "correct": "forest",
+    "explanation": "forest = meşə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2671,
+    "type": "gap-fill",
+    "question": "Many animals live in the ——————.",
+    "options": [
+      "serious",
+      "fact",
+      "forest",
+      "proud"
+    ],
+    "correct": "forest",
+    "explanation": "forest = meşə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2672,
+    "type": "matching",
+    "question": "«forest» — düzgün mənasını seç:",
+    "options": [
+      "To go to an event, like a class.",
+      "Something you do often, almost without thinking.",
+      "The way a person acts.",
+      "A large area covered with trees."
+    ],
+    "correct": "A large area covered with trees.",
+    "explanation": "forest = meşə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2673,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«forest» = \"To see or become aware of something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. forest = meşə",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2674,
+    "type": "definition",
+    "question": "A very large area of sea.",
+    "options": [
+      "accept",
+      "ocean",
+      "brave",
+      "develop"
+    ],
+    "correct": "ocean",
+    "explanation": "ocean = okean",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2675,
+    "type": "gap-fill",
+    "question": "The —————— is deep.",
+    "options": [
+      "polite",
+      "ocean",
+      "protect",
+      "climate"
+    ],
+    "correct": "ocean",
+    "explanation": "ocean = okean",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2676,
+    "type": "matching",
+    "question": "«ocean» — düzgün mənasını seç:",
+    "options": [
+      "The condition of your body.",
+      "A very large area of sea.",
+      "A choice that you make after thinking.",
+      "To say that something is true, often unwillingly."
+    ],
+    "correct": "A very large area of sea.",
+    "explanation": "ocean = okean",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2677,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ocean» = \"A very large area of sea.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. ocean = okean",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2678,
+    "type": "definition",
+    "question": "A large round object in space, like Earth.",
+    "options": [
+      "effect",
+      "behaviour",
+      "prevent",
+      "planet"
+    ],
+    "correct": "planet",
+    "explanation": "planet = planet",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2679,
+    "type": "gap-fill",
+    "question": "Earth is our ——————.",
+    "options": [
+      "planet",
+      "energy",
+      "ability",
+      "sudden"
+    ],
+    "correct": "planet",
+    "explanation": "planet = planet",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2680,
+    "type": "matching",
+    "question": "«planet» — düzgün mənasını seç:",
+    "options": [
+      "To keep doing something.",
+      "An act of travelling from one place to another.",
+      "A large round object in space, like Earth.",
+      "Known to you; not strange."
+    ],
+    "correct": "A large round object in space, like Earth.",
+    "explanation": "planet = planet",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
+  },
+  {
+    "id": 2681,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«planet» = \"Telling the truth; not lying.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. planet = planet",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Nature & Weather"
   }
 ]
