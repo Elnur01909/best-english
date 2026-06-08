@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import BattleChallengePopup from '@/components/BattleChallengePopup'
 
 export const metadata: Metadata = {
   title: 'Best English — TOLES Hazırlıq Platforması',
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="az">
       <body className="min-h-screen bg-gray-50 dark:bg-gray-950">
         {children}
+        <BattleChallengePopup />
       </body>
     </html>
   )
