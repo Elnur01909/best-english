@@ -58,6 +58,22 @@ Hər sual üçün 30 saniyə vaxt verilir:
 
 → Ətraflı: [[Bug-Jurnalı]]
 
+## 🐛 Tapılan və Düzəldilən Bug — Realtime Kanal Toqquşması (səhifə tamamilə çökürdü)
+**Simptom:** `BattleChallengePopup` əlavə edildikdən dərhal sonra, `/friends` səhifəsi açılan kimi **"Application error: a client-side exception has occurred"** xətası ilə tam çökürdü (boş ağ ekran).
+
+**Kök səbəb (browser console-dan tapıldı):**
+```
+Error: cannot add `postgres_changes` callbacks for realtime:incoming-battles:<userId>
+after `subscribe()`.
+```
+Həm qlobal `BattleChallengePopup` (bütün saytı əhatə edir), həm də `/friends` səhifəsi **eyni anda, eyni adlı** Supabase Realtime kanalına (`incoming-battles:${userId}`) abunə olmağa çalışırdı. Supabase-in client kitabxanası eyni adlı kanala ikinci dəfə abunə olunmasına icazə vermir → JS exception → React render tamamilə çökür.
+
+**Həll:** `subscribeToIncomingBattles()` funksiyası (`src/lib/battles.ts`) hər çağırışda **təsadüfi unikal sufiks** əlavə edərək kanal yaradır: `incoming-battles:${userId}:${random}`. Beləliklə paralel abunəliklər (popup + səhifə) bir-birinə mane olmur.
+
+> 💡 **Dərs:** Qlobal realtime abunəliklər əlavə edəndə, eyni resursa fərqli komponentlərdən abunə olma ehtimalını yoxla — kanal adları unikal olmalıdır, əks halda Supabase Realtime client səviyyəsində exception atır.
+
+→ Ətraflı: [[Bug-Jurnalı]]
+
 ## 🔗 Bağlı qeydlər
 [[Layihə-Xəritəsi]] · [[CLAUDE]] · [[english]] · [[Arxitektura]] · [[Qərarlar-Tarixçəsi]] · [[Bug-Jurnalı]]
 
