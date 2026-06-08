@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
 import { getUser, getUserProfile, getAllVocabProgress } from '@/lib/supabase'
 import vocabData from '@/data/vocab.json'
 import type { VocabItem, CEFRLevel, LearningTrack } from '@/types'
@@ -15,6 +16,7 @@ const UNLOCK_PCT = 80            // bir level bu %-ə çatanda növbəti açıl�
 type Row = { level: CEFRLevel; total: number; mastered: number; pct: number; unlocked: boolean; current: boolean }
 
 export default function CEFRLadder() {
+  const router = useRouter()
   const [track, setTrack] = useState<LearningTrack>('general')
   const [profLevel, setProfLevel] = useState<CEFRLevel>('A1')
   const [masteredIds, setMasteredIds] = useState<Set<number>>(new Set())
@@ -39,6 +41,12 @@ export default function CEFRLadder() {
     setTrack(t)
     if (typeof window !== 'undefined') localStorage.setItem('best_english_track', t)
   }, [])
+
+  // Səviyyəyə toxun → həmin trek+səviyyədə test başlat
+  const startLevel = useCallback((level: CEFRLevel) => {
+    if (typeof window !== 'undefined') localStorage.setItem('best_english_track', track)
+    router.push(`/quiz?track=${track}&cefr=${level}`)
+  }, [router, track])
 
   if (loading) return null
 
@@ -79,9 +87,13 @@ export default function CEFRLadder() {
         </div>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-1.5">
         {rows.map((r) => (
-          <div key={r.level} className={`flex items-center gap-3 p-2 rounded-lg ${r.current ? 'bg-blue-50 dark:bg-blue-950' : ''}`}>
+          <button
+            key={r.level}
+            onClick={() => startLevel(r.level)}
+            className={`group w-full flex items-center gap-3 p-2 rounded-lg text-left transition-colors hover:bg-gray-50 dark:hover:bg-gray-800 ${r.current ? 'bg-blue-50 dark:bg-blue-950' : ''}`}
+          >
             <span className={`badge text-white border-0 ${COLOR[r.level]} ${!r.unlocked ? 'opacity-40' : ''}`}>{r.level}</span>
             <div className="flex-1 min-w-0">
               <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
@@ -92,12 +104,13 @@ export default function CEFRLadder() {
             <span className="text-sm w-5 text-center" title={r.current ? 'Cari səviyyə' : r.pct >= UNLOCK_PCT ? 'Tamamlandı' : !r.unlocked ? 'Bağlı' : 'Açıq'}>
               {r.current ? '📍' : r.pct >= UNLOCK_PCT ? '✓' : !r.unlocked ? '🔒' : '·'}
             </span>
-          </div>
+            <span className="text-xs font-semibold text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Başla →</span>
+          </button>
         ))}
       </div>
 
       <p className="text-xs text-gray-400 mt-3">
-        Bir səviyyəni {UNLOCK_PCT}% mənimsə → növbəti 🔒 açılır. İstənilən vaxt istənilən səviyyəyə baxa bilərsən.
+        👆 Səviyyəyə toxun → həmin səviyyədə <strong>test başlasın</strong>. Bir səviyyəni {UNLOCK_PCT}% mənimsə → növbəti 🔒 açılır.
       </p>
     </div>
   )

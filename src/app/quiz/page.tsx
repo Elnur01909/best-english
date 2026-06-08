@@ -110,6 +110,12 @@ export default function QuizPage() {
         ? saved
         : (['A1', 'A2', 'B1'].includes(profCefr) ? 'general' : 'legal')
       let c: CEFRLevel = profCefr
+      // Nərdivandan gələn URL parametrləri (?track=&cefr=) defolt seçimi əvəz edir
+      const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null
+      const urlTrack = params?.get('track')
+      const urlCefr = params?.get('cefr')
+      if (urlTrack === 'general' || urlTrack === 'legal') t = urlTrack
+      if (urlCefr && CEFR_ORDER.includes(urlCefr as CEFRLevel)) c = urlCefr as CEFRLevel
       if (!AVAILABLE[t].includes(c)) {
         if (AVAILABLE[t].length) c = AVAILABLE[t][0]
         else { t = t === 'general' ? 'legal' : 'general'; c = AVAILABLE[t][0] ?? 'A1' }
