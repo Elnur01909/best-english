@@ -938,5 +938,64 @@
         "url": "https://www.youtube.com/results?search_query=legal+english+vocabulary"
       }
     ]
+  },
+  {
+    "id": 21,
+    "title": "Dərs 21: Hüquq Peşəsi və Mülki İddia (TOLES Unit 1A)",
+    "description": "27 əsas hüquqi terminə dair Foundation dərsi (mənbə: The Lawyer's English Language Coursebook)",
+    "content": "Bu dərsdə hüquq peşələri (solicitor, barrister, attorney), mülki iddia prosesi və əsas Foundation terminləri öyrənilir: LAWYER, SOLICITOR, BARRISTER, ATTORNEY, ADVOCACY, LAW FIRM, TRAINING CONTRACT, PUPILLAGE, CLAIM, PROCEEDINGS, LEGAL COSTS, COURT FEE, BAILIFF, SUE, GROUNDS, NO WIN NO FEE, DISPUTE, TORT, COMPENSATION, MATERNITY LEAVE, SICK PAY, CAPITAL, FORMATION OF A BUSINESS, PARTNERSHIP, REAL ESTATE, OBLIGATION, VALID",
+    "terms": [
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327
+    ],
+    "duration": 35,
+    "level": "F",
+    "objectives": [
+      "Solicitor, barrister və attorney arasındakı fərqi öyrən",
+      "Mülki iddia prosesinin mərhələlərini anla (claim → proceedings → judgment)",
+      "Əsas hüquqi kollokasiyaları yadda saxla (issue a claim, act for a client, qualify as a lawyer)"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Solicitor vs Barrister izahı",
+        "url": "https://www.youtube.com/results?search_query=solicitor+vs+barrister"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Foundation Hüquq Peşəsi",
+        "url": "https://www.toleslegal.com/"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Podcast",
+        "url": "https://legalenglishboost.com/"
+      }
+    ]
   }
 ]

@@ -4198,5 +4198,383 @@
     "explanation": "DUE DILIGENCE: A thorough investigation of a business or person before entering into an agreement or transaction, to assess risks.",
     "level": "H",
     "topic": "Banking & Finance Law"
+  },
+  {
+    "id": 301,
+    "question": "A general term for a person who is qualified to practise law and advise clients on legal matters.",
+    "options": [
+      "AGGRAVATED ASSAULT",
+      "CONSIDERATION",
+      "REDUNDANCY",
+      "LAWYER"
+    ],
+    "correct": "LAWYER",
+    "explanation": "LAWYER: A general term for a person who is qualified to practise law and advise clients on legal matters.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 302,
+    "question": "A lawyer who gives legal advice, deals directly with clients, drafts documents and may instruct barristers; usually works in a law firm.",
+    "options": [
+      "SOLICITOR",
+      "ACCEPTANCE",
+      "RESIDENCY PERMIT",
+      "CLAIMANT"
+    ],
+    "correct": "SOLICITOR",
+    "explanation": "SOLICITOR: A lawyer who gives legal advice, deals directly with clients, drafts documents and may instruct barristers; usually works in a law firm.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 303,
+    "question": "A specialist advocate who represents clients in court, is usually self-employed and is instructed by solicitors.",
+    "options": [
+      "DUE PROCESS",
+      "DEBTOR",
+      "BARRISTER",
+      "MISREPRESENTATION"
+    ],
+    "correct": "BARRISTER",
+    "explanation": "BARRISTER: A specialist advocate who represents clients in court, is usually self-employed and is instructed by solicitors.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 304,
+    "question": "The American term for a lawyer; a person legally appointed to act on behalf of another.",
+    "options": [
+      "ATTORNEY",
+      "COPYRIGHT",
+      "RESTITUTION",
+      "DUE DILIGENCE"
+    ],
+    "correct": "ATTORNEY",
+    "explanation": "ATTORNEY: The American term for a lawyer; a person legally appointed to act on behalf of another.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 305,
+    "question": "The work of representing and pleading a client's case, especially in a court of law.",
+    "options": [
+      "PERJURY",
+      "ADVOCACY",
+      "REFUGEE STATUS",
+      "EXPERT WITNESS"
+    ],
+    "correct": "ADVOCACY",
+    "explanation": "ADVOCACY: The work of representing and pleading a client's case, especially in a court of law.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 306,
+    "question": "A business formed by one or more lawyers to provide legal services to clients.",
+    "options": [
+      "DEPOSITION",
+      "TRAINING CONTRACT",
+      "WHISTLEBLOWER",
+      "LAW FIRM"
+    ],
+    "correct": "LAW FIRM",
+    "explanation": "LAW FIRM: A business formed by one or more lawyers to provide legal services to clients.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 307,
+    "question": "A period of supervised practical training that a trainee must complete to qualify as a solicitor.",
+    "options": [
+      "LARCENY",
+      "DIPLOMATIC IMMUNITY",
+      "TRAINING CONTRACT",
+      "GUARDIANSHIP"
+    ],
+    "correct": "TRAINING CONTRACT",
+    "explanation": "TRAINING CONTRACT: A period of supervised practical training that a trainee must complete to qualify as a solicitor.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 308,
+    "question": "The final, practical stage of training for a barrister, spent working under the supervision of an experienced barrister.",
+    "options": [
+      "MONEY LAUNDERING",
+      "PUPILLAGE",
+      "TENANT",
+      "APPEAL"
+    ],
+    "correct": "PUPILLAGE",
+    "explanation": "PUPILLAGE: The final, practical stage of training for a barrister, spent working under the supervision of an experienced barrister.",
+    "level": "A",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 309,
+    "question": "A court action brought by a claimant seeking a remedy, such as money or an order, against a defendant.",
+    "options": [
+      "CONVEYANCING",
+      "CLAIM",
+      "LAWYER",
+      "CONDITION PRECEDENT"
+    ],
+    "correct": "CLAIM",
+    "explanation": "CLAIM: A court action brought by a claimant seeking a remedy, such as money or an order, against a defendant.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 310,
+    "question": "The formal series of steps and actions making up a legal case before a court.",
+    "options": [
+      "PROCEEDINGS",
+      "STATUTORY RAPE",
+      "PROPERTY DAMAGE",
+      "STATUTE OF LIMITATIONS"
+    ],
+    "correct": "PROCEEDINGS",
+    "explanation": "PROCEEDINGS: The formal series of steps and actions making up a legal case before a court.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 311,
+    "question": "The expenses incurred in pursuing or defending a legal case, including lawyers' fees and court charges.",
+    "options": [
+      "MANSLAUGHTER",
+      "LEGAL COSTS",
+      "WINDING UP",
+      "INDEMNIFICATION"
+    ],
+    "correct": "LEGAL COSTS",
+    "explanation": "LEGAL COSTS: The expenses incurred in pursuing or defending a legal case, including lawyers' fees and court charges.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 312,
+    "question": "A charge payable to the court for issuing a claim or carrying out a particular step in proceedings.",
+    "options": [
+      "REDUNDANCY",
+      "MERGER",
+      "INDEMNITY",
+      "COURT FEE"
+    ],
+    "correct": "COURT FEE",
+    "explanation": "COURT FEE: A charge payable to the court for issuing a claim or carrying out a particular step in proceedings.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 313,
+    "question": "An officer of the court responsible for enforcing judgments, such as by seizing goods or recovering debts.",
+    "options": [
+      "DEFENDANT",
+      "TRIBUNAL",
+      "REFUGEE STATUS",
+      "BAILIFF"
+    ],
+    "correct": "BAILIFF",
+    "explanation": "BAILIFF: An officer of the court responsible for enforcing judgments, such as by seizing goods or recovering debts.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 314,
+    "question": "To bring a legal claim against a person or organisation in a court of law.",
+    "options": [
+      "LICENSING",
+      "SUE",
+      "TITLE",
+      "GUARANTEE"
+    ],
+    "correct": "SUE",
+    "explanation": "SUE: To bring a legal claim against a person or organisation in a court of law.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 315,
+    "question": "The legal basis or reasons on which a claim, defence, or appeal is founded.",
+    "options": [
+      "GROUNDS",
+      "FALSE IMPRISONMENT",
+      "BARRISTER",
+      "CONSIDERATION"
+    ],
+    "correct": "GROUNDS",
+    "explanation": "GROUNDS: The legal basis or reasons on which a claim, defence, or appeal is founded.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 316,
+    "question": "An arrangement in which a client pays the lawyer's fee only if the legal claim is successful.",
+    "options": [
+      "CAPITAL",
+      "NO WIN NO FEE",
+      "INTERNATIONAL LAW",
+      "MONEY LAUNDERING"
+    ],
+    "correct": "NO WIN NO FEE",
+    "explanation": "NO WIN NO FEE: An arrangement in which a client pays the lawyer's fee only if the legal claim is successful.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 317,
+    "question": "A disagreement or argument between parties, especially one that may lead to legal action.",
+    "options": [
+      "ADVOCACY",
+      "AFFIDAVIT",
+      "DISPUTE",
+      "DUE PROCESS"
+    ],
+    "correct": "DISPUTE",
+    "explanation": "DISPUTE: A disagreement or argument between parties, especially one that may lead to legal action.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 318,
+    "question": "A civil wrong that causes harm or loss to another person, giving rise to legal liability.",
+    "options": [
+      "SUBPOENA",
+      "TORT",
+      "CONDITION PRECEDENT",
+      "UNFAIR DISMISSAL"
+    ],
+    "correct": "TORT",
+    "explanation": "TORT: A civil wrong that causes harm or loss to another person, giving rise to legal liability.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 319,
+    "question": "Money awarded to a person to make up for loss, injury, or damage they have suffered.",
+    "options": [
+      "CONTRACT",
+      "ARBITRATION",
+      "APPEAL",
+      "COMPENSATION"
+    ],
+    "correct": "COMPENSATION",
+    "explanation": "COMPENSATION: Money awarded to a person to make up for loss, injury, or damage they have suffered.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 320,
+    "question": "A protected period of leave from work granted to a mother before and after the birth of her child.",
+    "options": [
+      "PRECEDENT",
+      "ATTORNEY",
+      "MATERNITY LEAVE",
+      "SHAREHOLDER"
+    ],
+    "correct": "MATERNITY LEAVE",
+    "explanation": "MATERNITY LEAVE: A protected period of leave from work granted to a mother before and after the birth of her child.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 321,
+    "question": "Money paid by an employer to an employee who is unable to work because of illness.",
+    "options": [
+      "SICK PAY",
+      "VICARIOUS LIABILITY",
+      "NATURAL JUSTICE",
+      "ALIMONY"
+    ],
+    "correct": "SICK PAY",
+    "explanation": "SICK PAY: Money paid by an employer to an employee who is unable to work because of illness.",
+    "level": "F",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 322,
+    "question": "The money or assets invested in a business to enable it to operate and grow.",
+    "options": [
+      "CHARTER PARTY",
+      "CAPITAL",
+      "COURT FEE",
+      "DOUBLE TAXATION"
+    ],
+    "correct": "CAPITAL",
+    "explanation": "CAPITAL: The money or assets invested in a business to enable it to operate and grow.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 323,
+    "question": "The legal process of creating and registering a new business entity.",
+    "options": [
+      "LARCENY",
+      "TREATY",
+      "CONSTITUTIONAL LAW",
+      "FORMATION OF A BUSINESS"
+    ],
+    "correct": "FORMATION OF A BUSINESS",
+    "explanation": "FORMATION OF A BUSINESS: The legal process of creating and registering a new business entity.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 324,
+    "question": "A business owned and run by two or more people who share its profits and liabilities.",
+    "options": [
+      "DOUBLE TAXATION",
+      "AFFIDAVIT",
+      "PARTNERSHIP",
+      "UNFAIR DISMISSAL"
+    ],
+    "correct": "PARTNERSHIP",
+    "explanation": "PARTNERSHIP: A business owned and run by two or more people who share its profits and liabilities.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 325,
+    "question": "Property consisting of land and the buildings on it, together with associated rights.",
+    "options": [
+      "COVENANTS",
+      "EASEMENT",
+      "SUE",
+      "REAL ESTATE"
+    ],
+    "correct": "REAL ESTATE",
+    "explanation": "REAL ESTATE: Property consisting of land and the buildings on it, together with associated rights.",
+    "level": "F",
+    "topic": "Property Law"
+  },
+  {
+    "id": 326,
+    "question": "A legal duty to do or refrain from doing something, often arising under a contract.",
+    "options": [
+      "EXCLUSION CLAUSE",
+      "ARTICLES OF ASSOCIATION",
+      "UNJUST ENRICHMENT",
+      "OBLIGATION"
+    ],
+    "correct": "OBLIGATION",
+    "explanation": "OBLIGATION: A legal duty to do or refrain from doing something, often arising under a contract.",
+    "level": "F",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 327,
+    "question": "Legally binding and having full legal force or effect.",
+    "options": [
+      "VALID",
+      "CUSTODY",
+      "TITLE",
+      "DEFAMATION"
+    ],
+    "correct": "VALID",
+    "explanation": "VALID: Legally binding and having full legal force or effect.",
+    "level": "F",
+    "topic": "Contract Law"
   }
 ]
