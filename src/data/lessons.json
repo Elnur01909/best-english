@@ -997,5 +997,51 @@
         "url": "https://legalenglishboost.com/"
       }
     ]
+  },
+  {
+    "id": 22,
+    "title": "Dərs 22: Hüquq Peşəsi — Higher (TOLES Unit 1B)",
+    "description": "Higher səviyyə: kollokasiyalar, preposisiyalar, solicitor/barrister strukturu, rəsmi register (mənbə: The Lawyer's English Language Coursebook, Unit 1B)",
+    "content": "Bu dərsdə Higher səviyyə terminlər və TOLES kollokasiya/preposisiya nümunələri öyrənilir: JUDGE, ASSOCIATE, PARTNER, TRAINEE SOLICITOR, CHAMBERS, RIGHT OF AUDIENCE, SOLE PRACTITIONER, EQUAL PAY, COURT ORDER, WORK PERMIT, SHIP, CARGO, DIVORCE. Həmçinin solicitor vs barrister career path, chambers, associate/partner iyerarxiyası və rəsmi hüquqi register.",
+    "terms": [
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357
+    ],
+    "duration": 35,
+    "level": "H",
+    "objectives": [
+      "TOLES kollokasiyalarını düzgün işlət (draft/breach/honour a contract, owe a duty of care)",
+      "Hüquqi preposisiya nümunələrini mənimsə (entitled to, liable for, merge with, appeal against)",
+      "Solicitor, barrister, associate, partner və chambers arasındakı fərqi anla",
+      "Rəsmi hüquqi register istifadə et (redundant, drafting, conveyancing, mediation)"
+    ],
+    "immersionLinks": [
+      {
+        "type": "youtube",
+        "title": "Legal English Collocations",
+        "url": "https://www.youtube.com/results?search_query=legal+english+collocations"
+      },
+      {
+        "type": "article",
+        "title": "TOLES Higher Hazırlığı",
+        "url": "https://www.toleslegal.com/"
+      },
+      {
+        "type": "podcast",
+        "title": "Legal English Boost",
+        "url": "https://legalenglishboost.com/"
+      }
+    ]
   }
 ]

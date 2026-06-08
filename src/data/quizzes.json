@@ -20398,5 +20398,1522 @@
     "explanation": "Rescission — müqavilənin ləğvi, tərəflər əvvəlki vəziyyətə qaytarılır.",
     "level": "A",
     "topic": "Contract Law"
+  },
+  {
+    "id": 1433,
+    "type": "definition",
+    "question": "A person appointed to hear cases in court and make legal decisions.",
+    "options": [
+      "LIQUIDATION",
+      "NOVATION",
+      "JUDGE",
+      "COURT ORDER"
+    ],
+    "correct": "JUDGE",
+    "explanation": "JUDGE: A person appointed to hear cases in court and make legal decisions.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1434,
+    "type": "gap-fill",
+    "question": "The —————— heard the evidence and gave judgment in favour of the claimant.",
+    "options": [
+      "CLAIMANT",
+      "JUDGE",
+      "TAX AVOIDANCE",
+      "INHERITANCE TAX"
+    ],
+    "correct": "JUDGE",
+    "explanation": "JUDGE: A person appointed to hear cases in court and make legal decisions.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1435,
+    "type": "matching",
+    "question": "«JUDGE» — düzgün tərifi seç:",
+    "options": [
+      "A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.",
+      "A contractual obligation by one party to protect another against specific losses or liabilities.",
+      "A person appointed to hear cases in court and make legal decisions.",
+      "The transfer of a right, obligation, or property from one party to another."
+    ],
+    "correct": "A person appointed to hear cases in court and make legal decisions.",
+    "explanation": "JUDGE: A person appointed to hear cases in court and make legal decisions.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1436,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«JUDGE» = \"A person appointed to hear cases in court and make legal decisions.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «JUDGE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1437,
+    "type": "definition",
+    "question": "A qualified lawyer employed by a law firm who is not yet a partner.",
+    "options": [
+      "ASSOCIATE",
+      "UNFAIR DISMISSAL",
+      "CROSS-EXAMINATION",
+      "ACQUITTAL"
+    ],
+    "correct": "ASSOCIATE",
+    "explanation": "ASSOCIATE: A qualified lawyer employed by a law firm who is not yet a partner.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1438,
+    "type": "gap-fill",
+    "question": "After qualifying, she worked as an —————— at a commercial law firm.",
+    "options": [
+      "ROBBERY",
+      "ADVOCACY",
+      "ASSOCIATE",
+      "REPRESENT"
+    ],
+    "correct": "ASSOCIATE",
+    "explanation": "ASSOCIATE: A qualified lawyer employed by a law firm who is not yet a partner.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1439,
+    "type": "matching",
+    "question": "«ASSOCIATE» — düzgün tərifi seç:",
+    "options": [
+      "A form of property ownership in which the holder has the right to occupy land or property for a fixed period under a lease.",
+      "A tort or crime in which a person intentionally and without lawful justification makes harmful or offensive contact with another's body. Unlike assault, physical contact IS required — but it need not cause injury; even offensive touching suffices.",
+      "The pre-trial process in which parties exchange relevant documents and information held by the other side.",
+      "A qualified lawyer employed by a law firm who is not yet a partner."
+    ],
+    "correct": "A qualified lawyer employed by a law firm who is not yet a partner.",
+    "explanation": "ASSOCIATE: A qualified lawyer employed by a law firm who is not yet a partner.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1440,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«ASSOCIATE» = \"A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «ASSOCIATE» əslində: \"A qualified lawyer employed by a law firm who is not yet a partner.\" Göstərilən tərif «GRIEVANCE»-ə aiddir.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1441,
+    "type": "definition",
+    "question": "A lawyer who owns part of a law firm and shares in its profits.",
+    "options": [
+      "PARTNER",
+      "ARTICLES OF ASSOCIATION",
+      "RESPOND",
+      "PRECEDENT"
+    ],
+    "correct": "PARTNER",
+    "explanation": "PARTNER: A lawyer who owns part of a law firm and shares in its profits.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1442,
+    "type": "gap-fill",
+    "question": "After ten years at the firm, he became a ——————.",
+    "options": [
+      "ASSAULT",
+      "PARTNER",
+      "CHARTER PARTY",
+      "SETTLEMENT"
+    ],
+    "correct": "PARTNER",
+    "explanation": "PARTNER: A lawyer who owns part of a law firm and shares in its profits.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1443,
+    "type": "matching",
+    "question": "«PARTNER» — düzgün tərifi seç:",
+    "options": [
+      "A legal declaration that a marriage was never validly formed and is therefore treated as if it never existed.",
+      "A lawyer who owns part of a law firm and shares in its profits.",
+      "Laws made by a body other than parliament, under powers granted to it by an Act of Parliament.",
+      "A person or entity that owns one or more shares of a company and has a stake in its ownership."
+    ],
+    "correct": "A lawyer who owns part of a law firm and shares in its profits.",
+    "explanation": "PARTNER: A lawyer who owns part of a law firm and shares in its profits.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1444,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«PARTNER» = \"A lawyer who owns part of a law firm and shares in its profits.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «PARTNER» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1445,
+    "type": "definition",
+    "question": "A law graduate completing a training contract before qualifying as a solicitor.",
+    "options": [
+      "CUSTODY",
+      "CONSIDERATION",
+      "TRAINEE SOLICITOR",
+      "FORCE MAJEURE"
+    ],
+    "correct": "TRAINEE SOLICITOR",
+    "explanation": "TRAINEE SOLICITOR: A law graduate completing a training contract before qualifying as a solicitor.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1446,
+    "type": "gap-fill",
+    "question": "As a ——————, she rotated through four different departments.",
+    "options": [
+      "EVIDENCE",
+      "TRAINEE SOLICITOR",
+      "FIDUCIARY DUTY",
+      "BURGLARY"
+    ],
+    "correct": "TRAINEE SOLICITOR",
+    "explanation": "TRAINEE SOLICITOR: A law graduate completing a training contract before qualifying as a solicitor.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1447,
+    "type": "matching",
+    "question": "«TRAINEE SOLICITOR» — düzgün tərifi seç:",
+    "options": [
+      "Something of value exchanged between parties to a contract, which makes the agreement legally binding.",
+      "A contractual term that seeks to limit or exclude a party's liability for breach or negligence.",
+      "To act on behalf of a client, especially by speaking for them in legal proceedings.",
+      "A law graduate completing a training contract before qualifying as a solicitor."
+    ],
+    "correct": "A law graduate completing a training contract before qualifying as a solicitor.",
+    "explanation": "TRAINEE SOLICITOR: A law graduate completing a training contract before qualifying as a solicitor.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1448,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«TRAINEE SOLICITOR» = \"The taking of property from a person by force, threat, or intimidation.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «TRAINEE SOLICITOR» əslində: \"A law graduate completing a training contract before qualifying as a solicitor.\" Göstərilən tərif «ROBBERY»-ə aiddir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1449,
+    "type": "definition",
+    "question": "A set of offices shared by a group of self-employed barristers.",
+    "options": [
+      "OBLIGATION",
+      "CHAMBERS",
+      "FORCE MAJEURE",
+      "FLAG STATE"
+    ],
+    "correct": "CHAMBERS",
+    "explanation": "CHAMBERS: A set of offices shared by a group of self-employed barristers.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1450,
+    "type": "gap-fill",
+    "question": "The barrister works from —————— in central London.",
+    "options": [
+      "TAX EVASION",
+      "PRIMA FACIE",
+      "NO WIN NO FEE",
+      "CHAMBERS"
+    ],
+    "correct": "CHAMBERS",
+    "explanation": "CHAMBERS: A set of offices shared by a group of self-employed barristers.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1451,
+    "type": "matching",
+    "question": "«CHAMBERS» — düzgün tərifi seç:",
+    "options": [
+      "A set of offices shared by a group of self-employed barristers.",
+      "The group of individuals elected by shareholders to oversee the company's affairs and set its policies.",
+      "An asset pledged by a borrower to a lender as security for a loan, which may be seized if the loan is not repaid.",
+      "The exclusive legal right granted to the author or creator of a work to reproduce, distribute, and display their original creation."
+    ],
+    "correct": "A set of offices shared by a group of self-employed barristers.",
+    "explanation": "CHAMBERS: A set of offices shared by a group of self-employed barristers.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1452,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CHAMBERS» = \"A set of offices shared by a group of self-employed barristers.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «CHAMBERS» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1453,
+    "type": "definition",
+    "question": "The legal right to appear before and address a particular court on behalf of a client.",
+    "options": [
+      "RIGHT OF AUDIENCE",
+      "STATUTORY RAPE",
+      "NEGLIGENCE",
+      "GRIEVANCE"
+    ],
+    "correct": "RIGHT OF AUDIENCE",
+    "explanation": "RIGHT OF AUDIENCE: The legal right to appear before and address a particular court on behalf of a client.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1454,
+    "type": "gap-fill",
+    "question": "Barristers have a —————— in all courts.",
+    "options": [
+      "RIGHT OF AUDIENCE",
+      "MONEY LAUNDERING",
+      "MINORITY SHAREHOLDER",
+      "COURT FEE"
+    ],
+    "correct": "RIGHT OF AUDIENCE",
+    "explanation": "RIGHT OF AUDIENCE: The legal right to appear before and address a particular court on behalf of a client.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1455,
+    "type": "matching",
+    "question": "«RIGHT OF AUDIENCE» — düzgün tərifi seç:",
+    "options": [
+      "The legal right to appear before and address a particular court on behalf of a client.",
+      "A person who agrees to be legally responsible for another person's debt or obligation if they fail to fulfil it.",
+      "Official legal recognition that a person meets the international definition of a refugee and is entitled to protection.",
+      "A false or misleading statement of fact made by one party to induce another to enter into a contract."
+    ],
+    "correct": "The legal right to appear before and address a particular court on behalf of a client.",
+    "explanation": "RIGHT OF AUDIENCE: The legal right to appear before and address a particular court on behalf of a client.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1456,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«RIGHT OF AUDIENCE» = \"A court order requiring a party to actually perform its contractual obligations rather than paying damages.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «RIGHT OF AUDIENCE» əslində: \"The legal right to appear before and address a particular court on behalf of a client.\" Göstərilən tərif «SPECIFIC PERFORMANCE»-ə aiddir.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1457,
+    "type": "definition",
+    "question": "A lawyer who practises law alone, rather than in a partnership or firm.",
+    "options": [
+      "LEASE",
+      "ROYALTY",
+      "SOLE PRACTITIONER",
+      "RES JUDICATA"
+    ],
+    "correct": "SOLE PRACTITIONER",
+    "explanation": "SOLE PRACTITIONER: A lawyer who practises law alone, rather than in a partnership or firm.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1458,
+    "type": "gap-fill",
+    "question": "She left the firm to work as a ——————.",
+    "options": [
+      "SHAREHOLDER",
+      "REGULATION",
+      "SOLE PRACTITIONER",
+      "INDEMNITY"
+    ],
+    "correct": "SOLE PRACTITIONER",
+    "explanation": "SOLE PRACTITIONER: A lawyer who practises law alone, rather than in a partnership or firm.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1459,
+    "type": "matching",
+    "question": "«SOLE PRACTITIONER» — düzgün tərifi seç:",
+    "options": [
+      "Movable physical items that can be bought and sold, especially in commercial transactions.",
+      "The process of granting another party permission to use intellectual property under agreed conditions, often for a fee.",
+      "A lawyer who practises law alone, rather than in a partnership or firm.",
+      "The purchase or transfer of control of one company by another, typically resulting in the acquired company becoming a subsidiary."
+    ],
+    "correct": "A lawyer who practises law alone, rather than in a partnership or firm.",
+    "explanation": "SOLE PRACTITIONER: A lawyer who practises law alone, rather than in a partnership or firm.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1460,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SOLE PRACTITIONER» = \"A lawyer who practises law alone, rather than in a partnership or firm.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SOLE PRACTITIONER» həqiqətən bu cür tərif olunur.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1461,
+    "type": "definition",
+    "question": "The principle that men and women should receive the same pay for the same or equivalent work.",
+    "options": [
+      "CULPABILITY",
+      "HONOUR",
+      "BONA FIDE",
+      "EQUAL PAY"
+    ],
+    "correct": "EQUAL PAY",
+    "explanation": "EQUAL PAY: The principle that men and women should receive the same pay for the same or equivalent work.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1462,
+    "type": "gap-fill",
+    "question": "She brought a claim for —————— against her employer.",
+    "options": [
+      "LIQUIDATED DAMAGES",
+      "EQUAL PAY",
+      "DIVIDEND",
+      "CARELESSNESS"
+    ],
+    "correct": "EQUAL PAY",
+    "explanation": "EQUAL PAY: The principle that men and women should receive the same pay for the same or equivalent work.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1463,
+    "type": "matching",
+    "question": "«EQUAL PAY» — düzgün tərifi seç:",
+    "options": [
+      "The termination of employment because the role is no longer needed, rather than because of the employee's conduct.",
+      "The principle that men and women should receive the same pay for the same or equivalent work.",
+      "A formal complaint made by an employee about workplace treatment, conditions, or a colleague's behaviour.",
+      "The pre-trial process in which parties disclose documents and information relevant to the case to each other."
+    ],
+    "correct": "The principle that men and women should receive the same pay for the same or equivalent work.",
+    "explanation": "EQUAL PAY: The principle that men and women should receive the same pay for the same or equivalent work.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1464,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«EQUAL PAY» = \"An exclusive legal right granted for an invention, preventing others from making, using, or selling it without permission.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «EQUAL PAY» əslində: \"The principle that men and women should receive the same pay for the same or equivalent work.\" Göstərilən tərif «PATENT»-ə aiddir.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1465,
+    "type": "definition",
+    "question": "An official direction issued by a court requiring a party to do or refrain from doing something.",
+    "options": [
+      "PERJURY",
+      "CARELESSNESS",
+      "COURT ORDER",
+      "CONVEYANCING"
+    ],
+    "correct": "COURT ORDER",
+    "explanation": "COURT ORDER: An official direction issued by a court requiring a party to do or refrain from doing something.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1466,
+    "type": "gap-fill",
+    "question": "The defendant ignored the —————— to pay the debt.",
+    "options": [
+      "INHERITANCE TAX",
+      "CONTRACT",
+      "COURT ORDER",
+      "ACTUS REUS"
+    ],
+    "correct": "COURT ORDER",
+    "explanation": "COURT ORDER: An official direction issued by a court requiring a party to do or refrain from doing something.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1467,
+    "type": "matching",
+    "question": "«COURT ORDER» — düzgün tərifi seç:",
+    "options": [
+      "An official direction issued by a court requiring a party to do or refrain from doing something.",
+      "The termination of an employee's employment contract without legal justification or proper procedures.",
+      "Having no legal effect from the outset, as if the contract had never existed.",
+      "An arrangement in which a client pays the lawyer's fee only if the legal claim is successful."
+    ],
+    "correct": "An official direction issued by a court requiring a party to do or refrain from doing something.",
+    "explanation": "COURT ORDER: An official direction issued by a court requiring a party to do or refrain from doing something.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1468,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«COURT ORDER» = \"An official direction issued by a court requiring a party to do or refrain from doing something.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «COURT ORDER» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1469,
+    "type": "definition",
+    "question": "An official document allowing a foreign national to take employment in a country.",
+    "options": [
+      "WORK PERMIT",
+      "LARCENY",
+      "CONVEYANCING",
+      "PERJURY"
+    ],
+    "correct": "WORK PERMIT",
+    "explanation": "WORK PERMIT: An official document allowing a foreign national to take employment in a country.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 1470,
+    "type": "gap-fill",
+    "question": "He needed a —————— before starting his new job abroad.",
+    "options": [
+      "WORK PERMIT",
+      "CLAIM",
+      "ECONOMIC LOSS",
+      "COPYRIGHT"
+    ],
+    "correct": "WORK PERMIT",
+    "explanation": "WORK PERMIT: An official document allowing a foreign national to take employment in a country.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 1471,
+    "type": "matching",
+    "question": "«WORK PERMIT» — düzgün tərifi seç:",
+    "options": [
+      "A formal request to a higher court to review and change the decision of a lower court.",
+      "A judgment by a court that a defendant is not guilty of the charged offense.",
+      "The act of rescuing a ship, its cargo, or crew from danger at sea, often entitling the rescuer to a reward.",
+      "An official document allowing a foreign national to take employment in a country."
+    ],
+    "correct": "An official document allowing a foreign national to take employment in a country.",
+    "explanation": "WORK PERMIT: An official document allowing a foreign national to take employment in a country.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 1472,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«WORK PERMIT» = \"The process by which courts examine the lawfulness of decisions or actions taken by public bodies.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «WORK PERMIT» əslində: \"An official document allowing a foreign national to take employment in a country.\" Göstərilən tərif «JUDICIAL REVIEW»-ə aiddir.",
+    "level": "F",
+    "topic": "Immigration Law"
+  },
+  {
+    "id": 1473,
+    "type": "definition",
+    "question": "A large vessel used to carry people or goods by sea.",
+    "options": [
+      "UNJUST ENRICHMENT",
+      "SHIP",
+      "DEFENDANT",
+      "SHAREHOLDER"
+    ],
+    "correct": "SHIP",
+    "explanation": "SHIP: A large vessel used to carry people or goods by sea.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1474,
+    "type": "gap-fill",
+    "question": "The —————— carried cargo across the Atlantic.",
+    "options": [
+      "FORGERY",
+      "SHIP",
+      "MEMORANDUM OF ASSOCIATION",
+      "COURT FEE"
+    ],
+    "correct": "SHIP",
+    "explanation": "SHIP: A large vessel used to carry people or goods by sea.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1475,
+    "type": "matching",
+    "question": "«SHIP» — düzgün tərifi seç:",
+    "options": [
+      "Unlawful interference with a person, their property, or their land, without consent or legal justification.",
+      "A large vessel used to carry people or goods by sea.",
+      "A legal principle or decision established in a previous case that is used as a guide for deciding similar cases in the future.",
+      "Oral or external evidence offered to vary, explain, or contradict the terms of a written contract."
+    ],
+    "correct": "A large vessel used to carry people or goods by sea.",
+    "explanation": "SHIP: A large vessel used to carry people or goods by sea.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1476,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«SHIP» = \"A large vessel used to carry people or goods by sea.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «SHIP» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1477,
+    "type": "definition",
+    "question": "Goods carried on a ship, aircraft, or vehicle.",
+    "options": [
+      "EXTRADITION",
+      "MEDIATION",
+      "RESTITUTION",
+      "CARGO"
+    ],
+    "correct": "CARGO",
+    "explanation": "CARGO: Goods carried on a ship, aircraft, or vehicle.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1478,
+    "type": "gap-fill",
+    "question": "The —————— was insured against loss at sea.",
+    "options": [
+      "BREACH",
+      "UNILATERAL CONTRACT",
+      "CARGO",
+      "ARBITRATION"
+    ],
+    "correct": "CARGO",
+    "explanation": "CARGO: Goods carried on a ship, aircraft, or vehicle.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1479,
+    "type": "matching",
+    "question": "«CARGO» — düzgün tərifi seç:",
+    "options": [
+      "The legal right and responsibility to care for and make decisions about a child, usually following separation or divorce.",
+      "A false and damaging statement that harms the reputation of a person or organisation.",
+      "A tax levied on the property and money passed on to heirs or beneficiaries after a person's death.",
+      "Goods carried on a ship, aircraft, or vehicle."
+    ],
+    "correct": "Goods carried on a ship, aircraft, or vehicle.",
+    "explanation": "CARGO: Goods carried on a ship, aircraft, or vehicle.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1480,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«CARGO» = \"A legal action requiring a person under arrest to be brought before a court to determine whether their detention is lawful.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. «CARGO» əslində: \"Goods carried on a ship, aircraft, or vehicle.\" Göstərilən tərif «HABEAS CORPUS»-ə aiddir.",
+    "level": "F",
+    "topic": "Maritime Law"
+  },
+  {
+    "id": 1481,
+    "type": "definition",
+    "question": "The legal ending of a marriage by a court.",
+    "options": [
+      "UNFAIR DISMISSAL",
+      "DIVORCE",
+      "TRAINEE SOLICITOR",
+      "JURISDICTION"
+    ],
+    "correct": "DIVORCE",
+    "explanation": "DIVORCE: The legal ending of a marriage by a court.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 1482,
+    "type": "gap-fill",
+    "question": "She filed for —————— after the marriage broke down.",
+    "options": [
+      "BILL OF LADING",
+      "TRIBUNAL",
+      "DIVORCE",
+      "CONVICTION"
+    ],
+    "correct": "DIVORCE",
+    "explanation": "DIVORCE: The legal ending of a marriage by a court.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 1483,
+    "type": "matching",
+    "question": "«DIVORCE» — düzgün tərifi seç:",
+    "options": [
+      "A legal principle allowing recovery for services rendered or work completed, even without a formal contract, based on the reasonable value provided.",
+      "A court's authority to issue an injunction, an order requiring a party to do or refrain from doing something.",
+      "The legal ending of a marriage by a court.",
+      "A court order requiring one person to make regular financial payments to support a former spouse or child."
+    ],
+    "correct": "The legal ending of a marriage by a court.",
+    "explanation": "DIVORCE: The legal ending of a marriage by a court.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 1484,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«DIVORCE» = \"The legal ending of a marriage by a court.\"",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. «DIVORCE» həqiqətən bu cür tərif olunur.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 1485,
+    "type": "collocation",
+    "question": "Solicitors are allowed to _____ clients in court.",
+    "options": [
+      "advocate",
+      "represent",
+      "work for",
+      "stand for"
+    ],
+    "correct": "represent",
+    "explanation": "\"represent a client\" — müştərini təmsil etmək düzgün kollokasiyadır.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1486,
+    "type": "collocation",
+    "question": "I am a commercial lawyer and this is a criminal _____.",
+    "options": [
+      "matter",
+      "point",
+      "issue",
+      "subject"
+    ],
+    "correct": "matter",
+    "explanation": "\"a criminal matter\" — hüquqda \"matter\" iş/məsələ mənasında işlənir.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1487,
+    "type": "collocation",
+    "question": "What are the _____ for your case?",
+    "options": [
+      "basis",
+      "grounds",
+      "motives",
+      "reasons"
+    ],
+    "correct": "grounds",
+    "explanation": "\"grounds for a case\" — iddianın hüquqi əsasları.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1488,
+    "type": "collocation",
+    "question": "I will _____ my final law exams next year.",
+    "options": [
+      "prepare",
+      "make",
+      "take",
+      "pass"
+    ],
+    "correct": "take",
+    "explanation": "\"take an exam\" düzgündür (\"make an exam\" səhvdir).",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1489,
+    "type": "collocation",
+    "question": "My client is _____ a new factory.",
+    "options": [
+      "opening",
+      "launching",
+      "starting",
+      "initiating"
+    ],
+    "correct": "opening",
+    "explanation": "\"open a factory / set up a business\" — biznes üçün düzgün kollokasiya.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1490,
+    "type": "collocation",
+    "question": "Qayğı vəzifəsi daşımaq:  ___ a duty of care",
+    "options": [
+      "make",
+      "owe",
+      "take",
+      "hold"
+    ],
+    "correct": "owe",
+    "explanation": "\"owe a duty of care\" — qayğı göstərmək vəzifəsi daşımaq.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1491,
+    "type": "collocation",
+    "question": "Qayğı vəzifəsini pozmaq:  ___ a duty of care",
+    "options": [
+      "damage",
+      "give",
+      "lose",
+      "breach"
+    ],
+    "correct": "breach",
+    "explanation": "\"breach a duty of care\" — qayğı vəzifəsini pozmaq.",
+    "level": "H",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1492,
+    "type": "collocation",
+    "question": "İtkiyə məruz qalmaq:  ___ a loss",
+    "options": [
+      "make",
+      "do",
+      "take",
+      "suffer"
+    ],
+    "correct": "suffer",
+    "explanation": "\"suffer a loss\" — itkiyə məruz qalmaq.",
+    "level": "F",
+    "topic": "Tort Law"
+  },
+  {
+    "id": 1493,
+    "type": "collocation",
+    "question": "Məhkəmədən kompensasiya tələb etmək:  ___ damages",
+    "options": [
+      "claim",
+      "do",
+      "win",
+      "make"
+    ],
+    "correct": "claim",
+    "explanation": "\"claim damages\" — kompensasiya tələb etmək.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1494,
+    "type": "collocation",
+    "question": "Məhkəmə prosesini başlatmaq:  ___ proceedings",
+    "options": [
+      "read",
+      "open",
+      "write",
+      "start"
+    ],
+    "correct": "start",
+    "explanation": "\"start (bring/commence) proceedings\" — icraat başlatmaq.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1495,
+    "type": "collocation",
+    "question": "Vəsiyyətnamə tərtib etmək:  ___ a will",
+    "options": [
+      "do",
+      "make",
+      "take",
+      "build"
+    ],
+    "correct": "make",
+    "explanation": "\"make a will\" — vəsiyyətnamə tərtib etmək.",
+    "level": "F",
+    "topic": "Family Law"
+  },
+  {
+    "id": 1496,
+    "type": "collocation",
+    "question": "Biznes qurmaq:  ___ a business",
+    "options": [
+      "make up",
+      "stand up",
+      "set up",
+      "put up"
+    ],
+    "correct": "set up",
+    "explanation": "\"set up a business\" — biznes qurmaq.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1497,
+    "type": "collocation",
+    "question": "Biznesi idarə etmək:  ___ a business",
+    "options": [
+      "drive",
+      "run",
+      "do",
+      "make"
+    ],
+    "correct": "run",
+    "explanation": "\"run a business\" — biznesi idarə etmək.",
+    "level": "F",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1498,
+    "type": "collocation",
+    "question": "Şirkəti hüquqi cəhətdən yaratmaq:  ___ a company",
+    "options": [
+      "make",
+      "build",
+      "do",
+      "form"
+    ],
+    "correct": "form",
+    "explanation": "\"form (establish/incorporate) a company\" — şirkət yaratmaq.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1499,
+    "type": "collocation",
+    "question": "Barristeri işə cəlb etmək (solisitor tərəfindən):  ___ a barrister",
+    "options": [
+      "call",
+      "hire",
+      "instruct",
+      "order"
+    ],
+    "correct": "instruct",
+    "explanation": "\"instruct a barrister\" — barristeri işə təlimatlandırmaq.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1500,
+    "type": "preposition",
+    "question": "Məhkəmə iddiaçıya kompensasiya təyin etdi:  award damages ___ the claimant",
+    "options": [
+      "for",
+      "in",
+      "at",
+      "to"
+    ],
+    "correct": "to",
+    "explanation": "\"award damages TO somebody\" — kompensasiyanı kiməsə təyin etmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1501,
+    "type": "preposition",
+    "question": "İddiaçının xeyrinə qərar:  judgment ___ favour of the claimant",
+    "options": [
+      "on",
+      "at",
+      "to",
+      "in"
+    ],
+    "correct": "in",
+    "explanation": "\"judgment IN favour of\" — kiminsə xeyrinə qərar.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1502,
+    "type": "preposition",
+    "question": "Şirkət Londonda yerləşir:  the company is based ___ London",
+    "options": [
+      "in",
+      "to",
+      "at",
+      "on"
+    ],
+    "correct": "in",
+    "explanation": "\"based IN a city/country\" — yerləşmək.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1503,
+    "type": "preposition",
+    "question": "Çindən mal idxal etmək:  import goods ___ China",
+    "options": [
+      "at",
+      "by",
+      "of",
+      "from"
+    ],
+    "correct": "from",
+    "explanation": "\"import FROM a country\" — haradan idxal.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 1504,
+    "type": "preposition",
+    "question": "Ölkəyə mal idxal etmək:  import goods ___ Azerbaijan",
+    "options": [
+      "at",
+      "into",
+      "on",
+      "to"
+    ],
+    "correct": "into",
+    "explanation": "\"import INTO a country\" — haraya idxal.",
+    "level": "H",
+    "topic": "International Law"
+  },
+  {
+    "id": 1505,
+    "type": "preposition",
+    "question": "Qərardan şikayət etmək:  appeal ___ the judgment",
+    "options": [
+      "to",
+      "on",
+      "against",
+      "for"
+    ],
+    "correct": "against",
+    "explanation": "\"appeal AGAINST a judgment\" — qərara qarşı şikayət.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1506,
+    "type": "preposition",
+    "question": "Hakim işə sədrlik edir:  the judge will preside ___ the case",
+    "options": [
+      "for",
+      "on",
+      "over",
+      "at"
+    ],
+    "correct": "over",
+    "explanation": "\"preside OVER a case\" — işə sədrlik etmək.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1507,
+    "type": "preposition",
+    "question": "Təchizatçı ilə mübahisədə olmaq:  be in dispute ___ a supplier",
+    "options": [
+      "to",
+      "with",
+      "against",
+      "for"
+    ],
+    "correct": "with",
+    "explanation": "\"dispute WITH somebody\" — kiminləsə mübahisə.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1508,
+    "type": "preposition",
+    "question": "Kompensasiyaya haqqı var:  the client is entitled ___ compensation",
+    "options": [
+      "with",
+      "to",
+      "for",
+      "of"
+    ],
+    "correct": "to",
+    "explanation": "\"entitled TO something\" — nəyəsə haqqı çatmaq.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1509,
+    "type": "preposition",
+    "question": "İtkilərə görə məsuliyyət daşıyır:  the defendant is liable ___ the losses",
+    "options": [
+      "with",
+      "of",
+      "for",
+      "to"
+    ],
+    "correct": "for",
+    "explanation": "\"liable FOR something\" — nəyəsə görə məsul olmaq.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1510,
+    "type": "preposition",
+    "question": "Müqavilə şərtlərinə əməl etmək:  comply ___ the contract terms",
+    "options": [
+      "with",
+      "for",
+      "on",
+      "to"
+    ],
+    "correct": "with",
+    "explanation": "\"comply WITH something\" — nəyəsə əməl etmək.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1511,
+    "type": "preposition",
+    "question": "Müqavilə bağlamaq:  enter ___ a contract",
+    "options": [
+      "on",
+      "to",
+      "into",
+      "in"
+    ],
+    "correct": "into",
+    "explanation": "\"enter INTO a contract\" — müqaviləyə tərəf olmaq.",
+    "level": "H",
+    "topic": "Contract Law"
+  },
+  {
+    "id": 1512,
+    "type": "preposition",
+    "question": "Başqa şirkətlə birləşmək:  merge ___ another company",
+    "options": [
+      "into",
+      "to",
+      "for",
+      "with"
+    ],
+    "correct": "with",
+    "explanation": "\"merge WITH a company\" — şirkətlə birləşmək.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1513,
+    "type": "preposition",
+    "question": "Başqa firma ilə ortaqlığa girmək:  go into partnership ___ another firm",
+    "options": [
+      "of",
+      "for",
+      "with",
+      "to"
+    ],
+    "correct": "with",
+    "explanation": "\"partnership WITH somebody\" — ortaqlıq.",
+    "level": "H",
+    "topic": "Company Law"
+  },
+  {
+    "id": 1514,
+    "type": "preposition",
+    "question": "Əmək hüququ üzrə ixtisaslaşmaq:  specialise ___ employment law",
+    "options": [
+      "in",
+      "at",
+      "on",
+      "for"
+    ],
+    "correct": "in",
+    "explanation": "\"specialise IN a field\" — sahədə ixtisaslaşmaq.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1515,
+    "type": "preposition",
+    "question": "Məhkəmə qarşısında çıxış etmək:  appear ___ the court",
+    "options": [
+      "before",
+      "to",
+      "in",
+      "at"
+    ],
+    "correct": "before",
+    "explanation": "\"appear BEFORE a court\" — məhkəmə qarşısında çıxış etmək.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1516,
+    "type": "sentence",
+    "question": "Rəsmi hüquqi termini seç — \"out of work\" (işsiz):",
+    "options": [
+      "dismissed",
+      "redundant",
+      "unemployed",
+      "insolvent"
+    ],
+    "correct": "redundant",
+    "explanation": "Rəsmi registrdə işin ləğvi ilə işsiz qalma \"redundant\" sözü ilə ifadə olunur.",
+    "level": "H",
+    "topic": "Employment Law"
+  },
+  {
+    "id": 1517,
+    "type": "sentence",
+    "question": "Rəsmi hüquqi termini seç — \"writing documents\" (sənəd yazmaq):",
+    "options": [
+      "writing",
+      "drafting",
+      "making",
+      "typing"
+    ],
+    "correct": "drafting",
+    "explanation": "Hüquqi sənəd hazırlamaq \"drafting\" adlanır.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1518,
+    "type": "sentence",
+    "question": "Rəsmi hüquqi termini seç — \"real estate transfer\" (mülkiyyətin ötürülməsi):",
+    "options": [
+      "selling",
+      "transferring",
+      "moving",
+      "conveyancing"
+    ],
+    "correct": "conveyancing",
+    "explanation": "Mülkiyyətin hüquqi ötürülməsi \"conveyancing\" adlanır.",
+    "level": "H",
+    "topic": "Property Law"
+  },
+  {
+    "id": 1519,
+    "type": "sentence",
+    "question": "Rəsmi hüquqi termini seç — \"wrong advice\" (səhv məsləhət):",
+    "options": [
+      "poor advice",
+      "negligent advice",
+      "bad advice",
+      "false advice"
+    ],
+    "correct": "negligent advice",
+    "explanation": "Səhlənkar peşəkar məsləhət \"negligent advice\" adlanır.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1520,
+    "type": "sentence",
+    "question": "Rəsmi hüquqi termini seç — \"discussing problems to reach agreement\":",
+    "options": [
+      "chatting",
+      "meeting",
+      "mediation",
+      "talking"
+    ],
+    "correct": "mediation",
+    "explanation": "Razılığa gəlmək üçün strukturlaşdırılmış müzakirə \"mediation\"dır.",
+    "level": "H",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1521,
+    "type": "sentence",
+    "question": "Rəsmi hüquqi termini seç — \"lawyers who work alone\":",
+    "options": [
+      "individual lawyers",
+      "single lawyers",
+      "sole practitioners",
+      "lonely lawyers"
+    ],
+    "correct": "sole practitioners",
+    "explanation": "Tək çalışan vəkillər \"sole practitioners\" adlanır.",
+    "level": "H",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1522,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  robbery (quldurluq)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Criminal Law",
+    "explanation": "Cinayət hüququ — dövlətə qarşı cinayət.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1523,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  contract (müqavilə)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — tərəflər arasındakı mübahisə.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1524,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  partnership (ortaqlıq)",
+    "options": [
+      "Criminal Law",
+      "Civil Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — tərəflər arasındakı mübahisə.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1525,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  prison (həbsxana)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Criminal Law",
+    "explanation": "Cinayət hüququ — dövlətə qarşı cinayət.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1526,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  litigation (məhkəmə çəkişməsi)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — tərəflər arasındakı mübahisə.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1527,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  sue (məhkəməyə vermək)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — tərəflər arasındakı mübahisə.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1528,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  business (biznes)",
+    "options": [
+      "Criminal Law",
+      "Civil Law"
+    ],
+    "correct": "Civil Law",
+    "explanation": "Mülki hüquq — tərəflər arasındakı mübahisə.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1529,
+    "type": "classification",
+    "question": "Hansı hüquq sahəsinə aiddir?  prosecute (cinayət təqibi)",
+    "options": [
+      "Civil Law",
+      "Criminal Law"
+    ],
+    "correct": "Criminal Law",
+    "explanation": "Cinayət hüququ — dövlətə qarşı cinayət.",
+    "level": "F",
+    "topic": "Legal Principles"
+  },
+  {
+    "id": 1530,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A barrister has a right of audience in all courts.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Barristerlər bütün məhkəmələrdə çıxış hüququna malikdir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1531,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Barristers may form partnerships in the same way as solicitors.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Barristerlər ortaqlıq qura bilməz; onlar chambers-də sərbəst çalışır.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1532,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«An associate is a qualified lawyer employed by a law firm.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Associate — firmada işləyən ixtisaslı vəkildir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1533,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A partner owns part of the law firm.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Partner firmanın bir hissəsinə sahibdir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1534,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«In England there is a separate examination to become a judge.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Hakim olmaq üçün ayrıca imtahan yoxdur; əhəmiyyətli təcrübə tələb olunur.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1535,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Chambers are offices shared by barristers.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Chambers — barristerlərin bölüşdüyü ofislərdir.",
+    "level": "F",
+    "topic": "Legal Profession"
+  },
+  {
+    "id": 1536,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«Mediation involves a neutral facilitator who helps parties reach agreement.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Mediasiya — neytral vasitəçinin köməyi ilə razılığa gəlmə prosesidir.",
+    "level": "F",
+    "topic": "Court & Litigation"
+  },
+  {
+    "id": 1537,
+    "type": "true-false",
+    "question": "Doğru, yoxsa yanlış?\n\n«A trainee solicitor has already qualified as a solicitor.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Trainee solicitor hələ ixtisas almayıb — təcrübə müqaviləsini keçir.",
+    "level": "F",
+    "topic": "Legal Profession"
   }
 ]
