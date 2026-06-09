@@ -48,11 +48,14 @@ const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
   'grammar':        { label: '✏️ Qrammatika',      cls: 'bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300' },
 }
 
-// Səsləndirmə yalnız variantları söz/termin olan formatlarda göstərilir
-const AUDIO_TYPES = new Set(['definition', 'gap-fill', 'collocation', 'preposition'])
-
 // True/False düymələri İngilis dilində göstərilsin
 const TF_LABEL: Record<string, string> = { 'Doğru': 'True', 'Yanlış': 'False' }
+
+// Sualdan «term» hissəsini çıxar — audio üçün
+function extractTerm(q: string): string | null {
+  const m = q.match(/«([^»]+)»/)
+  return m ? m[1] : null
+}
 
 export default function QuizPage() {
   const router = useRouter()
@@ -322,13 +325,19 @@ export default function QuizPage() {
           <div>
             <div className="flex items-start gap-3 mb-6">
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
                   <p className="text-sm text-gray-400 uppercase tracking-wide">{current.topic}</p>
                   {current.type && TYPE_BADGE[current.type] && (
                     <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${TYPE_BADGE[current.type].cls}`}>
                       {TYPE_BADGE[current.type].label}
                     </span>
                   )}
+                  {/* Sual səsləndirmə düyməsi — həmişə görünür */}
+                  <AudioPlayer
+                    word={extractTerm(current.question) ?? current.question}
+                    isSentence={!extractTerm(current.question)}
+                    variant="icon"
+                  />
                 </div>
                 <h2 className="text-lg font-semibold text-gray-900 dark:text-white leading-relaxed whitespace-pre-line">
                   {current.question}
@@ -365,16 +374,20 @@ export default function QuizPage() {
                 }
 
                 const displayLabel = current.type === 'true-false' ? (TF_LABEL[opt] ?? opt) : opt
+                // matching tipində variantlar cümlə (uzun tərif), digərlərində söz/ifadə
+                const isLongOption = current.type === 'matching' || current.type === 'sentence' || current.type === 'true-false'
 
                 return (
                   <div key={opt} className="flex items-center gap-2">
                     <button onClick={() => handleSelect(opt)} className={cls}>
                       {isCorrect && showAnswer ? '✓ ' : isSelected && showAnswer ? '✗ ' : ''}{displayLabel}
                     </button>
-                    {/* Səsləndirmə — yalnız variantları söz/termin olan formatlarda */}
-                    {(!current.type || AUDIO_TYPES.has(current.type)) && (
-                      <AudioPlayer word={opt} variant="icon" />
-                    )}
+                    {/* Səsləndirmə — bütün tiplərdə göstərilir */}
+                    <AudioPlayer
+                      word={displayLabel}
+                      isSentence={isLongOption}
+                      variant="icon"
+                    />
                   </div>
                 )
               })}
