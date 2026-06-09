@@ -11,6 +11,101 @@ import vocabData from '@/data/vocab.json'
 import quizData from '@/data/quizzes.json'
 import type { Lesson, VocabItem, QuizQuestion } from '@/types'
 
+// ─── 20 ən məşhur qaydasız feillər ──────────────────────
+const IRREGULAR_VERBS = [
+  { base: 'go',    past: 'went',    pp: 'gone',    az: 'getmək' },
+  { base: 'come',  past: 'came',    pp: 'come',    az: 'gəlmək' },
+  { base: 'have',  past: 'had',     pp: 'had',     az: 'olmaq / sahib olmaq' },
+  { base: 'make',  past: 'made',    pp: 'made',    az: 'etmək / hazırlamaq' },
+  { base: 'take',  past: 'took',    pp: 'taken',   az: 'götürmək / aparmaq' },
+  { base: 'see',   past: 'saw',     pp: 'seen',    az: 'görmək' },
+  { base: 'get',   past: 'got',     pp: 'got',     az: 'almaq / olmaq' },
+  { base: 'know',  past: 'knew',    pp: 'known',   az: 'bilmək' },
+  { base: 'think', past: 'thought', pp: 'thought', az: 'düşünmək' },
+  { base: 'say',   past: 'said',    pp: 'said',    az: 'demək' },
+  { base: 'give',  past: 'gave',    pp: 'given',   az: 'vermək' },
+  { base: 'find',  past: 'found',   pp: 'found',   az: 'tapmaq' },
+  { base: 'speak', past: 'spoke',   pp: 'spoken',  az: 'danışmaq' },
+  { base: 'write', past: 'wrote',   pp: 'written', az: 'yazmaq' },
+  { base: 'eat',   past: 'ate',     pp: 'eaten',   az: 'yemək' },
+  { base: 'buy',   past: 'bought',  pp: 'bought',  az: 'satın almaq' },
+  { base: 'run',   past: 'ran',     pp: 'run',     az: 'qaçmaq' },
+  { base: 'begin', past: 'began',   pp: 'begun',   az: 'başlamaq' },
+  { base: 'break', past: 'broke',   pp: 'broken',  az: 'sındırmaq / pozmaq' },
+  { base: 'read',  past: 'read',    pp: 'read',    az: 'oxumaq' },
+]
+
+// ─── Qaydasız Feillər Modal ───────────────────────────────
+function IrregularVerbsModal({ onClose }: { onClose: () => void }) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-lg max-h-[85vh] flex flex-col"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Başlıq */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 dark:border-gray-700 shrink-0">
+          <div>
+            <h2 className="font-bold text-gray-900 dark:text-white">📋 20 Ən Məşhur Qaydasız Feillər</h2>
+            <p className="text-xs text-gray-400 mt-0.5">Base → Past Simple → Past Participle</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-red-100 hover:text-red-600 transition-colors text-lg font-bold"
+            aria-label="Bağla"
+          >
+            ×
+          </button>
+        </div>
+
+        {/* Cədvəl */}
+        <div className="overflow-y-auto flex-1 px-2 py-2">
+          {/* Başlıq sətri */}
+          <div className="grid grid-cols-4 gap-1 px-3 py-1.5 mb-1">
+            <span className="text-xs font-bold text-gray-400 uppercase">Base</span>
+            <span className="text-xs font-bold text-blue-500 uppercase">Past</span>
+            <span className="text-xs font-bold text-purple-500 uppercase">Participle</span>
+            <span className="text-xs font-bold text-green-500 uppercase">Azərbaycanca</span>
+          </div>
+
+          <div className="space-y-1">
+            {IRREGULAR_VERBS.map((v, i) => {
+              // Növünü müəyyən et: A→A→A, A→B→A, A→B→C
+              const sameAll = v.past === v.base && v.pp === v.base
+              const samePastPP = v.past === v.pp
+              const rowBg = sameAll
+                ? 'bg-green-50 dark:bg-green-950/40'
+                : samePastPP
+                  ? 'bg-blue-50 dark:bg-blue-950/40'
+                  : 'bg-gray-50 dark:bg-gray-800/40'
+              return (
+                <div key={v.base} className={`grid grid-cols-4 gap-1 px-3 py-2 rounded-lg ${rowBg}`}>
+                  <span className="font-semibold text-gray-900 dark:text-white text-sm">{v.base}</span>
+                  <span className="font-semibold text-blue-700 dark:text-blue-300 text-sm">{v.past}</span>
+                  <span className="font-semibold text-purple-700 dark:text-purple-300 text-sm">{v.pp}</span>
+                  <span className="text-green-700 dark:text-green-400 text-xs leading-tight">{v.az}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Alt izah */}
+        <div className="px-5 py-3 border-t border-gray-200 dark:border-gray-700 shrink-0">
+          <div className="flex items-center gap-4 text-xs text-gray-500">
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-green-100 dark:bg-green-950 inline-block" />A–A–A (eyni)</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-blue-100 dark:bg-blue-950 inline-block" />A–B–B (son iki eyni)</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-gray-100 dark:bg-gray-800 inline-block" />A–B–C (hamısı fərqli)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ─── Dərs → qrammatika mövzusu xəritəsi ─────────────────
 const GRAMMAR_TOPIC: Record<number, string> = {
   28: 'Qrammatika · To be',
@@ -103,6 +198,7 @@ export default function LessonPage() {
   const [userId, setUserId] = useState<string | null>(null)
   const [completed, setCompleted] = useState(false)
   const [vocabItems, setVocabItems] = useState<VocabItem[]>([])
+  const [showIrregular, setShowIrregular] = useState(false)
 
   // ── Quiz state ───────────────────────────────────────────
   const [stage, setStage] = useState<Stage>('lesson')
@@ -186,6 +282,7 @@ export default function LessonPage() {
   if (!lesson) return <div className="p-8 text-center text-gray-500">Dərs tapılmadı</div>
 
   const score = qResults.filter(Boolean).length
+  const hasIrregularContent = lesson.content?.toLowerCase().includes('qaydasız') ?? false
   const pct = lessonQs.length > 0 ? Math.round((score / lessonQs.length) * 100) : 0
   const current = lessonQs[qIdx]
 
@@ -305,6 +402,8 @@ export default function LessonPage() {
   // ── Dərs mətni ekranı ─────────────────────────────────────
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      {/* Qaydasız feillər üzən pəncərəsi */}
+      {showIrregular && <IrregularVerbsModal onClose={() => setShowIrregular(false)} />}
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3">
         <div className="max-w-2xl mx-auto flex items-center gap-3">
           <button onClick={() => router.push('/lessons')} className="text-gray-500">← Geri</button>
@@ -337,7 +436,18 @@ export default function LessonPage() {
         {/* İzah (qrammatika / mətn dərsləri üçün) */}
         {lesson.content && lesson.content.length > 40 && (
           <div className="card">
-            <h2 className="font-semibold text-gray-900 dark:text-white mb-3">📖 İzah</h2>
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="font-semibold text-gray-900 dark:text-white">📖 İzah</h2>
+              {/* Qaydasız feillər cədvəli düyməsi — yalnız həmin mövzularda göstərilir */}
+              {lesson.content.toLowerCase().includes('qaydasız') && (
+                <button
+                  onClick={() => setShowIrregular(true)}
+                  className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900 transition-colors"
+                >
+                  📋 Nümunə Cədvəli
+                </button>
+              )}
+            </div>
             <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">{lesson.content}</div>
           </div>
         )}
