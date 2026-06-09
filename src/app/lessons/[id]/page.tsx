@@ -282,7 +282,6 @@ export default function LessonPage() {
   if (!lesson) return <div className="p-8 text-center text-gray-500">Dərs tapılmadı</div>
 
   const score = qResults.filter(Boolean).length
-  const hasIrregularContent = lesson.content?.toLowerCase().includes('qaydasız') ?? false
   const pct = lessonQs.length > 0 ? Math.round((score / lessonQs.length) * 100) : 0
   const current = lessonQs[qIdx]
 
@@ -451,8 +450,8 @@ export default function LessonPage() {
           <div className="card">
             <div className="flex items-center justify-between mb-3">
               <h2 className="font-semibold text-gray-900 dark:text-white">📖 İzah</h2>
-              {/* Qaydasız feillər cədvəli düyməsi — yalnız həmin mövzularda göstərilir */}
-              {lesson.content.toLowerCase().includes('qaydasız') && (
+              {/* Qaydasız feillər cədvəli düyməsi — yalnız Past Simple dərsi (id 37) */}
+              {lesson.id === 37 && (
                 <button
                   onClick={() => setShowIrregular(true)}
                   className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900 transition-colors"
