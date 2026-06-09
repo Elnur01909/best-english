@@ -306,8 +306,8 @@ export default function LessonPage() {
           <button onClick={() => router.push('/lessons')} className="btn-secondary flex-1">
             ← Dərslər
           </button>
-          <button onClick={() => router.push('/quiz')} className="btn-primary flex-1">
-            Testlər →
+          <button onClick={() => router.push('/dashboard')} className="btn-primary flex-1">
+            🏠 Ana Səhifə
           </button>
         </div>
       </div>
