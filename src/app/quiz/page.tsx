@@ -51,6 +51,9 @@ const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
 // Səsləndirmə yalnız variantları söz/termin olan formatlarda göstərilir
 const AUDIO_TYPES = new Set(['definition', 'gap-fill', 'collocation', 'preposition'])
 
+// True/False düymələri İngilis dilində göstərilsin
+const TF_LABEL: Record<string, string> = { 'Doğru': 'True', 'Yanlış': 'False' }
+
 export default function QuizPage() {
   const router = useRouter()
   const [userId, setUserId] = useState<string | null>(null)
@@ -361,10 +364,12 @@ export default function QuizPage() {
                   cls += 'border-gray-200 dark:border-gray-700 opacity-50'
                 }
 
+                const displayLabel = current.type === 'true-false' ? (TF_LABEL[opt] ?? opt) : opt
+
                 return (
                   <div key={opt} className="flex items-center gap-2">
                     <button onClick={() => handleSelect(opt)} className={cls}>
-                      {isCorrect && showAnswer ? '✓ ' : isSelected && showAnswer ? '✗ ' : ''}{opt}
+                      {isCorrect && showAnswer ? '✓ ' : isSelected && showAnswer ? '✗ ' : ''}{displayLabel}
                     </button>
                     {/* Səsləndirmə — yalnız variantları söz/termin olan formatlarda */}
                     {(!current.type || AUDIO_TYPES.has(current.type)) && (
