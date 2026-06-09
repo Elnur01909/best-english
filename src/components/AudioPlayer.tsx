@@ -8,6 +8,19 @@ interface AudioPlayerProps {
   isSentence?: boolean   // cümlə üçün daha yavaş, daha natural
 }
 
+// TTS-ə göndərilməzdən əvvəl mətni təmizlə
+function cleanForTTS(text: string): string {
+  return text
+    .replace(/_+/g, ' ')          // ___ boşluq göstəricisi → sükut
+    .replace(/«|»/g, '')          // güllə dırnaqları sil
+    .replace(/\s*—\s*/g, ', ')    // em dash → qısa fasilə
+    .replace(/\s*–\s*/g, ', ')    // en dash → qısa fasilə
+    .replace(/\s+-\s+/g, ' ')     // ayrıca tire " - " → boşluq (amma "can't" kimi sözlərə toxunmur)
+    .replace(/→/g, '')            // ox işarəsi sil
+    .replace(/\s{2,}/g, ' ')      // çoxlu boşluqları birləşdir
+    .trim()
+}
+
 // Ən yaxşı İngilis səsini seç (Neural > Enhanced > standart)
 function getBestVoice(): SpeechSynthesisVoice | null {
   const voices = window.speechSynthesis.getVoices()
@@ -46,7 +59,7 @@ function speak(text: string, isSentence: boolean, onStart: () => void, onEnd: ()
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
   window.speechSynthesis.cancel()
 
-  const utterance = new SpeechSynthesisUtterance(text)
+  const utterance = new SpeechSynthesisUtterance(cleanForTTS(text))
   utterance.lang = 'en-US'
   utterance.rate = isSentence ? 0.88 : 0.82  // cümlə bir az sürətli, söz daha yavaş
   utterance.pitch = 1.05                      // bir az daha natural
