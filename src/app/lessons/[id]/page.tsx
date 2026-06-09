@@ -322,19 +322,32 @@ export default function LessonPage() {
 
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
-        <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center gap-3">
-          <button onClick={() => setStage('lesson')} className="text-gray-500 shrink-0">← Dərsə</button>
-          <div className="flex-1">
-            <div className="flex items-center justify-between mb-1">
+        <header className="bg-white dark:bg-gray-900 border-b px-4 py-3">
+          <div className="flex items-center gap-2 mb-2">
+            <button
+              onClick={() => setStage('lesson')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium"
+            >
+              ← Geri
+            </button>
+            <button
+              onClick={() => router.push('/dashboard')}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors text-sm font-medium"
+            >
+              🏠 Ana Səhifə
+            </button>
+            <div className="ml-auto flex items-center gap-2">
               <span className="text-xs text-gray-400">Dərs testi · {qIdx + 1} / {lessonQs.length}</span>
-              <span className="text-xs text-green-600 font-medium">✓ {qResults.filter(Boolean).length}</span>
+              <span className="text-xs font-semibold text-green-600 bg-green-50 dark:bg-green-950 px-2 py-0.5 rounded-full">
+                ✓ {qResults.filter(Boolean).length}
+              </span>
             </div>
-            <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
-              <div
-                className="h-1.5 bg-blue-500 rounded-full transition-all"
-                style={{ width: `${(qIdx / lessonQs.length) * 100}%` }}
-              />
-            </div>
+          </div>
+          <div className="h-1.5 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+            <div
+              className="h-1.5 bg-blue-500 rounded-full transition-all"
+              style={{ width: `${(qIdx / lessonQs.length) * 100}%` }}
+            />
           </div>
         </header>
 
