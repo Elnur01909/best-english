@@ -6,16 +6,31 @@ import {
   searchUserByEmail, sendFriendRequest, getIncomingRequests, getOutgoingRequests,
   respondToFriendRequest, cancelFriendRequest, getFriends,
 } from '@/lib/social'
-import { createBattle, getIncomingBattles, getActiveBattles, respondToBattle, subscribeToIncomingBattles } from '@/lib/battles'
+import { createBattle, getIncomingBattles, getActiveBattles, respondToBattle, subscribeToIncomingBattles, BATTLE_LEVEL_LABEL } from '@/lib/battles'
 import { LEVEL_COLORS, TOLES_COLORS } from '@/lib/utils'
-import type { FriendProfile, TOLESLevel, Battle } from '@/types'
+import type { FriendProfile, BattleLevel, Battle } from '@/types'
 
 type Tab = 'friends' | 'requests' | 'search'
+
+// Ümumi ingilis CEFR səviyyələri
+const GENERAL_LEVELS: { level: string; label: string; color: string; desc: string }[] = [
+  { level: 'A1', label: 'A1', color: 'bg-green-500',   desc: 'Başlanğıc' },
+  { level: 'A2', label: 'A2', color: 'bg-emerald-600', desc: 'Elementar' },
+  { level: 'B1', label: 'B1', color: 'bg-teal-600',    desc: 'Orta' },
+  { level: 'B2', label: 'B2', color: 'bg-blue-600',    desc: 'Yuxarı-orta' },
+  { level: 'C1', label: 'C1', color: 'bg-indigo-600',  desc: 'İrəli' },
+]
+
+// TOLES hüquqi ingilis səviyyələri
+const TOLES_LEVELS: { level: string; label: string; color: string; desc: string }[] = [
+  { level: 'F', label: 'Foundation', color: 'bg-teal-500',  desc: 'B1 · TOLES' },
+  { level: 'H', label: 'Higher',     color: 'bg-blue-500',  desc: 'B2 · TOLES' },
+  { level: 'A', label: 'Advanced',   color: 'bg-red-500',   desc: 'C1 · TOLES' },
+]
 
 export default function FriendsPage() {
   const router = useRouter()
   const [userId, setUserId] = useState<string | null>(null)
-  const [myToles, setMyToles] = useState<TOLESLevel>('Foundation')
   const [tab, setTab] = useState<Tab>('friends')
   const [loading, setLoading] = useState(true)
 
@@ -31,6 +46,11 @@ export default function FriendsPage() {
   const [incomingBattles, setIncomingBattles] = useState<any[]>([])
   const [activeBattles, setActiveBattles] = useState<Battle[]>([])
   const [challenging, setChallenging] = useState<string | null>(null)
+
+  // ─── Level seçim modalı üçün state ─────────────────────
+  const [challengeTarget, setChallengeTarget] = useState<{ id: string; name: string } | null>(null)
+  const [battleTrack, setBattleTrack] = useState<'general' | 'legal'>('general')
+  const [battleLevel, setBattleLevel] = useState<BattleLevel>('A1')
 
   const reload = useCallback(async (uid: string) => {
     const [{ data: f }, { data: inc }, { data: out }, { data: ib }, { data: ab }] = await Promise.all([
@@ -52,8 +72,6 @@ export default function FriendsPage() {
       const user = await getUser()
       if (!user) { router.push('/login'); return }
       setUserId(user.id)
-      const { data: profile } = await getUserProfile(user.id)
-      if (profile?.toles_level) setMyToles(profile.toles_level as TOLESLevel)
       await reload(user.id)
       setLoading(false)
     }
@@ -101,11 +119,19 @@ export default function FriendsPage() {
     await reload(userId)
   }
 
-  async function handleChallenge(friendId: string) {
-    if (!userId) return
-    setChallenging(friendId)
-    const { data, error } = await createBattle(userId, friendId, myToles)
+  // Dostun profilinə tıklandıqda modal aç
+  function openChallengeModal(friend: FriendProfile) {
+    setChallengeTarget({ id: friend.id, name: friend.display_name || friend.email || 'Dost' })
+    setBattleTrack('general')
+    setBattleLevel('A1')
+  }
+
+  async function handleChallenge() {
+    if (!userId || !challengeTarget) return
+    setChallenging(challengeTarget.id)
+    const { data, error } = await createBattle(userId, challengeTarget.id, battleLevel)
     setChallenging(null)
+    setChallengeTarget(null)
     if (data && !error) router.push(`/battles/${data.id}`)
   }
 
@@ -135,9 +161,11 @@ export default function FriendsPage() {
           <div className="space-y-2">
             {incomingBattles.map((b) => (
               <div key={b.id} className="card bg-amber-50 dark:bg-amber-950 border-amber-300 dark:border-amber-800">
-                <p className="text-sm text-amber-900 dark:text-amber-100 mb-3">
-                  🏆 <strong>{b.creator?.display_name || b.creator?.email || 'Bir dostun'}</strong> səni{' '}
-                  <strong>TOLES Mini-Test yarışına</strong> ({b.toles_level}) çağırır!
+                <p className="text-sm text-amber-900 dark:text-amber-100 mb-1">
+                  🏆 <strong>{b.creator?.display_name || b.creator?.email || 'Bir dostun'}</strong> səni yarışa çağırır!
+                </p>
+                <p className="text-xs text-amber-700 dark:text-amber-300 mb-3">
+                  📊 Səviyyə: <strong>{BATTLE_LEVEL_LABEL[b.toles_level] ?? b.toles_level}</strong>
                 </p>
                 <div className="flex gap-2">
                   <button onClick={() => handleBattleRespond(b.id, true)} className="btn-primary flex-1 text-sm py-2">
@@ -162,7 +190,9 @@ export default function FriendsPage() {
                 className="card w-full text-left bg-green-50 dark:bg-green-950 border-green-300 dark:border-green-800 hover:shadow-md transition-shadow"
               >
                 <p className="text-sm text-green-900 dark:text-green-100">
-                  ⚔️ Davam edən yarış var ({b.toles_level}) — davam etmək üçün toxun →
+                  ⚔️ Davam edən yarış var
+                  {' · '}<span className="font-medium">{BATTLE_LEVEL_LABEL[b.toles_level] ?? b.toles_level}</span>
+                  {' '}— davam etmək üçün toxun →
                 </p>
               </button>
             ))}
@@ -210,7 +240,7 @@ export default function FriendsPage() {
                   </div>
                 </div>
                 <button
-                  onClick={() => handleChallenge(f.id)}
+                  onClick={() => openChallengeModal(f)}
                   disabled={challenging === f.id}
                   className="btn-primary text-sm px-3 py-2 shrink-0"
                 >
@@ -315,6 +345,136 @@ export default function FriendsPage() {
           </div>
         )}
       </main>
+
+      {/* ═══════════════════════════════════════════════════
+          Level Seçim Modalı — "Yarışa çağır" tıklandığında
+      ══════════════════════════════════════════════════════ */}
+      {challengeTarget && (
+        <div
+          className="fixed inset-0 bg-black/60 flex items-end justify-center z-50 sm:items-center px-4 pb-4 sm:pb-0"
+          onClick={(e) => { if (e.target === e.currentTarget) setChallengeTarget(null) }}
+        >
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 w-full max-w-sm shadow-2xl">
+
+            {/* Başlıq */}
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">⚔️ Yarış Səviyyəsi</h3>
+                <p className="text-sm text-gray-500 mt-0.5">
+                  <span className="font-medium text-blue-600">{challengeTarget.name}</span> ilə yarışmaq
+                </p>
+              </div>
+              <button
+                onClick={() => setChallengeTarget(null)}
+                className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-500 flex items-center justify-center text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Trək seçimi (Ümumi / TOLES) */}
+            <div className="flex gap-1 bg-gray-100 dark:bg-gray-800 rounded-xl p-1 mb-4">
+              <button
+                onClick={() => { setBattleTrack('general'); setBattleLevel('A1') }}
+                className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  battleTrack === 'general'
+                    ? 'bg-white dark:bg-gray-700 text-blue-600 shadow-sm'
+                    : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
+                }`}
+              >
+                📚 Ümumi İngilis
+              </button>
+              <button
+                onClick={() => { setBattleTrack('legal'); setBattleLevel('F') }}
+                className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  battleTrack === 'legal'
+                    ? 'bg-white dark:bg-gray-700 text-blue-600 shadow-sm'
+                    : 'text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
+                }`}
+              >
+                ⚖️ TOLES
+              </button>
+            </div>
+
+            {/* CEFR səviyyələri (Ümumi trək) */}
+            {battleTrack === 'general' && (
+              <div className="grid grid-cols-5 gap-2 mb-4">
+                {GENERAL_LEVELS.map(({ level, label, color, desc }) => (
+                  <button
+                    key={level}
+                    onClick={() => setBattleLevel(level as BattleLevel)}
+                    className={`flex flex-col items-center gap-1 p-2.5 rounded-xl border-2 transition-all ${
+                      battleLevel === level
+                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-950'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
+                    }`}
+                  >
+                    <span className={`text-xs font-bold text-white px-1.5 py-0.5 rounded-md ${color}`}>
+                      {label}
+                    </span>
+                    <span className="text-xs text-gray-400 leading-none">{desc}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* TOLES səviyyələri */}
+            {battleTrack === 'legal' && (
+              <div className="space-y-2 mb-4">
+                {TOLES_LEVELS.map(({ level, label, color, desc }) => (
+                  <button
+                    key={level}
+                    onClick={() => setBattleLevel(level as BattleLevel)}
+                    className={`w-full flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-left ${
+                      battleLevel === level
+                        ? 'border-blue-500 bg-blue-50 dark:bg-blue-950'
+                        : 'border-gray-200 dark:border-gray-700 hover:border-blue-300'
+                    }`}
+                  >
+                    <span className={`text-xs font-bold text-white px-2 py-1 rounded-lg ${color}`}>
+                      {label[0]}
+                    </span>
+                    <div>
+                      <p className="font-medium text-sm text-gray-900 dark:text-white">{label}</p>
+                      <p className="text-xs text-gray-400">{desc}</p>
+                    </div>
+                    {battleLevel === level && (
+                      <span className="ml-auto text-blue-500">✓</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Seçilmiş səviyyə — qısa xülasə */}
+            <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-xl">
+              <p className="text-xs text-gray-500">
+                Seçilmiş səviyyə: <span className="font-semibold text-gray-900 dark:text-white">
+                  {BATTLE_LEVEL_LABEL[battleLevel] ?? battleLevel}
+                </span>
+              </p>
+              <p className="text-xs text-gray-400 mt-0.5">8 sual · 30 saniyə hər sual üçün</p>
+            </div>
+
+            {/* Düymələr */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => setChallengeTarget(null)}
+                className="btn-secondary flex-1"
+              >
+                Ləğv et
+              </button>
+              <button
+                onClick={handleChallenge}
+                disabled={challenging === challengeTarget.id}
+                className="btn-primary flex-1"
+              >
+                {challenging === challengeTarget.id ? '...' : '⚔️ Çağır'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

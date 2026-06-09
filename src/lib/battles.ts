@@ -1,18 +1,21 @@
-// ─── TOLES Mini-Test Yarışı (real-vaxt) ───────────────
+// ─── Mini-Test Yarışı (real-vaxt) ─────────────────────
 // İki dost eyni sual dəstini paralel həll edir, nəticələr canlı müqayisə olunur.
 // Realtime: Supabase Postgres Changes (battles + battle_answers cədvəlləri).
 import { supabase } from './supabase'
 import quizzesData from '@/data/quizzes.json'
-import type { Battle, BattleAnswer, QuizQuestion, TOLESLevel } from '@/types'
+import type { Battle, BattleAnswer, BattleLevel, QuizQuestion } from '@/types'
 
 const ALL_QUESTIONS = quizzesData as QuizQuestion[]
 const QUESTIONS_PER_BATTLE = 8
 
-// TOLES səviyyəsi → quiz datasındakı qısa kod
-const LEVEL_SHORTHAND: Record<TOLESLevel, string> = {
-  Foundation: 'F',
-  Higher: 'H',
-  Advanced: 'A',
+// CEFR səviyyələri (ümumi ingilis treki)
+const CEFR_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+
+// TOLES shorthand → tam ad (görüntü üçün)
+export const BATTLE_LEVEL_LABEL: Record<string, string> = {
+  A1: 'A1 · Ümumi', A2: 'A2 · Ümumi', B1: 'B1 · Ümumi',
+  B2: 'B2 · Ümumi', C1: 'C1 · Ümumi', C2: 'C2 · Ümumi',
+  F: 'Foundation · TOLES', H: 'Higher · TOLES', A: 'Advanced · TOLES',
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -24,10 +27,18 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-// Verilmiş TOLES səviyyəsindən təsadüfi N sual seç (yoxdursa, bütün hovuzdan)
-export function pickBattleQuestionIds(tolesLevel: TOLESLevel): number[] {
-  const shorthand = LEVEL_SHORTHAND[tolesLevel] ?? 'F'
-  let pool = ALL_QUESTIONS.filter((q) => q.level === shorthand)
+// Verilmiş səviyyədən təsadüfi N sual seç — həm CEFR, həm TOLES dəstəklənir
+export function pickBattleQuestionIds(battleLevel: BattleLevel): number[] {
+  let pool: QuizQuestion[]
+  if (CEFR_LEVELS.includes(battleLevel)) {
+    // Ümumi ingilis — CEFR səviyyəsinə görə filtrə et
+    pool = ALL_QUESTIONS.filter(
+      (q) => q.cefr === battleLevel && (q.track ?? 'legal') === 'general'
+    )
+  } else {
+    // TOLES — level shorthand (F / H / A)
+    pool = ALL_QUESTIONS.filter((q) => q.level === battleLevel)
+  }
   if (pool.length < QUESTIONS_PER_BATTLE) pool = ALL_QUESTIONS
   return shuffle(pool).slice(0, QUESTIONS_PER_BATTLE).map((q) => q.id)
 }
@@ -38,8 +49,8 @@ export function getBattleQuestions(questionIds: number[]): QuizQuestion[] {
 }
 
 // ─── Yarış yaratmaq / dəvət ───────────────────────────
-export async function createBattle(creatorId: string, opponentId: string, tolesLevel: TOLESLevel) {
-  const questionIds = pickBattleQuestionIds(tolesLevel)
+export async function createBattle(creatorId: string, opponentId: string, battleLevel: BattleLevel) {
+  const questionIds = pickBattleQuestionIds(battleLevel)
   const { data, error } = await supabase
     .from('battles')
     .insert({
@@ -47,7 +58,7 @@ export async function createBattle(creatorId: string, opponentId: string, tolesL
       opponent_id: opponentId,
       status: 'pending',
       question_ids: questionIds,
-      toles_level: tolesLevel,
+      toles_level: battleLevel,   // DB sütunu adı qalır
     })
     .select()
     .single()

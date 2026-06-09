@@ -2,6 +2,9 @@
 export type CEFRLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2'
 export type TOLESLevel = 'Foundation' | 'Higher' | 'Advanced'
 
+// Yarışda istifadə olunan səviyyə — həm ümumi CEFR, həm TOLES shorthand
+export type BattleLevel = CEFRLevel | 'F' | 'H' | 'A'
+
 export interface UserProfile {
   id: string
   email: string
@@ -44,7 +47,7 @@ export interface Battle {
   opponent_id: string
   status: BattleStatus
   question_ids: number[]
-  toles_level: TOLESLevel
+  toles_level: BattleLevel   // DB sütunu adı qalır, amma A1/A2/B1/B2/C1/F/H/A saxlaya bilir
   created_at: string
   started_at: string | null
   completed_at: string | null

@@ -4,7 +4,7 @@ import { useRouter, useParams } from 'next/navigation'
 import { getUser, getUserProfile } from '@/lib/supabase'
 import {
   getBattle, getBattleQuestions, getBattleAnswers, submitBattleAnswer,
-  completeBattle, subscribeToBattle,
+  completeBattle, subscribeToBattle, BATTLE_LEVEL_LABEL,
 } from '@/lib/battles'
 import ProfessorWidget from '@/components/ProfessorWidget'
 import AudioPlayer from '@/components/AudioPlayer'
@@ -204,8 +204,10 @@ export default function BattlePage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3">
         <div className="max-w-2xl mx-auto flex items-center justify-between">
-          <span className="font-semibold text-blue-600">⚔️ TOLES Mini-Test Yarışı</span>
-          <span className="text-sm text-gray-500">{battle.toles_level}</span>
+          <span className="font-semibold text-blue-600">⚔️ Mini-Test Yarışı</span>
+          <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+            {BATTLE_LEVEL_LABEL[battle.toles_level] ?? battle.toles_level}
+          </span>
         </div>
         {/* Canlı tablo */}
         <div className="max-w-2xl mx-auto flex items-center justify-around mt-2 text-sm">
