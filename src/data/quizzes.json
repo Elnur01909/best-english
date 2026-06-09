@@ -47110,5 +47110,4709 @@
     "cefr": "B1",
     "track": "general",
     "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 2874,
+    "type": "grammar",
+    "question": "The dog ___ in the garden.",
+    "options": [
+      "is",
+      "are",
+      "am",
+      "be"
+    ],
+    "correct": "is",
+    "explanation": "The dog (it) → is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2875,
+    "type": "grammar",
+    "question": "My parents ___ at home.",
+    "options": [
+      "is",
+      "be",
+      "am",
+      "are"
+    ],
+    "correct": "are",
+    "explanation": "My parents (they) → are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2876,
+    "type": "grammar",
+    "question": "This book ___ very good.",
+    "options": [
+      "are",
+      "am",
+      "is",
+      "be"
+    ],
+    "correct": "is",
+    "explanation": "This book (it) → is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2877,
+    "type": "grammar",
+    "question": "___ you a student?",
+    "options": [
+      "Am",
+      "Is",
+      "Are",
+      "Be"
+    ],
+    "correct": "Are",
+    "explanation": "You → Are. \"Are you a student?\"",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2878,
+    "type": "true-false",
+    "question": "True or False?\n\n«He are a teacher.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. He → is. Düzgün: \"He IS a teacher.\"",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2879,
+    "type": "true-false",
+    "question": "True or False?\n\n«They are my friends.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. They → are. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2880,
+    "type": "true-false",
+    "question": "True or False?\n\n«I is tired.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. I → am. Düzgün: \"I AM tired.\"",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2881,
+    "type": "true-false",
+    "question": "True or False?\n\n«She is a nurse.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. She → is. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2882,
+    "type": "grammar",
+    "question": "My brother ___ tall and funny.",
+    "options": [
+      "are",
+      "am",
+      "is",
+      "be"
+    ],
+    "correct": "is",
+    "explanation": "My brother (he) → is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2883,
+    "type": "grammar",
+    "question": "The children ___ happy.",
+    "options": [
+      "is",
+      "am",
+      "be",
+      "are"
+    ],
+    "correct": "are",
+    "explanation": "The children (they) → are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2884,
+    "type": "grammar",
+    "question": "___ she your sister?",
+    "options": [
+      "Are",
+      "Am",
+      "Be",
+      "Is"
+    ],
+    "correct": "Is",
+    "explanation": "She → Is. \"Is she your sister?\"",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2885,
+    "type": "grammar",
+    "question": "We ___ not at school today.",
+    "options": [
+      "is",
+      "am",
+      "be",
+      "are"
+    ],
+    "correct": "are",
+    "explanation": "We → are. \"We are not at school.\"",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · To be"
+  },
+  {
+    "id": 2886,
+    "type": "grammar",
+    "question": "She is ___ teacher.",
+    "options": [
+      "an",
+      "the",
+      "a",
+      "—"
+    ],
+    "correct": "a",
+    "explanation": "Samitlə başlayan söz → a: a teacher",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2887,
+    "type": "grammar",
+    "question": "He has ___ umbrella.",
+    "options": [
+      "a",
+      "the",
+      "—",
+      "an"
+    ],
+    "correct": "an",
+    "explanation": "Sait ilə başlayan söz → an: an umbrella",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2888,
+    "type": "grammar",
+    "question": "I want ___ orange.",
+    "options": [
+      "a",
+      "the",
+      "—",
+      "an"
+    ],
+    "correct": "an",
+    "explanation": "Orange \"o\" ilə başlayır → an orange",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2889,
+    "type": "grammar",
+    "question": "She is ___ engineer.",
+    "options": [
+      "a",
+      "the",
+      "—",
+      "an"
+    ],
+    "correct": "an",
+    "explanation": "Engineer \"e\" ilə başlayır → an engineer",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2890,
+    "type": "true-false",
+    "question": "True or False?\n\n«I have a apple.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Apple (sait) → AN apple",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2891,
+    "type": "true-false",
+    "question": "True or False?\n\n«He is an actor.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Actor \"a\" (sait) → an actor. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2892,
+    "type": "true-false",
+    "question": "True or False?\n\n«She has an book.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Book \"b\" (samit) → A book",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2893,
+    "type": "true-false",
+    "question": "True or False?\n\n«It is a big house.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. House \"h\" (samit) → a house. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2894,
+    "type": "grammar",
+    "question": "I see ___ elephant.",
+    "options": [
+      "a",
+      "the",
+      "—",
+      "an"
+    ],
+    "correct": "an",
+    "explanation": "Elephant \"e\" (sait) → an",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2895,
+    "type": "grammar",
+    "question": "He drives ___ car.",
+    "options": [
+      "an",
+      "the",
+      "—",
+      "a"
+    ],
+    "correct": "a",
+    "explanation": "Car \"c\" (samit) → a",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2896,
+    "type": "grammar",
+    "question": "She is ___ honest person.",
+    "options": [
+      "a",
+      "the",
+      "—",
+      "an"
+    ],
+    "correct": "an",
+    "explanation": "Honest \"h\" səssiz tələffüz: sait səsi → an",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2897,
+    "type": "grammar",
+    "question": "I ate ___ banana.",
+    "options": [
+      "an",
+      "the",
+      "—",
+      "a"
+    ],
+    "correct": "a",
+    "explanation": "Banana \"b\" (samit) → a",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Articles a/an"
+  },
+  {
+    "id": 2898,
+    "type": "grammar",
+    "question": "one child, two ___",
+    "options": [
+      "childs",
+      "childes",
+      "childrens",
+      "children"
+    ],
+    "correct": "children",
+    "explanation": "Child qeyri-nizami cəm: children",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2899,
+    "type": "grammar",
+    "question": "one tooth, two ___",
+    "options": [
+      "tooths",
+      "teeths",
+      "tooth",
+      "teeth"
+    ],
+    "correct": "teeth",
+    "explanation": "Tooth qeyri-nizami cəm: teeth",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2900,
+    "type": "grammar",
+    "question": "one city, two ___",
+    "options": [
+      "citys",
+      "cities",
+      "cityes",
+      "city"
+    ],
+    "correct": "cities",
+    "explanation": "Samit + y → ies: city → cities",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2901,
+    "type": "grammar",
+    "question": "one box, two ___",
+    "options": [
+      "boxs",
+      "box",
+      "boxes",
+      "boxies"
+    ],
+    "correct": "boxes",
+    "explanation": "-x ilə bitən sözlər -es alır: box → boxes",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2902,
+    "type": "true-false",
+    "question": "True or False?\n\n«Two womans sat here.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Woman qeyri-nizami: WOMEN",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2903,
+    "type": "true-false",
+    "question": "True or False?\n\n«Three books are on the table.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Book nizami cəm: books. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2904,
+    "type": "true-false",
+    "question": "True or False?\n\n«The childs are playing.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Child qeyri-nizami: CHILDREN",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2905,
+    "type": "true-false",
+    "question": "True or False?\n\n«I have two feet.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Foot qeyri-nizami: feet. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2906,
+    "type": "grammar",
+    "question": "one watch, two ___",
+    "options": [
+      "watchs",
+      "watch",
+      "watches",
+      "watchies"
+    ],
+    "correct": "watches",
+    "explanation": "-ch ilə bitən: watch → watches",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2907,
+    "type": "grammar",
+    "question": "one baby, two ___",
+    "options": [
+      "babys",
+      "babies",
+      "babyes",
+      "baby"
+    ],
+    "correct": "babies",
+    "explanation": "Samit + y → ies: baby → babies",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2908,
+    "type": "grammar",
+    "question": "one person, many ___",
+    "options": [
+      "persons",
+      "peoples",
+      "person",
+      "people"
+    ],
+    "correct": "people",
+    "explanation": "Person qeyri-nizami: people",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2909,
+    "type": "grammar",
+    "question": "one bus, two ___",
+    "options": [
+      "buss",
+      "buses",
+      "bus",
+      "busies"
+    ],
+    "correct": "buses",
+    "explanation": "-s ilə bitən: bus → buses",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Plural nouns"
+  },
+  {
+    "id": 2910,
+    "type": "grammar",
+    "question": "___ is my mother. (ana haqqında)",
+    "options": [
+      "He",
+      "It",
+      "She",
+      "They"
+    ],
+    "correct": "She",
+    "explanation": "Ana = qadın → She",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2911,
+    "type": "grammar",
+    "question": "___ are my friends. (dostlar haqqında)",
+    "options": [
+      "He",
+      "She",
+      "It",
+      "They"
+    ],
+    "correct": "They",
+    "explanation": "Dostlar = çoxluq → They",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2912,
+    "type": "grammar",
+    "question": "___ is a cat. (pişik haqqında)",
+    "options": [
+      "She",
+      "He",
+      "They",
+      "It"
+    ],
+    "correct": "It",
+    "explanation": "Heyvan (cinsiz) → It",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2913,
+    "type": "grammar",
+    "question": "___ am a student. (özüm haqqında)",
+    "options": [
+      "He",
+      "You",
+      "She",
+      "I"
+    ],
+    "correct": "I",
+    "explanation": "Özüm → I",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2914,
+    "type": "true-false",
+    "question": "True or False?\n\n«He are a doctor.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. He + are olmaz. Düzgün: He IS a doctor.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2915,
+    "type": "true-false",
+    "question": "True or False?\n\n«She is my sister.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. She + is. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2916,
+    "type": "true-false",
+    "question": "True or False?\n\n«They is happy.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. They + are. Düzgün: They ARE happy.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2917,
+    "type": "true-false",
+    "question": "True or False?\n\n«We are at home.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. We + are. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2918,
+    "type": "grammar",
+    "question": "___ is a book. (kitab haqqında)",
+    "options": [
+      "He",
+      "She",
+      "They",
+      "It"
+    ],
+    "correct": "It",
+    "explanation": "Cansız əşya → It",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2919,
+    "type": "grammar",
+    "question": "___ is my father. (ata haqqında)",
+    "options": [
+      "She",
+      "It",
+      "They",
+      "He"
+    ],
+    "correct": "He",
+    "explanation": "Ata = kişi → He",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2920,
+    "type": "grammar",
+    "question": "___ are students. (biz haqqında)",
+    "options": [
+      "I",
+      "He",
+      "She",
+      "We"
+    ],
+    "correct": "We",
+    "explanation": "Biz → We",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2921,
+    "type": "grammar",
+    "question": "___ are from Baku. (sən haqqında)",
+    "options": [
+      "I",
+      "She",
+      "He",
+      "You"
+    ],
+    "correct": "You",
+    "explanation": "Sən → You",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Subject pronouns"
+  },
+  {
+    "id": 2922,
+    "type": "grammar",
+    "question": "She ___ to school every day.",
+    "options": [
+      "go",
+      "going",
+      "gone",
+      "goes"
+    ],
+    "correct": "goes",
+    "explanation": "She → goes (+s)",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2923,
+    "type": "grammar",
+    "question": "They ___ football on Sundays.",
+    "options": [
+      "plays",
+      "playing",
+      "play",
+      "to play"
+    ],
+    "correct": "play",
+    "explanation": "They → play (s olmadan)",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2924,
+    "type": "grammar",
+    "question": "He ___ not like coffee.",
+    "options": [
+      "do",
+      "is",
+      "does",
+      "did"
+    ],
+    "correct": "does",
+    "explanation": "He → does not",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2925,
+    "type": "grammar",
+    "question": "___ you like pizza?",
+    "options": [
+      "Does",
+      "Is",
+      "Do",
+      "Did"
+    ],
+    "correct": "Do",
+    "explanation": "You → Do you like...?",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2926,
+    "type": "true-false",
+    "question": "True or False?\n\n«She go to work every day.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. She → goes. \"She GOES to work.\"",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2927,
+    "type": "true-false",
+    "question": "True or False?\n\n«He drinks coffee every morning.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. He → drinks (+s). Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2928,
+    "type": "true-false",
+    "question": "True or False?\n\n«They watches TV at night.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. They → watch. \"They WATCH TV.\"",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2929,
+    "type": "true-false",
+    "question": "True or False?\n\n«I walk to school.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. I → walk (s olmadan). Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2930,
+    "type": "grammar",
+    "question": "My cat ___ fish.",
+    "options": [
+      "love",
+      "loving",
+      "loves",
+      "to love"
+    ],
+    "correct": "loves",
+    "explanation": "My cat (it) → loves",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2931,
+    "type": "grammar",
+    "question": "We ___ in Baku.",
+    "options": [
+      "lives",
+      "living",
+      "lived",
+      "live"
+    ],
+    "correct": "live",
+    "explanation": "We → live (s olmadan)",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2932,
+    "type": "grammar",
+    "question": "___ she speak English?",
+    "options": [
+      "Do",
+      "Is",
+      "Did",
+      "Does"
+    ],
+    "correct": "Does",
+    "explanation": "She → Does she speak...?",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2933,
+    "type": "grammar",
+    "question": "He ___ to bed at 10 pm.",
+    "options": [
+      "go",
+      "going",
+      "goes",
+      "to go"
+    ],
+    "correct": "goes",
+    "explanation": "He → goes",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Present Simple"
+  },
+  {
+    "id": 2934,
+    "type": "grammar",
+    "question": "She ___ swim very well.",
+    "options": [
+      "cans",
+      "could",
+      "can",
+      "is"
+    ],
+    "correct": "can",
+    "explanation": "Can + fel əsas forması",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2935,
+    "type": "grammar",
+    "question": "___ you ride a bike?",
+    "options": [
+      "Does",
+      "Is",
+      "Did",
+      "Can"
+    ],
+    "correct": "Can",
+    "explanation": "Sual: Can + subject + verb?",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2936,
+    "type": "grammar",
+    "question": "He ___ play the piano.",
+    "options": [
+      "cans",
+      "is",
+      "can",
+      "does"
+    ],
+    "correct": "can",
+    "explanation": "Can heç vaxt -s almır",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2937,
+    "type": "grammar",
+    "question": "I ___ not drive a car.",
+    "options": [
+      "am",
+      "do",
+      "cans",
+      "can"
+    ],
+    "correct": "can",
+    "explanation": "İnkar: can not / can't",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2938,
+    "type": "true-false",
+    "question": "True or False?\n\n«She cans sing beautifully.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Can -s almır: She CAN sing.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2939,
+    "type": "true-false",
+    "question": "True or False?\n\n«Can he play football?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Can ilə sual düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2940,
+    "type": "true-false",
+    "question": "True or False?\n\n«They can to swim.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Can-dan sonra to işlənmir: They can SWIM.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2941,
+    "type": "true-false",
+    "question": "True or False?\n\n«I can't speak French.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Can't = cannot. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2942,
+    "type": "grammar",
+    "question": "Birds ___ fly.",
+    "options": [
+      "cans",
+      "is able",
+      "are",
+      "can"
+    ],
+    "correct": "can",
+    "explanation": "Birds (they) → can fly",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2943,
+    "type": "grammar",
+    "question": "___ I help you?",
+    "options": [
+      "Does",
+      "Am",
+      "Do",
+      "Can"
+    ],
+    "correct": "Can",
+    "explanation": "Kömək təklifi: Can I...?",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2944,
+    "type": "grammar",
+    "question": "My dog ___ do tricks.",
+    "options": [
+      "cans",
+      "is",
+      "does",
+      "can"
+    ],
+    "correct": "can",
+    "explanation": "My dog (it) → can",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2945,
+    "type": "grammar",
+    "question": "We ___ not hear you.",
+    "options": [
+      "do",
+      "are",
+      "cans",
+      "can"
+    ],
+    "correct": "can",
+    "explanation": "İnkar: can not",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Can / can't"
+  },
+  {
+    "id": 2946,
+    "type": "grammar",
+    "question": "___ a cat on the roof.",
+    "options": [
+      "There are",
+      "Is there",
+      "Are there",
+      "There is"
+    ],
+    "correct": "There is",
+    "explanation": "Tək → There is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2947,
+    "type": "grammar",
+    "question": "___ three apples on the table.",
+    "options": [
+      "There is",
+      "Is there",
+      "There are",
+      "Are there"
+    ],
+    "correct": "There are",
+    "explanation": "Çox → There are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2948,
+    "type": "grammar",
+    "question": "___ any milk in the fridge?",
+    "options": [
+      "There are",
+      "There is",
+      "Are there",
+      "Is there"
+    ],
+    "correct": "Is there",
+    "explanation": "Sual + tək: Is there?",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2949,
+    "type": "grammar",
+    "question": "___ two students in the room.",
+    "options": [
+      "Is there",
+      "There is",
+      "Are there",
+      "There are"
+    ],
+    "correct": "There are",
+    "explanation": "Çox → There are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2950,
+    "type": "true-false",
+    "question": "True or False?\n\n«There are a dog in the garden.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Dog tək → There IS a dog.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2951,
+    "type": "true-false",
+    "question": "True or False?\n\n«There is a book on the desk.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Book tək → There is. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2952,
+    "type": "true-false",
+    "question": "True or False?\n\n«There is five chairs here.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Five chairs → çox → There ARE five chairs.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2953,
+    "type": "true-false",
+    "question": "True or False?\n\n«Are there any students?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Çoxluq sual: Are there? Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2954,
+    "type": "grammar",
+    "question": "___ not any bread.",
+    "options": [
+      "There are",
+      "Are there",
+      "Is there",
+      "There is"
+    ],
+    "correct": "There is",
+    "explanation": "Tək inkar → There is not",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2955,
+    "type": "grammar",
+    "question": "___ many people in the street.",
+    "options": [
+      "There is",
+      "Is there",
+      "Are there",
+      "There are"
+    ],
+    "correct": "There are",
+    "explanation": "Many → çox → There are",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2956,
+    "type": "grammar",
+    "question": "___ a problem here.",
+    "options": [
+      "Are there",
+      "There are",
+      "Is there",
+      "There is"
+    ],
+    "correct": "There is",
+    "explanation": "A problem = tək → There is",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2957,
+    "type": "grammar",
+    "question": "___ any questions?",
+    "options": [
+      "There is",
+      "Is there",
+      "There are",
+      "Are there"
+    ],
+    "correct": "Are there",
+    "explanation": "Çoxluq sual → Are there?",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · There is / There are"
+  },
+  {
+    "id": 2958,
+    "type": "grammar",
+    "question": "This is ___ book. (mənimki)",
+    "options": [
+      "your",
+      "her",
+      "his",
+      "my"
+    ],
+    "correct": "my",
+    "explanation": "I → my",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2959,
+    "type": "grammar",
+    "question": "___ name is Anna. (onun — qadın)",
+    "options": [
+      "His",
+      "My",
+      "Its",
+      "Her"
+    ],
+    "correct": "Her",
+    "explanation": "She → her",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2960,
+    "type": "grammar",
+    "question": "The cat licked ___ paw.",
+    "options": [
+      "her",
+      "my",
+      "his",
+      "its"
+    ],
+    "correct": "its",
+    "explanation": "It → its",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2961,
+    "type": "grammar",
+    "question": "We love ___ school.",
+    "options": [
+      "my",
+      "his",
+      "their",
+      "our"
+    ],
+    "correct": "our",
+    "explanation": "We → our",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2962,
+    "type": "true-false",
+    "question": "True or False?\n\n«This is her book.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. She → her. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2963,
+    "type": "true-false",
+    "question": "True or False?\n\n«That is my brothers car.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Apostrof lazımdır: my brother's car",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2964,
+    "type": "true-false",
+    "question": "True or False?\n\n«His name is John.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. He → his. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2965,
+    "type": "true-false",
+    "question": "True or False?\n\n«This is their home.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. They → their. Düzgündür.",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2966,
+    "type": "grammar",
+    "question": "___ phone is new. (sənin)",
+    "options": [
+      "My",
+      "Her",
+      "His",
+      "Your"
+    ],
+    "correct": "Your",
+    "explanation": "You → your",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2967,
+    "type": "grammar",
+    "question": "This is Sarah ___ cat.",
+    "options": [
+      "Sarah's",
+      "Sarahs",
+      "of Sarah",
+      "Sarah is"
+    ],
+    "correct": "Sarah's",
+    "explanation": "Apostrof + s → sahiblik",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2968,
+    "type": "grammar",
+    "question": "They love ___ country.",
+    "options": [
+      "his",
+      "our",
+      "my",
+      "their"
+    ],
+    "correct": "their",
+    "explanation": "They → their",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2969,
+    "type": "grammar",
+    "question": "___ car is that? (kimin?)",
+    "options": [
+      "Who",
+      "Which",
+      "What",
+      "Whose"
+    ],
+    "correct": "Whose",
+    "explanation": "Sahiblik sualı → Whose",
+    "level": "A1",
+    "cefr": "A1",
+    "track": "general",
+    "topic": "Qrammatika · Possessives"
+  },
+  {
+    "id": 2970,
+    "type": "grammar",
+    "question": "She ___ at home yesterday.",
+    "options": [
+      "were",
+      "is",
+      "be",
+      "was"
+    ],
+    "correct": "was",
+    "explanation": "She → was",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2971,
+    "type": "grammar",
+    "question": "We ___ very tired last night.",
+    "options": [
+      "was",
+      "be",
+      "is",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "We → were",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2972,
+    "type": "grammar",
+    "question": "___ you at the party?",
+    "options": [
+      "Was",
+      "Is",
+      "Are",
+      "Were"
+    ],
+    "correct": "Were",
+    "explanation": "You → Were you...?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2973,
+    "type": "grammar",
+    "question": "The students ___ happy.",
+    "options": [
+      "was",
+      "is",
+      "are",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "Students (they) → were",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2974,
+    "type": "true-false",
+    "question": "True or False?\n\n«He were sick last week.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. He → was. \"He WAS sick.\"",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2975,
+    "type": "true-false",
+    "question": "True or False?\n\n«They were at school yesterday.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. They → were. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2976,
+    "type": "true-false",
+    "question": "True or False?\n\n«I was happy at the party.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. I → was. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2977,
+    "type": "true-false",
+    "question": "True or False?\n\n«We was at home.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. We → were. \"We WERE at home.\"",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2978,
+    "type": "grammar",
+    "question": "The film ___ great!",
+    "options": [
+      "were",
+      "is",
+      "are",
+      "was"
+    ],
+    "correct": "was",
+    "explanation": "The film (it) → was",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2979,
+    "type": "grammar",
+    "question": "___ they at the meeting?",
+    "options": [
+      "Was",
+      "Is",
+      "Are",
+      "Were"
+    ],
+    "correct": "Were",
+    "explanation": "They → Were they...?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2980,
+    "type": "grammar",
+    "question": "It ___ a cold day.",
+    "options": [
+      "were",
+      "is",
+      "are",
+      "was"
+    ],
+    "correct": "was",
+    "explanation": "It → was",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2981,
+    "type": "grammar",
+    "question": "I ___ not ready for the test.",
+    "options": [
+      "were",
+      "am",
+      "are",
+      "was"
+    ],
+    "correct": "was",
+    "explanation": "I → was not",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · was / were"
+  },
+  {
+    "id": 2982,
+    "type": "grammar",
+    "question": "She ___ to the market yesterday. (go)",
+    "options": [
+      "goed",
+      "goes",
+      "going",
+      "went"
+    ],
+    "correct": "went",
+    "explanation": "Go qeyri-nizami: go → went",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2983,
+    "type": "grammar",
+    "question": "They ___ a movie last night. (watch)",
+    "options": [
+      "watched",
+      "watch",
+      "watchs",
+      "watcht"
+    ],
+    "correct": "watched",
+    "explanation": "Nizami: watch → watched",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2984,
+    "type": "grammar",
+    "question": "He ___ breakfast this morning. (eat)",
+    "options": [
+      "eated",
+      "eats",
+      "eating",
+      "ate"
+    ],
+    "correct": "ate",
+    "explanation": "Eat qeyri-nizami: eat → ate",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2985,
+    "type": "grammar",
+    "question": "___ you call her yesterday?",
+    "options": [
+      "Was",
+      "Did",
+      "Does",
+      "Were"
+    ],
+    "correct": "Did",
+    "explanation": "Past Simple sual: Did + subject + verb",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2986,
+    "type": "true-false",
+    "question": "True or False?\n\n«She goed to school yesterday.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Go qeyri-nizami: WENT.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2987,
+    "type": "true-false",
+    "question": "True or False?\n\n«He played tennis last Saturday.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Play nizami: played. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2988,
+    "type": "true-false",
+    "question": "True or False?\n\n«Did she ate the cake?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Did-dən sonra əsas forma: Did she EAT?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2989,
+    "type": "true-false",
+    "question": "True or False?\n\n«We saw a great film.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. See → saw. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2990,
+    "type": "grammar",
+    "question": "I ___ my keys. (lose)",
+    "options": [
+      "losed",
+      "losted",
+      "lose",
+      "lost"
+    ],
+    "correct": "lost",
+    "explanation": "Lose qeyri-nizami: lose → lost",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2991,
+    "type": "grammar",
+    "question": "They ___ not come to the party.",
+    "options": [
+      "didn't",
+      "doesn't",
+      "wasn't",
+      "aren't"
+    ],
+    "correct": "didn't",
+    "explanation": "İnkar: didn't + əsas forma",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2992,
+    "type": "grammar",
+    "question": "We ___ a new car last year. (buy)",
+    "options": [
+      "buyed",
+      "buy",
+      "boughted",
+      "bought"
+    ],
+    "correct": "bought",
+    "explanation": "Buy qeyri-nizami: buy → bought",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2993,
+    "type": "grammar",
+    "question": "She ___ a letter to her friend. (write)",
+    "options": [
+      "writed",
+      "writes",
+      "write",
+      "wrote"
+    ],
+    "correct": "wrote",
+    "explanation": "Write qeyri-nizami: write → wrote",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Past Simple"
+  },
+  {
+    "id": 2994,
+    "type": "grammar",
+    "question": "She ___ a book right now.",
+    "options": [
+      "read",
+      "reads",
+      "is reading",
+      "are reading"
+    ],
+    "correct": "is reading",
+    "explanation": "She + is + verb-ing",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2995,
+    "type": "grammar",
+    "question": "They ___ football at the moment.",
+    "options": [
+      "play",
+      "plays",
+      "is playing",
+      "are playing"
+    ],
+    "correct": "are playing",
+    "explanation": "They + are + verb-ing",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2996,
+    "type": "grammar",
+    "question": "___ he working now?",
+    "options": [
+      "Do",
+      "Does",
+      "Is",
+      "Are"
+    ],
+    "correct": "Is",
+    "explanation": "He → Is he working?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2997,
+    "type": "grammar",
+    "question": "I ___ a sandwich now.",
+    "options": [
+      "eat",
+      "eats",
+      "am eating",
+      "is eating"
+    ],
+    "correct": "am eating",
+    "explanation": "I + am + verb-ing",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2998,
+    "type": "true-false",
+    "question": "True or False?\n\n«She is reading a book now.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. She + is + reading. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 2999,
+    "type": "true-false",
+    "question": "True or False?\n\n«They is playing outside.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. They → are. \"They ARE playing.\"",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 3000,
+    "type": "true-false",
+    "question": "True or False?\n\n«He are working right now.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. He → is. \"He IS working.\"",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 3001,
+    "type": "true-false",
+    "question": "True or False?\n\n«I am listening to music.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. I + am + listening. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 3002,
+    "type": "grammar",
+    "question": "Look! The baby ___.",
+    "options": [
+      "sleep",
+      "sleeps",
+      "is sleeping",
+      "are sleeping"
+    ],
+    "correct": "is sleeping",
+    "explanation": "The baby (it) → is sleeping",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 3003,
+    "type": "grammar",
+    "question": "We ___ dinner right now.",
+    "options": [
+      "cook",
+      "cooks",
+      "are cooking",
+      "is cooking"
+    ],
+    "correct": "are cooking",
+    "explanation": "We + are + cooking",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 3004,
+    "type": "grammar",
+    "question": "___ they coming to the party?",
+    "options": [
+      "Do",
+      "Does",
+      "Is",
+      "Are"
+    ],
+    "correct": "Are",
+    "explanation": "They → Are they coming?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 3005,
+    "type": "grammar",
+    "question": "The cat ___ on my bed.",
+    "options": [
+      "sleep",
+      "sleeps",
+      "is sleeping",
+      "are sleeping"
+    ],
+    "correct": "is sleeping",
+    "explanation": "The cat (it) → is sleeping",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Present Continuous"
+  },
+  {
+    "id": 3006,
+    "type": "grammar",
+    "question": "This car is ___ than that one. (fast)",
+    "options": [
+      "more fast",
+      "fastest",
+      "faster",
+      "the fastest"
+    ],
+    "correct": "faster",
+    "explanation": "Qısa sifət + er: fast → faster",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3007,
+    "type": "grammar",
+    "question": "She is ___ student in class. (good)",
+    "options": [
+      "better",
+      "the best",
+      "gooder",
+      "more good"
+    ],
+    "correct": "the best",
+    "explanation": "Good → the best (qeyri-nizami)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3008,
+    "type": "grammar",
+    "question": "This is ___ film I have seen. (interesting)",
+    "options": [
+      "more interesting",
+      "interestinger",
+      "most interesting",
+      "the most interesting"
+    ],
+    "correct": "the most interesting",
+    "explanation": "Uzun sifət: the most interesting",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3009,
+    "type": "grammar",
+    "question": "He is ___ than his brother. (tall)",
+    "options": [
+      "more tall",
+      "tallest",
+      "taller",
+      "the tallest"
+    ],
+    "correct": "taller",
+    "explanation": "Qısa sifət + er: tall → taller",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3010,
+    "type": "true-false",
+    "question": "True or False?\n\n«She is more tall than me.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Qısa sifət -er alır: She is TALLER than me.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3011,
+    "type": "true-false",
+    "question": "True or False?\n\n«This is the most expensive car.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Uzun sifət: the most expensive. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3012,
+    "type": "true-false",
+    "question": "True or False?\n\n«He is the goodest player.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Good qeyri-nizami: THE BEST player.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3013,
+    "type": "true-false",
+    "question": "True or False?\n\n«This test is harder than the last one.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Hard → harder. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3014,
+    "type": "grammar",
+    "question": "Mount Everest is ___ mountain. (high)",
+    "options": [
+      "higher",
+      "more high",
+      "the most high",
+      "the highest"
+    ],
+    "correct": "the highest",
+    "explanation": "Qısa sifət superlative: the highest",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3015,
+    "type": "grammar",
+    "question": "This bag is ___ than that one. (heavy)",
+    "options": [
+      "more heavy",
+      "the heaviest",
+      "heavyer",
+      "heavier"
+    ],
+    "correct": "heavier",
+    "explanation": "Heavy: y → ier: heavier",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3016,
+    "type": "grammar",
+    "question": "She runs ___ than me. (fast)",
+    "options": [
+      "more fast",
+      "the fastest",
+      "fastest",
+      "faster"
+    ],
+    "correct": "faster",
+    "explanation": "Fast → faster",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3017,
+    "type": "grammar",
+    "question": "This is ___ I can do. (bad)",
+    "options": [
+      "worse",
+      "badder",
+      "the worst",
+      "the baddest"
+    ],
+    "correct": "the worst",
+    "explanation": "Bad → the worst (qeyri-nizami)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Comparatives & Superlatives"
+  },
+  {
+    "id": 3018,
+    "type": "grammar",
+    "question": "She ___ visit her grandmother tomorrow.",
+    "options": [
+      "is going to",
+      "are going to",
+      "go to",
+      "will going to"
+    ],
+    "correct": "is going to",
+    "explanation": "She → is going to + verb",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3019,
+    "type": "grammar",
+    "question": "They ___ move to a new house.",
+    "options": [
+      "is going to",
+      "goes to",
+      "are going to",
+      "go to"
+    ],
+    "correct": "are going to",
+    "explanation": "They → are going to + verb",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3020,
+    "type": "grammar",
+    "question": "___ you going to study tonight?",
+    "options": [
+      "Is",
+      "Am",
+      "Do",
+      "Are"
+    ],
+    "correct": "Are",
+    "explanation": "You → Are you going to...?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3021,
+    "type": "grammar",
+    "question": "I ___ buy a new phone.",
+    "options": [
+      "is going to",
+      "goes to",
+      "are going to",
+      "am going to"
+    ],
+    "correct": "am going to",
+    "explanation": "I → am going to + verb",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3022,
+    "type": "true-false",
+    "question": "True or False?\n\n«He is going to travels next week.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Going to-dan sonra əsas forma: He is going to TRAVEL.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3023,
+    "type": "true-false",
+    "question": "True or False?\n\n«We are going to watch a film tonight.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. We + are going to + verb. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3024,
+    "type": "true-false",
+    "question": "True or False?\n\n«She are going to cook dinner.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. She → is. \"She IS going to cook.\"",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3025,
+    "type": "true-false",
+    "question": "True or False?\n\n«Are they going to come?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. They → are going to. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3026,
+    "type": "grammar",
+    "question": "Look at those clouds! It ___ rain.",
+    "options": [
+      "are going to",
+      "is going to",
+      "goes to",
+      "am going to"
+    ],
+    "correct": "is going to",
+    "explanation": "It → is going to rain (görünən əlamət)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3027,
+    "type": "grammar",
+    "question": "We ___ not go to school tomorrow.",
+    "options": [
+      "is going to",
+      "are going to",
+      "am going to",
+      "goes to"
+    ],
+    "correct": "are going to",
+    "explanation": "We → are going to (inkar: are not going to)",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3028,
+    "type": "grammar",
+    "question": "He ___ start a new job.",
+    "options": [
+      "are going to",
+      "is going to",
+      "am going to",
+      "go to"
+    ],
+    "correct": "is going to",
+    "explanation": "He → is going to",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3029,
+    "type": "grammar",
+    "question": "___ she going to call you?",
+    "options": [
+      "Am",
+      "Do",
+      "Is",
+      "Are"
+    ],
+    "correct": "Is",
+    "explanation": "She → Is she going to...?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · going to (future)"
+  },
+  {
+    "id": 3030,
+    "type": "grammar",
+    "question": "There is ___ milk in the fridge.",
+    "options": [
+      "any",
+      "no",
+      "a",
+      "some"
+    ],
+    "correct": "some",
+    "explanation": "Müsbət cümlə → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3031,
+    "type": "grammar",
+    "question": "Is there ___ water?",
+    "options": [
+      "some",
+      "no",
+      "a",
+      "any"
+    ],
+    "correct": "any",
+    "explanation": "Sual cümləsi → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3032,
+    "type": "grammar",
+    "question": "I don't have ___ money.",
+    "options": [
+      "some",
+      "a",
+      "no",
+      "any"
+    ],
+    "correct": "any",
+    "explanation": "İnkar cümlə → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3033,
+    "type": "grammar",
+    "question": "Can I have ___ coffee, please?",
+    "options": [
+      "any",
+      "no",
+      "a",
+      "some"
+    ],
+    "correct": "some",
+    "explanation": "Nəzakətli xahiş → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3034,
+    "type": "true-false",
+    "question": "True or False?\n\n«I have some friends in London.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Müsbət cümlə → some. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3035,
+    "type": "true-false",
+    "question": "True or False?\n\n«Do you have some money?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Sual cümləsində adətən any: Do you have ANY money?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3036,
+    "type": "true-false",
+    "question": "True or False?\n\n«There aren't any chairs.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. İnkar → any. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3037,
+    "type": "true-false",
+    "question": "True or False?\n\n«She doesn't have some friends.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. İnkar → any: She doesn't have ANY friends.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3038,
+    "type": "grammar",
+    "question": "We need ___ eggs for the cake.",
+    "options": [
+      "any",
+      "a",
+      "no",
+      "some"
+    ],
+    "correct": "some",
+    "explanation": "Müsbət cümlə → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3039,
+    "type": "grammar",
+    "question": "There aren't ___ apples left.",
+    "options": [
+      "some",
+      "a",
+      "no",
+      "any"
+    ],
+    "correct": "any",
+    "explanation": "İnkar → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3040,
+    "type": "grammar",
+    "question": "Would you like ___ tea?",
+    "options": [
+      "any",
+      "no",
+      "a",
+      "some"
+    ],
+    "correct": "some",
+    "explanation": "Təklif cümləsində → some",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3041,
+    "type": "grammar",
+    "question": "Have you read ___ good books?",
+    "options": [
+      "some",
+      "a",
+      "no",
+      "any"
+    ],
+    "correct": "any",
+    "explanation": "Sual cümləsi → any",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · some / any"
+  },
+  {
+    "id": 3042,
+    "type": "grammar",
+    "question": "How ___ students are in the class?",
+    "options": [
+      "much",
+      "a lot",
+      "more",
+      "many"
+    ],
+    "correct": "many",
+    "explanation": "Students sayıla bilən → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3043,
+    "type": "grammar",
+    "question": "I don't drink ___ coffee.",
+    "options": [
+      "many",
+      "lots",
+      "a lot",
+      "much"
+    ],
+    "correct": "much",
+    "explanation": "Coffee sayıla bilməyən → much",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3044,
+    "type": "grammar",
+    "question": "How ___ water do you drink?",
+    "options": [
+      "many",
+      "lots",
+      "a",
+      "much"
+    ],
+    "correct": "much",
+    "explanation": "Water sayıla bilməyən → much",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3045,
+    "type": "grammar",
+    "question": "There are ___ cars on the road.",
+    "options": [
+      "much",
+      "a little",
+      "a lot",
+      "many"
+    ],
+    "correct": "many",
+    "explanation": "Cars sayıla bilən → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3046,
+    "type": "true-false",
+    "question": "True or False?\n\n«How many milk is there?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Milk sayıla bilməyən → How MUCH milk?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3047,
+    "type": "true-false",
+    "question": "True or False?\n\n«There are many books on the shelf.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Books sayıla bilən → many. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3048,
+    "type": "true-false",
+    "question": "True or False?\n\n«She doesn't have much money.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Money sayıla bilməyən → much. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3049,
+    "type": "true-false",
+    "question": "True or False?\n\n«How much apples do you need?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Apples sayıla bilən → How MANY apples?",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3050,
+    "type": "grammar",
+    "question": "I don't have ___ time.",
+    "options": [
+      "many",
+      "lots",
+      "a",
+      "much"
+    ],
+    "correct": "much",
+    "explanation": "Time sayıla bilməyən → much",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3051,
+    "type": "grammar",
+    "question": "How ___ languages do you speak?",
+    "options": [
+      "much",
+      "a lot",
+      "a",
+      "many"
+    ],
+    "correct": "many",
+    "explanation": "Languages sayıla bilən → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3052,
+    "type": "grammar",
+    "question": "There isn't ___ sugar left.",
+    "options": [
+      "many",
+      "lots",
+      "a few",
+      "much"
+    ],
+    "correct": "much",
+    "explanation": "Sugar sayıla bilməyən → much",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3053,
+    "type": "grammar",
+    "question": "She has ___ friends.",
+    "options": [
+      "much",
+      "a lot of",
+      "more",
+      "many"
+    ],
+    "correct": "many",
+    "explanation": "Friends sayıla bilən → many",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · much / many"
+  },
+  {
+    "id": 3054,
+    "type": "grammar",
+    "question": "She ___ eats breakfast.",
+    "options": [
+      "often never",
+      "is often",
+      "often is",
+      "often"
+    ],
+    "correct": "often",
+    "explanation": "often felindən əvvəl gəlir",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3055,
+    "type": "grammar",
+    "question": "He is ___ late for work.",
+    "options": [
+      "sometimes",
+      "never ever",
+      "quite always",
+      "always"
+    ],
+    "correct": "always",
+    "explanation": "to be-dən sonra → always",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3056,
+    "type": "grammar",
+    "question": "I ___ go to the cinema.",
+    "options": [
+      "am never",
+      "never",
+      "is never",
+      "never am"
+    ],
+    "correct": "never",
+    "explanation": "never felindən əvvəl gəlir",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3057,
+    "type": "grammar",
+    "question": "They ___ have pizza on Fridays.",
+    "options": [
+      "usually",
+      "are usually",
+      "is usually",
+      "usually are"
+    ],
+    "correct": "usually",
+    "explanation": "usually felindən əvvəl gəlir",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3058,
+    "type": "true-false",
+    "question": "True or False?\n\n«She always is late.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Always to be-dən SONRA: She IS ALWAYS late.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3059,
+    "type": "true-false",
+    "question": "True or False?\n\n«I usually wake up at 7.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. usually felindən əvvəl. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3060,
+    "type": "true-false",
+    "question": "True or False?\n\n«He never eats meat.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. never felindən əvvəl. Düzgündür.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3061,
+    "type": "true-false",
+    "question": "True or False?\n\n«They eat sometimes lunch outside.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. sometimes felindən əvvəl: They SOMETIMES eat lunch outside.",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3062,
+    "type": "grammar",
+    "question": "I am ___ happy to see you.",
+    "options": [
+      "ever",
+      "always",
+      "sometimes ever",
+      "never always"
+    ],
+    "correct": "always",
+    "explanation": "to be-dən SONRA: am always",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3063,
+    "type": "grammar",
+    "question": "She ___ reads before bed.",
+    "options": [
+      "rarely ever",
+      "is rarely",
+      "never always",
+      "rarely"
+    ],
+    "correct": "rarely",
+    "explanation": "rarely felindən əvvəl gəlir",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3064,
+    "type": "grammar",
+    "question": "We ___ go to the gym.",
+    "options": [
+      "is sometimes",
+      "sometimes",
+      "are sometimes",
+      "sometimes are"
+    ],
+    "correct": "sometimes",
+    "explanation": "sometimes felindən əvvəl gəlir",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3065,
+    "type": "grammar",
+    "question": "He is ___ at home on weekends.",
+    "options": [
+      "sometimes he",
+      "he sometimes",
+      "sometimes",
+      "is sometimes"
+    ],
+    "correct": "sometimes",
+    "explanation": "to be-dən SONRA: is sometimes",
+    "level": "A2",
+    "cefr": "A2",
+    "track": "general",
+    "topic": "Qrammatika · Adverbs of frequency"
+  },
+  {
+    "id": 3066,
+    "type": "grammar",
+    "question": "She ___ to Paris. (visit)",
+    "options": [
+      "visited",
+      "has visited",
+      "have visited",
+      "visits"
+    ],
+    "correct": "has visited",
+    "explanation": "She → has + V3: has visited",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3067,
+    "type": "grammar",
+    "question": "They ___ the film yet.",
+    "options": [
+      "haven't seen",
+      "hasn't seen",
+      "didn't see",
+      "don't see"
+    ],
+    "correct": "haven't seen",
+    "explanation": "They → have not: haven't seen",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3068,
+    "type": "grammar",
+    "question": "___ you ever eaten sushi?",
+    "options": [
+      "Did",
+      "Do",
+      "Have",
+      "Has"
+    ],
+    "correct": "Have",
+    "explanation": "You → Have you ever...?",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3069,
+    "type": "grammar",
+    "question": "He ___ his homework.",
+    "options": [
+      "has finished",
+      "have finished",
+      "finished",
+      "is finishing"
+    ],
+    "correct": "has finished",
+    "explanation": "He → has + V3: has finished",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3070,
+    "type": "true-false",
+    "question": "True or False?\n\n«I have saw that film.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. See V3 = seen. \"I have SEEN that film.\"",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3071,
+    "type": "true-false",
+    "question": "True or False?\n\n«She has never been to Japan.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. She has + been (V3). Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3072,
+    "type": "true-false",
+    "question": "True or False?\n\n«They have finished the project.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. They have + V3. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3073,
+    "type": "true-false",
+    "question": "True or False?\n\n«He have worked here for 3 years.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. He → has. \"He HAS worked here for 3 years.\"",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3074,
+    "type": "grammar",
+    "question": "I ___ my wallet. (lose)",
+    "options": [
+      "lost",
+      "have lost",
+      "has lost",
+      "did lose"
+    ],
+    "correct": "have lost",
+    "explanation": "I → have + V3: have lost",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3075,
+    "type": "grammar",
+    "question": "___ she ever won a prize?",
+    "options": [
+      "Did",
+      "Does",
+      "Have",
+      "Has"
+    ],
+    "correct": "Has",
+    "explanation": "She → Has she ever...?",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3076,
+    "type": "grammar",
+    "question": "We ___ in this city for 10 years.",
+    "options": [
+      "lived",
+      "have lived",
+      "has lived",
+      "are living"
+    ],
+    "correct": "have lived",
+    "explanation": "We → have + V3: have lived",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3077,
+    "type": "grammar",
+    "question": "He ___ three books this year. (write)",
+    "options": [
+      "wrote",
+      "have written",
+      "has written",
+      "writes"
+    ],
+    "correct": "has written",
+    "explanation": "He → has + V3: has written",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect"
+  },
+  {
+    "id": 3078,
+    "type": "grammar",
+    "question": "I ___ sushi before. (never/eat)",
+    "options": [
+      "never ate",
+      "have never eaten",
+      "never have eaten",
+      "eaten never"
+    ],
+    "correct": "have never eaten",
+    "explanation": "Təcrübə → Present Perfect: have never eaten",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3079,
+    "type": "grammar",
+    "question": "She ___ to Paris last year. (go)",
+    "options": [
+      "has gone",
+      "have gone",
+      "went",
+      "goes"
+    ],
+    "correct": "went",
+    "explanation": "Keçmiş zaman (last year) → Past Simple: went",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3080,
+    "type": "grammar",
+    "question": "___ you call him yet?",
+    "options": [
+      "Have",
+      "Did",
+      "Do",
+      "Has"
+    ],
+    "correct": "Have",
+    "explanation": "Yet → Present Perfect: Have you called him yet?",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3081,
+    "type": "grammar",
+    "question": "We ___ that film in 2020. (see)",
+    "options": [
+      "have seen",
+      "has seen",
+      "are seeing",
+      "saw"
+    ],
+    "correct": "saw",
+    "explanation": "2020 = müəyyən keçmiş → Past Simple: saw",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3082,
+    "type": "true-false",
+    "question": "True or False?\n\n«I have seen him yesterday.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Yesterday = müəyyən zaman → Past Simple: I SAW him yesterday.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3083,
+    "type": "true-false",
+    "question": "True or False?\n\n«She went to London last week.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Last week = müəyyən zaman → Past Simple. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3084,
+    "type": "true-false",
+    "question": "True or False?\n\n«Have you ever been to Italy?»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Ever = ümumi təcrübə → Present Perfect. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3085,
+    "type": "true-false",
+    "question": "True or False?\n\n«I have finished my work an hour ago.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. An hour ago = müəyyən zaman → Past Simple: I FINISHED my work.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3086,
+    "type": "grammar",
+    "question": "He ___ her in 2018. (meet)",
+    "options": [
+      "has met",
+      "meeting",
+      "have met",
+      "met"
+    ],
+    "correct": "met",
+    "explanation": "2018 = müəyyən keçmiş → Past Simple: met",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3087,
+    "type": "grammar",
+    "question": "I ___ three cups of coffee today. (drink)",
+    "options": [
+      "'ve drunk",
+      "drank",
+      "drunk",
+      "drinked"
+    ],
+    "correct": "'ve drunk",
+    "explanation": "Today (hələ davam edir) → Present Perfect",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3088,
+    "type": "grammar",
+    "question": "___ she call you this morning?",
+    "options": [
+      "Has",
+      "Have",
+      "Did",
+      "Does"
+    ],
+    "correct": "Did",
+    "explanation": "This morning (bitmiş) → Past Simple: Did she call?",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3089,
+    "type": "grammar",
+    "question": "They ___ just ___ the game.",
+    "options": [
+      "have / won",
+      "did / win",
+      "had / win",
+      "have / win"
+    ],
+    "correct": "have / won",
+    "explanation": "Just → Present Perfect: have just won",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Present Perfect vs Past Simple"
+  },
+  {
+    "id": 3090,
+    "type": "grammar",
+    "question": "She ___ when I called her. (study)",
+    "options": [
+      "studied",
+      "is studying",
+      "was studying",
+      "were studying"
+    ],
+    "correct": "was studying",
+    "explanation": "She → was + verb-ing",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3091,
+    "type": "grammar",
+    "question": "They ___ football at 5 pm yesterday.",
+    "options": [
+      "played",
+      "are playing",
+      "was playing",
+      "were playing"
+    ],
+    "correct": "were playing",
+    "explanation": "They → were + verb-ing",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3092,
+    "type": "grammar",
+    "question": "___ he working when you arrived?",
+    "options": [
+      "Did",
+      "Is",
+      "Were",
+      "Was"
+    ],
+    "correct": "Was",
+    "explanation": "He → Was he working?",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3093,
+    "type": "grammar",
+    "question": "I ___ TV when the lights went out.",
+    "options": [
+      "watched",
+      "watching",
+      "was watching",
+      "were watching"
+    ],
+    "correct": "was watching",
+    "explanation": "I → was + verb-ing",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3094,
+    "type": "true-false",
+    "question": "True or False?\n\n«She were sleeping at midnight.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. She → was. \"She WAS sleeping.\"",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3095,
+    "type": "true-false",
+    "question": "True or False?\n\n«They were playing music all night.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. They + were + verb-ing. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3096,
+    "type": "true-false",
+    "question": "True or False?\n\n«He was reading when she called.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Keçmişdə davam edən + yarımlayan. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3097,
+    "type": "true-false",
+    "question": "True or False?\n\n«We was eating dinner at 8.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. We → were. \"We WERE eating dinner.\"",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3098,
+    "type": "grammar",
+    "question": "While she ___ (read), he cooked.",
+    "options": [
+      "reads",
+      "read",
+      "is reading",
+      "was reading"
+    ],
+    "correct": "was reading",
+    "explanation": "While + Past Continuous: was reading",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3099,
+    "type": "grammar",
+    "question": "What ___ you doing at 9 last night?",
+    "options": [
+      "did",
+      "are",
+      "is",
+      "were"
+    ],
+    "correct": "were",
+    "explanation": "You → were. What were you doing?",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3100,
+    "type": "grammar",
+    "question": "The children ___ when we arrived. (sleep)",
+    "options": [
+      "slept",
+      "sleeps",
+      "were sleeping",
+      "was sleeping"
+    ],
+    "correct": "were sleeping",
+    "explanation": "The children (they) → were sleeping",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3101,
+    "type": "grammar",
+    "question": "It ___ heavily when we left. (rain)",
+    "options": [
+      "rained",
+      "rains",
+      "were raining",
+      "was raining"
+    ],
+    "correct": "was raining",
+    "explanation": "It → was raining",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Past Continuous"
+  },
+  {
+    "id": 3102,
+    "type": "grammar",
+    "question": "A: \"The phone is ringing!\" B: \"I ___ get it!\"",
+    "options": [
+      "am going to",
+      "going to",
+      "'ll",
+      "will to"
+    ],
+    "correct": "'ll",
+    "explanation": "Ani qərar → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3103,
+    "type": "grammar",
+    "question": "She has already bought tickets. She ___ fly to London.",
+    "options": [
+      "will",
+      "'ll",
+      "is going to",
+      "will to"
+    ],
+    "correct": "is going to",
+    "explanation": "Planlaşdırılmış → going to",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3104,
+    "type": "grammar",
+    "question": "I think it ___ rain tomorrow.",
+    "options": [
+      "going to",
+      "is going to",
+      "'ll",
+      "will to"
+    ],
+    "correct": "'ll",
+    "explanation": "Proqnoz (think) → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3105,
+    "type": "grammar",
+    "question": "Look at those clouds! It ___ rain.",
+    "options": [
+      "will",
+      "'ll",
+      "will to",
+      "is going to"
+    ],
+    "correct": "is going to",
+    "explanation": "Görünən əlamət → going to",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3106,
+    "type": "true-false",
+    "question": "True or False?\n\n«I think she'll pass the exam.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Fikir/proqnoz → will. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3107,
+    "type": "true-false",
+    "question": "True or False?\n\n«He is going to to start a new job.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Artıq to var: He is going to START a new job.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3108,
+    "type": "true-false",
+    "question": "True or False?\n\n«We'll help you with your bags.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Ani kömək → will. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3109,
+    "type": "true-false",
+    "question": "True or False?\n\n«She will to call you later.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Will-dən sonra to işlənmir: She WILL call you.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3110,
+    "type": "grammar",
+    "question": "A: 'I'm hungry.' B: 'I ___ make you a sandwich.'",
+    "options": [
+      "going to",
+      "am going to",
+      "is going to",
+      "'ll"
+    ],
+    "correct": "'ll",
+    "explanation": "Ani qərar → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3111,
+    "type": "grammar",
+    "question": "They have planned a trip. They ___ visit Rome.",
+    "options": [
+      "will",
+      "'ll",
+      "going to",
+      "are going to"
+    ],
+    "correct": "are going to",
+    "explanation": "Planlaşdırılmış → going to",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3112,
+    "type": "grammar",
+    "question": "Scientists say temperatures ___ rise.",
+    "options": [
+      "going to",
+      "are going to",
+      "will to",
+      "'ll"
+    ],
+    "correct": "'ll",
+    "explanation": "Proqnoz → will",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3113,
+    "type": "grammar",
+    "question": "She ___ start her diet on Monday. (decided)",
+    "options": [
+      "'ll",
+      "will",
+      "is going to",
+      "going to"
+    ],
+    "correct": "is going to",
+    "explanation": "Əvvəldən qərar → going to",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · will vs going to"
+  },
+  {
+    "id": 3114,
+    "type": "grammar",
+    "question": "If it rains, we ___ stay home.",
+    "options": [
+      "won't go",
+      "will stayed",
+      "will stay",
+      "didn't stay"
+    ],
+    "correct": "will stay",
+    "explanation": "If + Present Simple → will + verb",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3115,
+    "type": "grammar",
+    "question": "She will call you if she ___ time.",
+    "options": [
+      "will have",
+      "had",
+      "has",
+      "having"
+    ],
+    "correct": "has",
+    "explanation": "If cümləsində Present Simple: if she has",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3116,
+    "type": "grammar",
+    "question": "If you ___ hard, you will pass.",
+    "options": [
+      "will study",
+      "studied",
+      "studying",
+      "study"
+    ],
+    "correct": "study",
+    "explanation": "If + Present Simple: if you study",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3117,
+    "type": "grammar",
+    "question": "We ___ be late if we don't hurry.",
+    "options": [
+      "would",
+      "will",
+      "going to",
+      "are"
+    ],
+    "correct": "will",
+    "explanation": "will + verb: will be late",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3118,
+    "type": "true-false",
+    "question": "True or False?\n\n«If it will rain, I will stay home.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. If cümləsində will olmur: If it RAINS, I will stay home.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3119,
+    "type": "true-false",
+    "question": "True or False?\n\n«If she studies, she will pass.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. If + Present Simple, will + verb. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3120,
+    "type": "true-false",
+    "question": "True or False?\n\n«I will call you if I will arrive early.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. If + Present Simple: if I ARRIVE early.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3121,
+    "type": "true-false",
+    "question": "True or False?\n\n«They will win if they train hard.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Düzgün First Conditional strukturu.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3122,
+    "type": "grammar",
+    "question": "If I ___ (find) a job, I'll move out.",
+    "options": [
+      "will find",
+      "found",
+      "am finding",
+      "find"
+    ],
+    "correct": "find",
+    "explanation": "If + Present Simple: if I find",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3123,
+    "type": "grammar",
+    "question": "You ___ feel better if you rest.",
+    "options": [
+      "would",
+      "going to",
+      "will",
+      "are"
+    ],
+    "correct": "will",
+    "explanation": "will + verb",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3124,
+    "type": "grammar",
+    "question": "If she ___ (not/study), she'll fail.",
+    "options": [
+      "doesn't study",
+      "won't study",
+      "didn't study",
+      "isn't studying"
+    ],
+    "correct": "doesn't study",
+    "explanation": "İnkar If: doesn't study",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3125,
+    "type": "grammar",
+    "question": "If they ___ the bus, they'll be late.",
+    "options": [
+      "miss",
+      "will miss",
+      "missed",
+      "are missing"
+    ],
+    "correct": "miss",
+    "explanation": "If + Present Simple: if they miss",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · First Conditional"
+  },
+  {
+    "id": 3126,
+    "type": "grammar",
+    "question": "You look tired. You ___ rest.",
+    "options": [
+      "must",
+      "might",
+      "can",
+      "should"
+    ],
+    "correct": "should",
+    "explanation": "Tövsiyə → should",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3127,
+    "type": "grammar",
+    "question": "This is a hospital. You ___ be quiet.",
+    "options": [
+      "should",
+      "might",
+      "can",
+      "must"
+    ],
+    "correct": "must",
+    "explanation": "Məcburilik → must",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3128,
+    "type": "grammar",
+    "question": "I'm not sure. She ___ come later.",
+    "options": [
+      "must",
+      "should",
+      "can't",
+      "might"
+    ],
+    "correct": "might",
+    "explanation": "Qeyri-müəyyənlik → might",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3129,
+    "type": "grammar",
+    "question": "You ___ smoke in here. It's forbidden.",
+    "options": [
+      "should",
+      "might",
+      "must not",
+      "might not"
+    ],
+    "correct": "must not",
+    "explanation": "Qadağa → must not",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3130,
+    "type": "true-false",
+    "question": "True or False?\n\n«You should to see a doctor.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Modaldan sonra to işlənmir: You should SEE a doctor.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3131,
+    "type": "true-false",
+    "question": "True or False?\n\n«She must finish the report today.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. must + əsas forma. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3132,
+    "type": "true-false",
+    "question": "True or False?\n\n«He mights be at home.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Might -s almır: He MIGHT be at home.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3133,
+    "type": "true-false",
+    "question": "True or False?\n\n«You should eat more vegetables.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. should + əsas forma. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3134,
+    "type": "grammar",
+    "question": "It ___ be true — I'm not certain.",
+    "options": [
+      "must",
+      "should",
+      "can",
+      "might"
+    ],
+    "correct": "might",
+    "explanation": "Qeyri-müəyyənlik → might",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3135,
+    "type": "grammar",
+    "question": "Students ___ wear uniform at school.",
+    "options": [
+      "might",
+      "should",
+      "can",
+      "must"
+    ],
+    "correct": "must",
+    "explanation": "Məcburilik (qayda) → must",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3136,
+    "type": "grammar",
+    "question": "You ___ drink more water. It's good for you.",
+    "options": [
+      "must",
+      "might",
+      "can",
+      "should"
+    ],
+    "correct": "should",
+    "explanation": "Tövsiyə → should",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3137,
+    "type": "grammar",
+    "question": "She ___ be home — the lights are off.",
+    "options": [
+      "might",
+      "should",
+      "can",
+      "must"
+    ],
+    "correct": "might",
+    "explanation": "Ehtimal → might",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Modals (should/must/might)"
+  },
+  {
+    "id": 3138,
+    "type": "grammar",
+    "question": "The man ___ lives next door is a doctor.",
+    "options": [
+      "which",
+      "what",
+      "whose",
+      "who"
+    ],
+    "correct": "who",
+    "explanation": "İnsan → who",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3139,
+    "type": "grammar",
+    "question": "The book ___ I bought is great.",
+    "options": [
+      "who",
+      "what",
+      "whose",
+      "which"
+    ],
+    "correct": "which",
+    "explanation": "Əşya → which",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3140,
+    "type": "grammar",
+    "question": "This is the city ___ I was born.",
+    "options": [
+      "who",
+      "which",
+      "whose",
+      "where"
+    ],
+    "correct": "where",
+    "explanation": "Yer → where",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3141,
+    "type": "grammar",
+    "question": "The girl ___ bag was stolen called the police.",
+    "options": [
+      "who",
+      "which",
+      "that",
+      "whose"
+    ],
+    "correct": "whose",
+    "explanation": "Sahiblik → whose",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3142,
+    "type": "true-false",
+    "question": "True or False?\n\n«The film which I saw it was great.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. which artıq it-i əvəz edir: The film WHICH I saw was great.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3143,
+    "type": "true-false",
+    "question": "True or False?\n\n«She is the teacher who helped me most.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. İnsan → who. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3144,
+    "type": "true-false",
+    "question": "True or False?\n\n«This is the house where I grew up.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Yer → where. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3145,
+    "type": "true-false",
+    "question": "True or False?\n\n«He is the man which lives here.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. İnsan → who: He is the man WHO lives here.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3146,
+    "type": "grammar",
+    "question": "2005 is the year ___ I was born.",
+    "options": [
+      "who",
+      "which",
+      "where",
+      "when"
+    ],
+    "correct": "when",
+    "explanation": "Zaman → when",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3147,
+    "type": "grammar",
+    "question": "The woman ___ I met was very kind.",
+    "options": [
+      "which",
+      "whose",
+      "where",
+      "who"
+    ],
+    "correct": "who",
+    "explanation": "İnsan → who",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3148,
+    "type": "grammar",
+    "question": "The car ___ he drives is expensive.",
+    "options": [
+      "who",
+      "where",
+      "whose",
+      "which"
+    ],
+    "correct": "which",
+    "explanation": "Əşya → which",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3149,
+    "type": "grammar",
+    "question": "I know a man ___ father is famous.",
+    "options": [
+      "who",
+      "which",
+      "that",
+      "whose"
+    ],
+    "correct": "whose",
+    "explanation": "Sahiblik → whose",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Relative clauses"
+  },
+  {
+    "id": 3150,
+    "type": "grammar",
+    "question": "This book ___ by Tolstoy. (write)",
+    "options": [
+      "is written",
+      "was written",
+      "writes",
+      "wrote"
+    ],
+    "correct": "was written",
+    "explanation": "Keçmiş passiv: was + V3",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3151,
+    "type": "grammar",
+    "question": "English ___ all over the world. (speak)",
+    "options": [
+      "spoke",
+      "is spoken",
+      "is speaking",
+      "speaks"
+    ],
+    "correct": "is spoken",
+    "explanation": "İndiki passiv: is + V3",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3152,
+    "type": "grammar",
+    "question": "The cake ___ by the children. (eat)",
+    "options": [
+      "is eaten",
+      "were eating",
+      "was eaten",
+      "eat"
+    ],
+    "correct": "was eaten",
+    "explanation": "Keçmiş passiv: was + V3",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3153,
+    "type": "grammar",
+    "question": "The report ___ tomorrow. (submit)",
+    "options": [
+      "submits",
+      "will submit",
+      "will be submitted",
+      "is submitted"
+    ],
+    "correct": "will be submitted",
+    "explanation": "Gələcək passiv: will be + V3",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3154,
+    "type": "true-false",
+    "question": "True or False?\n\n«The car was stole last night.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. Passivdə V3 lazımdır: The car was STOLEN.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3155,
+    "type": "true-false",
+    "question": "True or False?\n\n«Mistakes were made.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Keçmiş passiv: were + V3. Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3156,
+    "type": "true-false",
+    "question": "True or False?\n\n«The letter is been written.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Yanlış",
+    "explanation": "Yanlış. İndiki passiv: The letter IS WRITTEN.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3157,
+    "type": "true-false",
+    "question": "True or False?\n\n«The bridge was built in 1990.»",
+    "options": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "correct": "Doğru",
+    "explanation": "Doğru. Keçmiş passiv: was + V3 (built). Düzgündür.",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3158,
+    "type": "grammar",
+    "question": "The window ___ by the ball. (break)",
+    "options": [
+      "broke",
+      "was broken",
+      "is breaking",
+      "breaks"
+    ],
+    "correct": "was broken",
+    "explanation": "Keçmiş passiv: was + V3",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3159,
+    "type": "grammar",
+    "question": "Dinner ___ at 7 every night. (serve)",
+    "options": [
+      "serves",
+      "served",
+      "is served",
+      "was served"
+    ],
+    "correct": "is served",
+    "explanation": "İndiki passiv: is + V3",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3160,
+    "type": "grammar",
+    "question": "New houses ___ in our area. (build)",
+    "options": [
+      "are building",
+      "were built",
+      "build",
+      "is built"
+    ],
+    "correct": "were built",
+    "explanation": "Keçmiş passiv çoxluq: were + V3",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
+  },
+  {
+    "id": 3161,
+    "type": "grammar",
+    "question": "The email ___ just now. (send)",
+    "options": [
+      "is sent",
+      "sent",
+      "was sent",
+      "will be sent"
+    ],
+    "correct": "was sent",
+    "explanation": "Keçmiş passiv: was + V3 sent",
+    "level": "B1",
+    "cefr": "B1",
+    "track": "general",
+    "topic": "Qrammatika · Passive voice"
   }
 ]

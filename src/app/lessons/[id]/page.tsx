@@ -146,8 +146,10 @@ function getLessonQuizzes(lesson: Lesson): QuizQuestion[] {
   // ── Qrammatika dərsləri (A1 / A2 / B1) ──────────────────
   const grammarTopic = GRAMMAR_TOPIC[lesson.id]
   if (grammarTopic) {
-    const grammarQs = shuffle(all.filter(q => q.topic === grammarTopic)).slice(0, 8)
-    // 4 əlavə söz sualı — eyni cefr+track-dan
+    // Hər mövzuda indi 20 sual var (8 köhnə + 12 yeni) → random 8 seç
+    const grammarPool = all.filter(q => q.topic === grammarTopic)
+    const grammarQs = shuffle(grammarPool).slice(0, 8)
+    // 4 əlavə söz sualı — eyni cefr+track-dan, qrammatika tipindən başqası
     const vocabQs = shuffle(
       all.filter(q => q.cefr === lesson.level && (q.track ?? 'legal') === 'general' && q.type !== 'grammar')
     ).slice(0, 4)
