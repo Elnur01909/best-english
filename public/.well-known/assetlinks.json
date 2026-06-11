@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.bestenglish.app",
+      "sha256_cert_fingerprints": [
+        "FB:2B:22:E3:DF:31:4E:E3:D3:06:BC:B6:F8:B7:DA:1F:71:26:B6:C6:70:C1:74:FD:E2:9F:E7:16:52:01:61:07"
+      ]
+    }
+  }
+]
