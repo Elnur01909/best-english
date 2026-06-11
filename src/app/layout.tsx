@@ -1,7 +1,15 @@
 import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import BattleChallengePopup from '@/components/BattleChallengePopup'
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister'
+
+// latin-ext Azərbaycan hərflərini (ə, ğ, ı, ş...) əhatə edir
+const inter = Inter({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Best English — TOLES Hazırlıq Platforması',
@@ -30,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="az">
+    <html lang="az" className={inter.variable}>
       <body className="min-h-screen">
         {children}
         <BattleChallengePopup />

@@ -77,9 +77,48 @@
   body {
     background: var(--bg);
     color: var(--text-1);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans), 'Inter', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11'; /* Inter: daha səliqəli a/g/y formaları */
+  }
+
+  /* Fonda incə işıq ləkələri — yastılıq hissini aradan qaldırır */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(600px 400px at 85% -5%,  rgba(99,102,241,0.07), transparent 70%),
+      radial-gradient(500px 350px at -10% 30%, rgba(245,158,11,0.05), transparent 70%),
+      radial-gradient(700px 500px at 50% 110%, rgba(99,102,241,0.05), transparent 70%);
+  }
+  .dark body::before {
+    background:
+      radial-gradient(600px 400px at 85% -5%,  rgba(129,140,248,0.10), transparent 70%),
+      radial-gradient(500px 350px at -10% 30%, rgba(251,191,36,0.04),  transparent 70%),
+      radial-gradient(700px 500px at 50% 110%, rgba(129,140,248,0.07), transparent 70%);
+  }
+
+  /* Başlıqlar — sıx izləmə premium tipoqrafiyanın açarıdır */
+  h1, h2 { letter-spacing: -0.025em; }
+  h3, h4 { letter-spacing: -0.015em; }
+
+  /* Klaviatura naviqasiyası üçün görünən fokus halqası */
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Hərəkət azaldılması istəyənlərə hörmət */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   /* Custom scrollbar */
