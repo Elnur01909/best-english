@@ -2,10 +2,9 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { supabase, getUser, getUserProfile, getDueCards, getWeeklyStats } from '@/lib/supabase'
+import { supabase, getUser, getUserProfile, getDueCards, getWeeklyStats, updateProfile } from '@/lib/supabase'
 import { LEVEL_COLORS, TOLES_COLORS, formatNumber } from '@/lib/utils'
 import { getTOLESProgress, TOLES_LEVELS } from '@/lib/toles'
-import { PROFICIENCY_HOURS, TOTAL_PATHWAY } from '@/lib/hours'
 import DailySchedule from '@/components/DailySchedule'
 import WeakPoints from '@/components/WeakPoints'
 import CEFRLadder from '@/components/CEFRLadder'
@@ -85,6 +84,10 @@ export default function DashboardPage() {
   const [dueCount, setDueCount] = useState(0)
   const [weeklyData, setWeeklyData] = useState<{ day: string; correct: number }[]>([])
   const [loading, setLoading] = useState(true)
+  // Adı olmayan (köhnə) istifadəçilər üçün ad-soyad formu
+  const [nameFirst, setNameFirst] = useState('')
+  const [nameLast, setNameLast] = useState('')
+  const [nameSaving, setNameSaving] = useState(false)
 
   useEffect(() => {
     async function load() {
@@ -115,6 +118,17 @@ export default function DashboardPage() {
   async function handleSignOut() {
     await supabase.auth.signOut()
     router.push('/')
+  }
+
+  async function handleSaveName(e: React.FormEvent) {
+    e.preventDefault()
+    if (!profile) return
+    const displayName = `${nameFirst.trim()} ${nameLast.trim()}`.trim()
+    if (!displayName) return
+    setNameSaving(true)
+    const { error } = await updateProfile(profile.id, { display_name: displayName })
+    setNameSaving(false)
+    if (!error) setProfile({ ...profile, display_name: displayName })
   }
 
   if (loading) {
@@ -206,6 +220,27 @@ export default function DashboardPage() {
             </Link>
           </div>
         </div>
+
+        {/* ── Ad-soyad formu (köhnə hesablar üçün bir dəfəlik) ──── */}
+        {profile && !profile.display_name && (
+          <form onSubmit={handleSaveName} className="card" style={{ borderColor: '#c7d2fe' }}>
+            <h2 className="font-semibold text-sm mb-1" style={{ color: 'var(--text-1)' }}>
+              👤 Özünü tanıt
+            </h2>
+            <p className="text-xs mb-3" style={{ color: 'var(--text-2)' }}>
+              Adını və soyadını yaz — sayt boyu sənə bu adla müraciət edək.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input type="text" value={nameFirst} onChange={(e) => setNameFirst(e.target.value)}
+                     className="input flex-1" placeholder="Ad" required autoComplete="given-name" />
+              <input type="text" value={nameLast} onChange={(e) => setNameLast(e.target.value)}
+                     className="input flex-1" placeholder="Soyad" required autoComplete="family-name" />
+              <button type="submit" disabled={nameSaving} className="btn-primary sm:w-auto">
+                {nameSaving ? 'Saxlanır...' : 'Yadda saxla'}
+              </button>
+            </div>
+          </form>
+        )}
 
         {/* ── Stat cards ───────────────────────────────────────── */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -339,27 +374,6 @@ export default function DashboardPage() {
             </ResponsiveContainer>
           </div>
         )}
-
-        {/* ── FSI Roadmap ──────────────────────────────────────── */}
-        <div className="card" style={{ background: 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)', borderColor: '#c4b5fd' }}>
-          <h2 className="font-semibold text-sm mb-3" style={{ color: 'var(--text-1)' }}>
-            ⏱️ Vaxt Roadmap (FSI Elmi Data)
-          </h2>
-          <p className="text-xs mb-3" style={{ color: 'var(--text-2)' }}>Gündə 45 dəqiqə ardıcıl məşq ilə:</p>
-          <div className="space-y-2">
-            {PROFICIENCY_HOURS.slice(0, 3).map((item, idx) => (
-              <div key={idx} className="flex justify-between items-center text-xs px-3 py-2 rounded-lg"
-                   style={{ background: 'rgba(255,255,255,0.7)', border: '1px solid #ddd6fe' }}>
-                <span style={{ color: 'var(--text-1)', fontWeight: 500 }}>{item.from} → {item.to}</span>
-                <span style={{ color: '#7c3aed', fontWeight: 600 }}>{item.months_2h} ay ({item.hours}h)</span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-3 px-3 py-2 rounded-lg text-xs font-semibold"
-               style={{ background: '#6366f1', color: 'white' }}>
-            🎯 Sıfırdan C1-ə: {TOTAL_PATHWAY.sifir_to_c1.months_2h} (gündə 2 saat ilə)
-          </div>
-        </div>
 
         <div className="pb-8" />
       </main>

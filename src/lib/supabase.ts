@@ -54,6 +54,17 @@ export async function updateUserLevel(userId: string, level: string, tolesLevel:
   return { data, error }
 }
 
+export async function updateProfile(
+  userId: string,
+  fields: { level?: string; toles_level?: string; display_name?: string }
+) {
+  const { data, error } = await supabase
+    .from('user_profiles')
+    .update(fields)
+    .eq('id', userId)
+  return { data, error }
+}
+
 // ─── SRS — Lüğət irəliləyişi ─────────────────────────
 export async function getDueCards(userId: string, limit = 20) {
   const { data, error } = await supabase

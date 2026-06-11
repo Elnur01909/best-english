@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { signUp } from '@/lib/supabase'
+import { signUp, updateProfile } from '@/lib/supabase'
 import { LEVEL_DESCRIPTIONS, cefrToToles } from '@/lib/utils'
 import type { CEFRLevel } from '@/types'
 
@@ -20,6 +20,8 @@ const LEVEL_META: Record<CEFRLevel, { emoji: string; color: string; bg: string }
 export default function RegisterPage() {
   const router = useRouter()
   const [step, setStep] = useState<1 | 2>(1)
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [level, setLevel] = useState<CEFRLevel>('B1')
@@ -38,10 +40,13 @@ export default function RegisterPage() {
 
     if (data.user) {
       const tolesLevel = cefrToToles(level as CEFRLevel)
-      const { error: updateError } = await import('@/lib/supabase').then(m =>
-        m.updateUserLevel(data.user!.id, level, tolesLevel)
-      )
-      if (updateError) { setError('Səviyyə saxlanarkən xəta'); setLoading(false); return }
+      const displayName = `${firstName.trim()} ${lastName.trim()}`.trim()
+      const { error: updateError } = await updateProfile(data.user.id, {
+        level,
+        toles_level: tolesLevel,
+        display_name: displayName,
+      })
+      if (updateError) { setError('Profil saxlanarkən xəta'); setLoading(false); return }
     }
 
     router.push('/onboarding')
@@ -114,6 +119,18 @@ export default function RegisterPage() {
           <form onSubmit={handleSubmit} className="space-y-4">
             {step === 1 ? (
               <>
+                <div className="flex gap-3">
+                  <div className="flex-1">
+                    <label className="block text-sm font-medium mb-1.5" style={{ color: 'var(--text-1)' }}>Ad</label>
+                    <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)}
+                           className="input" placeholder="Elnur" required autoComplete="given-name" />
+                  </div>
+                  <div className="flex-1">
+                    <label className="block text-sm font-medium mb-1.5" style={{ color: 'var(--text-1)' }}>Soyad</label>
+                    <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)}
+                           className="input" placeholder="Məmmədov" required autoComplete="family-name" />
+                  </div>
+                </div>
                 <div>
                   <label className="block text-sm font-medium mb-1.5" style={{ color: 'var(--text-1)' }}>Email</label>
                   <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}

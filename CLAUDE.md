@@ -147,8 +147,11 @@ Claude Code sessiyasını belə başla: "CLAUDE.md-ə bax. Bu session: [tapşır
 
 **Günlük Proqram (Hissə 5) — ✅ TAMAMLANMIŞ:**
 - ✅ DailySchedule: Səhər/Gündüz/Axşam/Gecə 4-sessiya
-- ✅ FSI Hours Roadmap: Vaxt reallığı, "Sıfırdan C1-ə 2-3 il"
+- ❌ FSI Hours Roadmap: istifadəçi istəyi ilə LƏĞV EDİLDİ (2026-06-11, lib/hours.ts silindi)
 - ✅ Konsistensiya Vurğusu: 45 dəq gündə > 5h həftədə
+
+**Qeydiyyat:** Ad + Soyad soruşulur → `user_profiles.display_name`-ə yazılır; sayt boyu müraciət bu adla.
+Köhnə (adı olmayan) hesablar üçün dashboard-da bir dəfəlik "Özünü tanıt" formu çıxır.
 
 ---
 
