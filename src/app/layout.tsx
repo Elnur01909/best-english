@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import BattleChallengePopup from '@/components/BattleChallengePopup'
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister'
+import BottomNav from '@/components/BottomNav'
 
 // latin-ext Azərbaycan hərflərini (ə, ğ, ı, ş...) əhatə edir
 const inter = Inter({
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="az" className={inter.variable}>
       <body className="min-h-screen">
         {children}
+        <BottomNav />
         <BattleChallengePopup />
         <ServiceWorkerRegister />
       </body>
