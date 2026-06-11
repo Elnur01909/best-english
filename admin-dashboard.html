@@ -377,4 +377,53 @@ async function loadQuiz(){
   document.getElementById('q-a').textContent=a+'%';
   const um={};(users||[]).forEach(u=>um[u.id]=u);
   const bu={};qr.forEach(q=>{if(!bu[q.user_id])bu[q.user_id]={t:0,c:0};bu[q.user_id].t++;if(q.correct)bu[q.user_id].c++;});
-  document.getElementById('qtbl').innerHTML=`<table><thead><tr><th>#</th><th>Email</th><th>Səviyyə
+  document.getElementById('qtbl').innerHTML=`<table><thead><tr><th>#</th><th>Email</th><th>Səviyyə</th><th>Cavab</th><th>Düzgün</th><th>Yanlış</th><th>Dəqiqlik</th></tr></thead><tbody>
+  ${Object.entries(bu).sort((a,b)=>b[1].t-a[1].t).map(([uid,s],i)=>{
+    const u=um[uid]||{},p=Math.round(s.c/s.t*100),col=p>=80?'var(--green)':p>=60?'var(--orange)':'var(--red)';
+    return`<tr><td style="color:var(--muted);font-size:11px">${i+1}</td>
+    <td style="font-size:12px">${u.email||uid.slice(0,10)+'...'}</td>
+    <td>${lvlBadge(u.level)}</td>
+    <td style="font-weight:700">${s.t}</td>
+    <td style="color:var(--green);font-weight:700">${s.c}</td>
+    <td style="color:var(--red);font-weight:700">${s.t-s.c}</td>
+    <td><span style="font-weight:800;color:${col}">${p}%</span></td></tr>`;
+  }).join('')||'<tr><td colspan="7" class="empty">Hələ nəticə yoxdur</td></tr>'}
+  </tbody></table>`;
+}
+
+async function loadVocab(){
+  const [{data:vp},{data:users}]=await Promise.all([
+    sb.from('user_vocab_progress').select('user_id,vocab_id,next_review'),
+    sb.from('user_profiles').select('id,email,level')
+  ]);
+  if(!vp)return;
+  const now=new Date().toISOString(),um={};
+  (users||[]).forEach(u=>um[u.id]=u);
+  const bu={};vp.forEach(v=>{if(!bu[v.user_id])bu[v.user_id]={c:0,d:0};bu[v.user_id].c++;if(v.next_review&&v.next_review<=now)bu[v.user_id].d++;});
+  document.getElementById('v-t').textContent=vp.length;
+  document.getElementById('v-u').textContent=Object.keys(bu).length;
+  document.getElementById('v-d').textContent=Object.values(bu).reduce((a,b)=>a+b.d,0);
+  document.getElementById('vtbl').innerHTML=`<table><thead><tr><th>#</th><th>Email</th><th>Səviyyə</th><th>Öyrənilən</th><th>Bu gün due</th></tr></thead><tbody>
+  ${Object.entries(bu).sort((a,b)=>b[1].c-a[1].c).map(([uid,s],i)=>{
+    const u=um[uid]||{};
+    return`<tr><td style="color:var(--muted);font-size:11px">${i+1}</td>
+    <td style="font-size:12px">${u.email||uid.slice(0,10)+'...'}</td>
+    <td>${lvlBadge(u.level)}</td>
+    <td style="font-weight:700;color:var(--accent)">${s.c}</td>
+    <td style="font-weight:700;color:var(--orange)">${s.d}</td></tr>`;
+  }).join('')||'<tr><td colspan="5" class="empty">Hələ vocab irəliləyişi yoxdur</td></tr>'}
+  </tbody></table>`;
+}
+
+// loadAll is called only after password check (or if already authed)
+if(sessionStorage.getItem('admin_auth')){
+  document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('auth-overlay').style.display='none';
+    document.getElementById('main-body').style.display='flex';
+    loadAll();
+  });
+}
+</script>
+</div><!-- /main-body -->
+</body>
+</html>

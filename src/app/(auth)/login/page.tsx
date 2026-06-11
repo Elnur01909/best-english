@@ -106,9 +106,12 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1.5" style={{ color: 'var(--text-1)' }}>
-                Şifrə
-              </label>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="text-sm font-medium" style={{ color: 'var(--text-1)' }}>Şifrə</label>
+                <Link href="/forgot-password" className="text-xs font-medium" style={{ color: 'var(--brand)' }}>
+                  Şifrəni unutdum?
+                </Link>
+              </div>
               <input
                 type="password"
                 value={password}
