@@ -106,6 +106,101 @@ function IrregularVerbsModal({ onClose }: { onClose: () => void }) {
   )
 }
 
+// ─── 24 ən vacib qaydasız cəm isimlər ────────────────────
+// type: 'same' = dəyişməz, 'vowel' = sait dəyişir, 'special' = xüsusi forma
+const IRREGULAR_PLURALS: Array<{ sing: string; plural: string; az: string; type: 'same' | 'vowel' | 'special' }> = [
+  { sing: 'man',        plural: 'men',       az: 'kişi',           type: 'vowel' },
+  { sing: 'woman',      plural: 'women',     az: 'qadın',          type: 'vowel' },
+  { sing: 'child',      plural: 'children',  az: 'uşaq',           type: 'special' },
+  { sing: 'person',     plural: 'people',    az: 'insan / şəxs',   type: 'special' },
+  { sing: 'foot',       plural: 'feet',      az: 'ayaq',           type: 'vowel' },
+  { sing: 'tooth',      plural: 'teeth',     az: 'diş',            type: 'vowel' },
+  { sing: 'goose',      plural: 'geese',     az: 'qaz',            type: 'vowel' },
+  { sing: 'mouse',      plural: 'mice',      az: 'siçan',          type: 'vowel' },
+  { sing: 'ox',         plural: 'oxen',      az: 'öküz',           type: 'special' },
+  { sing: 'sheep',      plural: 'sheep',     az: 'qoyun',          type: 'same' },
+  { sing: 'deer',       plural: 'deer',      az: 'maral',          type: 'same' },
+  { sing: 'fish',       plural: 'fish',      az: 'balıq',          type: 'same' },
+  { sing: 'species',    plural: 'species',   az: 'növ',            type: 'same' },
+  { sing: 'series',     plural: 'series',    az: 'silsilə',        type: 'same' },
+  { sing: 'means',      plural: 'means',     az: 'vasitə',         type: 'same' },
+  { sing: 'aircraft',   plural: 'aircraft',  az: 'təyyarə',        type: 'same' },
+  { sing: 'crisis',     plural: 'crises',    az: 'böhran',         type: 'special' },
+  { sing: 'analysis',   plural: 'analyses',  az: 'təhlil',         type: 'special' },
+  { sing: 'basis',      plural: 'bases',     az: 'əsas',           type: 'special' },
+  { sing: 'thesis',     plural: 'theses',    az: 'tezis',          type: 'special' },
+  { sing: 'phenomenon', plural: 'phenomena', az: 'hadisə',         type: 'special' },
+  { sing: 'criterion',  plural: 'criteria',  az: 'meyar',          type: 'special' },
+  { sing: 'datum',      plural: 'data',      az: 'məlumat',        type: 'special' },
+  { sing: 'cactus',     plural: 'cacti',     az: 'kaktus',         type: 'special' },
+]
+
+// ─── Qaydasız Cəmlər Modal ────────────────────────────────
+function IrregularPluralsModal({ onClose }: { onClose: () => void }) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl w-full max-w-lg max-h-[85vh] flex flex-col"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Başlıq */}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 dark:border-gray-700 shrink-0">
+          <div>
+            <h2 className="font-bold text-gray-900 dark:text-white">📋 24 Ən Vacib Qaydasız Cəm</h2>
+            <p className="text-xs text-gray-400 mt-0.5">Tək → Cəm</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-500 hover:bg-red-100 hover:text-red-600 transition-colors text-lg font-bold"
+            aria-label="Bağla"
+          >
+            ×
+          </button>
+        </div>
+
+        {/* Cədvəl */}
+        <div className="overflow-y-auto flex-1 px-2 py-2">
+          {/* Başlıq sətri */}
+          <div className="grid grid-cols-3 gap-1 px-3 py-1.5 mb-1">
+            <span className="text-xs font-bold text-gray-400 uppercase">Tək</span>
+            <span className="text-xs font-bold text-blue-500 uppercase">Cəm</span>
+            <span className="text-xs font-bold text-green-500 uppercase">Azərbaycanca</span>
+          </div>
+
+          <div className="space-y-1">
+            {IRREGULAR_PLURALS.map((n) => {
+              const rowBg = n.type === 'same'
+                ? 'bg-green-50 dark:bg-green-950/40'
+                : n.type === 'vowel'
+                  ? 'bg-blue-50 dark:bg-blue-950/40'
+                  : 'bg-gray-50 dark:bg-gray-800/40'
+              return (
+                <div key={n.sing} className={`grid grid-cols-3 gap-1 px-3 py-2 rounded-lg ${rowBg}`}>
+                  <span className="font-semibold text-gray-900 dark:text-white text-sm">{n.sing}</span>
+                  <span className="font-semibold text-blue-700 dark:text-blue-300 text-sm">{n.plural}</span>
+                  <span className="text-green-700 dark:text-green-400 text-xs leading-tight">{n.az}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Alt izah */}
+        <div className="px-5 py-3 border-t border-gray-200 dark:border-gray-700 shrink-0">
+          <div className="flex items-center gap-4 text-xs text-gray-500">
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-green-100 dark:bg-green-950 inline-block" />Dəyişməz</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-blue-100 dark:bg-blue-950 inline-block" />Sait dəyişir</span>
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-gray-100 dark:bg-gray-800 inline-block" />Xüsusi forma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ─── Dərs → qrammatika mövzusu xəritəsi ─────────────────
 const GRAMMAR_TOPIC: Record<number, string> = {
   28: 'Qrammatika · To be',
@@ -201,6 +296,7 @@ export default function LessonPage() {
   const [completed, setCompleted] = useState(false)
   const [vocabItems, setVocabItems] = useState<VocabItem[]>([])
   const [showIrregular, setShowIrregular] = useState(false)
+  const [showPlurals, setShowPlurals] = useState(false)
 
   // ── Quiz state ───────────────────────────────────────────
   const [stage, setStage] = useState<Stage>('lesson')
@@ -418,6 +514,8 @@ export default function LessonPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       {/* Qaydasız feillər üzən pəncərəsi */}
       {showIrregular && <IrregularVerbsModal onClose={() => setShowIrregular(false)} />}
+      {/* Qaydasız cəmlər üzən pəncərəsi */}
+      {showPlurals && <IrregularPluralsModal onClose={() => setShowPlurals(false)} />}
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3">
         <div className="max-w-2xl mx-auto flex items-center gap-3">
           <button onClick={() => router.push('/lessons')} className="text-gray-500">← Geri</button>
@@ -452,10 +550,10 @@ export default function LessonPage() {
           <div className="card">
             <div className="flex items-center justify-between mb-3">
               <h2 className="font-semibold text-gray-900 dark:text-white">📖 İzah</h2>
-              {/* Qaydasız feillər cədvəli düyməsi — yalnız Past Simple dərsi (id 37) */}
-              {lesson.id === 37 && (
+              {/* Nümunə cədvəli düyməsi — Past Simple (id 37: feillər) / Plural (id 30: cəmlər) */}
+              {(lesson.id === 37 || lesson.id === 30) && (
                 <button
-                  onClick={() => setShowIrregular(true)}
+                  onClick={() => (lesson.id === 37 ? setShowIrregular(true) : setShowPlurals(true))}
                   className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-900 transition-colors"
                 >
                   📋 Nümunə Cədvəli
