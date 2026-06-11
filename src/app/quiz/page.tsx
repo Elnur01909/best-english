@@ -300,23 +300,24 @@ export default function QuizPage() {
 
   // ─── Quiz ekranı ────────────────────────────────
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
-      <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
-        <button onClick={() => setStage('select')} className="text-gray-500">← Çıx</button>
+    <div className="min-h-screen flex flex-col" style={{ background: 'var(--bg)' }}>
+      <header className="px-4 py-3 flex items-center justify-between sticky top-0 z-40"
+              style={{ background: 'var(--surface)', borderBottom: '1px solid var(--border)' }}>
+        <button onClick={() => setStage('select')} className="btn-ghost">← Çıx</button>
         <div className="flex items-center gap-2">
           <span className={`badge text-white border-0 ${CEFR_COLOR[cefr]}`}>{levelLabel}</span>
-          <span className="text-sm text-gray-500">{currentIdx + 1} / {questions.length}</span>
+          <span className="text-sm" style={{ color: 'var(--text-2)' }}>{currentIdx + 1} / {questions.length}</span>
         </div>
-        <span className="text-sm text-green-600">✓ {results.filter(Boolean).length}</span>
+        <span className="text-sm font-semibold" style={{ color: 'var(--success)' }}>✓ {results.filter(Boolean).length}</span>
       </header>
 
-      <div className="h-1 bg-gray-200">
-        <div className="h-1 bg-blue-500 transition-all" style={{ width: `${(currentIdx / questions.length) * 100}%` }} />
+      <div className="progress-bar" style={{ borderRadius: 0, height: '4px' }}>
+        <div className="progress-fill" style={{ borderRadius: 0, width: `${(currentIdx / questions.length) * 100}%` }} />
       </div>
 
       <main className="flex-1 overflow-y-auto px-4 py-6 max-w-2xl mx-auto w-full">
         {current && (
-          <div>
+          <div key={currentIdx} className="animate-fade-up">
             <div className="flex items-start gap-3 mb-6">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-2 flex-wrap">
@@ -356,15 +357,11 @@ export default function QuizPage() {
                 const isCorrect = opt === current.correct
                 const isSelected = opt === selected
 
-                let cls = 'flex-1 p-3.5 rounded-xl border-2 text-left font-medium transition-all '
-                if (!showAnswer) {
-                  cls += 'border-gray-200 dark:border-gray-700 hover:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950'
-                } else if (isCorrect) {
-                  cls += 'border-green-400 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300'
-                } else if (isSelected) {
-                  cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-800 dark:text-red-300'
-                } else {
-                  cls += 'border-gray-200 dark:border-gray-700 opacity-50'
+                let cls = 'answer-option flex-1 '
+                if (showAnswer) {
+                  if (isCorrect) cls += 'answer-correct'
+                  else if (isSelected) cls += 'answer-wrong'
+                  else cls += 'answer-dim'
                 }
 
                 const displayLabel = current.type === 'true-false' ? (TF_LABEL[opt] ?? opt) : opt
