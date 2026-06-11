@@ -1,0 +1,409 @@
+# 05_unit1B_theory.md
+
+```yaml
+unit:
+  id: UNIT_1B
+  title: The Legal Profession
+  level: Higher
+
+# ==========================================
+# COLLOCATIONS
+# ==========================================
+
+collocations:
+
+  definition: >
+    Collocations are words that naturally occur together.
+    Accurate legal English depends heavily on correct collocation usage.
+
+  examples:
+
+    good:
+
+      - draft a contract
+      - honour a contract
+      - breach a contract
+      - qualify as a lawyer
+      - act for a client
+      - gain experience
+      - issue a claim
+      - sit as a judge
+      - take an exam
+      - suffer a loss
+      - set up a business
+      - run a business
+      - claim damages
+
+    bad:
+
+      - write a contract
+      - respect a contract
+      - infringe a contract
+
+  principle:
+    Some nouns collocate with many verbs.
+    Some nouns collocate with only one verb.
+    Accurate legal communication requires memorisation
+    of standard legal collocations.
+
+# ==========================================
+# PREPOSITIONS
+# ==========================================
+
+prepositions:
+
+  definition: >
+    Legal English frequently depends upon fixed
+    preposition patterns.
+
+  examples:
+
+    attorney_at_law:
+      pattern: attorney at law
+
+    work_on:
+      pattern: work on something
+
+    cheque_for:
+      pattern: send a cheque for an amount
+
+    subject_to:
+      pattern: subject to something
+
+    known_as:
+      pattern: known as
+
+    qualify_as:
+      pattern: qualify as
+
+    partnership_with:
+      pattern: go into partnership with
+
+    specialise_in:
+      pattern: specialise in
+
+    work_in:
+      pattern: work in a business
+
+    preside_over:
+      pattern: preside over a case
+
+    based_in:
+      pattern: based in a city or country
+
+    claim_against:
+      pattern: claim against somebody
+
+    dispute_with:
+      pattern: be in dispute with somebody
+
+    look_at:
+      pattern: look at a document
+
+    import_from:
+      pattern: import goods from a country
+
+    import_into:
+      pattern: import goods into a country
+
+# ==========================================
+# SOLICITORS AND BARRISTERS
+# ==========================================
+
+english_legal_profession:
+
+  solicitor:
+
+    role:
+      - advises clients
+      - drafts documents
+      - represents clients
+      - issues claims
+      - conducts litigation
+
+    work_environment:
+      - law firms
+      - partnerships
+      - legal practices
+
+    career_path:
+
+      stages:
+        - law student
+        - trainee solicitor
+        - associate
+        - partner
+
+    client_relationship:
+      Usually first lawyer contacted by client.
+
+  barrister:
+
+    role:
+      - advocacy
+      - court representation
+      - legal opinions
+      - specialist advice
+
+    work_environment:
+      - chambers
+      - self-employed practice
+
+    restrictions:
+      - cannot form partnerships
+
+    rights:
+      - right of audience in all courts
+
+  judge:
+
+    appointment:
+      No separate judicial examination.
+
+    requirement:
+      Significant legal experience required.
+
+# ==========================================
+# LAW FIRM STRUCTURE
+# ==========================================
+
+law_firm_hierarchy:
+
+  trainee:
+    description:
+      Lawyer completing training contract.
+
+  associate:
+    description:
+      Qualified lawyer employed by firm.
+
+  partner:
+    description:
+      Lawyer owning part of firm.
+
+  client:
+    description:
+      Person paying for legal services.
+
+# ==========================================
+# SPECIALIST LEGAL SERVICES
+# ==========================================
+
+specialist_practice_areas:
+
+  personal_injury:
+    concepts:
+      - negligence
+      - damages
+      - no win-no fee
+
+  employment:
+    concepts:
+      - unfair dismissal
+      - discrimination
+      - equal pay
+      - redundancy
+
+  immigration:
+    concepts:
+      - visas
+      - residence rights
+      - work permits
+
+  wills_and_probate:
+    concepts:
+      - wills
+      - estate administration
+
+  family:
+    concepts:
+      - divorce
+      - children
+      - custody
+
+  intellectual_property:
+    concepts:
+      - copyright
+      - patents
+      - trademarks
+
+  company_and_business:
+    concepts:
+      - mergers
+      - formation of companies
+      - insolvency
+
+  conveyancing:
+    concepts:
+      - property transfers
+      - title investigation
+      - land ownership
+
+# ==========================================
+# HIGHER LEVEL AREAS OF LAW
+# ==========================================
+
+areas_of_law:
+
+  contract_law:
+    focus:
+      Private agreements and obligations.
+
+  tort_law:
+    focus:
+      Civil wrongs and damages.
+
+  business_and_company_law:
+    focus:
+      Creation and operation of businesses.
+
+  employment_law:
+    focus:
+      Workplace rights and obligations.
+
+  family_law:
+    focus:
+      Marriage, divorce and children.
+
+  intellectual_property_law:
+    focus:
+      Protection of creative and inventive works.
+
+  maritime_law:
+    focus:
+      Ships, cargo and sea transport.
+
+  equity_and_trusts:
+    focus:
+      Trust property and fiduciary obligations.
+
+  conveyancing:
+    focus:
+      Transfer of land ownership.
+
+  IT_law:
+    focus:
+      Information systems, internet and technology.
+
+# ==========================================
+# LEGAL LETTER WRITING REGISTER
+# ==========================================
+
+formal_legal_register:
+
+  preferred_terms:
+
+    informal_to_formal:
+
+      using_the_civil_court_to_start_off_a_legal_process:
+        issuing_a_claim
+
+      writing_documents:
+        drafting
+
+      real_estate_transfer:
+        conveyancing
+
+      start_a_case:
+        sue
+
+      wrong_advice:
+        negligent_advice
+
+      discussing_problems_to_reach_agreement:
+        mediation
+
+      out_of_work:
+        redundant
+
+      lawyers_who_work_alone:
+        sole_practitioners
+
+      pay_when_ill:
+        sick_pay
+
+      time_off_after_childbirth:
+        maternity_leave
+
+  principles:
+
+    - prefer precise legal terminology
+    - avoid conversational wording
+    - use recognised legal vocabulary
+    - maintain professional tone
+
+# ==========================================
+# TRAINEE SOLICITOR EXPERIENCE
+# ==========================================
+
+training_contract_model:
+
+  duration:
+    2 years
+
+  structure:
+
+    seat_1:
+      corporate_law
+
+    seat_2:
+      property_law
+
+    seat_3:
+      intellectual_property
+
+    seat_4:
+      variable_department
+
+  skills_developed:
+
+    - drafting
+    - client meetings
+    - conveyancing
+    - landlord and tenant matters
+    - intellectual property work
+    - transaction support
+
+# ==========================================
+# CORE HIGHER-LEVEL LEGAL CONCEPTS
+# ==========================================
+
+concepts:
+
+  mediation:
+    definition:
+      Structured settlement discussions with neutral facilitator.
+
+  associate:
+    definition:
+      Employed lawyer in law firm.
+
+  partner:
+    definition:
+      Lawyer sharing ownership of firm.
+
+  chambers:
+    definition:
+      Office shared by barristers.
+
+  audience:
+    definition:
+      Right to appear before court.
+
+  equal_pay:
+    definition:
+      Equal compensation for equal work.
+
+  copyright:
+    definition:
+      Legal protection for creative works.
+
+  merger:
+    definition:
+      Combination of companies into one entity.
+
+  insolvency:
+    definition:
+      Inability to pay debts.
+
+```

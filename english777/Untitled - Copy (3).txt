@@ -1,0 +1,329 @@
+# 04_unit1A_answers.md
+
+```yaml id="x7d9nm"
+unit: UNIT_1A
+title: The Legal Profession
+type: answer_key
+
+# ==========================================
+# WORKING IN LAW
+# ==========================================
+
+U1A_WIL_E1:
+
+  a: Barrister
+  b: Attorney
+  c: Solicitor
+  d: Lawyer
+
+# ------------------------------------------
+
+U1A_WIL_E2:
+
+  1: True
+  2: True
+  3: False
+  4: True
+  5: False
+
+# ==========================================
+# CIVIL OR CRIMINAL LAW
+# ==========================================
+
+U1A_CIVIL_E1:
+
+  a: Civil
+  b: Civil
+  c: Criminal
+  d: Civil
+  e: Criminal
+
+# ------------------------------------------
+
+U1A_CIVIL_E2:
+
+  1: True
+  2: False
+  3: True
+  4: True
+  5: False
+  6: False
+
+# ------------------------------------------
+
+U1A_CIVIL_E3:
+
+  issue_claim:
+    start a claim in civil court
+
+  pay_fee:
+    pay the court an amount of money
+
+  serve_claim:
+    send claim documents to defendant
+
+  respond_to_claim:
+    confirm receipt and provide response
+
+  hear_case:
+    listen to evidence and arguments
+
+  find_in_favour:
+    decide who wins
+
+  give_judgment:
+    officially announce decision
+
+  make_order:
+    officially state obligations
+
+  bailiff:
+    enforce judgment and recover property
+
+# ------------------------------------------
+
+U1A_CIVIL_E4:
+
+  a: issues
+  b: fee
+  c: serves
+  d: respond
+  e: hear
+  f: find
+  g: order
+  h: bailiff
+
+# ==========================================
+# LAW OF TORT
+# ==========================================
+
+U1A_TORT_E1:
+
+  a: >
+      Lawyers say "breach a duty of care".
+
+  b: >
+      Tort law is an area of civil law.
+
+  c: >
+      A tort is a type of civil wrong.
+
+  d: >
+      Negligence.
+
+  e: >
+      Starting proceedings against someone.
+
+  f: >
+      Damages.
+
+  g: >
+      A no win-no fee arrangement.
+
+# ------------------------------------------
+
+U1A_TORT_E2:
+
+  a: suing
+  b: negligence
+  c: damages
+  d: allegations
+  e: grounds
+
+# ==========================================
+# AREAS OF LAW
+# ==========================================
+
+U1A_AREA_E1:
+
+  Mary:
+    Contract Law
+
+  Michael:
+    Company Law
+
+  Tom:
+    Land Law
+
+  Cory:
+    Tort Law
+
+  Polly:
+    Equity and Trusts
+
+  Kayleigh:
+    Employment Law
+
+  Sunitta:
+    Family Law
+
+  David:
+    Immigration Law
+
+  Jennifer:
+    Intellectual Property Law
+
+  Alistair:
+    Criminal Law
+
+# ------------------------------------------
+
+U1A_AREA_E2:
+
+  a: criminal law
+  b: merged
+  c: intellectual property law
+  d: drafting
+  e: the law of equity and trusts
+  f: based in
+  g: family law
+  h: goods
+  i: the law of tort
+  j: valid
+
+# ------------------------------------------
+
+U1A_AREA_E3:
+
+  insolvent:
+    not having enough money to pay debts
+
+  merger:
+    joining together of companies
+
+  tenant:
+    person paying rent
+
+  conveyancing:
+    legal transfer of ownership
+
+  discriminate:
+    treat differently because of age/sex/race
+
+  unfair_dismissal:
+    dismissal without valid reason
+
+  sick_pay:
+    pay received during illness
+
+  lease:
+    right to use land/buildings for fixed period
+
+  formation_of_business:
+    creation of business
+
+  partnership:
+    business owned by at least two people
+
+  maternity_leave:
+    leave connected with childbirth
+
+  capital:
+    money/assets owned by business
+
+  redundancy:
+    job loss because position no longer needed
+
+  landlord:
+    owner receiving rent
+
+  real_estate:
+    land and buildings
+
+# ------------------------------------------
+
+U1A_AREA_E4:
+
+  Employment_Law:
+
+    - unfair dismissal
+    - maternity leave
+    - discriminate
+    - sick pay
+    - redundancy
+
+  Business_Law:
+
+    - formation of a business
+    - capital
+    - insolvent
+    - partnership
+    - merger
+
+  Land_Law:
+
+    - lease of land and buildings
+    - landlord
+    - tenant
+    - conveyancing
+    - real estate
+
+# ------------------------------------------
+
+U1A_AREA_E5:
+
+  a: maternity leave
+  b: unfair dismissal
+  c: sick pay
+  d: discriminate
+  e: redundancy
+
+# ------------------------------------------
+
+U1A_AREA_E6:
+
+  a: formation of a business
+  b: capital
+  c: insolvent
+  d: merger
+  e: partnership
+
+# ------------------------------------------
+
+U1A_AREA_E7:
+
+  a: tenant
+  b: conveyancing
+  c: lease
+  d: landlord
+  e: real estate
+
+# ==========================================
+# TOLES FOUNDATION PRACTICE
+# ==========================================
+
+U1A_TOLES_E1:
+
+  1: make
+  2: to
+  3: the
+  4: damages
+  5: prosecute
+
+# ------------------------------------------
+
+U1A_TOLES_E2:
+
+  1: False
+  2: True
+  3: False
+  4: True
+  5: True
+
+# ------------------------------------------
+
+U1A_TOLES_E3:
+
+  sequence:
+
+    1: "*"
+    2: c
+    3: a
+    4: d
+    5: f
+    6: h
+    7: b
+    8: g
+    9: e
+
+```

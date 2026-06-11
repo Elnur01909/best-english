@@ -15,72 +15,136 @@ export default function LoginPage() {
     e.preventDefault()
     setLoading(true)
     setError('')
-
     const { error } = await signIn(email, password)
-
     if (error) {
       setError('Email və ya şifrə yanlışdır.')
       setLoading(false)
       return
     }
-
     router.push('/dashboard')
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-sm">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Xoş gəldin</h1>
-          <p className="text-gray-500 mt-1">Hesabına daxil ol</p>
+    <div className="min-h-screen flex" style={{ background: 'var(--bg)' }}>
+
+      {/* Left panel — decorative (hidden on mobile) */}
+      <div className="hidden lg:flex flex-col justify-between w-1/2 p-12"
+           style={{ background: 'linear-gradient(145deg, #6366f1 0%, #4338ca 60%, #312e81 100%)' }}>
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/20 text-white font-bold text-sm">
+            BE
+          </div>
+          <span className="text-white font-bold text-lg">Best English</span>
         </div>
 
-        <form onSubmit={handleSubmit} className="card space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="input"
-              placeholder="email@example.com"
-              required
-            />
+        <div>
+          <div className="text-5xl mb-6">⚖️</div>
+          <h2 className="text-white text-3xl font-bold leading-snug mb-4">
+            TOLES Sertifikatına<br/>elmi metodla hazırlaş
+          </h2>
+          <p className="text-indigo-200 text-base leading-relaxed">
+            SRS alqoritmi, 9 test formatı, 27 dərs və canlı rəqabət
+            ilə hüquq ingilis dilini mənimsə.
+          </p>
+
+          <div className="mt-8 space-y-3">
+            {[
+              { icon: '🧠', text: '378 hüquqi termin, SM-2 alqoritmi' },
+              { icon: '📝', text: '~1600 sual, Foundation→Advanced' },
+              { icon: '🏆', text: 'Canlı TOLES Mini-Test yarışı' },
+            ].map((f) => (
+              <div key={f.text} className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center text-sm"
+                     style={{ background: 'rgba(255,255,255,0.15)' }}>
+                  {f.icon}
+                </div>
+                <span className="text-indigo-100 text-sm">{f.text}</span>
+              </div>
+            ))}
           </div>
+        </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              Şifrə
-            </label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="input"
-              placeholder="••••••••"
-              required
-            />
-          </div>
-
-          {error && (
-            <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2">
-              {error}
-            </p>
-          )}
-
-          <button type="submit" disabled={loading} className="btn-primary w-full">
-            {loading ? 'Yüklənir...' : 'Daxil Ol'}
-          </button>
-        </form>
-
-        <p className="text-center text-sm text-gray-500 mt-4">
-          Hesabın yoxdur?{' '}
-          <Link href="/register" className="text-blue-600 hover:underline font-medium">
-            Qeydiyyatdan keç
-          </Link>
+        <p className="text-indigo-300 text-xs">
+          © 2025 Best English · TOLES Hazırlıq Platforması
         </p>
+      </div>
+
+      {/* Right panel — form */}
+      <div className="flex-1 flex items-center justify-center px-5 py-10">
+        <div className="w-full max-w-sm animate-fade-up">
+
+          {/* Mobile logo */}
+          <div className="flex items-center gap-2.5 mb-8 lg:hidden">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
+                 style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>
+              BE
+            </div>
+            <span className="font-bold text-base" style={{ color: 'var(--text-1)' }}>Best English</span>
+          </div>
+
+          <h1 className="text-2xl font-bold mb-1" style={{ color: 'var(--text-1)' }}>
+            Xoş gəldin 👋
+          </h1>
+          <p className="text-sm mb-7" style={{ color: 'var(--text-2)' }}>
+            Hesabına daxil ol
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium mb-1.5" style={{ color: 'var(--text-1)' }}>
+                Email
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="input"
+                placeholder="email@example.com"
+                required
+                autoComplete="email"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1.5" style={{ color: 'var(--text-1)' }}>
+                Şifrə
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="input"
+                placeholder="••••••••"
+                required
+                autoComplete="current-password"
+              />
+            </div>
+
+            {error && (
+              <div className="flex items-start gap-2.5 px-3.5 py-2.5 rounded-lg text-sm"
+                   style={{ background: 'var(--danger-light)', color: '#b91c1c', border: '1px solid #fca5a5' }}>
+                <span>⚠️</span>
+                <span>{error}</span>
+              </div>
+            )}
+
+            <button type="submit" disabled={loading} className="btn-primary w-full mt-2">
+              {loading ? (
+                <span className="flex items-center gap-2">
+                  <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  Daxil olunur...
+                </span>
+              ) : 'Daxil Ol →'}
+            </button>
+          </form>
+
+          <div className="mt-5 text-center text-sm" style={{ color: 'var(--text-2)' }}>
+            Hesabın yoxdur?{' '}
+            <Link href="/register" className="font-semibold" style={{ color: 'var(--brand)' }}>
+              Qeydiyyatdan keç
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )

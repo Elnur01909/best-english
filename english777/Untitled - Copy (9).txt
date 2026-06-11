@@ -1,0 +1,316 @@
+# 10_master_prepositions.md
+
+```yaml id="m9v2pk"
+prepositions_version: 1.0
+
+# ==========================================
+# LAWYER / LEGAL PROFESSION
+# ==========================================
+
+legal_profession:
+
+  qualify_as:
+    pattern: qualify as a lawyer
+    meaning: become a lawyer
+
+  work_for:
+    pattern: work for a law firm
+    meaning: be employed by
+
+  work_in:
+    pattern: work in law
+    meaning: practise within legal profession
+
+  specialise_in:
+    pattern: specialise in employment law
+    meaning: focus professional practice on
+
+  act_for:
+    pattern: act for a client
+    meaning: represent client
+
+  appear_before:
+    pattern: appear before a court
+    meaning: represent client in court
+
+# ==========================================
+# CIVIL LITIGATION
+# ==========================================
+
+civil_litigation:
+
+  claim_against:
+    pattern: bring a claim against somebody
+    meaning: start legal action against
+
+  proceedings_against:
+    pattern: commence proceedings against somebody
+    meaning: start formal legal action
+
+  judgment_in_favour_of:
+    pattern: judgment in favour of claimant
+    meaning: claimant wins
+
+  damages_for:
+    pattern: damages for negligence
+    meaning: compensation connected to claim
+
+  award_damages_to:
+    pattern: award damages to claimant
+    meaning: court grants compensation
+
+  recover_money_from:
+    pattern: recover money from defendant
+    meaning: obtain payment
+
+# ==========================================
+# CONTRACT LAW
+# ==========================================
+
+contract_law:
+
+  enter_into:
+    pattern: enter into a contract
+    meaning: become party to contract
+
+  comply_with:
+    pattern: comply with contract
+    meaning: obey contract terms
+
+  breach_of:
+    pattern: breach of contract
+    meaning: violation of contract
+
+  liable_for:
+    pattern: liable for losses
+    meaning: legally responsible
+
+  entitled_to:
+    pattern: entitled to compensation
+    meaning: has legal right to
+
+# ==========================================
+# TORT LAW
+# ==========================================
+
+tort_law:
+
+  duty_of:
+    pattern: duty of care
+    meaning: obligation to avoid harm
+
+  liable_for:
+    pattern: liable for negligence
+    meaning: responsible for wrongdoing
+
+  compensation_for:
+    pattern: compensation for injury
+    meaning: payment due to loss
+
+  sue_for:
+    pattern: sue for damages
+    meaning: seek compensation
+
+  claim_for:
+    pattern: claim for negligence
+    meaning: legal action based on negligence
+
+# ==========================================
+# EMPLOYMENT LAW
+# ==========================================
+
+employment_law:
+
+  discriminate_against:
+    pattern: discriminate against employee
+    meaning: treat unfairly
+
+  apply_for:
+    pattern: apply for employment
+    meaning: request position
+
+  entitled_to:
+    pattern: entitled to sick pay
+    meaning: has legal right
+
+  return_from:
+    pattern: return from maternity leave
+    meaning: resume work
+
+# ==========================================
+# BUSINESS LAW
+# ==========================================
+
+business_law:
+
+  go_into:
+    pattern: go into partnership
+    meaning: create partnership
+
+  partnership_with:
+    pattern: partnership with another company
+    meaning: business relationship
+
+  merge_with:
+    pattern: merge with another company
+    meaning: combine businesses
+
+  invest_in:
+    pattern: invest in company
+    meaning: provide capital
+
+  based_in:
+    pattern: company based in London
+    meaning: company located in
+
+# ==========================================
+# LAND LAW
+# ==========================================
+
+land_law:
+
+  lease_of:
+    pattern: lease of property
+    meaning: right to occupy property
+
+  ownership_of:
+    pattern: ownership of land
+    meaning: legal title
+
+  transfer_of:
+    pattern: transfer of ownership
+    meaning: conveyancing transaction
+
+  rent_from:
+    pattern: rent property from landlord
+    meaning: occupy for payment
+
+  rent_to:
+    pattern: rent property to tenant
+    meaning: allow occupation
+
+# ==========================================
+# INTELLECTUAL PROPERTY
+# ==========================================
+
+intellectual_property:
+
+  apply_for:
+    pattern: apply for patent
+    meaning: request protection
+
+  register_as:
+    pattern: register as trademark
+    meaning: obtain trademark protection
+
+  protection_of:
+    pattern: protection of intellectual property
+    meaning: safeguarding rights
+
+  infringement_of:
+    pattern: infringement of copyright
+    meaning: unlawful use
+
+# ==========================================
+# IMMIGRATION LAW
+# ==========================================
+
+immigration:
+
+  apply_for:
+    pattern: apply for visa
+    meaning: request permission
+
+  reside_in:
+    pattern: reside in country
+    meaning: live in country
+
+  work_in:
+    pattern: work in country
+    meaning: perform employment
+
+# ==========================================
+# INTERNATIONAL TRADE
+# ==========================================
+
+trade:
+
+  import_from:
+    pattern: import goods from China
+    meaning: bring goods from foreign country
+
+  import_into:
+    pattern: import goods into Azerbaijan
+    meaning: bring goods into country
+
+  export_to:
+    pattern: export goods to Germany
+    meaning: send goods abroad
+
+# ==========================================
+# DISPUTES
+# ==========================================
+
+disputes:
+
+  dispute_with:
+    pattern: dispute with supplier
+    meaning: disagreement
+
+  settlement_of:
+    pattern: settlement of dispute
+    meaning: resolution
+
+  mediation_between:
+    pattern: mediation between parties
+    meaning: facilitated negotiation
+
+# ==========================================
+# COURTS
+# ==========================================
+
+courts:
+
+  appear_before:
+    pattern: appear before judge
+    meaning: attend court
+
+  preside_over:
+    pattern: preside over case
+    meaning: judge controls hearing
+
+  appeal_against:
+    pattern: appeal against judgment
+    meaning: challenge decision
+
+# ==========================================
+# HIGH FREQUENCY TOLES PREPOSITIONS
+# ==========================================
+
+toles_priority:
+
+  - qualify as
+  - specialise in
+  - work for
+  - work in
+  - act for
+  - claim against
+  - proceedings against
+  - judgment in favour of
+  - damages for
+  - entitled to
+  - liable for
+  - comply with
+  - enter into
+  - merge with
+  - partnership with
+  - based in
+  - import from
+  - import into
+  - apply for
+  - dispute with
+  - appeal against
+  - preside over
+
+status: complete
+```

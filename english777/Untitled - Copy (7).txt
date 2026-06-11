@@ -1,0 +1,269 @@
+# 08_master_vocabulary.md
+
+```yaml
+vocabulary_version: 1.0
+source:
+  - Unit 1A Foundation
+  - Unit 1B Higher
+
+categories:
+
+  legal_professions:
+
+    lawyer:
+      definition: General term for a qualified legal professional.
+
+    solicitor:
+      definition: Lawyer who advises clients and drafts legal documents.
+
+    barrister:
+      definition: Specialist advocate who represents clients in court.
+
+    attorney:
+      definition: American term for lawyer.
+
+    judge:
+      definition: Person who hears cases and makes legal decisions.
+
+    associate:
+      definition: Qualified lawyer employed by a law firm.
+
+    partner:
+      definition: Lawyer who owns part of a law firm.
+
+    trainee_solicitor:
+      definition: Lawyer completing training contract.
+
+  litigation:
+
+    claim:
+      definition: Civil court action.
+
+    claimant:
+      definition: Person bringing claim.
+
+    plaintiff:
+      definition: Traditional term for claimant.
+
+    defendant:
+      definition: Person defending claim.
+
+    proceedings:
+      definition: Formal court process.
+
+    judgment:
+      definition: Official court decision.
+
+    order:
+      definition: Direction issued by court.
+
+    bailiff:
+      definition: Officer enforcing court orders.
+
+    litigation:
+      definition: Process of resolving dispute through courts.
+
+    dispute:
+      definition: Serious disagreement between parties.
+
+    court_fee:
+      definition: Payment required to start proceedings.
+
+    legal_costs:
+      definition: Court and lawyer expenses.
+
+  tort_law:
+
+    tort:
+      definition: Civil wrong causing loss or harm.
+
+    negligence:
+      definition: Failure to exercise reasonable care.
+
+    duty_of_care:
+      definition: Legal obligation to avoid causing foreseeable harm.
+
+    damages:
+      definition: Monetary compensation awarded by court.
+
+    compensation:
+      definition: Payment for loss or injury.
+
+    allegation:
+      definition: Statement not yet proven.
+
+    grounds:
+      definition: Legal basis for claim.
+
+    sue:
+      definition: Start legal proceedings against somebody.
+
+    carelessness:
+      definition: Lack of proper care.
+
+    no_win_no_fee:
+      definition: Client pays only if case succeeds.
+
+  contract_law:
+
+    contract:
+      definition: Legally binding agreement.
+
+    breach:
+      definition: Violation of contractual obligation.
+
+    obligation:
+      definition: Legal duty.
+
+    valid:
+      definition: Legally enforceable.
+
+    draft:
+      definition: Prepare legal document.
+
+  business_law:
+
+    company:
+      definition: Legal business entity.
+
+    partnership:
+      definition: Business owned by two or more persons.
+
+    merger:
+      definition: Combination of companies.
+
+    capital:
+      definition: Money invested in business.
+
+    insolvency:
+      definition: Inability to pay debts.
+
+    formation_of_business:
+      definition: Creation of business entity.
+
+    goods:
+      definition: Products bought or sold.
+
+  employment_law:
+
+    unfair_dismissal:
+      definition: Termination without valid legal reason.
+
+    redundancy:
+      definition: Loss of employment because position is no longer needed.
+
+    maternity_leave:
+      definition: Protected leave after childbirth.
+
+    sick_pay:
+      definition: Payment during illness.
+
+    discrimination:
+      definition: Unequal treatment.
+
+    equal_pay:
+      definition: Equal salary for equal work.
+
+  land_law:
+
+    landlord:
+      definition: Property owner who rents premises.
+
+    tenant:
+      definition: Person renting premises.
+
+    lease:
+      definition: Right to occupy property for fixed period.
+
+    conveyancing:
+      definition: Legal transfer of ownership.
+
+    real_estate:
+      definition: Land and buildings.
+
+    ownership:
+      definition: Legal right to possess property.
+
+  intellectual_property:
+
+    copyright:
+      definition: Protection for creative works.
+
+    patent:
+      definition: Protection for inventions.
+
+    trademark:
+      definition: Protection for brands and logos.
+
+    intellectual_property:
+      definition: Rights protecting creations of the mind.
+
+  family_law:
+
+    divorce:
+      definition: Legal end of marriage.
+
+    custody:
+      definition: Legal responsibility for child.
+
+    will:
+      definition: Document disposing property after death.
+
+  immigration_law:
+
+    visa:
+      definition: Permission to enter country.
+
+    residence_permit:
+      definition: Permission to live in country.
+
+    work_permit:
+      definition: Permission to work.
+
+  maritime_law:
+
+    ship:
+      definition: Vessel used at sea.
+
+    cargo:
+      definition: Goods transported by ship.
+
+    maritime_law:
+      definition: Law relating to shipping and sea transport.
+
+  legal_skills:
+
+    advocacy:
+      definition: Representing and arguing for client in court.
+
+    representation:
+      definition: Acting on behalf of client.
+
+    drafting:
+      definition: Preparing legal documents.
+
+    mediation:
+      definition: Structured settlement process.
+
+    audience:
+      definition: Right to appear before court.
+
+    qualification:
+      definition: Process of becoming lawyer.
+
+  law_firm_terms:
+
+    law_firm:
+      definition: Business providing legal services.
+
+    chambers:
+      definition: Office shared by barristers.
+
+    legal_practice:
+      definition: Professional provision of legal services.
+
+    client:
+      definition: Person receiving legal services.
+
+status: complete
+```

@@ -1,0 +1,137 @@
+# 01_metadata.md
+
+```yaml
+book:
+  title: The Lawyer's English Language Coursebook
+  authors:
+    - Catherine Mason
+    - Rosemary Atkins
+
+publisher:
+  name: Global Legal English Ltd
+
+copyright:
+  year: 2007
+
+exam_focus:
+  - TOLES Foundation
+  - TOLES Higher
+
+domain:
+  - Legal English
+  - Common Law Terminology
+  - Legal Vocabulary
+  - Legal Writing
+  - Legal Communication
+
+language:
+  primary: English
+
+target_audience:
+  - Law students
+  - Trainee solicitors
+  - Trainee barristers
+  - In-house counsel
+  - Commercial lawyers
+  - International lawyers
+  - TOLES candidates
+
+book_structure:
+
+  unit_1:
+    title: The Legal Profession
+
+    section_A:
+      level: Foundation
+      topics:
+        - Working in Law
+        - Legal Professions
+        - Civil Law vs Criminal Law
+        - Civil Court Claims
+        - Tort Law
+        - Areas of Law
+        - Employment Law Vocabulary
+        - Business Law Vocabulary
+        - Land Law Vocabulary
+        - Foundation Exam Practice
+
+    section_B:
+      level: Higher
+      topics:
+        - Legal Collocations
+        - Legal Prepositions
+        - Solicitors and Barristers
+        - Areas of Law
+        - Legal Letter Writing
+        - Listening Practice
+        - Knowledge Review
+        - Higher Exam Practice
+
+units_overview:
+
+  - The Legal Profession
+  - The Language of Tort
+  - The Language of Banking and Finance
+  - The Language of Employment
+  - The Language of Contract Law
+  - Accurate Letter Writing
+  - The Language of Business Law
+  - Understanding Contracts Part 1
+  - The Language of Company Law
+  - Understanding Contracts Part 2
+
+knowledge_base_rules:
+
+  preserve:
+    - original legal meaning
+    - legal terminology
+    - collocations
+    - prepositions
+    - exercises
+    - answer keys
+    - dialogues
+    - examples
+    - help desk sections
+
+  normalize:
+    - formatting
+    - section numbering
+    - metadata
+
+  do_not_remove:
+    - definitions
+    - legal concepts
+    - exam questions
+    - answer keys
+
+legal_system_focus:
+  - England and Wales
+  - United States
+
+core_topics:
+  - Solicitors
+  - Barristers
+  - Attorneys
+  - Litigation
+  - Civil Procedure
+  - Tort Law
+  - Contract Law
+  - Employment Law
+  - Company Law
+  - Property Law
+  - Intellectual Property
+  - Immigration Law
+  - Family Law
+
+learning_objectives:
+  - Understand legal professions
+  - Understand legal vocabulary
+  - Understand civil litigation terminology
+  - Use accurate legal collocations
+  - Use accurate legal prepositions
+  - Improve legal drafting skills
+  - Prepare for TOLES examinations
+
+knowledge_base_version: 1.0
+status: complete
+```

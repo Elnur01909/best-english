@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#2563eb',
+  themeColor: '#6366f1',
   width: 'device-width',
   initialScale: 1,
 }
@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="az">
-      <body className="min-h-screen bg-gray-50 dark:bg-gray-950">
+      <body className="min-h-screen">
         {children}
         <BattleChallengePopup />
         <ServiceWorkerRegister />

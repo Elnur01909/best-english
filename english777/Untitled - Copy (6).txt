@@ -1,0 +1,280 @@
+# 07_unit1B_answers.md
+
+```yaml id="x9q2ka"
+unit: UNIT_1B
+title: The Legal Profession
+type: answer_key
+
+# ==========================================
+# COLLOCATIONS
+# ==========================================
+
+U1B_COL_E1:
+
+  a: A
+  b: B
+  c: A
+  d: D
+  e: C
+
+# ==========================================
+# PREPOSITIONS
+# ==========================================
+
+U1B_PREP_E1:
+
+  a: in
+  b: against
+  c: for
+  d: in
+  e: in
+  f: at
+
+# ------------------------------------------
+
+U1B_PREP_E2:
+
+  corrected_text: |
+    My name is Luigi and I am a lawyer in Milan.
+    I work for a big law firm.
+    Today I am very busy.
+    I am drafting a contract for a new client.
+    This afternoon I am acting for a different client in court.
+    It is a breach of contract case.
+    I think we will win because our grounds are very strong.
+
+# ==========================================
+# SOLICITORS AND BARRISTERS
+# ==========================================
+
+U1B_SB_E1:
+
+  a: solicitor
+  b: attorney
+  c: qualify
+  d: client
+  e: practices
+  f: partnerships
+  g: associate
+  h: partner
+  i: court
+  j: issued
+  k: audience
+  l: judge
+
+# ------------------------------------------
+
+U1B_SB_E2:
+
+  a:
+    firm: David Ross & Co
+    phone: 0771 222 0046
+
+  b:
+    firm: Marion Kaye
+    phone: 0771 777 5454
+
+  c:
+    firm: Judy Barclay
+    phone: 0771 3339989
+
+  d:
+    firm: Patel & Co
+    phone: 0771 3332323
+
+# ------------------------------------------
+
+U1B_SB_E3:
+
+  a: negligence
+  b: conveyancing
+  c: redundancy
+  d: charity
+  e: insolvency
+  f: tenant
+
+# ------------------------------------------
+
+U1B_SB_E4:
+
+  a: True
+  b: False
+  c: False
+  d: True
+  e: True
+
+# ==========================================
+# AREAS OF LAW
+# ==========================================
+
+U1B_AREA_E1:
+
+  robbery: criminal
+  contract: civil
+  partnership: civil
+  prison: criminal
+  litigation: civil
+  sue: civil
+  business: civil
+  prosecute: criminal
+
+# ------------------------------------------
+
+U1B_AREA_E2:
+
+  a: Intellectual Property Law
+  b: Equity and Trusts
+  c: Family Law
+  d: IT Law
+  e: Conveyancing / Real Property Law
+  f: Contract Law
+  g: Law of Tort
+  h: Employment Law
+  i: Business and Company Law
+  j: Maritime Law
+
+# ------------------------------------------
+
+U1B_AREA_E3:
+
+  a: Contract Law
+  b: Business and Company Law
+  c: Equity and Trusts
+  d: Law of Tort
+  e: Family Law
+  f: Conveyancing / Real Property Law
+  g: Maritime Law
+  h: Employment Law
+
+# ==========================================
+# LEGAL LETTER WRITING REGISTER
+# ==========================================
+
+U1B_LETTER_E1:
+
+  a: Firstly
+  b: issuing a claim
+  c: drafting
+  d: conveyancing
+  e: sue
+  f: negligent
+  g: mediation
+  h: redundant
+  i: Finally
+  j: sole practitioners
+  k: sick pay
+  l: maternity leave
+
+# ==========================================
+# LISTENING
+# ==========================================
+
+U1B_LISTEN_E1:
+
+  a: solicitor
+  b: insolvency
+  c: barrister
+  d: corporate
+  e: drafting
+  f: acting
+  g: conveyancing
+  h: tenant
+  i: intellectual
+  j: qualify
+
+# ==========================================
+# USING YOUR KNOWLEDGE
+# ==========================================
+
+U1B_REVIEW_E1:
+
+  a: making
+  b: breach
+  c: drafting
+  d: qualify
+  e: setting up
+  f: running
+  g: practise
+  h: suffered
+  i: damages
+  j: take
+
+# ------------------------------------------
+
+U1B_REVIEW_E2:
+
+  a: tenant
+  b: redundant
+  c: partnership
+  d: insolvency
+  e: conveyancing
+  f: mediation
+  g: negligence
+  h: barrister
+  i: goods
+  j: attorney
+
+# ------------------------------------------
+
+U1B_REVIEW_E3:
+
+  a: on
+  b: from
+  c: with
+  d: in
+  e: against
+  f: into
+  g: over
+  h: to
+  i: for
+  j: into
+
+# ==========================================
+# TOLES HIGHER PRACTICE
+# ==========================================
+
+U1B_TOLES_E1:
+
+  1: B
+  2: D
+  3: C
+  4: B
+  5: A
+  6: D
+  7: D
+  8: C
+  9: D
+  10: A
+
+# ------------------------------------------
+
+U1B_TOLES_E2:
+
+  1: practise
+  2: chambers
+  3: partnerships
+  4: employed
+  5: pleading
+  6: advocate
+  7: drafting
+  8: owe
+  9: proceedings
+  10: damages
+
+# ==========================================
+# COMPLETION STATUS
+# ==========================================
+
+status: complete
+
+covers:
+
+  - Unit 1B Exercises
+  - Unit 1B Exam Practice
+  - Listening Answers
+  - Letter Writing Answers
+  - Solicitor/Barrister Exercises
+  - Areas of Law Exercises
+  - TOLES Higher Practice
+
+```

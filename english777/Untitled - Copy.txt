@@ -1,0 +1,435 @@
+# 02_unit1A_theory.md
+
+```yaml
+unit:
+  id: UNIT_1A
+  title: The Legal Profession
+  level: Foundation
+
+sections:
+
+  - id: WORKING_IN_LAW
+
+    concepts:
+
+      lawyer:
+        definition: >
+          General term used for a person qualified to practise law.
+
+      solicitor:
+        definition: >
+          Lawyer who advises clients, drafts legal documents,
+          represents clients and often works in a law firm.
+
+      barrister:
+        definition: >
+          Specialist advocate who provides legal opinions and
+          represents clients in court.
+
+      attorney:
+        definition: >
+          American term for lawyer.
+
+      judge:
+        definition: >
+          Person appointed to hear cases and make legal decisions.
+
+    england_and_wales_system:
+
+      legal_professions:
+        - solicitor
+        - barrister
+
+      solicitor_route:
+        - university studies
+        - legal practice course
+        - training contract
+        - qualification as solicitor
+
+      barrister_route:
+        - legal studies
+        - Bar examinations
+        - qualification as barrister
+
+      judge_route:
+        - become experienced lawyer
+        - apply for judicial appointment
+        - selection process
+
+    solicitor_characteristics:
+
+      employment:
+        - law firms
+        - partnerships
+        - legal practices
+
+      responsibilities:
+        - advise clients
+        - draft documents
+        - represent clients
+        - conduct litigation
+        - specialise in legal fields
+
+      terminology:
+        acting_for_client: >
+          Representing a client.
+
+        litigation: >
+          Process of making a claim in the civil court.
+
+    barrister_characteristics:
+
+      employment:
+        - self-employed
+        - chambers
+
+      responsibilities:
+        - advocacy
+        - plead cases
+        - legal opinions
+        - court representation
+
+      terminology:
+
+        advocacy:
+          definition: >
+            Skill of speaking on behalf of someone in court.
+
+        pleading_a_case:
+          definition: >
+            Presenting a client's case before a court.
+
+        right_of_audience:
+          definition: >
+            Legal right to appear before a court and be heard.
+
+    usa_system:
+
+      lawyer_title:
+        attorney
+
+      notes:
+        - No solicitor/barrister distinction.
+        - Attorney is general professional title.
+
+  - id: CIVIL_AND_CRIMINAL_LAW
+
+    overview:
+
+      criminal_law:
+        definition: >
+          Area of law dealing with offences against persons,
+          property and society.
+
+        characteristics:
+          - state prosecutes offender
+          - public interest focus
+
+      civil_law:
+        definition: >
+          Area of law dealing with rights and obligations of
+          individuals and companies.
+
+        characteristics:
+          - disputes between parties
+          - compensation-focused
+
+    terminology:
+
+      matter:
+        definition: >
+          Legal subject or legal issue.
+
+      will:
+        definition: >
+          Legal document explaining what happens to property
+          after death.
+
+      steal:
+        definition: >
+          Take property belonging to another person with the
+          intention of keeping it.
+
+  - id: CIVIL_COURT_CLAIMS
+
+    core_concept:
+
+      claim:
+        definition: >
+          Civil court action started against another party.
+
+    terminology:
+
+      claimant:
+        definition: >
+          Person bringing the claim.
+
+      plaintiff:
+        definition: >
+          Traditional term for claimant.
+          Still commonly used in the USA.
+
+      defendant:
+        definition: >
+          Person defending the claim.
+
+      proceedings:
+        definition: >
+          Formal legal process before a court.
+
+      claim_form:
+        definition: >
+          Document used to start legal action.
+
+      court_fee:
+        definition: >
+          Payment required to issue proceedings.
+
+      legal_costs:
+        definition: >
+          Court fees and lawyer fees.
+
+      dispute:
+        definition: >
+          Serious disagreement between parties.
+
+      procedure:
+        definition: >
+          Established legal process.
+
+    civil_claim_process:
+
+      step_1:
+        issue_claim
+
+      step_2:
+        serve_claim
+
+      step_3:
+        defendant_response
+
+      step_4:
+        court_hearing
+
+      step_5:
+        judgment
+
+      step_6:
+        order_enforcement
+
+    legal_actions:
+
+      issue_claim:
+        meaning: >
+          Start proceedings in civil court.
+
+      serve_claim:
+        meaning: >
+          Officially deliver claim documents to defendant.
+
+      respond_to_claim:
+        meaning: >
+          Confirm receipt and explain intended response.
+
+      hear_case:
+        meaning: >
+          Court listens to parties and evidence.
+
+      find_in_favour:
+        meaning: >
+          Decide that one party wins.
+
+      give_judgment:
+        meaning: >
+          Officially announce decision.
+
+      make_order:
+        meaning: >
+          Officially require a party to do something.
+
+      bailiff:
+        meaning: >
+          Officer who can enforce court orders and
+          recover property or money.
+
+    county_court:
+
+      jurisdiction:
+        Most civil claims.
+
+      notes:
+        - More than 200 County Courts.
+        - Found throughout England and Wales.
+
+    small_claims:
+
+      maximum_value:
+        "£5000"
+
+      note:
+        Small claims are handled under a special procedure,
+        not in a separate court building.
+
+  - id: LAW_OF_TORT
+
+    definition:
+
+      tort:
+        definition: >
+          Civil wrong causing harm or loss.
+
+    key_principles:
+
+      duty_of_care:
+        definition: >
+          Legal obligation to act carefully and avoid
+          causing harm.
+
+      breach:
+        definition: >
+          Violation of legal duty.
+
+      negligence:
+        definition: >
+          Failure to exercise reasonable care.
+
+      carelessness:
+        definition: >
+          Lack of sufficient care causing injury or damage.
+
+    injured_person:
+      definition: >
+        Person harmed by another's conduct.
+
+    damages:
+      definition: >
+        Financial compensation awarded by court.
+
+    compensation:
+      definition: >
+        Money paid for injury or loss.
+
+    sue:
+      definition: >
+        Start legal proceedings against someone.
+
+    allegation:
+      definition: >
+        Statement claiming something happened
+        but not yet proven.
+
+    grounds:
+      definition: >
+        Legal reasons supporting a claim.
+
+    no_win_no_fee:
+      definition: >
+        Arrangement where client pays lawyer only
+        if case succeeds.
+
+    examples_of_torts:
+
+      - dangerous_shop_floor
+      - false_statement_about_person
+      - false_newspaper_story
+      - excessive_noise_affecting_neighbours
+
+  - id: AREAS_OF_LAW
+
+    contract_law:
+      focus: Agreements and obligations
+
+    company_law:
+      focus: Companies and corporate structures
+
+    land_law:
+      focus: Ownership and transfer of property
+
+    law_of_tort:
+      focus: Civil wrongs
+
+    equity_and_trusts:
+      focus: Trusts and fiduciary arrangements
+
+    employment_law:
+      focus: Employment relationships
+
+    family_law:
+      focus: Marriage, divorce, children
+
+    immigration_law:
+      focus: Entry and residence rights
+
+    intellectual_property_law:
+      focus: Copyright, patents, trademarks
+
+    criminal_law:
+      focus: Crimes and punishment
+
+  - id: EMPLOYMENT_LAW_TERMS
+
+    unfair_dismissal:
+      definition: >
+        Dismissal without valid legal reason.
+
+    redundancy:
+      definition: >
+        Job loss because position is no longer needed.
+
+    maternity_leave:
+      definition: >
+        Leave connected with childbirth.
+
+    sick_pay:
+      definition: >
+        Payment during illness absence.
+
+    discrimination:
+      definition: >
+        Unequal treatment based on protected characteristics.
+
+  - id: BUSINESS_LAW_TERMS
+
+    capital:
+      definition: >
+        Money and assets invested in business.
+
+    formation_of_business:
+      definition: >
+        Creation of new business entity.
+
+    partnership:
+      definition: >
+        Business owned by two or more persons.
+
+    merger:
+      definition: >
+        Combination of businesses into one entity.
+
+    insolvency:
+      definition: >
+        Inability to pay debts.
+
+  - id: LAND_LAW_TERMS
+
+    landlord:
+      definition: >
+        Owner renting property.
+
+    tenant:
+      definition: >
+        Person paying rent to occupy property.
+
+    lease:
+      definition: >
+        Right to occupy property for fixed period.
+
+    conveyancing:
+      definition: >
+        Legal transfer of property ownership.
+
+    real_estate:
+      definition: >
+        Land and buildings.
+
+```

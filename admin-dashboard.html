@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best English — Admin Panel</title>
+<script>
+// Şifrə qorunması — ilk yoxlama
+(function(){
+  const PASS = '3431511The';
+  const ok = sessionStorage.getItem('admin_auth');
+  if(!ok){
+    document.addEventListener('DOMContentLoaded', function(){
+      const overlay = document.getElementById('auth-overlay');
+      if(overlay) overlay.style.display='flex';
+      document.getElementById('main-body').style.display='none';
+    });
+  }
+  window._checkPass = function(){
+    const val = document.getElementById('pass-input').value;
+    if(val === PASS){
+      sessionStorage.setItem('admin_auth','1');
+      document.getElementById('auth-overlay').style.display='none';
+      document.getElementById('main-body').style.display='flex';
+      loadAll();
+    } else {
+      document.getElementById('pass-err').style.display='block';
+      document.getElementById('pass-input').value='';
+      document.getElementById('pass-input').focus();
+    }
+  }
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --sidebar:#0f172a; --sidebar-hover:#1e293b;
+  --accent:#6366f1; --bg:#f1f5f9; --card:#fff;
+  --text:#1e293b; --muted:#64748b; --border:#e2e8f0;
+  --green:#10b981; --red:#ef4444; --orange:#f59e0b; --blue:#3b82f6;
+}
+body { font-family:'Segoe UI',system-ui,sans-serif; background:var(--bg); color:var(--text); display:flex; min-height:100vh; }
+.sidebar { width:230px; background:var(--sidebar); color:#fff; display:flex; flex-direction:column; position:fixed; height:100vh; z-index:100; }
+.logo { padding:20px 18px 16px; border-bottom:1px solid #1e293b; }
+.logo h1 { font-size:17px; font-weight:800; }
+.logo span { font-size:10px; color:#64748b; letter-spacing:1px; text-transform:uppercase; }
+.nav { flex:1; padding:12px 0; overflow-y:auto; }
+.nav-section { padding:10px 18px 4px; font-size:9px; color:#475569; letter-spacing:1.5px; text-transform:uppercase; font-weight:700; }
+.nav-item { display:flex; align-items:center; gap:10px; padding:9px 18px; cursor:pointer; transition:all .15s; border-left:3px solid transparent; color:#94a3b8; font-size:13px; }
+.nav-item:hover { background:var(--sidebar-hover); color:#fff; }
+.nav-item.active { background:var(--sidebar-hover); color:#fff; border-left-color:var(--accent); }
+.sidebar-foot { padding:14px 18px; border-top:1px solid #1e293b; }
+.conn-dot { display:inline-block; width:7px; height:7px; border-radius:50%; background:#ef4444; margin-right:6px; }
+.conn-dot.on { background:#10b981; }
+.conn-label { font-size:11px; color:#64748b; }
+.refresh-btn { margin-top:10px; width:100%; background:#1e293b; color:#94a3b8; border:1px solid #334155; padding:7px; border-radius:8px; font-size:12px; cursor:pointer; }
+.refresh-btn:hover { background:#334155; color:#fff; }
+.main { margin-left:230px; flex:1; }
+.topbar { background:var(--card); border-bottom:1px solid var(--border); padding:14px 28px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:50; }
+.topbar h2 { font-size:18px; font-weight:700; }
+.live-badge { background:#dcfce7; color:var(--green); padding:3px 10px; border-radius:20px; font-size:11px; font-weight:700; display:flex; align-items:center; gap:5px; }
+.live-badge::before { content:''; width:6px; height:6px; background:var(--green); border-radius:50%; animation:pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+.page { padding:24px 28px; display:none; }
+.page.active { display:block; }
+.stat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:22px; }
+.stat-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:22px; }
+.stat-card { background:var(--card); border-radius:14px; padding:20px; border:1px solid var(--border); position:relative; overflow:hidden; }
+.stat-label { font-size:11px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px; }
+.stat-val { font-size:30px; font-weight:800; line-height:1; margin-bottom:5px; }
+.blue .stat-val { color:var(--blue); } .green .stat-val { color:var(--green); }
+.purple .stat-val { color:var(--accent); } .orange .stat-val { color:var(--orange); } .red .stat-val { color:var(--red); }
+.stat-sub { font-size:11px; color:var(--muted); }
+.stat-emoji { position:absolute; right:16px; top:16px; font-size:26px; opacity:.12; }
+.charts-row { display:grid; grid-template-columns:2fr 1fr; gap:16px; margin-bottom:22px; }
+.charts-row-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-bottom:22px; }
+.chart-card { background:var(--card); border-radius:14px; padding:20px; border:1px solid var(--border); }
+.chart-card h3 { font-size:13px; font-weight:700; margin-bottom:2px; }
+.chart-sub { font-size:11px; color:var(--muted); margin-bottom:16px; }
+.table-wrap { background:var(--card); border-radius:14px; border:1px solid var(--border); overflow:hidden; margin-bottom:22px; }
+.table-head { padding:16px 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--border); }
+.table-head h3 { font-size:13px; font-weight:700; }
+.table-head span { font-size:11px; color:var(--muted); }
+table { width:100%; border-collapse:collapse; }
+thead tr { background:#f8fafc; }
+th { padding:10px 16px; text-align:left; font-size:11px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:.4px; border-bottom:1px solid var(--border); }
+td { padding:11px 16px; font-size:13px; border-bottom:1px solid #f1f5f9; }
+tr:last-child td { border-bottom:none; }
+tr:hover td { background:#fafafa; }
+.badge { display:inline-block; padding:2px 8px; border-radius:20px; font-size:10px; font-weight:700; }
+.ba1{background:#dcfce7;color:#166534} .ba2{background:#dbeafe;color:#1e40af}
+.bb1{background:#ede9fe;color:#5b21b6} .bb2{background:#fce7f3;color:#9d174d}
+.bc1{background:#fef3c7;color:#92400e} .bc2{background:#fee2e2;color:#991b1b}
+.bfound{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+.bhigher{background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe}
+.badv{background:#faf5ff;color:#6d28d9;border:1px solid #ddd6fe}
+.loading{text-align:center;padding:60px;color:var(--muted)}
+.spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.empty{text-align:center;padding:32px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<!-- ŞİFRƏ EKRANı -->
+<div id="auth-overlay" style="position:fixed;inset:0;background:#0f172a;display:flex;align-items:center;justify-content:center;z-index:9999">
+  <div style="background:#1e293b;border-radius:20px;padding:40px;width:380px;border:1px solid #334155;text-align:center">
+    <div style="font-size:40px;margin-bottom:12px">🔐</div>
+    <h2 style="color:#fff;font-size:20px;margin-bottom:6px">Best English Admin</h2>
+    <p style="color:#64748b;font-size:13px;margin-bottom:24px">Admin panelinə daxil olmaq üçün şifrəni daxil edin</p>
+    <input id="pass-input" type="password" placeholder="Şifrə..." onkeydown="if(event.key==='Enter')_checkPass()"
+      style="width:100%;background:#0f172a;border:1px solid #334155;border-radius:10px;padding:12px 16px;color:#fff;font-size:15px;outline:none;margin-bottom:12px;font-family:monospace">
+    <button onclick="_checkPass()"
+      style="width:100%;background:#6366f1;color:#fff;border:none;padding:13px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer">
+      Daxil ol →
+    </button>
+    <div id="pass-err" style="color:#ef4444;font-size:13px;margin-top:12px;display:none">❌ Şifrə yanlışdır</div>
+  </div>
+</div>
+
+<div id="main-body" style="display:flex;width:100%;min-height:100vh">
+<aside class="sidebar">
+  <div class="logo"><h1>⚡ Best English</h1><span>Admin Panel</span></div>
+  <nav class="nav">
+    <div class="nav-section">Dashboard</div>
+    <div class="nav-item active" onclick="show('overview',this)">📊 Ümumi Baxış</div>
+    <div class="nav-section">İstifadəçilər</div>
+    <div class="nav-item" onclick="show('users',this)">👥 İstifadəçilər</div>
+    <div class="nav-item" onclick="show('activity',this)">📈 Fəaliyyət</div>
+    <div class="nav-section">Məzmun</div>
+    <div class="nav-item" onclick="show('content',this)">📚 Məzmun Bazası</div>
+    <div class="nav-section">Tərəqqi</div>
+    <div class="nav-item" onclick="show('quiz',this)">✅ Quiz Nəticələri</div>
+    <div class="nav-item" onclick="show('vocab',this)">🧠 Lüğət (SRS)</div>
+  </nav>
+  <div class="sidebar-foot">
+    <div><span class="conn-dot" id="dot"></span><span class="conn-label" id="clabel">Qoşulur...</span></div>
+    <button class="refresh-btn" onclick="loadAll()">🔄 Yenilə</button>
+    <div style="font-size:10px;color:#334155;margin-top:6px" id="ts"></div>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <h2 id="ptitle">Ümumi Baxış</h2>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="live-badge">CANLI</div>
+      <div style="font-size:11px;color:var(--muted)" id="tts"></div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="page active" id="page-overview">
+    <div class="stat-grid">
+      <div class="stat-card blue"><div class="stat-emoji">👥</div><div class="stat-label">Ümumi İstifadəçi</div><div class="stat-val" id="ov-u">—</div><div class="stat-sub">Qeydiyyatdan keçmiş</div></div>
+      <div class="stat-card green"><div class="stat-emoji">✅</div><div class="stat-label">Quiz Cavabları</div><div class="stat-val" id="ov-q">—</div><div class="stat-sub" id="ov-qa">yüklənir...</div></div>
+      <div class="stat-card purple"><div class="stat-emoji">📖</div><div class="stat-label">Dərs Tamamlama</div><div class="stat-val" id="ov-l">—</div><div class="stat-sub" id="ov-lu">—</div></div>
+      <div class="stat-card orange"><div class="stat-emoji">🧠</div><div class="stat-label">SRS Kartlar</div><div class="stat-val" id="ov-v">—</div><div class="stat-sub" id="ov-vu">—</div></div>
+    </div>
+    <div class="charts-row">
+      <div class="chart-card"><h3>Gündəlik Fəaliyyət</h3><div class="chart-sub">Son 14 gün — quiz cavabları</div><canvas id="c-daily" height="90"></canvas></div>
+      <div class="chart-card"><h3>Səviyyə Paylaşımı</h3><div class="chart-sub">CEFR A1→C2</div><canvas id="c-level" height="160"></canvas></div>
+    </div>
+    <div class="charts-row-3">
+      <div class="chart-card"><h3>TOLES Səviyyəsi</h3><div class="chart-sub">Foundation / Higher / Advanced</div><canvas id="c-toles" height="180"></canvas></div>
+      <div class="chart-card"><h3>Quiz Düzgünlüğü</h3><div class="chart-sub">Düzgün vs Yanlış</div><canvas id="c-acc" height="180"></canvas></div>
+      <div class="chart-card"><h3>Məzmun Bazası</h3><div class="chart-sub">Sual / Dərs / Termin / Case</div><canvas id="c-content" height="180"></canvas></div>
+    </div>
+  </div>
+
+  <!-- USERS -->
+  <div class="page" id="page-users">
+    <div class="stat-grid-3">
+      <div class="stat-card blue"><div class="stat-emoji">👥</div><div class="stat-label">Ümumi</div><div class="stat-val" id="u-t">—</div></div>
+      <div class="stat-card green"><div class="stat-emoji">🔥</div><div class="stat-label">Aktiv Streak</div><div class="stat-val" id="u-s">—</div></div>
+      <div class="stat-card orange"><div class="stat-emoji">⭐</div><div class="stat-label">Ən Yüksək Xal</div><div class="stat-val" id="u-p">—</div></div>
+    </div>
+    <div class="table-wrap">
+      <div class="table-head"><h3>Bütün İstifadəçilər</h3><span id="u-cnt">yüklənir...</span></div>
+      <div id="utbl"><div class="loading"><div class="spinner"></div>Yüklənir...</div></div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY -->
+  <div class="page" id="page-activity">
+    <div class="chart-card" style="margin-bottom:16px"><h3>Gündəlik Aktiv İstifadəçilər</h3><div class="chart-sub">Son 30 gün</div><canvas id="c-act" height="80"></canvas></div>
+    <div class="charts-row">
+      <div class="chart-card"><h3>Quiz Cavabları</h3><div class="chart-sub">Son 30 gün</div><canvas id="c-actq" height="110"></canvas></div>
+      <div class="chart-card"><h3>Düzgünlük %</h3><div class="chart-sub">Gündəlik ortalama</div><canvas id="c-acta" height="110"></canvas></div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="page" id="page-content">
+    <div class="stat-grid">
+      <div class="stat-card purple"><div class="stat-emoji">❓</div><div class="stat-label">Quiz Sualları</div><div class="stat-val">1598</div><div class="stat-sub">9 format</div></div>
+      <div class="stat-card blue"><div class="stat-emoji">📖</div><div class="stat-label">Dərslər</div><div class="stat-val">27</div><div class="stat-sub">CEFR A1–C2</div></div>
+      <div class="stat-card green"><div class="stat-emoji">🔤</div><div class="stat-label">Hüquqi Terminlər</div><div class="stat-val">378</div><div class="stat-sub">SRS lüğəti</div></div>
+      <div class="stat-card orange"><div class="stat-emoji">⚖️</div><div class="stat-label">Case Studies</div><div class="stat-val">14</div><div class="stat-sub">TOLES hazırlığı</div></div>
+    </div>
+    <div class="charts-row">
+      <div class="chart-card"><h3>Quiz Format Paylaşımı</h3><div class="chart-sub">9 fərqli tip</div><canvas id="c-fmt" height="90"></canvas></div>
+      <div class="chart-card"><h3>Səviyyə Paylaşımı</h3><div class="chart-sub">A1→C2</div><canvas id="c-qlvl" height="180"></canvas></div>
+    </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="page" id="page-quiz">
+    <div class="stat-grid">
+      <div class="stat-card blue"><div class="stat-emoji">📝</div><div class="stat-label">Ümumi Cavab</div><div class="stat-val" id="q-t">—</div></div>
+      <div class="stat-card green"><div class="stat-emoji">✅</div><div class="stat-label">Düzgün</div><div class="stat-val" id="q-c">—</div></div>
+      <div class="stat-card red"><div class="stat-emoji">❌</div><div class="stat-label">Yanlış</div><div class="stat-val" id="q-w">—</div></div>
+      <div class="stat-card purple"><div class="stat-emoji">🎯</div><div class="stat-label">Dəqiqlik</div><div class="stat-val" id="q-a">—</div></div>
+    </div>
+    <div class="table-wrap">
+      <div class="table-head"><h3>İstifadəçi Quiz Statistikaları</h3><span>Ən çox cavab verən üstdə</span></div>
+      <div id="qtbl"><div class="loading"><div class="spinner"></div>Yüklənir...</div></div>
+    </div>
+  </div>
+
+  <!-- VOCAB -->
+  <div class="page" id="page-vocab">
+    <div class="stat-grid-3">
+      <div class="stat-card blue"><div class="stat-emoji">🃏</div><div class="stat-label">Ümumi SRS Kart</div><div class="stat-val" id="v-t">—</div></div>
+      <div class="stat-card green"><div class="stat-emoji">👤</div><div class="stat-label">Aktiv İstifadəçi</div><div class="stat-val" id="v-u">—</div></div>
+      <div class="stat-card orange"><div class="stat-emoji">📅</div><div class="stat-label">Bu Gün Due</div><div class="stat-val" id="v-d">—</div></div>
+    </div>
+    <div class="table-wrap">
+      <div class="table-head"><h3>İstifadəçi SRS İrəliləyişi</h3><span>Öyrənilən kart sayı</span></div>
+      <div id="vtbl"><div class="loading"><div class="spinner"></div>Yüklənir...</div></div>
+    </div>
+  </div>
+</main>
+
+<script>
+const SB_URL='https://hhfeeqfmafpfhhgpklcq.supabase.co';
+const SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhoZmVlcWZtYWZwZmhoZ3BrbGNxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDQ0MzQ0NiwiZXhwIjoyMDk2MDE5NDQ2fQ.cWoxjnBSpAASdZkfql5ZM_zFej1lFdbRF3ndwlFI_u8';
+const sb=supabase.createClient(SB_URL,SB_KEY);
+const CH={};
+
+function lvlBadge(l){const m={A1:'a1',A2:'a2',B1:'b1',B2:'b2',C1:'c1',C2:'c2'};return`<span class="badge b${m[l]||'a1'}">${l||'?'}</span>`}
+function tolBadge(t){const m={Foundation:'found',Higher:'higher',Advanced:'adv'};return`<span class="badge b${m[t]||'found'}">${t||'?'}</span>`}
+function fmtD(d){return d?new Date(d).toLocaleDateString('az-AZ',{day:'2-digit',month:'short',year:'numeric'}):'—'}
+function mkCh(id,type,labels,datasets,extra={}){
+  if(CH[id])CH[id].destroy();
+  const ctx=document.getElementById(id)?.getContext('2d');
+  if(!ctx)return;
+  CH[id]=new Chart(ctx,{type,data:{labels,datasets},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{font:{size:11}}}},
+  ...(type==='bar'||type==='line'?{scales:{x:{ticks:{font:{size:10}}},y:{ticks:{font:{size:10}}}}}:{}),
+  ...extra}});
+}
+
+const ptitles={overview:'Ümumi Baxış',users:'İstifadəçilər',activity:'Fəaliyyət',content:'Məzmun Bazası',quiz:'Quiz Nəticələri',vocab:'Lüğət (SRS)'};
+function show(p,el){
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(x=>x.classList.remove('active'));
+  document.getElementById('page-'+p).classList.add('active');
+  el.classList.add('active');
+  document.getElementById('ptitle').textContent=ptitles[p];
+  if(p==='activity')loadActivity();
+  else if(p==='quiz')loadQuiz();
+  else if(p==='vocab')loadVocab();
+  else if(p==='users')loadUsers();
+  else if(p==='content')loadContent();
+}
+
+async function loadAll(){
+  document.getElementById('dot').className='conn-dot';
+  document.getElementById('clabel').textContent='Yüklənir...';
+  await Promise.all([loadOverview(),loadUsers(),loadActivity(),loadQuiz(),loadVocab(),loadContent()]);
+  document.getElementById('dot').className='conn-dot on';
+  document.getElementById('clabel').textContent='Supabase qoşulub';
+  const t=new Date().toLocaleTimeString('az-AZ');
+  document.getElementById('ts').textContent=t;
+  document.getElementById('tts').textContent='Son yeniləmə: '+t;
+}
+
+async function loadOverview(){
+  const [{data:users},{data:qr},{data:lp},{data:vp}]=await Promise.all([
+    sb.from('user_profiles').select('id,level,toles_level'),
+    sb.from('user_quiz_results').select('correct,answered_at,user_id').order('answered_at'),
+    sb.from('user_lesson_progress').select('user_id').eq('completed',true),
+    sb.from('user_vocab_progress').select('user_id')
+  ]);
+
+  document.getElementById('ov-u').textContent=users?.length??'—';
+  const qAll=qr||[],qC=qAll.filter(q=>q.correct).length,qAcc=qAll.length?Math.round(qC/qAll.length*100):0;
+  document.getElementById('ov-q').textContent=qAll.length;
+  document.getElementById('ov-qa').textContent=qAcc+'% düzgünlük';
+  const lu=new Set((lp||[]).map(l=>l.user_id)).size;
+  document.getElementById('ov-l').textContent=(lp||[]).length;
+  document.getElementById('ov-lu').textContent=lu+' istifadəçi';
+  const vu=new Set((vp||[]).map(v=>v.user_id)).size;
+  document.getElementById('ov-v').textContent=(vp||[]).length;
+  document.getElementById('ov-vu').textContent=vu+' istifadəçi';
+
+  // Daily chart (last 14 days)
+  const cutoff=new Date(Date.now()-14*86400000).toISOString();
+  const daily=qAll.filter(q=>q.answered_at>=cutoff);
+  const dm={};
+  daily.forEach(r=>{const d=r.answered_at?.split('T')[0];if(!d)return;dm[d]=(dm[d]||0)+1;});
+  const dk=Object.keys(dm).sort();
+  mkCh('c-daily','bar',dk.map(d=>d.slice(5)),
+    [{label:'Cavablar',data:dk.map(d=>dm[d]),backgroundColor:'#6366f180',borderColor:'#6366f1',borderWidth:2,borderRadius:4}],
+    {plugins:{legend:{display:false}}});
+
+  // Level chart
+  const lvls=['A1','A2','B1','B2','C1','C2'],lColors=['#10b981','#3b82f6','#6366f1','#8b5cf6','#f59e0b','#ef4444'];
+  const lCnt=lvls.map(l=>(users||[]).filter(u=>u.level===l).length);
+  mkCh('c-level','doughnut',lvls,[{data:lCnt,backgroundColor:lColors}]);
+
+  // TOLES chart
+  const tls=['Foundation','Higher','Advanced'];
+  const tCnt=tls.map(t=>(users||[]).filter(u=>u.toles_level===t).length);
+  mkCh('c-toles','doughnut',tls,[{data:tCnt,backgroundColor:['#10b981','#3b82f6','#8b5cf6']}]);
+
+  // Accuracy chart
+  mkCh('c-acc','doughnut',['Düzgün','Yanlış'],[{data:[qC,qAll.length-qC],backgroundColor:['#10b981','#ef4444']}]);
+
+  // Content chart
+  mkCh('c-content','bar',['Suallar','Dərslər','Terminlər','Case'],
+    [{label:'Sayı',data:[1598,27,378,14],backgroundColor:['#6366f1','#3b82f6','#10b981','#f59e0b'],borderRadius:6}],
+    {plugins:{legend:{display:false}}});
+}
+
+async function loadUsers(){
+  const {data:users}=await sb.from('user_profiles').select('*').order('created_at',{ascending:false});
+  if(!users)return;
+  document.getElementById('u-t').textContent=users.length;
+  document.getElementById('u-cnt').textContent=users.length+' istifadəçi';
+  document.getElementById('u-s').textContent=users.filter(u=>u.streak>0).length;
+  document.getElementById('u-p').textContent=Math.max(...users.map(u=>u.total_points||0)).toLocaleString();
+  document.getElementById('utbl').innerHTML=`<table><thead><tr><th>#</th><th>Email</th><th>Ad</th><th>Səviyyə</th><th>TOLES</th><th>Streak</th><th>Xal</th><th>Qeydiyyat</th></tr></thead><tbody>
+  ${users.map((u,i)=>`<tr><td style="color:var(--muted);font-size:11px">${i+1}</td>
+  <td style="font-size:12px">${u.email||'—'}</td>
+  <td style="font-size:12px;color:var(--muted)">${u.display_name||'—'}</td>
+  <td>${lvlBadge(u.level)}</td><td>${tolBadge(u.toles_level)}</td>
+  <td style="font-weight:700;color:var(--orange)">${u.streak||0} 🔥</td>
+  <td style="font-weight:700;color:var(--accent)">${(u.total_points||0).toLocaleString()}</td>
+  <td style="color:var(--muted);font-size:11px">${fmtD(u.created_at)}</td></tr>`).join('')}
+  </tbody></table>`;
+}
+
+async function loadActivity(){
+  const {data:raw}=await sb.from('user_quiz_results').select('answered_at,correct,user_id')
+    .gte('answered_at',new Date(Date.now()-30*86400000).toISOString()).order('answered_at');
+  const byd={};
+  (raw||[]).forEach(r=>{const d=r.answered_at?.split('T')[0];if(!d)return;
+    if(!byd[d])byd[d]={u:new Set(),t:0,c:0};
+    byd[d].u.add(r.user_id);byd[d].t++;if(r.correct)byd[d].c++;});
+  const days=Object.keys(byd).sort(),lbs=days.map(d=>d.slice(5));
+  mkCh('c-act','line',lbs,[{label:'Aktiv İstifadəçi',data:days.map(d=>byd[d].u.size),borderColor:'#6366f1',backgroundColor:'#6366f115',fill:true,tension:.3,pointRadius:4}]);
+  mkCh('c-actq','bar',lbs,[{label:'Cavablar',data:days.map(d=>byd[d].t),backgroundColor:'#3b82f680',borderColor:'#3b82f6',borderWidth:1,borderRadius:3}],{plugins:{legend:{display:false}}});
+  mkCh('c-acta','line',lbs,[{label:'Düzgün %',data:days.map(d=>Math.round(byd[d].c/byd[d].t*100)),borderColor:'#10b981',backgroundColor:'#10b98115',fill:true,tension:.3,pointRadius:4}],
+    {scales:{x:{ticks:{font:{size:10}}},y:{min:0,max:100,ticks:{callback:v=>v+'%',font:{size:10}}}}});
+}
+
+function loadContent(){
+  mkCh('c-fmt','bar',['MCQ','Boşluq','Uyğun','Kollokas.','Sözönü','Təsnifat','D/Y','Cümlə','Koll.U.'],
+    [{label:'Sual sayı',data:[320,290,180,200,150,160,130,108,60],backgroundColor:'#6366f170',borderColor:'#6366f1',borderWidth:1,borderRadius:4}],
+    {plugins:{legend:{display:false}}});
+  mkCh('c-qlvl','doughnut',['A1','A2','B1','B2','C1','C2'],[{data:[200,250,350,380,280,138],backgroundColor:['#10b981','#3b82f6','#6366f1','#8b5cf6','#f59e0b','#ef4444']}]);
+}
+
+async function loadQuiz(){
+  const [{data:qr},{data:users}]=await Promise.all([
+    sb.from('user_quiz_results').select('user_id,correct,time_taken'),
+    sb.from('user_profiles').select('id,email,level')
+  ]);
+  if(!qr)return;
+  const t=qr.length,c=qr.filter(q=>q.correct).length,w=t-c,a=t?Math.round(c/t*100):0;
+  document.getElementById('q-t').textContent=t;
+  document.getElementById('q-c').textContent=c;
+  document.getElementById('q-w').textContent=w;
+  document.getElementById('q-a').textContent=a+'%';
+  const um={};(users||[]).forEach(u=>um[u.id]=u);
+  const bu={};qr.forEach(q=>{if(!bu[q.user_id])bu[q.user_id]={t:0,c:0};bu[q.user_id].t++;if(q.correct)bu[q.user_id].c++;});
+  document.getElementById('qtbl').innerHTML=`<table><thead><tr><th>#</th><th>Email</th><th>Səviyyə

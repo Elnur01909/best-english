@@ -1,0 +1,382 @@
+# 06_unit1B_exercises.md
+
+```yaml
+unit: UNIT_1B
+title: The Legal Profession
+type: exercises_only
+
+# ==========================================
+# COLLOCATIONS
+# ==========================================
+
+- exercise_id: U1B_COL_E1
+  type: multiple_choice
+
+  instruction: >
+    Choose the correct collocation.
+
+  questions:
+
+    a:
+      sentence: >
+        Solicitors are allowed to _____ clients in court.
+      options:
+        A: represent
+        B: work for
+        C: stand for
+        D: advocate
+
+    b:
+      sentence: >
+        I am a commercial lawyer and this is a criminal _____.
+      options:
+        A: issue
+        B: matter
+        C: subject
+        D: point
+
+    c:
+      sentence: >
+        What are the _____ for your case?
+      options:
+        A: grounds
+        B: reasons
+        C: motives
+        D: basis
+
+    d:
+      sentence: >
+        I will _____ my final law exams next year.
+      options:
+        A: pass
+        B: make
+        C: prepare
+        D: take
+
+    e:
+      sentence: >
+        My client is _____ a new factory.
+      options:
+        A: starting
+        B: launching
+        C: opening
+        D: initiating
+
+# ==========================================
+# PREPOSITIONS
+# ==========================================
+
+- exercise_id: U1B_PREP_E1
+  type: gap_fill
+
+  instruction: >
+    Complete with correct preposition.
+
+  questions:
+
+    a: awarded damages ___ my client
+    b: proceedings ___ someone
+    c: claim ___ a maximum of £5000
+    d: law firm ___ Manhattan
+    e: dispute ___ someone
+    f: look ___ employment contract
+
+# ------------------------------------------
+
+- exercise_id: U1B_PREP_E2
+  type: correction
+
+  instruction: >
+    Rewrite Luigi's text using correct legal English.
+
+  original_text: |
+    My name is Luigi and I am a lawyer at Milan.
+    I work into a big law firm.
+    Today I am very busy.
+    I am writing a contract to a new client.
+    This afternoon I am speaking for a different client in court.
+    It is a disrespect of contract case.
+    I think we will win because our reasons are very strong.
+
+# ==========================================
+# SOLICITORS AND BARRISTERS
+# ==========================================
+
+- exercise_id: U1B_SB_E1
+  type: gap_fill
+
+  instruction: >
+    Complete Diana Williams' notes using:
+
+      partner
+      judge
+      client
+      audience
+      qualify
+      practices
+      solicitor
+      associate
+      partnerships
+      court
+      attorney
+      issued
+
+# ------------------------------------------
+
+- exercise_id: U1B_SB_E2
+  type: practical_matching
+
+  instruction: >
+    Match legal problem to correct law firm advertisement.
+
+  scenarios:
+
+    a:
+      Wills and property after death
+
+    b:
+      Importing electrical goods in EU
+
+    c:
+      Equal pay discrimination
+
+    d:
+      Immigration permission problem
+
+# ------------------------------------------
+
+- exercise_id: U1B_SB_E3
+  type: vocabulary_identification
+
+  instruction: >
+    Find word in advertisements matching definition.
+
+  definitions:
+
+    a:
+      Not taking enough care causing mistakes or injury
+
+    b:
+      Legal transfer of ownership of land
+
+    c:
+      Losing job because no longer needed
+
+    d:
+      Organisation helping others through donations
+
+    e:
+      Inability to pay debts
+
+    f:
+      Person paying rent
+
+# ------------------------------------------
+
+- exercise_id: U1B_SB_E4
+  type: true_false
+
+  statements:
+
+    - New invention protection -> call Marion Kaye
+    - Education law specialists help law students
+    - Matthew Morrison accepts all no win-no fee cases
+    - 1st Call Accident Centre specialises in tort law
+    - Matthew Morrison handles complaints against solicitors
+
+# ==========================================
+# AREAS OF LAW
+# ==========================================
+
+- exercise_id: U1B_AREA_E1
+  type: classification
+
+  instruction: >
+    Classify as criminal or civil law.
+
+  terms:
+
+    - robbery
+    - contract
+    - partnership
+    - prison
+    - litigation
+    - sue
+    - business
+    - prosecute
+
+# ------------------------------------------
+
+- exercise_id: U1B_AREA_E2
+  type: matching
+
+  instruction: >
+    Match legal area to definition.
+
+  areas:
+
+    - Maritime law
+    - Law of tort
+    - Business and company law
+    - Contract law
+    - Equity and trusts
+    - IT law
+    - Intellectual property law
+    - Family law
+    - Employment law
+    - Conveyancing / Real Property Law
+
+# ------------------------------------------
+
+- exercise_id: U1B_AREA_E3
+  type: scenario_matching
+
+  instruction: >
+    Identify relevant area of law.
+
+  scenarios:
+
+    a:
+      Landscaping contract dispute
+
+    b:
+      Business partnership agreement
+
+    c:
+      Trust arrangement for grandson
+
+    d:
+      Medical negligence claim
+
+    e:
+      Divorce and property dispute
+
+    f:
+      Property boundary issue
+
+    g:
+      Ship carrying cargo sinks
+
+    h:
+      Internet misuse by employee
+
+# ==========================================
+# LEGAL LETTER WRITING REGISTER
+# ==========================================
+
+- exercise_id: U1B_LETTER_E1
+  type: register_conversion
+
+  instruction: >
+    Replace informal language with formal legal language.
+
+  replacements_required:
+
+    - Firstly
+    - issuing a claim
+    - drafting
+    - conveyancing
+    - sue
+    - negligent
+    - mediation
+    - redundant
+    - Finally
+    - sole practitioners
+    - sick pay
+    - maternity leave
+
+# ==========================================
+# LISTENING
+# ==========================================
+
+- exercise_id: U1B_LISTEN_E1
+  type: listening_gap_fill
+
+  instruction: >
+    Complete trainee solicitor interview.
+
+  blanks:
+
+    a
+    b
+    c
+    d
+    e
+    f
+    g
+    h
+    i
+    j
+
+# ==========================================
+# USING YOUR KNOWLEDGE
+# ==========================================
+
+- exercise_id: U1B_REVIEW_E1
+  type: collocation_review
+
+  instruction: >
+    Complete collocations.
+
+  topics:
+
+    - make a will
+    - breach of contract
+    - draft agreement
+    - qualify as lawyer
+    - set up business
+    - run business
+    - practise law
+    - suffer loss
+    - claim damages
+    - take exams
+
+# ------------------------------------------
+
+- exercise_id: U1B_REVIEW_E2
+  type: vocabulary_review
+
+  instruction: >
+    Complete vocabulary review.
+
+# ------------------------------------------
+
+- exercise_id: U1B_REVIEW_E3
+  type: preposition_review
+
+  instruction: >
+    Complete with correct prepositions.
+
+# ==========================================
+# TOLES HIGHER PRACTICE
+# ==========================================
+
+- exercise_id: U1B_TOLES_E1
+  type: multiple_choice
+
+  instruction: >
+    Choose best legal English option.
+
+  questions: 1-10
+
+# ------------------------------------------
+
+- exercise_id: U1B_TOLES_E2
+  type: gap_fill_reading
+
+  title: Barristers at Work
+
+  blanks:
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+
+```

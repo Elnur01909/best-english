@@ -1,0 +1,351 @@
+# 03_unit1A_exercises.md
+
+```yaml
+unit: UNIT_1A
+title: The Legal Profession
+type: exercises_only
+
+# ==========================================
+# SECTION: WORKING IN LAW
+# ==========================================
+
+- exercise_id: U1A_WIL_E1
+  type: matching
+
+  instruction: >
+    Match each legal profession with the correct description.
+
+  options:
+    - Solicitor
+    - Attorney
+    - Barrister
+    - Lawyer
+
+  questions:
+
+    a: >
+      Lawyer who gives legal advice and opinions
+      to solicitors and passed Bar Council exams.
+
+    b: >
+      Lawyer who gives legal advice to individuals
+      and companies in the USA.
+
+    c: >
+      Lawyer who gives legal advice to individuals
+      and companies in England and Wales.
+
+    d: >
+      General professional title covering solicitor,
+      barrister and attorney.
+
+# ------------------------------------------
+
+- exercise_id: U1A_WIL_E2
+  type: true_false
+
+  statements:
+
+    - There are two types of lawyer practising in England.
+
+    - Last year I finished my training contract and started
+      working for a large international law firm.
+      I am now a qualified lawyer.
+
+    - Only barristers can speak on behalf of clients in court.
+
+    - Many solicitors work together in partnerships
+      but barristers do not.
+
+    - In England and the USA lawyers can take
+      a special exam to become a judge.
+
+# ==========================================
+# SECTION: CIVIL OR CRIMINAL LAW
+# ==========================================
+
+- exercise_id: U1A_CCL_E1
+  type: classification
+
+  instruction: >
+    Decide whether each situation is a civil matter
+    or a criminal matter.
+
+  situations:
+
+    a: >
+      Factory owner needs contracts for employees.
+
+    b: >
+      Woman wishes to prepare a will.
+
+    c: >
+      Man accused of stealing a car.
+
+    d: >
+      Restaurant owner seeks compensation for
+      late delivery under contract.
+
+    e: >
+      Bank manager questioned by police regarding
+      missing money.
+
+# ------------------------------------------
+
+- exercise_id: U1A_CCL_E2
+  type: true_false
+
+  statements:
+
+    - Starting a claim means the same as starting proceedings.
+
+    - You can prosecute someone in civil court.
+
+    - There are more than 200 County Courts
+      in England and Wales.
+
+    - Plaintiff is no longer used in England
+      but is still used in the USA.
+
+    - It is free to start a claim in County Court.
+
+    - Small claims are heard in a separate court building.
+
+# ------------------------------------------
+
+- exercise_id: U1A_CCL_E3
+  type: matching
+
+  instruction: >
+    Match the legal expression with its meaning.
+
+  terms:
+
+    - issue a claim
+    - pay a fee
+    - serve a claim
+    - respond to a claim
+    - hear a case
+    - find in favour of
+    - give judgment
+    - make an order
+    - bailiff
+
+# ------------------------------------------
+
+- exercise_id: U1A_CCL_E4
+  type: sequence_completion
+
+  instruction: >
+    Complete the civil claim procedure using
+    appropriate legal vocabulary.
+
+  steps:
+
+    a: claimant ______ a claim
+
+    b: claimant pays a ______
+
+    c: court ______ claim on defendant
+
+    d: defendant ______ to claim
+
+    e: judge will ______ the case
+
+    f: judge will ______ in favour of one party
+
+    g: parties obey court ______
+
+    h: claimant may use a ______
+       if defendant fails to pay
+
+# ==========================================
+# SECTION: LAW OF TORT
+# ==========================================
+
+- exercise_id: U1A_TORT_E1
+  type: short_answer
+
+  questions:
+
+    a: >
+      How do lawyers say "to break"
+      a duty of care?
+
+    b: >
+      Is tort law civil law or criminal law?
+
+    c: >
+      What is a tort?
+
+    d: >
+      What is the name of the tort committed
+      through carelessness?
+
+    e: >
+      What does "suing" mean?
+
+    f: >
+      What is the legal name for compensation
+      awarded to an injured person?
+
+    g: >
+      What is a no win-no fee arrangement?
+
+# ------------------------------------------
+
+- exercise_id: U1A_TORT_E2
+  type: vocabulary_gap_fill
+
+  source_vocabulary:
+
+    - suing
+    - negligence
+    - damages
+    - allegations
+    - grounds
+
+  sentences:
+
+    a: >
+      I am ______ the owner of the shop because
+      I slipped and injured my back.
+
+    b: >
+      I specialise in ______ cases.
+
+    c: >
+      Employee received £5000 in ______.
+
+    d: >
+      We reject your ______.
+
+    e: >
+      What are your ______ for starting legal action?
+
+# ==========================================
+# SECTION: AREAS OF LAW
+# ==========================================
+
+- exercise_id: U1A_AREA_E1
+  type: lawyer_matching
+
+  instruction: >
+    Match each lawyer profile with the correct
+    area of law.
+
+  lawyer_profiles:
+
+    - David
+    - Tom
+    - Jennifer
+    - Alistair
+    - Sunitta
+    - Cory
+    - Kayleigh
+    - Michael
+    - Mary
+    - Polly
+
+  legal_areas:
+
+    - Contract Law
+    - Company Law
+    - Land Law
+    - Tort Law
+    - Equity and Trusts
+    - Employment Law
+    - Family Law
+    - Immigration Law
+    - Intellectual Property Law
+    - Criminal Law
+
+# ------------------------------------------
+
+- exercise_id: U1A_AREA_E2
+  type: gap_fill
+
+  instruction: >
+    Complete sentences using legal vocabulary.
+
+# ------------------------------------------
+
+- exercise_id: U1A_AREA_E3
+  type: definitions_matching
+
+  instruction: >
+    Match legal terms with definitions.
+
+  terms:
+
+    - insolvent
+    - merger
+    - tenant
+    - conveyancing
+    - discriminate
+    - unfair dismissal
+    - sick pay
+    - lease of land and buildings
+    - formation of a business
+    - partnership
+    - maternity leave
+    - capital
+    - redundancy
+    - landlord
+    - real estate
+
+# ------------------------------------------
+
+- exercise_id: U1A_AREA_E4
+  type: categorisation
+
+  categories:
+
+    - Employment Law
+    - Business Law
+    - Land Law
+
+# ------------------------------------------
+
+- exercise_id: U1A_AREA_E5
+  type: employment_law_gap_fill
+
+# ------------------------------------------
+
+- exercise_id: U1A_AREA_E6
+  type: business_law_gap_fill
+
+# ------------------------------------------
+
+- exercise_id: U1A_AREA_E7
+  type: land_law_gap_fill
+
+# ==========================================
+# SECTION: TOLES FOUNDATION PRACTICE
+# ==========================================
+
+- exercise_id: U1A_TOLES_E1
+  type: error_identification
+
+  instruction: >
+    Each sentence contains one incorrect word.
+    Identify the incorrect word.
+
+# ------------------------------------------
+
+- exercise_id: U1A_TOLES_E2
+  type: reading_true_false
+
+  passage:
+    Sanjay Pritam maritime law article
+
+# ------------------------------------------
+
+- exercise_id: U1A_TOLES_E3
+  type: dialogue_reordering
+
+  instruction: >
+    Place the conversation between lawyer
+    and client in the correct order.
+
+```

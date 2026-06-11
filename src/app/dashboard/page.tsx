@@ -16,6 +16,69 @@ import {
   BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer
 } from 'recharts'
 
+const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
+  {
+    href: '/vocabulary',
+    emoji: '🗂️',
+    iconBg: '#e0e7ff',
+    title: 'Lüğət (SRS)',
+    desc: dueCount > 0 ? `${dueCount} kart bu gün review üçün hazırdır` : 'Bütün kartlar öyrənildi ✓',
+    cta: dueCount > 0 ? 'Davam et' : 'Yeni söz öyrən',
+    urgent: dueCount > 0,
+  },
+  {
+    href: '/quiz',
+    emoji: '✍️',
+    iconBg: '#fef3c7',
+    title: 'Testlər',
+    desc: 'Foundation / Higher / Advanced səviyyəsindən sual həll et',
+    cta: 'Testi Başla',
+    urgent: false,
+  },
+  {
+    href: '/lessons',
+    emoji: '📖',
+    iconBg: '#d1fae5',
+    title: 'Dərslər',
+    desc: `${lessonsData.length} mini-dərs: müqavilə, məhkəmə, əmək, tort hüququ...`,
+    cta: 'Dərslərə bax',
+    urgent: false,
+  },
+  {
+    href: '/memory-lab',
+    emoji: '🧪',
+    iconBg: '#fce7f3',
+    title: 'Yaddaş Laboratoriyası',
+    desc: '9 elmi yaddaş üsulunu bir sözdə birləşdir',
+    cta: 'Dərinə get',
+    urgent: false,
+  },
+  {
+    href: '/friends',
+    emoji: '👥',
+    iconBg: '#e0f2fe',
+    title: 'Dostlar & Yarış',
+    desc: 'Email ilə dost tap, canlı TOLES Mini-Test yarışında rəqabət et',
+    cta: 'Dostlara bax',
+    urgent: false,
+  },
+  {
+    href: '/placement',
+    emoji: '📊',
+    iconBg: '#f5f3ff',
+    title: 'Səviyyə Testi',
+    desc: 'İngilis dili səviyyəni (A1–C2) yenidən ölç — 18 sual, ~3 dəq',
+    cta: 'Testi Başla',
+    urgent: false,
+  },
+]
+
+const TOLES_STEP = [
+  { key: 'Foundation', label: 'Foundation', cefr: 'B1–B2', color: '#10b981' },
+  { key: 'Higher',     label: 'Higher',     cefr: 'C1',    color: '#6366f1' },
+  { key: 'Advanced',   label: 'Advanced',   cefr: 'C2',    color: '#f59e0b' },
+]
+
 export default function DashboardPage() {
   const router = useRouter()
   const [profile, setProfile] = useState<UserProfile | null>(null)
@@ -54,213 +117,253 @@ export default function DashboardPage() {
     router.push('/')
   }
 
-if (loading) {
+  if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-gray-500">Yüklənir...</div>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--bg)' }}>
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-10 h-10 rounded-full border-2 border-t-transparent animate-spin"
+               style={{ borderColor: 'var(--brand)', borderTopColor: 'transparent' }} />
+          <p style={{ color: 'var(--text-2)', fontSize: '0.875rem' }}>Yüklənir...</p>
+        </div>
       </div>
     )
   }
 
+  const tolesIdx = TOLES_STEP.findIndex(s => s.key === profile?.toles_level)
+
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      {/* Header */}
-      <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 px-4 py-3">
-        <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <span className="font-bold text-blue-600 text-lg">Best English</span>
-          <div className="flex items-center gap-3">
+    <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
+
+      {/* ── Header ───────────────────────────────────────────── */}
+      <header style={{
+        background: 'var(--surface)',
+        borderBottom: '1px solid var(--border)',
+        position: 'sticky', top: 0, zIndex: 40,
+      }}>
+        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
+                 style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>
+              BE
+            </div>
+            <span className="font-bold text-base" style={{ color: 'var(--text-1)' }}>
+              Best English
+            </span>
+          </div>
+
+          {/* Right side */}
+          <div className="flex items-center gap-2">
             {profile && (
               <>
-                <span className={`badge ${LEVEL_COLORS[profile.level as keyof typeof LEVEL_COLORS]}`}>
-                  {profile.level}
-                </span>
-                <span className={`badge ${TOLES_COLORS[profile.toles_level as keyof typeof TOLES_COLORS]}`}>
+                <span className="badge-brand hidden sm:inline-flex">{profile.level}</span>
+                <span className="px-2 py-0.5 rounded-full text-xs font-semibold hidden sm:inline-flex"
+                      style={{ background: '#fef3c7', color: '#92400e', border: '1px solid #fde68a' }}>
                   TOLES {profile.toles_level}
                 </span>
+                {profile.streak > 0 && (
+                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold"
+                        style={{ background: '#fff7ed', color: '#c2410c', border: '1px solid #fed7aa' }}>
+                    🔥 {profile.streak}
+                  </span>
+                )}
               </>
             )}
-            <button onClick={handleSignOut} className="text-sm text-gray-500 hover:text-gray-700">
+            <button onClick={handleSignOut} className="btn-ghost text-xs">
               Çıxış
             </button>
           </div>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 py-8">
-        {/* Stat kartları */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <main className="max-w-5xl mx-auto px-4 py-6 space-y-6">
+
+        {/* ── Welcome banner ───────────────────────────────────── */}
+        <div className="rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4"
+             style={{
+               background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #4338ca 100%)',
+               boxShadow: '0 8px 32px rgba(99,102,241,0.3)',
+             }}>
+          <div className="flex-1">
+            <p className="text-indigo-200 text-sm font-medium mb-0.5">Xoş gəldin 👋</p>
+            <h1 className="text-white text-xl font-bold">
+              {profile?.display_name ?? profile?.email?.split('@')[0] ?? 'Öyrənən'}
+            </h1>
+          </div>
+          <div className="flex gap-3">
+            {dueCount > 0 && (
+              <Link href="/vocabulary"
+                    className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm text-indigo-900"
+                    style={{ background: 'white', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
+                🗂️ {dueCount} kart hazırdır
+              </Link>
+            )}
+            <Link href="/quiz"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm"
+                  style={{ background: 'rgba(255,255,255,0.15)', color: 'white',
+                           border: '1px solid rgba(255,255,255,0.25)' }}>
+              ✍️ Test Həll Et
+            </Link>
+          </div>
+        </div>
+
+        {/* ── Stat cards ───────────────────────────────────────── */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
-            { label: 'Ardıcıl Gün', value: `🔥 ${profile?.streak ?? 0}`, color: 'text-orange-600' },
-            { label: 'Bu Gün Review', value: dueCount.toString(), color: dueCount > 0 ? 'text-blue-600' : 'text-green-600' },
-            { label: 'Ümumi Xal', value: formatNumber(profile?.total_points ?? 0), color: 'text-purple-600' },
-            { label: 'Səviyyə', value: profile?.level ?? '—', color: 'text-gray-900' },
+            { label: 'Ardıcıl Gün', value: profile?.streak ?? 0, suffix: 'gün', icon: '🔥',
+              valueColor: '#c2410c', bg: '#fff7ed', accent: '#f97316' },
+            { label: 'Bu Gün Due', value: dueCount, suffix: 'kart', icon: '🗂️',
+              valueColor: dueCount > 0 ? '#4f46e5' : '#065f46',
+              bg: dueCount > 0 ? '#f5f3ff' : '#d1fae5', accent: dueCount > 0 ? '#6366f1' : '#10b981' },
+            { label: 'Ümumi Xal',  value: formatNumber(profile?.total_points ?? 0), suffix: '', icon: '⭐',
+              valueColor: '#92400e', bg: '#fef3c7', accent: '#f59e0b' },
+            { label: 'Səviyyə',    value: profile?.level ?? '—', suffix: '', icon: '🎯',
+              valueColor: '#1e40af', bg: '#e0e7ff', accent: '#6366f1' },
           ].map((s) => (
-            <div key={s.label} className="card text-center">
-              <div className={`text-2xl font-bold ${s.color}`}>{s.value}</div>
-              <div className="text-xs text-gray-500 mt-1">{s.label}</div>
+            <div key={s.label} className="card text-center relative overflow-hidden" style={{ padding: '1rem 0.75rem' }}>
+              <div className="absolute top-0 left-0 right-0 h-1 rounded-t-card"
+                   style={{ background: s.accent }} />
+              <div className="text-xl mb-1">{s.icon}</div>
+              <div className="text-2xl font-bold leading-none" style={{ color: s.valueColor }}>
+                {s.value}
+              </div>
+              {s.suffix && <div className="text-xs mt-0.5" style={{ color: s.valueColor + 'aa' }}>{s.suffix}</div>}
+              <div className="text-xs mt-1.5" style={{ color: 'var(--text-2)' }}>{s.label}</div>
             </div>
           ))}
         </div>
 
-        {/* TOLES Xəritəsi */}
+        {/* ── TOLES Progress ───────────────────────────────────── */}
         {profile && (
-          <div className="card mb-8 bg-gradient-to-r from-purple-50 to-indigo-50 dark:from-purple-950 dark:to-indigo-950 border-purple-200 dark:border-purple-800">
-            <h2 className="font-semibold text-gray-900 dark:text-white mb-4">
-              🎓 TOLES Sertifikat Yolu
-            </h2>
-            <div className="grid grid-cols-3 gap-3">
-              {['Foundation', 'Higher', 'Advanced'].map((level, idx) => {
-                const levelInfo = TOLES_LEVELS[level as keyof typeof TOLES_LEVELS];
-                const isActive = profile.toles_level === level;
-                const isPassed = ['Foundation', 'Higher', 'Advanced'].indexOf(profile.toles_level) >= idx;
-
+          <div className="card" style={{ background: 'var(--surface)' }}>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="font-semibold text-base" style={{ color: 'var(--text-1)' }}>
+                🎓 TOLES Sertifikat Yolu
+              </h2>
+              <Link href="/change-level"
+                    className="text-xs font-medium"
+                    style={{ color: 'var(--brand)' }}>
+                Dəyiş →
+              </Link>
+            </div>
+            <div className="flex items-center gap-0">
+              {TOLES_STEP.map((step, idx) => {
+                const isDone   = tolesIdx >= idx
+                const isActive = tolesIdx === idx
                 return (
-                  <div
-                    key={level}
-                    className={`p-3 rounded-lg border-2 transition-all ${
-                      isActive
-                        ? 'border-purple-500 bg-white dark:bg-purple-900'
-                        : isPassed
-                          ? 'border-green-400 bg-green-50 dark:bg-green-950'
-                          : 'border-gray-300 dark:border-gray-700 opacity-50'
-                    }`}
-                  >
-                    <div className="font-bold text-sm text-gray-900 dark:text-white">
-                      {isActive && '→ '}
-                      {level}
-                      {isPassed && !isActive && ' ✓'}
+                  <div key={step.key} className="flex items-center flex-1">
+                    <div className="flex flex-col items-center flex-1 text-center">
+                      <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold mb-1.5 transition-all"
+                           style={{
+                             background: isDone ? step.color : 'var(--border)',
+                             color: isDone ? 'white' : 'var(--text-3)',
+                             boxShadow: isActive ? `0 0 0 4px ${step.color}33` : 'none',
+                             transform: isActive ? 'scale(1.1)' : 'scale(1)',
+                           }}>
+                        {isDone && !isActive ? '✓' : idx + 1}
+                      </div>
+                      <div className="text-xs font-semibold" style={{ color: isDone ? step.color : 'var(--text-3)' }}>
+                        {step.label}
+                      </div>
+                      <div className="text-xs" style={{ color: 'var(--text-3)' }}>{step.cefr}</div>
                     </div>
-                    <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">{levelInfo.cefr}</p>
-                    <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">{levelInfo.hours}</p>
+                    {idx < TOLES_STEP.length - 1 && (
+                      <div className="h-0.5 flex-1 mx-1 rounded-full"
+                           style={{ background: tolesIdx > idx ? step.color : 'var(--border)' }} />
+                    )}
                   </div>
-                );
+                )
               })}
             </div>
           </div>
         )}
 
-        {/* CEFR Səviyyə Nərdivanı */}
+        {/* ── Navigation Cards ─────────────────────────────────── */}
+        <div>
+          <h2 className="text-sm font-semibold mb-3" style={{ color: 'var(--text-2)' }}>
+            ÖYRƏNMƏ MODULLARı
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {NAV_ITEMS(dueCount, profile?.level ?? 'B1', profile?.toles_level ?? 'Foundation').map((item) => (
+              <Link key={item.title} href={item.href} className="nav-card"
+                    style={item.urgent ? {
+                      border: '1.5px solid #c7d2fe',
+                      background: '#f5f3ff',
+                    } : {}}>
+                <div className="icon-wrap" style={{ background: item.iconBg }}>
+                  {item.emoji}
+                </div>
+                <div className="nav-title">{item.title}</div>
+                <div className="nav-desc">{item.desc}</div>
+                <div className="nav-cta">
+                  {item.cta}
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* ── CEFR Ladder ──────────────────────────────────────── */}
         <CEFRLadder />
 
-        {/* Zəif Nöqtə Drilleri */}
+        {/* ── Weak Points ──────────────────────────────────────── */}
         <WeakPoints />
 
-        {/* Günlük Plan — Hissə 5 */}
+        {/* ── Daily Schedule ───────────────────────────────────── */}
         <DailySchedule />
 
-        {/* Həftəlik qrafik */}
+        {/* ── Weekly Chart ─────────────────────────────────────── */}
         {weeklyData.length > 0 && (
-          <div className="card mb-8">
-            <h2 className="font-semibold text-gray-900 dark:text-white mb-4">
+          <div className="card">
+            <h2 className="font-semibold text-sm mb-4" style={{ color: 'var(--text-1)' }}>
               📈 Bu Həftə — Düzgün Cavablar
             </h2>
-            <ResponsiveContainer width="100%" height={160}>
-              <BarChart data={weeklyData}>
-                <XAxis dataKey="day" tick={{ fontSize: 12 }} />
-                <YAxis tick={{ fontSize: 12 }} />
-                <Tooltip />
-                <Bar dataKey="correct" fill="#3b82f6" radius={[4, 4, 0, 0]} />
+            <ResponsiveContainer width="100%" height={150}>
+              <BarChart data={weeklyData} barSize={20}>
+                <XAxis dataKey="day" tick={{ fontSize: 11, fill: 'var(--text-2)' }} axisLine={false} tickLine={false} />
+                <YAxis tick={{ fontSize: 11, fill: 'var(--text-2)' }} axisLine={false} tickLine={false} />
+                <Tooltip
+                  contentStyle={{
+                    background: 'var(--surface)',
+                    border: '1px solid var(--border)',
+                    borderRadius: '8px',
+                    fontSize: '12px',
+                    boxShadow: 'var(--shadow-card)',
+                  }}
+                />
+                <Bar dataKey="correct" fill="#6366f1" radius={[6, 6, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
         )}
 
-        {/* Vaxt Roadmap — Hissə 4 */}
-        <div className="card mb-8 bg-indigo-50 dark:bg-indigo-950 border-indigo-200 dark:border-indigo-800">
-          <h2 className="font-semibold text-gray-900 dark:text-white mb-4">⏱️ Vaxt Roadmap (FSI Data)</h2>
-          <div className="text-sm text-gray-700 dark:text-gray-300 mb-4">
-            <p className="mb-3">
-              <strong>Gündə 45 dəq istifadə ilə:</strong>
-            </p>
-            <div className="space-y-2">
-              {PROFICIENCY_HOURS.slice(0, 3).map((item, idx) => (
-                <div key={idx} className="flex justify-between text-xs bg-white dark:bg-indigo-900 p-2 rounded">
-                  <span>{item.from} → {item.to}</span>
-                  <span className="font-medium">{item.months_2h} ay ({item.hours}h)</span>
-                </div>
-              ))}
-            </div>
+        {/* ── FSI Roadmap ──────────────────────────────────────── */}
+        <div className="card" style={{ background: 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)', borderColor: '#c4b5fd' }}>
+          <h2 className="font-semibold text-sm mb-3" style={{ color: 'var(--text-1)' }}>
+            ⏱️ Vaxt Roadmap (FSI Elmi Data)
+          </h2>
+          <p className="text-xs mb-3" style={{ color: 'var(--text-2)' }}>Gündə 45 dəqiqə ardıcıl məşq ilə:</p>
+          <div className="space-y-2">
+            {PROFICIENCY_HOURS.slice(0, 3).map((item, idx) => (
+              <div key={idx} className="flex justify-between items-center text-xs px-3 py-2 rounded-lg"
+                   style={{ background: 'rgba(255,255,255,0.7)', border: '1px solid #ddd6fe' }}>
+                <span style={{ color: 'var(--text-1)', fontWeight: 500 }}>{item.from} → {item.to}</span>
+                <span style={{ color: '#7c3aed', fontWeight: 600 }}>{item.months_2h} ay ({item.hours}h)</span>
+              </div>
+            ))}
           </div>
-          <div className="p-3 bg-indigo-100 dark:bg-indigo-900 rounded text-sm text-indigo-900 dark:text-indigo-100">
-            <strong>Sıfırdan C1-ə:</strong> {TOTAL_PATHWAY.sifir_to_c1.months_2h} (gündə 2 saat)
+          <div className="mt-3 px-3 py-2 rounded-lg text-xs font-semibold"
+               style={{ background: '#6366f1', color: 'white' }}>
+            🎯 Sıfırdan C1-ə: {TOTAL_PATHWAY.sifir_to_c1.months_2h} (gündə 2 saat ilə)
           </div>
         </div>
 
-        {/* Navigasiya kartları */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {[
-            {
-              href: '/vocabulary',
-              icon: '🗂️',
-              title: 'Lüğət (SRS)',
-              desc: dueCount > 0 ? `${dueCount} kart bu gün review üçün hazırdır` : 'Bütün kartlar öyrənildi ✓',
-              cta: dueCount > 0 ? 'Başla →' : 'Yeni söz əlavə et',
-              urgent: dueCount > 0,
-            },
-            {
-              href: '/memory-lab',
-              icon: '🧪',
-              title: 'Yaddaş Laboratoriyası',
-              desc: '9 elmi yaddaş üsulunu (mnemonika, vizual təsvir, etimologiya...) bir sözdə birləşdir — könüllü, ayrı məşq',
-              cta: 'Dərinə get →',
-              urgent: false,
-            },
-            {
-              href: '/quiz',
-              icon: '✍️',
-              title: 'Testlər',
-              desc: 'Foundation / Higher / Advanced səviyyəsindən sual həll et',
-              cta: 'Testi Başla →',
-              urgent: false,
-            },
-            {
-              href: '/friends',
-              icon: '👥',
-              title: 'Dostlar & Yarış',
-              desc: 'Email ilə dost tap, dostluq qur və TOLES Mini-Test yarışında canlı yarış!',
-              cta: 'Dostlara bax →',
-              urgent: false,
-            },
-            {
-              href: '/lessons',
-              icon: '📖',
-              title: 'Dərslər',
-              desc: `${lessonsData.length} mini-dərs: müqavilə, məhkəmə, əmək, tort hüququ...`,
-              cta: 'Dərslərə bax →',
-              urgent: false,
-            },
-            {
-              href: '/placement',
-              icon: '📊',
-              title: 'Səviyyə Testi',
-              desc: 'İngilis dili səviyyəni (A1–C2) yenidən ölç — 18 sual, ~3 dəqiqə',
-              cta: 'Testi Başla →',
-              urgent: false,
-            },
-            {
-              href: '/change-level',
-              icon: '⚙️',
-              title: 'Səviyyəni Dəyiş',
-              desc: `Cari: ${profile?.level} (TOLES: ${profile?.toles_level}) — əl ilə dəyiş`,
-              cta: 'Dəyiş →',
-              urgent: false,
-            },
-          ].map((item) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              className={`card hover:shadow-md transition-shadow cursor-pointer block ${
-                item.urgent ? 'border-blue-300 dark:border-blue-800 bg-blue-50 dark:bg-blue-950' : ''
-              }`}
-            >
-              <div className="text-2xl mb-2">{item.icon}</div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{item.title}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{item.desc}</p>
-              <span className="text-sm font-medium text-blue-600">{item.cta}</span>
-            </Link>
-          ))}
-        </div>
+        <div className="pb-8" />
       </main>
+
       <AITutorChat level={profile?.level ?? 'B1'} />
     </div>
   )

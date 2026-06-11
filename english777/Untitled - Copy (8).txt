@@ -1,0 +1,305 @@
+# 09_master_collocations.md
+
+```yaml id="r7l1xv"
+collocations_version: 1.0
+
+# ==========================================
+# LEGAL PROFESSION
+# ==========================================
+
+legal_profession:
+
+  - qualify as a lawyer
+  - qualify as a solicitor
+  - qualify as a barrister
+
+  - practise law
+  - work in law
+  - work for a law firm
+  - work in a law firm
+
+  - act for a client
+  - represent a client
+  - advise a client
+
+  - gain experience
+  - take an exam
+  - pass an exam
+
+  - sit as a judge
+  - appear in court
+  - plead a case
+
+# ==========================================
+# CIVIL LITIGATION
+# ==========================================
+
+civil_litigation:
+
+  - issue a claim
+  - serve a claim
+  - respond to a claim
+
+  - start proceedings
+  - bring proceedings
+  - commence proceedings
+
+  - hear a case
+  - hear evidence
+
+  - find in favour of
+  - give judgment
+  - make an order
+
+  - enforce a judgment
+  - appoint a bailiff
+
+  - recover damages
+  - claim damages
+  - seek compensation
+
+  - settle a dispute
+  - resolve a dispute
+
+# ==========================================
+# TORT LAW
+# ==========================================
+
+tort_law:
+
+  - commit a tort
+  - bring a tort claim
+
+  - owe a duty of care
+  - breach a duty of care
+
+  - suffer injury
+  - suffer loss
+  - suffer damage
+
+  - cause injury
+  - cause loss
+  - cause damage
+
+  - receive damages
+  - award damages
+
+  - sue somebody
+  - sue for damages
+
+  - prove negligence
+  - establish liability
+
+# ==========================================
+# CONTRACT LAW
+# ==========================================
+
+contract_law:
+
+  - draft a contract
+  - negotiate a contract
+  - sign a contract
+
+  - honour a contract
+  - perform a contract
+
+  - breach a contract
+  - terminate a contract
+
+  - enter into a contract
+  - conclude a contract
+
+  - enforce a contract
+
+  - contractual obligation
+  - contractual liability
+
+# ==========================================
+# COMPANY / BUSINESS LAW
+# ==========================================
+
+business_law:
+
+  - form a company
+  - establish a company
+  - incorporate a company
+
+  - set up a business
+  - run a business
+
+  - enter into partnership
+  - go into partnership with
+
+  - merge with another company
+  - complete a merger
+
+  - raise capital
+  - invest capital
+
+  - become insolvent
+  - declare insolvency
+
+# ==========================================
+# EMPLOYMENT LAW
+# ==========================================
+
+employment_law:
+
+  - dismiss an employee
+  - unfairly dismiss an employee
+
+  - make an employee redundant
+
+  - take maternity leave
+  - return from maternity leave
+
+  - receive sick pay
+
+  - discriminate against somebody
+
+  - bring an employment claim
+
+# ==========================================
+# LAND LAW
+# ==========================================
+
+land_law:
+
+  - lease property
+  - rent property
+
+  - own property
+  - transfer ownership
+
+  - complete conveyancing
+
+  - pay rent
+  - collect rent
+
+  - act as landlord
+  - act as tenant
+
+# ==========================================
+# INTELLECTUAL PROPERTY
+# ==========================================
+
+intellectual_property:
+
+  - register a trademark
+  - file a patent application
+
+  - obtain a patent
+
+  - protect intellectual property
+
+  - infringe copyright
+  - infringe a patent
+  - infringe a trademark
+
+# ==========================================
+# FAMILY LAW
+# ==========================================
+
+family_law:
+
+  - file for divorce
+
+  - obtain custody
+
+  - make a will
+
+  - administer an estate
+
+# ==========================================
+# IMMIGRATION LAW
+# ==========================================
+
+immigration_law:
+
+  - apply for a visa
+  - obtain a visa
+
+  - apply for a residence permit
+
+  - obtain a work permit
+
+# ==========================================
+# MARITIME LAW
+# ==========================================
+
+maritime_law:
+
+  - carry cargo
+
+  - transport goods by sea
+
+  - charter a vessel
+
+  - insure cargo
+
+# ==========================================
+# DISPUTE RESOLUTION
+# ==========================================
+
+dispute_resolution:
+
+  - commence mediation
+  - participate in mediation
+
+  - settle a claim
+  - settle a dispute
+
+  - reach an agreement
+
+  - resolve a conflict
+
+# ==========================================
+# LAW FIRM MANAGEMENT
+# ==========================================
+
+law_firm_management:
+
+  - become a partner
+  - promote an associate
+
+  - manage a department
+
+  - supervise trainees
+
+  - instruct a barrister
+
+# ==========================================
+# HIGH VALUE TOLES COLLOCATIONS
+# ==========================================
+
+toles_priority:
+
+  - draft a contract
+  - breach a contract
+  - honour a contract
+
+  - issue a claim
+  - start proceedings
+  - give judgment
+
+  - act for a client
+  - represent a client
+
+  - qualify as a lawyer
+  - practise law
+
+  - suffer loss
+  - claim damages
+
+  - owe a duty of care
+  - breach a duty of care
+
+  - make a will
+
+  - set up a business
+  - run a business
+
+  - merge with a company
+
+status: complete
+```
