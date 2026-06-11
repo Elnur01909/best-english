@@ -179,29 +179,42 @@ export default function DashboardPage() {
       <main className="max-w-5xl mx-auto px-4 py-6 space-y-6">
 
         {/* ── Welcome banner ───────────────────────────────────── */}
-        <div className="rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4"
+        <div className="relative overflow-hidden rounded-2xl p-6 flex flex-col sm:flex-row sm:items-center gap-4"
              style={{
-               background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #4338ca 100%)',
-               boxShadow: '0 8px 32px rgba(99,102,241,0.3)',
+               background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 45%, #4338ca 100%)',
+               boxShadow: '0 8px 32px rgba(99,102,241,0.35)',
              }}>
-          <div className="flex-1">
-            <p className="text-indigo-200 text-sm font-medium mb-0.5">Xoş gəldin 👋</p>
-            <h1 className="text-white text-xl font-bold">
+          {/* Mesh işıqları — banneri canlandırır */}
+          <div className="absolute inset-0 pointer-events-none"
+               style={{ background: 'radial-gradient(280px 180px at 88% -10%, rgba(251,191,36,0.28), transparent 70%), radial-gradient(340px 240px at 5% 120%, rgba(165,180,252,0.35), transparent 70%)' }} />
+          <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full pointer-events-none"
+               style={{ background: 'rgba(255,255,255,0.07)' }} />
+          <div className="absolute top-8 right-24 w-16 h-16 rounded-full pointer-events-none hidden sm:block"
+               style={{ background: 'rgba(255,255,255,0.06)' }} />
+
+          <div className="relative flex-1">
+            <p className="text-indigo-200 text-sm font-medium mb-0.5">
+              {(() => { const h = new Date().getHours(); return h < 12 ? 'Sabahın xeyir ☀️' : h < 18 ? 'Günortan xeyir 👋' : 'Axşamın xeyir 🌙' })()}
+            </p>
+            <h1 className="text-white text-2xl font-bold tracking-tight">
               {profile?.display_name ?? profile?.email?.split('@')[0] ?? 'Öyrənən'}
             </h1>
+            {profile && profile.streak > 1 && (
+              <p className="text-indigo-200 text-xs mt-1">🔥 {profile.streak} gündür dayanmırsan — davam!</p>
+            )}
           </div>
-          <div className="flex gap-3">
+          <div className="relative flex gap-3">
             {dueCount > 0 && (
               <Link href="/vocabulary"
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm text-indigo-900"
-                    style={{ background: 'white', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
+                    className="flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm text-indigo-900 transition-transform hover:-translate-y-0.5"
+                    style={{ background: 'white', boxShadow: '0 4px 14px rgba(0,0,0,0.18)' }}>
                 🗂️ {dueCount} kart hazırdır
               </Link>
             )}
             <Link href="/quiz"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm"
-                  style={{ background: 'rgba(255,255,255,0.15)', color: 'white',
-                           border: '1px solid rgba(255,255,255,0.25)' }}>
+                  className="flex items-center gap-2 px-4 py-2 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5"
+                  style={{ background: 'rgba(255,255,255,0.14)', color: 'white',
+                           border: '1px solid rgba(255,255,255,0.28)', backdropFilter: 'blur(8px)' }}>
               ✍️ Test Həll Et
             </Link>
           </div>
@@ -228,28 +241,43 @@ export default function DashboardPage() {
           </form>
         )}
 
-        {/* ── Stat cards ───────────────────────────────────────── */}
+        {/* ── Stat cards (progress ring-lərlə) ─────────────────── */}
         <div className="grid grid-cols-3 gap-3">
           {[
-            { label: 'Ardıcıl Gün', value: profile?.streak ?? 0, suffix: 'gün', icon: '🔥',
-              valueColor: '#c2410c', bg: '#fff7ed', accent: '#f97316' },
-            { label: 'Bu Gün Due', value: dueCount, suffix: 'kart', icon: '🗂️',
-              valueColor: dueCount > 0 ? '#4f46e5' : '#065f46',
-              bg: dueCount > 0 ? '#f5f3ff' : '#d1fae5', accent: dueCount > 0 ? '#6366f1' : '#10b981' },
-            { label: 'Səviyyə',    value: profile?.level ?? '—', suffix: '', icon: '🎯',
-              valueColor: '#1e40af', bg: '#e0e7ff', accent: '#6366f1' },
-          ].map((s) => (
-            <div key={s.label} className="card text-center relative overflow-hidden" style={{ padding: '1rem 0.75rem' }}>
-              <div className="absolute top-0 left-0 right-0 h-1 rounded-t-card"
-                   style={{ background: s.accent }} />
-              <div className="text-xl mb-1">{s.icon}</div>
-              <div className="text-2xl font-bold leading-none" style={{ color: s.valueColor }}>
-                {s.value}
+            // həftəlik dövr: 7 gün = tam dairə
+            { label: 'Ardıcıl Gün', value: `${profile?.streak ?? 0}`, suffix: 'gün', icon: '🔥',
+              accent: '#f97316', pct: Math.min(1, (profile?.streak ?? 0) / 7) },
+            // 20 kart = tam dairə (gündəlik hədəf)
+            { label: 'Bu Gün Due', value: `${dueCount}`, suffix: 'kart', icon: '🗂️',
+              accent: dueCount > 0 ? '#6366f1' : '#10b981', pct: Math.min(1, dueCount / 20) },
+            // CEFR nərdivanında mövqe: A1=1/6 ... C2=6/6
+            { label: 'Səviyyə', value: profile?.level ?? '—', suffix: '', icon: '🎯',
+              accent: '#6366f1',
+              pct: (['A1','A2','B1','B2','C1','C2'].indexOf(profile?.level ?? '') + 1) / 6 },
+          ].map((s) => {
+            const r = 24
+            const c = 2 * Math.PI * r
+            return (
+              <div key={s.label} className="card text-center" style={{ padding: '1rem 0.75rem' }}>
+                <div className="relative w-14 h-14 mx-auto mb-2">
+                  <svg width="56" height="56" viewBox="0 0 56 56" className="block">
+                    <circle cx="28" cy="28" r={r} fill="none" stroke="var(--surface-2)" strokeWidth="4.5" />
+                    <circle cx="28" cy="28" r={r} fill="none" stroke={s.accent} strokeWidth="4.5"
+                            strokeLinecap="round"
+                            strokeDasharray={`${c * Math.max(0, s.pct)} ${c}`}
+                            transform="rotate(-90 28 28)"
+                            style={{ transition: 'stroke-dasharray 0.9s var(--ease)' }} />
+                  </svg>
+                  <span className="absolute inset-0 flex items-center justify-center text-lg">{s.icon}</span>
+                </div>
+                <div className="text-xl font-bold leading-none tracking-tight" style={{ color: s.accent }}>
+                  {s.value}
+                </div>
+                {s.suffix && <div className="text-[11px] mt-0.5" style={{ color: 'var(--text-3)' }}>{s.suffix}</div>}
+                <div className="text-xs mt-1" style={{ color: 'var(--text-2)' }}>{s.label}</div>
               </div>
-              {s.suffix && <div className="text-xs mt-0.5" style={{ color: s.valueColor + 'aa' }}>{s.suffix}</div>}
-              <div className="text-xs mt-1.5" style={{ color: 'var(--text-2)' }}>{s.label}</div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* ── TOLES Progress ───────────────────────────────────── */}
