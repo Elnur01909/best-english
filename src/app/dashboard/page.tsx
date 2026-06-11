@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { supabase, getUser, getUserProfile, getDueCards, getWeeklyStats, updateProfile } from '@/lib/supabase'
+import { supabase, getUser, getUserProfile, getDueCards, updateProfile } from '@/lib/supabase'
 import { LEVEL_COLORS, TOLES_COLORS, formatNumber } from '@/lib/utils'
 import { getTOLESProgress, TOLES_LEVELS } from '@/lib/toles'
 import DailySchedule from '@/components/DailySchedule'
@@ -11,9 +11,6 @@ import CEFRLadder from '@/components/CEFRLadder'
 import AITutorChat from '@/components/AITutorChat'
 import type { UserProfile } from '@/types'
 import lessonsData from '@/data/lessons.json'
-import {
-  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer
-} from 'recharts'
 
 const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
   {
@@ -82,7 +79,6 @@ export default function DashboardPage() {
   const router = useRouter()
   const [profile, setProfile] = useState<UserProfile | null>(null)
   const [dueCount, setDueCount] = useState(0)
-  const [weeklyData, setWeeklyData] = useState<{ day: string; correct: number }[]>([])
   const [loading, setLoading] = useState(true)
   // Adı olmayan (köhnə) istifadəçilər üçün ad-soyad formu
   const [nameFirst, setNameFirst] = useState('')
@@ -99,16 +95,6 @@ export default function DashboardPage() {
 
       const { data: due } = await getDueCards(user.id, 100)
       setDueCount(due?.length ?? 0)
-
-      const { data: quiz } = await getWeeklyStats(user.id)
-      if (quiz) {
-        const grouped: Record<string, number> = {}
-        quiz.forEach((r: { correct: boolean; answered_at: string }) => {
-          const day = new Date(r.answered_at).toLocaleDateString('az-AZ', { weekday: 'short' })
-          grouped[day] = (grouped[day] ?? 0) + (r.correct ? 1 : 0)
-        })
-        setWeeklyData(Object.entries(grouped).map(([day, correct]) => ({ day, correct })))
-      }
 
       setLoading(false)
     }
@@ -349,31 +335,6 @@ export default function DashboardPage() {
 
         {/* ── Daily Schedule ───────────────────────────────────── */}
         <DailySchedule />
-
-        {/* ── Weekly Chart ─────────────────────────────────────── */}
-        {weeklyData.length > 0 && (
-          <div className="card">
-            <h2 className="font-semibold text-sm mb-4" style={{ color: 'var(--text-1)' }}>
-              📈 Bu Həftə — Düzgün Cavablar
-            </h2>
-            <ResponsiveContainer width="100%" height={150}>
-              <BarChart data={weeklyData} barSize={20}>
-                <XAxis dataKey="day" tick={{ fontSize: 11, fill: 'var(--text-2)' }} axisLine={false} tickLine={false} />
-                <YAxis tick={{ fontSize: 11, fill: 'var(--text-2)' }} axisLine={false} tickLine={false} />
-                <Tooltip
-                  contentStyle={{
-                    background: 'var(--surface)',
-                    border: '1px solid var(--border)',
-                    borderRadius: '8px',
-                    fontSize: '12px',
-                    boxShadow: 'var(--shadow-card)',
-                  }}
-                />
-                <Bar dataKey="correct" fill="#6366f1" radius={[6, 6, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        )}
 
         <div className="pb-8" />
       </main>
