@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabase, getUser, getUserProfile, getDueCards, updateProfile } from '@/lib/supabase'
-import { LEVEL_COLORS, TOLES_COLORS, formatNumber } from '@/lib/utils'
+import { LEVEL_COLORS, TOLES_COLORS } from '@/lib/utils'
 import { getTOLESProgress, TOLES_LEVELS } from '@/lib/toles'
 import DailySchedule from '@/components/DailySchedule'
 import WeakPoints from '@/components/WeakPoints'
@@ -229,15 +229,13 @@ export default function DashboardPage() {
         )}
 
         {/* ── Stat cards ───────────────────────────────────────── */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           {[
             { label: 'Ardıcıl Gün', value: profile?.streak ?? 0, suffix: 'gün', icon: '🔥',
               valueColor: '#c2410c', bg: '#fff7ed', accent: '#f97316' },
             { label: 'Bu Gün Due', value: dueCount, suffix: 'kart', icon: '🗂️',
               valueColor: dueCount > 0 ? '#4f46e5' : '#065f46',
               bg: dueCount > 0 ? '#f5f3ff' : '#d1fae5', accent: dueCount > 0 ? '#6366f1' : '#10b981' },
-            { label: 'Ümumi Xal',  value: formatNumber(profile?.total_points ?? 0), suffix: '', icon: '⭐',
-              valueColor: '#92400e', bg: '#fef3c7', accent: '#f59e0b' },
             { label: 'Səviyyə',    value: profile?.level ?? '—', suffix: '', icon: '🎯',
               valueColor: '#1e40af', bg: '#e0e7ff', accent: '#6366f1' },
           ].map((s) => (
