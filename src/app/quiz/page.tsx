@@ -8,6 +8,7 @@ import { explainQuizError } from '@/lib/ai'
 import AITutorChat from '@/components/AITutorChat'
 import ProfessorWidget from '@/components/ProfessorWidget'
 import AudioPlayer from '@/components/AudioPlayer'
+import Confetti from '@/components/Confetti'
 import quizData from '@/data/quizzes.json'
 import vocabData from '@/data/vocab.json'
 import type { QuizQuestion, VocabItem, CEFRLevel, LearningTrack } from '@/types'
@@ -256,17 +257,26 @@ export default function QuizPage() {
   // ─── Nəticə ekranı ──────────────────────────────
   if (stage === 'result') return (
     <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="card max-w-sm w-full text-center">
-        <div className="text-5xl mb-3">{pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '💪'}</div>
+      {/* 60%+ nəticədə konfetti — qeyd etməyə dəyər an */}
+      {pct >= 60 && <Confetti count={pct >= 80 ? 120 : 70} />}
+      <div className="card max-w-sm w-full text-center animate-fade-up">
+        <div className="text-5xl mb-3 celebrate-pop inline-block">{pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '💪'}</div>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
           {score} / {questions.length}
         </h2>
         <p className="text-gray-500 mb-4">{levelLabel} — {pct}% düzgün</p>
 
-        <div className="w-full bg-gray-100 rounded-full h-3 mb-6">
+        <div className="progress-bar mb-6" style={{ height: '10px' }}>
           <div
-            className={`h-3 rounded-full ${pct >= 80 ? 'bg-green-500' : pct >= 60 ? 'bg-yellow-500' : 'bg-red-500'}`}
-            style={{ width: `${pct}%` }}
+            className="progress-fill"
+            style={{
+              width: `${pct}%`,
+              background: pct >= 80
+                ? 'linear-gradient(90deg, #10b981, #34d399)'
+                : pct >= 60
+                  ? 'linear-gradient(90deg, #f59e0b, #fbbf24)'
+                  : 'linear-gradient(90deg, #ef4444, #f87171)',
+            }}
           />
         </div>
 

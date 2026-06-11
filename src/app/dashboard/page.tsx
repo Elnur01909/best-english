@@ -162,8 +162,8 @@ export default function DashboardPage() {
                   TOLES {profile.toles_level}
                 </span>
                 {profile.streak > 0 && (
-                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold"
-                        style={{ background: '#fff7ed', color: '#c2410c', border: '1px solid #fed7aa' }}>
+                  <span className="celebrate-pop flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold"
+                        style={{ background: 'linear-gradient(135deg, #fff7ed, #ffedd5)', color: '#c2410c', border: '1px solid #fed7aa' }}>
                     🔥 {profile.streak}
                   </span>
                 )}
