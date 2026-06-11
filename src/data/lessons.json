@@ -1296,14 +1296,13 @@
     "id": 30,
     "title": "A1 Qrammatika: Cəm (plural) isimlər",
     "description": "Birdən çox: -s, -es, -ies və qaydasız cəmlər.",
-    "content": "İsmin cəmi (birdən çox) belə düzəlir:\n\n• Adətən -s:  book → books, car → cars, dog → dogs\n• -s, -ss, -sh, -ch, -x ilə bitənlərə -es:  bus → buses, box → boxes, watch → watches\n• samit + y → -ies:  city → cities, baby → babies\n• -f / -fe → -ves:  leaf → leaves, knife → knives, wife → wives, shelf → shelves\n   (istisnalar, sadəcə -s: roof → roofs, chief → chiefs, belief → beliefs)\n• Təki və cəmi EYNİ olanlar (dəyişmir):\n   fish → fish, sheep → sheep, deer → deer,\n   series → series, species → species, aircraft → aircraft, means → means\n   Məs.: one fish → two fish ✓  (two fishes ✗)\n   Yadda saxla: bu sözlərə heç vaxt -s artırılmır — sayını söz önündən bilirik\n   (a sheep / ten sheep).\n• Qaydasız cəmlər (əzbərlə):\n   man → men, woman → women, child → children,\n   foot → feet, tooth → teeth, person → people\n   Tam siyahı: yuxarıdakı «📋 Nümunə Cədvəli» düyməsinə bas",
+    "content": "İsmin cəmi (birdən çox) belə düzəlir:\n\n• Adətən -s:  book → books, car → cars, dog → dogs\n• -s, -ss, -sh, -ch, -x ilə bitənlərə -es:  bus → buses, box → boxes, watch → watches\n• samit + y → -ies:  city → cities, baby → babies\n• -f / -fe → -ves:  leaf → leaves, knife → knives, wife → wives, shelf → shelves\n   (istisnalar, sadəcə -s: roof → roofs, chief → chiefs, belief → beliefs)\n• Qaydasız cəmlər (əzbərlə):\n   man → men, woman → women, child → children,\n   foot → feet, tooth → teeth, person → people\n   Tam siyahı: yuxarıdakı «📋 Nümunə Cədvəli» düyməsinə bas",
     "terms": [],
     "duration": 12,
     "level": "A1",
     "objectives": [
       "-s / -es / -ies qaydalarını bil",
       "Qaydasız cəmləri tanı",
-      "Dəyişməyən cəmləri tanı (fish, sheep...)",
       "Düzgün cəm forması qur"
     ],
     "immersionLinks": [
