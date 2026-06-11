@@ -19,21 +19,22 @@ function extractEnglish(text: string): string {
   // Seqmentlərə böl: yeni sətir, iki nöqtə və cümlə sonu sərhədləri
   const segments = text.split(/[\n:]+|(?<=[.!?])\s+/)
   for (const seg of segments) {
-    // Mötərizə içindəki hissələri ayır
-    const parens: string[] = []
-    const outside = seg.replace(/\(([^)]*)\)/g, (_, inner: string) => {
-      parens.push(inner)
-      return ' '
-    })
-    if (!AZ_CHARS.test(outside)) {
-      // Seqmentin əsas hissəsi ingiliscədir — ingiliscə mötərizələri də saxla
-      let s = outside
-      for (const p of parens) if (!AZ_CHARS.test(p)) s += ' ' + p
-      kept.push(s)
-    } else {
-      // Seqment azərbaycancadır — içindəki ingiliscə mötərizələri xilas et
-      // (məs. "Ödənilməmiş hesab-faktura (unpaid invoice)")
-      for (const p of parens) if (!AZ_CHARS.test(p)) kept.push(p)
+    // Mötərizə (...) və «...» qrupları: azərbaycanca olanları at,
+    // ingiliscə olanları yerində (işarələrsiz) saxla
+    const cleaned = seg
+      .replace(/\(([^)]*)\)/g, (_, p: string) => (AZ_CHARS.test(p) ? ' ' : ` ${p} `))
+      .replace(/«([^»]*)»/g, (_, p: string) => (AZ_CHARS.test(p) ? ' ' : ` ${p} `))
+    if (!AZ_CHARS.test(cleaned)) {
+      kept.push(cleaned)
+      continue
+    }
+    // Seqmentin əsas hissəsi azərbaycancadır — içindəki ingiliscə
+    // qrupları xilas et (məs. "«OFFER» — düzgün tərifi seç" → "OFFER",
+    // "Ödənilməmiş hesab-faktura (unpaid invoice)" → "unpaid invoice")
+    const groups = seg.match(/\([^)]*\)|«[^»]*»/g) ?? []
+    for (const g of groups) {
+      const p = g.slice(1, -1)
+      if (p && !AZ_CHARS.test(p)) kept.push(p)
     }
   }
   return kept.join(' ').replace(/\s{2,}/g, ' ').trim()

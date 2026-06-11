@@ -51,12 +51,6 @@ const TYPE_BADGE: Record<string, { label: string; cls: string }> = {
 // True/False düymələri İngilis dilində göstərilsin
 const TF_LABEL: Record<string, string> = { 'Doğru': 'True', 'Yanlış': 'False' }
 
-// Sualdan «term» hissəsini çıxar — audio üçün
-function extractTerm(q: string): string | null {
-  const m = q.match(/«([^»]+)»/)
-  return m ? m[1] : null
-}
-
 export default function QuizPage() {
   const router = useRouter()
   const [userId, setUserId] = useState<string | null>(null)
@@ -334,8 +328,8 @@ export default function QuizPage() {
                   )}
                   {/* Sual səsləndirmə düyməsi — həmişə görünür */}
                   <AudioPlayer
-                    word={extractTerm(current.question) ?? current.question}
-                    isSentence={!extractTerm(current.question)}
+                    word={current.question}
+                    isSentence={true}
                     variant="icon"
                   />
                 </div>
