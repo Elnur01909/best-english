@@ -8,11 +8,43 @@ interface AudioPlayerProps {
   isSentence?: boolean   // cümlə üçün daha yavaş, daha natural
 }
 
+// Azərbaycan əlifbasına xas hərflər — ingilis mətnində heç vaxt olmur
+const AZ_CHARS = /[əƏıİğĞşŞçÇöÖüÜ]/
+
+// Mətndən yalnız ingiliscə hissələri saxla.
+// Qarışıq mətnlərdə ("Cümləni tamamla: The court will ___") azərbaycanca
+// seqmentlər atılır; tam azərbaycanca mətndə boş sətir qaytarır.
+function extractEnglish(text: string): string {
+  const kept: string[] = []
+  // Seqmentlərə böl: yeni sətir, iki nöqtə və cümlə sonu sərhədləri
+  const segments = text.split(/[\n:]+|(?<=[.!?])\s+/)
+  for (const seg of segments) {
+    // Mötərizə içindəki hissələri ayır
+    const parens: string[] = []
+    const outside = seg.replace(/\(([^)]*)\)/g, (_, inner: string) => {
+      parens.push(inner)
+      return ' '
+    })
+    if (!AZ_CHARS.test(outside)) {
+      // Seqmentin əsas hissəsi ingiliscədir — ingiliscə mötərizələri də saxla
+      let s = outside
+      for (const p of parens) if (!AZ_CHARS.test(p)) s += ' ' + p
+      kept.push(s)
+    } else {
+      // Seqment azərbaycancadır — içindəki ingiliscə mötərizələri xilas et
+      // (məs. "Ödənilməmiş hesab-faktura (unpaid invoice)")
+      for (const p of parens) if (!AZ_CHARS.test(p)) kept.push(p)
+    }
+  }
+  return kept.join(' ').replace(/\s{2,}/g, ' ').trim()
+}
+
 // TTS-ə göndərilməzdən əvvəl mətni təmizlə
 function cleanForTTS(text: string): string {
   return text
     .replace(/_+/g, ' ')          // ___ boşluq göstəricisi → sükut
     .replace(/«|»/g, '')          // güllə dırnaqları sil
+    .replace(/[—–]{2,}/g, ' ')    // —————— boşluq göstəricisi → sükut
     .replace(/\s*—\s*/g, ', ')    // em dash → qısa fasilə
     .replace(/\s*–\s*/g, ', ')    // en dash → qısa fasilə
     .replace(/\s+-\s+/g, ' ')     // ayrıca tire " - " → boşluq (amma "can't" kimi sözlərə toxunmur)
@@ -86,6 +118,9 @@ export default function AudioPlayer({ word, audioUrl, variant = 'minimal', isSen
   const [isPlaying, setIsPlaying] = useState(false)
   const [supported, setSupported] = useState(true)
 
+  // Yalnız ingiliscə hissələri səsləndir; ingiliscə heç nə yoxdursa, düyməni gizlət
+  const englishText = extractEnglish(word)
+
   useEffect(() => {
     if (typeof window !== 'undefined' && !('speechSynthesis' in window)) {
       setSupported(false)
@@ -97,10 +132,10 @@ export default function AudioPlayer({ word, audioUrl, variant = 'minimal', isSen
       const audio = new Audio(audioUrl)
       audio.onplay = () => setIsPlaying(true)
       audio.onended = () => setIsPlaying(false)
-      audio.play().catch(() => speak(word, isSentence, () => setIsPlaying(true), () => setIsPlaying(false)))
+      audio.play().catch(() => speak(englishText, isSentence, () => setIsPlaying(true), () => setIsPlaying(false)))
       return
     }
-    speak(word, isSentence, () => setIsPlaying(true), () => setIsPlaying(false))
+    speak(englishText, isSentence, () => setIsPlaying(true), () => setIsPlaying(false))
   }
 
   function stopAudio() {
@@ -110,7 +145,8 @@ export default function AudioPlayer({ word, audioUrl, variant = 'minimal', isSen
     }
   }
 
-  if (!supported) return null
+  // İngiliscə məzmun yoxdursa (məs. "Doğru"/"Yanlış" variantları), düymə göstərmə
+  if (!supported || (!audioUrl && !/[a-zA-Z]/.test(englishText))) return null
 
   // İkon variant — yalnız kiçik dairəvi düymə (seçim/cavab sıralarında)
   if (variant === 'icon') {
