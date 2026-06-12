@@ -56,7 +56,7 @@ export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
       {!open && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-purple-600 hover:bg-purple-700 text-white shadow-lg flex items-center justify-center text-2xl transition-transform hover:scale-105"
+          className="fixed bottom-24 sm:bottom-5 right-4 sm:right-5 z-40 w-14 h-14 rounded-full bg-purple-600 hover:bg-purple-700 text-white shadow-lg flex items-center justify-center text-2xl transition-transform hover:scale-105"
           aria-label="AI Müəllim"
         >
           🎓
@@ -64,7 +64,7 @@ export default function AITutorChat({ level = 'B1' }: AITutorChatProps) {
       )}
 
       {open && (
-        <div className="fixed bottom-5 right-5 z-40 w-[92vw] max-w-sm h-[70vh] max-h-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden">
+        <div className="fixed bottom-24 sm:bottom-5 right-4 sm:right-5 z-40 w-[92vw] max-w-sm h-[62vh] sm:h-[70vh] max-h-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-purple-600 text-white">
             <div className="flex items-center gap-2">

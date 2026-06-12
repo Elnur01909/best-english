@@ -24,16 +24,20 @@ export default function BottomNav() {
   return (
     <>
       {/* Fixed nav-ın altda qalan məzmunu örtməməsi üçün boşluq */}
-      <div className="h-20 sm:hidden" aria-hidden />
+      <div className="h-24 sm:hidden" aria-hidden />
 
       <nav
         className="bottom-nav fixed bottom-0 left-0 right-0 z-50 sm:hidden"
         style={{
-          background: 'color-mix(in srgb, var(--surface) 85%, transparent)',
+          background: 'color-mix(in srgb, var(--surface) 92%, transparent)',
           backdropFilter: 'blur(14px)',
           WebkitBackdropFilter: 'blur(14px)',
           borderTop: '1px solid var(--border)',
-          paddingBottom: 'env(safe-area-inset-bottom)',
+          /* iOS Safari-nin alt toolbar-ı nav-a bitişik toxunuşları udur —
+             düymələri ölü zonadan yuxarı qaldırmaq üçün minimum 12px boşluq */
+          paddingBottom: 'max(env(safe-area-inset-bottom), 12px)',
+          touchAction: 'manipulation',
+          WebkitTapHighlightColor: 'transparent',
         }}
       >
         <div className="flex items-stretch justify-around px-1">
@@ -43,7 +47,8 @@ export default function BottomNav() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex flex-col items-center gap-0.5 py-2 px-2 flex-1 min-w-0 transition-transform active:scale-95"
+                className="flex flex-col items-center gap-0.5 pt-2 pb-1 px-2 flex-1 min-w-0 select-none transition-transform active:scale-95"
+                style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent', minHeight: 52 }}
               >
                 <span
                   className="flex items-center justify-center w-11 h-7 rounded-full text-base transition-all"

@@ -113,6 +113,13 @@
     border-radius: 4px;
   }
 
+  /* Mobil toxunuş: double-tap zoom gecikməsini aradan qaldır,
+     boz tap-highlight çərçivəsini söndür */
+  a, button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   /* Hərəkət azaldılması istəyənlərə hörmət.
      QEYD: iteration-count olmadan sonsuz animasiyalar 0.01ms-lik dövrlə
      dəli kimi fırlanır — mütləq 1-ə məhdudlaşdırılmalıdır. */
