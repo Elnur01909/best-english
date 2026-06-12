@@ -56,27 +56,45 @@ export default function RegisterPage() {
     <div className="min-h-screen flex" style={{ background: 'var(--bg)' }}>
 
       {/* Left panel */}
-      <div className="hidden lg:flex flex-col justify-between w-1/2 p-12"
+      <div className="hidden lg:flex relative overflow-hidden flex-col justify-between w-1/2 p-12"
            style={{ background: 'linear-gradient(145deg, #6366f1 0%, #4338ca 60%, #312e81 100%)' }}>
-        <div className="flex items-center gap-3">
+        {/* Aurora dekor */}
+        <div className="hero-orb w-72 h-72 -top-16 -right-16" style={{ background: 'rgba(251,191,36,0.18)' }} />
+        <div className="hero-orb w-80 h-80 bottom-0 -left-24" style={{ background: 'rgba(165,180,252,0.22)', animationDelay: '3s' }} />
+
+        <div className="relative flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/20 text-white font-bold text-sm">
             BE
           </div>
           <span className="text-white font-bold text-lg">Best English</span>
         </div>
 
-        <div>
-          <div className="text-5xl mb-6">🏛️</div>
-          <h2 className="text-white text-3xl font-bold leading-snug mb-4">
-            Hüquq ingilis dilini<br/>peşəkar sev öyrən
+        <div className="relative">
+          <div className="text-5xl mb-6 float-slow inline-block">🏛️</div>
+          <h2 className="text-white text-3xl font-bold leading-snug mb-4" style={{ letterSpacing: '-0.02em' }}>
+            Hüquq ingilis dilini<br/>peşəkar səviyyədə öyrən
           </h2>
           <p className="text-indigo-200 text-base leading-relaxed">
             TOLES Foundation-dan Advanced-a — elmi SRS metodu,
             interaktiv dərslər və canlı yarış sistemi.
           </p>
+
+          <div className="mt-8 grid grid-cols-2 gap-3 max-w-xs">
+            {[
+              { value: '~1600', label: 'Test sualı' },
+              { value: '378',   label: 'Hüquqi termin' },
+              { value: '27',    label: 'Mini-dərs' },
+              { value: '14',    label: 'Case Study' },
+            ].map((s) => (
+              <div key={s.label} className="glass-dark rounded-xl px-3.5 py-3">
+                <div className="text-white text-xl font-extrabold" style={{ letterSpacing: '-0.02em' }}>{s.value}</div>
+                <div className="text-indigo-200 text-xs mt-0.5">{s.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <p className="text-indigo-300 text-xs">© 2025 Best English · Pulsuz qeydiyyat</p>
+        <p className="relative text-indigo-300 text-xs">© 2026 Best English · Pulsuz qeydiyyat</p>
       </div>
 
       {/* Right panel */}

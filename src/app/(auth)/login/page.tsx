@@ -28,18 +28,22 @@ export default function LoginPage() {
     <div className="min-h-screen flex" style={{ background: 'var(--bg)' }}>
 
       {/* Left panel — decorative (hidden on mobile) */}
-      <div className="hidden lg:flex flex-col justify-between w-1/2 p-12"
+      <div className="hidden lg:flex relative overflow-hidden flex-col justify-between w-1/2 p-12"
            style={{ background: 'linear-gradient(145deg, #6366f1 0%, #4338ca 60%, #312e81 100%)' }}>
-        <div className="flex items-center gap-3">
+        {/* Aurora dekor */}
+        <div className="hero-orb w-72 h-72 -top-16 -right-16" style={{ background: 'rgba(251,191,36,0.18)' }} />
+        <div className="hero-orb w-80 h-80 bottom-0 -left-24" style={{ background: 'rgba(165,180,252,0.22)', animationDelay: '3s' }} />
+
+        <div className="relative flex items-center gap-3">
           <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/20 text-white font-bold text-sm">
             BE
           </div>
           <span className="text-white font-bold text-lg">Best English</span>
         </div>
 
-        <div>
-          <div className="text-5xl mb-6">⚖️</div>
-          <h2 className="text-white text-3xl font-bold leading-snug mb-4">
+        <div className="relative">
+          <div className="text-5xl mb-6 float-slow inline-block">⚖️</div>
+          <h2 className="text-white text-3xl font-bold leading-snug mb-4" style={{ letterSpacing: '-0.02em' }}>
             TOLES Sertifikatına<br/>elmi metodla hazırlaş
           </h2>
           <p className="text-indigo-200 text-base leading-relaxed">
@@ -53,19 +57,19 @@ export default function LoginPage() {
               { icon: '📝', text: '~1600 sual, Foundation→Advanced' },
               { icon: '🏆', text: 'Canlı TOLES Mini-Test yarışı' },
             ].map((f) => (
-              <div key={f.text} className="flex items-center gap-3">
+              <div key={f.text} className="glass-dark flex items-center gap-3 px-3.5 py-2.5 rounded-xl">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center text-sm"
                      style={{ background: 'rgba(255,255,255,0.15)' }}>
                   {f.icon}
                 </div>
-                <span className="text-indigo-100 text-sm">{f.text}</span>
+                <span className="text-indigo-100 text-sm font-medium">{f.text}</span>
               </div>
             ))}
           </div>
         </div>
 
-        <p className="text-indigo-300 text-xs">
-          © 2025 Best English · TOLES Hazırlıq Platforması
+        <p className="relative text-indigo-300 text-xs">
+          © 2026 Best English · TOLES Hazırlıq Platforması
         </p>
       </div>
 

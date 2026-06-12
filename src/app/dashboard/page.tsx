@@ -17,6 +17,7 @@ const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
     href: '/vocabulary',
     emoji: '🗂️',
     iconBg: '#e0e7ff',
+    accent: '#6366f1',
     title: 'Lüğət (SRS)',
     desc: dueCount > 0 ? `${dueCount} kart bu gün review üçün hazırdır` : 'Bütün kartlar öyrənildi ✓',
     cta: dueCount > 0 ? 'Davam et' : 'Yeni söz öyrən',
@@ -26,6 +27,7 @@ const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
     href: '/quiz',
     emoji: '✍️',
     iconBg: '#fef3c7',
+    accent: '#f59e0b',
     title: 'Testlər',
     desc: 'Foundation / Higher / Advanced səviyyəsindən sual həll et',
     cta: 'Testi Başla',
@@ -35,6 +37,7 @@ const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
     href: '/lessons',
     emoji: '📖',
     iconBg: '#d1fae5',
+    accent: '#10b981',
     title: 'Dərslər',
     desc: `${lessonsData.length} mini-dərs: müqavilə, məhkəmə, əmək, tort hüququ...`,
     cta: 'Dərslərə bax',
@@ -44,6 +47,7 @@ const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
     href: '/memory-lab',
     emoji: '🧪',
     iconBg: '#fce7f3',
+    accent: '#ec4899',
     title: 'Yaddaş Laboratoriyası',
     desc: '9 elmi yaddaş üsulunu bir sözdə birləşdir',
     cta: 'Dərinə get',
@@ -53,6 +57,7 @@ const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
     href: '/friends',
     emoji: '👥',
     iconBg: '#e0f2fe',
+    accent: '#0ea5e9',
     title: 'Dostlar & Yarış',
     desc: 'Email ilə dost tap, canlı TOLES Mini-Test yarışında rəqabət et',
     cta: 'Dostlara bax',
@@ -62,6 +67,7 @@ const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
     href: '/placement',
     emoji: '📊',
     iconBg: '#f5f3ff',
+    accent: '#8b5cf6',
     title: 'Səviyyə Testi',
     desc: 'İngilis dili səviyyəni (A1–C2) yenidən ölç — 18 sual, ~3 dəq',
     cta: 'Testi Başla',
@@ -135,9 +141,7 @@ export default function DashboardPage() {
     <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
 
       {/* ── Header ───────────────────────────────────────────── */}
-      <header style={{
-        background: 'var(--surface)',
-        borderBottom: '1px solid var(--border)',
+      <header className="glass" style={{
         position: 'sticky', top: 0, zIndex: 40,
       }}>
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -187,9 +191,9 @@ export default function DashboardPage() {
           {/* Mesh işıqları — banneri canlandırır */}
           <div className="absolute inset-0 pointer-events-none"
                style={{ background: 'radial-gradient(280px 180px at 88% -10%, rgba(251,191,36,0.28), transparent 70%), radial-gradient(340px 240px at 5% 120%, rgba(165,180,252,0.35), transparent 70%)' }} />
-          <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full pointer-events-none"
+          <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full pointer-events-none float-slower"
                style={{ background: 'rgba(255,255,255,0.07)' }} />
-          <div className="absolute top-8 right-24 w-16 h-16 rounded-full pointer-events-none hidden sm:block"
+          <div className="absolute top-8 right-24 w-16 h-16 rounded-full pointer-events-none hidden sm:block float-slow"
                style={{ background: 'rgba(255,255,255,0.06)' }} />
 
           <div className="relative flex-1">
@@ -327,22 +331,22 @@ export default function DashboardPage() {
 
         {/* ── Navigation Cards ─────────────────────────────────── */}
         <div>
-          <h2 className="text-sm font-semibold mb-3" style={{ color: 'var(--text-2)' }}>
-            ÖYRƏNMƏ MODULLARı
+          <h2 className="text-xs font-bold mb-3 uppercase" style={{ color: 'var(--text-3)', letterSpacing: '0.08em' }}>
+            Öyrənmə Modulları
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {NAV_ITEMS(dueCount, profile?.level ?? 'B1', profile?.toles_level ?? 'Foundation').map((item) => (
               <Link key={item.title} href={item.href} className="nav-card"
-                    style={item.urgent ? {
-                      border: '1.5px solid #c7d2fe',
-                      background: '#f5f3ff',
-                    } : {}}>
+                    style={{
+                      ['--card-accent' as string]: item.accent,
+                      ...(item.urgent ? { border: '1.5px solid #c7d2fe', background: 'var(--brand-subtle)' } : {}),
+                    } as React.CSSProperties}>
                 <div className="icon-wrap" style={{ background: item.iconBg }}>
                   {item.emoji}
                 </div>
                 <div className="nav-title">{item.title}</div>
                 <div className="nav-desc">{item.desc}</div>
-                <div className="nav-cta">
+                <div className="nav-cta" style={{ color: item.accent }}>
                   {item.cta}
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
