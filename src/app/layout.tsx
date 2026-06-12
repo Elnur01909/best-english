@@ -13,7 +13,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Best English — TOLES Hazırlıq Platforması',
+  title: 'Best English — İngilis Dili + TOLES Platforması',
   description: 'İngilis dilini və TOLES sertifikatını elmi metodlarla öyrən',
   manifest: '/manifest.json',
   icons: {
