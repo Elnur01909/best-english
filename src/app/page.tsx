@@ -21,17 +21,17 @@ const FEATURES = [
   {
     icon: '📖', bg: '#d1fae5', accent: '#10b981',
     title: 'İnteraktiv Dərslər',
-    desc: 'Müqavilə, məhkəmə, əmək, tort hüququ — hər dərsdə qrammatika, oxuma və yazma məşqi.',
+    desc: 'Müqavilə, məhkəmə, əmək hüququ — hər dərsdə qrammatika, oxuma və yazma məşqi.',
   },
   {
     icon: '⚔️', bg: '#fee2e2', accent: '#ef4444', live: true,
     title: 'Canlı Yarış',
-    desc: 'Dostunu email ilə tap, canlı TOLES Mini-Test yarışında 30 saniyəlik raundlarda üz-üzə gəl.',
+    desc: 'Dostunu email ilə tap, istənilən səviyyədə canlı mini-test yarışında 30 saniyəlik raundlarda üz-üzə gəl.',
   },
   {
     icon: '🤖', bg: '#e0f2fe', accent: '#0ea5e9',
     title: 'AI Müəllim',
-    desc: 'Yazını yoxlayır, səhvini izah edir, suallarını cavablayır — öz pulsuz Gemini açarınla, limitsiz.',
+    desc: 'Yazını yoxlayır, səhvini izah edir, suallarını cavablayır.',
   },
   {
     icon: '🧪', bg: '#fce7f3', accent: '#ec4899',
@@ -168,7 +168,7 @@ export default function HomePage() {
                 {[
                   { label: '🗂️ Bu günün kartları', pct: 80, color: '#6366f1' },
                   { label: '✍️ Foundation testləri', pct: 62, color: '#f59e0b' },
-                  { label: '📖 Unit 4 · Tort hüququ', pct: 45, color: '#10b981' },
+                  { label: '📖 Unit 4 · Əmək hüququ', pct: 45, color: '#10b981' },
                 ].map((r) => (
                   <div key={r.label}>
                     <div className="flex justify-between text-xs mb-1">

@@ -39,7 +39,7 @@ const NAV_ITEMS = (dueCount: number, level: string, tolesLevel: string) => [
     iconBg: '#d1fae5',
     accent: '#10b981',
     title: 'Dərslər',
-    desc: `${lessonsData.length} mini-dərs: müqavilə, məhkəmə, əmək, tort hüququ...`,
+    desc: `${lessonsData.length} mini-dərs: müqavilə, məhkəmə, əmək hüququ...`,
     cta: 'Dərslərə bax',
     urgent: false,
   },
