@@ -5,6 +5,7 @@ import { getUser, getUserProfile } from '@/lib/supabase'
 import {
   getBattle, getBattleQuestions, getBattleAnswers, submitBattleAnswer,
   completeBattle, subscribeToBattle, BATTLE_LEVEL_LABEL,
+  getBattleDeadline, cancelStalePendingBattle, TIME_PER_QUESTION,
 } from '@/lib/battles'
 import ProfessorWidget from '@/components/ProfessorWidget'
 import AudioPlayer from '@/components/AudioPlayer'
@@ -17,8 +18,13 @@ interface PlayerState {
   correctCount: number
 }
 
-const TIME_PER_QUESTION = 30 // hər sual üçün saniyə
 const TIMEOUT_SENTINEL = '__TIMEOUT__'
+
+function formatSeconds(s: number): string {
+  const m = Math.floor(s / 60)
+  const sec = s % 60
+  return `${m}:${String(sec).padStart(2, '0')}`
+}
 
 export default function BattlePage() {
   const router = useRouter()
@@ -100,6 +106,42 @@ export default function BattlePage() {
     }
   }, [iAmDone, oppDone, battle?.status, battleId])
 
+  // ─── Ümumi vaxt limiti ────────────────────────────────
+  // Rəqib çıxsa və ya cavab verməsə belə, sualların ümumi vaxtı dolanda
+  // yarış avtomatik yekunlaşır — kim nə cavab veribsə, onunla.
+  const [globalLeft, setGlobalLeft] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (!battle || battle.status !== 'active') return
+    const deadline = getBattleDeadline(battle)
+    if (!deadline) return
+    const tick = () => {
+      const left = Math.max(0, Math.ceil((deadline - Date.now()) / 1000))
+      setGlobalLeft(left)
+      if (left <= 0 && !finishedRef.current) {
+        finishedRef.current = true
+        completeBattle(battleId)
+        // Realtime gecikərsə/düşərsə belə nəticə ekranına keç
+        setBattle((b) => (b && b.status === 'active' ? { ...b, status: 'completed' } : b))
+      }
+    }
+    tick()
+    const id = setInterval(tick, 1000)
+    return () => clearInterval(id)
+  }, [battle, battleId])
+
+  // Qəbul olunmayan dəvət 5 dəqiqəyə avtomatik ləğv olunur
+  useEffect(() => {
+    if (!battle || battle.status !== 'pending') return
+    const tick = async () => {
+      const cancelled = await cancelStalePendingBattle(battle)
+      if (cancelled) setBattle((b) => (b && b.status === 'pending' ? { ...b, status: 'cancelled' } : b))
+    }
+    tick()
+    const id = setInterval(tick, 10000)
+    return () => clearInterval(id)
+  }, [battle])
+
   function answer(opt: string) {
     if (selected || !current || !userId) return
     setSelected(opt)
@@ -170,6 +212,11 @@ export default function BattlePage() {
           <p className="text-sm text-gray-500 mb-6">
             {won ? 'Növbəti dəfə də göstər! 💪' : tie ? 'Çox yaxın yarış oldu — təkrar sına!' : 'Heç bir öyrənmə hədər getmir — davam et!'}
           </p>
+          {(myAnswers.length < total || oppAnswers.length < total) && (
+            <p className="text-xs font-medium text-amber-600 dark:text-amber-400 -mt-4 mb-6">
+              ⏰ Vaxt limiti doldu — cavablanmayan suallar hesaba qatılmadı
+            </p>
+          )}
           <div className="flex justify-around mb-6">
             <div>
               <p className="text-3xl font-bold text-blue-600">{myScore}/{total}</p>
@@ -194,6 +241,7 @@ export default function BattlePage() {
         <div className="card max-w-sm w-full text-center">
           <div className="text-4xl mb-3 animate-pulse">⏳</div>
           <p className="text-gray-600 dark:text-gray-400">{oppName} dəvəti qəbul etməsini gözləyirik...</p>
+          <p className="text-xs text-gray-400 mt-3">Dəvət 5 dəqiqə ərzində qəbul olunmasa, avtomatik ləğv olunacaq.</p>
         </div>
       </div>
     )
@@ -232,10 +280,18 @@ export default function BattlePage() {
             <div className="text-4xl mb-3 animate-pulse">⏳</div>
             <p className="text-gray-600 dark:text-gray-400">Sualları bitirdin! {oppName} bitirənə qədər gözlə...</p>
             <p className="text-sm text-gray-400 mt-2">Hazırkı bal: {myScore}/{total}</p>
+            {globalLeft !== null && (
+              <p className="text-xs font-medium text-amber-600 dark:text-amber-400 mt-3">
+                ⏱️ Yarış ən gec {formatSeconds(globalLeft)} sonra avtomatik bitəcək
+              </p>
+            )}
           </div>
         ) : current ? (
           <div className="w-full max-w-lg">
-            <div className="flex items-center justify-end mb-2">
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-xs font-medium text-gray-400">
+                {globalLeft !== null && <>Ümumi: {formatSeconds(globalLeft)}</>}
+              </div>
               <div className={`text-sm font-bold px-3 py-1 rounded-full transition-colors ${
                 timeLeft <= 10
                   ? 'bg-red-100 text-red-600 dark:bg-red-950 dark:text-red-400 animate-pulse'

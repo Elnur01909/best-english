@@ -8,6 +8,32 @@ import type { Battle, BattleAnswer, BattleLevel, QuizQuestion } from '@/types'
 const ALL_QUESTIONS = quizzesData as QuizQuestion[]
 const QUESTIONS_PER_BATTLE = 8
 
+// ─── Vaxt limitləri ───────────────────────────────────
+// Yarış sonsuz "açıq" qala bilməz: rəqib çıxsa və ya cavab verməsə belə,
+// sualların ümumi vaxtı dolanda yarış avtomatik yekunlaşır.
+export const TIME_PER_QUESTION = 30        // saniyə — hər sual üçün
+export const BATTLE_GRACE_SECONDS = 30     // yüklənmə + sual keçidləri üçün əlavə pay
+export const PENDING_EXPIRY_MS = 5 * 60 * 1000  // qəbul olunmayan dəvət 5 dəqiqəyə ləğv olunur
+
+// Aktiv yarışın mütləq bitmə anı (ms, epoch). Aktiv deyilsə null.
+export function getBattleDeadline(battle: Battle): number | null {
+  if (battle.status !== 'active' || !battle.started_at) return null
+  const totalMs = (battle.question_ids.length * TIME_PER_QUESTION + BATTLE_GRACE_SECONDS) * 1000
+  return new Date(battle.started_at).getTime() + totalMs
+}
+
+// Köhnəlmiş (qəbul olunmamış) dəvəti ləğv et — yaradan əbədi gözləməsin
+export async function cancelStalePendingBattle(battle: Battle) {
+  if (battle.status !== 'pending') return false
+  if (Date.now() - new Date(battle.created_at).getTime() < PENDING_EXPIRY_MS) return false
+  await supabase
+    .from('battles')
+    .update({ status: 'cancelled' })
+    .eq('id', battle.id)
+    .eq('status', 'pending')
+  return true
+}
+
 // CEFR səviyyələri (ümumi ingilis treki)
 const CEFR_LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
@@ -65,7 +91,7 @@ export async function createBattle(creatorId: string, opponentId: string, battle
   return { data: data as Battle | null, error }
 }
 
-// Mənə gələn gözləyən dəvətlər
+// Mənə gələn gözləyən dəvətlər — köhnəlmişlər lazily ləğv olunur
 export async function getIncomingBattles(userId: string) {
   const { data, error } = await supabase
     .from('battles')
@@ -73,10 +99,19 @@ export async function getIncomingBattles(userId: string) {
     .eq('opponent_id', userId)
     .eq('status', 'pending')
     .order('created_at', { ascending: false })
-  return { data, error }
+  if (!data) return { data, error }
+  const fresh: any[] = []
+  for (const b of data as any[]) {
+    if (Date.now() - new Date(b.created_at).getTime() >= PENDING_EXPIRY_MS) {
+      cancelStalePendingBattle(b as Battle) // arxa planda ləğv et
+    } else {
+      fresh.push(b)
+    }
+  }
+  return { data: fresh, error }
 }
 
-// Aktiv (davam edən) yarışlarım
+// Aktiv (davam edən) yarışlarım — vaxtı dolmuşlar lazily yekunlaşdırılır
 export async function getActiveBattles(userId: string) {
   const { data, error } = await supabase
     .from('battles')
@@ -84,7 +119,17 @@ export async function getActiveBattles(userId: string) {
     .eq('status', 'active')
     .or(`creator_id.eq.${userId},opponent_id.eq.${userId}`)
     .order('started_at', { ascending: false })
-  return { data: data as Battle[] | null, error }
+  if (!data) return { data: data as Battle[] | null, error }
+  const fresh: Battle[] = []
+  for (const b of data as Battle[]) {
+    const deadline = getBattleDeadline(b)
+    if (deadline !== null && Date.now() > deadline) {
+      completeBattle(b.id) // arxa planda yekunlaşdır — siyahıda göstərmə
+    } else {
+      fresh.push(b)
+    }
+  }
+  return { data: fresh, error }
 }
 
 export async function respondToBattle(battleId: string, accept: boolean) {
