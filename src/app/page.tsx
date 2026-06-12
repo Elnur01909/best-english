@@ -125,70 +125,112 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* ── App preview mockup (3D maili) ───────────────────── */}
-        <div className="reveal-4 relative max-w-lg mx-auto mt-14">
+        {/* ── App preview — telefon çərçivəsində ──────────────── */}
+        <div className="reveal-4 relative max-w-lg mx-auto mt-14 flex justify-center">
           {/* Glow */}
-          <div className="absolute inset-x-4 top-8 bottom-0 rounded-3xl pointer-events-none"
-               style={{ background: 'linear-gradient(135deg, rgba(129,140,248,0.5), rgba(217,70,239,0.3), rgba(251,191,36,0.25))', filter: 'blur(48px)' }} />
+          <div className="absolute w-[440px] h-[440px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
+               style={{ background: 'radial-gradient(circle, rgba(129,140,248,0.5), rgba(217,70,239,0.22) 55%, transparent 75%)', filter: 'blur(44px)' }} />
 
           <div className="tilt relative">
-            {/* Mock dashboard card */}
-            <div className="relative rounded-3xl p-5 sm:p-6"
+            {/* Telefon çərçivəsi */}
+            <div className="relative w-[300px] rounded-[2.6rem] p-2"
                  style={{
-                   background: 'var(--surface)',
-                   border: '1px solid rgba(255,255,255,0.25)',
-                   boxShadow: '0 24px 80px rgba(0,0,0,0.45), 0 8px 24px rgba(99,102,241,0.3)',
+                   background: 'linear-gradient(160deg, #2a2d4a, #12132a)',
+                   border: '1px solid rgba(255,255,255,0.22)',
+                   boxShadow: '0 30px 90px rgba(0,0,0,0.55), 0 10px 30px rgba(99,102,241,0.35)',
                  }}>
-              <div className="flex items-center justify-between mb-5">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold"
-                       style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>BE</div>
-                  <span className="text-sm font-semibold" style={{ color: 'var(--text-1)' }}>Sabahın xeyir, Aysel ☀️</span>
+              {/* Dinamik ada (notch) */}
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 rounded-full z-10"
+                   style={{ background: '#0b0d17' }} />
+
+              {/* Ekran */}
+              <div className="rounded-[2.1rem] overflow-hidden" style={{ background: 'var(--bg)' }}>
+                {/* App header */}
+                <div className="flex items-center justify-between px-4 pt-8 pb-3">
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-6 h-6 rounded-md flex items-center justify-center text-white text-[10px] font-bold"
+                         style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>BE</div>
+                    <span className="text-xs font-bold" style={{ color: 'var(--text-1)' }}>Best English</span>
+                  </div>
+                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold"
+                        style={{ background: 'linear-gradient(135deg, #fff7ed, #ffedd5)', color: '#c2410c', border: '1px solid #fed7aa' }}>
+                    🔥 12
+                  </span>
                 </div>
-                <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold"
-                      style={{ background: 'linear-gradient(135deg, #fff7ed, #ffedd5)', color: '#c2410c', border: '1px solid #fed7aa' }}>
-                  🔥 12
-                </span>
-              </div>
 
-              {/* Flashcard preview */}
-              <div className="rounded-2xl p-5 text-center mb-4"
-                   style={{ background: 'linear-gradient(135deg, var(--brand-subtle), #ede9fe)', border: '1px solid var(--brand-light)' }}>
-                <p className="text-[10px] font-bold uppercase tracking-widest mb-1.5" style={{ color: 'var(--brand)' }}>
-                  Lüğət · Müqavilə hüququ
-                </p>
-                <p className="text-2xl font-extrabold mb-1" style={{ color: 'var(--text-1)', letterSpacing: '-0.02em' }}>
-                  consideration
-                </p>
-                <p className="text-sm" style={{ color: 'var(--text-2)' }}>qarşılıq — müqavilənin əsas şərti</p>
-              </div>
+                {/* Flashcard — günün sözü */}
+                <div className="mx-3 rounded-2xl p-4 text-center"
+                     style={{ background: 'linear-gradient(135deg, var(--brand-subtle), #ede9fe)', border: '1px solid var(--brand-light)' }}>
+                  <p className="text-[9px] font-bold uppercase tracking-widest mb-1" style={{ color: 'var(--brand)' }}>
+                    Lüğət · Günün sözü
+                  </p>
+                  <p className="text-xl font-extrabold" style={{ color: 'var(--text-1)', letterSpacing: '-0.02em' }}>
+                    achieve
+                  </p>
+                  <p className="text-[11px] mb-1" style={{ color: 'var(--text-3)' }}>/əˈtʃiːv/</p>
+                  <p className="text-xs mb-3" style={{ color: 'var(--text-2)' }}>nail olmaq, çatmaq</p>
+                  <div className="flex justify-center gap-1.5">
+                    {[
+                      { t: 'Çətin', bg: 'var(--danger-light)',  c: '#b91c1c' },
+                      { t: 'Yaxşı', bg: 'var(--accent-light)',  c: '#92400e' },
+                      { t: 'Asan',  bg: 'var(--success-light)', c: '#065f46' },
+                    ].map((b) => (
+                      <span key={b.t} className="px-2.5 py-1 rounded-lg text-[10px] font-bold"
+                            style={{ background: b.bg, color: b.c }}>
+                        {b.t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
-              {/* Progress rows */}
-              <div className="space-y-2.5">
-                {[
-                  { label: '🗂️ Bu günün kartları', pct: 80, color: '#6366f1' },
-                  { label: '✍️ Foundation testləri', pct: 62, color: '#f59e0b' },
-                  { label: '📖 Unit 4 · Əmək hüququ', pct: 45, color: '#10b981' },
-                ].map((r) => (
-                  <div key={r.label}>
-                    <div className="flex justify-between text-xs mb-1">
-                      <span style={{ color: 'var(--text-2)' }}>{r.label}</span>
-                      <span className="font-bold" style={{ color: r.color }}>{r.pct}%</span>
+                {/* Mini test */}
+                <div className="mx-3 mt-2.5 rounded-2xl p-3.5"
+                     style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}>
+                  <p className="text-[9px] font-bold uppercase tracking-widest mb-1.5" style={{ color: 'var(--accent)' }}>
+                    Test · Boşluğu doldur
+                  </p>
+                  <p className="text-xs font-semibold mb-2.5" style={{ color: 'var(--text-1)' }}>
+                    She ___ her goal last year.
+                  </p>
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-[11px] font-semibold"
+                         style={{ background: 'var(--success-light)', border: '1.5px solid var(--success)', color: '#065f46' }}>
+                      achieved <span>✓</span>
                     </div>
-                    <div className="progress-bar">
-                      <div className="progress-fill" style={{ width: `${r.pct}%`, background: `linear-gradient(90deg, ${r.color}, ${r.color}cc)` }} />
+                    <div className="px-2.5 py-1.5 rounded-lg text-[11px] font-medium"
+                         style={{ background: 'var(--surface)', border: '1.5px solid var(--border)', color: 'var(--text-2)' }}>
+                      achieving
+                    </div>
+                    <div className="px-2.5 py-1.5 rounded-lg text-[11px] font-medium"
+                         style={{ background: 'var(--surface)', border: '1.5px solid var(--border)', color: 'var(--text-2)' }}>
+                      to achieve
                     </div>
                   </div>
-                ))}
+                </div>
+
+                {/* Günlük hədəf */}
+                <div className="px-4 pt-3 pb-5">
+                  <div className="flex justify-between text-[10px] mb-1">
+                    <span className="font-semibold" style={{ color: 'var(--text-2)' }}>Günlük hədəf</span>
+                    <span className="font-bold" style={{ color: 'var(--brand)' }}>80%</span>
+                  </div>
+                  <div className="progress-bar">
+                    <div className="progress-fill" style={{ width: '80%' }} />
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Floating chips */}
-            <div className="float-slow absolute -top-4 -right-2 sm:-right-8 px-3 py-2 rounded-xl text-xs font-bold"
+            {/* Üzən çiplər */}
+            <div className="float-slow absolute top-16 -right-2 sm:-right-24 px-3 py-2 rounded-xl text-xs font-bold"
                  style={{ background: 'var(--surface)', border: '1px solid #a7f3d0', color: '#065f46', boxShadow: '0 8px 24px rgba(0,0,0,0.35)' }}>
               ✓ Düzgün! +10 xal
             </div>
-            <div className="float-slower absolute -bottom-4 -left-2 sm:-left-8 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5"
+            <div className="float-slower absolute top-1/2 -left-14 sm:-left-24 px-3 py-2 rounded-xl text-xs font-bold hidden sm:flex items-center gap-1"
+                 style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'var(--text-1)', boxShadow: '0 8px 24px rgba(0,0,0,0.35)' }}>
+              📈 B1 → B2
+            </div>
+            <div className="float-slower absolute -bottom-3 -left-10 sm:-left-20 px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5"
                  style={{ background: 'var(--surface)', border: '1px solid var(--border)', color: 'var(--text-1)', boxShadow: '0 8px 24px rgba(0,0,0,0.35)' }}>
               <span className="live-dot" /> Canlı yarış dəvəti
             </div>
