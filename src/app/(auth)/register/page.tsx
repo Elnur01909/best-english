@@ -70,13 +70,13 @@ export default function RegisterPage() {
         </div>
 
         <div className="relative">
-          <div className="text-5xl mb-6 float-slow inline-block">🏛️</div>
+          <div className="text-5xl mb-6 float-slow inline-block">🎓</div>
           <h2 className="text-white text-3xl font-bold leading-snug mb-4" style={{ letterSpacing: '-0.02em' }}>
-            Hüquq ingilis dilini<br/>peşəkar səviyyədə öyrən
+            İngilis dilini<br/>peşəkar səviyyədə öyrən
           </h2>
           <p className="text-indigo-200 text-base leading-relaxed">
-            TOLES Foundation-dan Advanced-a — elmi SRS metodu,
-            interaktiv dərslər və canlı yarış sistemi.
+            A1-dən C2-yə — elmi SRS metodu, interaktiv dərslər və
+            canlı yarış sistemi. Üstəlik TOLES sertifikat hazırlığı.
           </p>
 
           <div className="mt-8 grid grid-cols-2 gap-3 max-w-xs">

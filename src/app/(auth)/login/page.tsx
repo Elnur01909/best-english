@@ -42,20 +42,20 @@ export default function LoginPage() {
         </div>
 
         <div className="relative">
-          <div className="text-5xl mb-6 float-slow inline-block">⚖️</div>
+          <div className="text-5xl mb-6 float-slow inline-block">🎓</div>
           <h2 className="text-white text-3xl font-bold leading-snug mb-4" style={{ letterSpacing: '-0.02em' }}>
-            TOLES Sertifikatına<br/>elmi metodla hazırlaş
+            İngilis dilini<br/>elmi metodla mənimsə
           </h2>
           <p className="text-indigo-200 text-base leading-relaxed">
-            SRS alqoritmi, 9 test formatı, 27 dərs və canlı rəqabət
-            ilə hüquq ingilis dilini mənimsə.
+            SRS alqoritmi, 9 test formatı, 27 dərs və canlı yarışlarla —
+            üstəlik TOLES sertifikat hazırlığı.
           </p>
 
           <div className="mt-8 space-y-3">
             {[
               { icon: '🧠', text: '378 hüquqi termin, SM-2 alqoritmi' },
               { icon: '📝', text: '~1600 sual, Foundation→Advanced' },
-              { icon: '🏆', text: 'Canlı TOLES Mini-Test yarışı' },
+              { icon: '🏆', text: 'İstənilən səviyyədə canlı yarış' },
             ].map((f) => (
               <div key={f.text} className="glass-dark flex items-center gap-3 px-3.5 py-2.5 rounded-xl">
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center text-sm"
@@ -69,7 +69,7 @@ export default function LoginPage() {
         </div>
 
         <p className="relative text-indigo-300 text-xs">
-          © 2026 Best English · TOLES Hazırlıq Platforması
+          © 2026 Best English · İngilis Dili + TOLES Platforması
         </p>
       </div>
 
