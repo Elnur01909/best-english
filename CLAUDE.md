@@ -1,4 +1,8 @@
-# Best English — TOLES + İngilis Dili Öyrənmə Platforması
+# AZEN — İngilis Dili + TOLES Öyrənmə Platforması
+
+> **Rebrendinq (2026-06-12):** Layihənin adı "Best English"-dən **AZEN**-ə dəyişdi (AZ→EN).
+> Loqo: src/components/BrandLogo.tsx — AZ hərfləri Azərbaycan bayrağı rəngləri, EN hərfləri Britaniya rəngləri.
+> Repo/URL adları (best-english) texniki olaraq köhnə qalır.
 
 🔗 Bağlı qeydlər: [[Layihə-Xəritəsi]] · [[english]] · [[Qərarlar-Tarixçəsi]] · [[Bug-Jurnalı]]
 

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { resetPasswordForEmail } from '@/lib/supabase'
+import BrandLogo from '@/components/BrandLogo'
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState('')
@@ -36,12 +37,8 @@ export default function ForgotPasswordPage() {
       <div className="w-full max-w-sm animate-fade-up">
 
         {/* Logo */}
-        <div className="flex items-center gap-2.5 mb-8">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-               style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>
-            BE
-          </div>
-          <span className="font-bold text-base" style={{ color: 'var(--text-1)' }}>Best English</span>
+        <div className="mb-8">
+          <BrandLogo iconSize={32} textClassName="text-lg" />
         </div>
 
         {sent ? (

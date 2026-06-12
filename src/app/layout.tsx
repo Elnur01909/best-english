@@ -13,7 +13,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Best English — İngilis Dili + TOLES Platforması',
+  title: 'AZEN — İngilis Dili + TOLES Platforması',
   description: 'İngilis dilini və TOLES sertifikatını elmi metodlarla öyrən',
   manifest: '/manifest.json',
   icons: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Best English',
+    title: 'AZEN',
   },
 }
 

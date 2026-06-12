@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BrandLogo, { BrandIcon, BrandWordmark } from '@/components/BrandLogo'
 
 const STATS = [
   { value: '~1600', label: 'Test sualı' },
@@ -59,13 +60,7 @@ export default function HomePage() {
       {/* ── Navbar ─────────────────────────────────────────────── */}
       <header className="glass sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-                 style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)', boxShadow: '0 2px 10px rgba(99,102,241,0.4)' }}>
-              BE
-            </div>
-            <span className="font-bold text-base" style={{ color: 'var(--text-1)' }}>Best English</span>
-          </div>
+          <BrandLogo iconSize={32} textClassName="text-lg" />
           <div className="flex items-center gap-2">
             <Link href="/login" className="btn-ghost">Daxil Ol</Link>
             <Link href="/register" className="btn-primary !py-2 !px-4 text-sm">Başla</Link>
@@ -148,9 +143,8 @@ export default function HomePage() {
                 {/* App header */}
                 <div className="flex items-center justify-between px-4 pt-8 pb-3">
                   <div className="flex items-center gap-1.5">
-                    <div className="w-6 h-6 rounded-md flex items-center justify-center text-white text-[10px] font-bold"
-                         style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>BE</div>
-                    <span className="text-xs font-bold" style={{ color: 'var(--text-1)' }}>Best English</span>
+                    <BrandIcon size={22} />
+                    <BrandWordmark className="text-xs" />
                   </div>
                   <span className="flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold"
                         style={{ background: 'linear-gradient(135deg, #fff7ed, #ffedd5)', color: '#c2410c', border: '1px solid #fed7aa' }}>
@@ -262,7 +256,7 @@ export default function HomePage() {
         <div className="dots-overlay" />
         <div className="relative max-w-5xl mx-auto">
           <div className="text-center mb-10">
-            <span className="section-tag mb-3">Niyə Best English?</span>
+            <span className="section-tag mb-3">Niyə AZEN?</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold mt-3" style={{ color: 'var(--text-1)', letterSpacing: '-0.025em' }}>
               Əzbərləmə yox — <span className="text-gradient">elm</span>
             </h2>
@@ -399,14 +393,10 @@ export default function HomePage() {
       {/* ── Footer ─────────────────────────────────────────────── */}
       <footer className="px-4 py-8" style={{ borderTop: '1px solid var(--border)' }}>
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md flex items-center justify-center text-white text-[10px] font-bold"
-                 style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>BE</div>
-            <span className="text-sm font-semibold" style={{ color: 'var(--text-1)' }}>Best English</span>
-          </div>
+          <BrandLogo iconSize={24} textClassName="text-sm" />
           <div className="flex items-center gap-5 text-xs" style={{ color: 'var(--text-3)' }}>
             <Link href="/privacy" className="hover:underline">Məxfilik</Link>
-            <span>© 2026 Best English · İngilis Dili + TOLES Platforması</span>
+            <span>© 2026 AZEN · İngilis Dili + TOLES Platforması</span>
           </div>
         </div>
       </footer>

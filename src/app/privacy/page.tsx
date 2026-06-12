@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Məxfilik Siyasəti — Best English',
-  description: 'Best English platformasının məxfilik siyasəti və istifadəçi məlumatlarının qorunması',
+  title: 'Məxfilik Siyasəti — AZEN',
+  description: 'AZEN platformasının məxfilik siyasəti və istifadəçi məlumatlarının qorunması',
 }
 
 export default function PrivacyPage() {
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
             1. Ümumi məlumat
           </h2>
           <p>
-            Best English (bundan sonra &quot;Platforma&quot;) — ingilis dili və TOLES sertifikat
+            AZEN (bundan sonra &quot;Platforma&quot;) — ingilis dili və TOLES sertifikat
             hazırlığı üçün öyrənmə platformasıdır. Bu siyasət hansı məlumatları topladığımızı,
             onları necə istifadə etdiyimizi və qoruduğumuzu izah edir. Platformadan istifadə
             etməklə bu siyasətlə razılaşmış olursunuz.
@@ -124,7 +124,7 @@ export default function PrivacyPage() {
             Privacy Policy (English summary)
           </h2>
           <p>
-            Best English collects your email address, display name, and learning progress
+            AZEN collects your email address, display name, and learning progress
             (lesson completion, quiz results, vocabulary review history) solely to provide
             the learning experience. Data is stored securely on Supabase with row-level
             security and transmitted over HTTPS. Personal AI keys (Google Gemini, Azure

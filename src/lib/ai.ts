@@ -108,7 +108,7 @@ async function callShared(systemPrompt: string, messages: AIMessage[]): Promise<
 
 // ─── Müəllim sistem promptu ────────────────────────────
 function teacherSystem(level: string): string {
-  return `Sən "Best English" platformasının dəstəkləyici İngilis dili və TOLES (hüquqi İngilis) müəllimisən.
+  return `Sən "AZEN" platformasının dəstəkləyici İngilis dili və TOLES (hüquqi İngilis) müəllimisən.
 İstifadəçinin səviyyəsi: ${level} (CEFR).
 
 QAYDALAR:

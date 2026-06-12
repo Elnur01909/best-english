@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { signIn } from '@/lib/supabase'
+import BrandLogo, { BrandIcon, BrandWordmark } from '@/components/BrandLogo'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -35,10 +36,8 @@ export default function LoginPage() {
         <div className="hero-orb w-80 h-80 bottom-0 -left-24" style={{ background: 'rgba(165,180,252,0.22)', animationDelay: '3s' }} />
 
         <div className="relative flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-white/20 text-white font-bold text-sm">
-            BE
-          </div>
-          <span className="text-white font-bold text-lg">Best English</span>
+          <BrandIcon size={36} />
+          <BrandWordmark light className="text-xl" />
         </div>
 
         <div className="relative">
@@ -69,7 +68,7 @@ export default function LoginPage() {
         </div>
 
         <p className="relative text-indigo-300 text-xs">
-          © 2026 Best English · İngilis Dili + TOLES Platforması
+          © 2026 AZEN · İngilis Dili + TOLES Platforması
         </p>
       </div>
 
@@ -78,12 +77,8 @@ export default function LoginPage() {
         <div className="w-full max-w-sm animate-fade-up">
 
           {/* Mobile logo */}
-          <div className="flex items-center gap-2.5 mb-8 lg:hidden">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-                 style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}>
-              BE
-            </div>
-            <span className="font-bold text-base" style={{ color: 'var(--text-1)' }}>Best English</span>
+          <div className="mb-8 lg:hidden">
+            <BrandLogo iconSize={32} textClassName="text-lg" />
           </div>
 
           <h1 className="text-2xl font-bold mb-1" style={{ color: 'var(--text-1)' }}>

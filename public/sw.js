@@ -1,4 +1,4 @@
-const CACHE_NAME = 'best-english-v1'
+const CACHE_NAME = 'azen-v1'
 
 self.addEventListener('install', (event) => {
   self.skipWaiting()
