@@ -492,7 +492,7 @@ function MockTestContent() {
             </div>
             <div className="bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-800 rounded-xl p-4 mb-6">
               <p className="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-1">💡 İzah:</p>
-              <p className="text-sm text-indigo-800 dark:text-indigo-200">{current.explanation}</p>
+              <p className="text-sm text-indigo-800 dark:text-indigo-200 whitespace-pre-line leading-relaxed">{current.explanation}</p>
             </div>
             <button onClick={next} className="btn-primary w-full">
               {mastered.size === TOTAL_UNIQUE || qIdx + 1 >= queue.length ? 'Nəticəni gör →' : 'Növbəti sual →'}

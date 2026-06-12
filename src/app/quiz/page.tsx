@@ -409,7 +409,7 @@ export default function QuizPage() {
 
                 <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-xl p-4 mb-4">
                   <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">💡 İzah:</p>
-                  <p className="text-sm text-blue-800 dark:text-blue-200">{current.explanation}</p>
+                  <p className="text-sm text-blue-800 dark:text-blue-200 whitespace-pre-line leading-relaxed">{current.explanation}</p>
                 </div>
 
                 {/* AI Müəllim — dərin izah */}

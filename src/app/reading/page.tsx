@@ -272,7 +272,7 @@ function ReadingContent() {
             </div>
             <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 rounded-xl p-4 mb-6">
               <p className="text-sm font-semibold text-blue-700 mb-1">💡 İzah:</p>
-              <p className="text-sm text-blue-800 dark:text-blue-200">{currentQ?.explanation}</p>
+              <p className="text-sm text-blue-800 dark:text-blue-200 whitespace-pre-line leading-relaxed">{currentQ?.explanation}</p>
             </div>
             <button onClick={nextQ} className="btn-primary w-full">
               {qMastered.size === questions.length ? 'Kollokasiyalara keç →' : 'Növbəti →'}

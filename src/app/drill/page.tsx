@@ -251,7 +251,7 @@ function DrillContent() {
             <div className="bg-orange-50 dark:bg-orange-950 border border-orange-200 dark:border-orange-800 rounded-xl p-4 mb-4 space-y-2">
               <div>
                 <p className="text-xs font-semibold text-orange-700 dark:text-orange-300 mb-1">💡 İzah (EN):</p>
-                <p className="text-sm text-orange-800 dark:text-orange-200">{current?.explanation}</p>
+                <p className="text-sm text-orange-800 dark:text-orange-200 whitespace-pre-line leading-relaxed">{current?.explanation}</p>
                 <div className="mt-1"><AudioPlayer word={current?.explanation ?? ''} variant="sentence" isSentence={true} /></div>
               </div>
               {vocabMatch && (

@@ -235,7 +235,7 @@ function OutputContent() {
                     <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 rounded-xl p-4 mb-4 space-y-3">
                       <div>
                         <p className="text-sm font-semibold text-blue-700 dark:text-blue-300 mb-1">💡 İzah (EN):</p>
-                        <p className="text-sm text-blue-800 dark:text-blue-200">{current.explanation}</p>
+                        <p className="text-sm text-blue-800 dark:text-blue-200 whitespace-pre-line leading-relaxed">{current.explanation}</p>
                         <div className="mt-1.5">
                           <AudioPlayer word={current.explanation} variant="sentence" isSentence={true} />
                         </div>
