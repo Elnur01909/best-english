@@ -51034,7 +51034,7 @@
   {
     "id": 3114,
     "type": "grammar",
-    "question": "If it rains, we ___ stay home.",
+    "question": "If it rains, we ___ home.",
     "options": [
       "won't go",
       "will stayed",
@@ -63931,7 +63931,7 @@
   {
     "id": 3901,
     "type": "grammar",
-    "question": "We ___ go to the cinema.",
+    "question": "We ___ to the cinema.",
     "options": [
       "sometimes go",
       "sometimes goes",
@@ -63999,7 +63999,7 @@
   {
     "id": 3905,
     "type": "grammar",
-    "question": "I ___ check my email in the morning.",
+    "question": "I ___ my email in the morning.",
     "options": [
       "usually check",
       "check usually",
@@ -64057,8 +64057,8 @@
       "have sometimes",
       "is sometimes"
     ],
-    "correct": "sometimes have",
-    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Sometimes: əsas feildən əvvəl → düzgün cavab «sometimes have».",
+    "correct": "sometimes",
+    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Sometimes: əsas feildən əvvəl → düzgün cavab «sometimes».",
     "level": "A2",
     "cefr": "A2",
     "track": "general",
@@ -64350,8 +64350,8 @@
       "go rarely",
       "rarely goes"
     ],
-    "correct": "rarely go",
-    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Rarely: əsas feildən əvvəl → düzgün cavab «rarely go».",
+    "correct": "rarely",
+    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Rarely: əsas feildən əvvəl → düzgün cavab «rarely».",
     "level": "A2",
     "cefr": "A2",
     "track": "general",
@@ -64360,7 +64360,7 @@
   {
     "id": 3928,
     "type": "grammar",
-    "question": "I ___ have soup for lunch.",
+    "question": "I ___ soup for lunch.",
     "options": [
       "sometimes have",
       "have sometimes",
@@ -64401,8 +64401,8 @@
       "stays seldom",
       "seldom stay"
     ],
-    "correct": "seldom stays",
-    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Seldom: əsas feildən əvvəl — 3rd person s → düzgün cavab «seldom stays».",
+    "correct": "seldom",
+    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Seldom: əsas feildən əvvəl — 3rd person s → düzgün cavab «seldom».",
     "level": "A2",
     "cefr": "A2",
     "track": "general",
@@ -64520,8 +64520,8 @@
       "complains rarely",
       "rarely complain"
     ],
-    "correct": "rarely complains",
-    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Rarely: əsas feildən əvvəl → düzgün cavab «rarely complains».",
+    "correct": "rarely",
+    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Rarely: əsas feildən əvvəl → düzgün cavab «rarely».",
     "level": "A2",
     "cefr": "A2",
     "track": "general",
@@ -64605,8 +64605,8 @@
       "meet sometimes",
       "is sometimes meet"
     ],
-    "correct": "sometimes meet",
-    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Sometimes: əsas feildən əvvəl → düzgün cavab «sometimes meet».",
+    "correct": "sometimes",
+    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Sometimes: əsas feildən əvvəl → düzgün cavab «sometimes».",
     "level": "A2",
     "cefr": "A2",
     "track": "general",
@@ -67793,7 +67793,7 @@
   {
     "id": 4137,
     "type": "grammar",
-    "question": "If you study hard, you ___ pass the exam.",
+    "question": "If you study hard, you ___ the exam.",
     "options": [
       "pass",
       "would pass",
