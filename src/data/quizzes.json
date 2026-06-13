@@ -53480,7 +53480,7 @@
       "knifes",
       "knives",
       "knife",
-      "knifes"
+      "knife's"
     ],
     "correct": "knives",
     "explanation": "Cəm qaydaları: adətən -s (books); -s/-ss/-sh/-ch/-x sonluqlu sözlərə -es (boxes); samit+y → -ies (cities); bəzi sözlər qaydasızdır (man → men, child → children).\n\nBu sualda: f/fe → ves: knife → knives → düzgün cavab «knives».",
@@ -53718,7 +53718,7 @@
       "cliffves",
       "cliffes",
       "cliffs",
-      "cliffes"
+      "cliff's"
     ],
     "correct": "cliffs",
     "explanation": "Cəm qaydaları: adətən -s (books); -s/-ss/-sh/-ch/-x sonluqlu sözlərə -es (boxes); samit+y → -ies (cities); bəzi sözlər qaydasızdır (man → men, child → children).\n\nBu sualda: ff ilə bitən sözlər -s alır: cliff → cliffs → düzgün cavab «cliffs».",
@@ -59271,7 +59271,7 @@
       "read",
       "reads",
       "readed",
-      "read"
+      "reading"
     ],
     "correct": "read",
     "explanation": "Read qeyri-nizami: read → read (eyni yazılır, fərqli tələffüz)",
@@ -59649,7 +59649,7 @@
       "read",
       "reads",
       "readed",
-      "read"
+      "reading"
     ],
     "correct": "read",
     "explanation": "Past Simple bitmiş keçmiş hadisələr üçündür. Qaydalı fellərə -ed artırılır (worked), qaydasızlar əzbərlənir (go → went). İnkar: didn't + əsas forma; sual: Did.\n\nBu sualda: Read → read (keçmiş) → düzgün cavab «read».",
@@ -60536,7 +60536,7 @@
     "options": [
       "read",
       "reads",
-      "read",
+      "reading",
       "am reading"
     ],
     "correct": "am reading",
@@ -61289,7 +61289,7 @@
       "more boring",
       "boringer",
       "more boreder",
-      "boringer"
+      "most boring"
     ],
     "correct": "more boring",
     "explanation": "Müqayisə dərəcəsi: qısa sifətlərə -er (big → bigger), uzun sifətlərə \"more\" (more beautiful) artırılır, sonra \"than\" gəlir. Qaydasız: good → better, bad → worse.\n\nBu sualda: 2+ heca: more boring → düzgün cavab «more boring».",
@@ -63853,8 +63853,8 @@
       "always",
       "does"
     ],
-    "correct": "always exercises",
-    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Always: əsas feildən əvvəl → düzgün cavab «always exercises».",
+    "correct": "always",
+    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Always: əsas feildən əvvəl → düzgün cavab «always».",
     "level": "A2",
     "cefr": "A2",
     "track": "general",
@@ -63870,8 +63870,8 @@
       "do seldom",
       "seldom eats"
     ],
-    "correct": "seldom eat",
-    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Seldom: əsas feildən əvvəl → düzgün cavab «seldom eat».",
+    "correct": "seldom",
+    "explanation": "Tezlik zərfləri (always, usually, often, sometimes, never) adi feldən ƏVVƏL, \"to be\" felindən SONRA gəlir: She always works. / She is always late.\n\nBu sualda: Seldom: əsas feildən əvvəl → düzgün cavab «seldom».",
     "level": "A2",
     "cefr": "A2",
     "track": "general",

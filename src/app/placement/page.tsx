@@ -171,7 +171,7 @@ export default function PlacementPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex flex-col">
       <header className="bg-white dark:bg-gray-900 border-b px-4 py-3 flex items-center justify-between">
         <span className="font-semibold text-blue-600">Səviyyə Testi</span>
-        <span className="text-sm text-gray-500">{idx + 1} / {questions.length}</span>
+        <span className="text-sm font-semibold text-gray-500">Sual {idx + 1} / {questions.length}</span>
       </header>
       <div className="h-1 bg-gray-200">
         <div className="h-1 bg-blue-500 transition-all" style={{ width: `${(idx / questions.length) * 100}%` }} />

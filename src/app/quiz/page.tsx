@@ -316,7 +316,7 @@ export default function QuizPage() {
         <button onClick={() => setStage('select')} className="btn-ghost">← Çıx</button>
         <div className="flex items-center gap-2">
           <span className={`badge text-white border-0 ${CEFR_COLOR[cefr]}`}>{levelLabel}</span>
-          <span className="text-sm" style={{ color: 'var(--text-2)' }}>{currentIdx + 1} / {questions.length}</span>
+          <span className="text-sm font-semibold" style={{ color: 'var(--text-2)' }}>Sual {currentIdx + 1} / {questions.length}</span>
         </div>
         <span className="text-sm font-semibold" style={{ color: 'var(--success)' }}>✓ {results.filter(Boolean).length}</span>
       </header>
