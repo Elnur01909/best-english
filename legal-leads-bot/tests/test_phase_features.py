@@ -158,3 +158,21 @@ def test_single_instance_lock(tmp_path):
     a.release()
     assert b.acquire()
     b.release()
+
+
+def test_check_reports_each_source_as_it_finishes(settings, matcher):
+    from leadsbot.runner import check_sources
+    from leadsbot.sources import FetchError
+
+    a = Source(id="a", name="A", type="rss", url="https://a", category="company")
+    b = Source(id="b", name="B", type="rss", url="https://b", category="company")
+    seen = []
+
+    def fetch(src, ua, timeout, session=None):
+        if src.id == "b":
+            raise FetchError("HTTP 403 (b)")
+        return [Item("a", "1", "Acme opens new office in Baku", "https://x")]
+
+    with patch("leadsbot.runner.fetch_source", fetch):
+        rows = check_sources(settings, [a, b], matcher, on_result=lambda r: seen.append(r["id"]))
+    assert seen == ["a", "b"] and rows[0]["matched"] == 1 and rows[1]["error"] == "HTTP 403 (b)"

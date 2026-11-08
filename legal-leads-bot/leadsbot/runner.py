@@ -294,8 +294,10 @@ def _plain(html_text: str) -> str:
     return re.sub(r"<[^>]+>", "", html_text).replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
 
 
-def check_sources(settings: Settings, sources: list[Source], matcher: Matcher, only: set[str] | None = None) -> list[dict]:
-    """Hər mənbəni oxuyub nə qədər element və uyğunluq verdiyini qaytarır (bazaya yazmır)."""
+def check_sources(settings: Settings, sources: list[Source], matcher: Matcher, only: set[str] | None = None,
+                  on_result=None) -> list[dict]:
+    """Hər mənbəni oxuyub nə qədər element və uyğunluq verdiyini qaytarır (bazaya yazmır).
+    on_result(row) hər mənbə yoxlanan kimi çağırılır (ekranda dərhal göstərmək üçün)."""
     out = []
     today = local_now(settings).date()
     for src in sources:
@@ -317,4 +319,6 @@ def check_sources(settings: Settings, sources: list[Source], matcher: Matcher, o
         except Exception as exc:
             row["error"] = f"{exc.__class__.__name__}: {exc}"
         out.append(row)
+        if on_result is not None:
+            on_result(row)
     return out

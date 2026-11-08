@@ -84,18 +84,21 @@ def cmd_check(args, settings) -> int:
     sources = all_sources(load_sources(settings.sources_file), store)
     matcher = Matcher(load_profile(settings.keywords_file), store.user_keywords())
     only = set(args.only.split(",")) if args.only else None
-    rows = check_sources(settings, sources, matcher, only)
-    bad = 0
-    for r in rows:
+    total = len([s for s in sources if not only or s.id in only])
+    print(f"{total} mənbə yoxlanır, bu 1-2 dəqiqə çəkə bilər. Nəticələr hazır olduqca görünəcək.\n", flush=True)
+
+    def show(r: dict) -> None:
         flag = "OFF " if not r["enabled"] else "    "
         if r["error"]:
-            bad += 1
-            print(f"❌ {flag}{r['id']:<24} {r['error']}")
+            print(f"❌ {flag}{r['id']:<24} {r['error']}", flush=True)
         else:
-            print(f"✅ {flag}{r['id']:<24} {r['count']:>3} element, {r['matched']:>3} uyğun")
-            for s in r["sample"]:
-                print(f"       · {s}")
-    print(f"\n{len(rows) - bad}/{len(rows)} mənbə işləyir.")
+            print(f"✅ {flag}{r['id']:<24} {r['count']:>3} element, {r['matched']:>3} uyğun", flush=True)
+            for sample in r["sample"]:
+                print(f"       · {sample}", flush=True)
+
+    rows = check_sources(settings, sources, matcher, only, on_result=show)
+    bad = sum(1 for r in rows if r["error"])
+    print(f"\n{len(rows) - bad}/{len(rows)} mənbə işləyir. OFF = söndürülmüş mənbə (yalnız test üçün yoxlanıldı).")
     return 0
 
 
