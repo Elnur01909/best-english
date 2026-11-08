@@ -1,20 +1,22 @@
 # Mənbələr. Hər biri müstəqil yoxlanır; biri xəta versə, qalanları işləyir.
 #
 # Sahələr:
-#   id            unikal qısa ad (Telegram-da /mute <id> üçün)
-#   name          insan üçün ad
-#   type          gnews | rss | html_links | reliefweb_jobs
-#   category      company | individual | job | tender | dispute  (defolt kateqoriya)
-#   require_geo   true → mətndə Azərbaycan/Bakı sözü olmalıdır (keywords.yaml → geo)
-#                 false → mənbə özü artıq Azərbaycan üzrədir (məs. r/azerbaijan)
-#   enabled       false → yoxlanmır
-#   note          qeyd (status: ✅ etibarlı, ⚠️ bot bloklaya bilər, ❔ yoxlanmalı)
+#   id             unikal qısa ad (Telegram-da /mute <id> üçün)
+#   name           insan üçün ad
+#   type           gnews | rss | html_links | tg_channel | reliefweb_jobs
+#   category       company | individual | job | tender | dispute | other (defolt kateqoriya)
+#   categories     bu mənbədə hansı açar söz kateqoriyaları sayılır (səs-küyü azaldır). Yazılmasa: hamısı.
+#   require_geo    true → mətndə Azərbaycan/Bakı sözü olmalıdır (keywords.yaml → geo)
+#   disable_after  YYYY-MM-DD → bu tarixdən sonra mənbə avtomatik söndürülür
+#   enabled        false → yoxlanmır
+#   note           qeyd (✅ işləyir, ⚠️ bəzən bloklanır, ❔ /check ilə yoxlayın, ⛔ işləmir)
 #
 # type-ə görə əlavə sahələr:
 #   gnews:          query (Google News axtarış sorğusu), lang (en|az|ru)
 #   rss:            url
 #   html_links:     url, link_pattern (regex; uyğun gələn <a href> linkləri element sayılır)
-#   reliefweb_jobs: (sahə tələb etmir; ReliefWeb API-dən Azərbaycan üzrə iş elanları)
+#   tg_channel:     channel (ictimai Telegram kanalının adı, @ olmadan). Telegram-da /addtg ilə də əlavə olunur.
+#   reliefweb_jobs: (ReliefWeb API v2; təsdiqlənmiş RELIEFWEB_APPNAME tələb edir)
 
 sources:
 
@@ -25,9 +27,9 @@ sources:
     lang: en
     query: 'Azerbaijan ("opens office" OR "new office" OR "representative office" OR subsidiary OR "branch in Baku")'
     category: company
+    categories: [company, dispute]
     require_geo: true
-    enabled: true
-    note: "✅ Google News RSS etibarlıdır. Sorğunu dəyişmək olar."
+    note: "✅ Windows-da işləyir."
 
   - id: gnews_afez
     name: "Google News — Ələt AİZ / sənaye parkı rezidentləri"
@@ -35,8 +37,8 @@ sources:
     lang: en
     query: '"Alat Free Economic Zone" OR "AFEZ" OR "Sumgayit Chemical Industrial Park" OR "Pirallahi Industrial Park" OR "Aghdam Industrial Park"'
     category: company
+    categories: [company, dispute]
     require_geo: false
-    enabled: true
     note: "✅ Yeni xarici rezidentlər — AFEZCO qeydiyyatı, torpaq, EPC, iş icazəsi işi."
 
   - id: gnews_invest
@@ -45,8 +47,8 @@ sources:
     lang: en
     query: 'Azerbaijan company ("memorandum of understanding" OR "investment agreement" OR "joint venture" OR "to invest" OR "signed an agreement")'
     category: company
+    categories: [company, dispute]
     require_geo: true
-    enabled: true
     note: "✅ AZPROMO/nazirlik sazişləri, ilk dəfə girən şirkətlər."
 
   - id: gnews_franchise
@@ -55,8 +57,8 @@ sources:
     lang: en
     query: 'Baku (franchise OR "first store" OR "first restaurant" OR "master franchise" OR "opens in Baku")'
     category: company
+    categories: [company]
     require_geo: true
-    enabled: true
     note: "✅ Əmtəə nişanı + franşiza müqaviləsi + icarə işi."
 
   - id: gnews_dispute
@@ -65,8 +67,8 @@ sources:
     lang: en
     query: 'Azerbaijan (arbitration OR ICSID OR "license revoked" OR lawsuit OR "Central Bank fined")'
     category: dispute
+    categories: [dispute, company]
     require_geo: true
-    enabled: true
     note: "✅ İri mübahisələr; konflikt yoxlamasından sonra yanaşın."
 
   - id: gnews_legal_az
@@ -75,28 +77,58 @@ sources:
     lang: en
     query: 'Azerbaijan ("law firm" OR "legal counsel" OR "legal services" OR lawyers) Baku'
     category: company
+    categories: [company, dispute, job]
     require_geo: true
-    enabled: true
-    note: "✅ Rəqib hərəkətləri və müştəri siqnalları (məs. yeni hüquq firması ofisi)."
+    note: "✅ Rəqib hərəkətləri və müştəri siqnalları."
 
-  # ───────────── FƏRDİ SORĞULAR (forumlar, Reddit) ─────────────
+  - id: trend_rss
+    name: "Trend.az — İngiliscə xəbər lenti"
+    type: rss
+    url: "https://en.trend.az/feeds/index.rss"
+    category: company
+    categories: [company, dispute, tender]
+    require_geo: false
+    note: "❔ Google News-dən tez gəlir. /check ilə yoxlayın."
+
+  - id: azernews_rss
+    name: "AzerNews — xəbər lenti"
+    type: rss
+    url: "https://www.azernews.az/feed.php"
+    category: company
+    categories: [company, dispute, tender]
+    require_geo: false
+    note: "❔ /check ilə yoxlayın."
+
+  # ───────────── FƏRDİ SORĞULAR (forumlar) ─────────────
+  - id: expat_az_forum
+    name: "Expat.com — Azerbaijan forumu"
+    type: html_links
+    url: "https://www.expat.com/en/forum/asia/azerbaijan/"
+    link_pattern: "/en/forum/asia/azerbaijan/\\d+-"
+    category: individual
+    categories: [individual]
+    require_geo: false
+    note: "✅ Windows-da işləyir. MYİ/biznes sualları buradan gəlir."
+
   - id: reddit_azerbaijan_new
-    name: "Reddit — r/azerbaijan yeni postlar (açar sözlə filtr)"
+    name: "Reddit — r/azerbaijan yeni postlar"
     type: rss
     url: "https://www.reddit.com/r/azerbaijan/new.rss?limit=50"
     category: individual
+    categories: [individual]
     require_geo: false
-    enabled: true
-    note: "✅ Windows-da işləyir. Reddit bəzən 429 verir; bot gözləyib bir dəfə təkrarlayır."
+    disable_after: "2026-11-12"
+    note: "⛔ Reddit RSS lentlərini 13.11.2026-da bağlayır; bot bu tarixdən sonra mənbəni özü söndürür."
 
   - id: reddit_search_lawyer
     name: "Reddit — bütün Reddit: Azerbaijan + lawyer/visa/permit"
     type: rss
     url: "https://www.reddit.com/search.rss?q=Azerbaijan+%28lawyer+OR+%22legal+advice%22+OR+%22residence+permit%22+OR+%22work+permit%22+OR+deported+OR+%22company+registration%22%29&sort=new&t=month"
     category: individual
+    categories: [individual]
     require_geo: true
-    enabled: true
-    note: "⚠️ Eyni Reddit qeydi. r/expats, r/IWantOut, r/digitalnomad postlarını tutur."
+    disable_after: "2026-11-12"
+    note: "⛔ 13.11.2026-da bağlanır."
 
   - id: tripadvisor_az_forum
     name: "TripAdvisor — Azerbaijan Forum mövzuları"
@@ -104,19 +136,10 @@ sources:
     url: "https://www.tripadvisor.com/ShowForum-g293933-i9346-Azerbaijan.html"
     link_pattern: "ShowTopic-g293933-i9346-k\\d+"
     category: individual
+    categories: [individual]
     require_geo: false
     enabled: false
-    note: "⛔ TripAdvisor botları bloklayır (HTTP 403, Windows-da yoxlanılıb). Forumu əl ilə izləyin: tripadvisor.com/ShowForum-g293933-i9346-Azerbaijan.html"
-
-  - id: expat_az_forum
-    name: "Expat.com — Azerbaijan forumu"
-    type: html_links
-    url: "https://www.expat.com/en/forum/asia/azerbaijan/"
-    link_pattern: "/en/forum/asia/azerbaijan/\\d+-"
-    category: individual
-    require_geo: false
-    enabled: true
-    note: "✅ Windows-da işləyir (35 element). 2026-da MYİ/biznes sualları buradan gəlirdi."
+    note: "⛔ Botları bloklayır (HTTP 403). Forumu əl ilə izləyin."
 
   # ───────────── TENDERLƏR / KONSULTANT ÇAĞIRIŞLARI ─────────────
   - id: reliefweb_jobs_az
@@ -124,17 +147,18 @@ sources:
     type: rss
     url: "https://reliefweb.int/jobs/rss.xml?search=Azerbaijan"
     category: tender
+    categories: [tender, job]
     require_geo: true
-    enabled: true
-    note: "❔ ReliefWeb iş elanları RSS lenti (BMT, QHT). /check ilə yoxlayın."
+    note: "❔ /check ilə yoxlayın."
 
   - id: reliefweb_api_az
     name: "ReliefWeb API v2 — Azərbaycan iş elanları"
     type: reliefweb_jobs
     category: tender
+    categories: [tender, job]
     require_geo: false
     enabled: false
-    note: "❔ v1 API bağlanıb (HTTP 410). v2 təsdiqlənmiş appname istəyə bilər: reliefweb.int/help/api-ında müraciət edin, .env-də RELIEFWEB_APPNAME yazın, sonra enabled: true."
+    note: "❔ Təsdiqlənmiş appname lazımdır (apidoc.reliefweb.int). .env → RELIEFWEB_APPNAME, sonra /unmute reliefweb_api_az."
 
   - id: undp_notices
     name: "UNDP Procurement Notices — son elanlar"
@@ -142,9 +166,9 @@ sources:
     url: "https://procurement-notices.undp.org/"
     link_pattern: "view_notice\\.cfm\\?notice_id=\\d+"
     category: tender
+    categories: [tender]
     require_geo: true
-    enabled: true
-    note: "❔ Siyahı səhifəsi bütün ölkələri göstərir; geo filtr Azərbaycanı seçir. Daha etibarlısı: UNGM-də vendor kimi qeydiyyat + ölkə üzrə e-poçt xəbərdarlığı."
+    note: "✅ İşləyir; Azərbaycan elanı olanda gəlir. UNGM-də vendor qeydiyyatı da tövsiyə olunur."
 
   # ───────────── İŞ ELANLARI (Bakı) ─────────────
   - id: boss_az_legal
@@ -153,9 +177,9 @@ sources:
     url: "https://boss.az/vacancies?search%5Bkeyword%5D=h%C3%BCquq"
     link_pattern: "/vacancies/\\d+"
     category: job
+    categories: [job]
     require_geo: false
-    enabled: true
-    note: "❔ URL formatı yoxlanmalı (/check ilə). İngilis dili tələb edən elanlar üçün keywords→job siyahısı işləyir."
+    note: "❔ /sources-da statusa baxın."
 
   - id: hh_az_legal
     name: "hh.az — legal counsel / lawyer axtarışı"
@@ -163,9 +187,39 @@ sources:
     url: "https://hh.az/search/vacancy?text=legal+counsel+OR+lawyer+OR+h%C3%BCquq%C5%9F%C3%BCnas&area=9&order_by=publication_time"
     link_pattern: "/vacancy/\\d+"
     category: job
+    categories: [job]
     require_geo: false
-    enabled: true
-    note: "❔ hh botları bloklaya bilər; area=9 = Azərbaycan (yoxlanmalı)."
+    note: "❔ /sources-da statusa baxın."
+
+  - id: hellojob_az
+    name: "HelloJob.az — son vakansiyalar (hüquq filtri)"
+    type: html_links
+    url: "https://www.hellojob.az/"
+    link_pattern: "/vakansiya/[a-z0-9-]+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "❔ Hüquqşünas elanları burada çox olur. /check ilə yoxlayın."
+
+  - id: smartjob_az
+    name: "Smartjob.az — son vakansiyalar (hüquq filtri)"
+    type: html_links
+    url: "https://smartjob.az/"
+    link_pattern: "/vacancy/\\d+-"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "❔ /check ilə yoxlayın."
+
+  - id: busy_az
+    name: "Busy.az — son vakansiyalar (hüquq filtri)"
+    type: html_links
+    url: "https://busy.az/"
+    link_pattern: "/vacancy/\\d+/"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "❔ /check ilə yoxlayın."
 
   - id: jobsearch_az_legal
     name: "JobSearch.az — hüquq vakansiyaları"
@@ -173,6 +227,7 @@ sources:
     url: "https://www.jobsearch.az/vacancies?q=h%C3%BCquq"
     link_pattern: "/vacancies/\\d+"
     category: job
+    categories: [job]
     require_geo: false
     enabled: false
-    note: "❔ Sayt JavaScript ilə yüklənə bilər (boş nəticə). /check ilə sınayın, işləsə enabled: true edin."
+    note: "❔ JavaScript ilə yüklənə bilər. /check --only jobsearch_az_legal ilə sınayın."

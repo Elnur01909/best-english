@@ -3,3 +3,5 @@ requests>=2.32
 PyYAML>=6.0.1
 beautifulsoup4>=4.12
 python-dotenv>=1.0
+# Claude süni intellekt filtri (isteğe bağlı). Python 3.10+ tələb edir; köhnə Python-da bot onsuz işləyir.
+anthropic>=2.0; python_version >= "3.10"

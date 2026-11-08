@@ -50,6 +50,8 @@ def build_url(src: Source) -> str:
     if src.type == "gnews":
         hl, gl, ceid = GNEWS_LOCALES.get(src.lang, GNEWS_LOCALES["en"])
         return f"https://news.google.com/rss/search?q={quote_plus(src.query)}&hl={hl}&gl={gl}&ceid={ceid}"
+    if src.type == "tg_channel":
+        return f"https://t.me/s/{src.channel}"
     if src.type == "reliefweb_jobs":
         appname = os.getenv("RELIEFWEB_APPNAME", "").strip() or "legal-leads-bot"
         return f"{RELIEFWEB_URL}?appname={quote_plus(appname)}"
@@ -126,6 +128,32 @@ def parse_reliefweb(data: dict, src: Source) -> list[Item]:
     return items
 
 
+def parse_tg_channel(html: str, src: Source) -> list[Item]:
+    """t.me/s/<kanal> ictimai önizləmə səhifəsindən son postlar (ən yenisi birinci)."""
+    soup = BeautifulSoup(html, "html.parser")
+    channel_title = ""
+    head = soup.select_one(".tgme_channel_info_header_title")
+    if head:
+        channel_title = head.get_text(" ", strip=True)
+    items: list[Item] = []
+    for msg in soup.select("div.tgme_widget_message[data-post]"):
+        post = msg.get("data-post", "").strip()
+        if not post:
+            continue
+        body = msg.select_one(".tgme_widget_message_text")
+        text = body.get_text("\n", strip=True) if body else ""
+        if not text:
+            continue  # yalnız şəkil/video olan postlar
+        first_line = next((ln.strip() for ln in text.splitlines() if ln.strip()), text)
+        title = first_line[:140]
+        t = msg.select_one("time[datetime]")
+        published = t.get("datetime", "") if t else ""
+        items.append(Item(src.id, f"tg:{post}", title, f"https://t.me/{post}", text[:1500], published,
+                          channel_title or f"@{src.channel}"))
+    items.reverse()
+    return items[: src.max_items]
+
+
 # ──────────────────────────── şəbəkə ────────────────────────────
 
 def _session(user_agent: str) -> requests.Session:
@@ -191,6 +219,9 @@ def fetch_source(src: Source, user_agent: str, timeout: int = 25, session: reque
         if src.type == "html_links":
             r.encoding = r.encoding or "utf-8"
             return parse_html_links(r.text, src, base_url=str(r.url))
+        if src.type == "tg_channel":
+            r.encoding = r.encoding or "utf-8"
+            return parse_tg_channel(r.text, src)
     except requests.HTTPError as exc:
         code = exc.response.status_code if exc.response is not None else "?"
         raise FetchError(f"HTTP {code} ({_domain(url)})") from exc

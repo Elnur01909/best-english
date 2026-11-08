@@ -41,18 +41,46 @@ class TelegramClient:
     def get_me(self) -> dict:
         return self.call("getMe")
 
-    def send_message(self, chat_id: str | int, text: str, parse_mode: str = "HTML", preview: bool = False) -> None:
-        for chunk in _chunks(text, MAX_LEN):
-            self.call(
-                "sendMessage",
-                chat_id=chat_id,
-                text=chunk,
-                parse_mode=parse_mode,
-                disable_web_page_preview=not preview,
-            )
+    def send_message(
+        self,
+        chat_id: str | int,
+        text: str,
+        parse_mode: str = "HTML",
+        preview: bool = False,
+        reply_markup: dict | None = None,
+        reply_to: int | None = None,
+    ) -> dict | None:
+        """Uzun mətni hissələrə bölür; düymələr son hissəyə qoşulur. Son mesajı qaytarır."""
+        chunks = _chunks(text, MAX_LEN)
+        result = None
+        for i, chunk in enumerate(chunks):
+            params = {
+                "chat_id": chat_id,
+                "text": chunk,
+                "parse_mode": parse_mode,
+                "disable_web_page_preview": not preview,
+            }
+            if reply_markup and i == len(chunks) - 1:
+                params["reply_markup"] = reply_markup
+            if reply_to and i == 0:
+                params["reply_parameters"] = {"message_id": reply_to, "allow_sending_without_reply": True}
+            result = self.call("sendMessage", **params)
+        return result
+
+    def answer_callback(self, callback_id: str, text: str = "") -> None:
+        self.call("answerCallbackQuery", callback_query_id=callback_id, text=text[:190])
+
+    def edit_reply_markup(self, chat_id: str | int, message_id: int, reply_markup: dict | None) -> None:
+        params = {"chat_id": chat_id, "message_id": message_id}
+        params["reply_markup"] = reply_markup or {"inline_keyboard": []}
+        try:
+            self.call("editMessageReplyMarkup", **params)
+        except TelegramError as exc:
+            if "message is not modified" not in str(exc):
+                raise
 
     def get_updates(self, offset: int | None = None, timeout: int = 30) -> list[dict]:
-        params = {"timeout": timeout, "allowed_updates": ["message", "edited_message"]}
+        params = {"timeout": timeout, "allowed_updates": ["message", "edited_message", "callback_query"]}
         if offset is not None:
             params["offset"] = offset
         old = self.timeout

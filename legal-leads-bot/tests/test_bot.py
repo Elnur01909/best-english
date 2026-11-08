@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 from leadsbot.bot import LeadsBot
 from leadsbot.storage import Store
 
@@ -76,3 +78,126 @@ def test_telegram_errors_never_contain_token():
         client.get_me()
     assert "SECRET_TOKEN_VALUE" not in str(ei.value)
     assert ei.value.__cause__ is None and ei.value.__suppress_context__
+
+
+# ── Mərhələ 3: düymələr, kartlar, iş axını ──
+
+class FakeTG2(FakeTG):
+    def __init__(self):
+        super().__init__()
+        self.answers, self.edits, self.kw = [], [], []
+
+    def send_message(self, chat_id, text, **kw):
+        self.sent.append((str(chat_id), text))
+        self.kw.append(kw)
+
+    def answer_callback(self, cq_id, text=""):
+        self.answers.append(text)
+
+    def edit_reply_markup(self, chat_id, message_id, markup):
+        self.edits.append(markup)
+
+
+def _seed_lead(store, title="Acme opens office in Baku"):
+    from leadsbot.models import Item, MatchResult
+    store.add_item(Item("gnews_office", "u-" + title, title, "https://x", "summary"), MatchResult("company", 3, ["new office"]))
+    return store.recent_matches(1)[0]["id"]
+
+
+def cb(chat_id, data, msg_id=10):
+    return {"update_id": 5, "callback_query": {"id": "cq1", "data": data,
+                                                "message": {"message_id": msg_id, "chat": {"id": chat_id}}}}
+
+
+def test_status_buttons_toggle_and_pipeline(settings):
+    store = Store(settings.db_path)
+    lead = _seed_lead(store)
+    bot = LeadsBot(settings, store, FakeTG2())
+    bot.handle(cb(42, f"s:{lead}:i"))
+    assert store.get_item(lead)["status"] == "interested"
+    assert "Maraqlıdır" in bot.tg.answers[-1]
+    pressed = [b["text"] for row in bot.tg.edits[-1]["inline_keyboard"] for b in row]
+    assert pressed[0].startswith("✅")
+    bot.handle(cb(42, f"s:{lead}:i"))  # ikinci basış sıfırlayır
+    assert store.get_item(lead)["status"] == "new"
+    bot.handle(cb(42, f"s:{lead}:c"))
+    bot.handle(upd(42, "/pipeline"))
+    assert f"/l{lead}" in bot.tg.sent[-1][1] and "Əlaqə saxlanılıb — 1" in bot.tg.sent[-1][1]
+
+
+def test_callback_from_stranger_is_ignored(settings):
+    store = Store(settings.db_path)
+    lead = _seed_lead(store)
+    bot = LeadsBot(settings, store, FakeTG2())
+    bot.handle(cb(999, f"s:{lead}:x"))
+    assert store.get_item(lead)["status"] == "new" and bot.tg.answers == ["İcazə yoxdur"]
+
+
+def test_draft_button_uses_template_without_ai(settings):
+    store = Store(settings.db_path)
+    lead = _seed_lead(store)
+    bot = LeadsBot(settings, store, FakeTG2())
+    bot.handle(cb(42, f"s:{lead}:d"))
+    text = bot.tg.sent[-1][1]
+    assert "Məktub layihəsi" in text and "şablon" in text and "<pre>" in text
+    assert bot.tg.kw[-1]["reply_to"] == 10
+
+
+def test_draft_uses_ai_when_available(settings):
+    class AI:
+        def draft(self, lead):
+            return "Hello from Claude about " + lead["title"]
+    store = Store(settings.db_path)
+    lead = _seed_lead(store)
+    bot = LeadsBot(settings, store, FakeTG2(), ai=AI())
+    bot.handle(upd(42, f"/draft {lead}"))
+    assert "Hello from Claude about Acme" in bot.tg.sent[-1][1] and "Claude" in bot.tg.sent[-1][1]
+
+
+def test_lead_card_command(settings):
+    store = Store(settings.db_path)
+    lead = _seed_lead(store)
+    bot = LeadsBot(settings, store, FakeTG2())
+    bot.handle(upd(42, f"/l{lead}"))
+    assert "Acme opens office" in bot.tg.sent[-1][1]
+    assert bot.tg.kw[-1]["reply_markup"]["inline_keyboard"]
+    bot.handle(upd(42, "/l99999"))
+    assert "tapılmadı" in bot.tg.sent[-1][1]
+
+
+def test_addtg_and_deltg(settings):
+    from leadsbot.models import Item
+    store = Store(settings.db_path)
+    bot = LeadsBot(settings, store, FakeTG2())
+    posts = [Item("tg_hellojob_az", "tg:hellojob_az/1", "Senior Lawyer", "https://t.me/hellojob_az/1",
+                  "Senior Lawyer, Baku", origin="HelloJob")]
+    with patch("leadsbot.bot.fetch_source", lambda *a, **k: posts):
+        bot.handle(upd(42, "/addtg https://t.me/hellojob_az"))
+    assert "Əlavə edildi" in bot.tg.sent[-1][1] and "1 uyğun" in bot.tg.sent[-1][1]
+    assert "tg_hellojob_az" in {s.id for s in bot.sources}
+    with patch("leadsbot.bot.fetch_source", lambda *a, **k: []):
+        bot.handle(upd(42, "/addtg @empty_channel"))
+    assert "açıq post görünmür" in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/addtg @hellojob_az wrongcat"))
+    assert "İstifadə" in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/deltg @hellojob_az"))
+    assert "tg_hellojob_az" not in {s.id for s in bot.sources}
+
+
+def test_digest_and_minscore_commands(settings):
+    store = Store(settings.db_path)
+    bot = LeadsBot(settings, store, FakeTG2())
+    bot.handle(upd(42, "/digest 8:30"))
+    assert "08:30" in bot.tg.sent[-1][1] and store.get("digest_time") == "08:30"
+    bot.handle(upd(42, "/digest off"))
+    assert "söndürülüb" in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/digest 25:00"))
+    assert "İstifadə" in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/digest now"))
+    assert "Səhər xülasəsi" in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/minscore 7"))
+    assert "7/10" in bot.tg.sent[-1][1] and store.get("ai_min_score") == "7"
+    bot.handle(upd(42, "/minscore 11"))
+    assert "İstifadə" in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/ai"))
+    assert "ANTHROPIC_API_KEY" in bot.tg.sent[-1][1]

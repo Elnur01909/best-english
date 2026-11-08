@@ -1,6 +1,8 @@
 # Telegram lid botu — serversiz rejim: GitHub Actions hər 30 dəqiqədən bir `fetch` işə salır.
 # Lazım olan repo secret-ləri (Settings → Secrets and variables → Actions):
-#   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+#   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, istəyə görə ANTHROPIC_API_KEY
+# İstəyə görə Variables: AI_MODEL, DIGEST_TIME (məs. 09:00).
+# Qeyd: bu rejimdə düymələr və əmrlər işləmir (bot daimi işləmir); onlar üçün serve rejimi lazımdır.
 # Baza (görülmüş elementlər) actions/cache ilə saxlanır; cache silinsə bot sadəcə yeni başlanğıc nöqtəsi qoyur.
 name: legal-leads-bot
 
@@ -46,6 +48,9 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AI_MODEL: ${{ vars.AI_MODEL || 'claude-opus-5-5' }}
+          DIGEST_TIME: ${{ vars.DIGEST_TIME }}
           USER_AGENT: "linux:legal-leads-bot:1.0 (GitHub Actions; RSS reader)"
           MAX_PER_CYCLE: "15"
         run: python -m leadsbot fetch

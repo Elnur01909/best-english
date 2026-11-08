@@ -60,7 +60,14 @@ class Matcher:
     def _hits(compiled: Compiled, text: str) -> list[str]:
         return [w for w, rx in compiled if rx.search(text)]
 
-    def evaluate(self, text: str, default_category: str | None, require_geo: bool) -> MatchResult | None:
+    def evaluate(
+        self,
+        text: str,
+        default_category: str | None,
+        require_geo: bool,
+        allowed: list[str] | None = None,
+    ) -> MatchResult | None:
+        """allowed: yalnız bu kateqoriyaların açar sözləri sayılır (məs. iş saytında yalnız 'job')."""
         text = text or ""
         if self._hits(self.exclude, text):
             return None
@@ -68,7 +75,8 @@ class Matcher:
         if require_geo and not geo_hits:
             return None
 
-        by_cat = {c: self._hits(rxs, text) for c, rxs in self.cats.items()}
+        cats = self.cats if not allowed else {c: r for c, r in self.cats.items() if c in allowed}
+        by_cat = {c: self._hits(rxs, text) for c, rxs in cats.items()}
         extra_hits = self._hits(self.extra, text)
         total = sum(len(v) for v in by_cat.values()) + len(extra_hits)
         if total == 0:

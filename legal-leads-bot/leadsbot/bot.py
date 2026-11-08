@@ -1,43 +1,59 @@
 from __future__ import annotations
 
 import logging
+import re
 import time
 
-from .config import Settings, load_profile, load_sources
+from .ai import AIError, LeadAI, template_draft
+from .config import Settings, all_sources, load_profile, load_sources, parse_hhmm, ConfigError
 from .filters import Matcher
-from .formatting import esc, format_short
-from .models import Source
-from .runner import check_sources, run_cycle
+from .formatting import (BUTTON_STATUS, STATUS_LABELS, esc, format_row, format_short, lead_keyboard)
+from .models import CATEGORIES, Source, normalize_tg_handle
+from .runner import (check_sources, effective_digest_time, effective_min_score, maybe_send_digest, run_cycle)
+from .sources import FetchError, fetch_source
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
 
 log = logging.getLogger("leadsbot.bot")
 
-HELP = """<b>Legal Leads Bot</b> — Azərbaycanda ingilisdilli hüquqi xidmət lidləri və iş elanları.
+HELP = """<b>Legal Leads Bot</b> — Azərbaycanda ingilisdilli hüquqi xidmət lidləri, iş elanları və tenderlər.
 
-Əmrlər:
-/run — mənbələri indi yoxla
-/check — hər mənbənin işlədiyini test et (bazaya yazmır)
-/sources — mənbələrin siyahısı və son statusu
-/mute &lt;id&gt; · /unmute &lt;id&gt; — mənbəni söndür / yandır
-/keywords — əlavə açar sözlər
-/addkw &lt;söz&gt; · /delkw &lt;söz&gt; — əlavə açar söz əlavə et / sil
-/last [n] — son uyğun gələn n element (defolt 10)
-/stats — statistika
-/stop · /start — bildirişləri dayandır / davam et
-/ping — bot işləyir?"""
+<b>Lidlər</b>
+/last [n] — son uyğun lidlər · /l123 — lid kartı və düymələr
+/pipeline — "Maraqlıdır" və "Əlaqə saxladım" lidləri
+/draft 123 — məktub layihəsi
+
+<b>Mənbələr</b>
+/run — indi yoxla · /check — mənbələri test et
+/sources — siyahı · /mute id · /unmute id
+/addtg @kanal [job|individual|company|tender] — Telegram kanalı əlavə et
+/deltg @kanal — kanalı sil
+
+<b>Filtr və çatdırılma</b>
+/ai — Claude statusu · /minscore 6 — minimum bal
+/digest 09:00 · /digest off · /digest now — səhər xülasəsi
+/keywords · /addkw söz · /delkw söz
+/stats · /stop · /start · /ping"""
 
 
 class LeadsBot:
-    def __init__(self, settings: Settings, store: Store, tg: TelegramClient):
+    def __init__(self, settings: Settings, store: Store, tg: TelegramClient, ai: LeadAI | None = None):
         self.settings = settings
         self.store = store
         self.tg = tg
-        self.sources: list[Source] = load_sources(settings.sources_file)
+        self.ai = ai
+        self.config_sources: list[Source] = load_sources(settings.sources_file)
         self.profile = load_profile(settings.keywords_file)
         self.allowed = set(settings.require_chat_ids())
 
     # ── helpers ──
+    @property
+    def sources(self) -> list[Source]:
+        return all_sources(self.config_sources, self.store)
+
+    def names(self) -> dict[str, str]:
+        return {s.id: s.name for s in self.sources}
+
     def matcher(self) -> Matcher:
         return Matcher(self.profile, self.store.user_keywords())
 
@@ -45,12 +61,12 @@ class LeadsBot:
         return [c for c in self.settings.allowed_chat_ids if self.store.get(f"muted:{c}") != "1"]
 
     def reload_config(self) -> None:
-        self.sources = load_sources(self.settings.sources_file)
+        self.config_sources = load_sources(self.settings.sources_file)
         self.profile = load_profile(self.settings.keywords_file)
 
-    def reply(self, chat_id: str, text: str) -> None:
+    def reply(self, chat_id: str, text: str, **kw) -> None:
         try:
-            self.tg.send_message(chat_id, text)
+            self.tg.send_message(chat_id, text, **kw)
         except TelegramError as exc:
             log.warning("cavab göndərilmədi (%s): %s", chat_id, exc)
 
@@ -59,16 +75,20 @@ class LeadsBot:
         interval = self.settings.fetch_interval_min * 60
         next_cycle = time.monotonic() if run_first else time.monotonic() + interval
         offset: int | None = None
-        log.info("serve: %d mənbə, hər %d dəq, çatlar: %s", len(self.sources), self.settings.fetch_interval_min,
-                 ", ".join(self.settings.allowed_chat_ids))
+        log.info("serve: %d mənbə, hər %d dəq, çatlar: %s, Claude: %s", len(self.sources),
+                 self.settings.fetch_interval_min, ", ".join(self.settings.allowed_chat_ids),
+                 self.settings.ai_model if self.ai else "söndürülüb")
         while True:
-            now = time.monotonic()
-            if now >= next_cycle:
+            if time.monotonic() >= next_cycle:
                 try:
                     self.cycle(announce=False)
                 except Exception:
                     log.exception("yoxlama dövrəsində xəta; növbəti dövrədə yenidən cəhd ediləcək")
                 next_cycle = time.monotonic() + interval
+            try:
+                maybe_send_digest(self.settings, self.store, self.tg, self.active_chats(), self.names())
+            except Exception:
+                log.exception("xülasə xətası")
             wait = max(1, min(30, int(next_cycle - time.monotonic())))
             try:
                 updates = self.tg.get_updates(offset, timeout=wait)
@@ -86,14 +106,17 @@ class LeadsBot:
     def cycle(self, announce: bool, chat_id: str | None = None, only: set[str] | None = None) -> None:
         report = run_cycle(
             self.settings, self.store, self.sources, self.matcher(), self.tg, self.active_chats(),
-            send=True, only=only,
+            send=True, only=only, ai=self.ai,
         )
         log.info(report.summary_text().replace("\n", " | "))
         if announce and chat_id:
             self.reply(chat_id, esc(report.summary_text()))
 
-    # ── commands ──
+    # ── updates ──
     def handle(self, update: dict) -> None:
+        if "callback_query" in update:
+            self.handle_callback(update["callback_query"])
+            return
         msg = update.get("message") or update.get("edited_message")
         if not msg:
             return
@@ -108,19 +131,134 @@ class LeadsBot:
         parts = text.split(maxsplit=1)
         cmd = parts[0].split("@", 1)[0].lower()
         arg = parts[1].strip() if len(parts) > 1 else ""
+        m = re.fullmatch(r"/l(\d+)", cmd)
+        if m:
+            self.cmd_lead(chat_id, m.group(1))
+            return
         handler = {
             "/start": self.cmd_start, "/help": self.cmd_help, "/ping": self.cmd_ping,
             "/run": self.cmd_run, "/check": self.cmd_check, "/sources": self.cmd_sources,
             "/mute": self.cmd_mute, "/unmute": self.cmd_unmute,
             "/keywords": self.cmd_keywords, "/addkw": self.cmd_addkw, "/delkw": self.cmd_delkw,
             "/last": self.cmd_last, "/stats": self.cmd_stats, "/stop": self.cmd_stop,
-            "/reload": self.cmd_reload,
+            "/reload": self.cmd_reload, "/lead": self.cmd_lead, "/pipeline": self.cmd_pipeline,
+            "/draft": self.cmd_draft, "/addtg": self.cmd_addtg, "/deltg": self.cmd_deltg,
+            "/digest": self.cmd_digest, "/minscore": self.cmd_minscore, "/ai": self.cmd_ai,
         }.get(cmd)
         if handler is None:
             self.reply(chat_id, "Naməlum əmr. /help yazın.")
             return
         handler(chat_id, arg)
 
+    def handle_callback(self, cq: dict) -> None:
+        cq_id = cq.get("id", "")
+        msg = cq.get("message") or {}
+        chat_id = str((msg.get("chat") or {}).get("id"))
+        data = cq.get("data") or ""
+        if chat_id not in self.allowed:
+            self._answer(cq_id, "İcazə yoxdur")
+            return
+        m = re.fullmatch(r"s:(\d+):([icxd])", data)
+        if not m:
+            self._answer(cq_id, "Köhnə düymə")
+            return
+        item_id, code = int(m.group(1)), m.group(2)
+        row = self.store.get_item(item_id)
+        if row is None:
+            self._answer(cq_id, "Lid tapılmadı")
+            return
+        if code == "d":
+            self._answer(cq_id, "✍️ Hazırlanır…")
+            self.send_draft(chat_id, row, reply_to=msg.get("message_id"))
+            return
+        status = BUTTON_STATUS[code]
+        if row["status"] == status:  # ikinci basış statusu sıfırlayır
+            status = "new"
+        self.store.set_status(item_id, status)
+        self._answer(cq_id, "Qeyd edildi: " + STATUS_LABELS.get(status, status))
+        if msg.get("message_id"):
+            try:
+                self.tg.edit_reply_markup(chat_id, msg["message_id"], lead_keyboard(item_id, status))
+            except TelegramError as exc:
+                log.warning("düymələr yenilənmədi: %s", exc)
+
+    def _answer(self, cq_id: str, text: str) -> None:
+        try:
+            self.tg.answer_callback(cq_id, text)
+        except TelegramError as exc:
+            log.warning("callback cavabı: %s", exc)
+
+    # ── lid əmrləri ──
+    def _item_id(self, arg: str) -> int | None:
+        m = re.search(r"\d+", arg or "")
+        return int(m.group()) if m else None
+
+    def cmd_lead(self, chat_id: str, arg: str) -> None:
+        item_id = self._item_id(arg)
+        row = self.store.get_item(item_id) if item_id else None
+        if row is None:
+            self.reply(chat_id, "Lid tapılmadı. Nümunə: /l123")
+            return
+        self.reply(chat_id, format_row(row, self.names().get(row["source_id"], row["source_id"])),
+                   reply_markup=lead_keyboard(row["id"], row["status"]))
+
+    def cmd_draft(self, chat_id: str, arg: str) -> None:
+        item_id = self._item_id(arg)
+        row = self.store.get_item(item_id) if item_id else None
+        if row is None:
+            self.reply(chat_id, "İstifadə: /draft 123")
+            return
+        self.send_draft(chat_id, row)
+
+    def send_draft(self, chat_id: str, row, reply_to: int | None = None) -> None:
+        category = row["ai_category"] or row["category"]
+        source_note = ""
+        if self.ai is not None:
+            try:
+                text = self.ai.draft({
+                    "category": category, "title": row["title"], "summary": row["ai_summary"] or row["summary"],
+                    "origin": row["origin"], "link": row["link"], "service": row["ai_service"],
+                })
+                source_note = "Claude"
+            except AIError as exc:
+                log.warning("məktub layihəsi alınmadı: %s", exc)
+                text = template_draft(category, row["title"])
+                source_note = "şablon (Claude xətası)"
+        else:
+            text = template_draft(category, row["title"])
+            source_note = "şablon"
+        self.reply(
+            chat_id,
+            f"✍️ <b>Məktub layihəsi</b> · {esc(source_note)}\nYoxlayıb, düzəldib özünüz göndərin.\n<pre>{esc(text)}</pre>",
+            reply_to=reply_to,
+        )
+
+    def cmd_pipeline(self, chat_id: str, arg: str) -> None:
+        names = self.names()
+        lines = ["<b>İş axını</b>"]
+        for status in ("interested", "contacted"):
+            rows = self.store.by_status((status,), limit=25)
+            lines.append(f"\n{STATUS_LABELS[status]} — {len(rows)}")
+            lines += [format_short(r, names.get(r["source_id"], r["source_id"])) for r in rows]
+        if len(lines) == 3 and all("— 0" in ln for ln in lines[1:]):
+            lines.append("\nHələ boşdur. Lidlərin altındakı ⭐ və 📞 düymələrindən istifadə edin.")
+        self.reply(chat_id, "\n".join(lines))
+
+    def cmd_last(self, chat_id: str, arg: str) -> None:
+        try:
+            n = max(1, min(30, int(arg))) if arg else 10
+        except ValueError:
+            n = 10
+        rows = self.store.recent_matches(n)
+        if not rows:
+            self.reply(chat_id, "Hələ uyğun element yoxdur. /run ilə yoxlayın.")
+            return
+        names = self.names()
+        lines = [f"<b>Son {len(rows)} uyğun lid</b>"]
+        lines += [format_short(r, names.get(r["source_id"], r["source_id"])) for r in rows]
+        self.reply(chat_id, "\n".join(lines))
+
+    # ── mənbələr ──
     def cmd_start(self, chat_id: str, arg: str) -> None:
         self.store.delete(f"muted:{chat_id}")
         self.reply(chat_id, "✅ Bildirişlər aktivdir.\n\n" + HELP)
@@ -130,7 +268,8 @@ class LeadsBot:
 
     def cmd_ping(self, chat_id: str, arg: str) -> None:
         st = self.store.stats()
-        self.reply(chat_id, f"🏓 İşləyirəm. Bazada {st['items']} element, {st['pending']} növbədə.")
+        self.reply(chat_id, f"🏓 İşləyirəm. Bazada {st['items']} element, {st['pending']} növbədə, "
+                            f"{st['digest_queue']} xülasə növbəsində.")
 
     def cmd_stop(self, chat_id: str, arg: str) -> None:
         self.store.set(f"muted:{chat_id}", "1")
@@ -167,12 +306,12 @@ class LeadsBot:
                 if st["last_error"]:
                     status += f" ⚠️ {st['last_error'][:60]}"
             flag = "🟢" if enabled else "⚪️"
-            lines.append(f"{flag} <code>{esc(s.id)}</code> — {esc(s.name)}{esc(status)}")
+            extra = f" · {s.disable_after}-dək" if s.disable_after else ""
+            lines.append(f"{flag} <code>{esc(s.id)}</code> — {esc(s.name)}{esc(extra)}{esc(status)}")
         self.reply(chat_id, "\n".join(lines))
 
     def _toggle(self, chat_id: str, arg: str, enabled: bool) -> None:
-        ids = {s.id for s in self.sources}
-        if arg not in ids:
+        if arg not in {s.id for s in self.sources}:
             self.reply(chat_id, "Mənbə id-si lazımdır. Siyahı: /sources")
             return
         self.store.set_source_enabled(arg, enabled)
@@ -184,6 +323,46 @@ class LeadsBot:
     def cmd_unmute(self, chat_id: str, arg: str) -> None:
         self._toggle(chat_id, arg, True)
 
+    def cmd_addtg(self, chat_id: str, arg: str) -> None:
+        parts = arg.split()
+        handle = normalize_tg_handle(parts[0]) if parts else None
+        category = (parts[1].lower() if len(parts) > 1 else "job")
+        if not handle or category not in CATEGORIES:
+            self.reply(chat_id, "İstifadə: /addtg @kanal [job|individual|company|tender|dispute|other]\n"
+                                "Nümunə: /addtg https://t.me/kanal_adi job")
+            return
+        src = Source(id=f"tg_{handle.lower()}", name=f"Telegram @{handle}", type="tg_channel", channel=handle,
+                     category=category, categories=None if category == "other" else [category],
+                     require_geo=False, user_added=True)
+        if src.id in {s.id for s in self.config_sources}:
+            self.reply(chat_id, "Bu kanal artıq konfiqurasiyadadır.")
+            return
+        try:
+            items = fetch_source(src, self.settings.user_agent, self.settings.request_timeout)
+        except FetchError as exc:
+            self.reply(chat_id, f"❌ @{esc(handle)} oxunmadı: {esc(str(exc))}")
+            return
+        if not items:
+            self.reply(chat_id, f"❌ @{esc(handle)} kanalında açıq post görünmür. Kanal gizli ola bilər "
+                                "və ya önizləməsi bağlıdır. Yalnız ictimai kanallar işləyir.")
+            return
+        if items[0].origin and not items[0].origin.startswith("@"):
+            src.name = f"Telegram: {items[0].origin}"
+        added = self.store.add_user_source(src)
+        matched = sum(1 for it in items if self.matcher().evaluate(it.text, src.category, False, src.categories))
+        self.reply(chat_id, ("➕ Əlavə edildi" if added else "Artıq var") +
+                   f": <code>{esc(src.id)}</code> — {len(items)} son post, {matched} uyğun ({esc(category)}).\n"
+                   "İlk yoxlamada mövcud postlar yalnız yadda saxlanılır, sonra yeniləri gələcək.")
+
+    def cmd_deltg(self, chat_id: str, arg: str) -> None:
+        handle = normalize_tg_handle(arg.split()[0]) if arg.strip() else None
+        if not handle:
+            self.reply(chat_id, "İstifadə: /deltg @kanal")
+            return
+        removed = self.store.remove_user_source(f"tg_{handle.lower()}")
+        self.reply(chat_id, ("➖ Silindi: @" if removed else "Tapılmadı: @") + esc(handle))
+
+    # ── filtr və çatdırılma ──
     def cmd_keywords(self, chat_id: str, arg: str) -> None:
         kws = self.store.user_keywords()
         base = sum(len(v) for v in self.profile.categories.values())
@@ -205,27 +384,65 @@ class LeadsBot:
         removed = self.store.remove_keyword(arg)
         self.reply(chat_id, ("➖ Silindi: " if removed else "Tapılmadı: ") + esc(arg))
 
-    def cmd_last(self, chat_id: str, arg: str) -> None:
-        try:
-            n = max(1, min(30, int(arg))) if arg else 10
-        except ValueError:
-            n = 10
-        rows = self.store.recent_matches(n)
-        if not rows:
-            self.reply(chat_id, "Hələ uyğun element yoxdur. /run ilə yoxlayın.")
+    def cmd_digest(self, chat_id: str, arg: str) -> None:
+        a = arg.strip().lower()
+        if a == "now":
+            sent = maybe_send_digest(self.settings, self.store, self.tg, [chat_id], self.names(), force=True)
+            if not sent:
+                self.reply(chat_id, "Xülasə göndərilmədi.")
             return
-        names = {s.id: s.name for s in self.sources}
-        lines = [f"<b>Son {len(rows)} uyğun element</b>"]
-        lines += [format_short(r, names.get(r["source_id"], r["source_id"])) for r in rows]
-        self.reply(chat_id, "\n".join(lines))
+        if a:
+            try:
+                value = parse_hhmm(a)
+            except ConfigError:
+                self.reply(chat_id, "İstifadə: /digest 09:00 · /digest off · /digest now")
+                return
+            self.store.set("digest_time", value or "off")
+            if value:
+                self.store.delete("last_digest")
+        current = effective_digest_time(self.settings, self.store)
+        if current:
+            note = (f" Bal {self.settings.instant_min_score}+ olan lidlər dərhal gəlir." if self.ai
+                    else " Claude söndürülüb, ona görə bütün lidlər xülasəyə düşür.")
+            self.reply(chat_id, f"☀️ Səhər xülasəsi: hər gün {current} (Bakı vaxtı).{note}")
+        else:
+            self.reply(chat_id, "Səhər xülasəsi söndürülüb: bütün lidlər dərhal gəlir. Yandırmaq: /digest 09:00")
+
+    def cmd_minscore(self, chat_id: str, arg: str) -> None:
+        if arg.strip():
+            try:
+                v = int(arg.strip())
+                if not 1 <= v <= 10:
+                    raise ValueError
+            except ValueError:
+                self.reply(chat_id, "İstifadə: /minscore 6  (1–10)")
+                return
+            self.store.set("ai_min_score", str(v))
+        v = effective_min_score(self.settings, self.store)
+        tail = "" if self.ai else " Claude söndürülüb, ona görə bal hələ tətbiq olunmur."
+        self.reply(chat_id, f"Minimum bal: {v}/10. Bundan aşağı lidlər göndərilmir.{tail}")
+
+    def cmd_ai(self, chat_id: str, arg: str) -> None:
+        if self.ai is None:
+            self.reply(chat_id, "🤖 Claude söndürülüb. Yandırmaq üçün .env faylına ANTHROPIC_API_KEY yazın "
+                                "(platform.claude.com → API Keys) və botu yenidən başladın. "
+                                "Windows-da: setup.bat → açarı yapışdırın.")
+            return
+        st = self.store.stats()
+        self.reply(chat_id, f"🤖 Claude aktivdir\nModel: <code>{esc(self.settings.ai_model)}</code>\n"
+                            f"Minimum bal: {effective_min_score(self.settings, self.store)}/10 · dərhal: "
+                            f"{self.settings.instant_min_score}+\nSüzülmüş (aşağı bal): {st['low']}")
 
     def cmd_stats(self, chat_id: str, arg: str) -> None:
         st = self.store.stats()
         cats = ", ".join(f"{k or 'other'}: {v}" for k, v in sorted(st["by_category"].items())) or "—"
+        stat = ", ".join(f"{STATUS_LABELS.get(k, k)}: {v}" for k, v in sorted(st["by_status"].items()) if k) or "—"
         self.reply(
             chat_id,
             f"📊 Element: {st['items']} · uyğun: {st['matched']} · göndərilib: {st['sent']} · növbədə: {st['pending']}\n"
-            f"Kateqoriyalar: {esc(cats)}\nMənbə sayı: {len(self.sources)} · interval: {self.settings.fetch_interval_min} dəq",
+            f"Xülasə növbəsi: {st['digest_queue']} · təkrar: {st['duplicates']} · aşağı bal: {st['low']}\n"
+            f"Kateqoriyalar: {esc(cats)}\nStatuslar: {esc(stat)}\n"
+            f"Mənbə sayı: {len(self.sources)} · interval: {self.settings.fetch_interval_min} dəq",
         )
 
     def cmd_reload(self, chat_id: str, arg: str) -> None:

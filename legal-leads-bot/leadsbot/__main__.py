@@ -6,9 +6,11 @@ import sys
 
 from pathlib import Path
 
-from .config import ROOT, ConfigError, load_profile, load_settings, load_sources
+from .ai import make_ai
+from .config import ROOT, ConfigError, all_sources, load_profile, load_settings, load_sources
 from .filters import Matcher
-from .runner import check_sources, run_cycle
+from .lock import SingleInstance
+from .runner import check_sources, maybe_send_digest, run_cycle
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
 
@@ -36,16 +38,19 @@ def _logging(verbose: bool) -> None:
 
 def cmd_fetch(args, settings) -> int:
     store = Store(settings.db_path)
-    sources = load_sources(settings.sources_file)
+    sources = all_sources(load_sources(settings.sources_file), store)
     matcher = Matcher(load_profile(settings.keywords_file), store.user_keywords())
     tg, chats = None, []
     if not args.dry_run and not args.seed:
         tg = TelegramClient(settings.require_token(), timeout=settings.request_timeout)
         chats = [c for c in settings.require_chat_ids() if store.get(f"muted:{c}") != "1"]
     only = set(args.only.split(",")) if args.only else None
+    ai = None if (args.seed or args.no_ai) else make_ai(settings)
     report = run_cycle(settings, store, sources, matcher, tg, chats,
-                       send=not args.dry_run, seed_only=args.seed, dry_run=args.dry_run, only=only)
+                       send=not args.dry_run, seed_only=args.seed, dry_run=args.dry_run, only=only, ai=ai)
     print(report.summary_text())
+    if tg is not None and maybe_send_digest(settings, store, tg, chats, {s.id: s.name for s in sources}):
+        print("☀️ Səhər xülasəsi göndərildi.")
     for err in report.send_errors:
         print("Telegram:", err)
     return 1 if report.send_errors else 0
@@ -53,21 +58,30 @@ def cmd_fetch(args, settings) -> int:
 
 def cmd_serve(args, settings) -> int:
     from .bot import LeadsBot
-    store = Store(settings.db_path)
-    tg = TelegramClient(settings.require_token(), timeout=settings.request_timeout)
-    me = tg.get_me()
-    print(f"Bot: @{me.get('username')} — serve rejimi, hər {settings.fetch_interval_min} dəq. Ctrl+C ilə dayandırın.")
-    bot = LeadsBot(settings, store, tg)
+    lock = SingleInstance(settings.db_path.parent / "serve.lock")
+    if not lock.acquire():
+        print("Bot artıq işləyir (başqa pəncərədə və ya avtomatik açılışla). İkinci nüsxə açılmadı.")
+        return 3
     try:
-        bot.run_forever(run_first=not args.no_first_run)
-    except KeyboardInterrupt:
-        print("\nDayandırıldı.")
-    return 0
+        store = Store(settings.db_path)
+        tg = TelegramClient(settings.require_token(), timeout=settings.request_timeout)
+        me = tg.get_me()
+        ai = make_ai(settings)
+        print(f"Bot: @{me.get('username')} — serve rejimi, hər {settings.fetch_interval_min} dəq. "
+              f"Claude: {settings.ai_model if ai else 'söndürülüb'}. Ctrl+C ilə dayandırın.")
+        bot = LeadsBot(settings, store, tg, ai=ai)
+        try:
+            bot.run_forever(run_first=not args.no_first_run)
+        except KeyboardInterrupt:
+            print("\nDayandırıldı.")
+        return 0
+    finally:
+        lock.release()
 
 
 def cmd_check(args, settings) -> int:
-    sources = load_sources(settings.sources_file)
     store = Store(settings.db_path)
+    sources = all_sources(load_sources(settings.sources_file), store)
     matcher = Matcher(load_profile(settings.keywords_file), store.user_keywords())
     only = set(args.only.split(",")) if args.only else None
     rows = check_sources(settings, sources, matcher, only)
@@ -86,7 +100,7 @@ def cmd_check(args, settings) -> int:
 
 
 def cmd_sources(args, settings) -> int:
-    for s in load_sources(settings.sources_file):
+    for s in all_sources(load_sources(settings.sources_file), Store(settings.db_path)):
         print(f"{'ON ' if s.enabled else 'OFF'} {s.id:<24} [{s.category:<10}] {s.type:<14} {s.name}")
         if s.note:
             print(f"    {s.note}")
@@ -123,7 +137,8 @@ def cmd_chatid(args, settings) -> int:
 def cmd_setup(args, settings) -> int:
     from .setup_wizard import run_setup
     env_path = Path(args.env) if args.env else ROOT / ".env"
-    return run_setup(env_path, settings.bot_token, settings.allowed_chat_ids, force=args.force)
+    return run_setup(env_path, settings.bot_token, settings.allowed_chat_ids, force=args.force,
+                     existing_ai_key=settings.anthropic_api_key)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -136,6 +151,7 @@ def main(argv: list[str] | None = None) -> int:
     f.add_argument("--dry-run", action="store_true", help="göndərmə, ekrana yaz")
     f.add_argument("--seed", action="store_true", help="yalnız başlanğıc nöqtəsi qoy, göndərmə")
     f.add_argument("--only", help="yalnız bu mənbə id-ləri (vergüllə)")
+    f.add_argument("--no-ai", action="store_true", help="Claude qiymətləndirməsini bu dəfə keçir")
     f.set_defaults(func=cmd_fetch)
 
     s = sub.add_parser("serve", help="daimi rejim: əmrlərə cavab verir və intervalla yoxlayır")

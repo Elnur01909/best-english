@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -15,6 +16,8 @@ DEFAULT_SOURCES = ROOT / "config" / "sources.yaml"
 DEFAULT_KEYWORDS = ROOT / "config" / "keywords.yaml"
 DEFAULT_DB = ROOT / "data" / "leads.sqlite"
 DEFAULT_UA = "linux:legal-leads-bot:1.0 (RSS/HTML reader for legal-services leads)"
+DEFAULT_AI_MODEL = "claude-opus-5-5"
+_HHMM = re.compile(r"^([01]?\d|2[0-3]):([0-5]\d)$")
 
 
 class ConfigError(Exception):
@@ -32,6 +35,21 @@ class Settings:
     max_per_cycle: int = 15
     request_timeout: int = 25
     user_agent: str = DEFAULT_UA
+    # ── süni intellekt (Claude) ──
+    anthropic_api_key: str = ""
+    ai_model: str = DEFAULT_AI_MODEL
+    ai_effort: str = "low"
+    ai_min_score: int = 6
+    instant_min_score: int = 8
+    ai_max_per_cycle: int = 60
+    # ── səhər xülasəsi ──
+    digest_time: str = ""  # "HH:MM" yerli vaxtla; boş = xülasə yoxdur, hər şey dərhal gəlir
+    digest_size: int = 10
+    tz_offset_hours: float = 4.0  # Bakı UTC+4
+
+    @property
+    def ai_enabled(self) -> bool:
+        return bool(self.anthropic_api_key)
 
     def require_token(self) -> str:
         if not self.bot_token:
@@ -81,7 +99,37 @@ def load_settings(env_file: Path | None = None) -> Settings:
         max_per_cycle=max(1, _int_env("MAX_PER_CYCLE", 15)),
         request_timeout=max(5, _int_env("REQUEST_TIMEOUT", 25)),
         user_agent=os.getenv("USER_AGENT", "").strip() or DEFAULT_UA,
+        anthropic_api_key=os.getenv("ANTHROPIC_API_KEY", "").strip(),
+        ai_model=os.getenv("AI_MODEL", "").strip() or DEFAULT_AI_MODEL,
+        ai_effort=os.getenv("AI_EFFORT", "").strip() or "low",
+        ai_min_score=min(10, max(1, _int_env("AI_MIN_SCORE", 6))),
+        instant_min_score=min(10, max(1, _int_env("INSTANT_MIN_SCORE", 8))),
+        ai_max_per_cycle=max(1, _int_env("AI_MAX_PER_CYCLE", 60)),
+        digest_time=parse_hhmm(os.getenv("DIGEST_TIME", "")),
+        digest_size=max(1, _int_env("DIGEST_SIZE", 10)),
+        tz_offset_hours=_float_env("TZ_OFFSET_HOURS", 4.0),
     )
+
+
+def parse_hhmm(raw: str) -> str:
+    """'9:00' → '09:00'; boş və ya 'off' → ''. Səhv formatda ConfigError."""
+    raw = (raw or "").strip().lower()
+    if raw in ("", "off", "no", "0"):
+        return ""
+    m = _HHMM.match(raw)
+    if not m:
+        raise ConfigError(f"DIGEST_TIME formatı HH:MM olmalıdır, verilib: {raw!r}")
+    return f"{int(m.group(1)):02d}:{m.group(2)}"
+
+
+def _float_env(name: str, default: float) -> float:
+    raw = os.getenv(name, "").strip()
+    if not raw:
+        return default
+    try:
+        return float(raw)
+    except ValueError as exc:
+        raise ConfigError(f"{name} ədəd olmalıdır, verilib: {raw!r}") from exc
 
 
 def load_sources(path: Path) -> list[Source]:
@@ -104,3 +152,9 @@ def load_profile(path: Path) -> KeywordProfile:
     with path.open(encoding="utf-8") as fh:
         data = yaml.safe_load(fh) or {}
     return KeywordProfile.from_dict(data)
+
+
+def all_sources(config_sources: list[Source], store) -> list[Source]:
+    """Konfiqurasiyadakı mənbələr + /addtg ilə bazaya əlavə edilənlər (id toqquşması olarsa konfiq qalib gəlir)."""
+    ids = {s.id for s in config_sources}
+    return list(config_sources) + [s for s in store.user_sources() if s.id not in ids]

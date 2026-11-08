@@ -77,6 +77,42 @@ def _wait_for_start(client: TelegramClient, username: str, out, wait_seconds: in
     return None
 
 
+def validate_claude_key(key: str) -> str | None:
+    """Açarı pulsuz Models API sorğusu ilə yoxlayır. Xəta mətni və ya None qaytarır."""
+    try:
+        import anthropic
+    except ImportError:
+        return "`anthropic` paketi yoxdur. Python 3.10 və ya daha yeni versiya lazımdır."
+    try:
+        anthropic.Anthropic(api_key=key, timeout=20.0, max_retries=1).models.list(limit=1)
+    except anthropic.AuthenticationError:
+        return "açar yanlışdır və ya ləğv edilib"
+    except anthropic.PermissionDeniedError:
+        return "açarın icazəsi çatmır"
+    except anthropic.APIConnectionError:
+        return "internet bağlantısı yoxdur"
+    except anthropic.APIError as exc:
+        return f"Claude API xətası ({exc.__class__.__name__})"
+    return None
+
+
+def _ask_claude_key(ask, out, validate) -> str:
+    out("")
+    out("Claude süni intellekt filtri (istəyə bağlı): lidlərə 1-10 bal verir, Azərbaycanca xülasə və məktub yazır.")
+    out("Açar: https://platform.claude.com → API Keys. Ödənişlidir, təxminən ayda 1-20 $.")
+    for _ in range(3):
+        key = ask("Claude API açarını yapışdırın (istəmirsinizsə, sadəcə Enter): ").strip().strip('"').strip("'")
+        if not key:
+            out("Claude söndürülmüş qalır. Sonra yandırmaq üçün setup.bat-ı yenidən işlədin.")
+            return ""
+        err = validate(key)
+        if err is None:
+            return key
+        out(f"Açar işləmədi: {err}.")
+    out("Claude söndürülmüş qalır.")
+    return ""
+
+
 def run_setup(
     env_path: Path,
     existing_token: str = "",
@@ -86,6 +122,9 @@ def run_setup(
     make_client: Callable[[str], TelegramClient] = lambda t: TelegramClient(t),
     wait_seconds: int = WAIT_SECONDS,
     force: bool = False,
+    existing_ai_key: str = "",
+    ask_ai: bool = True,
+    validate_ai: Callable[[str], str | None] = validate_claude_key,
 ) -> int:
     ensure_env_file(env_path)
     out("=== Legal Leads Bot — quraşdırma ===")
@@ -118,6 +157,15 @@ def run_setup(
         set_env_value(env_path, "TELEGRAM_CHAT_ID", chat_id)
         chats = [chat_id]
         out(f"Çat ID tapıldı və saxlanıldı: {chat_id}")
+
+    if ask_ai:
+        if existing_ai_key and not force:
+            out("Claude açarı artıq var — süni intellekt filtri aktivdir.")
+        else:
+            key = _ask_claude_key(ask, out, validate_ai)
+            if key:
+                set_env_value(env_path, "ANTHROPIC_API_KEY", key)
+                out("Claude açarı saxlanıldı. Model: claude-opus-5-5 (dəyişmək üçün .env → AI_MODEL).")
 
     try:
         for chat in chats:

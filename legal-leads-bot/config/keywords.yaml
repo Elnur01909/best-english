@@ -200,6 +200,15 @@ categories:
     - legal specialist
     - legal assistant
     - legal associate
+    - legal officer
+    - legal analyst
+    - contract specialist
+    - kiçik hüquqşünas
+    - hüquqşünaslar
+    - hüquq üzrə mütəxəssis
+    - hüquq şöbəsinin
+    - vəkil
+    - адвокат
     - hüquqşünas
     - hüquq məsləhətçisi
     - hüquq şöbəsi
@@ -209,12 +218,6 @@ categories:
     - komplayens
     - юрист
     - юрисконсульт
-    - vacancy
-    - vakansiya
-    - hiring
-    - we are looking for
-    - job opening
-    - job opportunity
 
   # Beynəlxalq təşkilatların hüquqi ekspert / konsultant tenderləri
   tender:

@@ -1,108 +1,119 @@
 # Legal Leads Bot — Telegram
 
-Azərbaycanda **ingilis dilində hüquqi xidmətə ehtiyacı olan şirkət və şəxsləri**, həmçinin **hüquqşünas vakansiyalarını** və **beynəlxalq təşkilatların hüquqi konsultant tenderlərini** izləyib sizə Telegram-a göndərən bot.
+Azərbaycanda **ingilis dilində hüquqi xidmətə ehtiyacı olan şirkət və şəxsləri**, **hüquqşünas vakansiyalarını** və **hüquqi konsultant tenderlərini** izləyib sizə Telegram-a göndərən bot.
 
-Bot `reports/Azərbaycanda hüquqi yardım potensial müştərilər.md` araşdırmasındakı planı avtomatlaşdırır: lidlər hansı kanallardan gəlirdisə, bot həmin kanalları müntəzəm yoxlayır.
+## Nə edir
 
-## Nə göndərir
+1. **Oxuyur:** Google News (6 sorğu), Trend və AzerNews lentləri, Expat.com forumu, iş saytları (HelloJob, Smartjob, Busy, Boss, hh.az), UNDP və ReliefWeb, sizin əlavə etdiyiniz Telegram kanalları.
+2. **Süzür:** açar sözlər, mənbəyə uyğun kateqoriyalar və eyni xəbərin təkrarlarının atılması.
+3. **Qiymətləndirir (istəyə bağlı):** Claude hər lidə 1–10 bal verir, Azərbaycanca xülasə yazır və lazım olan hüquqi xidməti göstərir. Aşağı ballı lidlər gəlmir.
+4. **Çatdırır:** ani bildiriş və ya hər səhər bir xülasə. Hər lidin altında düymələr: ⭐ Maraqlıdır · 📞 Əlaqə saxladım · ❌ Uyğun deyil · ✍️ Məktub hazırla.
 
-| Kateqoriya | Nümunə | Mənbə |
-|---|---|---|
-| 🏢 Şirkət lidi | "UK firm opens Baku office", AFEZ-in yeni rezidenti, franşiza açılışı | Google News (6 sorğu) |
-| 🧑‍💼 Fərdi sorğu | "Need an English speaking lawyer in Baku for residence permit" | Reddit, TripAdvisor, Expat.com |
-| 💼 İş elanı | Legal Counsel, Compliance Manager — Bakı | boss.az, hh.az, jobsearch.az |
-| 📑 Tender | "National Legal Consultant" — UNICEF/UNDP | ReliefWeb API, UNDP |
-| ⚖️ Mübahisə | ICSID işi, lisenziya ləğvi, arbitraj | Google News |
-
-Mesaj nümunəsi:
-
-```
-🏢 Şirkət lidi · Google News — Bakıda yeni ofis / filial / törəmə
-UK oilfield firm Vulcan opens Baku office and extends Azerbaijan contract
-World Oil · Wed, 08 Jul 2026
-Açar sözlər: opens Baku office, new office
-Linki aç
-```
-
-Bot ilk dəfə işə düşəndə mövcud xəbərləri **göndərmir**, sadəcə yadda saxlayır. Sonrakı hər yoxlamada yalnız **yeni** elementlər gəlir. Eyni xəbər iki dəfə gəlmir.
+Bot ilk dəfə oxuduğu mənbədən köhnə elementləri **göndərmir**, yalnız yadda saxlayır. Sonra yalnız yeniləri gəlir.
 
 ## Quraşdırma
 
-**Windows (ən asan yol):**
+**Windows:**
 
-1. Python quraşdırın: https://www.python.org/downloads. Quraşdırarkən **"Add Python to PATH"** qutusunu işarələyin.
-2. Telegram-da [@BotFather](https://t.me/BotFather) → `/newbot` → ad və sonu `bot` ilə bitən istifadəçi adı verin. Verdiyi **tokeni** kopyalayın, heç kimə göstərməyin.
-3. `legal-leads-bot` qovluğunda **setup.bat** faylına iki dəfə basın. O, hər şeyi quraşdırır, tokeni soruşur və yoxlayır.
-4. Pəncərə deyəndə Telegram-da botunuza `/start` yazın. Çat ID-niz avtomatik tapılır və test mesajı gəlir.
-5. **start.bat** faylına iki dəfə basın — bot işləyir. Pəncərəni bağlamayın.
-
-Mənbələri yoxlamaq üçün **check.bat**.
+1. Python 3.10+ quraşdırın: https://www.python.org/downloads. **"Add Python to PATH"** qutusunu işarələyin.
+2. Telegram-da [@BotFather](https://t.me/BotFather) → `/newbot` → token alın.
+3. **setup.bat** — asılılıqları quraşdırır, tokeni soruşur, `/start` gözləyir, istəsəniz Claude açarını soruşur.
+4. **start.bat** — botu işə salır.
+5. **autostart.bat** — kompüter açılanda bot özü işə düşsün (ləğv: autostart-remove.bat).
 
 **Mac / Linux:**
 
 ```bash
-cd legal-leads-bot
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python -m leadsbot setup        # token + /start + test mesajı
-python -m leadsbot serve        # botu işə salır
+python -m leadsbot setup      # token, /start, Claude açarı
+python -m leadsbot serve      # botu işə salır
 ```
 
-Token və ya çatı dəyişmək üçün: `python -m leadsbot setup --force`.
+Ayarları dəyişmək: `python -m leadsbot setup --force`.
 
-## İşə salmaq: 3 variant
+## Claude süni intellekt filtri
 
-**A. Kompüterinizdə və ya VPS-də (tövsiyə olunur).** Windows-da `start.bat`, digərlərində aşağıdakı əmr. Bot həm intervalla yoxlayır, həm də Telegram əmrlərinə cavab verir:
+Claude olmadan bot açar sözlərlə işləyir, amma çox səs-küy gəlir. Claude ilə hər lid qiymətləndirilir.
 
-```bash
-python -m leadsbot serve
-```
+| Model (`AI_MODEL`) | Təxmini xərc | Qeyd |
+|---|---|---|
+| `claude-opus-5-5` | ~20 $/ay | Defolt, ən dəqiq |
+| `claude-haiku-5-5` | <1 $/ay | Çox ucuz; keyfiyyəti sınayın |
 
-**B. Docker ilə (VPS üçün, avtomatik yenidən başlayır):**
+Xərc gündə ~150 uyğun lid üçün təxminidir. Açar: https://platform.claude.com → API Keys (claude.ai abunəliyindən ayrıdır). Opus/Sonnet modellərində Claude bir sorğunu rədd etsə, server özü uyğun ehtiyat modelə keçir (`fallbacks: "default"`).
 
-```bash
-docker compose up -d --build
-docker compose logs -f
-```
-
-**C. Pulsuz, serversiz: GitHub Actions.** Repoda `.github/workflows/legal-leads-bot.yml` hazırdır, hər 30 dəqiqədən bir `fetch` işə salır. GitHub-da repo → Settings → Secrets and variables → Actions → `TELEGRAM_BOT_TOKEN` və `TELEGRAM_CHAT_ID` əlavə edin. Bu rejimdə bot xəbər göndərir, amma əmrlərə (`/run`, `/last`) cavab vermir. GitHub-un cron-u bəzən 5–15 dəqiqə gecikir.
+"❌ Uyğun deyil" düyməsi ilə işarələdiyiniz son lidlər Claude-a nümunə kimi verilir: oxşarlarına aşağı bal qoyur.
 
 ## Telegram əmrləri
 
 | Əmr | Nə edir |
 |---|---|
-| `/run` | mənbələri indi yoxla |
-| `/check` | hər mənbəni test et, bazaya yazmır |
-| `/sources` | mənbələr və son status |
-| `/mute <id>` · `/unmute <id>` | mənbəni söndür / yandır |
-| `/addkw <söz>` · `/delkw <söz>` | öz açar sözünüzü əlavə edin, məs. `/addkw golden visa` |
-| `/keywords` | əlavə açar sözlər |
-| `/last 10` | son 10 uyğun element |
-| `/stats` | statistika |
-| `/stop` · `/start` | bildirişləri dayandır / davam et |
-| `/reload` | konfiqurasiya fayllarını yenidən oxu |
+| `/last 20` | son uyğun lidlər |
+| `/l123` | lid kartı və düymələr |
+| `/pipeline` | "Maraqlıdır" və "Əlaqə saxladım" lidləri |
+| `/draft 123` | ingiliscə məktub layihəsi (Claude və ya şablon) |
+| `/addtg @kanal job` | ictimai Telegram kanalı əlavə et (`job`, `individual`, `company`, `tender`) |
+| `/deltg @kanal` | kanalı sil |
+| `/digest 09:00` · `/digest off` · `/digest now` | səhər xülasəsi |
+| `/minscore 6` | minimum Claude balı |
+| `/ai` | Claude statusu |
+| `/run` · `/check` · `/sources` | yoxla · test et · mənbələr |
+| `/mute id` · `/unmute id` | mənbəni söndür / yandır |
+| `/addkw söz` · `/delkw söz` · `/keywords` | əlavə açar sözlər |
+| `/stats` · `/stop` · `/start` · `/ping` | statistika · bildirişlər |
 
-Bot yalnız `.env`-dəki çat ID-lərinə cavab verir, başqaları istifadə edə bilməz.
+Bot yalnız `.env`-dəki çat ID-lərinə cavab verir.
+
+### Telegram kanalları necə əlavə olunur
+
+Azərbaycanda iş elanları çox vaxt Telegram kanallarında paylaşılır. HelloJob, Smartjob, Work.az kimi saytların hər vakansiya səhifəsində "Telegram kanalımız" linki var. O linki kopyalayıb bota göndərin:
+
+```
+/addtg https://t.me/kanal_adi job
+```
+
+Bot kanalı dərhal yoxlayır. Yalnız ictimai kanallar işləyir.
+
+## 24 saat işləmə
+
+| Variant | Çətinlik | Düymələr işləyir |
+|---|---|---|
+| Windows + autostart.bat | asan | bəli, kompüter açıq olanda |
+| Linux server: `bash deploy/install-linux.sh` | orta | bəli, həmişə |
+| Docker: `docker compose up -d` | orta | bəli |
+| GitHub Actions (hər 30 dəq) | asan | xeyr, yalnız bildiriş |
+
+**Pulsuz server:** Oracle Cloud "Always Free" Linux VM. Qeydiyyatdan sonra serverdə:
+
+```bash
+git clone <repo> && cd <repo>/legal-leads-bot
+bash deploy/install-linux.sh
+```
+
+Skript virtual mühiti qurur, setup-ı işlədir və botu `systemd` xidməti kimi qeydiyyatdan keçirir: server yenidən başlasa, bot da başlayır.
+
+Botun iki nüsxəsi eyni vaxtda işləyə bilməz: ikinci nüsxə avtomatik dayanır.
 
 ## Fərdiləşdirmə
 
-- **Mənbələr:** `config/sources.yaml`. Yeni Google News sorğusu əlavə etmək üçün mövcud `gnews_*` blokunu kopyalayıb `id` və `query` dəyişin. İstənilən RSS lenti `type: rss` ilə əlavə olunur.
-- **Açar sözlər:** `config/keywords.yaml`. `geo` — Azərbaycanla bağlılıq şərti, `categories` — nə axtarılır, `exclude` — səs-küy (futbol, hava və s.).
-- **İnterval:** `.env` → `FETCH_INTERVAL_MIN=30`. Bir dövrədə ən çox `MAX_PER_CYCLE=15` mesaj; artığı növbəyə düşür.
+- **Mənbələr:** `config/sources.yaml`. `categories` mənbədə hansı açar söz növlərinin sayıldığını təyin edir (məs. iş saytında yalnız `job`). `disable_after: "YYYY-MM-DD"` mənbəni həmin tarixdən sonra söndürür.
+- **Açar sözlər:** `config/keywords.yaml`.
+- **Ayarlar:** `.env` (bax `.env.example`).
 
 ## Bilinən məhdudiyyətlər
 
-- **TripAdvisor, Expat.com, hh.az** botları bloklaya bilər (HTTP 403). `/check` göstərəcək. İşləməyən mənbəni `/mute` edin və o forumu əl ilə izləyin.
-- **Reddit** data-mərkəz IP-lərini (VPS, GitHub Actions) bəzən 429 ilə bloklayır. Ev kompüterindən adətən işləyir. `.env`-də `USER_AGENT`-i öz Reddit adınızla yazın.
-- **jobsearch.az** JavaScript ilə yüklənə bilər, ona görə defolt söndürülüb. `python -m leadsbot check --only jobsearch_az_legal` ilə sınayın.
-- **LinkedIn və Facebook qrupları** daxil edilməyib: onların şərtləri avtomatik oxumağı qadağan edir. Onları əl ilə izləyin.
-- **UNGM və EBRD ECEPP** portallarında vendor kimi qeydiyyatdan keçib e-poçt xəbərdarlığı qurmaq botdan daha etibarlıdır.
+- **Reddit** RSS lentlərini 13.11.2026-da bağlayır. Bot Reddit mənbələrini 12.11.2026-dan sonra özü söndürür.
+- **TripAdvisor** botları bloklayır: söndürülüb, forumu əl ilə izləyin.
+- **❔ işarəli mənbələr** (Trend, AzerNews, iş saytları, ReliefWeb RSS) real şəbəkədə hələ sınanmayıb: `check.bat` ilə yoxlayın, işləməyəni `/mute` edin.
+- **ReliefWeb API** təsdiqlənmiş tətbiq adı tələb edir. **UNGM, EBRD, ADB** açıq lent vermir: onların e-poçt xəbərdarlıqlarına abunə olun.
+- **LinkedIn və Facebook** daxil edilməyib, şərtləri avtomatik oxumağı qadağan edir.
 
 ## Etik qaydalar
 
-- Bot yalnız açıq (public) məlumatı oxuyur və yalnız **sizə** mesaj göndərir. Heç kimə avtomatik yazmır.
-- Fərdlərə yalnız onların yazdığı platformada, açıq və faydalı cavabla yanaşın. Reklam spamı platforma qaydalarını və Vəkillər Kollegiyasının reklam qaydalarını poza bilər.
-- Mübahisə/arbitraj lidlərinə yanaşmazdan əvvəl maraqlar toqquşmasını yoxlayın.
+- Bot yalnız açıq məlumatı oxuyur və yalnız **sizə** yazır. Məktub layihələrini siz yoxlayıb özünüz göndərirsiniz.
+- Fərdlərə yalnız onların yazdığı platformada, faydalı cavabla yanaşın. Vəkillər Kollegiyasının reklam qaydalarına riayət edin.
+- Mübahisə və arbitraj lidlərində əvvəlcə maraqlar toqquşmasını yoxlayın.
 
 ## Testlər
 
@@ -111,12 +122,4 @@ pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-## Struktur
-
-```
-legal-leads-bot/
-  leadsbot/        kod: mənbələr, filtr, baza (SQLite), Telegram, əmrlər
-  config/          sources.yaml, keywords.yaml
-  data/            leads.sqlite (avtomatik yaranır, git-ə düşmür)
-  tests/           testlər + nümunə lentlər
-```
+Xətalar `data/leadsbot.log` faylına yazılır.
