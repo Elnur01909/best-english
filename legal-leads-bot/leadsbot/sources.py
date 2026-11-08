@@ -18,6 +18,12 @@ GNEWS_LOCALES = {
     "ru": ("ru", "RU", "RU:ru"),
 }
 RELIEFWEB_URL = "https://api.reliefweb.int/v2/jobs"
+# forum siyahılarında mövzu linki olmayan köməkçi linklər ("Last post 6 years ago by ...", "3 replies", "Page 2")
+JUNK_ANCHOR = re.compile(
+    r"^(last post\b|latest reply\b|reply\b|replies\b|read more\b|more\b|ətraflı\b|daha çox\b|son (mesaj|cavab)\b|"
+    r"page\s*\d+$|\d+\s*(replies|views|cavab|baxış)?$)",
+    re.I,
+)
 MIN_HOST_GAP = 3.0  # eyni sayta ardıcıl sorğular arasında saniyə (Reddit 429 verməsin)
 MAX_RETRY_AFTER = 30
 _LAST_HIT: dict[str, float] = {}
@@ -97,6 +103,8 @@ def parse_html_links(html: str, src: Source, base_url: str | None = None) -> lis
             continue
         key = href.split("#", 1)[0]
         title = a.get_text(" ", strip=True)
+        if title and JUNK_ANCHOR.match(title):
+            continue
         container = a.find_parent(["li", "tr", "article", "div"])
         summary = container.get_text(" ", strip=True)[:600] if container else ""
         existing = found.get(key)

@@ -143,13 +143,14 @@ sources:
 
   # ───────────── TENDERLƏR / KONSULTANT ÇAĞIRIŞLARI ─────────────
   - id: reliefweb_jobs_az
-    name: "ReliefWeb — Azərbaycan üzrə iş/konsultant elanları (RSS)"
-    type: rss
-    url: "https://reliefweb.int/jobs/rss.xml?search=Azerbaijan"
+    name: "ReliefWeb — Azərbaycan səhifəsindəki iş/konsultant elanları"
+    type: html_links
+    url: "https://reliefweb.int/country/aze"
+    link_pattern: "/job/\\d+"
     category: tender
     categories: [tender, job]
-    require_geo: true
-    note: "❔ /check ilə yoxlayın."
+    require_geo: false
+    note: "❔ Əvvəlki RSS 0 element verdi; ölkə səhifəsinə keçdik. /check ilə yoxlayın."
 
   - id: reliefweb_api_az
     name: "ReliefWeb API v2 — Azərbaycan iş elanları"
@@ -174,12 +175,13 @@ sources:
   - id: boss_az_legal
     name: "Boss.az — hüquqşünas vakansiyaları"
     type: html_links
-    url: "https://boss.az/vacancies?search%5Bkeyword%5D=h%C3%BCquq"
+    url: "https://boss.az/vacancies"
     link_pattern: "/vacancies/\\d+"
     category: job
     categories: [job]
     require_geo: false
-    note: "❔ /sources-da statusa baxın."
+    enabled: false
+    note: "⛔ Axtarış ünvanı 404 verdi (08.11.2026). Saytda axtarış edib ünvanı buraya yazın, sonra /unmute boss_az_legal."
 
   - id: hh_az_legal
     name: "hh.az — legal counsel / lawyer axtarışı"
@@ -189,7 +191,8 @@ sources:
     category: job
     categories: [job]
     require_geo: false
-    note: "❔ /sources-da statusa baxın."
+    enabled: false
+    note: "⛔ Qoşulmadı (ConnectionError, 08.11.2026)."
 
   - id: hellojob_az
     name: "HelloJob.az — son vakansiyalar (hüquq filtri)"
@@ -202,14 +205,14 @@ sources:
     note: "❔ Hüquqşünas elanları burada çox olur. /check ilə yoxlayın."
 
   - id: smartjob_az
-    name: "Smartjob.az — son vakansiyalar (hüquq filtri)"
+    name: "Smartjob.az — vakansiyalar (hüquq filtri)"
     type: html_links
-    url: "https://smartjob.az/"
+    url: "https://smartjob.az/vacancies"
     link_pattern: "/vacancy/\\d+-"
     category: job
     categories: [job]
     require_geo: false
-    note: "❔ /check ilə yoxlayın."
+    note: "❔ Ana səhifə 0 element verdi; siyahı səhifəsinə keçdik. 0 qalarsa /mute smartjob_az."
 
   - id: busy_az
     name: "Busy.az — son vakansiyalar (hüquq filtri)"
@@ -220,6 +223,16 @@ sources:
     categories: [job]
     require_geo: false
     note: "❔ /check ilə yoxlayın."
+
+  - id: glorri_jobs
+    name: "Glorri — vakansiyalar (hüquq filtri)"
+    type: html_links
+    url: "https://jobs.glorri.az/vacancies"
+    link_pattern: "/vacancies/[a-z0-9-]+/[a-z0-9-]+-\\d+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "❔ Bir çox şirkətin hüquqşünas elanları buradadır (Legal Counsel, Legal Advisor). /check ilə yoxlayın."
 
   - id: jobsearch_az_legal
     name: "JobSearch.az — hüquq vakansiyaları"

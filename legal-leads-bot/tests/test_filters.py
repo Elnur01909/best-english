@@ -53,3 +53,29 @@ def test_extra_keywords(profile):
 def test_score_counts_hits_and_geo(matcher):
     m = matcher.evaluate("Lawyer in Baku for work permit", "individual", False)
     assert m.score == len(m.hits) + 1
+
+
+# Real səs-küy nümunələri (istifadəçinin 08.11.2026 check.bat nəticəsindən)
+import pytest
+
+
+@pytest.mark.parametrize("text,cat,cats", [
+    ("Azerbaijan's Central Bank announces tender for XSOAR system support", "company", ["company", "dispute", "tender"]),
+    ("SOFAZ opens tender for personnel's voluntary medical insurance services", "company", ["company", "dispute", "tender"]),
+    ("Azerbaijan's Accounts Chamber announces tender for software licences", "company", ["company", "dispute", "tender"]),
+    ("Debt in Europe & Central Asia climbs fast, but falls in Azerbaijan and Turkmenistan", "individual", ["individual"]),
+    ("Who Were Most Frequently Deported from Georgia in 2026", "individual", ["individual"]),
+])
+def test_single_weak_word_is_not_a_lead(matcher, text, cat, cats):
+    assert matcher.evaluate(text, cat, False, cats) is None
+
+
+@pytest.mark.parametrize("text,cat,cats,expected", [
+    ("Ministry of Justice announces tender for legal services in Baku", "company", ["company", "dispute", "tender"], "tender"),
+    ("UNDP seeks a national legal consultant for Azerbaijan", "tender", ["tender"], "tender"),
+    ("Need an English speaking lawyer in Baku", "individual", ["individual"], "individual"),
+    ("Got fined and deported, what are my options in Azerbaijan?", "individual", ["individual"], "individual"),
+])
+def test_strong_or_two_weak_words_still_match(matcher, text, cat, cats, expected):
+    m = matcher.evaluate(text, cat, False, cats)
+    assert m and m.category == expected

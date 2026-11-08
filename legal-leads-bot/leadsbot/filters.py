@@ -36,6 +36,7 @@ class KeywordProfile:
     geo: list[str] = field(default_factory=list)
     categories: dict[str, list[str]] = field(default_factory=dict)
     exclude: list[str] = field(default_factory=list)
+    weak: list[str] = field(default_factory=list)
 
     @classmethod
     def from_dict(cls, d: dict) -> "KeywordProfile":
@@ -44,6 +45,7 @@ class KeywordProfile:
             geo=list(d.get("geo") or []),
             categories={str(k): list(v or []) for k, v in cats.items()},
             exclude=list(d.get("exclude") or []),
+            weak=list(d.get("weak") or []),
         )
 
 
@@ -55,6 +57,7 @@ class Matcher:
         self.cats = {c: compile_words(ws) for c, ws in profile.categories.items()}
         self.exclude = compile_words(profile.exclude)
         self.extra = compile_words(extra_keywords)
+        self.weak = {str(w).strip().lower() for w in profile.weak if str(w).strip()}
 
     @staticmethod
     def _hits(compiled: Compiled, text: str) -> list[str]:
@@ -96,6 +99,10 @@ class Matcher:
         for w in extra_hits:
             if w not in hits:
                 hits.append(w)
+
+        strong = [h for h in hits if h.lower() not in self.weak]
+        if not strong and len(hits) < 2:
+            return None  # yalnız bir ümumi söz (məs. 'tender', 'debt') — lid deyil
 
         score = len(hits) + (1 if geo_hits else 0)
         return MatchResult(category=category, score=score, hits=hits, geo_hits=geo_hits)

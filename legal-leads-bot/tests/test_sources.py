@@ -141,3 +141,15 @@ def test_franchise_headlines_now_match(matcher):
                   "H&M opened its first store in Azerbaijan at Ganjlik Mall"):
         m = matcher.evaluate(title, "company", True)
         assert m and m.category == "company", title
+
+
+def test_forum_helper_links_are_skipped():
+    html = """<ul>
+      <li><a href="/en/forum/asia/azerbaijan/1117723-business-setting-up.html">Business setting up and Family residency</a>
+          <a href="/en/forum/asia/azerbaijan/1117723-business-setting-up-2.html">Last post 6 years ago by Someone</a>
+          <a href="/en/forum/asia/azerbaijan/1117724-x.html">3 replies</a></li>
+    </ul>"""
+    s = Source(id="e", name="e", type="html_links", url="https://www.expat.com/en/forum/asia/azerbaijan/",
+               link_pattern=r"/en/forum/asia/azerbaijan/\d+-", category="individual")
+    items = parse_html_links(html, s)
+    assert [i.title for i in items] == ["Business setting up and Family residency"]

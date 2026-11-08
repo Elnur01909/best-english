@@ -4,6 +4,7 @@
 # geo:        "Azərbaycanla bağlıdır" şərti. require_geo: true olan mənbələrdə ən azı biri lazımdır.
 # categories: mesajın kateqoriyası və filtr. Ən azı bir kateqoriya sözü (və ya /addkw ilə əlavə edilən söz) lazımdır.
 # exclude:    bunlardan biri varsa, element atılır (səs-küyü azaltmaq üçün).
+# weak:       ümumi sözlər. Tək başına lid sayılmır: ya güclü söz də olmalıdır, ya da ən azı iki söz.
 
 geo:
   - Azerbaijan
@@ -237,6 +238,15 @@ categories:
     - international consultant
     - legal expert
     - legal consultant
+    - legal services
+    - legal advisory
+    - legal adviser
+    - legal advisor
+    - national legal
+    - hüquqi xidmət
+    - hüquqi xidmətlər
+    - hüquq xidmətləri
+    - юридических услуг
     - legal specialist
     - legal officer
     - legal analyst
@@ -294,3 +304,83 @@ exclude:
   - Qarabag FK
   - Neftchi
   - match report
+
+weak:
+  # fərdi: tək başına çox ümumidir (statistika, siyasət xəbərləri)
+  - debt
+  - fine
+  - fined
+  - penalty
+  - police
+  - visa
+  - e-visa
+  - evisa
+  - marriage
+  - marry
+  - divorce
+  - custody
+  - inheritance
+  - scam
+  - scammed
+  - fraud
+  - customs
+  - LLC
+  - bank account
+  - unpaid
+  - didn't pay
+  - owes me
+  - detained
+  - arrested
+  - deport
+  - deported
+  - deportation
+  - notary
+  - tax resident
+  - tax residency
+  - buy property
+  - buying property
+  - buy an apartment
+  - real estate purchase
+  - sole proprietor
+  # tender: hüquqi kontekst olmadan hər IT/sığorta satınalmasını tutur
+  - tender
+  - RFP
+  - RFQ
+  - EOI
+  - ToR
+  - terms of reference
+  - consultant
+  - consultancy
+  - individual contractor
+  - individual consultant
+  - national consultant
+  - international consultant
+  - procurement notice
+  - call for proposals
+  - request for proposals
+  - request for proposal
+  - expression of interest
+  - expressions of interest
+  - gap analysis
+  - legislation
+  - legal framework
+  # şirkət: dövlətlərarası görüş xəbərlərində çox olur
+  - MoU
+  - to invest
+  - will invest
+  - million investment
+  - signed an agreement
+  - signs agreement
+  - acquires
+  - acquisition of
+  - stake in
+  - resident of the
+  # mübahisə
+  - BIT
+  - tribunal
+  - sanctioned
+  - lawsuit
+  - court ruling
+  - High Court
+  - claim against
+  - dispute with
