@@ -41,3 +41,12 @@ def fixture_text(name: str) -> str:
 
 def fixture_bytes(name: str) -> bytes:
     return (FIXTURES / name).read_bytes()
+
+
+@pytest.fixture(autouse=True)
+def _fast_network(monkeypatch):
+    """Testlərdə host fasiləsi və 429 gözləməsi olmasın."""
+    from leadsbot import sources as srcmod
+    monkeypatch.setattr(srcmod, "MIN_HOST_GAP", 0.0)
+    monkeypatch.setattr(srcmod, "_LAST_HIT", {})
+    monkeypatch.setattr(srcmod.time, "sleep", lambda s: None)

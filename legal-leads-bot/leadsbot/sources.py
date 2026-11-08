@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import hashlib
+import os
 import re
+import time
 from urllib.parse import quote_plus, urljoin, urlparse
 
 import feedparser
@@ -15,7 +17,10 @@ GNEWS_LOCALES = {
     "az": ("az", "AZ", "AZ:az"),
     "ru": ("ru", "RU", "RU:ru"),
 }
-RELIEFWEB_URL = "https://api.reliefweb.int/v1/jobs?appname=legal-leads-bot"
+RELIEFWEB_URL = "https://api.reliefweb.int/v2/jobs"
+MIN_HOST_GAP = 3.0  # eyni sayta ardıcıl sorğular arasında saniyə (Reddit 429 verməsin)
+MAX_RETRY_AFTER = 30
+_LAST_HIT: dict[str, float] = {}
 
 
 class FetchError(Exception):
@@ -46,7 +51,8 @@ def build_url(src: Source) -> str:
         hl, gl, ceid = GNEWS_LOCALES.get(src.lang, GNEWS_LOCALES["en"])
         return f"https://news.google.com/rss/search?q={quote_plus(src.query)}&hl={hl}&gl={gl}&ceid={ceid}"
     if src.type == "reliefweb_jobs":
-        return RELIEFWEB_URL
+        appname = os.getenv("RELIEFWEB_APPNAME", "").strip() or "legal-leads-bot"
+        return f"{RELIEFWEB_URL}?appname={quote_plus(appname)}"
     return src.url
 
 
@@ -132,6 +138,38 @@ def _session(user_agent: str) -> requests.Session:
     return s
 
 
+def _polite_wait(host: str) -> None:
+    last = _LAST_HIT.get(host)
+    if last is not None:
+        gap = time.monotonic() - last
+        if gap < MIN_HOST_GAP:
+            time.sleep(MIN_HOST_GAP - gap)
+    _LAST_HIT[host] = time.monotonic()
+
+
+def _retry_after(resp: requests.Response) -> int:
+    raw = (resp.headers or {}).get("Retry-After", "")
+    try:
+        return max(1, min(MAX_RETRY_AFTER, int(float(raw))))
+    except (TypeError, ValueError):
+        return 10
+
+
+def _request(s: requests.Session, method: str, url: str, timeout: int, **kw) -> requests.Response:
+    """Eyni hosta fasilə ilə sorğu; 429 gəlsə Retry-After qədər gözləyib bir dəfə təkrarlayır."""
+    host = _domain(url)
+    for attempt in range(2):
+        _polite_wait(host)
+        r = s.request(method, url, timeout=timeout, **kw)
+        if r.status_code == 429 and attempt == 0:
+            time.sleep(_retry_after(r))
+            continue
+        r.raise_for_status()
+        return r
+    r.raise_for_status()
+    return r
+
+
 def fetch_source(src: Source, user_agent: str, timeout: int = 25, session: requests.Session | None = None) -> list[Item]:
     """Mənbəni şəbəkədən oxuyur. Xəta olduqda FetchError atır."""
     s = session or _session(user_agent)
@@ -144,12 +182,10 @@ def fetch_source(src: Source, user_agent: str, timeout: int = 25, session: reque
                 "sort": ["date.created:desc"],
                 "limit": min(src.max_items, 100),
             }
-            r = s.post(url, json=payload, timeout=timeout)
-            r.raise_for_status()
+            r = _request(s, "POST", url, timeout, json=payload)
             return parse_reliefweb(r.json(), src)
 
-        r = s.get(url, timeout=timeout)
-        r.raise_for_status()
+        r = _request(s, "GET", url, timeout)
         if src.type in ("rss", "gnews"):
             return parse_rss(r.content, src)
         if src.type == "html_links":

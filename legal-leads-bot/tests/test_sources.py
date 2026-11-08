@@ -85,15 +85,59 @@ def test_fetch_errors_are_short():
 
     s = Source(id="r", name="r", type="rss", url="https://www.reddit.com/r/azerbaijan/new.rss")
     sess = MagicMock()
-    sess.get.side_effect = requests.exceptions.ProxyError("Tunnel connection failed: 403 Forbidden " * 20)
+    sess.request.side_effect = requests.exceptions.ProxyError("Tunnel connection failed: 403 Forbidden " * 20)
     with pytest.raises(FetchError) as ei:
         fetch_source(s, "ua", 5, session=sess)
     assert str(ei.value) == "şəbəkə xətası: ProxyError (reddit.com)"
 
     resp = MagicMock(status_code=429)
     err = requests.HTTPError(response=resp)
-    sess.get.side_effect = None
-    sess.get.return_value.raise_for_status.side_effect = err
+    sess.request.side_effect = None
+    sess.request.return_value.status_code = 500
+    sess.request.return_value.raise_for_status.side_effect = err
     with pytest.raises(FetchError) as ei:
         fetch_source(s, "ua", 5, session=sess)
     assert str(ei.value) == "HTTP 429 (reddit.com)"
+
+
+def test_429_is_retried_once_after_waiting(monkeypatch):
+    from unittest.mock import MagicMock
+    from leadsbot import sources as srcmod
+
+    waits = []
+    monkeypatch.setattr(srcmod.time, "sleep", lambda s: waits.append(s))
+    limited = MagicMock(status_code=429, headers={"Retry-After": "7"})
+    ok = MagicMock(status_code=200, content=fixture_bytes("reddit.xml"))
+    sess = MagicMock()
+    sess.request.side_effect = [limited, ok]
+    s = Source(id="r", name="r", type="rss", url="https://www.reddit.com/search.rss?q=x")
+    items = srcmod.fetch_source(s, "ua", 5, session=sess)
+    assert len(items) == 2 and sess.request.call_count == 2 and 7 in waits
+
+
+def test_429_twice_gives_short_error(monkeypatch):
+    import requests
+    from unittest.mock import MagicMock
+    from leadsbot import sources as srcmod
+
+    limited = MagicMock(status_code=429, headers={})
+    limited.raise_for_status.side_effect = requests.HTTPError(response=MagicMock(status_code=429))
+    sess = MagicMock()
+    sess.request.return_value = limited
+    s = Source(id="r", name="r", type="rss", url="https://www.reddit.com/search.rss?q=x")
+    with pytest.raises(FetchError) as ei:
+        srcmod.fetch_source(s, "ua", 5, session=sess)
+    assert str(ei.value) == "HTTP 429 (reddit.com)" and sess.request.call_count == 2
+
+
+def test_reliefweb_uses_v2_and_env_appname(monkeypatch):
+    monkeypatch.setenv("RELIEFWEB_APPNAME", "my approved app")
+    url = build_url(Source(id="rw", name="rw", type="reliefweb_jobs"))
+    assert url == "https://api.reliefweb.int/v2/jobs?appname=my+approved+app"
+
+
+def test_franchise_headlines_now_match(matcher):
+    for title in ("Popeyes opens in Baku with plans for 20 restaurants",
+                  "H&M opened its first store in Azerbaijan at Ganjlik Mall"):
+        m = matcher.evaluate(title, "company", True)
+        assert m and m.category == "company", title

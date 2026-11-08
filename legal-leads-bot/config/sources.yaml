@@ -87,7 +87,7 @@ sources:
     category: individual
     require_geo: false
     enabled: true
-    note: "⚠️ Reddit data-mərkəz IP-lərini bəzən 429 ilə bloklayır; USER_AGENT-i təsviri edin. Öz kompüterinizdən adətən işləyir."
+    note: "✅ Windows-da işləyir. Reddit bəzən 429 verir; bot gözləyib bir dəfə təkrarlayır."
 
   - id: reddit_search_lawyer
     name: "Reddit — bütün Reddit: Azerbaijan + lawyer/visa/permit"
@@ -105,8 +105,8 @@ sources:
     link_pattern: "ShowTopic-g293933-i9346-k\\d+"
     category: individual
     require_geo: false
-    enabled: true
-    note: "⚠️ TripAdvisor botları aqressiv bloklayır (403). Alınmasa, Google News + Reddit ilə kifayətlənin və forumu əl ilə izləyin."
+    enabled: false
+    note: "⛔ TripAdvisor botları bloklayır (HTTP 403, Windows-da yoxlanılıb). Forumu əl ilə izləyin: tripadvisor.com/ShowForum-g293933-i9346-Azerbaijan.html"
 
   - id: expat_az_forum
     name: "Expat.com — Azerbaijan forumu"
@@ -116,16 +116,25 @@ sources:
     category: individual
     require_geo: false
     enabled: true
-    note: "⚠️ Bot bloklaya bilər. 2026-da MYİ/biznes sualları buradan gəlirdi."
+    note: "✅ Windows-da işləyir (35 element). 2026-da MYİ/biznes sualları buradan gəlirdi."
 
   # ───────────── TENDERLƏR / KONSULTANT ÇAĞIRIŞLARI ─────────────
   - id: reliefweb_jobs_az
-    name: "ReliefWeb — Azərbaycan üzrə iş/konsultant elanları (BMT, QHT)"
+    name: "ReliefWeb — Azərbaycan üzrə iş/konsultant elanları (RSS)"
+    type: rss
+    url: "https://reliefweb.int/jobs/rss.xml?search=Azerbaijan"
+    category: tender
+    require_geo: true
+    enabled: true
+    note: "❔ ReliefWeb iş elanları RSS lenti (BMT, QHT). /check ilə yoxlayın."
+
+  - id: reliefweb_api_az
+    name: "ReliefWeb API v2 — Azərbaycan iş elanları"
     type: reliefweb_jobs
     category: tender
     require_geo: false
-    enabled: true
-    note: "✅ Açıq API. UN/QHT hüquqi konsultant çağırışlarının bir hissəsini tutur."
+    enabled: false
+    note: "❔ v1 API bağlanıb (HTTP 410). v2 təsdiqlənmiş appname istəyə bilər: reliefweb.int/help/api-ında müraciət edin, .env-də RELIEFWEB_APPNAME yazın, sonra enabled: true."
 
   - id: undp_notices
     name: "UNDP Procurement Notices — son elanlar"
