@@ -1,0 +1,271 @@
+# Açar sözlər. Uyğunluq böyük/kiçik hərfə həssas deyil, söz sərhədləri nəzərə alınır.
+# Hər element title + xülasə mətnində axtarılır.
+#
+# geo:        "Azərbaycanla bağlıdır" şərti. require_geo: true olan mənbələrdə ən azı biri lazımdır.
+# categories: mesajın kateqoriyası və filtr. Ən azı bir kateqoriya sözü (və ya /addkw ilə əlavə edilən söz) lazımdır.
+# exclude:    bunlardan biri varsa, element atılır (səs-küyü azaltmaq üçün).
+
+geo:
+  - Azerbaijan
+  - Azerbaijani
+  - Azerbaijan's
+  - Azərbaycan
+  - Azərbaycanda
+  - Baku
+  - Bakı
+  - Bakıda
+  - Baki
+  - Alat
+  - AFEZ
+  - Sumgayit
+  - Sumgait
+  - Sumqayıt
+  - Ganja
+  - Gəncə
+  - Nakhchivan
+  - Naxçıvan
+  - Karabakh
+  - Qarabağ
+  - Pirallahi
+  - Azerbaijani law
+  - Azerbaijan law
+
+categories:
+  # Ölkəyə yeni girən / genişlənən şirkətlər → MMC qeydiyyatı, əmək, icarə, lisenziya işi
+  company:
+    - opens office
+    - opened an office
+    - opens an office
+    - new office
+    - opens Baku office
+    - representative office
+    - rep office
+    - subsidiary
+    - branch in Azerbaijan
+    - branch office
+    - enters Azerbaijan
+    - entry into Azerbaijan
+    - entered the Azerbaijani market
+    - expands to Azerbaijan
+    - expands into Azerbaijan
+    - expansion into Azerbaijan
+    - launches in Azerbaijan
+    - joint venture
+    - memorandum of understanding
+    - MoU
+    - investment agreement
+    - signed an agreement
+    - signs agreement
+    - to invest
+    - will invest
+    - million investment
+    - Free Economic Zone
+    - economic zone resident
+    - industrial park resident
+    - resident of the
+    - franchise
+    - master franchise
+    - franchisee
+    - first store
+    - first restaurant
+    - first branch
+    - wins contract
+    - awarded contract
+    - awarded a contract
+    - won the tender
+    - acquires
+    - acquisition of
+    - acquired a stake
+    - stake in
+    - obtained a license
+    - obtained a licence
+    - received a license
+    - licensed by the Central Bank
+    - registered in Azerbaijan
+    - incorporated in Azerbaijan
+    - plant in Azerbaijan
+    - factory in Azerbaijan
+    - production in Azerbaijan
+    - hotel in Baku
+    - office in Baku
+
+  # Forumlarda / sosial şəbəkələrdə hüquqi kömək axtaran fərdlər
+  individual:
+    - lawyer
+    - lawyers
+    - attorney
+    - solicitor
+    - legal advice
+    - legal help
+    - legal assistance
+    - legal aid
+    - law firm
+    - notary
+    - residence permit
+    - residency permit
+    - temporary residence
+    - permanent residence
+    - TRP
+    - work permit
+    - work visa
+    - visa
+    - e-visa
+    - evisa
+    - overstay
+    - overstayed
+    - deport
+    - deported
+    - deportation
+    - entry ban
+    - banned from entering
+    - fine
+    - fined
+    - penalty
+    - registration at the place of stay
+    - company registration
+    - register a company
+    - register a business
+    - open a company
+    - set up a company
+    - setting up a business
+    - LLC
+    - sole proprietor
+    - bank account
+    - buy an apartment
+    - buying property
+    - buy property
+    - real estate purchase
+    - marriage
+    - marry
+    - divorce
+    - custody
+    - inheritance
+    - scam
+    - scammed
+    - fraud
+    - police
+    - arrested
+    - detained
+    - customs
+    - contract dispute
+    - unpaid
+    - didn't pay
+    - owes me
+    - debt
+    - tax residency
+    - tax resident
+
+  # İngilisdilli hüquqşünas / compliance vakansiyaları (Bakı)
+  job:
+    - legal counsel
+    - senior legal counsel
+    - in-house counsel
+    - legal advisor
+    - legal adviser
+    - legal manager
+    - head of legal
+    - legal director
+    - general counsel
+    - lawyer
+    - junior lawyer
+    - corporate lawyer
+    - compliance officer
+    - compliance manager
+    - compliance specialist
+    - contracts manager
+    - contract manager
+    - paralegal
+    - legal specialist
+    - legal assistant
+    - legal associate
+    - hüquqşünas
+    - hüquq məsləhətçisi
+    - hüquq şöbəsi
+    - hüquq üzrə
+    - baş hüquqşünas
+    - aparıcı hüquqşünas
+    - komplayens
+    - юрист
+    - юрисконсульт
+    - vacancy
+    - vakansiya
+    - hiring
+    - we are looking for
+    - job opening
+    - job opportunity
+
+  # Beynəlxalq təşkilatların hüquqi ekspert / konsultant tenderləri
+  tender:
+    - request for proposals
+    - request for proposal
+    - RFP
+    - RFQ
+    - call for proposals
+    - expression of interest
+    - expressions of interest
+    - EOI
+    - consultant
+    - consultancy
+    - individual contractor
+    - individual consultant
+    - national consultant
+    - international consultant
+    - legal expert
+    - legal consultant
+    - legal specialist
+    - legal officer
+    - legal analyst
+    - procurement notice
+    - tender
+    - terms of reference
+    - ToR
+    - gap analysis
+    - legislative review
+    - legal review
+    - legal drafting
+    - legal framework
+    - legislation
+    - rule of law
+    - access to justice
+    - legal aid
+
+  # Mübahisələr, arbitraj, icra — iri işlər və referral imkanları
+  dispute:
+    - arbitration
+    - arbitral
+    - ICSID
+    - ICC arbitration
+    - LCIA
+    - UNCITRAL
+    - investor-state
+    - BIT
+    - tribunal
+    - lawsuit
+    - court ruling
+    - High Court
+    - enforcement of
+    - award against
+    - claim against
+    - dispute with
+    - license revoked
+    - licence revoked
+    - revoked the license
+    - sanctioned
+    - fined by the Central Bank
+
+exclude:
+  - football
+  - soccer
+  - Formula 1
+  - Grand Prix
+  - Eurovision
+  - weather forecast
+  - horoscope
+  - wrestling
+  - judo
+  - chess
+  - volleyball
+  - basketball
+  - Qarabag FK
+  - Neftchi
+  - match report

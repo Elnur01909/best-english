@@ -1,0 +1,58 @@
+# Telegram lid botu — serversiz rejim: GitHub Actions hər 30 dəqiqədən bir `fetch` işə salır.
+# Lazım olan repo secret-ləri (Settings → Secrets and variables → Actions):
+#   TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+# Baza (görülmüş elementlər) actions/cache ilə saxlanır; cache silinsə bot sadəcə yeni başlanğıc nöqtəsi qoyur.
+name: legal-leads-bot
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: legal-leads-bot
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: legal-leads-bot
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: legal-leads-bot/requirements.txt
+
+      - name: Restore leads database
+        uses: actions/cache/restore@v4
+        with:
+          path: legal-leads-bot/data/leads.sqlite
+          key: leads-db-${{ github.run_id }}
+          restore-keys: |
+            leads-db-
+
+      - run: pip install -r requirements.txt
+
+      - name: Fetch and notify
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          USER_AGENT: "linux:legal-leads-bot:1.0 (GitHub Actions; RSS reader)"
+          MAX_PER_CYCLE: "15"
+        run: python -m leadsbot fetch
+
+      - name: Save leads database
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: legal-leads-bot/data/leads.sqlite
+          key: leads-db-${{ github.run_id }}

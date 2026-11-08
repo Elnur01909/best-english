@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<title>"Azerbaijan" opens office - Google News</title>
+<link>https://news.google.com/search?q=Azerbaijan</link>
+<item>
+<title>UK oilfield firm Vulcan opens Baku office and extends Azerbaijan contract - World Oil</title>
+<link>https://news.google.com/rss/articles/CBMiAAAA?oc=5</link>
+<guid isPermaLink="false">CBMiAAAA1</guid>
+<pubDate>Wed, 08 Jul 2026 10:00:00 GMT</pubDate>
+<description>&lt;a href="https://worldoil.com/x"&gt;Vulcan opens new Baku office&lt;/a&gt;&amp;nbsp;&amp;nbsp;World Oil</description>
+<source url="https://worldoil.com">World Oil</source>
+</item>
+<item>
+<title>Qarabag FK opens new training office in Baku - Sports Daily</title>
+<link>https://news.google.com/rss/articles/CBMiAAAA2?oc=5</link>
+<guid isPermaLink="false">CBMiAAAA2</guid>
+<pubDate>Wed, 08 Jul 2026 11:00:00 GMT</pubDate>
+<description>football club news</description>
+<source url="https://sports.example">Sports Daily</source>
+</item>
+<item>
+<title>Weather in Baku to be windy tomorrow - Local News</title>
+<link>https://news.google.com/rss/articles/CBMiAAAA3?oc=5</link>
+<guid isPermaLink="false">CBMiAAAA3</guid>
+<pubDate>Wed, 08 Jul 2026 12:00:00 GMT</pubDate>
+<description>windy</description>
+<source url="https://local.example">Local News</source>
+</item>
+<item>
+<title>Dutch AI firm signs memorandum of understanding with Azerbaijan ministry, hires first employee - Trend</title>
+<link>https://news.google.com/rss/articles/CBMiAAAA4?oc=5</link>
+<guid isPermaLink="false">CBMiAAAA4</guid>
+<pubDate>Thu, 29 Oct 2026 09:00:00 GMT</pubDate>
+<description>The company plans to open an office in Baku.</description>
+<source url="https://trend.az">Trend</source>
+</item>
+</channel>
+</rss>
