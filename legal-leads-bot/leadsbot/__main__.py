@@ -13,11 +13,22 @@ from .storage import Store
 from .telegram import TelegramClient, TelegramError
 
 
+LOG_FILE = ROOT / "data" / "leadsbot.log"
+
+
 def _logging(verbose: bool) -> None:
+    handlers: list[logging.Handler] = [logging.StreamHandler()]
+    try:  # xətaları fayla da yaz ki, pəncərə bağlansa belə səbəb görünsün
+        from logging.handlers import RotatingFileHandler
+        LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+        handlers.append(RotatingFileHandler(LOG_FILE, maxBytes=1_000_000, backupCount=2, encoding="utf-8"))
+    except OSError:
+        pass
     logging.basicConfig(
         level=logging.DEBUG if verbose else logging.INFO,
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
-        datefmt="%H:%M:%S",
+        datefmt="%Y-%m-%d %H:%M:%S",
+        handlers=handlers,
     )
     # urllib3 DEBUG logları sorğu URL-ini yazır; Telegram URL-ində token var — heç vaxt göstərmə
     logging.getLogger("urllib3").setLevel(logging.WARNING)
@@ -154,6 +165,10 @@ def main(argv: list[str] | None = None) -> int:
     except (KeyboardInterrupt, EOFError):
         print("\nDayandırıldı.")
         return 130
+    except Exception:
+        logging.getLogger("leadsbot").exception("gözlənilməz xəta")
+        print(f"\nGözlənilməz xəta. Ətraflı məlumat: {LOG_FILE}", file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":

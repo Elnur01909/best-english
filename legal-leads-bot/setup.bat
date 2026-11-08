@@ -1,5 +1,8 @@
 @echo off
-chcp 65001 >nul
+if /i not "%~1"=="--inner" (
+  cmd /k call "%~f0" --inner
+  exit /b
+)
 cd /d "%~dp0"
 title Legal Leads Bot - qurasdirma
 

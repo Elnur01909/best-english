@@ -64,7 +64,10 @@ class LeadsBot:
         while True:
             now = time.monotonic()
             if now >= next_cycle:
-                self.cycle(announce=False)
+                try:
+                    self.cycle(announce=False)
+                except Exception:
+                    log.exception("yoxlama dövrəsində xəta; növbəti dövrədə yenidən cəhd ediləcək")
                 next_cycle = time.monotonic() + interval
             wait = max(1, min(30, int(next_cycle - time.monotonic())))
             try:
