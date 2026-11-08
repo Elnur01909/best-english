@@ -6,6 +6,9 @@
 
 🔗 Bağlı qeydlər: [[Layihə-Xəritəsi]] · [[english]] · [[Qərarlar-Tarixçəsi]] · [[Bug-Jurnalı]]
 
+> **Əlavə layihə — Hüquqi lidlər botu (Telegram):** `legal-leads-bot/` qovluğu, branch `claude/legal-aid-azerbaijan-research-3roqlx`.
+> Davam etmək üçün: `legal-leads-bot/HANDOVER.md` faylını oxu. AZEN faylları ilə qarışdırma.
+
 ## Layihə haqqında
 İnteraktiv veb öyrənmə platforması. İstifadəçilər:
 - İstənilən CEFR səviyyəsindən (A1→C2) başlaya bilər, istənilən vaxt dəyişə bilər
