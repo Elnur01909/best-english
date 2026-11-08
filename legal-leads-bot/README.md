@@ -32,6 +32,18 @@ python -m leadsbot serve      # botu işə salır
 
 Ayarları dəyişmək: `python -m leadsbot setup --force`.
 
+## Yeniləmə: `/update`
+
+Yeni versiya çıxanda zip yükləmək lazım deyil. Telegram-da yazın:
+
+```
+/update
+```
+
+Bot GitHub-dan yalnız dəyişən faylları endirir, lazım olsa paketləri quraşdırır və özü yenidən başlayır. `.env`, `data/` və `.venv/` heç vaxt toxunulmur. `/version` cari versiyanı göstərir, `/restart` isə botu yenidən başladır. Bot işləmirsə, eyni işi **update.bat** görür.
+
+Kod `Elnur01909/best-english` reposunun `claude/legal-aid-azerbaijan-research-3roqlx` branch-ından gəlir. Branch dəyişsə, `.env` faylına `UPDATE_BRANCH=...` yazın. Bu branch-a yalnız push icazəsi olanlar kod əlavə edə bilər.
+
 ## Claude süni intellekt filtri
 
 Claude olmadan bot açar sözlərlə işləyir, amma çox səs-küy gəlir. Claude ilə hər lid qiymətləndirilir.
@@ -62,6 +74,7 @@ Xərc gündə ~150 uyğun lid üçün təxminidir. Açar: https://platform.claud
 | `/mute id` · `/unmute id` | mənbəni söndür / yandır |
 | `/addkw söz` · `/delkw söz` · `/keywords` | əlavə açar sözlər |
 | `/stats` · `/stop` · `/start` · `/ping` | statistika · bildirişlər |
+| `/update` · `/version` · `/restart` | yeniləmə · versiya · yenidən başlatma |
 
 Bot yalnız `.env`-dəki çat ID-lərinə cavab verir.
 
