@@ -3,7 +3,7 @@
 > **Yeni sessiyanı belə başladın:**
 > `claude/legal-aid-azerbaijan-research-3roqlx branch-ına keç, legal-leads-bot/HANDOVER.md faylını oxu və botu davam et. Bu sessiya: [tapşırıq]`
 >
-> Son yenilənmə: 2026-11-08. Hər sessiyanın sonunda "Cari vəziyyət" və "Növbəti addımlar" bölmələrini yeniləyin.
+> Son yenilənmə: 2026-11-09. Hər sessiyanın sonunda "Cari vəziyyət" və "Növbəti addımlar" bölmələrini yeniləyin.
 
 ## 1. Məqsəd
 
@@ -53,28 +53,30 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 ## 4. İş qaydası (vacib)
 
 - **Kod yalnız GitHub branch-ında dəyişdirilir.** Testlər keçir, sonra commit və push edilir. İstifadəçi Telegram-da `/update` yazır. İstifadəçinin bot qovluğunda birbaşa dəyişiklik etməyin: `/update` onu üzərinə yazacaq.
-- **Testlər:** `cd legal-leads-bot && python -m pytest -q`. Hazırda 94 test var, hamısı keçməlidir.
+- **Testlər:** `cd legal-leads-bot && python -m pytest -q`. Hazırda 95 test var, hamısı keçməlidir.
 - **`.bat` faylları:** sətir sonu CRLF olmalıdır (`.gitattributes`). Mətn yalnız ASCII olmalıdır. Pəncərə üçün `cmd /k` yenidən açılma bloku saxlanılmalıdır. `chcp 65001` istifadə etməyin: bəzi Windows versiyalarında bat faylını səssizcə dayandırır.
 - **Sirlər:** `.env` heç vaxt commit edilmir və oxunmur.
 - **Bulud sessiyasının məhdudiyyəti:** sandbox-da xəbər, iş və forum saytları bloklanır (proxy 403). `codeload.github.com` və `api.github.com` isə açıqdır. Real mənbə yoxlaması yalnız istifadəçinin kompüterində olur: `check.bat`.
 - **Vercel:** bu branch-a push Vercel-də sınaq quruluşu yaradırdı və xəta məktubları gəlirdi. İstifadəçi Vercel-də "Ignored Build Step = Only build production" ayarını qoyub, artıq məktub gəlmir.
 - **İstifadəçi ilə ünsiyyət:** Azərbaycan dilində, qısa, addım-addım. İstifadəçi texniki deyil, Windows işlədir. Zip göndərmək və əl ilə fayl köçürtmək istəmir.
 
-## 5. Cari vəziyyət (2026-11-08)
+## 5. Cari vəziyyət (2026-11-09)
 
-- **Bot işləyir:** istifadəçinin kompüterində Windows-da, `@ALLLEGALBOT`, bir çat. İlk dövrə başlanğıc nöqtəsini qoyub.
-- **Sonuncu zip göndərilib.** Bu versiyada `/update`, Claude, düymələr və səhər xülasəsi var. İstifadəçi onu quraşdırmalıdır: faylları köçürmək, Replace seçmək, `setup.bat`, sonra `start.bat`. Quraşdırıldığı təsdiqlənməyib.
-- **Claude açarı:** istifadəçinin açar daxil edib-etmədiyi bilinmir. Defolt model `claude-opus-5-5`, təxminən 20 $/ay. Alternativ `claude-haiku-5-5`, 1 $/aydan az.
-- **İstifadəçinin `check.bat` nəticəsi, 21 mənbə:**
-  - ✅ **İşləyir:** Google News-un 6 sorğusu, `trend_rss`, `azernews_rss`, `expat_az_forum`, `undp_notices`, `hellojob_az` (60 element), `busy_az` (5 element), Reddit (12.11-dək).
+- **Bot işləyir:** istifadəçinin kompüterində Windows-da, `@ALLLEGALBOT`, bir çat. Qovluq `Masaüstü\legal-leads-bot\legal-leads-bot`, git reposu deyil.
+- **Son versiya quraşdırılıb və `/update` real sınanıb.** O vaxt dəyişən fayl yox idi, ona görə yeniləmədən sonra özünü yenidən başlatma (kod 42) hələ real sınanmayıb.
+- **GitHub-a yazma:** istifadəçinin kompüterində `git` var, `gh` yoxdur. 2026-11-09-da saxlanmış GitHub girişi yox idi. Yerli sessiyadan push üçün istifadəçi Git Credential Manager pəncərəsində özü daxil olmalıdır.
+- **Claude açarı:** daxil edilməyib, Claude söndürülüb. Defolt model `claude-opus-5-5`, təxminən 20 $/ay. Alternativ `claude-haiku-5-5`, 1 $/aydan az.
+- **Mənbələr (2026-11-09, 17 aktiv):**
+  - ✅ **İşləyir:** Google News-un 6 sorğusu, `trend_rss`, `azernews_rss`, `expat_az_forum`, `hellojob_az` (60 element), `busy_az` (5 element), `reddit_azerbaijan_new` (12.11-dək).
+  - ✅ **Düzəldilib, istifadəçinin kompüterindən canlı yoxlanıb:** `smartjob_az` (`/vakansiyalar`, 20 element), `glorri_jobs` (ana səhifə, 29 element; "Müraciət et" düymələrinin adı kartın başlığından götürülür), `reliefweb_jobs_az` (yenidən RSS; saytda Azərbaycan üzrə elan olmadığı üçün 0 element normaldır, eyni lent Ukrayna üçün 20 element verdi).
+  - ⚠️ **İlk dövrədə xəta verib:** `reddit_search_lawyer` (429), `undp_notices` (vaxt bitdi). Təkrarlanarsa baxın.
   - ⛔ **Söndürülüb:** `tripadvisor` (403), `reliefweb_api_az` (təsdiqlənmiş appname yoxdur), `boss_az_legal` (404), `hh_az_legal` (ConnectionError), `jobsearch_az` (JS).
-  - ❔ **Yoxlamadan sonra dəyişdirilib, hələ sınanmayıb:** `reliefweb_jobs_az` (ölkə səhifəsi), `smartjob_az` (`/vacancies`), `glorri_jobs` (yeni).
 - **Səs-küy:** IT və sığorta tenderləri, borc statistikası tək ümumi sözə görə keçirdi. `weak` qaydası ilə düzəldilib və testlərdə real nümunələrlə yoxlanılıb.
 - **Reddit** RSS-i 13.11.2026-da bağlanır. Reddit mənbələrində `disable_after: 2026-11-12` var.
 
 ## 6. Növbəti addımlar
 
-1. **Quraşdırmanı təsdiqləmək:** istifadəçidən Telegram-da `/version` və `/ping` cavabını, həmçinin `check.bat` ekran şəklini istəyin. ❔ işarəli mənbələri nəticəyə görə düzəldin və ya söndürün.
+1. **Mənbə düzəlişini təsdiqləmək:** `/update`-dən sonra botun özünü yenidən başlatdığını və `smartjob_az`, `glorri_jobs` element saylarını yoxlayın (`check.bat` və ya `data/leadsbot.log`).
 2. **Telegram kanalları:** istifadəçi iş saytlarının Telegram linklərini `/addtg <link> job` ilə əlavə etməlidir. Kanal adları internetdə təsdiqlənmədi.
 3. **Claude:** açar yoxdursa, xatırladın (`setup.bat`). Varsa, ilk günün ballarına baxıb `AI_MIN_SCORE` dəyərini tənzimləyin.
 4. **Səhər xülasəsi:** istifadəçi istəsə, `/digest 09:00`.

@@ -143,14 +143,13 @@ sources:
 
   # ───────────── TENDERLƏR / KONSULTANT ÇAĞIRIŞLARI ─────────────
   - id: reliefweb_jobs_az
-    name: "ReliefWeb — Azərbaycan səhifəsindəki iş/konsultant elanları"
-    type: html_links
-    url: "https://reliefweb.int/country/aze"
-    link_pattern: "/job/\\d+"
+    name: "ReliefWeb — Azərbaycan üzrə iş/konsultant elanları"
+    type: rss
+    url: "https://reliefweb.int/jobs/rss.xml?search=Azerbaijan"
     category: tender
     categories: [tender, job]
     require_geo: false
-    note: "❔ Əvvəlki RSS 0 element verdi; ölkə səhifəsinə keçdik. /check ilə yoxlayın."
+    note: "✅ Lent işləyir. 09.11.2026-da saytda Azərbaycan üzrə elan yox idi, ona görə 0 element normaldır. Ölkə səhifəsində iş linkləri olmur."
 
   - id: reliefweb_api_az
     name: "ReliefWeb API v2 — Azərbaycan iş elanları"
@@ -207,12 +206,12 @@ sources:
   - id: smartjob_az
     name: "Smartjob.az — vakansiyalar (hüquq filtri)"
     type: html_links
-    url: "https://smartjob.az/vacancies"
-    link_pattern: "/vacancy/\\d+-"
+    url: "https://smartjob.az/vakansiyalar"
+    link_pattern: "/vakansiyalar/[a-z0-9-]+"
     category: job
     categories: [job]
     require_geo: false
-    note: "❔ Ana səhifə 0 element verdi; siyahı səhifəsinə keçdik. 0 qalarsa /mute smartjob_az."
+    note: "✅ 09.11.2026: sayt ünvanı /vakansiyalar, elan linkləri /vakansiyalar/<ad> formasındadır."
 
   - id: busy_az
     name: "Busy.az — son vakansiyalar (hüquq filtri)"
@@ -227,12 +226,12 @@ sources:
   - id: glorri_jobs
     name: "Glorri — vakansiyalar (hüquq filtri)"
     type: html_links
-    url: "https://jobs.glorri.az/vacancies"
+    url: "https://jobs.glorri.az/"
     link_pattern: "/vacancies/[a-z0-9-]+/[a-z0-9-]+-\\d+"
     category: job
     categories: [job]
     require_geo: false
-    note: "❔ Bir çox şirkətin hüquqşünas elanları buradadır (Legal Counsel, Legal Advisor). /check ilə yoxlayın."
+    note: "✅ 09.11.2026: /vacancies 404 verir, elanlar ana səhifədədir. Bir çox şirkətin hüquqşünas elanları buradadır."
 
   - id: jobsearch_az_legal
     name: "JobSearch.az — hüquq vakansiyaları"

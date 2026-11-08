@@ -24,6 +24,10 @@ JUNK_ANCHOR = re.compile(
     r"page\s*\d+$|\d+\s*(replies|views|cavab|baxış)?$)",
     re.I,
 )
+# iş saytlarında bəzən elanın adı linkdə yox, kartın başlığında olur; link sadəcə düymədir
+BUTTON_ANCHOR = re.compile(r"^(müraciət et|apply( now)?)$", re.I)
+CARD_TAGS = ["li", "tr", "article", "div"]
+MAX_CARD_DEPTH = 4
 MIN_HOST_GAP = 3.0  # eyni sayta ardıcıl sorğular arasında saniyə (Reddit 429 verməsin)
 MAX_RETRY_AFTER = 30
 _LAST_HIT: dict[str, float] = {}
@@ -92,6 +96,17 @@ def parse_rss(content: bytes | str, src: Source) -> list[Item]:
     return items
 
 
+def _job_card(a, rx: re.Pattern, base: str, key: str):
+    """Düymə linkinin aid olduğu kart: içində başqa elan linki olmayan ən böyük blok."""
+    card = None
+    for parent in a.find_parents(CARD_TAGS, limit=MAX_CARD_DEPTH):
+        hrefs = (urljoin(base, x.get("href", "").strip()).split("#", 1)[0] for x in parent.select("a[href]"))
+        if any(h != key and rx.search(h) for h in hrefs):
+            break
+        card = parent
+    return card
+
+
 def parse_html_links(html: str, src: Source, base_url: str | None = None) -> list[Item]:
     rx = re.compile(src.link_pattern)
     soup = BeautifulSoup(html, "html.parser")
@@ -105,7 +120,13 @@ def parse_html_links(html: str, src: Source, base_url: str | None = None) -> lis
         title = a.get_text(" ", strip=True)
         if title and JUNK_ANCHOR.match(title):
             continue
-        container = a.find_parent(["li", "tr", "article", "div"])
+        container = a.find_parent(CARD_TAGS)
+        if title and BUTTON_ANCHOR.match(title):
+            card = _job_card(a, rx, base, key)
+            if card is not None:
+                container = card
+                heading = card.find(["h1", "h2", "h3", "h4", "h5"])
+                title = (heading or card).get_text(" ", strip=True)[:140]
         summary = container.get_text(" ", strip=True)[:600] if container else ""
         existing = found.get(key)
         if existing is None:

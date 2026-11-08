@@ -153,3 +153,19 @@ def test_forum_helper_links_are_skipped():
                link_pattern=r"/en/forum/asia/azerbaijan/\d+-", category="individual")
     items = parse_html_links(html, s)
     assert [i.title for i in items] == ["Business setting up and Family residency"]
+
+
+def test_button_links_take_title_from_their_own_card(matcher):
+    html = """<div class="list">
+      <div class="card"><div><span>Qala Həyat Sığorta</span><h3>Hüquqşünas</h3><p>Bakı, Azərbaycan</p></div>
+        <div><a href="/vacancies/qala/qala-huquqsunas-65139236?isLocal=true">Müraciət et</a><span>13-10-2026</span></div></div>
+      <div class="card"><div><span>AFEA Group</span><h3>Data Engineer</h3></div>
+        <div><a href="/vacancies/afeagroup/afeagroup-data-engineer-38604044?isLocal=true">Müraciət et</a></div></div>
+    </div>"""
+    s = Source(id="g", name="g", type="html_links", url="https://jobs.glorri.az/",
+               link_pattern=r"/vacancies/[a-z0-9-]+/[a-z0-9-]+-\d+", category="job")
+    items = parse_html_links(html, s)
+    assert [i.title for i in items] == ["Hüquqşünas", "Data Engineer"]
+    assert "Qala Həyat Sığorta" in items[0].summary and "AFEA" not in items[0].summary
+    assert matcher.evaluate(items[0].text, "job", False, ["job"])
+    assert matcher.evaluate(items[1].text, "job", False, ["job"]) is None
