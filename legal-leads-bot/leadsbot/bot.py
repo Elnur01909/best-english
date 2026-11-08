@@ -13,6 +13,8 @@ from .runner import (check_sources, effective_digest_time, effective_min_score, 
 from .sources import FetchError, fetch_source
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
+from .updater import RestartRequested, UpdateError, installed_sha, latest_sha, repo_and_branch, run_update
+from .config import ROOT
 
 log = logging.getLogger("leadsbot.bot")
 
@@ -33,7 +35,11 @@ HELP = """<b>Legal Leads Bot</b> — Azərbaycanda ingilisdilli hüquqi xidmət 
 /ai — Claude statusu · /minscore 6 — minimum bal
 /digest 09:00 · /digest off · /digest now — səhər xülasəsi
 /keywords · /addkw söz · /delkw söz
-/stats · /stop · /start · /ping"""
+/stats · /stop · /start · /ping
+
+<b>Yeniləmə</b>
+/update — yeni versiyanı GitHub-dan endir və yenidən başla
+/version — cari versiya · /restart — botu yenidən başlat"""
 
 
 class LeadsBot:
@@ -100,8 +106,18 @@ class LeadsBot:
                 offset = upd["update_id"] + 1
                 try:
                     self.handle(upd)
+                except RestartRequested:
+                    self._ack(offset)
+                    raise
                 except Exception:  # bir əmr xətası botu öldürməsin
                     log.exception("əmr emalında xəta")
+
+    def _ack(self, offset: int) -> None:
+        """Telegram-a 'bu əmri oxudum' de ki, yenidən başladıqdan sonra təkrar icra olunmasın."""
+        try:
+            self.tg.get_updates(offset, timeout=0)
+        except TelegramError as exc:
+            log.warning("offset təsdiqlənmədi: %s", exc)
 
     def cycle(self, announce: bool, chat_id: str | None = None, only: set[str] | None = None) -> None:
         report = run_cycle(
@@ -144,6 +160,7 @@ class LeadsBot:
             "/reload": self.cmd_reload, "/lead": self.cmd_lead, "/pipeline": self.cmd_pipeline,
             "/draft": self.cmd_draft, "/addtg": self.cmd_addtg, "/deltg": self.cmd_deltg,
             "/digest": self.cmd_digest, "/minscore": self.cmd_minscore, "/ai": self.cmd_ai,
+            "/update": self.cmd_update, "/version": self.cmd_version, "/restart": self.cmd_restart,
         }.get(cmd)
         if handler is None:
             self.reply(chat_id, "Naməlum əmr. /help yazın.")
@@ -451,3 +468,34 @@ class LeadsBot:
             self.reply(chat_id, f"♻️ Konfiqurasiya yenidən yükləndi: {len(self.sources)} mənbə.")
         except Exception as exc:
             self.reply(chat_id, "Konfiqurasiya xətası: " + esc(str(exc)))
+
+    # ── yeniləmə ──
+    def cmd_update(self, chat_id: str, arg: str) -> None:
+        self.reply(chat_id, "⏳ GitHub-da yeni versiya yoxlanır…")
+        try:
+            result = run_update(ROOT, force=arg.strip().lower() == "force")
+        except UpdateError as exc:
+            self.reply(chat_id, f"❌ Yeniləmə alınmadı: {esc(str(exc))}. Bot köhnə versiya ilə işləməyə davam edir.")
+            return
+        if not result.updated:
+            self.reply(chat_id, "✅ " + esc(result.message))
+            return
+        self.reply(chat_id, "✅ " + esc(result.message) + "\n🔄 Yenidən başlayıram, 10–20 saniyə sonra /ping yazın.")
+        raise RestartRequested()
+
+    def cmd_restart(self, chat_id: str, arg: str) -> None:
+        self.reply(chat_id, "🔄 Yenidən başlayıram, 10–20 saniyə sonra /ping yazın.")
+        raise RestartRequested()
+
+    def cmd_version(self, chat_id: str, arg: str) -> None:
+        import requests
+        repo, branch = repo_and_branch()
+        current = installed_sha(ROOT)
+        latest = latest_sha(requests.Session(), repo, branch)
+        lines = [f"📦 Cari versiya: <code>{esc(current[:7] or 'naməlum')}</code>"]
+        if latest:
+            lines.append(f"GitHub-da son: <code>{esc(latest[:7])}</code>")
+            lines.append("✅ Son versiyadır." if latest == current else "🆕 Yeni versiya var: /update")
+        else:
+            lines.append("GitHub yoxlanmadı.")
+        self.reply(chat_id, "\n".join(lines))

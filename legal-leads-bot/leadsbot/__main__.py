@@ -13,6 +13,7 @@ from .lock import SingleInstance
 from .runner import check_sources, maybe_send_digest, run_cycle
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
+from .updater import RESTART_EXIT_CODE, RestartRequested, UpdateError, run_update
 
 
 LOG_FILE = ROOT / "data" / "leadsbot.log"
@@ -74,6 +75,9 @@ def cmd_serve(args, settings) -> int:
             bot.run_forever(run_first=not args.no_first_run)
         except KeyboardInterrupt:
             print("\nDayandırıldı.")
+        except RestartRequested:
+            print("\nYenidən başlayıram…")
+            return RESTART_EXIT_CODE
         return 0
     finally:
         lock.release()
@@ -137,6 +141,24 @@ def cmd_chatid(args, settings) -> int:
     return 0
 
 
+def cmd_update(args, settings) -> int:
+    print("GitHub-da yeni versiya yoxlanır…", flush=True)
+    try:
+        result = run_update(ROOT, force=args.force)
+    except UpdateError as exc:
+        print(f"Yeniləmə alınmadı: {exc}")
+        return 1
+    print(result.message)
+    if result.updated:
+        probe = SingleInstance(settings.db_path.parent / "serve.lock")
+        if probe.acquire():
+            probe.release()
+            print("Botu işə salmaq üçün: start.bat")
+        else:
+            print("Bot hazırda işləyir: Telegram-da /restart yazın və ya pəncərəni bağlayıb start.bat-ı açın.")
+    return 0
+
+
 def cmd_setup(args, settings) -> int:
     from .setup_wizard import run_setup
     env_path = Path(args.env) if args.env else ROOT / ".env"
@@ -168,6 +190,10 @@ def main(argv: list[str] | None = None) -> int:
     st = sub.add_parser("setup", help="interaktiv quraşdırma: token, çat ID, test mesajı")
     st.add_argument("--force", action="store_true", help="mövcud token və çat ID-ni yenidən soruş")
     st.set_defaults(func=cmd_setup)
+
+    up = sub.add_parser("update", help="yeni versiyanı GitHub-dan endir (.env, data, .venv toxunulmur)")
+    up.add_argument("--force", action="store_true", help="versiya eyni olsa da faylları yenidən yaz")
+    up.set_defaults(func=cmd_update)
 
     sub.add_parser("sources", help="konfiqurasiyadakı mənbələri göstər").set_defaults(func=cmd_sources)
     sub.add_parser("send-test", help="Telegram-a test mesajı göndər").set_defaults(func=cmd_send_test)
