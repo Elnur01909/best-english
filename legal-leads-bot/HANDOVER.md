@@ -63,20 +63,20 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 ## 5. Cari vəziyyət (2026-11-09)
 
 - **Bot işləyir:** istifadəçinin kompüterində Windows-da, `@ALLLEGALBOT`, bir çat. Qovluq `Masaüstü\legal-leads-bot\legal-leads-bot`, git reposu deyil.
-- **Son versiya quraşdırılıb və `/update` real sınanıb.** O vaxt dəyişən fayl yox idi, ona görə yeniləmədən sonra özünü yenidən başlatma (kod 42) hələ real sınanmayıb.
-- **GitHub-a yazma:** istifadəçinin kompüterində `git` var, `gh` yoxdur. 2026-11-09-da saxlanmış GitHub girişi yox idi. Yerli sessiyadan push üçün istifadəçi Git Credential Manager pəncərəsində özü daxil olmalıdır.
+- **Son versiya quraşdırılıb və `/update` real sınanıb.** `a6ffee6` yeniləməsində bot faylları yazdı və özünü yenidən başlatdı (kod 42), `.env` və baza qorundu.
+- **GitHub-a yazma:** istifadəçinin kompüterində `git` var, `gh` yoxdur. Bot qovluğu git reposu deyil, ona görə repo ayrıca klonlanmalıdır. `Elnur01909` girişi Git Credential Manager-də saxlanıb. Orada başqa hesablar da var (`elnurmirzey-crypto`, köhnə `x-access-token`), ona görə remote URL-də hesab adı olmalıdır: `https://Elnur01909@github.com/Elnur01909/best-english.git`. Hesab adı olmadan push rədd edildi.
 - **Claude açarı:** daxil edilməyib, Claude söndürülüb. Defolt model `claude-opus-5-5`, təxminən 20 $/ay. Alternativ `claude-haiku-5-5`, 1 $/aydan az.
-- **Mənbələr (2026-11-09, 17 aktiv):**
+- **Mənbələr (2026-11-09, 17 aktiv, son dövrədə hamısı xətasız oxundu):**
   - ✅ **İşləyir:** Google News-un 6 sorğusu, `trend_rss`, `azernews_rss`, `expat_az_forum`, `hellojob_az` (60 element), `busy_az` (5 element), `reddit_azerbaijan_new` (12.11-dək).
   - ✅ **Düzəldilib, istifadəçinin kompüterindən canlı yoxlanıb:** `smartjob_az` (`/vakansiyalar`, 20 element), `glorri_jobs` (ana səhifə, 29 element; "Müraciət et" düymələrinin adı kartın başlığından götürülür), `reliefweb_jobs_az` (yenidən RSS; saytda Azərbaycan üzrə elan olmadığı üçün 0 element normaldır, eyni lent Ukrayna üçün 20 element verdi).
-  - ⚠️ **İlk dövrədə xəta verib:** `reddit_search_lawyer` (429), `undp_notices` (vaxt bitdi). Təkrarlanarsa baxın.
+  - ⚠️ **Bir dəfə xəta verib, növbəti dövrədə keçib:** `reddit_search_lawyer` (429), `undp_notices` (vaxt bitdi). Təkrarlanarsa baxın.
   - ⛔ **Söndürülüb:** `tripadvisor` (403), `reliefweb_api_az` (təsdiqlənmiş appname yoxdur), `boss_az_legal` (404), `hh_az_legal` (ConnectionError), `jobsearch_az` (JS).
 - **Səs-küy:** IT və sığorta tenderləri, borc statistikası tək ümumi sözə görə keçirdi. `weak` qaydası ilə düzəldilib və testlərdə real nümunələrlə yoxlanılıb.
 - **Reddit** RSS-i 13.11.2026-da bağlanır. Reddit mənbələrində `disable_after: 2026-11-12` var.
 
 ## 6. Növbəti addımlar
 
-1. **Mənbə düzəlişini təsdiqləmək:** `/update`-dən sonra botun özünü yenidən başlatdığını və `smartjob_az`, `glorri_jobs` element saylarını yoxlayın (`check.bat` və ya `data/leadsbot.log`).
+1. **Nəticələrə baxmaq:** bir neçə gündən sonra `smartjob_az` və `glorri_jobs` mənbələrindən yeni lid gəldiyini yoxlayın (`data/leadsbot.log`). Hər ikisində başlanğıc nöqtəsi 2026-11-09-da qoyulub.
 2. **Telegram kanalları:** istifadəçi iş saytlarının Telegram linklərini `/addtg <link> job` ilə əlavə etməlidir. Kanal adları internetdə təsdiqlənmədi.
 3. **Claude:** açar yoxdursa, xatırladın (`setup.bat`). Varsa, ilk günün ballarına baxıb `AI_MIN_SCORE` dəyərini tənzimləyin.
 4. **Səhər xülasəsi:** istifadəçi istəsə, `/digest 09:00`.
