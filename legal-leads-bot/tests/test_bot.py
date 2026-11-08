@@ -58,3 +58,21 @@ def test_unknown_and_help(settings):
     assert "Naməlum əmr" in bot.tg.sent[-1][1]
     bot.handle(upd(42, "/help@mybot"))
     assert "/run" in bot.tg.sent[-1][1]
+
+
+def test_telegram_errors_never_contain_token():
+    import requests
+    from unittest.mock import MagicMock
+
+    import pytest
+
+    from leadsbot.telegram import TelegramClient, TelegramError
+
+    token = "123456:SECRET_TOKEN_VALUE"
+    sess = MagicMock()
+    sess.post.side_effect = requests.exceptions.ProxyError(f"https://api.telegram.org/bot{token}/getMe failed")
+    client = TelegramClient(token, session=sess)
+    with pytest.raises(TelegramError) as ei:
+        client.get_me()
+    assert "SECRET_TOKEN_VALUE" not in str(ei.value)
+    assert ei.value.__cause__ is None and ei.value.__suppress_context__

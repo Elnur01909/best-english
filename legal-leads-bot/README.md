@@ -26,38 +26,33 @@ Linki aç
 
 Bot ilk dəfə işə düşəndə mövcud xəbərləri **göndərmir**, sadəcə yadda saxlayır. Sonrakı hər yoxlamada yalnız **yeni** elementlər gəlir. Eyni xəbər iki dəfə gəlmir.
 
-## Quraşdırma: 3 addım
+## Quraşdırma
 
-**1. Bot yaradın.** Telegram-da [@BotFather](https://t.me/BotFather) → `/newbot` → ad verin. Sizə token verəcək (`123456789:AAH...`). Tokeni heç kimə göstərməyin.
+**Windows (ən asan yol):**
 
-**2. Layihəni hazırlayın.**
+1. Python quraşdırın: https://www.python.org/downloads. Quraşdırarkən **"Add Python to PATH"** qutusunu işarələyin.
+2. Telegram-da [@BotFather](https://t.me/BotFather) → `/newbot` → ad və sonu `bot` ilə bitən istifadəçi adı verin. Verdiyi **tokeni** kopyalayın, heç kimə göstərməyin.
+3. `legal-leads-bot` qovluğunda **setup.bat** faylına iki dəfə basın. O, hər şeyi quraşdırır, tokeni soruşur və yoxlayır.
+4. Pəncərə deyəndə Telegram-da botunuza `/start` yazın. Çat ID-niz avtomatik tapılır və test mesajı gəlir.
+5. **start.bat** faylına iki dəfə basın — bot işləyir. Pəncərəni bağlamayın.
+
+Mənbələri yoxlamaq üçün **check.bat**.
+
+**Mac / Linux:**
 
 ```bash
 cd legal-leads-bot
-python3 -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env             # Windows: copy .env.example .env
+python -m leadsbot setup        # token + /start + test mesajı
+python -m leadsbot serve        # botu işə salır
 ```
 
-`.env` faylını açıb `TELEGRAM_BOT_TOKEN=` sətrinə tokeni yazın.
-
-**3. Çat ID-nizi tapın.** Telegram-da botunuza `/start` yazın, sonra:
-
-```bash
-python -m leadsbot chatid
-```
-
-Çıxan `TELEGRAM_CHAT_ID=...` sətrini `.env`-ə yazın. Yoxlayın:
-
-```bash
-python -m leadsbot send-test     # Telegram-a test mesajı gəlməlidir
-python -m leadsbot check         # hansı mənbələr işləyir
-```
+Token və ya çatı dəyişmək üçün: `python -m leadsbot setup --force`.
 
 ## İşə salmaq: 3 variant
 
-**A. Kompüterinizdə və ya VPS-də (tövsiyə olunur).** Bot həm intervalla yoxlayır, həm də Telegram əmrlərinə cavab verir:
+**A. Kompüterinizdə və ya VPS-də (tövsiyə olunur).** Windows-da `start.bat`, digərlərində aşağıdakı əmr. Bot həm intervalla yoxlayır, həm də Telegram əmrlərinə cavab verir:
 
 ```bash
 python -m leadsbot serve
@@ -123,5 +118,5 @@ legal-leads-bot/
   leadsbot/        kod: mənbələr, filtr, baza (SQLite), Telegram, əmrlər
   config/          sources.yaml, keywords.yaml
   data/            leads.sqlite (avtomatik yaranır, git-ə düşmür)
-  tests/           29 test + nümunə lentlər
+  tests/           testlər + nümunə lentlər
 ```

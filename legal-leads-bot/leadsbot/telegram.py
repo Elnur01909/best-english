@@ -24,7 +24,8 @@ class TelegramClient:
         try:
             r = self.session.post(url, json=params, timeout=self.timeout)
         except requests.RequestException as exc:
-            raise TelegramError(f"{method}: şəbəkə xətası: {exc}") from exc
+            # exc mətnində URL (və deməli token) olur — onu heç vaxt göstərmə
+            raise TelegramError(f"{method}: şəbəkə xətası ({exc.__class__.__name__}), internet bağlantısını yoxlayın") from None
         try:
             data = r.json()
         except ValueError as exc:

@@ -4,7 +4,9 @@ import argparse
 import logging
 import sys
 
-from .config import ConfigError, load_profile, load_settings, load_sources
+from pathlib import Path
+
+from .config import ROOT, ConfigError, load_profile, load_settings, load_sources
 from .filters import Matcher
 from .runner import check_sources, run_cycle
 from .storage import Store
@@ -17,6 +19,8 @@ def _logging(verbose: bool) -> None:
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
         datefmt="%H:%M:%S",
     )
+    # urllib3 DEBUG logları sorğu URL-ini yazır; Telegram URL-ində token var — heç vaxt göstərmə
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 
 def cmd_fetch(args, settings) -> int:
@@ -105,6 +109,12 @@ def cmd_chatid(args, settings) -> int:
     return 0
 
 
+def cmd_setup(args, settings) -> int:
+    from .setup_wizard import run_setup
+    env_path = Path(args.env) if args.env else ROOT / ".env"
+    return run_setup(env_path, settings.bot_token, settings.allowed_chat_ids, force=args.force)
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="leadsbot", description="Azərbaycan hüquqi lid və iş elanı botu")
     p.add_argument("-v", "--verbose", action="store_true")
@@ -125,6 +135,10 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("--only")
     c.set_defaults(func=cmd_check)
 
+    st = sub.add_parser("setup", help="interaktiv quraşdırma: token, çat ID, test mesajı")
+    st.add_argument("--force", action="store_true", help="mövcud token və çat ID-ni yenidən soruş")
+    st.set_defaults(func=cmd_setup)
+
     sub.add_parser("sources", help="konfiqurasiyadakı mənbələri göstər").set_defaults(func=cmd_sources)
     sub.add_parser("send-test", help="Telegram-a test mesajı göndər").set_defaults(func=cmd_send_test)
     sub.add_parser("chatid", help="bota yazan çatların ID-lərini göstər").set_defaults(func=cmd_chatid)
@@ -137,6 +151,9 @@ def main(argv: list[str] | None = None) -> int:
     except (ConfigError, TelegramError) as exc:
         print(f"Xəta: {exc}", file=sys.stderr)
         return 2
+    except (KeyboardInterrupt, EOFError):
+        print("\nDayandırıldı.")
+        return 130
 
 
 if __name__ == "__main__":
