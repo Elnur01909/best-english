@@ -11,7 +11,7 @@ from .ai import AIError, LeadAI
 from .config import ConfigError, Settings, parse_lead_types
 from .filters import Matcher
 from .formatting import esc, format_digest, format_row, lead_keyboard
-from .models import Source
+from .models import MatchResult, Source
 from .sources import FetchError, fetch_source
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
@@ -20,6 +20,7 @@ log = logging.getLogger("leadsbot")
 
 ALERT_AFTER_FAILS = 3  # ardıcıl neçə xətadan sonra xəbər verilir
 ALERT_AFTER_EMPTY_DAYS = 7  # mənbə neçə gün boş qalandan sonra xəbər verilir
+SCREEN_RETRY_DAYS = 2  # Claude işləmirsə, açar sözü olmayan yazı neçə gün onu gözləyir
 
 
 @dataclass
@@ -75,7 +76,7 @@ class CycleReport:
         if self.ai_scored:
             lines.append(f"🤖 Claude qiymətləndirdi: {self.ai_scored}")
         if self.ai_error:
-            lines.append(f"⚠️ Claude: {self.ai_error} (lidlər balsız göndərilir)")
+            lines.append(f"⚠️ Claude: {self.ai_error} (açar sözlü lidlər balsız göndərilir)")
         base = [s.source_id for s in self.sources if s.baseline]
         if base:
             lines.append("İlk dəfə oxundu (başlanğıc nöqtəsi, göndərilmədi): " + ", ".join(base))
@@ -118,7 +119,9 @@ def effective_lead_types(settings: Settings, store: Store) -> set[str]:
 
 
 def _wanted(row, wanted: set[str]) -> bool:
-    return (row["category"] or "other") in wanted | {"other"}
+    """Claude qiymətləndiribsə onun dediyi növ əsasdır: alertdən gələn şirkət xəbəri fərdi sorğu sayılmasın."""
+    category = (row["ai_category"] if row["ai_done"] == 1 else None) or row["category"] or "other"
+    return category in wanted | {"other"}
 
 
 def is_stale(published: str, max_age_days: int, now: datetime) -> bool:
@@ -220,6 +223,8 @@ def run_cycle(
             if store.is_seen(src.id, it.uid):
                 continue
             match = matcher.evaluate(it.text, src.category, src.require_geo, src.categories, allow_weak=src.legal_forum)
+            if match is None and ai is not None and src.ai_screen and not baseline:
+                match = MatchResult(category=src.category, score=0)  # açar söz yoxdur: qərarı Claude verəcək
             if match and is_stale(it.published, settings.max_age_days, now):
                 match = None  # axtarış köhnə yazını təzə kimi qaytara bilər (məs. aprel xəbəri noyabrda)
             rep.new += 1
@@ -242,6 +247,7 @@ def run_cycle(
     _deliver(settings, store, names, tg, chat_ids, report, ai_on=ai is not None, dry_run=dry_run)
     if send and not dry_run and not only:
         _check_health(store, sources, report, tg, chat_ids)
+        _check_claude(store, report, tg, chat_ids)
     report.pending = store.pending_count()
     report.finished = _now_iso()
     return report
@@ -289,18 +295,43 @@ def _check_health(store: Store, sources: list[Source], report: CycleReport, tg: 
         lines.append("✅ <b>Yenidən işləyir:</b> " + ", ".join(f"<code>{esc(r.source_id)}</code>" for r in healed))
     if broken or empty:
         lines.append("Qalan mənbələr işləməyə davam edir.")
-    delivered = False
-    for chat in chat_ids:
-        try:
-            tg.send_message(chat, "\n".join(lines))
-            delivered = True
-        except TelegramError as exc:
-            log.warning("mənbə xəbərdarlığı göndərilmədi (%s): %s", chat, exc)
-    if delivered:
+    if _tell(tg, chat_ids, "\n".join(lines)):
         for r in broken + empty:
             store.set(f"alerted:{r.source_id}", "1")
         for r in healed:
             store.delete(f"alerted:{r.source_id}")
+
+
+def _tell(tg: TelegramClient | None, chat_ids: list[str], text: str) -> bool:
+    """Xəbərdarlığı göndərir; ən azı bir çata çatıbsa True."""
+    delivered = False
+    for chat in chat_ids if tg is not None else []:
+        try:
+            tg.send_message(chat, text)
+            delivered = True
+        except TelegramError as exc:
+            log.warning("xəbərdarlıq göndərilmədi (%s): %s", chat, exc)
+    return delivered
+
+
+def _check_claude(store: Store, report: CycleReport, tg: TelegramClient | None, chat_ids: list[str]) -> None:
+    """Claude ardıcıl işləmirsə bir dəfə xəbər verir: forum və alert yazıları ondan asılıdır."""
+    if not report.ai_error and not report.ai_scored:
+        return  # bu dövrədə Claude-a iş düşməyib
+    alerted = store.get("alerted:claude")
+    if not report.ai_error:
+        store.delete("fails:claude")
+        if alerted and _tell(tg, chat_ids, "✅ <b>Claude yenidən işləyir.</b>"):
+            store.delete("alerted:claude")
+        return
+    fails = int(store.get("fails:claude") or 0) + 1
+    store.set("fails:claude", str(fails))
+    if fails >= ALERT_AFTER_FAILS and not alerted:
+        text = (f"⚠️ <b>Claude {ALERT_AFTER_FAILS} dəfə ardıcıl işləmədi:</b> <code>{esc(report.ai_error[:120])}</code>"
+                f"\nAçar sözlü lidlər balsız gəlir, forum və Google Alerts yazıları isə {SCREEN_RETRY_DAYS} gün gözləyir."
+                "\nBalansı yoxlayın: https://platform.claude.com/settings/billing")
+        if _tell(tg, chat_ids, text):
+            store.set("alerted:claude", "1")
 
 
 def _score_pending(settings: Settings, store: Store, ai: LeadAI, report: CycleReport) -> None:
@@ -315,18 +346,21 @@ def _score_pending(settings: Settings, store: Store, ai: LeadAI, report: CycleRe
     except AIError as exc:
         report.ai_error = str(exc)
         log.warning("Claude qiymətləndirməsi alınmadı: %s", exc)
-        store.mark_ai_failed([r["id"] for r in rows])
-        return
-    missing = []
+        scores = {}
+    now = datetime.now(timezone.utc)
+    unscored = []
     for r in rows:
         s = scores.get(r["id"])
-        if s is None:
-            missing.append(r["id"])
-            continue
-        store.set_ai(r["id"], s.score, s.category, s.service, s.summary_az, s.reason_az)
-        report.ai_scored += 1
-    if missing:
-        store.mark_ai_failed(missing)
+        if s is not None:
+            store.set_ai(r["id"], s.score, s.category, s.service, s.summary_az, s.reason_az)
+            report.ai_scored += 1
+        elif r["hits"]:
+            unscored.append(r["id"])  # açar sözü olan lid itməsin, balsız getsin
+        elif is_stale(r["first_seen"], SCREEN_RETRY_DAYS, now):
+            store.mark_hidden(r["id"])
+        # qalan yazıların açar sözü yoxdur: balsız göndərilmir, növbəti dövrədə yenidən Claude-a verilir
+    if unscored:
+        store.mark_ai_failed(unscored)
 
 
 def _deliver(settings, store, names, tg, chat_ids, report, ai_on: bool, dry_run: bool) -> None:
@@ -341,6 +375,11 @@ def _deliver(settings, store, names, tg, chat_ids, report, ai_on: bool, dry_run:
             continue
         if ai_on and row["ai_done"] == 0:
             continue  # bu dövrədə qiymətləndirilmədi (limit) — növbəti dövrədə
+        if row["ai_done"] != 1 and not row["hits"]:
+            if not dry_run:
+                store.mark_hidden(row["id"])  # açar sözü olmayan yazını yalnız Claude göndərə bilər
+            report.hidden += 1
+            continue
         score = row["ai_score"] if row["ai_done"] == 1 else None
         if score is not None and score < min_score:
             if not dry_run:

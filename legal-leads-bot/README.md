@@ -57,6 +57,8 @@ Xərc gündə ~150 uyğun lid üçün təxminidir. Açar: https://platform.claud
 
 "❌ Uyğun deyil" düyməsi ilə işarələdiyiniz son lidlər Claude-a nümunə kimi verilir: oxşarlarına aşağı bal qoyur.
 
+Claude açarı varsa, forumlarda və Google Alerts lentlərində açar söz olmasa da hər yeni yazını Claude oxuyur (`sources.yaml` → `ai_screen`). Belə olanda problemini sadə sözlə yazan adam da tapılır. Bu yazılar yalnız Claude bal verəndən sonra gəlir: o işləməsə balsız göndərilmir, 3 ardıcıl xətadan sonra bot Telegram-a yazır. Claude yazını şirkət xəbəri sayırsa və `/types`-da şirkət lidləri söndürülübsə, yazı gəlmir.
+
 ## Telegram əmrləri
 
 | Əmr | Nə edir |

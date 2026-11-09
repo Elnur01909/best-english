@@ -42,7 +42,9 @@ investment agreement with a named company, foreign investor dispute, licence rev
 named company).
 - 1-2: irrelevant (sports, politics, weather, culture, reports of crimes or court cases where nobody needs a lawyer, matters with \
 no link to Azerbaijan, ads, other lawyers' marketing, duplicates).
-Use "category": company, individual, job, tender, dispute or other.
+Use "category" as follows. individual: anyone asking about or describing their own legal problem, whatever the subject, including their own dispute.
+company: news about a company where nobody is asking for help. dispute: news about arbitration or litigation between other parties.
+job: vacancies. tender: tenders and consultancy calls. other: anything else.
 Write "service", "summary_az" and "reason_az" in Azerbaijani (Latin script). "service" names the legal service in a few words. \
 "summary_az" is at most two short sentences on what happened and who is involved. "reason_az" is one short sentence on why \
 the score is what it is. Return one result per input id, using the same id."""
@@ -129,6 +131,8 @@ class LeadAI:
                 try:
                     return self.client.beta.messages.create(betas=[FALLBACK_BETA], fallbacks="default", **kwargs)
                 except bad_request as exc:
+                    if "fallback" not in str(exc).lower():
+                        raise  # məsələn balans bitib: bunun fallback-la əlaqəsi yoxdur
                     log.warning("fallbacks parametri qəbul olunmadı, onsuz davam edirəm: %s", exc)
                     self.use_fallbacks = False
             return self.client.messages.create(**kwargs)
@@ -148,10 +152,18 @@ class LeadAI:
 
     # ── qiymətləndirmə ──
     def score(self, items: list[dict], negatives: list[str] | None = None) -> dict[int, LeadScore]:
-        """items: [{'id', 'source', 'title', 'summary'}] → {id: LeadScore}. BATCH_SIZE-lik hissələrlə."""
+        """items: [{'id', 'source', 'title', 'summary'}] → {id: LeadScore}. BATCH_SIZE-lik hissələrlə.
+        Bir hissənin xətası digərlərinin nəticəsini itirmir; heç biri alınmasa AIError atılır."""
         out: dict[int, LeadScore] = {}
+        error: AIError | None = None
         for i in range(0, len(items), BATCH_SIZE):
-            out.update(self._score_batch(items[i : i + BATCH_SIZE], negatives or []))
+            try:
+                out.update(self._score_batch(items[i : i + BATCH_SIZE], negatives or []))
+            except AIError as exc:
+                log.warning("Claude hissəsi alınmadı: %s", exc)
+                error = exc
+        if error is not None and not out:
+            raise error
         return out
 
     def _score_batch(self, batch: list[dict], negatives: list[str]) -> dict[int, LeadScore]:

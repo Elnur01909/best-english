@@ -11,6 +11,7 @@
 #   enabled        false → yoxlanmır
 #   every_hours    bu qədər saatda bir oxunur (ağır və ya məhdudiyyətli saytlar üçün). Yazılmasa: hər dövrədə.
 #   legal_forum    true → hər yazı hüquqi sualdır, ümumi söz də kifayətdir (huquqlar.az, pravoved.ru)
+#   ai_screen      true → Claude açarı varsa, açar söz olmasa da hər yeni yazını Claude oxuyur (insanların sual yazdığı yerlər)
 #   expect_empty   true → mənbənin boş qalması normaldır, 7 günlük "boşdur" xəbərdarlığı göndərilmir
 #   max_items      bir oxunuşda ən çox neçə element (defolt 60)
 #   note           qeyd (✅ işləyir, ⚠️ bəzən bloklanır, ❔ /check ilə yoxlayın, ⛔ işləmir)
@@ -112,6 +113,7 @@ sources:
     category: individual
     categories: [individual]
     require_geo: false
+    ai_screen: true
     note: "✅ Windows-da işləyir. MYİ/biznes sualları buradan gəlir."
 
   - id: reddit_azerbaijan_new
@@ -261,6 +263,7 @@ sources:
     categories: [individual]
     require_geo: false
     legal_forum: true
+    ai_screen: true
     note: "✅ 09.11.2026 canlı yoxlanıb."
   - id: pravoved_az
     name: "pravoved.ru - search: Азербайджан"
@@ -271,6 +274,7 @@ sources:
     categories: [individual]
     require_geo: true
     legal_forum: true
+    ai_screen: true
     note: "✅ 09.11.2026 canlı yoxlanıb."
   - id: pravoved_az_nasledstvo
     name: "pravoved.ru - search: Азербайджан наследство"
@@ -281,6 +285,7 @@ sources:
     categories: [individual]
     require_geo: true
     legal_forum: true
+    ai_screen: true
     note: "✅ 09.11.2026 canlı yoxlanıb."
   - id: pravoved_az_grazhdanstvo
     name: "pravoved.ru - search: гражданство Азербайджана"
@@ -291,6 +296,7 @@ sources:
     categories: [individual]
     require_geo: true
     legal_forum: true
+    ai_screen: true
     note: "✅ 09.11.2026 canlı yoxlanıb."
   - id: pravoved_az_deport
     name: "pravoved.ru - search: депортация Азербайджан"
@@ -301,6 +307,7 @@ sources:
     categories: [individual]
     require_geo: true
     legal_forum: true
+    ai_screen: true
     note: "✅ 09.11.2026 canlı yoxlanıb."
   - id: pravoved_az_vezd
     name: "pravoved.ru - search: запрет на въезд Азербайджан"
@@ -311,6 +318,7 @@ sources:
     categories: [individual]
     require_geo: true
     legal_forum: true
+    ai_screen: true
     note: "✅ 09.11.2026 canlı yoxlanıb."
 
   # ───────────── Company signals - English ─────────────

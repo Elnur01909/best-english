@@ -4,7 +4,7 @@ import hashlib
 import os
 import re
 import time
-from urllib.parse import quote_plus, urljoin, urlparse
+from urllib.parse import parse_qs, quote_plus, urljoin, urlparse
 
 import feedparser
 import requests
@@ -61,6 +61,19 @@ def _domain(url: str) -> str:
     return host[4:] if host.startswith("www.") else host
 
 
+def _unwrap_google(link: str) -> str:
+    """Google Alerts linki saytın öz ünvanını url= parametrində gizlədir: kartda real sayt görünsün."""
+    try:
+        parts = urlparse(link)
+    except ValueError:
+        return link
+    if parts.netloc.lower().endswith("google.com") and parts.path == "/url":
+        target = parse_qs(parts.query).get("url", [""])[0]
+        if target.startswith(("http://", "https://")):
+            return target
+    return link
+
+
 def build_url(src: Source) -> str:
     if src.type == "gnews":
         hl, gl, ceid = GNEWS_LOCALES.get(src.lang, GNEWS_LOCALES["en"])
@@ -83,7 +96,7 @@ def parse_rss(content: bytes | str, src: Source) -> list[Item]:
     items: list[Item] = []
     for e in parsed.entries[: src.max_items]:
         title = strip_html(e.get("title", "")).strip()
-        link = (e.get("link") or "").strip()
+        link = _unwrap_google((e.get("link") or "").strip())
         if not title and not link:
             continue
         summary = strip_html(e.get("summary") or e.get("description") or "")

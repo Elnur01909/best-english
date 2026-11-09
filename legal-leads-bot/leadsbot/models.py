@@ -31,6 +31,7 @@ class Source:
     max_items: int = 60
     every_hours: float = 0  # >0 → yalnız bu qədər saatda bir oxunur (ağır və ya məhdudiyyətli saytlar)
     legal_forum: bool = False  # True → hər yazı hüquqi sualdır, ümumi söz ("miras", "долг") də kifayətdir
+    ai_screen: bool = False  # True → Claude varsa, açar söz olmasa da hər yeni yazını o oxuyur (insanların sual yazdığı yerlər)
     expect_empty: bool = False  # True → boş qalması normaldır, "boşdur" xəbərdarlığı göndərilmir
     user_added: bool = False
 

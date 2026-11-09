@@ -325,6 +325,7 @@ class Store:
                 out.append(Source(
                     id=r["id"], name=r["name"] or "RSS", type="rss", url=r["url"], category=cat,
                     categories=None if cat == "other" else [cat], require_geo=False, enabled=True, expect_empty=True,
+                    ai_screen="google.com/alerts/feeds/" in (r["url"] or ""),
                     note="/addrss ilə əlavə edilib", user_added=True,
                 ))
                 continue
