@@ -7,12 +7,12 @@
 
 ## 1. Məqsəd
 
-İstifadəçi dünyanın harasında olursa olsun, Azərbaycanla bağlı hüquqi yardım axtaran hər kəs barədə Telegram-da xəbər almaq istəyir (2026-11-09-da genişləndirilib). Buraya xarici şirkətlər, xarici fiziki şəxslər, xaricdəki azərbaycanlılar və Azərbaycanda açıq hüquqi sual verənlər daxildir. Dillər: ingilis, rus, türk, Azərbaycan. İstifadəçi şirkət xəbərlərini (məs. "X şirkəti Azərbaycanda birgə müəssisə qurur") lid saymır: standart olaraq Telegram-a yalnız kömək axtaran insanlar, hüquqşünas vakansiyaları və hüquqi tenderlər gəlir (`/types`). Layihənin iki hissəsi var:
+İstifadəçi Azərbaycan Vəkillər Kollegiyasının üzvüdür, cinayət işi görmür və müştərini xaricdən axtarır: Azərbaycanla bağlı vəkil axtaran, istənilən növ hüquqi yardım axtaran və ya orada şirkət qurmaq istəyən xarici şirkətlər, sahibkarlar və əcnəbilər. Azərbaycanda yaşayanlar və Azərbaycan vətəndaşlarının şəxsi işləri hədəf deyil. Dillər: ingilis, rus, türk, Azərbaycan. Şirkət xəbərləri (məs. "X şirkəti Azərbaycanda birgə müəssisə qurur") müraciət sayılmır, yalnız səhər siqnalı kimi gəlir. Layihənin iki hissəsi var:
 
 1. **Araşdırma:** dünya üzrə potensial müştərilərin siyahısı, linklərlə.
-2. **Telegram botu:** yeni lidləri, hüquqşünas vakansiyalarını və hüquqi konsultant tenderlərini avtomatik tapıb istifadəçiyə göndərir.
+2. **Telegram botu:** yeni lidləri və hüquqi konsultant tenderlərini avtomatik tapıb istifadəçiyə göndərir.
 
-İstifadəçi həm müştəri lidlərini, həm də vakansiyaları görmək istəyir. Vakansiya mənbələrini söndürməyin.
+Vakansiyalar 2026-11-09-da istifadəçinin istəyi ilə söndürülüb (`/types individual tender company job` ilə qayıdır).
 
 ## 2. Harada nə var
 
@@ -82,7 +82,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 
 1. **Nəticələrə baxmaq:** 2026-11-23-də hansı mənbələrin lid verdiyinə baxın (`data/leadsbot.log`, `/stats`). Heç nə verməyənləri söndürün. Planın 2-ci fazası (mənbə üzrə həftəlik hesabat) bunu avtomatlaşdırır.
 2. **Google Alerts (Reddit əvəzi):** istifadəçinin Google hesabında 30 alert var (RU, EN, TR; RSS, as-it-happens, all results) və hamısı bota əlavə olunub. 11-i xarici şirkətləri tutur ("local counsel" Azerbaijan, "register a company in Azerbaijan" və s.), qalanları vəkil axtaran əcnəbiləri. Azərbaycan dilindəki 8 alert yerli adamları tutduğu üçün silinib. Nəticələrin çoxu reklam ola bilər: Claude süzür, amma hər oxunan yazı pul tutur, ona görə balansa baxın. Lent linkləri yalnız botun bazasındadır (`user_sources`), açıq repoya yazmayın. Yeni alert: `/addrss <link> individual`. 2 həftə sonra hansının real sual gətirdiyinə baxın; yeni lent günlərlə boş qala bilər.
-3. **Claude:** real açarla 4 dildə sınanıb: xarici şirkətin müraciəti 9–10, əcnəbinin müraciəti 6–8, yerli müraciət, reklam və cinayət işi 1 bal alıb (13 nümunədən 13-ü gözlənildiyi kimi). İki həftə sonra `low` statuslu yazılara baxıb minimum balı tənzimləyin (`/minscore`).
+3. **Claude:** real açarla 4 dildə sınanıb: şirkət qurmaq istəyən xarici şirkət və sahibkarın müraciəti ən yüksək, yerli müraciət, qeydiyyat xidməti reklamı və cinayət işi ən aşağı bal alıb. İki həftə sonra `low` statuslu yazılara baxıb minimum balı tənzimləyin (`/minscore`).
 4. **Nəzarət:** healthchecks.io hesabı açılsa, keçidi `/health <link>` ilə yazmaq kifayətdir.
 5. **24 saat işləmə:** hazırda bot yalnız kompüter açıq olanda işləyir (`autostart.bat`). Növbəti variant Oracle Cloud Always Free + `deploy/install-linux.sh`. GitHub Actions üçün branch-ı `master`-ə birləşdirmək və secret-ləri əlavə etmək lazımdır, amma o rejimdə düymələr işləmir.
 6. **Yeni mənbə ideyaları:** Dünya Bankı procurement API (işləyir, 1016 elan, yeni oxuyucu lazımdır), TED API, üzv siyahılarının müqayisəsi (AmCham, BCCA). Planın 3-cü fazasındadır.
@@ -90,6 +90,9 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 
 ## 7. Qərarlar tarixçəsi
 
+- 2026-11-09 axşam: **hədəf dəqiqləşdi.** İstifadəçi: "vəkil axtaran, hüquqi yardım axtaran, şirkət qurmaq istəyən, bütün növ hüquqi yardım." Ən yüksək balı şirkət qurmaq istəyən və ya bunu soruşan xarici şirkət və sahibkar, habelə vəkil axtaran xarici şirkət alır, "vəkil" sözü şərt deyil. Əcnəbilərin müraciəti 6–8 bal alır və gəlir. Qeydiyyat xidməti reklamları, yerli müraciətlər, Azərbaycan vətəndaşlarının şəxsi işləri və cinayət işləri gəlmir.
+- 2026-11-09 axşam: istifadəçinin istəyi ilə iş elanları söndürüldü, "vakansiya mənbələrini söndürməyin" qaydası artıq qüvvədə deyil. 17 iş mənbəyi oxunmur. Geri qaytarmaq: `/types individual tender company job`.
+- 2026-11-09 axşam: botun bütün işi yoxlandı: 7 375 yazı oxunub, 5 mesaj göndərilib, heç biri real müştəri deyil. İstifadəçi botun istədiyi kimi olmadığını dedi. Ölçüdən əvvəl yeni mənbə əlavə etməyin.
 - 2026-11-09: **əsas hədəf.** İstifadəçi vəkildir, cinayət işi görmür və dedi ki, müştərini Azərbaycandan yox, xaricdən, xarici şirkətlər arasında axtarır. Claude təlimatı buna görə yenidən yazıldı: xarici şirkət və təşkilatlar birinci, əcnəbilər ikinci, Azərbaycanda yaşayanlar və Azərbaycan vətəndaşlarının şəxsi işləri 1–2 bal. Telegram müraciət botu qurulmadı, çünki xarici şirkətlər vəkili belə axtarmır. İstifadəçi açıq müraciətlərin az olacağını bilərək şirkət xəbərlərini səhər siqnalı kimi istədi.
 - 2026-11-09: istifadəçi şirkət xəbərini ("joint venture") nümunə göstərib yalnız real hüquqi yardım axtaranları istədiyini dedi. Şirkət və mübahisə xəbərləri standart olaraq söndürüldü. Vakansiya və tenderlər əvvəlki göstərişə görə qaldı (`/types individual` yalnız fərdi sorğular qoyur).
 - 2026-11-09-da Telegram kanal adları istifadəçinin kompüterindən canlı yoxlandı və konfiqurasiyaya yazıldı. Başqa kanallar `/addtg` ilə əlavə olunur.

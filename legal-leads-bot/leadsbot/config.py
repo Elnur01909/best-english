@@ -17,7 +17,7 @@ DEFAULT_KEYWORDS = ROOT / "config" / "keywords.yaml"
 DEFAULT_DB = ROOT / "data" / "leads.sqlite"
 DEFAULT_UA = "linux:legal-leads-bot:1.0 (RSS/HTML reader for legal-services leads)"
 DEFAULT_AI_MODEL = "claude-opus-5-5"
-DEFAULT_LEAD_TYPES = ("individual", "job", "tender", "company")  # company: səhər siqnalları (bax signal_min_score)
+DEFAULT_LEAD_TYPES = ("individual", "tender", "company")  # company: səhər siqnalları (bax signal_min_score)
 _HHMM = re.compile(r"^([01]?\d|2[0-3]):([0-5]\d)$")
 
 

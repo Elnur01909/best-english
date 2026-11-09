@@ -40,7 +40,7 @@ HELP = """<b>Legal Leads Bot</b> — Azərbaycanla bağlı hüquqi yardım axtar
 /health link — bot susanda xəbər verən keçid · /health off
 
 <b>Filtr və çatdırılma</b>
-/types individual job tender company — Telegram-a hansı növlər gəlsin (company səhər siqnallarıdır, dispute əlavə oluna bilər)
+/types individual tender company — Telegram-a hansı növlər gəlsin (company səhər siqnallarıdır, job və dispute əlavə oluna bilər)
 /ai — Claude statusu · /minscore 6 — minimum bal
 /digest 09:00 · /digest off · /digest now — səhər xülasəsi
 /keywords · /addkw söz · /delkw söz
