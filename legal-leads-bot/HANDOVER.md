@@ -80,7 +80,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 ## 6. Növbəti addımlar
 
 1. **Nəticələrə baxmaq:** 2026-11-23-də hansı mənbələrin lid verdiyinə baxın (`data/leadsbot.log`, `/stats`). Heç nə verməyənləri söndürün. Planın 2-ci fazası (mənbə üzrə həftəlik hesabat) bunu avtomatlaşdırır.
-2. **Google Alerts (Reddit əvəzi, 13.11-dən əvvəl):** istifadəçi alert yaradır, çatdırılma RSS seçir, linki Telegram-da `/addrss <link> individual` ilə yazır. Sorğular planın 1.6 bəndindədir.
+2. **Google Alerts (Reddit əvəzi):** 2026-11-09-da istifadəçinin Google hesabında 9 alert yaradılıb (AZ, RU, EN, TR; RSS, as-it-happens, all results) və bota əlavə olunub. Lent linkləri yalnız botun bazasındadır (`user_sources`), açıq repoya yazmayın. Yeni alert: `/addrss <link> individual`. 2 həftə sonra hansının real sual gətirdiyinə baxın; yeni lent günlərlə boş qala bilər.
 3. **Claude:** açar yoxdursa, xatırladın (`setup.bat`). Varsa, ilk iki həftə `/minscore 5` və `/digest 09:00`, sonra ballara baxıb tənzimləyin. Təlimat artıq bütün dillərə görə yazılıb, amma real açarla sınanmayıb.
 4. **Nəzarət:** healthchecks.io hesabı açılsa, keçidi `/health <link>` ilə yazmaq kifayətdir.
 5. **24 saat işləmə:** hazırda bot yalnız kompüter açıq olanda işləyir (`autostart.bat`). Növbəti variant Oracle Cloud Always Free + `deploy/install-linux.sh`. GitHub Actions üçün branch-ı `master`-ə birləşdirmək və secret-ləri əlavə etmək lazımdır, amma o rejimdə düymələr işləmir.
