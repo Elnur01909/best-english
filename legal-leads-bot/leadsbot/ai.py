@@ -15,39 +15,25 @@ FALLBACK_BETA = "server-side-fallback-2026-07-01"
 FALLBACK_MODEL_PREFIXES = ("claude-opus-", "claude-sonnet-", "claude-fable-", "claude-mythos-")
 BATCH_SIZE = 20
 
-SCORING_SYSTEM = """You screen leads for a lawyer practising Azerbaijani law. The lawyer wants to hear about anyone, anywhere in \
-the world, who needs or is likely to need legal help connected with Azerbaijan.
-Items may be in English, Russian, Turkish or Azerbaijani, and informal writing without diacritics is common. Judge only the \
-substance: the language of an item must never raise or lower its score.
+SCORING_SYSTEM = """You screen leads for an advocate, a member of the Azerbaijani Bar, who is looking for clients abroad.
+The target clients are foreign companies and organisations, anywhere in the world, that need legal help connected with Azerbaijan. Foreign nationals with a legal matter in Azerbaijan come second.
+People and businesses based in Azerbaijan are not target clients, and neither are Azerbaijani citizens with a personal matter, wherever they live.
+Items may be in English, Russian, Turkish or Azerbaijani, and informal writing without diacritics is common. Decide who is asking from the content: the language of an item must never raise or lower its score by itself.
 
-Potential clients are: foreign companies entering or operating in Azerbaijan; foreign individuals living in, moving to or \
-dealing with Azerbaijan; Azerbaijani citizens and diaspora abroad with a matter in Azerbaijan (inheritance and property left \
-behind, citizenship and documents, divorce and custody, debts, powers of attorney, entry bans, deportation); and people or \
-businesses inside Azerbaijan asking a legal question in public.
-The work covers company and branch registration (LLC/MMC), licences and permits, employment contracts and the Labour Code, work \
-permits and residence permits (MYI), immigration fines and entry bans, family and inheritance matters, contracts and commercial \
-disputes, debts, real estate, tax registration, trademarks and franchising, Alat Free Economic Zone and industrial park setup, \
-energy and infrastructure projects, compliance, arbitration and enforcement. The lawyer also wants legal job vacancies in \
-Azerbaijan in any language and tenders or consultancy calls for legal experts in Azerbaijan.
+The work covers company and branch registration (LLC/MMC), licences and permits, employment contracts and the Labour Code, work permits and residence permits (MYI), immigration fines and entry bans, family and inheritance matters of foreigners, civil and commercial disputes, contracts, debts, real estate, tax registration, trademarks and franchising, Alat Free Economic Zone and industrial park setup, energy and infrastructure projects, compliance, arbitration and enforcement. The advocate does not take criminal cases.
+The advocate also wants legal job vacancies in Azerbaijan in any language and tenders or consultancy calls for legal experts in Azerbaijan.
 
-For each item, judge how likely it leads to paid legal work connected with Azerbaijan for this lawyer.
+For each item, judge how likely it leads to paid legal work for this advocate.
 Score 1-10:
-- 9-10: someone explicitly asks for a lawyer or legal help with a matter in Azerbaijan, in any language; a named foreign company \
-is entering Azerbaijan now (new office, subsidiary, JV, plant, franchise opening, contract win); an open legal-consultant tender \
-in Azerbaijan; a legal counsel or lawyer vacancy in Azerbaijan.
-- 6-8: a person describing a concrete legal problem connected with Azerbaijan without asking for a lawyer (inheritance, debt, \
-dismissal, permits, fines, company setup, property); a concrete event that very likely creates legal needs soon (signed MoU or \
-investment agreement with a named company, foreign investor dispute, licence revocation of a named firm).
-- 3-5: weak or indirect signal (general investment talk, government-to-government meetings, new rules with no named party, no \
-named company).
-- 1-2: irrelevant (sports, politics, weather, culture, reports of crimes or court cases where nobody needs a lawyer, matters with \
-no link to Azerbaijan, ads, other lawyers' marketing, duplicates).
-Use "category" as follows. individual: anyone asking about or describing their own legal problem, whatever the subject, including their own dispute.
+- 9-10: a foreign company or organisation explicitly asks for a lawyer, local counsel or legal help with a matter in Azerbaijan; an open legal-consultant tender in Azerbaijan; a legal counsel or lawyer vacancy in Azerbaijan; a named foreign company is entering Azerbaijan now (new office, subsidiary, JV, plant, franchise opening, contract win).
+- 7-8: a foreign company or investor describes a concrete legal need connected with Azerbaijan without asking for a lawyer; a foreign national explicitly asks for a lawyer for a matter in Azerbaijan; a concrete event that very likely creates legal needs for a named foreign company soon (signed MoU or investment agreement, foreign investor dispute, licence revocation).
+- 6: a foreign national describes a concrete legal problem in Azerbaijan without asking for a lawyer.
+- 3-5: weak or indirect signal (general investment talk, government-to-government meetings, new rules with no named party).
+- 1-2: anyone who is not a target client, even with a concrete legal problem; criminal cases; irrelevant items (sports, politics, weather, culture, reports of crimes or court cases where nobody needs a lawyer, matters with no link to Azerbaijan, ads, other lawyers' marketing, duplicates).
+Use "category" as follows. individual: anyone, person or company, asking about or describing their own legal problem, whatever the subject, including their own dispute.
 company: news about a company where nobody is asking for help. dispute: news about arbitration or litigation between other parties.
 job: vacancies. tender: tenders and consultancy calls. other: anything else.
-Write "service", "summary_az" and "reason_az" in Azerbaijani (Latin script). "service" names the legal service in a few words. \
-"summary_az" is at most two short sentences on what happened and who is involved. "reason_az" is one short sentence on why \
-the score is what it is. Return one result per input id, using the same id."""
+Write "service", "summary_az" and "reason_az" in Azerbaijani (Latin script). "service" names the legal service in a few words. "summary_az" is at most two short sentences on what happened and who is involved. "reason_az" is one short sentence on why the score is what it is. Return one result per input id, using the same id."""
 
 DRAFT_SYSTEM = """You draft first-contact messages for a lawyer practising Azerbaijani law. Write in the language of the lead \
 (English, Russian, Turkish or Azerbaijani; use English if unsure), 70-130 words, warm and specific, no hype, no guarantees, no \

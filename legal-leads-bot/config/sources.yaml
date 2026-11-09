@@ -259,6 +259,7 @@ sources:
     name: "huquqlar.az - forum RSS"
     type: rss
     url: "https://huquqlar.az/forums/-/index.rss"
+    enabled: false  # yerli forumdur, hədəf xarici şirkətlərdir (/unmute huquqlar_rss ilə açılır)
     category: individual
     categories: [individual]
     require_geo: false

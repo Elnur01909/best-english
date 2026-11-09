@@ -1,6 +1,6 @@
 # Legal Leads Bot — Telegram
 
-Dünyanın harasında olursa olsun **Azərbaycanla bağlı hüquqi yardım axtaran şirkət və şəxsləri** (ingilis, rus, türk, Azərbaycan dillərində), **hüquqşünas vakansiyalarını** və **hüquqi konsultant tenderlərini** izləyib sizə Telegram-a göndərən bot.
+Dünyanın harasında olursa olsun **Azərbaycanla bağlı hüquqi yardım axtaran xarici şirkət və əcnəbiləri** (ingilis, rus, türk, Azərbaycan dillərində), **hüquqşünas vakansiyalarını** və **hüquqi konsultant tenderlərini** izləyib sizə Telegram-a göndərən bot.
 
 ## Nə edir
 

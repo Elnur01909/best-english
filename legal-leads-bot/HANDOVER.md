@@ -70,7 +70,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 - **Mənbələr (2026-11-09, 98 sətir, 92 aktiv, standart olaraq 35-i oxunur):** kömək axtaranlar: `huquqlar_rss`, 5 `pravoved_*` sorğusu (hər ikisində `legal_forum: true`), `expat_az_forum_all`, Reddit (12.11-dək). Vakansiyalar: iş saytları, boss.az kateqoriyaları, 5 Telegram kanalı. Tenderlər: UNDP (2 qayda), EBRD (4131 sətir, 6 saatda bir), ADB, ReliefWeb, unjobs, Impactpool.
   - **Oxunmur, amma konfiqurasiyadadır:** `categories: [company, dispute]` olan 57 xəbər mənbəyi (Google News, rus/Azərbaycan/türk xəbər lentləri, ICSID, GAR, AFEZ və s.). `/types individual job tender company dispute` ilə dərhal açılır. `run_cycle` lid növü söndürülmüş mənbəni oxumur.
   - **Məhdudiyyət:** pravoved.ru axtarışı tarixə görə sıralanmır və kartda tarix yoxdur. Yeni sual yalnız ilk 15 nəticəyə düşəndə görünür, köhnə sual da "yeni" kimi gələ bilər.
-  - ⛔ **Söndürülüb:** `tripadvisor` (403), `reliefweb_api_az` (təsdiqlənmiş appname yoxdur), `boss_az_legal` (404), `hh_az_legal` (ConnectionError), `jobsearch_az_legal` (JS), `azertac_economy_rss` (işləyir, amma açar sözlə səs-küy verir; Claude açılanda `/unmute`).
+  - ⛔ **Söndürülüb:** `huquqlar_rss` (yerli forum, hədəf xarici şirkətlərdir), `tripadvisor` (403), `reliefweb_api_az` (təsdiqlənmiş appname yoxdur), `boss_az_legal` (404), `hh_az_legal` (ConnectionError), `jobsearch_az_legal` (JS), `azertac_economy_rss` (işləyir, amma açar sözlə səs-küy verir; Claude açılanda `/unmute`).
   - **Çıxarılıb:** `bing_az_vekil` (siyasi məhkəmə xəbərləri), `bing_en_residence` (qayda xəbərləri): hər ikisində kömək axtaran yoxdur.
   - ⚠️ **Bəzən xəta verir:** `reddit_search_lawyer` (429), `taxes_news_az` (ConnectionError). Artıq 3 ardıcıl xətada bot özü yazır.
 - **Canlı sınaq (2026-11-09):** standart 35 mənbə təxminən 70 saniyəyə oxunur. Botun bazasının surətində `/update`-dən sonrakı ilk dövrə 0 mesaj verdi (yeni mənbələr başlanğıc nöqtəsi alır). Gündə neçə real sual gələcəyi hələ ölçülməyib.
@@ -82,7 +82,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 
 1. **Nəticələrə baxmaq:** 2026-11-23-də hansı mənbələrin lid verdiyinə baxın (`data/leadsbot.log`, `/stats`). Heç nə verməyənləri söndürün. Planın 2-ci fazası (mənbə üzrə həftəlik hesabat) bunu avtomatlaşdırır.
 2. **Google Alerts (Reddit əvəzi):** 2026-11-09-da istifadəçinin Google hesabında 27 alert yaradılıb (AZ, RU, EN, TR; RSS, as-it-happens, all results) və bota əlavə olunub: 9-u "vəkil lazımdır" tipli ifadələrdir, 18-i problemi təsvir edir ("işdən çıxarıldım", "наследство в Азербайджане"). İkincilər çox məqalə gətirə bilər: Claude onları süzür, amma hər oxunan yazı pul tutur, ona görə balansa baxın. Lent linkləri yalnız botun bazasındadır (`user_sources`), açıq repoya yazmayın. Yeni alert: `/addrss <link> individual`. 2 həftə sonra hansının real sual gətirdiyinə baxın; yeni lent günlərlə boş qala bilər.
-3. **Claude:** real açarla 4 dildə sınanıb, problemini sadə yazan insanlar 7–8, reklam və statistika 1–2 bal alıb. İki həftə sonra `low` statuslu yazılara baxıb minimum balı tənzimləyin (`/minscore`).
+3. **Claude:** real açarla 4 dildə sınanıb: xarici şirkətin müraciəti 9–10, əcnəbinin müraciəti 6–8, yerli müraciət, reklam və cinayət işi 1 bal alıb (13 nümunədən 13-ü gözlənildiyi kimi). İki həftə sonra `low` statuslu yazılara baxıb minimum balı tənzimləyin (`/minscore`).
 4. **Nəzarət:** healthchecks.io hesabı açılsa, keçidi `/health <link>` ilə yazmaq kifayətdir.
 5. **24 saat işləmə:** hazırda bot yalnız kompüter açıq olanda işləyir (`autostart.bat`). Növbəti variant Oracle Cloud Always Free + `deploy/install-linux.sh`. GitHub Actions üçün branch-ı `master`-ə birləşdirmək və secret-ləri əlavə etmək lazımdır, amma o rejimdə düymələr işləmir.
 6. **Yeni mənbə ideyaları:** Dünya Bankı procurement API (işləyir, 1016 elan, yeni oxuyucu lazımdır), TED API, üzv siyahılarının müqayisəsi (AmCham, BCCA). Planın 3-cü fazasındadır.
@@ -90,6 +90,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 
 ## 7. Qərarlar tarixçəsi
 
+- 2026-11-09: **əsas hədəf.** İstifadəçi vəkildir, cinayət işi görmür və dedi ki, müştərini Azərbaycandan yox, xaricdən, xarici şirkətlər arasında axtarır. Claude təlimatı buna görə yenidən yazıldı: xarici şirkət və təşkilatlar birinci, əcnəbilər ikinci, Azərbaycanda yaşayanlar və Azərbaycan vətəndaşlarının şəxsi işləri 1–2 bal. Telegram müraciət botu qurulmadı, çünki xarici şirkətlər vəkili belə axtarmır. Açıq qalanlar: şirkət xəbərləri ayrıca "siqnal" kimi gəlsinmi; Azərbaycan dilindəki 8 alert (yerli insanları tutur) silinsinmi; xarici şirkətlər üçün yeni alertlər.
 - 2026-11-09: istifadəçi şirkət xəbərini ("joint venture") nümunə göstərib yalnız real hüquqi yardım axtaranları istədiyini dedi. Şirkət və mübahisə xəbərləri standart olaraq söndürüldü. Vakansiya və tenderlər əvvəlki göstərişə görə qaldı (`/types individual` yalnız fərdi sorğular qoyur).
 - 2026-11-09-da Telegram kanal adları istifadəçinin kompüterindən canlı yoxlandı və konfiqurasiyaya yazıldı. Başqa kanallar `/addtg` ilə əlavə olunur.
 - LinkedIn və Facebook daxil edilməyib, çünki şərtləri avtomatik oxumağı qadağan edir.
