@@ -85,7 +85,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 3. **Claude:** real açarla 4 dildə sınanıb: şirkət qurmaq istəyən xarici şirkət və sahibkarın müraciəti ən yüksək, yerli müraciət, qeydiyyat xidməti reklamı və cinayət işi ən aşağı bal alıb. İki həftə sonra `low` statuslu yazılara baxıb minimum balı tənzimləyin (`/minscore`).
 4. **Nəzarət:** healthchecks.io hesabı açılsa, keçidi `/health <link>` ilə yazmaq kifayətdir.
 5. **24 saat işləmə:** hazırda bot yalnız kompüter açıq olanda işləyir (`autostart.bat`). Növbəti variant Oracle Cloud Always Free + `deploy/install-linux.sh`. GitHub Actions üçün branch-ı `master`-ə birləşdirmək və secret-ləri əlavə etmək lazımdır, amma o rejimdə düymələr işləmir.
-6. **Yeni mənbə ideyaları:** Dünya Bankı procurement API (işləyir, 1016 elan, yeni oxuyucu lazımdır), TED API, üzv siyahılarının müqayisəsi (AmCham, BCCA). Planın 3-cü fazasındadır.
+6. **Tender portalları:** Dünya Bankı (`worldbank_az`) və TED (`ted_az`) 2026-11-09-da qoşulub, 6 saatda bir oxunur və hər yeni yazını Claude qiymətləndirir. Dünya Bankından yalnız məsləhətçi elanları götürülür, müqavilə nəticələri atılır. Hüquqi elan azdır: TED-də son 4 ayın 11 elanından heç biri hüquqi deyil, Dünya Bankının son 100 elanında "legal" sözü 2 dəfə keçir. Üzv siyahılarının müqayisəsi (AmCham, BCCA) hələ edilməyib.
 7. **Hesabatdakı TOP 10 lidlə iş:** Vulcan, Wonderful, GUGLER, ENNA, Sunsync, UFlex, Popeyes, TripAdvisor və Expat.com sorğuları. Onları bota "manual lid" kimi əlavə etmək ideyası hələ edilməyib.
 
 ## 7. Qərarlar tarixçəsi

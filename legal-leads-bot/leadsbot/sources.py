@@ -4,6 +4,7 @@ import hashlib
 import os
 import re
 import time
+from datetime import datetime, timedelta, timezone
 from urllib.parse import parse_qs, quote_plus, urljoin, urlparse
 
 import feedparser
@@ -18,6 +19,10 @@ GNEWS_LOCALES = {
     "ru": ("ru", "RU", "RU:ru"),
 }
 RELIEFWEB_URL = "https://api.reliefweb.int/v2/jobs"
+WORLDBANK_URL = "https://search.worldbank.org/api/v2/procnotices"
+TED_URL = "https://api.ted.europa.eu/v3/notices/search"
+TED_FIELDS = ["publication-number", "notice-title", "buyer-name", "publication-date", "place-of-performance", "classification-cpv"]
+TED_LOOKBACK_DAYS = 120
 # forum siyahılarında mövzu linki olmayan köməkçi linklər ("Last post 6 years ago by ...", "3 replies", "Page 2")
 JUNK_ANCHOR = re.compile(
     r"^(last post\b|latest reply\b|reply\b|replies\b|son (mesaj|cavab)\b|"
@@ -83,6 +88,11 @@ def build_url(src: Source) -> str:
     if src.type == "reliefweb_jobs":
         appname = os.getenv("RELIEFWEB_APPNAME", "").strip() or "legal-leads-bot"
         return f"{RELIEFWEB_URL}?appname={quote_plus(appname)}"
+    if src.type == "worldbank_notices":
+        return (f"{WORLDBANK_URL}?format=json&rows={min(src.max_items, 100)}"
+                f"&project_ctry_name_exact={quote_plus(src.query)}&srt=noticedate&order=desc")
+    if src.type == "ted_notices":
+        return TED_URL
     return src.url
 
 
@@ -223,6 +233,52 @@ def parse_tg_channel(html: str, src: Source) -> list[Item]:
     return items[: src.max_items]
 
 
+def parse_worldbank(data: dict, src: Source) -> list[Item]:
+    """Dünya Bankı elanları: yalnız məsləhətçi xidməti axtaran elanlar, müqavilə nəticələri atılır."""
+    items: list[Item] = []
+    for n in (data.get("procnotices") or [])[: src.max_items]:
+        kind = (n.get("notice_type") or "").strip()
+        if n.get("procurement_group") != "CS" or "award" in kind.lower():
+            continue
+        uid = str(n.get("id") or "").strip()
+        title = strip_html(n.get("bid_description") or n.get("project_name") or "").strip()
+        if not uid or not title:
+            continue
+        deadline = (n.get("submission_deadline_date") or "")[:10]
+        head = " · ".join(x for x in (kind, (n.get("project_name") or "").strip(), f"deadline {deadline}" if deadline else "") if x)
+        summary = f"{head}\n{strip_html(n.get('notice_text') or '')}".strip()
+        link = f"https://projects.worldbank.org/en/projects-operations/procurement-detail/{uid}"
+        published = n.get("submission_date") or n.get("noticedate") or ""
+        items.append(Item(src.id, uid, title, link, summary[:1500], published, (n.get("contact_organization") or "World Bank").strip()))
+    return items
+
+
+def _ted_text(value) -> str:
+    """TED mətnləri dillərə görə verilir: {'eng': ['...'], 'lit': ['...']}. İngiliscə varsa onu götürür."""
+    if isinstance(value, dict):
+        value = value.get("eng") or next(iter(value.values()), "")
+    if isinstance(value, list):
+        value = value[0] if value else ""
+    return str(value or "").strip()
+
+
+def parse_ted(data: dict, src: Source) -> list[Item]:
+    """Aİ-nin TED portalı: dövlət və beynəlxalq alıcıların elanları."""
+    items: list[Item] = []
+    for n in (data.get("notices") or [])[: src.max_items]:
+        number = str(n.get("publication-number") or "").strip()
+        title = _ted_text(n.get("notice-title"))
+        if not number or not title:
+            continue
+        buyer = _ted_text(n.get("buyer-name"))
+        places = ", ".join(dict.fromkeys(n.get("place-of-performance") or []))
+        cpv = ", ".join(dict.fromkeys(n.get("classification-cpv") or []))
+        summary = f"Buyer: {buyer}\nPlace of performance: {places}\nCPV: {cpv}"
+        link = f"https://ted.europa.eu/en/notice/-/detail/{number}"
+        items.append(Item(src.id, number, title, link, summary, (n.get("publication-date") or "")[:10], buyer or "TED"))
+    return items
+
+
 # ──────────────────────────── şəbəkə ────────────────────────────
 
 def _session(user_agent: str) -> requests.Session:
@@ -281,8 +337,22 @@ def fetch_source(src: Source, user_agent: str, timeout: int = 25, session: reque
             }
             r = _request(s, "POST", url, timeout, json=payload)
             return parse_reliefweb(r.json(), src)
+        if src.type == "ted_notices":
+            since = (datetime.now(timezone.utc) - timedelta(days=TED_LOOKBACK_DAYS)).strftime("%Y%m%d")
+            payload = {
+                "query": f"({src.query}) AND publication-date >= {since} SORT BY publication-date DESC",
+                "fields": TED_FIELDS,
+                "limit": min(src.max_items, 100),
+                "page": 1,
+                "scope": "ALL",
+                "paginationMode": "PAGE_NUMBER",
+            }
+            r = _request(s, "POST", url, timeout, json=payload)
+            return parse_ted(r.json(), src)
 
         r = _request(s, "GET", url, timeout)
+        if src.type == "worldbank_notices":
+            return parse_worldbank(r.json(), src)
         if src.type in ("rss", "gnews"):
             return parse_rss(r.content, src)
         if src.type == "html_links":

@@ -6,7 +6,7 @@ from datetime import date
 
 CATEGORIES = ("company", "individual", "job", "tender", "dispute", "other")
 LEAD_TYPES = ("individual", "job", "tender", "company", "dispute")
-SOURCE_TYPES = ("gnews", "rss", "html_links", "reliefweb_jobs", "tg_channel")
+SOURCE_TYPES = ("gnews", "rss", "html_links", "reliefweb_jobs", "tg_channel", "worldbank_notices", "ted_notices")
 TG_HANDLE_RE = re.compile(r"^[A-Za-z][A-Za-z0-9_]{3,31}$")
 
 
@@ -42,8 +42,8 @@ class Source:
         src = cls(**clean)
         if src.type not in SOURCE_TYPES:
             raise ValueError(f"source {src.id!r}: unknown type {src.type!r}")
-        if src.type == "gnews" and not src.query:
-            raise ValueError(f"source {src.id!r}: gnews needs 'query'")
+        if src.type in ("gnews", "worldbank_notices", "ted_notices") and not src.query:
+            raise ValueError(f"source {src.id!r}: {src.type} needs 'query'")
         if src.type in ("rss", "html_links") and not src.url:
             raise ValueError(f"source {src.id!r}: {src.type} needs 'url'")
         if src.type == "html_links" and not src.link_pattern:

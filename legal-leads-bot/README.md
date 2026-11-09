@@ -4,7 +4,7 @@ Dünyanın harasında olursa olsun **Azərbaycanla bağlı vəkil, hüquqi yard�
 
 ## Nə edir
 
-1. **Oxuyur:** Google News (6 sorğu), Trend və AzerNews lentləri, Expat.com forumu, iş saytları (HelloJob, Smartjob, Busy, Boss, hh.az), UNDP və ReliefWeb, sizin əlavə etdiyiniz Telegram kanalları.
+1. **Oxuyur:** Google News və xəbər lentləri, Expat.com forumu, Google Alerts, tender portalları (UNDP, EBRD, ADB, Dünya Bankı, TED), sizin əlavə etdiyiniz Telegram kanalları.
 2. **Süzür:** açar sözlər, mənbəyə uyğun kateqoriyalar və eyni xəbərin təkrarlarının atılması.
 3. **Qiymətləndirir (istəyə bağlı):** Claude hər lidə 1–10 bal verir, Azərbaycanca xülasə yazır və lazım olan hüquqi xidməti göstərir. Aşağı ballı lidlər gəlmir.
 4. **Çatdırır:** ani bildiriş və ya hər səhər bir xülasə. Hər lidin altında düymələr: ⭐ Maraqlıdır · 📞 Əlaqə saxladım · ❌ Uyğun deyil · ✍️ Məktub hazırla.

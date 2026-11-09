@@ -3,7 +3,7 @@
 # Sahələr:
 #   id             unikal qısa ad (Telegram-da /mute <id> üçün)
 #   name           insan üçün ad
-#   type           gnews | rss | html_links | tg_channel | reliefweb_jobs
+#   type           gnews | rss | html_links | tg_channel | reliefweb_jobs | worldbank_notices | ted_notices
 #   category       company | individual | job | tender | dispute | other (defolt kateqoriya)
 #   categories     bu mənbədə hansı açar söz kateqoriyaları sayılır (səs-küyü azaldır). Yazılmasa: hamısı.
 #   require_geo    true → mətndə Azərbaycan/Bakı sözü olmalıdır (keywords.yaml → geo)
@@ -22,6 +22,8 @@
 #   html_links:     url, link_pattern (regex; uyğun gələn <a href> linkləri element sayılır)
 #   tg_channel:     channel (ictimai Telegram kanalının adı, @ olmadan). Telegram-da /addtg ilə də əlavə olunur.
 #   reliefweb_jobs: (ReliefWeb API v2; təsdiqlənmiş RELIEFWEB_APPNAME tələb edir)
+#   worldbank_notices: query (ölkənin ingiliscə adı)
+#   ted_notices:    query (TED axtarış ifadəsi; son 120 günlə məhdudlaşır)
 
 sources:
 
@@ -176,6 +178,31 @@ sources:
     categories: [tender]
     require_geo: true
     note: "✅ İşləyir; Azərbaycan elanı olanda gəlir. UNGM-də vendor qeydiyyatı da tövsiyə olunur."
+
+  - id: worldbank_az
+    name: "Dünya Bankı - Azərbaycan məsləhətçi elanları"
+    type: worldbank_notices
+    query: "Azerbaijan"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    every_hours: 6
+    max_items: 40
+    note: "✅ 09.11.2026 canlı yoxlanıb. Yalnız məsləhətçi elanları; hüquqi olanı Claude seçir."
+
+  - id: ted_az
+    name: "TED (Aİ) - Azərbaycanla bağlı elanlar"
+    type: ted_notices
+    query: "place-of-performance IN (AZE) OR FT ~ (Azerbaijan)"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    expect_empty: true
+    every_hours: 6
+    max_items: 40
+    note: "✅ 09.11.2026 canlı yoxlanıb. Hüquqi elan nadirdir: 2023-dən bəri təxminən 9."
 
   # ───────────── İŞ ELANLARI (Bakı) ─────────────
   - id: boss_az_legal
