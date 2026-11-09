@@ -2,19 +2,24 @@ from __future__ import annotations
 
 import logging
 import re
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import date, datetime, time as dtime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 
 from .ai import AIError, LeadAI
-from .config import Settings
+from .config import ConfigError, Settings, parse_lead_types
 from .filters import Matcher
-from .formatting import format_digest, format_row, lead_keyboard
+from .formatting import esc, format_digest, format_row, lead_keyboard
 from .models import Source
 from .sources import FetchError, fetch_source
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
 
 log = logging.getLogger("leadsbot")
+
+ALERT_AFTER_FAILS = 3  # ardıcıl neçə xətadan sonra xəbər verilir
+ALERT_AFTER_EMPTY_DAYS = 7  # mənbə neçə gün boş qalandan sonra xəbər verilir
 
 
 @dataclass
@@ -38,6 +43,7 @@ class CycleReport:
     sent: int = 0
     pending: int = 0
     filtered: int = 0
+    hidden: int = 0
     queued: int = 0
     ai_scored: int = 0
     ai_error: str | None = None
@@ -64,6 +70,8 @@ class CycleReport:
             f"Yeni element: {self.total_new}, uyğun: {self.total_matched}, təkrar: {self.total_duplicates}.",
             f"Göndərildi: {self.sent}, xülasəyə: {self.queued}, aşağı bal: {self.filtered}, növbədə: {self.pending}.",
         ]
+        if self.hidden:
+            lines.append(f"Göndərilməyən növ (/types): {self.hidden}")
         if self.ai_scored:
             lines.append(f"🤖 Claude qiymətləndirdi: {self.ai_scored}")
         if self.ai_error:
@@ -100,6 +108,41 @@ def effective_min_score(settings: Settings, store: Store) -> int:
         return settings.ai_min_score
 
 
+def effective_lead_types(settings: Settings, store: Store) -> set[str]:
+    """Telegram-a hansı lid növləri gəlsin (/types əmri .env-i üstələyir)."""
+    v = store.get("lead_types")
+    try:
+        return set(parse_lead_types(v) if v else settings.lead_types)
+    except ConfigError:
+        return set(settings.lead_types)
+
+
+def _wanted(row, wanted: set[str]) -> bool:
+    return (row["category"] or "other") in wanted | {"other"}
+
+
+def is_stale(published: str, max_age_days: int, now: datetime) -> bool:
+    """Element bundan köhnədirsə True. Tarixi olmayan və ya oxunmayan element köhnə sayılmır."""
+    raw = (published or "").strip()
+    if not raw or not max_age_days:
+        return False
+    try:
+        dt = parsedate_to_datetime(raw)
+    except (TypeError, ValueError):
+        try:
+            dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            return False
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return now - dt > timedelta(days=max_age_days)
+
+
+def effective_health_url(settings: Settings, store: Store) -> str:
+    v = store.get("health_url")
+    return settings.healthcheck_url if v is None else v
+
+
 def local_now(settings: Settings, now_utc: datetime | None = None) -> datetime:
     now_utc = now_utc or datetime.now(timezone.utc)
     return (now_utc + timedelta(hours=settings.tz_offset_hours)).replace(tzinfo=None)
@@ -120,16 +163,20 @@ def run_cycle(
     only: set[str] | None = None,
     ai: LeadAI | None = None,
     today: date | None = None,
+    between_sources: Callable[[], None] | None = None,
 ) -> CycleReport:
     """Bir tam dövrə: oxu → filtrlə → təkrarları at → (Claude) qiymətləndir → çatdır.
 
     - Mənbə ilk dəfə oxunursa bütün elementlər sükutla qeyd olunur (başlanğıc nöqtəsi).
     - seed_only=True → yalnız başlanğıc nöqtəsi; heç nə göndərilmir.
     - dry_run=True → göndəriləcək mesajlar ekrana yazılır; bazada heç nə 'göndərilib' sayılmır.
+    - between_sources → hər mənbədən əvvəl çağırılır (dövrə uzun çəkəndə Telegram əmrlərinə cavab vermək üçün).
     """
     report = CycleReport(started=_now_iso())
     names = {s.id: s.name for s in sources}
     today = today or local_now(settings).date()
+    wanted = effective_lead_types(settings, store)
+    now = datetime.now(timezone.utc)
 
     for src in sources:
         rep = SourceReport(source_id=src.id, name=src.name)
@@ -143,6 +190,14 @@ def run_cycle(
         if not store.source_enabled(src.id, src.enabled):
             rep.skipped = True
             continue
+        if src.categories and not only and not wanted & set(src.categories):
+            rep.skipped = True  # bu mənbənin verdiyi lid növü söndürülüb (/types)
+            continue
+        if src.every_hours and not only and store.read_recently(src.id, src.every_hours):
+            rep.skipped = True
+            continue
+        if between_sources is not None:
+            between_sources()
         try:
             items = fetch_source(src, settings.user_agent, settings.request_timeout)
         except FetchError as exc:
@@ -157,12 +212,16 @@ def run_cycle(
             continue
 
         rep.fetched = len(items)
-        baseline = seed_only or not store.has_any(src.id)
+        # bir dəfə uğurla oxunmuş boş mənbənin ilk real elanı başlanğıc nöqtəsinə düşməsin
+        baseline = seed_only or not (store.has_any(src.id) or store.get(f"seeded:{src.id}"))
+        store.set(f"seeded:{src.id}", "1")
         rep.baseline = baseline
         for it in items:
             if store.is_seen(src.id, it.uid):
                 continue
-            match = matcher.evaluate(it.text, src.category, src.require_geo, src.categories)
+            match = matcher.evaluate(it.text, src.category, src.require_geo, src.categories, allow_weak=src.legal_forum)
+            if match and is_stale(it.published, settings.max_age_days, now):
+                match = None  # axtarış köhnə yazını təzə kimi qaytara bilər (məs. aprel xəbəri noyabrda)
             rep.new += 1
             outcome = store.add_item(it, match, suppress=baseline)
             if match:
@@ -181,13 +240,72 @@ def run_cycle(
     if ai is not None:
         _score_pending(settings, store, ai, report)
     _deliver(settings, store, names, tg, chat_ids, report, ai_on=ai is not None, dry_run=dry_run)
+    if send and not dry_run and not only:
+        _check_health(store, sources, report, tg, chat_ids)
     report.pending = store.pending_count()
     report.finished = _now_iso()
     return report
 
 
+def _check_health(store: Store, sources: list[Source], report: CycleReport, tg: TelegramClient | None,
+                  chat_ids: list[str]) -> None:
+    """Sınmış və ya uzun müddət boş qalan mənbə barədə bir dəfə xəbər verir; sağalana qədər təkrarlamır."""
+    read = [r for r in report.sources if not r.skipped]
+    if not read or sum(1 for r in read if r.error) * 2 > len(read):
+        return  # mənbələrin yarıdan çoxu xəta verirsə, problem internetdədir, mənbələrdə yox
+    by_id = {s.id: s for s in sources}
+    now = datetime.now(timezone.utc)
+    broken, empty, healed = [], [], []
+    for r in read:
+        sid = r.source_id
+        alerted = store.get(f"alerted:{sid}")
+        if r.error:
+            fails = int(store.get(f"fails:{sid}") or 0) + 1
+            store.set(f"fails:{sid}", str(fails))
+            if fails >= ALERT_AFTER_FAILS and not alerted:
+                broken.append(r)
+            continue
+        store.delete(f"fails:{sid}")
+        if r.fetched or by_id[sid].expect_empty:
+            store.set(f"filled:{sid}", now.isoformat())
+            if alerted:
+                healed.append(r)
+            continue
+        since = store.get(f"filled:{sid}")
+        if since is None:
+            store.set(f"filled:{sid}", now.isoformat())
+        elif now - datetime.fromisoformat(since) >= timedelta(days=ALERT_AFTER_EMPTY_DAYS) and not alerted:
+            empty.append(r)
+    if not (broken or empty or healed) or tg is None or not chat_ids:
+        return
+    lines: list[str] = []
+    if broken:
+        lines.append(f"⚠️ <b>Bu mənbələr {ALERT_AFTER_FAILS} dəfə ardıcıl oxunmadı:</b>")
+        lines += [f"• <code>{esc(r.source_id)}</code> — {esc((r.error or '')[:80])}" for r in broken]
+    if empty:
+        lines.append(f"⚠️ <b>Bu mənbələr {ALERT_AFTER_EMPTY_DAYS} gündür boşdur (sayt dəyişmiş ola bilər):</b>")
+        lines += [f"• <code>{esc(r.source_id)}</code>" for r in empty]
+    if healed:
+        lines.append("✅ <b>Yenidən işləyir:</b> " + ", ".join(f"<code>{esc(r.source_id)}</code>" for r in healed))
+    if broken or empty:
+        lines.append("Qalan mənbələr işləməyə davam edir.")
+    delivered = False
+    for chat in chat_ids:
+        try:
+            tg.send_message(chat, "\n".join(lines))
+            delivered = True
+        except TelegramError as exc:
+            log.warning("mənbə xəbərdarlığı göndərilmədi (%s): %s", chat, exc)
+    if delivered:
+        for r in broken + empty:
+            store.set(f"alerted:{r.source_id}", "1")
+        for r in healed:
+            store.delete(f"alerted:{r.source_id}")
+
+
 def _score_pending(settings: Settings, store: Store, ai: LeadAI, report: CycleReport) -> None:
-    rows = store.unscored(settings.ai_max_per_cycle)
+    wanted = effective_lead_types(settings, store)  # göndərilməyəcək lidə Claude pulu xərcləmə
+    rows = [r for r in store.unscored(settings.ai_max_per_cycle) if _wanted(r, wanted)]
     if not rows:
         return
     payload = [{"id": r["id"], "source": r["source_id"], "title": r["title"], "summary": r["summary"] or ""}
@@ -214,7 +332,13 @@ def _score_pending(settings: Settings, store: Store, ai: LeadAI, report: CycleRe
 def _deliver(settings, store, names, tg, chat_ids, report, ai_on: bool, dry_run: bool) -> None:
     min_score = effective_min_score(settings, store)
     digest_on = bool(effective_digest_time(settings, store))
+    wanted = effective_lead_types(settings, store)
     for row in store.pending(limit=1000):
+        if not _wanted(row, wanted):
+            if not dry_run:
+                store.mark_hidden(row["id"])
+            report.hidden += 1
+            continue
         if ai_on and row["ai_done"] == 0:
             continue  # bu dövrədə qiymətləndirilmədi (limit) — növbəti dövrədə
         score = row["ai_score"] if row["ai_done"] == 1 else None
@@ -309,7 +433,7 @@ def check_sources(settings: Settings, sources: list[Source], matcher: Matcher, o
             items = fetch_source(src, settings.user_agent, settings.request_timeout)
             row["count"] = len(items)
             for it in items:
-                m = matcher.evaluate(it.text, src.category, src.require_geo, src.categories)
+                m = matcher.evaluate(it.text, src.category, src.require_geo, src.categories, allow_weak=src.legal_forum)
                 if m:
                     row["matched"] += 1
                     if len(row["sample"]) < 3:

@@ -9,6 +9,10 @@
 #   require_geo    true → mətndə Azərbaycan/Bakı sözü olmalıdır (keywords.yaml → geo)
 #   disable_after  YYYY-MM-DD → bu tarixdən sonra mənbə avtomatik söndürülür
 #   enabled        false → yoxlanmır
+#   every_hours    bu qədər saatda bir oxunur (ağır və ya məhdudiyyətli saytlar üçün). Yazılmasa: hər dövrədə.
+#   legal_forum    true → hər yazı hüquqi sualdır, ümumi söz də kifayətdir (huquqlar.az, pravoved.ru)
+#   expect_empty   true → mənbənin boş qalması normaldır, 7 günlük "boşdur" xəbərdarlığı göndərilmir
+#   max_items      bir oxunuşda ən çox neçə element (defolt 60)
 #   note           qeyd (✅ işləyir, ⚠️ bəzən bloklanır, ❔ /check ilə yoxlayın, ⛔ işləmir)
 #
 # type-ə görə əlavə sahələr:
@@ -86,7 +90,7 @@ sources:
     type: rss
     url: "https://en.trend.az/feeds/index.rss"
     category: company
-    categories: [company, dispute, tender]
+    categories: [company, dispute]
     require_geo: false
     note: "❔ Google News-dən tez gəlir. /check ilə yoxlayın."
 
@@ -95,16 +99,16 @@ sources:
     type: rss
     url: "https://www.azernews.az/feed.php"
     category: company
-    categories: [company, dispute, tender]
+    categories: [company, dispute]
     require_geo: false
     note: "❔ /check ilə yoxlayın."
 
   # ───────────── FƏRDİ SORĞULAR (forumlar) ─────────────
-  - id: expat_az_forum
+  - id: expat_az_forum_all
     name: "Expat.com — Azerbaijan forumu"
     type: html_links
     url: "https://www.expat.com/en/forum/asia/azerbaijan/"
-    link_pattern: "/en/forum/asia/azerbaijan/\\d+-"
+    link_pattern: "/en/forum/asia/azerbaijan/(baku/)?\\d+-"
     category: individual
     categories: [individual]
     require_geo: false
@@ -149,6 +153,7 @@ sources:
     category: tender
     categories: [tender, job]
     require_geo: false
+    expect_empty: true
     note: "✅ Lent işləyir. 09.11.2026-da saytda Azərbaycan üzrə elan yox idi, ona görə 0 element normaldır. Ölkə səhifəsində iş linkləri olmur."
 
   - id: reliefweb_api_az
@@ -243,3 +248,675 @@ sources:
     require_geo: false
     enabled: false
     note: "❔ JavaScript ilə yüklənə bilər. /check --only jobsearch_az_legal ilə sınayın."
+
+  # ───────────── 09.11.2026-da canlı yoxlanmış əlavə mənbələr ─────────────
+
+
+  # ───────────── Individuals ─────────────
+  - id: huquqlar_rss
+    name: "huquqlar.az - forum RSS"
+    type: rss
+    url: "https://huquqlar.az/forums/-/index.rss"
+    category: individual
+    categories: [individual]
+    require_geo: false
+    legal_forum: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: pravoved_az
+    name: "pravoved.ru - search: Азербайджан"
+    type: html_links
+    url: "https://pravoved.ru/search/?q=%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD"
+    link_pattern: "/question/\\d+/"
+    category: individual
+    categories: [individual]
+    require_geo: true
+    legal_forum: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: pravoved_az_nasledstvo
+    name: "pravoved.ru - search: Азербайджан наследство"
+    type: html_links
+    url: "https://pravoved.ru/search/?q=%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD+%D0%BD%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE"
+    link_pattern: "/question/\\d+/"
+    category: individual
+    categories: [individual]
+    require_geo: true
+    legal_forum: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: pravoved_az_grazhdanstvo
+    name: "pravoved.ru - search: гражданство Азербайджана"
+    type: html_links
+    url: "https://pravoved.ru/search/?q=%D0%B3%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD%D0%B0"
+    link_pattern: "/question/\\d+/"
+    category: individual
+    categories: [individual]
+    require_geo: true
+    legal_forum: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: pravoved_az_deport
+    name: "pravoved.ru - search: депортация Азербайджан"
+    type: html_links
+    url: "https://pravoved.ru/search/?q=%D0%B4%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD"
+    link_pattern: "/question/\\d+/"
+    category: individual
+    categories: [individual]
+    require_geo: true
+    legal_forum: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: pravoved_az_vezd
+    name: "pravoved.ru - search: запрет на въезд Азербайджан"
+    type: html_links
+    url: "https://pravoved.ru/search/?q=%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%82+%D0%BD%D0%B0+%D0%B2%D1%8A%D0%B5%D0%B7%D0%B4+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD"
+    link_pattern: "/question/\\d+/"
+    category: individual
+    categories: [individual]
+    require_geo: true
+    legal_forum: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+
+  # ───────────── Company signals - English ─────────────
+  - id: gnews_en_entity
+    name: "Google News - JV/subsidiary/rep office"
+    type: gnews
+    lang: en
+    query: 'Azerbaijan ("joint venture" OR subsidiary OR "representative office" OR "regional office" OR "local entity") when:7d -football -UEFA -Formula'
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_en_operators
+    name: "Google News - operators contracts/awards"
+    type: gnews
+    lang: en
+    query: 'Azerbaijan (Masdar OR "ACWA Power" OR bp OR SOCAR OR TotalEnergies OR ADNOC OR "Baku Shipyard") (contract OR subcontract OR awarded OR EPC OR supplier OR "framework agreement") when:7d'
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_en_disputes
+    name: "Google News - disputes"
+    type: gnews
+    lang: en
+    query: 'Azerbaijan (arbitration OR ICSID OR "investment treaty" OR "files claim" OR "notice of dispute" OR lawsuit) when:30d -football -Armenia -UEFA'
+    category: dispute
+    categories: [dispute, company]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_en_parks
+    name: "Google News - free zones and parks"
+    type: gnews
+    lang: en
+    query: '("Alat Free Economic Zone" OR AFEZ OR "Araz Valley" OR "industrial park" OR "Sumgayit Chemical Industrial Park") Azerbaijan (resident OR registered OR company OR plant) when:30d'
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: azertac_economy_rss
+    name: "AZERTAC economy"
+    type: rss
+    url: "https://azertag.az/en/rss-economy.xml"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    enabled: false
+    note: "⚠️ İşləyir, amma açar sözlə çox səs-küy verir. Claude açılandan sonra /unmute azertac_economy_rss."
+  - id: report_en_rss
+    name: "Report.az EN"
+    type: rss
+    url: "https://report.az/en/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: apa_en_rss
+    name: "APA EN"
+    type: rss
+    url: "https://en.apa.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: trend_azerbaijan_rss
+    name: "Trend Azerbaijan"
+    type: rss
+    url: "https://www.trend.az/feeds/azerbaijan.rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: afez_news
+    name: "AFEZ news"
+    type: html_links
+    url: "https://afez.az/en/media/news"
+    link_pattern: "/media/news/[a-z0-9-]+"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: amcham_home_posts
+    name: "AmCham homepage posts"
+    type: html_links
+    url: "https://amcham.az/en"
+    link_pattern: "/en/post/\\d+"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: afchamber_rss
+    name: "Azerbaijan-France chamber"
+    type: rss
+    url: "https://afchamber.com/feed/"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: legal500_az
+    name: "Legal500 Azerbaijan"
+    type: html_links
+    url: "https://www.legal500.com/intelligence/azerbaijan"
+    link_pattern: "/intelligence/azerbaijan/[a-z0-9-]+/[a-z0-9-]+"
+    category: company
+    categories: [dispute, company]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: caspianlegal_news
+    name: "Caspian Legal Center news"
+    type: rss
+    url: "https://www.caspianlegalcenter.az/feed-news"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+
+  # ───────────── Disputes ─────────────
+  - id: icsid_recent
+    name: "ICSID recent cases"
+    type: html_links
+    url: "https://icsid.worldbank.org/cases/recent"
+    link_pattern: "case-detail\\?CaseNo="
+    category: dispute
+    categories: [dispute, company]
+    require_geo: true
+    every_hours: 12
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: cbar_press
+    name: "Mərkəzi Bank - press-relizlər"
+    type: html_links
+    url: "https://www.cbar.az/press-releases/1"
+    link_pattern: "/press-release-\\d+"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gar_rss
+    name: "Global Arbitration Review"
+    type: rss
+    url: "https://globalarbitrationreview.com/rss"
+    category: dispute
+    categories: [dispute, company]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: iareporter_rss
+    name: "IAReporter"
+    type: rss
+    url: "https://www.iareporter.com/feed/"
+    category: dispute
+    categories: [dispute, company]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+
+  # ───────────── Tenders ─────────────
+  - id: undp_view_negotiation
+    name: "UNDP - view_negotiation pattern"
+    type: html_links
+    url: "https://procurement-notices.undp.org/"
+    link_pattern: "view_negotiation\\.cfm\\?nego_id=\\d+"
+    category: tender
+    categories: [tender]
+    require_geo: true
+    max_items: 600
+    every_hours: 6
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: ebrd_ecepp_html
+    name: "EBRD ECEPP notices (html_links, require_geo)"
+    type: html_links
+    url: "https://ecepp.ebrd.com/delta/noticeSearchResults.html"
+    link_pattern: "viewNotice\\.html\\?displayNoticeId=\\d+"
+    category: tender
+    categories: [tender]
+    require_geo: true
+    max_items: 5000
+    every_hours: 6
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: adb_advanced
+    name: "ADB advance notices"
+    type: rss
+    url: "http://feeds.feedburner.com/adb-advanced-notices"
+    category: tender
+    categories: [tender]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+
+  # ───────────── Jobs ─────────────
+  - id: hellojob_search_huquq
+    name: "HelloJob search huquq"
+    type: html_links
+    url: "https://www.hellojob.az/vakansiyalar?q=h%C3%BCquq"
+    link_pattern: "/vakansiya/[a-z0-9-]+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: boss_cat_huquq
+    name: "boss.az Huquqsunas"
+    type: html_links
+    url: "https://boss.az/search/vacancies?categoryIds=79"
+    link_pattern: "/vacancies/\\d+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: boss_cat_vekil
+    name: "boss.az Vekil"
+    type: html_links
+    url: "https://boss.az/search/vacancies?categoryIds=73"
+    link_pattern: "/vacancies/\\d+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: jobsearch_list
+    name: "jobsearch.az list"
+    type: html_links
+    url: "https://jobsearch.az/vacancies"
+    link_pattern: "/vacancies/[a-z0-9-]+-\\d+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: oneis_home
+    name: "1is.az home"
+    type: html_links
+    url: "https://1is.az/"
+    link_pattern: "/vacancy/\\d+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: vakansiya_biz_huquq
+    name: "vakansiya.biz huquqsunas"
+    type: html_links
+    url: "https://vakansiya.biz/az/jobs/profession/576/huquqsunas"
+    link_pattern: "/az/jobs/\\d+/"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: jooble_az_list
+    name: "jooble.az list"
+    type: html_links
+    url: "https://jooble.az/vacancies"
+    link_pattern: "/vacancies/[a-z0-9-]+-\\d+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: bakujobs_list
+    name: "bakujobs.az list"
+    type: html_links
+    url: "https://bakujobs.az/vacancies"
+    link_pattern: "/vacancy/[a-z0-9-]+"
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: unjobs_az
+    name: "unjobs Azerbaijan duty station"
+    type: html_links
+    url: "https://unjobs.org/duty_stations/azerbaijan"
+    link_pattern: "/vacancies/\\d{10,}"
+    category: tender
+    categories: [tender, job]
+    require_geo: false
+    every_hours: 6
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: impactpool_az_geo
+    name: "Impactpool search Azerbaijan (require_geo true)"
+    type: html_links
+    url: "https://www.impactpool.org/search?q=Azerbaijan"
+    link_pattern: "/jobs/\\d+"
+    category: tender
+    categories: [tender, job]
+    require_geo: true
+    every_hours: 6
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: reliefweb_c27
+    name: "ReliefWeb jobs RSS C27"
+    type: rss
+    url: "https://reliefweb.int/jobs/rss.xml?advanced-search=(C27)"
+    category: tender
+    categories: [tender, job]
+    require_geo: false
+    expect_empty: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_jobsearchazerbaijan
+    name: "Telegram - JobSearch.az"
+    type: tg_channel
+    channel: jobsearchazerbaijan
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_hellojobaz
+    name: "Telegram - HelloJob"
+    type: tg_channel
+    channel: hellojobaz
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_smartjobaz
+    name: "Telegram - SmartJob"
+    type: tg_channel
+    channel: smartjobaz
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_position_az
+    name: "Telegram - Position.az"
+    type: tg_channel
+    channel: position_az
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_joobleaz
+    name: "Telegram - Jooble.az"
+    type: tg_channel
+    channel: joobleaz
+    category: job
+    categories: [job]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+
+  # ───────────── Russian and Azerbaijani news (ADD-AFTER-KEYWORDS) ─────────────
+  - id: report_ru_rss
+    name: "Report.az RU"
+    type: rss
+    url: "https://report.az/ru/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: report_az_rss
+    name: "Report.az AZ"
+    type: rss
+    url: "https://report.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: apa_ru_rss
+    name: "APA RU"
+    type: rss
+    url: "https://ru.apa.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: apa_az_rss
+    name: "APA AZ"
+    type: rss
+    url: "https://apa.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: trend_ru_rss
+    name: "Trend RU"
+    type: rss
+    url: "https://ru.trend.az/feeds/index.rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: trend_az_rss
+    name: "Trend AZ"
+    type: rss
+    url: "https://az.trend.az/feeds/index.rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: azertac_ru_rss
+    name: "AZERTAC RU"
+    type: rss
+    url: "https://azertag.az/ru/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: azertac_az_rss
+    name: "AZERTAC AZ"
+    type: rss
+    url: "https://azertag.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: caliber_ru_rss
+    name: "Caliber RU"
+    type: rss
+    url: "https://caliber.az/rss.xml"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: dayaz_rss
+    name: "Day.az RU"
+    type: rss
+    url: "https://news.day.az/rss/"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: haqqin_rss
+    name: "Haqqin RU"
+    type: rss
+    url: "https://haqqin.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: minval_rss
+    name: "Minval RU"
+    type: rss
+    url: "https://minval.az/feed"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: mediaaz_rss
+    name: "Media.az RU"
+    type: rss
+    url: "https://media.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: vesti_rss
+    name: "Vesti.az RU"
+    type: rss
+    url: "https://vesti.az/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: sputnik_az_rss
+    name: "Sputnik Azerbaijan RU"
+    type: rss
+    url: "https://az.sputniknews.ru/export/rss2/archive/index.xml"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: vestikavkaza_rss
+    name: "Vestnik Kavkaza RU"
+    type: rss
+    url: "https://vestikavkaza.ru/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: marja_rss
+    name: "Marja.az AZ"
+    type: rss
+    url: "https://marja.az/rss.php"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: banker_rss
+    name: "Banker.az AZ"
+    type: rss
+    url: "https://banker.az/feed/"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: taxes_news_az
+    name: "State Tax Service news (AZ)"
+    type: html_links
+    url: "https://www.taxes.gov.az/az/page/xeberler"
+    link_pattern: "/az/post/\\d+"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: economy_gov_news
+    name: "Ministry of Economy news"
+    type: html_links
+    url: "https://economy.gov.az/en/page/media/news"
+    link_pattern: "/en/post/\\d+"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: musiad_rss
+    name: "MUSIAD Azerbaijan"
+    type: rss
+    url: "https://musiad.az/feed/"
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_oxuaze
+    name: "Telegram - Oxu.az"
+    type: tg_channel
+    channel: oxuaze
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_flash1news
+    name: "Telegram - 1news"
+    type: tg_channel
+    channel: flash1news
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_economy_az
+    name: "Telegram - Economy ministry"
+    type: tg_channel
+    channel: economy_az
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_merkezibank_az
+    name: "Telegram - CBAR"
+    type: tg_channel
+    channel: MerkeziBank_AZ
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: tg_dovletmiqrasiyaxidmeti
+    name: "Telegram - Migration Service"
+    type: tg_channel
+    channel: dovletmiqrasiyaxidmeti
+    category: company
+    categories: [company, dispute]
+    require_geo: false
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+
+  # ───────────── Google News and Turkish press (ADD-AFTER-KEYWORDS) ─────────────
+  - id: gnews_ru_entity
+    name: "Google News RU - entity forms"
+    type: gnews
+    lang: ru
+    query: 'Азербайджан ("дочерняя компания" OR "совместное предприятие" OR "открыла офис" OR "выходит на рынок" OR "представительство компании") when:14d -футбол -посольство -дипломатическ'
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_ru_projects
+    name: "Google News RU - projects"
+    type: gnews
+    lang: ru
+    query: 'Азербайджан (инвестор OR компания) ("построит" OR "откроет" OR "запустит" OR "подписала контракт" OR "выиграла тендер") when:14d -футбол'
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_ru_license
+    name: "Google News RU - licences"
+    type: gnews
+    lang: ru
+    query: 'Азербайджан (лицензия OR лицензию) ("Центральный банк" OR ЦБА OR "платежная организация" OR страховщик OR банк) when:30d -курсы -курс -ставк'
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_ru_karabakh
+    name: "Google News RU - Karabakh contractors"
+    type: gnews
+    lang: ru
+    query: 'Карабах OR Агдам OR Шуша OR Зангилан (подрядчик OR контракт OR тендер OR "построит" OR инвестор) компания when:30d -футбол -Армения'
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_tr_invest
+    name: "Google News TR - investment/factory (hl=tr)"
+    type: rss
+    url: "https://news.google.com/rss/search?q=Azerbaycan+%28%22fabrika+kuracak%22+OR+%22yat%C4%B1r%C4%B1m+yapacak%22+OR+%22ortak+giri%C5%9Fim%22+OR+%22temsilcilik+a%C3%A7t%C4%B1%22+OR+%22ofis+a%C3%A7t%C4%B1%22+OR+%22%C5%9Fube+a%C3%A7t%C4%B1%22%29+when%3A30d+-futbol+-milli+-%22%C4%B0hale+Dergisi%22&hl=tr&gl=TR&ceid=TR:tr"
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: gnews_tr_baku
+    name: "Google News TR - Baku deals (hl=tr)"
+    type: rss
+    url: "https://news.google.com/rss/search?q=Bak%C3%BC+%28anla%C5%9Fma+OR+s%C3%B6zle%C5%9Fme+OR+ihale+OR+yat%C4%B1r%C4%B1m+OR+%22i%C5%9F+birli%C4%9Fi%22%29+%C5%9Firket+when%3A14d+-futbol+-ma%C3%A7+-Karaba%C4%9F+-%22%C4%B0hale+Dergisi%22&hl=tr&gl=TR&ceid=TR:tr"
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: dunya_rss
+    name: "Dunya"
+    type: rss
+    url: "https://www.dunya.com/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."
+  - id: ekonomim_rss
+    name: "Ekonomim"
+    type: rss
+    url: "https://www.ekonomim.com/rss"
+    category: company
+    categories: [company, dispute]
+    require_geo: true
+    note: "✅ 09.11.2026 canlı yoxlanıb."

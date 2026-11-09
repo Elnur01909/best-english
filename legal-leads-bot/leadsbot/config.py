@@ -9,7 +9,7 @@ import yaml
 from dotenv import load_dotenv
 
 from .filters import KeywordProfile
-from .models import Source
+from .models import LEAD_TYPES, Source
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SOURCES = ROOT / "config" / "sources.yaml"
@@ -17,6 +17,7 @@ DEFAULT_KEYWORDS = ROOT / "config" / "keywords.yaml"
 DEFAULT_DB = ROOT / "data" / "leads.sqlite"
 DEFAULT_UA = "linux:legal-leads-bot:1.0 (RSS/HTML reader for legal-services leads)"
 DEFAULT_AI_MODEL = "claude-opus-5-5"
+DEFAULT_LEAD_TYPES = ("individual", "job", "tender")  # şirkət və mübahisə xəbərləri kömək axtaran deyil
 _HHMM = re.compile(r"^([01]?\d|2[0-3]):([0-5]\d)$")
 
 
@@ -46,6 +47,11 @@ class Settings:
     digest_time: str = ""  # "HH:MM" yerli vaxtla; boş = xülasə yoxdur, hər şey dərhal gəlir
     digest_size: int = 10
     tz_offset_hours: float = 4.0  # Bakı UTC+4
+    # ── nə göndərilsin ──
+    lead_types: tuple[str, ...] = DEFAULT_LEAD_TYPES
+    max_age_days: int = 30  # tarixi bundan köhnə olan elementlər göndərilmir; 0 = yoxlama yoxdur
+    # ── nəzarət ──
+    healthcheck_url: str = ""  # hər dövrənin sonunda çağırılır (healthchecks.io); bot susanda sizə xəbər gəlir
 
     @property
     def ai_enabled(self) -> bool:
@@ -108,7 +114,21 @@ def load_settings(env_file: Path | None = None) -> Settings:
         digest_time=parse_hhmm(os.getenv("DIGEST_TIME", "")),
         digest_size=max(1, _int_env("DIGEST_SIZE", 10)),
         tz_offset_hours=_float_env("TZ_OFFSET_HOURS", 4.0),
+        healthcheck_url=os.getenv("HEALTHCHECK_URL", "").strip(),
+        lead_types=parse_lead_types(os.getenv("LEAD_TYPES", "").strip() or ",".join(DEFAULT_LEAD_TYPES)),
+        max_age_days=max(0, _int_env("MAX_AGE_DAYS", 30)),
     )
+
+
+def parse_lead_types(raw: str) -> tuple[str, ...]:
+    """'individual, job' → ('individual', 'job'); 'all' → hamısı. Səhv sözdə ConfigError."""
+    words = raw.lower().replace(",", " ").split()
+    if words == ["all"]:
+        return LEAD_TYPES
+    bad = [w for w in words if w not in LEAD_TYPES]
+    if bad or not words:
+        raise ConfigError(f"LEAD_TYPES yalnız bunlardan ola bilər: {', '.join(LEAD_TYPES)}")
+    return tuple(words)
 
 
 def parse_hhmm(raw: str) -> str:

@@ -3,6 +3,7 @@ from unittest.mock import patch
 
 from conftest import fixture_bytes
 from leadsbot.ai import AIError, LeadScore
+from leadsbot.config import DEFAULT_LEAD_TYPES
 from leadsbot.models import Item, Source
 from leadsbot.runner import maybe_send_digest, run_cycle
 from leadsbot.sources import FetchError, parse_rss
@@ -252,3 +253,191 @@ def test_runtime_digest_override(settings, matcher):
     store.set("digest_time", "off")
     settings.digest_time = "09:00"
     assert effective_digest_time(settings, store) == ""
+
+
+def _items(src, *titles):
+    return [Item(src.id, f"u-{t}", t, f"https://x/{i}", "", "", "x") for i, t in enumerate(titles)]
+
+
+Q = Source(id="q", name="q", type="rss", url="https://q", category="individual", categories=["individual"], require_geo=False)
+OK = Source(id="ok", name="ok", type="rss", url="https://ok", category="individual", categories=["individual"], require_geo=False)
+
+
+def _none(src, ua, timeout, session=None):
+    return []
+
+
+def _lawyer(src, ua, timeout, session=None):
+    return _items(src, f"Need a lawyer {src.id}")
+
+
+def _q_fails(src, ua, timeout, session=None):
+    if src.id == "q":
+        raise FetchError("HTTP 500 (q)")
+    return _items(src, "plov")
+
+
+def test_empty_source_does_not_swallow_its_first_real_item(settings, matcher):
+    store = Store(settings.db_path)
+    tg = FakeTG()
+    assert run(settings, store, [Q], matcher, tg, fetch=_none).sources[0].baseline
+    rep = run(settings, store, [Q], matcher, tg, fetch=_lawyer)
+    assert not rep.sources[0].baseline and rep.sent == 1
+
+
+def test_source_that_only_failed_so_far_still_gets_a_baseline(settings, matcher):
+    store = Store(settings.db_path)
+    tg = FakeTG()
+
+    def boom(src, ua, timeout, session=None):
+        raise FetchError("down")
+
+    run(settings, store, [Q], matcher, tg, fetch=boom)
+    rep = run(settings, store, [Q], matcher, tg, fetch=_lawyer)
+    assert rep.sources[0].baseline and rep.sent == 0
+
+
+def test_every_hours_skips_recent_reads_unless_asked_by_id(settings, matcher):
+    store = Store(settings.db_path)
+    src = Source(id="q", name="q", type="rss", url="https://q", category="individual", every_hours=6, require_geo=False)
+    calls = []
+
+    def fetch(s, ua, timeout, session=None):
+        calls.append(s.id)
+        return []
+
+    run(settings, store, [src], matcher, FakeTG(), fetch=fetch)
+    assert run(settings, store, [src], matcher, FakeTG(), fetch=fetch).sources[0].skipped
+    assert len(calls) == 1
+    run(settings, store, [src], matcher, FakeTG(), fetch=fetch, only={"q"})
+    assert len(calls) == 2
+
+
+def test_broken_source_is_reported_once_and_recovery_is_announced(settings, matcher):
+    store = Store(settings.db_path)
+    tg = FakeTG()
+    for _ in range(5):
+        run(settings, store, [Q, OK], matcher, tg, fetch=_q_fails)
+    alerts = [t for _, t, _ in tg.sent if "ardıcıl oxunmadı" in t]
+    assert len(alerts) == 1 and "<code>q</code>" in alerts[0] and "HTTP 500" in alerts[0]
+    run(settings, store, [Q, OK], matcher, tg, fetch=_lawyer)
+    assert any("Yenidən işləyir" in t and "<code>q</code>" in t for _, t, _ in tg.sent)
+
+
+def test_internet_outage_is_not_blamed_on_sources(settings, matcher):
+    store = Store(settings.db_path)
+    tg = FakeTG()
+
+    def down(src, ua, timeout, session=None):
+        raise FetchError("şəbəkə xətası")
+
+    for _ in range(4):
+        run(settings, store, [Q, OK], matcher, tg, fetch=down)
+    assert tg.sent == [] and store.get("fails:q") is None
+
+
+def test_long_empty_source_is_reported_unless_empty_is_normal(settings, matcher):
+    store = Store(settings.db_path)
+    tg = FakeTG()
+    calm = Source(id="calm", name="c", type="rss", url="https://c", category="tender", expect_empty=True, require_geo=False)
+    run(settings, store, [Q, calm], matcher, tg, fetch=_none)
+    assert tg.sent == []
+    old = "2026-01-01T00:00:00+00:00"
+    store.set("filled:q", old)
+    store.set("filled:calm", old)
+    run(settings, store, [Q, calm], matcher, tg, fetch=_none)
+    run(settings, store, [Q, calm], matcher, tg, fetch=_none)
+    alerts = [t for _, t, _ in tg.sent if "gündür boşdur" in t]
+    assert len(alerts) == 1 and "<code>q</code>" in alerts[0] and "calm" not in alerts[0]
+
+
+NEWS = Source(id="news", name="n", type="rss", url="https://n", category="company", categories=["company", "dispute"], require_geo=False)
+MIX = Source(id="mix", name="m", type="rss", url="https://m", category="company", require_geo=False)
+
+
+def _jv(src, ua, timeout, session=None):
+    return _items(src, f"CSG establishes a joint venture in Azerbaijan {src.id}")
+
+
+def test_company_news_sources_are_not_read_by_default(settings, matcher):
+    settings.lead_types = DEFAULT_LEAD_TYPES
+    store = Store(settings.db_path)
+    calls = []
+
+    def fetch(src, ua, timeout, session=None):
+        calls.append(src.id)
+        return []
+
+    rep = run(settings, store, [NEWS, Q], matcher, FakeTG(), fetch=fetch)
+    assert calls == ["q"] and rep.sources[0].skipped
+
+
+def test_company_news_from_a_mixed_source_never_reaches_telegram(settings, matcher):
+    settings.lead_types = DEFAULT_LEAD_TYPES
+    store = Store(settings.db_path)
+    tg = FakeTG()
+    run(settings, store, [MIX], matcher, tg, fetch=_none)
+    rep = run(settings, store, [MIX], matcher, tg, fetch=_jv)
+    assert rep.hidden == 1 and rep.sent == 0 and tg.sent == [] and store.pending_count() == 0
+    assert store.recent_matches(5) == []
+
+
+def test_company_news_returns_when_the_owner_asks_for_it(settings, matcher):
+    store = Store(settings.db_path)
+    store.set("lead_types", "individual,company")
+    tg = FakeTG()
+    run(settings, store, [NEWS], matcher, tg, fetch=_none)
+    rep = run(settings, store, [NEWS], matcher, tg, fetch=_jv)
+    assert rep.sent == 1 and "joint venture" in tg.sent[0][1]
+
+
+def test_hidden_leads_are_not_sent_to_claude(settings, matcher):
+    settings.lead_types = DEFAULT_LEAD_TYPES
+    store = Store(settings.db_path)
+    ai = FakeAI(scores={"lawyer": 9})
+    run(settings, store, [MIX, Q], matcher, FakeTG(), fetch=_none, ai=ai)
+
+    def both(src, ua, timeout, session=None):
+        return _jv(src, ua, timeout) if src.id == "mix" else _lawyer(src, ua, timeout)
+
+    run(settings, store, [MIX, Q], matcher, FakeTG(), fetch=both, ai=ai)
+    assert [it["title"] for it in ai.calls[-1][0]] == ["Need a lawyer q"]
+
+
+def test_old_item_returned_by_a_search_is_not_sent(settings, matcher):
+    store = Store(settings.db_path)
+    settings.max_age_days = 30
+    tg = FakeTG()
+
+    def fetch(src, ua, timeout, session=None):
+        return [Item(src.id, "old", "Need a lawyer in Baku", "https://x/1", "", "Mon, 27 Apr 2026 07:00:00 GMT", "x"),
+                Item(src.id, "undated", "Lawyer wanted for a residence permit", "https://x/2", "", "", "x")]
+
+    run(settings, store, [Q], matcher, tg, fetch=_none)
+    rep = run(settings, store, [Q], matcher, tg, fetch=fetch)
+    assert rep.sent == 1 and "residence permit" in tg.sent[0][1]
+
+
+def test_is_stale_reads_both_date_formats():
+    from leadsbot.runner import is_stale
+
+    now = datetime(2026, 11, 9, tzinfo=timezone.utc)
+    assert is_stale("Mon, 27 Apr 2026 07:00:00 GMT", 30, now)
+    assert is_stale("2026-04-27T07:00:00Z", 30, now)
+    assert not is_stale("2026-11-01T07:00:00+00:00", 30, now)
+    assert not is_stale("", 30, now) and not is_stale("dünən", 30, now)
+    assert not is_stale("2020-01-01T00:00:00Z", 0, now)
+
+
+def test_legal_forum_accepts_one_general_word(settings, matcher):
+    store = Store(settings.db_path)
+    tg = FakeTG()
+    forum = Source(id="f", name="f", type="rss", url="https://f", category="individual", categories=["individual"],
+                   require_geo=False, legal_forum=True)
+
+    def fetch(src, ua, timeout, session=None):
+        return _items(src, "Dostum borcun qaytarmir")
+
+    run(settings, store, [forum, Q], matcher, tg, fetch=_none)
+    rep = run(settings, store, [forum, Q], matcher, tg, fetch=fetch)
+    assert rep.sources[0].matched == 1 and rep.sources[1].matched == 0

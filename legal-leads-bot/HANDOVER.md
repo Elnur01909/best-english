@@ -7,7 +7,7 @@
 
 ## 1. Məqsəd
 
-İstifadəçi Azərbaycan hüququ üzrə **ingilis dilində hüquqi xidmət** göstərmək istəyir. Müştərilər Azərbaycanda hüquqi problemi olan xarici şirkətlər və xarici fiziki şəxslərdir. Layihənin iki hissəsi var:
+İstifadəçi dünyanın harasında olursa olsun, Azərbaycanla bağlı hüquqi yardım axtaran hər kəs barədə Telegram-da xəbər almaq istəyir (2026-11-09-da genişləndirilib). Buraya xarici şirkətlər, xarici fiziki şəxslər, xaricdəki azərbaycanlılar və Azərbaycanda açıq hüquqi sual verənlər daxildir. Dillər: ingilis, rus, türk, Azərbaycan. İstifadəçi şirkət xəbərlərini (məs. "X şirkəti Azərbaycanda birgə müəssisə qurur") lid saymır: standart olaraq Telegram-a yalnız kömək axtaran insanlar, hüquqşünas vakansiyaları və hüquqi tenderlər gəlir (`/types`). Layihənin iki hissəsi var:
 
 1. **Araşdırma:** dünya üzrə potensial müştərilərin siyahısı, linklərlə.
 2. **Telegram botu:** yeni lidləri, hüquqşünas vakansiyalarını və hüquqi konsultant tenderlərini avtomatik tapıb istifadəçiyə göndərir.
@@ -39,11 +39,11 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 | Fayl | Rolu |
 |---|---|
 | `leadsbot/sources.py` | `gnews`, `rss`, `html_links`, `tg_channel` (t.me/s), `reliefweb_jobs`. Eyni hosta 3 saniyə fasilə qoyur, 429-da bir dəfə təkrarlayır |
-| `leadsbot/filters.py` | Söz sərhədli uyğunluq. `categories` mənbə üzrə məhdudiyyətdir. `weak` sözlər tək başına lid sayılmır |
+| `leadsbot/filters.py` | Söz sərhədli uyğunluq. `*` ilə bitən söz şəkilçiləri də tutur (`адвокат*`). Xüsusi hərflər fərq etmir (`vəkil` = `vekil`). `categories` mənbə üzrə məhdudiyyətdir. `weak` sözlər tək başına lid sayılmır |
 | `leadsbot/storage.py` | Baza miqrasiyası köhnə versiyadan avtomatik işləyir. `title_key` ilə mənbələr arası təkrar yoxlanılır |
 | `leadsbot/ai.py` | Claude: 20-lik toplu qiymətləndirmə, `output_config.format` JSON sxemi, `effort: low`. Opus/Sonnet modellərində `fallbacks: "default"` aktivdir. Məktub layihəsi də buradadır. Şablon ehtiyatı var |
-| `leadsbot/runner.py` | `run_cycle`, `maybe_send_digest`, `check_sources`. İlk oxunuşda başlanğıc nöqtəsi qoyulur: köhnə elementlər göndərilmir |
-| `leadsbot/bot.py` | Əmrlər: `/last`, `/l123`, `/pipeline`, `/draft`, `/addtg`, `/deltg`, `/digest`, `/minscore`, `/ai`, `/update`, `/version`, `/restart` və başqaları. Düymələr: Maraqlıdır, Əlaqə saxladım, Uyğun deyil, Məktub |
+| `leadsbot/runner.py` | `run_cycle`, `maybe_send_digest`, `check_sources`. İlk uğurlu oxunuşda başlanğıc nöqtəsi qoyulur: köhnə elementlər göndərilmir. `every_hours` ağır mənbələri seyrək oxuyur. Mənbə 3 dəfə ardıcıl xəta verəndə və ya 7 gün boş qalanda bir dəfə Telegram mesajı gəlir (`expect_empty` istisnadır) |
+| `leadsbot/bot.py` | Əmrlər: `/last`, `/l123`, `/pipeline`, `/draft`, `/addtg`, `/deltg`, `/addrss`, `/delrss`, `/health`, `/digest`, `/minscore`, `/ai`, `/update`, `/version`, `/restart` və başqaları. Dövrə gedərkən mənbələr arasında əmrlərə cavab verir. Düymələr: Maraqlıdır, Əlaqə saxladım, Uyğun deyil, Məktub |
 | `leadsbot/updater.py` | `/update` GitHub-dan zip endirir və yalnız `legal-leads-bot/**` fayllarını yazır. `.env`, `data` və `.venv` qorunur. Sonra 42 kodu ilə çıxır |
 | `leadsbot/setup_wizard.py` | `setup.bat`: token, `/start` gözləmə, çat ID, istəyə bağlı Claude açarı |
 | `leadsbot/lock.py` | Tək nüsxə kilidi. İki bot eyni anda Telegram-da 409 xətası verir |
@@ -53,7 +53,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 ## 4. İş qaydası (vacib)
 
 - **Kod yalnız GitHub branch-ında dəyişdirilir.** Testlər keçir, sonra commit və push edilir. İstifadəçi Telegram-da `/update` yazır. İstifadəçinin bot qovluğunda birbaşa dəyişiklik etməyin: `/update` onu üzərinə yazacaq.
-- **Testlər:** `cd legal-leads-bot && python -m pytest -q`. Hazırda 95 test var, hamısı keçməlidir.
+- **Testlər:** `cd legal-leads-bot && python -m pytest -q`. Hazırda 145 test var, hamısı keçməlidir.
 - **`.bat` faylları:** sətir sonu CRLF olmalıdır (`.gitattributes`). Mətn yalnız ASCII olmalıdır. Pəncərə üçün `cmd /k` yenidən açılma bloku saxlanılmalıdır. `chcp 65001` istifadə etməyin: bəzi Windows versiyalarında bat faylını səssizcə dayandırır.
 - **Sirlər:** `.env` heç vaxt commit edilmir və oxunmur.
 - **Bulud sessiyasının məhdudiyyəti:** sandbox-da xəbər, iş və forum saytları bloklanır (proxy 403). `codeload.github.com` və `api.github.com` isə açıqdır. Real mənbə yoxlaması yalnız istifadəçinin kompüterində olur: `check.bat`.
@@ -66,27 +66,31 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 - **Son versiya quraşdırılıb və `/update` real sınanıb.** `a6ffee6` yeniləməsində bot faylları yazdı və özünü yenidən başlatdı (kod 42), `.env` və baza qorundu.
 - **GitHub-a yazma:** istifadəçinin kompüterində `git` var, `gh` yoxdur. Bot qovluğu git reposu deyil, ona görə repo ayrıca klonlanmalıdır. `Elnur01909` girişi Git Credential Manager-də saxlanıb. Orada başqa hesablar da var (`elnurmirzey-crypto`, köhnə `x-access-token`), ona görə remote URL-də hesab adı olmalıdır: `https://Elnur01909@github.com/Elnur01909/best-english.git`. Hesab adı olmadan push rədd edildi.
 - **Claude açarı:** daxil edilməyib, Claude söndürülüb. Defolt model `claude-opus-5-5`, təxminən 20 $/ay. Alternativ `claude-haiku-5-5`, 1 $/aydan az.
-- **Mənbələr (2026-11-09, 17 aktiv, son dövrədə hamısı xətasız oxundu):**
-  - ✅ **İşləyir:** Google News-un 6 sorğusu, `trend_rss`, `azernews_rss`, `expat_az_forum`, `hellojob_az` (60 element), `busy_az` (5 element), `reddit_azerbaijan_new` (12.11-dək).
-  - ✅ **Düzəldilib, istifadəçinin kompüterindən canlı yoxlanıb:** `smartjob_az` (`/vakansiyalar`, 20 element), `glorri_jobs` (ana səhifə, 29 element; "Müraciət et" düymələrinin adı kartın başlığından götürülür), `reliefweb_jobs_az` (yenidən RSS; saytda Azərbaycan üzrə elan olmadığı üçün 0 element normaldır, eyni lent Ukrayna üçün 20 element verdi).
-  - ⚠️ **Bir dəfə xəta verib, növbəti dövrədə keçib:** `reddit_search_lawyer` (429), `undp_notices` (vaxt bitdi). Təkrarlanarsa baxın.
-  - ⛔ **Söndürülüb:** `tripadvisor` (403), `reliefweb_api_az` (təsdiqlənmiş appname yoxdur), `boss_az_legal` (404), `hh_az_legal` (ConnectionError), `jobsearch_az` (JS).
-- **Səs-küy:** IT və sığorta tenderləri, borc statistikası tək ümumi sözə görə keçirdi. `weak` qaydası ilə düzəldilib və testlərdə real nümunələrlə yoxlanılıb.
+- **Plan:** tam inkişaf planı istifadəçinin Masaüstündədir (`reports/Hüquqi lidlər botunun inkişaf planı.md`, repo açıq olduğu üçün GitHub-a göndərilməyib). 1-ci faza kodda hazırdır.
+- **Mənbələr (2026-11-09, 98 sətir, 92 aktiv, standart olaraq 35-i oxunur):** kömək axtaranlar: `huquqlar_rss`, 5 `pravoved_*` sorğusu (hər ikisində `legal_forum: true`), `expat_az_forum_all`, Reddit (12.11-dək). Vakansiyalar: iş saytları, boss.az kateqoriyaları, 5 Telegram kanalı. Tenderlər: UNDP (2 qayda), EBRD (4131 sətir, 6 saatda bir), ADB, ReliefWeb, unjobs, Impactpool.
+  - **Oxunmur, amma konfiqurasiyadadır:** `categories: [company, dispute]` olan 57 xəbər mənbəyi (Google News, rus/Azərbaycan/türk xəbər lentləri, ICSID, GAR, AFEZ və s.). `/types individual job tender company dispute` ilə dərhal açılır. `run_cycle` lid növü söndürülmüş mənbəni oxumur.
+  - **Məhdudiyyət:** pravoved.ru axtarışı tarixə görə sıralanmır və kartda tarix yoxdur. Yeni sual yalnız ilk 15 nəticəyə düşəndə görünür, köhnə sual da "yeni" kimi gələ bilər.
+  - ⛔ **Söndürülüb:** `tripadvisor` (403), `reliefweb_api_az` (təsdiqlənmiş appname yoxdur), `boss_az_legal` (404), `hh_az_legal` (ConnectionError), `jobsearch_az_legal` (JS), `azertac_economy_rss` (işləyir, amma açar sözlə səs-küy verir; Claude açılanda `/unmute`).
+  - **Çıxarılıb:** `bing_az_vekil` (siyasi məhkəmə xəbərləri), `bing_en_residence` (qayda xəbərləri): hər ikisində kömək axtaran yoxdur.
+  - ⚠️ **Bəzən xəta verir:** `reddit_search_lawyer` (429), `taxes_news_az` (ConnectionError). Artıq 3 ardıcıl xətada bot özü yazır.
+- **Canlı sınaq (2026-11-09):** standart 35 mənbə təxminən 70 saniyəyə oxunur. Botun bazasının surətində `/update`-dən sonrakı ilk dövrə 0 mesaj verdi (yeni mənbələr başlanğıc nöqtəsi alır). Gündə neçə real sual gələcəyi hələ ölçülməyib.
+- **Səs-küy:** Claude açarı olmadığı üçün açar sözdən keçən hər şey göndərilir. Tarixi 30 gündən köhnə elementlər göndərilmir (`MAX_AGE_DAYS`). Tender üçün hüquqla bağlı güclü söz şərtdir (`need_strong`). Ümumi fərdi sözlər (`miras`, `долг`) `weak` siyahısındadır və yalnız `legal_forum` mənbələrində tək başına kifayətdir. r/azerbaijan-da iki ümumi söz olan postlar hələ keçir, amma Reddit 12.11-də sönür.
 - **Reddit** RSS-i 13.11.2026-da bağlanır. Reddit mənbələrində `disable_after: 2026-11-12` var.
 
 ## 6. Növbəti addımlar
 
-1. **Nəticələrə baxmaq:** bir neçə gündən sonra `smartjob_az` və `glorri_jobs` mənbələrindən yeni lid gəldiyini yoxlayın (`data/leadsbot.log`). Hər ikisində başlanğıc nöqtəsi 2026-11-09-da qoyulub.
-2. **Telegram kanalları:** istifadəçi iş saytlarının Telegram linklərini `/addtg <link> job` ilə əlavə etməlidir. Kanal adları internetdə təsdiqlənmədi.
-3. **Claude:** açar yoxdursa, xatırladın (`setup.bat`). Varsa, ilk günün ballarına baxıb `AI_MIN_SCORE` dəyərini tənzimləyin.
-4. **Səhər xülasəsi:** istifadəçi istəsə, `/digest 09:00`.
+1. **Nəticələrə baxmaq:** 2026-11-23-də hansı mənbələrin lid verdiyinə baxın (`data/leadsbot.log`, `/stats`). Heç nə verməyənləri söndürün. Planın 2-ci fazası (mənbə üzrə həftəlik hesabat) bunu avtomatlaşdırır.
+2. **Google Alerts (Reddit əvəzi, 13.11-dən əvvəl):** istifadəçi alert yaradır, çatdırılma RSS seçir, linki Telegram-da `/addrss <link> individual` ilə yazır. Sorğular planın 1.6 bəndindədir.
+3. **Claude:** açar yoxdursa, xatırladın (`setup.bat`). Varsa, ilk iki həftə `/minscore 5` və `/digest 09:00`, sonra ballara baxıb tənzimləyin. Təlimat artıq bütün dillərə görə yazılıb, amma real açarla sınanmayıb.
+4. **Nəzarət:** healthchecks.io hesabı açılsa, keçidi `/health <link>` ilə yazmaq kifayətdir.
 5. **24 saat işləmə:** hazırda bot yalnız kompüter açıq olanda işləyir (`autostart.bat`). Növbəti variant Oracle Cloud Always Free + `deploy/install-linux.sh`. GitHub Actions üçün branch-ı `master`-ə birləşdirmək və secret-ləri əlavə etmək lazımdır, amma o rejimdə düymələr işləmir.
-6. **Yeni mənbə ideyaları:** Dünya Bankı procurement API (Azərbaycan filtri yoxlanmalıdır), UNGM və EBRD e-poçt xəbərdarlıqları (açıq lent yoxdur), Azərbaycan dövlət satınalmaları portalı etender.gov.az (açıq API tapılmadı).
+6. **Yeni mənbə ideyaları:** Dünya Bankı procurement API (işləyir, 1016 elan, yeni oxuyucu lazımdır), TED API, üzv siyahılarının müqayisəsi (AmCham, BCCA). Planın 3-cü fazasındadır.
 7. **Hesabatdakı TOP 10 lidlə iş:** Vulcan, Wonderful, GUGLER, ENNA, Sunsync, UFlex, Popeyes, TripAdvisor və Expat.com sorğuları. Onları bota "manual lid" kimi əlavə etmək ideyası hələ edilməyib.
 
 ## 7. Qərarlar tarixçəsi
 
-- Telegram kanalları kodda sabit yazılmayıb, çünki adları təsdiqlənmədi. Onlar `/addtg` ilə istifadəçi tərəfindən əlavə olunur.
+- 2026-11-09: istifadəçi şirkət xəbərini ("joint venture") nümunə göstərib yalnız real hüquqi yardım axtaranları istədiyini dedi. Şirkət və mübahisə xəbərləri standart olaraq söndürüldü. Vakansiya və tenderlər əvvəlki göstərişə görə qaldı (`/types individual` yalnız fərdi sorğular qoyur).
+- 2026-11-09-da Telegram kanal adları istifadəçinin kompüterindən canlı yoxlandı və konfiqurasiyaya yazıldı. Başqa kanallar `/addtg` ilə əlavə olunur.
 - LinkedIn və Facebook daxil edilməyib, çünki şərtləri avtomatik oxumağı qadağan edir.
 - Bot heç kimə özü yazmır. Məktub layihələrini istifadəçi yoxlayıb özü göndərir.
 - Claude defolt modeli `claude-opus-5-5`-dir. Ucuzlaşdırma istifadəçinin qərarıdır (`AI_MODEL`).

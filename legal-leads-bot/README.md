@@ -1,6 +1,6 @@
 # Legal Leads Bot — Telegram
 
-Azərbaycanda **ingilis dilində hüquqi xidmətə ehtiyacı olan şirkət və şəxsləri**, **hüquqşünas vakansiyalarını** və **hüquqi konsultant tenderlərini** izləyib sizə Telegram-a göndərən bot.
+Dünyanın harasında olursa olsun **Azərbaycanla bağlı hüquqi yardım axtaran şirkət və şəxsləri** (ingilis, rus, türk, Azərbaycan dillərində), **hüquqşünas vakansiyalarını** və **hüquqi konsultant tenderlərini** izləyib sizə Telegram-a göndərən bot.
 
 ## Nə edir
 
@@ -64,7 +64,8 @@ Xərc gündə ~150 uyğun lid üçün təxminidir. Açar: https://platform.claud
 | `/last 20` | son uyğun lidlər |
 | `/l123` | lid kartı və düymələr |
 | `/pipeline` | "Maraqlıdır" və "Əlaqə saxladım" lidləri |
-| `/draft 123` | ingiliscə məktub layihəsi (Claude və ya şablon) |
+| `/draft 123` | lidin dilində məktub layihəsi (Claude; açar yoxdursa ingiliscə şablon) |
+| `/types individual job tender` | Telegram-a hansı lid növləri gəlsin (`company`, `dispute` əlavə oluna bilər) |
 | `/addtg @kanal job` | ictimai Telegram kanalı əlavə et (`job`, `individual`, `company`, `tender`) |
 | `/deltg @kanal` | kanalı sil |
 | `/digest 09:00` · `/digest off` · `/digest now` | səhər xülasəsi |

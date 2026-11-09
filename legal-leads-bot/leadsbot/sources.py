@@ -20,14 +20,19 @@ GNEWS_LOCALES = {
 RELIEFWEB_URL = "https://api.reliefweb.int/v2/jobs"
 # forum siyahılarında mövzu linki olmayan köməkçi linklər ("Last post 6 years ago by ...", "3 replies", "Page 2")
 JUNK_ANCHOR = re.compile(
-    r"^(last post\b|latest reply\b|reply\b|replies\b|read more\b|more\b|ətraflı\b|daha çox\b|son (mesaj|cavab)\b|"
+    r"^(last post\b|latest reply\b|reply\b|replies\b|son (mesaj|cavab)\b|"
     r"page\s*\d+$|\d+\s*(replies|views|cavab|baxış)?$)",
     re.I,
 )
-# iş saytlarında bəzən elanın adı linkdə yox, kartın başlığında olur; link sadəcə düymədir
-BUTTON_ANCHOR = re.compile(r"^(müraciət et|apply( now)?)$", re.I)
+# link sadəcə düymədir ("Müraciət et", "ətraflı"): elanın adı linkdə yox, kartın başlığındadır
+BUTTON_ANCHOR = re.compile(
+    r"^(müraciət et|apply( now)?|ətraflı( məlumat| oxu)?|daha çox( oxu)?|read more|learn more|more|davamı|"
+    r"davamını oxu|oxumağa davam edin|подробнее|читать далее|далее)\W*$",
+    re.I,
+)
 CARD_TAGS = ["li", "tr", "article", "div"]
 MAX_CARD_DEPTH = 4
+HEADINGS = ["h1", "h2", "h3", "h4", "h5"]
 MIN_HOST_GAP = 3.0  # eyni sayta ardıcıl sorğular arasında saniyə (Reddit 429 verməsin)
 MAX_RETRY_AFTER = 30
 _LAST_HIT: dict[str, float] = {}
@@ -96,12 +101,21 @@ def parse_rss(content: bytes | str, src: Source) -> list[Item]:
     return items
 
 
-def _job_card(a, rx: re.Pattern, base: str, key: str):
-    """Düymə linkinin aid olduğu kart: içində başqa elan linki olmayan ən böyük blok."""
+def _item_keys(el, rx: re.Pattern, base: str, cache: dict[int, set[str]]) -> set[str]:
+    """Bloğun içindəki elan linkləri. Böyük səhifələrdə yavaşlamasın deyə hər blok üçün bir dəfə hesablanır."""
+    keys = cache.get(id(el))
+    if keys is None:
+        hrefs = (urljoin(base, x.get("href", "").strip()).split("#", 1)[0] for x in el.select("a[href]")
+                 if not JUNK_ANCHOR.match(x.get_text(" ", strip=True)))
+        keys = cache[id(el)] = {h for h in hrefs if rx.search(h)}
+    return keys
+
+
+def _own_card(a, key: str, rx: re.Pattern, base: str, cache: dict[int, set[str]]):
+    """Linkin aid olduğu kart: içində başqa elan linki olmayan ən böyük blok."""
     card = None
     for parent in a.find_parents(CARD_TAGS, limit=MAX_CARD_DEPTH):
-        hrefs = (urljoin(base, x.get("href", "").strip()).split("#", 1)[0] for x in parent.select("a[href]"))
-        if any(h != key and rx.search(h) for h in hrefs):
+        if _item_keys(parent, rx, base, cache) - {key}:
             break
         card = parent
     return card
@@ -112,6 +126,7 @@ def parse_html_links(html: str, src: Source, base_url: str | None = None) -> lis
     soup = BeautifulSoup(html, "html.parser")
     base = base_url or src.url
     found: dict[str, Item] = {}
+    cache: dict[int, set[str]] = {}
     for a in soup.select("a[href]"):
         href = urljoin(base, a.get("href", "").strip())
         if not rx.search(href):
@@ -121,16 +136,20 @@ def parse_html_links(html: str, src: Source, base_url: str | None = None) -> lis
         if title and JUNK_ANCHOR.match(title):
             continue
         container = a.find_parent(CARD_TAGS)
-        if title and BUTTON_ANCHOR.match(title):
-            card = _job_card(a, rx, base, key)
+        if container is not None and _item_keys(container, rx, base, cache) - {key}:
+            container = None  # blok bir neçə elanı əhatə edir, onun mətni bu elana aid deyil
+        if not title or BUTTON_ANCHOR.match(title):
+            card = _own_card(a, key, rx, base, cache)
             if card is not None:
                 container = card
-                heading = card.find(["h1", "h2", "h3", "h4", "h5"])
+                heading = card.find(HEADINGS)
                 title = (heading or card).get_text(" ", strip=True)[:140]
+            elif title:
+                continue  # düymədir, amma öz kartı yoxdur: adını götürəcək yer yoxdur
         summary = container.get_text(" ", strip=True)[:600] if container else ""
         existing = found.get(key)
         if existing is None:
-            found[key] = Item(src.id, key, title or key, key, summary, "", _domain(key))
+            found[key] = Item(src.id, key, title, key, summary, "", _domain(key))
         elif len(title) > len(existing.title) and title:
             existing.title = title
             if summary:
@@ -157,6 +176,15 @@ def parse_reliefweb(data: dict, src: Source) -> list[Item]:
     return items
 
 
+def _tg_title(text: str) -> str:
+    """Postun ilk mənalı sətri: yalnız emoji və ya bəzəkdən ibarət sətirlər keçilir."""
+    for line in text.splitlines():
+        clean = re.sub(r"^[\W_]+", "", line).strip()
+        if sum(c.isalpha() for c in clean) >= 3:
+            return clean[:140]
+    return text.strip()[:140]
+
+
 def parse_tg_channel(html: str, src: Source) -> list[Item]:
     """t.me/s/<kanal> ictimai önizləmə səhifəsindən son postlar (ən yenisi birinci)."""
     soup = BeautifulSoup(html, "html.parser")
@@ -173,8 +201,7 @@ def parse_tg_channel(html: str, src: Source) -> list[Item]:
         text = body.get_text("\n", strip=True) if body else ""
         if not text:
             continue  # yalnız şəkil/video olan postlar
-        first_line = next((ln.strip() for ln in text.splitlines() if ln.strip()), text)
-        title = first_line[:140]
+        title = _tg_title(text)
         t = msg.select_one("time[datetime]")
         published = t.get("datetime", "") if t else ""
         items.append(Item(src.id, f"tg:{post}", title, f"https://t.me/{post}", text[:1500], published,

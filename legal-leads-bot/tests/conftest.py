@@ -8,6 +8,7 @@ import pytest  # noqa: E402
 
 from leadsbot.config import DEFAULT_KEYWORDS, DEFAULT_SOURCES, Settings, load_profile, load_sources  # noqa: E402
 from leadsbot.filters import Matcher  # noqa: E402
+from leadsbot.models import LEAD_TYPES  # noqa: E402
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -31,7 +32,7 @@ def sources():
 def settings(tmp_path):
     return Settings(
         bot_token="123:TEST", allowed_chat_ids=["42"], db_path=tmp_path / "t.sqlite",
-        sources_file=DEFAULT_SOURCES, keywords_file=DEFAULT_KEYWORDS, max_per_cycle=2,
+        sources_file=DEFAULT_SOURCES, keywords_file=DEFAULT_KEYWORDS, max_per_cycle=2, max_age_days=0, lead_types=LEAD_TYPES,
     )
 
 

@@ -1,15 +1,20 @@
 from __future__ import annotations
 
+import hashlib
 import logging
 import re
 import time
+from urllib.parse import urlparse
+
+import requests
 
 from .ai import AIError, LeadAI, template_draft
-from .config import Settings, all_sources, load_profile, load_sources, parse_hhmm, ConfigError
+from .config import Settings, all_sources, load_profile, load_sources, parse_hhmm, parse_lead_types, ConfigError
 from .filters import Matcher
-from .formatting import (BUTTON_STATUS, STATUS_LABELS, esc, format_row, format_short, lead_keyboard)
-from .models import CATEGORIES, Source, normalize_tg_handle
-from .runner import (check_sources, effective_digest_time, effective_min_score, maybe_send_digest, run_cycle)
+from .formatting import (BUTTON_STATUS, CATEGORY_META, STATUS_LABELS, esc, format_row, format_short, lead_keyboard)
+from .models import CATEGORIES, LEAD_TYPES, Source, normalize_tg_handle
+from .runner import (check_sources, effective_digest_time, effective_health_url, effective_lead_types, effective_min_score,
+                     maybe_send_digest, run_cycle)
 from .sources import FetchError, fetch_source
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
@@ -18,7 +23,7 @@ from .config import ROOT
 
 log = logging.getLogger("leadsbot.bot")
 
-HELP = """<b>Legal Leads Bot</b> — Azərbaycanda ingilisdilli hüquqi xidmət lidləri, iş elanları və tenderlər.
+HELP = """<b>Legal Leads Bot</b> — Azərbaycanla bağlı hüquqi yardım axtaranlar, iş elanları və tenderlər.
 
 <b>Lidlər</b>
 /last [n] — son uyğun lidlər · /l123 — lid kartı və düymələr
@@ -30,8 +35,12 @@ HELP = """<b>Legal Leads Bot</b> — Azərbaycanda ingilisdilli hüquqi xidmət 
 /sources — siyahı · /mute id · /unmute id
 /addtg @kanal [job|individual|company|tender] — Telegram kanalı əlavə et
 /deltg @kanal — kanalı sil
+/addrss link [individual|company|job|tender|dispute] — RSS lenti əlavə et (Google Alerts)
+/delrss id — RSS lentini sil
+/health link — bot susanda xəbər verən keçid · /health off
 
 <b>Filtr və çatdırılma</b>
+/types individual job tender — Telegram-a hansı növlər gəlsin (company, dispute əlavə oluna bilər)
 /ai — Claude statusu · /minscore 6 — minimum bal
 /digest 09:00 · /digest off · /digest now — səhər xülasəsi
 /keywords · /addkw söz · /delkw söz
@@ -51,6 +60,8 @@ class LeadsBot:
         self.config_sources: list[Source] = load_sources(settings.sources_file)
         self.profile = load_profile(settings.keywords_file)
         self.allowed = set(settings.require_chat_ids())
+        self.offset: int | None = None
+        self.cycling = False
 
     # ── helpers ──
     @property
@@ -80,7 +91,6 @@ class LeadsBot:
     def run_forever(self, run_first: bool = True) -> None:
         interval = self.settings.fetch_interval_min * 60
         next_cycle = time.monotonic() if run_first else time.monotonic() + interval
-        offset: int | None = None
         log.info("serve: %d mənbə, hər %d dəq, çatlar: %s, Claude: %s", len(self.sources),
                  self.settings.fetch_interval_min, ", ".join(self.settings.allowed_chat_ids),
                  self.settings.ai_model if self.ai else "söndürülüb")
@@ -97,20 +107,29 @@ class LeadsBot:
                 log.exception("xülasə xətası")
             wait = max(1, min(30, int(next_cycle - time.monotonic())))
             try:
-                updates = self.tg.get_updates(offset, timeout=wait)
+                self.poll(wait)
             except TelegramError as exc:
                 log.warning("getUpdates: %s", exc)
                 time.sleep(5)
-                continue
-            for upd in updates:
-                offset = upd["update_id"] + 1
-                try:
-                    self.handle(upd)
-                except RestartRequested:
-                    self._ack(offset)
-                    raise
-                except Exception:  # bir əmr xətası botu öldürməsin
-                    log.exception("əmr emalında xəta")
+
+    def poll(self, timeout: int) -> None:
+        """Telegram-dan yeni əmrləri oxuyur və icra edir."""
+        for upd in self.tg.get_updates(self.offset, timeout=timeout):
+            self.offset = upd["update_id"] + 1
+            try:
+                self.handle(upd)
+            except RestartRequested:
+                self._ack(self.offset)
+                raise
+            except Exception:  # bir əmr xətası botu öldürməsin
+                log.exception("əmr emalında xəta")
+
+    def _poll_during_cycle(self) -> None:
+        """Dövrə bir neçə dəqiqə çəkir: bu vaxt düymələr və əmrlər gözləməsin."""
+        try:
+            self.poll(0)
+        except TelegramError as exc:
+            log.warning("getUpdates: %s", exc)
 
     def _ack(self, offset: int) -> None:
         """Telegram-a 'bu əmri oxudum' de ki, yenidən başladıqdan sonra təkrar icra olunmasın."""
@@ -120,13 +139,36 @@ class LeadsBot:
             log.warning("offset təsdiqlənmədi: %s", exc)
 
     def cycle(self, announce: bool, chat_id: str | None = None, only: set[str] | None = None) -> None:
-        report = run_cycle(
-            self.settings, self.store, self.sources, self.matcher(), self.tg, self.active_chats(),
-            send=True, only=only, ai=self.ai,
-        )
+        self.cycling = True
+        try:
+            report = run_cycle(
+                self.settings, self.store, self.sources, self.matcher(), self.tg, self.active_chats(),
+                send=True, only=only, ai=self.ai, between_sources=self._poll_during_cycle,
+            )
+        finally:
+            self.cycling = False
         log.info(report.summary_text().replace("\n", " | "))
+        if not only:
+            self.ping_health()
         if announce and chat_id:
             self.reply(chat_id, esc(report.summary_text()))
+
+    def ping_health(self) -> bool:
+        """Nəzarət xidmətinə 'bot işləyir' siqnalı. Keçid yoxdursa və ya alınmasa, botu dayandırmır."""
+        url = effective_health_url(self.settings, self.store)
+        if not url:
+            return False
+        try:
+            requests.get(url, timeout=10).raise_for_status()
+            return True
+        except requests.RequestException as exc:
+            log.warning("nəzarət siqnalı göndərilmədi: %s", exc.__class__.__name__)
+            return False
+
+    def busy(self, chat_id: str) -> bool:
+        if self.cycling:
+            self.reply(chat_id, "⏳ Mənbələr hazırda yoxlanır. Bitəndən sonra yenidən yazın.")
+        return self.cycling
 
     # ── updates ──
     def handle(self, update: dict) -> None:
@@ -159,6 +201,7 @@ class LeadsBot:
             "/last": self.cmd_last, "/stats": self.cmd_stats, "/stop": self.cmd_stop,
             "/reload": self.cmd_reload, "/lead": self.cmd_lead, "/pipeline": self.cmd_pipeline,
             "/draft": self.cmd_draft, "/addtg": self.cmd_addtg, "/deltg": self.cmd_deltg,
+            "/types": self.cmd_types, "/addrss": self.cmd_addrss, "/delrss": self.cmd_delrss, "/health": self.cmd_health,
             "/digest": self.cmd_digest, "/minscore": self.cmd_minscore, "/ai": self.cmd_ai,
             "/update": self.cmd_update, "/version": self.cmd_version, "/restart": self.cmd_restart,
         }.get(cmd)
@@ -293,11 +336,15 @@ class LeadsBot:
         self.reply(chat_id, "🔕 Bildirişlər dayandırıldı. Davam etmək üçün /start.")
 
     def cmd_run(self, chat_id: str, arg: str) -> None:
+        if self.busy(chat_id):
+            return
         only = {a.strip() for a in arg.split(",") if a.strip()} or None
         self.reply(chat_id, "⏳ Mənbələr yoxlanır…")
         self.cycle(announce=True, chat_id=chat_id, only=only)
 
     def cmd_check(self, chat_id: str, arg: str) -> None:
+        if self.busy(chat_id):
+            return
         only = {a.strip() for a in arg.split(",") if a.strip()} or None
         self.reply(chat_id, "⏳ Mənbələr test edilir (bazaya yazılmır)…")
         rows = check_sources(self.settings, self.sources, self.matcher(), only)
@@ -379,7 +426,72 @@ class LeadsBot:
         removed = self.store.remove_user_source(f"tg_{handle.lower()}")
         self.reply(chat_id, ("➖ Silindi: @" if removed else "Tapılmadı: @") + esc(handle))
 
+    @staticmethod
+    def _rss_id(url: str) -> str:
+        return "rss_" + hashlib.sha1(url.encode("utf-8")).hexdigest()[:8]
+
+    def cmd_addrss(self, chat_id: str, arg: str) -> None:
+        parts = arg.split()
+        url = parts[0] if parts else ""
+        category = parts[1].lower() if len(parts) > 1 else "individual"
+        if not url.lower().startswith(("https://", "http://")) or category not in CATEGORIES:
+            self.reply(chat_id, "İstifadə: /addrss link [individual|company|job|tender|dispute|other]\n"
+                                "Google Alerts-də çatdırılma üçün «RSS feed» seçin və linki bura yapışdırın.")
+            return
+        alerts = "google." in url.lower() and "/alerts/" in url.lower()
+        src = Source(id=self._rss_id(url), name="Google Alerts" if alerts else f"RSS: {urlparse(url).netloc}", type="rss",
+                     url=url, category=category, categories=None if category == "other" else [category],
+                     require_geo=False, expect_empty=True, user_added=True)
+        try:
+            items = fetch_source(src, self.settings.user_agent, self.settings.request_timeout)
+        except FetchError as exc:
+            self.reply(chat_id, f"❌ Lent oxunmadı: {esc(str(exc))}")
+            return
+        added = self.store.add_user_source(src)
+        self.reply(chat_id, ("➕ Əlavə edildi" if added else "Artıq var") +
+                   f": <code>{esc(src.id)}</code> — hazırda {len(items)} element ({esc(category)}).\n"
+                   "Mövcud elementlər göndərilmir, yeniləri gələcək. Silmək: /delrss " + esc(src.id))
+
+    def cmd_delrss(self, chat_id: str, arg: str) -> None:
+        a = arg.strip()
+        if not a:
+            self.reply(chat_id, "İstifadə: /delrss rss_ab12cd34")
+            return
+        sid = self._rss_id(a) if a.lower().startswith("http") else a
+        removed = sid.startswith("rss_") and self.store.remove_user_source(sid)
+        self.reply(chat_id, ("➖ Silindi: " if removed else "Tapılmadı: ") + esc(sid))
+
+    def cmd_health(self, chat_id: str, arg: str) -> None:
+        a = arg.strip()
+        if a.lower() == "off":
+            self.store.set("health_url", "")
+            self.reply(chat_id, "Nəzarət siqnalı söndürüldü.")
+            return
+        if a:
+            if not a.lower().startswith("https://"):
+                self.reply(chat_id, "İstifadə: /health https://hc-ping.com/... · /health off")
+                return
+            self.store.set("health_url", a)
+            ok = self.ping_health()
+            self.reply(chat_id, "✅ Keçid yadda saxlandı, ilk siqnal göndərildi." if ok
+                       else "⚠️ Keçid yadda saxlandı, amma siqnal alınmadı. Linki yoxlayın.")
+            return
+        on = bool(effective_health_url(self.settings, self.store))
+        self.reply(chat_id, "Nəzarət siqnalı aktivdir." if on else "Nəzarət siqnalı qoşulmayıb. /health https://hc-ping.com/...")
+
     # ── filtr və çatdırılma ──
+    def cmd_types(self, chat_id: str, arg: str) -> None:
+        if arg.strip():
+            try:
+                types = parse_lead_types(arg)
+            except ConfigError:
+                self.reply(chat_id, "İstifadə: /types individual job tender company dispute · /types all")
+                return
+            self.store.set("lead_types", ",".join(types))
+        current = effective_lead_types(self.settings, self.store)
+        names = ", ".join(CATEGORY_META[t][1] for t in LEAD_TYPES if t in current)
+        self.reply(chat_id, f"Telegram-a gələnlər: {esc(names)}.\nDəyişmək: /types individual job tender")
+
     def cmd_keywords(self, chat_id: str, arg: str) -> None:
         kws = self.store.user_keywords()
         base = sum(len(v) for v in self.profile.categories.values())
@@ -488,7 +600,6 @@ class LeadsBot:
         raise RestartRequested()
 
     def cmd_version(self, chat_id: str, arg: str) -> None:
-        import requests
         repo, branch = repo_and_branch()
         current = installed_sha(ROOT)
         latest = latest_sha(requests.Session(), repo, branch)

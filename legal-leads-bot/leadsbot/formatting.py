@@ -19,6 +19,7 @@ STATUS_LABELS = {
     "not_relevant": "❌ Uyğun deyil",
     "duplicate": "Təkrar",
     "low": "Aşağı bal",
+    "hidden": "Göndərilməyən növ",
 }
 
 # callback kodları → status

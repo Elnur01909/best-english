@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import re
 import sqlite3
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .models import Item, MatchResult, Source
@@ -65,7 +65,7 @@ ITEM_COLUMNS = {
     "digest_state": "INTEGER DEFAULT 0",  # 0 yox, 1 xülasə növbəsində, 2 xülasədə göndərilib
 }
 
-STATUSES = ("new", "interested", "contacted", "not_relevant", "duplicate", "low")
+STATUSES = ("new", "interested", "contacted", "not_relevant", "duplicate", "low", "hidden")
 
 
 def now_iso() -> str:
@@ -104,6 +104,9 @@ class Store:
             rows = self.conn.execute("SELECT rowid, title FROM items").fetchall()
             self.conn.executemany("UPDATE items SET title_key=? WHERE rowid=?",
                                   [(title_key(r["title"] or ""), r["rowid"]) for r in rows])
+        user_cols = {r["name"] for r in self.conn.execute("PRAGMA table_info(user_sources)").fetchall()}
+        if "url" not in user_cols:
+            self.conn.execute("ALTER TABLE user_sources ADD COLUMN url TEXT")
         self.conn.executescript("""
             CREATE INDEX IF NOT EXISTS idx_items_pending ON items (matched, sent, first_seen);
             CREATE INDEX IF NOT EXISTS idx_items_title_key ON items (title_key);
@@ -198,6 +201,11 @@ class Store:
         self.conn.execute("UPDATE items SET sent=1, status='low' WHERE rowid=?", (item_id,))
         self.conn.commit()
 
+    def mark_hidden(self, item_id: int) -> None:
+        """Bu növ lid Telegram-a göndərilmir (/types)."""
+        self.conn.execute("UPDATE items SET sent=1, status='hidden' WHERE rowid=?", (item_id,))
+        self.conn.commit()
+
     def queue_digest(self, item_id: int) -> None:
         self.conn.execute("UPDATE items SET sent=1, digest_state=1 WHERE rowid=?", (item_id,))
         self.conn.commit()
@@ -235,7 +243,7 @@ class Store:
 
     def recent_matches(self, n: int = 10) -> list[sqlite3.Row]:
         return self.conn.execute(
-            """SELECT rowid AS id, * FROM items WHERE matched=1 AND status NOT IN ('duplicate', 'low')
+            """SELECT rowid AS id, * FROM items WHERE matched=1 AND status NOT IN ('duplicate', 'low', 'hidden')
                ORDER BY first_seen DESC LIMIT ?""", (n,)
         ).fetchall()
 
@@ -274,6 +282,13 @@ class Store:
     def source_states(self) -> dict[str, sqlite3.Row]:
         return {r["source_id"]: r for r in self.conn.execute("SELECT * FROM source_state").fetchall()}
 
+    def read_recently(self, source_id: str, hours: float) -> bool:
+        """Mənbə son `hours` saatda uğurla oxunubsa True."""
+        row = self.conn.execute("SELECT last_run, last_status FROM source_state WHERE source_id=?", (source_id,)).fetchone()
+        if row is None or not row["last_run"] or row["last_status"] != "ok":
+            return False
+        return datetime.now(timezone.utc) - datetime.fromisoformat(row["last_run"]) < timedelta(hours=hours)
+
     def set_source_enabled(self, source_id: str, enabled: bool) -> None:
         self.conn.execute(
             """INSERT INTO source_state (source_id, enabled) VALUES (?, ?)
@@ -288,11 +303,11 @@ class Store:
             return default
         return bool(row["enabled"])
 
-    # ── user sources (/addtg) ──
+    # ── user sources (/addtg, /addrss) ──
     def add_user_source(self, src: Source) -> bool:
         cur = self.conn.execute(
-            "INSERT OR IGNORE INTO user_sources (id, type, channel, name, category, added_at) VALUES (?,?,?,?,?,?)",
-            (src.id, src.type, src.channel, src.name, src.category, now_iso()),
+            "INSERT OR IGNORE INTO user_sources (id, type, channel, name, category, added_at, url) VALUES (?,?,?,?,?,?,?)",
+            (src.id, src.type, src.channel, src.name, src.category, now_iso(), src.url),
         )
         self.conn.commit()
         return cur.rowcount > 0
@@ -305,6 +320,14 @@ class Store:
     def user_sources(self) -> list[Source]:
         out = []
         for r in self.conn.execute("SELECT * FROM user_sources ORDER BY added_at").fetchall():
+            if r["type"] == "rss":
+                cat = r["category"] or "individual"
+                out.append(Source(
+                    id=r["id"], name=r["name"] or "RSS", type="rss", url=r["url"], category=cat,
+                    categories=None if cat == "other" else [cat], require_geo=False, enabled=True, expect_empty=True,
+                    note="/addrss ilə əlavə edilib", user_added=True,
+                ))
+                continue
             if r["type"] != "tg_channel":
                 continue
             cat = r["category"] or "job"

@@ -201,3 +201,81 @@ def test_digest_and_minscore_commands(settings):
     assert "İstifadə" in bot.tg.sent[-1][1]
     bot.handle(upd(42, "/ai"))
     assert "ANTHROPIC_API_KEY" in bot.tg.sent[-1][1]
+
+
+class PollTG(FakeTG):
+    def __init__(self, batches):
+        super().__init__()
+        self.batches = list(batches)
+
+    def get_updates(self, offset=None, timeout=30):
+        return self.batches.pop(0) if self.batches else []
+
+
+def test_commands_are_answered_during_a_long_cycle(settings):
+    from leadsbot.models import Source
+
+    tg = PollTG([[upd(42, "/ping", uid=5)], [upd(42, "/run", uid=6)]])
+    bot = LeadsBot(settings, Store(settings.db_path), tg)
+    bot.config_sources = [Source(id=i, name=i, type="rss", url="https://x") for i in ("a", "b")]
+    with patch("leadsbot.runner.fetch_source", lambda *a, **k: []):
+        bot.cycle(announce=False)
+    texts = [t for _, t in tg.sent]
+    assert any("İşləyirəm" in t for t in texts) and any("hazırda yoxlanır" in t for t in texts)
+    assert bot.offset == 7 and bot.cycling is False
+
+
+def test_addrss_and_delrss(settings):
+    store = Store(settings.db_path)
+    bot = LeadsBot(settings, store, FakeTG())
+    with patch("leadsbot.bot.fetch_source", lambda *a, **k: []):
+        bot.handle(upd(42, "/addrss https://www.google.com/alerts/feeds/123/456 individual"))
+    added = [s for s in bot.sources if s.user_added]
+    assert len(added) == 1 and added[0].type == "rss" and added[0].url.endswith("/456")
+    assert added[0].name == "Google Alerts" and added[0].categories == ["individual"] and added[0].expect_empty
+    bot.handle(upd(42, f"/delrss {added[0].id}"))
+    assert [s for s in bot.sources if s.user_added] == []
+    bot.handle(upd(42, "/addrss not-a-link"))
+    assert "İstifadə" in bot.tg.sent[-1][1]
+
+
+def test_old_database_gets_the_url_column(tmp_path):
+    import sqlite3
+
+    path = tmp_path / "old.sqlite"
+    conn = sqlite3.connect(path)
+    conn.execute("CREATE TABLE user_sources (id TEXT PRIMARY KEY, type TEXT NOT NULL, channel TEXT, name TEXT, "
+                 "category TEXT, added_at TEXT NOT NULL)")
+    conn.execute("INSERT INTO user_sources VALUES ('tg_x', 'tg_channel', 'kanal_x', 'X', 'job', '2026-01-01')")
+    conn.commit()
+    conn.close()
+    assert [s.channel for s in Store(path).user_sources()] == ["kanal_x"]
+
+
+def test_health_link_is_saved_and_pinged_after_a_full_cycle(settings):
+    from unittest.mock import MagicMock
+
+    bot = LeadsBot(settings, Store(settings.db_path), FakeTG())
+    with patch("leadsbot.bot.requests.get", MagicMock()) as get:
+        bot.handle(upd(42, "/health https://hc-ping.com/abc"))
+        assert get.call_count == 1 and "yadda saxlandı" in bot.tg.sent[-1][1]
+        bot.config_sources = []
+        bot.cycle(announce=False)
+        assert get.call_count == 2
+        bot.handle(upd(42, "/health off"))
+        bot.cycle(announce=False)
+        assert get.call_count == 2
+
+
+def test_types_command(settings):
+    from leadsbot.config import DEFAULT_LEAD_TYPES
+
+    settings.lead_types = DEFAULT_LEAD_TYPES
+    store = Store(settings.db_path)
+    bot = LeadsBot(settings, store, FakeTG())
+    bot.handle(upd(42, "/types"))
+    assert "Fərdi sorğu" in bot.tg.sent[-1][1] and "Şirkət lidi" not in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/types individual, company"))
+    assert store.get("lead_types") == "individual,company" and "Şirkət lidi" in bot.tg.sent[-1][1]
+    bot.handle(upd(42, "/types nonsense"))
+    assert "İstifadə" in bot.tg.sent[-1][1] and store.get("lead_types") == "individual,company"

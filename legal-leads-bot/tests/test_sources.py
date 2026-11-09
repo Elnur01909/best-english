@@ -1,7 +1,7 @@
 import pytest
 
 from conftest import fixture_bytes, fixture_text
-from leadsbot.models import Source
+from leadsbot.models import SOURCE_TYPES, Source
 from leadsbot.sources import FetchError, build_url, parse_html_links, parse_reliefweb, parse_rss
 
 import json
@@ -73,7 +73,7 @@ def test_parse_reliefweb(matcher):
 
 def test_default_sources_config_is_valid(sources):
     assert len(sources) >= 10
-    assert {s.type for s in sources} <= {"gnews", "rss", "html_links", "reliefweb_jobs"}
+    assert {s.type for s in sources} <= set(SOURCE_TYPES)
     for s in sources:
         assert build_url(s).startswith("http")
 
@@ -169,3 +169,55 @@ def test_button_links_take_title_from_their_own_card(matcher):
     assert "Qala Həyat Sığorta" in items[0].summary and "AFEA" not in items[0].summary
     assert matcher.evaluate(items[0].text, "job", False, ["job"])
     assert matcher.evaluate(items[1].text, "job", False, ["job"]) is None
+
+
+def test_read_more_links_take_title_from_their_card():
+    html = """<div class="news">
+      <div class="item"><h4>Mərkəzi Bank lisenziyanı ləğv etdi</h4><p>Qısa mətn</p><a href="/press-release-1">ətraflı</a></div>
+      <div class="item"><h4>Yeni qaydalar</h4><a href="/press-release-2">Ətraflı →</a></div>
+    </div>"""
+    s = Source(id="c", name="c", type="html_links", url="https://www.cbar.az/press-releases/1", link_pattern=r"/press-release-[0-9]+")
+    items = parse_html_links(html, s)
+    assert [i.title for i in items] == ["Mərkəzi Bank lisenziyanı ləğv etdi", "Yeni qaydalar"]
+    assert "Yeni" not in items[0].summary
+
+
+def test_button_without_its_own_card_is_dropped():
+    html = """<div><a href="/post/1">ətraflı</a><a href="/post/2">ətraflı</a></div>"""
+    s = Source(id="c", name="c", type="html_links", url="https://x.az/", link_pattern=r"/post/[0-9]+")
+    assert parse_html_links(html, s) == []
+
+
+def test_summary_does_not_spill_over_from_a_shared_list_block(matcher):
+    html = """<div class="row">
+      <a href="/media/news/alpha-opens-office"><p>Delegation visited the zone</p></a>
+      <a href="/media/news/beta-joint-venture"><p>Beta signs a joint venture in Alat</p></a>
+    </div>"""
+    s = Source(id="a", name="a", type="html_links", url="https://afez.az/en/media/news", link_pattern=r"/media/news/[a-z0-9-]+")
+    items = parse_html_links(html, s)
+    assert items[0].summary == "" and "joint venture" not in items[0].text
+    assert matcher.evaluate(items[0].text, "company", False, ["company"]) is None
+    assert matcher.evaluate(items[1].text, "company", False, ["company"])
+
+
+def test_helper_links_do_not_cost_a_topic_its_summary():
+    html = """<ul><li><a href="/forum/1-topic.html">Work permit question</a> Posted Dec 2025
+      <a href="/forum/1-topic-2.html">Last post 6 years ago by Someone</a></li></ul>"""
+    s = Source(id="e", name="e", type="html_links", url="https://x.com/", link_pattern=r"/forum/[0-9]+-")
+    assert "Dec 2025" in parse_html_links(html, s)[0].summary
+
+
+def test_empty_anchor_gets_title_from_card_not_url():
+    html = """<div class="list"><div class="post"><a href="/en/post/7"><img src="a.jpg"></a><h3>New resident in Alat</h3></div>
+      <div class="post"><a href="/en/post/8"><img src="b.jpg"></a><h3>Second post</h3></div></div>"""
+    s = Source(id="e", name="e", type="html_links", url="https://economy.gov.az/en/page/media/news", link_pattern=r"/en/post/[0-9]+")
+    assert [i.title for i in parse_html_links(html, s)] == ["New resident in Alat", "Second post"]
+
+
+def test_telegram_title_skips_emoji_lines():
+    from leadsbot.sources import parse_tg_channel
+
+    html = """<div class="tgme_widget_message" data-post="kanal/5"><div class="tgme_widget_message_text">🔥🔥<br>
+      💼 Hüquqşünas vakansiyası<br>Bakı</div></div>"""
+    s = Source(id="t", name="t", type="tg_channel", channel="kanal")
+    assert parse_tg_channel(html, s)[0].title == "Hüquqşünas vakansiyası"

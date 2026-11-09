@@ -1,6 +1,10 @@
 # Açar sözlər. Uyğunluq böyük/kiçik hərfə həssas deyil, söz sərhədləri nəzərə alınır.
 # Hər element title + xülasə mətnində axtarılır.
 #
+# Xüsusi hərflər fərq etmir: "vəkil" həm də "vekil" yazılışını, "Bakı" həm də "Baki" yazılışını tutur.
+# Söz * ilə bitirsə, şəkilçili formalar da tutulur: адвокат* → адвоката, адвокату; vəkil* → vəkilə, vəkillər.
+# Kök qısa və ümumidirsə * qoymayın: Bakı* türkcə "bakım", "bakır" sözlərini də tutar.
+#
 # geo:        "Azərbaycanla bağlıdır" şərti. require_geo: true olan mənbələrdə ən azı biri lazımdır.
 # categories: mesajın kateqoriyası və filtr. Ən azı bir kateqoriya sözü (və ya /addkw ilə əlavə edilən söz) lazımdır.
 # exclude:    bunlardan biri varsa, element atılır (səs-küyü azaltmaq üçün).
@@ -10,26 +14,48 @@ geo:
   - Azerbaijan
   - Azerbaijani
   - Azerbaijan's
-  - Azərbaycan
-  - Azərbaycanda
+  - Azeri
+  - Azərbaycan*
   - Baku
   - Bakı
   - Bakıda
-  - Baki
+  - Bakıya
+  - Bakıdan
+  - Bakının
+  - Bakıdakı
   - Alat
+  - Ələt
+  - Ələtdə
   - AFEZ
   - Sumgayit
   - Sumgait
-  - Sumqayıt
+  - Sumqayıt*
   - Ganja
-  - Gəncə
+  - Gəncə*
   - Nakhchivan
-  - Naxçıvan
+  - Naxçıvan*
   - Karabakh
-  - Qarabağ
+  - Qarabağ*
   - Pirallahi
   - Azerbaijani law
   - Azerbaijan law
+  # rus dili
+  - Азербайджан*
+  - азери
+  - Баку
+  - бакинск*
+  - бакинц*
+  - Алят*
+  - Сумгаит*
+  - Сумгайыт*
+  - Гяндж*
+  - Нахчыван*
+  - Нахичеван*
+  - Карабах*
+  # türk dili (Azerbaycan* yuxarıdakı Azərbaycan* ilə tutulur)
+  - Bakü
+  - Karabağ
+  - Nahçıvan*
 
 categories:
   # Ölkəyə yeni girən / genişlənən şirkətlər → MMC qeydiyyatı, əmək, icarə, lisenziya işi
@@ -111,6 +137,112 @@ categories:
     - franchising
     - franchise agreement
     - franchise partner
+    - market engagement
+    - regional office
+    - regional headquarters
+    - local entity
+    # rus dili
+    - открыла офис
+    - открыл офис
+    - откроет офис
+    - открывает офис
+    - открытие офиса
+    - новый офис
+    - открыла представительство
+    - откроет представительство
+    - открывает представительство
+    - представительство компании
+    - дочерн* компани*
+    - дочерн* предприяти*
+    - совместн* предприяти*
+    - совместн* компани*
+    - рынок Азербайджана
+    - азербайджанский рынок
+    - инвестиционн* соглашени*
+    - инвестиционн* контракт*
+    - меморандум* о взаимопонимании
+    - подписал* контракт*
+    - подписал* соглашени*
+    - построит завод
+    - построят завод
+    - строительство завода
+    - откроет завод
+    - запустит производство
+    - Алятск* свободн* экономическ* зон*
+    - резидент* промышленн* парк*
+    - резидент* индустриальн* парк*
+    - промышленн* парк*
+    - франшиз*
+    - первый магазин
+    - первый ресторан
+    - выиграла тендер
+    - выиграл тендер
+    - получила лицензию
+    - получил лицензию
+    - зарегистрирована в Азербайджане
+    - приобрела долю
+    - приобрел долю
+    - покупка доли
+    # azərbaycan dili
+    - ofis açıb
+    - ofis açdı
+    - ofisini açıb
+    - ofisini açdı
+    - ofis açacaq
+    - yeni ofis
+    - nümayəndəlik açıb
+    - nümayəndəliyini açıb
+    - nümayəndəliyi açılıb
+    - filial açıb
+    - filial açdı
+    - filialını açıb
+    - filialı açılıb
+    - törəmə şirkət*
+    - törəmə müəssisə*
+    - birgə müəssisə*
+    - birgə şirkət*
+    - investisiya müqavilə*
+    - investisiya saziş*
+    - anlaşma memorandum*
+    - memorandum imzala*
+    - saziş imzala*
+    - müqavilə imzala*
+    - Ələt Azad İqtisadi Zona*
+    - Ələt AİZ
+    - sənaye parkının rezident*
+    - sənaye park*
+    - rezident statusu
+    - zavod tikəcək
+    - zavod tikiləcək
+    - zavodu tikiləcək
+    - zavod inşa
+    - zavod açacaq
+    - franşiza*
+    - françayz*
+    - ilk mağaza*
+    - ilk restoran*
+    - Azərbaycan bazarına
+    - lisenziya alıb
+    - lisenziyasını alıb
+    # türk dili
+    - ofis açtı
+    - şube açtı
+    - temsilcilik açtı
+    - temsilcilik açacak
+    - ortak girişim
+    - fabrika kuracak
+    - fabrika açtı
+    - fabrika açacak
+    - yatırım yapacak
+    - yatırım anlaşması
+    - mutabakat zaptı
+    - mutabakat muhtırası
+    - anlaşma imzaladı
+    - sözleşme imzaladı
+    - ihale kazandı
+    - Azerbaycan pazarına
+    - lisans aldı
+    - hisse satın aldı
 
   # Forumlarda / sosial şəbəkələrdə hüquqi kömək axtaran fərdlər
   individual:
@@ -177,6 +309,124 @@ categories:
     - debt
     - tax residency
     - tax resident
+    # azərbaycan dili (əsasən huquqlar.az forumu; xəbər lentlərində bu kateqoriya işləmir)
+    - vəkil*
+    - hüquqşünas*
+    - hüquqi yardım*
+    - hüquqi kömək*
+    - hüquqi məsləhət*
+    - hüquqi sual*
+    - məhkəmə*
+    - iddia ərizə*
+    - şikayət*
+    - miras*
+    - vərəsə*
+    - varis*
+    - boşan*
+    - nikah*
+    - aliment*
+    - qəyyum*
+    - himayə*
+    - icarə*
+    - kirayə*
+    - borc*
+    - kredit*
+    - ipoteka*
+    - cərimə*
+    - deportasiya*
+    - ölkədən çıxar*
+    - giriş qadağa*
+    - yaşayış icazə*
+    - iş icazə*
+    - vətəndaşlıq*
+    - miqrasiya*
+    - qeydiyyat*
+    - MMC
+    - vergi*
+    - əmək müqavilə*
+    - əmək məcəllə*
+    - işdən çıxar*
+    - əmək haqqı*
+    - maaş*
+    - pensiya*
+    - hərbi xidmət*
+    - torpaq*
+    - mənzil*
+    - kupça*
+    - çıxarış*
+    - notarius*
+    - etibarnamə*
+    - dələduz*
+    - həbs*
+    - cəza*
+    - əmək məsələ*
+    - polis
+    - polisə
+    # rus dili (pravoved.ru və diaspora sualları)
+    - адвокат*
+    - юрист*
+    - юридическ* помощ*
+    - юридическ* консультаци*
+    - правов* помощ*
+    - вид* на жительств*
+    - ВНЖ
+    - РВП
+    - разрешени* на работу
+    - разрешени* на проживани*
+    - депортаци*
+    - депортир*
+    - выдвор*
+    - запрет* на въезд*
+    - гражданств*
+    - наследств*
+    - наследник*
+    - завещани*
+    - развод*
+    - алимент*
+    - опек*
+    - брак*
+    - штраф*
+    - долг*
+    - кредит*
+    - мошенни*
+    - недвижимост*
+    - квартир*
+    - прописк*
+    - регистраци* компани*
+    - регистраци* ООО
+    - открыть компанию
+    - доверенност*
+    - нотариус*
+    - нотариальн*
+    - суд
+    - суда
+    - суде
+    - суду
+    - судом
+    - судебн*
+    - пенси*
+    - трудов* договор*
+    - уволи*
+    - задержан*
+    - арестован*
+    - полици*
+    - таможн*
+    - паспорт*
+    - военкомат*
+    - воинск* учет*
+    # türk dili
+    - avukat*
+    - hukuki yardım*
+    - hukuk danışman*
+    - oturma izni*
+    - ikamet izni*
+    - çalışma izni*
+    - sınır dışı
+    - giriş yasağı*
+    - vatandaşlık*
+    - boşanma*
+    - tapu*
+    - dolandırıcı*
 
   # İngilisdilli hüquqşünas / compliance vakansiyaları (Bakı)
   job:
@@ -204,21 +454,20 @@ categories:
     - legal officer
     - legal analyst
     - contract specialist
-    - kiçik hüquqşünas
-    - hüquqşünaslar
     - hüquq üzrə mütəxəssis
-    - hüquq şöbəsinin
-    - vəkil
-    - адвокат
-    - hüquqşünas
-    - hüquq məsləhətçisi
-    - hüquq şöbəsi
+    - vəkil*
+    - адвокат*
+    - hüquqşünas*
+    - hüquq məsləhətçi*
+    - hüquq şöbə*
+    - hüquq departament*
     - hüquq üzrə
-    - baş hüquqşünas
-    - aparıcı hüquqşünas
-    - komplayens
-    - юрист
-    - юрисконсульт
+    - komplayens*
+    - юрист*
+    - юрисконсульт*
+    - комплаенс*
+    - avukat*
+    - hukuk müşavir*
 
   # Beynəlxalq təşkilatların hüquqi ekspert / konsultant tenderləri
   tender:
@@ -243,10 +492,23 @@ categories:
     - legal adviser
     - legal advisor
     - national legal
-    - hüquqi xidmət
-    - hüquqi xidmətlər
-    - hüquq xidmətləri
-    - юридических услуг
+    - hüquqi xidmət*
+    - hüquq xidmət*
+    - hüquqi ekspert*
+    - hüquq üzrə ekspert*
+    - hüquqi konsultant*
+    - tender*
+    - satınalma*
+    - юридическ* услуг*
+    - юридическ* консультант*
+    - юридическ* эксперт*
+    - правов* эксперт*
+    - правов* консультант*
+    - тендер*
+    - запрос* предложений
+    - hukuki danışmanlık
+    - hukuk danışmanlığı
+    - ihale*
     - legal specialist
     - legal officer
     - legal analyst
@@ -287,6 +549,38 @@ categories:
     - revoked the license
     - sanctioned
     - fined by the Central Bank
+    # rus dili
+    - международн* арбитраж*
+    - арбитраж*
+    - иск против
+    - подал* иск
+    - инвестиционн* спор*
+    - отозвал* лицензи*
+    - отзыв лицензии
+    - аннулировал* лицензи*
+    - лишил* лицензии
+    - ЦБА оштрафовал
+    - Центробанк оштрафовал
+    - Центральный банк оштрафовал
+    - банкротств*
+    # azərbaycan dili
+    - arbitraj*
+    - lisenziyası ləğv*
+    - lisenziyasını ləğv*
+    - lisenziyası geri çağır*
+    - iflas*
+    - məhkəməyə verib
+    - iddia qaldır*
+    - Mərkəzi Bank cərimə*
+    - investor mübahisə*
+    # türk dili
+    - tahkim*
+    - lisansı iptal
+    - dava açtı
+
+# Bu kateqoriyalarda ən azı bir güclü söz şərtdir: hüquqla bağlı olmayan konsultant elanları keçməsin.
+need_strong:
+  - tender
 
 exclude:
   - football
@@ -304,6 +598,19 @@ exclude:
   - Qarabag FK
   - Neftchi
   - match report
+  - UEFA
+  - УЕФА
+  - футбол*
+  - futbol*
+  - чемпионат*
+  - çempionat*
+  - гороскоп*
+  - bürclər
+  - прогноз погоды
+  - hava proqnozu
+  - Евровидени*
+  - Формула-1
+  - Формулы-1
 
 weak:
   # fərdi: tək başına çox ümumidir (statistika, siyasət xəbərləri)
@@ -375,6 +682,7 @@ weak:
   - acquisition of
   - stake in
   - resident of the
+  - Free Economic Zone
   # mübahisə
   - BIT
   - tribunal
@@ -384,3 +692,115 @@ weak:
   - High Court
   - claim against
   - dispute with
+  # rus, azərbaycan, türk: xəbər lentlərində tək başına çox ümumidir
+  - тендер*
+  - запрос* предложений
+  - tender*
+  - satınalma*
+  - ihale*
+  - меморандум* о взаимопонимании
+  - подписал* контракт*
+  - подписал* соглашени*
+  - промышленн* парк*
+  - anlaşma memorandum*
+  - memorandum imzala*
+  - saziş imzala*
+  - müqavilə imzala*
+  - sənaye park*
+  - rezident statusu
+  - yatırım yapacak
+  - mutabakat zaptı
+  - mutabakat muhtırası
+  - anlaşma imzaladı
+  - sözleşme imzaladı
+  - арбитраж*
+  - банкротств*
+  - подал* иск
+  - иск против
+  - iflas*
+  - məhkəməyə verib
+  - iddia qaldır*
+  - dava açtı
+  # fərdi sözlər: ümumi forumda tək başına lid deyil; hüquqi forumlarda (legal_forum: true) kifayətdir
+  - miras*
+  - vərəsə*
+  - varis*
+  - boşan*
+  - nikah*
+  - aliment*
+  - qəyyum*
+  - himayə*
+  - icarə*
+  - kirayə*
+  - borc*
+  - kredit*
+  - ipoteka*
+  - cərimə*
+  - vətəndaşlıq*
+  - miqrasiya*
+  - qeydiyyat*
+  - MMC
+  - vergi*
+  - maaş*
+  - pensiya*
+  - torpaq*
+  - mənzil*
+  - kupça*
+  - çıxarış*
+  - notarius*
+  - etibarnamə*
+  - dələduz*
+  - həbs*
+  - cəza*
+  - polis
+  - polisə
+  - məhkəmə*
+  - şikayət*
+  - гражданств*
+  - наследств*
+  - наследник*
+  - завещани*
+  - развод*
+  - алимент*
+  - опек*
+  - брак*
+  - штраф*
+  - долг*
+  - кредит*
+  - мошенни*
+  - недвижимост*
+  - квартир*
+  - прописк*
+  - доверенност*
+  - нотариус*
+  - нотариальн*
+  - суд
+  - суда
+  - суде
+  - суду
+  - судом
+  - судебн*
+  - пенси*
+  - уволи*
+  - задержан*
+  - арестован*
+  - полици*
+  - таможн*
+  - паспорт*
+  - военкомат*
+  - vatandaşlık*
+  - boşanma*
+  - tapu*
+  - dolandırıcı*
+  - iddia ərizə*
+  - əmək müqavilə*
+  - əmək məcəllə*
+  - işdən çıxar*
+  - əmək haqqı*
+  - hərbi xidmət*
+  - əmək məsələ*
+  - регистраци* компани*
+  - регистраци* ООО
+  - открыть компанию
+  - трудов* договор*
+  - воинск* учет*

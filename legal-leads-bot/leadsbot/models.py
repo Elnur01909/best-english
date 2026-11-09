@@ -5,6 +5,7 @@ from dataclasses import dataclass, field
 from datetime import date
 
 CATEGORIES = ("company", "individual", "job", "tender", "dispute", "other")
+LEAD_TYPES = ("individual", "job", "tender", "company", "dispute")
 SOURCE_TYPES = ("gnews", "rss", "html_links", "reliefweb_jobs", "tg_channel")
 TG_HANDLE_RE = re.compile(r"^[A-Za-z][A-Za-z0-9_]{3,31}$")
 
@@ -28,6 +29,9 @@ class Source:
     enabled: bool = True
     note: str = ""
     max_items: int = 60
+    every_hours: float = 0  # >0 → yalnız bu qədər saatda bir oxunur (ağır və ya məhdudiyyətli saytlar)
+    legal_forum: bool = False  # True → hər yazı hüquqi sualdır, ümumi söz ("miras", "долг") də kifayətdir
+    expect_empty: bool = False  # True → boş qalması normaldır, "boşdur" xəbərdarlığı göndərilmir
     user_added: bool = False
 
     @classmethod
