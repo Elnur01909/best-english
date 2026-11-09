@@ -97,11 +97,15 @@ def format_short(row: sqlite3.Row, source_name: str) -> str:
     return f'{icon} {badge}<a href="{link}">{title}</a> — {esc(source_name)} · /l{row["id"]}'
 
 
-def format_digest(rows: list[sqlite3.Row], names: dict[str, str], size: int, date_label: str) -> str:
+def format_digest(rows: list[sqlite3.Row], names: dict[str, str], size: int, date_label: str, signals: bool = False) -> str:
     if not rows:
         return f"☀️ <b>Səhər xülasəsi · {esc(date_label)}</b>\nSon xülasədən bəri yeni lid yoxdur."
     shown = rows[:size]
-    lines = [f"☀️ <b>Səhər xülasəsi · {esc(date_label)}</b> — {len(rows)} lid"]
+    if signals and all(_cat(r) == "company" for r in rows):
+        lines = [f"📡 <b>Şirkət siqnalları · {esc(date_label)}</b> — {len(rows)} xəbər",
+                 "Bu şirkətlər Azərbaycana girir, amma hələ kömək istəməyib."]
+    else:
+        lines = [f"☀️ <b>Səhər xülasəsi · {esc(date_label)}</b> — {len(rows)} lid"]
     for i, r in enumerate(shown, 1):
         icon, _ = CATEGORY_META.get(_cat(r), CATEGORY_META["other"])
         score = f"<b>{int(r['ai_score'])}/10</b> " if r["ai_score"] else ""

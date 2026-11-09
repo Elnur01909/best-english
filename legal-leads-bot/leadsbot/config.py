@@ -17,7 +17,7 @@ DEFAULT_KEYWORDS = ROOT / "config" / "keywords.yaml"
 DEFAULT_DB = ROOT / "data" / "leads.sqlite"
 DEFAULT_UA = "linux:legal-leads-bot:1.0 (RSS/HTML reader for legal-services leads)"
 DEFAULT_AI_MODEL = "claude-opus-5-5"
-DEFAULT_LEAD_TYPES = ("individual", "job", "tender")  # şirkət və mübahisə xəbərləri kömək axtaran deyil
+DEFAULT_LEAD_TYPES = ("individual", "job", "tender", "company")  # company: səhər siqnalları (bax signal_min_score)
 _HHMM = re.compile(r"^([01]?\d|2[0-3]):([0-5]\d)$")
 
 
@@ -49,6 +49,7 @@ class Settings:
     tz_offset_hours: float = 4.0  # Bakı UTC+4
     # ── nə göndərilsin ──
     lead_types: tuple[str, ...] = DEFAULT_LEAD_TYPES
+    signal_min_score: int = 9  # şirkət xəbəri yalnız bu balla və yalnız səhər xülasəsində gəlir; 0 = adi lid kimi dərhal
     max_age_days: int = 30  # tarixi bundan köhnə olan elementlər göndərilmir; 0 = yoxlama yoxdur
     # ── nəzarət ──
     healthcheck_url: str = ""  # hər dövrənin sonunda çağırılır (healthchecks.io); bot susanda sizə xəbər gəlir
@@ -116,6 +117,7 @@ def load_settings(env_file: Path | None = None) -> Settings:
         tz_offset_hours=_float_env("TZ_OFFSET_HOURS", 4.0),
         healthcheck_url=os.getenv("HEALTHCHECK_URL", "").strip(),
         lead_types=parse_lead_types(os.getenv("LEAD_TYPES", "").strip() or ",".join(DEFAULT_LEAD_TYPES)),
+        signal_min_score=min(10, max(0, _int_env("SIGNAL_MIN_SCORE", 9))),
         max_age_days=max(0, _int_env("MAX_AGE_DAYS", 30)),
     )
 

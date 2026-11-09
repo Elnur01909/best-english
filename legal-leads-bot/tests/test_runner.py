@@ -3,7 +3,6 @@ from unittest.mock import patch
 
 from conftest import fixture_bytes
 from leadsbot.ai import AIError, LeadScore
-from leadsbot.config import DEFAULT_LEAD_TYPES
 from leadsbot.models import Item, Source
 from leadsbot.runner import maybe_send_digest, run_cycle
 from leadsbot.sources import FetchError, parse_rss
@@ -353,14 +352,15 @@ def test_long_empty_source_is_reported_unless_empty_is_normal(settings, matcher)
 
 NEWS = Source(id="news", name="n", type="rss", url="https://n", category="company", categories=["company", "dispute"], require_geo=False)
 MIX = Source(id="mix", name="m", type="rss", url="https://m", category="company", require_geo=False)
+NO_COMPANY = ("individual", "job", "tender")
 
 
 def _jv(src, ua, timeout, session=None):
     return _items(src, f"CSG establishes a joint venture in Azerbaijan {src.id}")
 
 
-def test_company_news_sources_are_not_read_by_default(settings, matcher):
-    settings.lead_types = DEFAULT_LEAD_TYPES
+def test_company_news_sources_are_not_read_when_that_type_is_off(settings, matcher):
+    settings.lead_types = NO_COMPANY
     store = Store(settings.db_path)
     calls = []
 
@@ -373,7 +373,7 @@ def test_company_news_sources_are_not_read_by_default(settings, matcher):
 
 
 def test_company_news_from_a_mixed_source_never_reaches_telegram(settings, matcher):
-    settings.lead_types = DEFAULT_LEAD_TYPES
+    settings.lead_types = NO_COMPANY
     store = Store(settings.db_path)
     tg = FakeTG()
     run(settings, store, [MIX], matcher, tg, fetch=_none)
@@ -392,7 +392,7 @@ def test_company_news_returns_when_the_owner_asks_for_it(settings, matcher):
 
 
 def test_hidden_leads_are_not_sent_to_claude(settings, matcher):
-    settings.lead_types = DEFAULT_LEAD_TYPES
+    settings.lead_types = NO_COMPANY
     store = Store(settings.db_path)
     ai = FakeAI(scores={"lawyer": 9})
     run(settings, store, [MIX, Q], matcher, FakeTG(), fetch=_none, ai=ai)

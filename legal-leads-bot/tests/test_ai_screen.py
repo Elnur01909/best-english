@@ -8,7 +8,7 @@ import httpx2
 import pytest
 
 from leadsbot.ai import AIError, LeadAI, LeadScore
-from leadsbot.config import DEFAULT_LEAD_TYPES, ROOT, load_sources
+from leadsbot.config import ROOT, load_sources
 from leadsbot.models import Item, Source
 from leadsbot.sources import parse_rss
 from leadsbot.storage import Store
@@ -127,7 +127,7 @@ def test_a_lead_with_keywords_is_still_sent_when_claude_fails(settings, matcher)
 
 @pytest.mark.parametrize("title", [PLAIN, WITH_WORDS])
 def test_company_news_is_hidden_when_claude_says_so(settings, matcher, title):
-    settings.lead_types = DEFAULT_LEAD_TYPES
+    settings.lead_types = ("individual", "job", "tender")
     store = seeded(settings, matcher)
     tg = FakeTG()
     rep = run(settings, store, [FORUM], matcher, tg, fetch=posts(title), ai=ScoringAI(value=9, category="company"))

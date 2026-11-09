@@ -21,6 +21,7 @@ log = logging.getLogger("leadsbot")
 ALERT_AFTER_FAILS = 3  # ardıcıl neçə xətadan sonra xəbər verilir
 ALERT_AFTER_EMPTY_DAYS = 7  # mənbə neçə gün boş qalandan sonra xəbər verilir
 SCREEN_RETRY_DAYS = 2  # Claude işləmirsə, açar sözü olmayan yazı neçə gün onu gözləyir
+SIGNAL_DIGEST_TIME = "09:00"  # səhər xülasəsi söndürülübsə, şirkət siqnalları bu vaxt gəlir
 
 
 @dataclass
@@ -118,10 +119,13 @@ def effective_lead_types(settings: Settings, store: Store) -> set[str]:
         return set(settings.lead_types)
 
 
-def _wanted(row, wanted: set[str]) -> bool:
+def _category(row) -> str:
     """Claude qiymətləndiribsə onun dediyi növ əsasdır: alertdən gələn şirkət xəbəri fərdi sorğu sayılmasın."""
-    category = (row["ai_category"] if row["ai_done"] == 1 else None) or row["category"] or "other"
-    return category in wanted | {"other"}
+    return (row["ai_category"] if row["ai_done"] == 1 else None) or row["category"] or "other"
+
+
+def _wanted(row, wanted: set[str]) -> bool:
+    return _category(row) in wanted | {"other"}
 
 
 def is_stale(published: str, max_age_days: int, now: datetime) -> bool:
@@ -381,6 +385,16 @@ def _deliver(settings, store, names, tg, chat_ids, report, ai_on: bool, dry_run:
             report.hidden += 1
             continue
         score = row["ai_score"] if row["ai_done"] == 1 else None
+        if settings.signal_min_score and _category(row) == "company":
+            # şirkət xəbəri kömək istəmək deyil: yalnız Claude əmindirsə və yalnız səhər xülasəsində gəlir
+            confident = score is not None and score >= settings.signal_min_score
+            if not dry_run:
+                (store.queue_digest if confident else store.mark_filtered)(row["id"])
+            if confident:
+                report.queued += 1
+            else:
+                report.filtered += 1
+            continue
         if score is not None and score < min_score:
             if not dry_run:
                 store.mark_filtered(row["id"])
@@ -427,7 +441,8 @@ def maybe_send_digest(
     force: bool = False,
 ) -> bool:
     """Səhər xülasəsi vaxtı çatıbsa və bu gün göndərilməyibsə, göndərir."""
-    digest_time = effective_digest_time(settings, store)
+    configured = effective_digest_time(settings, store)
+    digest_time = configured or (SIGNAL_DIGEST_TIME if settings.signal_min_score else "")
     if not force and not digest_time:
         return False
     if tg is None or not chat_ids:
@@ -439,7 +454,9 @@ def maybe_send_digest(
         if local.time() < dtime(hh, mm) or store.get("last_digest") == today:
             return False
     rows = store.digest_items()
-    text = format_digest(rows, names, settings.digest_size, today)
+    if not rows and not force and not configured:
+        return False  # xülasə yalnız siqnallar üçündür və bu gün siqnal yoxdur
+    text = format_digest(rows, names, settings.digest_size, today, signals=settings.signal_min_score > 0)
     delivered = False
     for chat in chat_ids:
         try:

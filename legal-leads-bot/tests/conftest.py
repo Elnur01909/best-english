@@ -33,6 +33,7 @@ def settings(tmp_path):
     return Settings(
         bot_token="123:TEST", allowed_chat_ids=["42"], db_path=tmp_path / "t.sqlite",
         sources_file=DEFAULT_SOURCES, keywords_file=DEFAULT_KEYWORDS, max_per_cycle=2, max_age_days=0, lead_types=LEAD_TYPES,
+        signal_min_score=0,
     )
 
 

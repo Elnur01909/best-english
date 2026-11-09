@@ -268,9 +268,7 @@ def test_health_link_is_saved_and_pinged_after_a_full_cycle(settings):
 
 
 def test_types_command(settings):
-    from leadsbot.config import DEFAULT_LEAD_TYPES
-
-    settings.lead_types = DEFAULT_LEAD_TYPES
+    settings.lead_types = ("individual", "job", "tender")
     store = Store(settings.db_path)
     bot = LeadsBot(settings, store, FakeTG())
     bot.handle(upd(42, "/types"))

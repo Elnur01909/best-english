@@ -57,7 +57,9 @@ Xərc gündə ~150 uyğun lid üçün təxminidir. Açar: https://platform.claud
 
 "❌ Uyğun deyil" düyməsi ilə işarələdiyiniz son lidlər Claude-a nümunə kimi verilir: oxşarlarına aşağı bal qoyur.
 
-Claude açarı varsa, forumlarda və Google Alerts lentlərində açar söz olmasa da hər yeni yazını Claude oxuyur (`sources.yaml` → `ai_screen`). Belə olanda problemini sadə sözlə yazan adam da tapılır. Bu yazılar yalnız Claude bal verəndən sonra gəlir: o işləməsə balsız göndərilmir, 3 ardıcıl xətadan sonra bot Telegram-a yazır. Claude yazını şirkət xəbəri sayırsa və `/types`-da şirkət lidləri söndürülübsə, yazı gəlmir.
+Claude açarı varsa, forumlarda və Google Alerts lentlərində açar söz olmasa da hər yeni yazını Claude oxuyur (`sources.yaml` → `ai_screen`). Belə olanda problemini sadə sözlə yazan adam da tapılır. Bu yazılar yalnız Claude bal verəndən sonra gəlir: o işləməsə balsız göndərilmir, 3 ardıcıl xətadan sonra bot Telegram-a yazır.
+
+Şirkət xəbərləri (X şirkəti Bakıda ofis açır) kömək istəmək deyil, ona görə dərhal gəlmir. Claude 9 və daha yüksək bal verirsə, xəbər hər səhər 09:00-da "Şirkət siqnalları" mesajına düşür (`SIGNAL_MIN_SCORE`). Claude olmadan siqnal gəlmir. Söndürmək üçün: `/types individual job tender`.
 
 ## Telegram əmrləri
 
@@ -67,7 +69,7 @@ Claude açarı varsa, forumlarda və Google Alerts lentlərində açar söz olma
 | `/l123` | lid kartı və düymələr |
 | `/pipeline` | "Maraqlıdır" və "Əlaqə saxladım" lidləri |
 | `/draft 123` | lidin dilində məktub layihəsi (Claude; açar yoxdursa ingiliscə şablon) |
-| `/types individual job tender` | Telegram-a hansı lid növləri gəlsin (`company`, `dispute` əlavə oluna bilər) |
+| `/types individual job tender company` | Telegram-a hansı lid növləri gəlsin (`company` səhər siqnallarıdır, `dispute` əlavə oluna bilər) |
 | `/addtg @kanal job` | ictimai Telegram kanalı əlavə et (`job`, `individual`, `company`, `tender`) |
 | `/deltg @kanal` | kanalı sil |
 | `/digest 09:00` · `/digest off` · `/digest now` | səhər xülasəsi |
