@@ -7,7 +7,7 @@
 
 ## 1. Məqsəd
 
-İstifadəçi Azərbaycan Vəkillər Kollegiyasının üzvüdür, cinayət işi görmür və müştərini xaricdən axtarır: Azərbaycanla bağlı vəkil axtaran, istənilən növ hüquqi yardım axtaran və ya orada şirkət qurmaq istəyən xarici şirkətlər, sahibkarlar və əcnəbilər. Azərbaycanda yaşayanlar və Azərbaycan vətəndaşlarının şəxsi işləri hədəf deyil. Dillər: ingilis, rus, türk, Azərbaycan. Şirkət xəbərləri (məs. "X şirkəti Azərbaycanda birgə müəssisə qurur") müraciət sayılmır, yalnız səhər siqnalı kimi gəlir. Layihənin iki hissəsi var:
+İstifadəçi Azərbaycan Vəkillər Kollegiyasının üzvüdür, cinayət işi görmür və müştərini xaricdən axtarır: Azərbaycanla bağlı vəkil axtaran, istənilən növ hüquqi yardım axtaran və ya orada şirkət qurmaq istəyən xarici şirkətlər, sahibkarlar və əcnəbilər. Xaricdə yaşayan azərbaycanlılar da hədəfdir. Azərbaycanda yaşayan vətəndaşlar və yerli şirkətlər hədəf deyil. Dillər: ingilis, rus, türk, Azərbaycan. Şirkət xəbərləri (məs. "X şirkəti Azərbaycanda birgə müəssisə qurur") müraciət sayılmır, yalnız səhər siqnalı kimi gəlir. Layihənin iki hissəsi var:
 
 1. **Araşdırma:** dünya üzrə potensial müştərilərin siyahısı, linklərlə.
 2. **Telegram botu:** yeni lidləri və hüquqi konsultant tenderlərini avtomatik tapıb istifadəçiyə göndərir.
@@ -90,7 +90,7 @@ mənbələr (config/sources.yaml) → sources.py oxuyur
 
 ## 7. Qərarlar tarixçəsi
 
-- 2026-11-09 axşam: **hədəf dəqiqləşdi.** İstifadəçi: "vəkil axtaran, hüquqi yardım axtaran, şirkət qurmaq istəyən, bütün növ hüquqi yardım." Ən yüksək balı şirkət qurmaq istəyən və ya bunu soruşan xarici şirkət və sahibkar, habelə vəkil axtaran xarici şirkət alır, "vəkil" sözü şərt deyil. Əcnəbilərin müraciəti 6–8 bal alır və gəlir. Qeydiyyat xidməti reklamları, yerli müraciətlər, Azərbaycan vətəndaşlarının şəxsi işləri və cinayət işləri gəlmir.
+- 2026-11-09 axşam: **hədəf dəqiqləşdi.** İstifadəçi: "vəkil axtaran, hüquqi yardım axtaran, şirkət qurmaq istəyən, bütün növ hüquqi yardım." Ən yüksək balı şirkət qurmaq istəyən və ya bunu soruşan xarici şirkət və sahibkar, habelə vəkil axtaran xarici şirkət alır, "vəkil" sözü şərt deyil. Əcnəbilərin müraciəti 6–8 bal alır və gəlir. Xaricdə yaşayan azərbaycanlılar da istifadəçinin razılığı ilə əlavə olundu. Qeydiyyat xidməti reklamları, Azərbaycanda yaşayan vətəndaşların müraciətləri, başqa ölkənin hüququna aid suallar və cinayət işləri gəlmir. İstifadəçi real nümunə görsün deyə ilk oxunuşda saxlanmış pravoved.ru suallarından ən uyğun 10-u bir dəfə əl ilə növbəyə qoyuldu (kodda deyil, bazada).
 - 2026-11-09 axşam: istifadəçinin istəyi ilə iş elanları söndürüldü, "vakansiya mənbələrini söndürməyin" qaydası artıq qüvvədə deyil. 17 iş mənbəyi oxunmur. Geri qaytarmaq: `/types individual tender company job`.
 - 2026-11-09 axşam: botun bütün işi yoxlandı: 7 375 yazı oxunub, 5 mesaj göndərilib, heç biri real müştəri deyil. İstifadəçi botun istədiyi kimi olmadığını dedi. Ölçüdən əvvəl yeni mənbə əlavə etməyin.
 - 2026-11-09: **əsas hədəf.** İstifadəçi vəkildir, cinayət işi görmür və dedi ki, müştərini Azərbaycandan yox, xaricdən, xarici şirkətlər arasında axtarır. Claude təlimatı buna görə yenidən yazıldı: xarici şirkət və təşkilatlar birinci, əcnəbilər ikinci, Azərbaycanda yaşayanlar və Azərbaycan vətəndaşlarının şəxsi işləri 1–2 bal. Telegram müraciət botu qurulmadı, çünki xarici şirkətlər vəkili belə axtarmır. İstifadəçi açıq müraciətlərin az olacağını bilərək şirkət xəbərlərini səhər siqnalı kimi istədi.
