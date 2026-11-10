@@ -19,7 +19,7 @@ Bot ilk dəfə oxuduğu mənbədən köhnə elementləri **göndərmir**, yalnı
 2. Telegram-da [@BotFather](https://t.me/BotFather) → `/newbot` → token alın.
 3. **setup.bat** — asılılıqları quraşdırır, tokeni soruşur, `/start` gözləyir, istəsəniz Claude açarını soruşur.
 4. **start.bat** — botu işə salır.
-5. **autostart.bat** — kompüter açılanda bot özü işə düşsün (ləğv: autostart-remove.bat).
+5. **autostart.bat** — kompüter açılanda bot özü işə düşsün, dayansa 10 dəqiqə içində özü yenidən başlasın (ləğv: autostart-remove.bat). Botu tam dayandırmaq üçün əvvəlcə autostart-remove.bat işlədin, sonra pəncərəni bağlayın.
 
 **Mac / Linux:**
 
@@ -97,7 +97,7 @@ Bot kanalı dərhal yoxlayır. Yalnız ictimai kanallar işləyir.
 
 | Variant | Çətinlik | Düymələr işləyir |
 |---|---|---|
-| Windows + autostart.bat | asan | bəli, kompüter açıq olanda |
+| Windows + autostart.bat (bot dayansa, 10 dəqiqə içində özü qalxır) | asan | bəli, kompüter açıq olanda |
 | Linux server: `bash deploy/install-linux.sh` | orta | bəli, həmişə |
 | Docker: `docker compose up -d` | orta | bəli |
 | GitHub Actions (hər 30 dəq) | asan | xeyr, yalnız bildiriş |

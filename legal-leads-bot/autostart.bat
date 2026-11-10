@@ -14,7 +14,10 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0watchdog-install.ps1"
+if errorlevel 1 echo Yoxlama tapsirigi qurasdirilmadi, amma kompyuter acilanda bot yene ise dusecek.
 echo Hazirdir. Kompyuter her acilanda bot ozu ise dusecek ve kicik pencerede isleyecek.
+echo Bot dayansa, 10 deqiqe icinde ozu yeniden baslayacaq.
 echo Legv etmek ucun: autostart-remove.bat
 echo Bot artiq isleyirse, ikinci nusxe acilmayacaq.
 pause
