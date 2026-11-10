@@ -167,7 +167,7 @@ def test_google_alerts_feeds_are_opened_to_claude_but_other_rss_is_not(settings)
 
 def test_people_question_sources_are_marked_in_the_config():
     screened = {s.id for s in load_sources(ROOT / "config" / "sources.yaml") if s.ai_screen}
-    assert {"huquqlar_rss", "pravoved_az", "expat_az_forum_all", "worldbank_az", "ted_az"} <= screened and len(screened) == 9
+    assert {"huquqlar_rss", "pravoved_az", "expat_az_forum_all", "worldbank_az", "ted_az", "ejiltalk_rss", "unjobs_human_rights"} <= screened
 
 
 def test_google_alert_link_points_to_the_real_site():

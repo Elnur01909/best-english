@@ -1,10 +1,10 @@
 # Legal Leads Bot — Telegram
 
-Dünyanın harasında olursa olsun **Azərbaycanla bağlı vəkil, hüquqi yardım axtaran və ya orada şirkət qurmaq istəyən xarici şirkət, sahibkar, əcnəbi və xaricdə yaşayan azərbaycanlıları** (ingilis, rus, türk, Azərbaycan dillərində) və **hüquqi konsultant tenderlərini** izləyib sizə Telegram-a göndərən bot.
+Dünyanın harasında olursa olsun **Azərbaycanla bağlı vəkil, hüquqi yardım axtaran və ya orada şirkət qurmaq istəyən xarici şirkət, sahibkar, əcnəbi və xaricdə yaşayan azərbaycanlıları** (ingilis, rus, türk, Azərbaycan dillərində), **hüquqi konsultant tenderlərini**, habelə **beynəlxalq hüquq və insan hüquqları üzrə onlayn dərs, təlim, ekspert və akademik layihə çağırışlarını** izləyib sizə Telegram-a göndərən bot.
 
 ## Nə edir
 
-1. **Oxuyur:** Google News və xəbər lentləri, Expat.com forumu, Google Alerts, tender portalları (UNDP, EBRD, ADB, Dünya Bankı, TED), sizin əlavə etdiyiniz Telegram kanalları.
+1. **Oxuyur:** Google News və xəbər lentləri, Expat.com forumu, Google Alerts, tender portalları (UNDP, EBRD, ADB, Dünya Bankı, TED), beynəlxalq hüquq bloqları (EJIL:Talk, Opinio Juris, Völkerrechtsblog), ReliefWeb və UNjobs axtarışları, sizin əlavə etdiyiniz Telegram kanalları.
 2. **Süzür:** açar sözlər, mənbəyə uyğun kateqoriyalar və eyni xəbərin təkrarlarının atılması.
 3. **Qiymətləndirir (istəyə bağlı):** Claude hər lidə 1–10 bal verir, Azərbaycanca xülasə yazır və lazım olan hüquqi xidməti göstərir. Aşağı ballı lidlər gəlmir.
 4. **Çatdırır:** ani bildiriş və ya hər səhər bir xülasə. Hər lidin altında düymələr: ⭐ Maraqlıdır · 📞 Əlaqə saxladım · ❌ Uyğun deyil · ✍️ Məktub hazırla.

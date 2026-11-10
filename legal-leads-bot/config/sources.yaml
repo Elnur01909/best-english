@@ -204,6 +204,69 @@ sources:
     max_items: 40
     note: "✅ 09.11.2026 canlı yoxlanıb. Hüquqi elan nadirdir: 2023-dən bəri təxminən 9."
 
+  # ───────────── AKADEMİK LAYİHƏ, ONLAYN DƏRS, EKSPERT ÇAĞIRIŞLARI ─────────────
+  # Hamısının yazılarını Claude oxuyur: uyğun olanı (uzaqdan iş, beynəlxalq hüquq, insan hüquqları, Azərbaycan hüququ) o seçir.
+  - id: ejiltalk_rss
+    name: "EJIL:Talk - beynəlxalq hüquq elanları"
+    type: rss
+    url: "https://www.ejiltalk.org/feed/"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    note: "✅ 10.11.2026 canlı yoxlanıb. Announcements yazılarında çağırışlar olur."
+  - id: opiniojuris_rss
+    name: "Opinio Juris - elan və tədbirlər"
+    type: rss
+    url: "https://opiniojuris.org/feed/"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    note: "✅ 10.11.2026 canlı yoxlanıb."
+  - id: voelkerrechtsblog_rss
+    name: "Völkerrechtsblog - çağırışlar"
+    type: rss
+    url: "https://voelkerrechtsblog.org/feed/"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    max_items: 20
+    note: "✅ 10.11.2026 canlı yoxlanıb."
+  - id: reliefweb_intl_law
+    name: "ReliefWeb - beynəlxalq hüquq üzrə elanlar"
+    type: rss
+    url: "https://reliefweb.int/jobs/rss.xml?search=%22international+law%22"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    expect_empty: true
+    note: "✅ 10.11.2026 canlı yoxlanıb."
+  - id: reliefweb_ihl
+    name: "ReliefWeb - beynəlxalq humanitar hüquq üzrə elanlar"
+    type: rss
+    url: "https://reliefweb.int/jobs/rss.xml?search=%22international+humanitarian+law%22"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    expect_empty: true
+    note: "✅ 10.11.2026 canlı yoxlanıb."
+  - id: unjobs_human_rights
+    name: "UNjobs - insan hüquqları"
+    type: html_links
+    url: "https://unjobs.org/themes/human-rights"
+    link_pattern: "/vacancies/\\d+"
+    category: tender
+    categories: [tender]
+    require_geo: false
+    ai_screen: true
+    every_hours: 6
+    max_items: 30
+    note: "⚠️ 10.11.2026 canlı yoxlanıb, sayt bəzən sorğunu rədd edir."
+
   # ───────────── İŞ ELANLARI (Bakı) ─────────────
   - id: boss_az_legal
     name: "Boss.az — hüquqşünas vakansiyaları"
