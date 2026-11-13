@@ -57,12 +57,32 @@ def cmd_fetch(args, settings) -> int:
     return 1 if report.send_errors else 0
 
 
+def disable_quick_edit() -> bool:
+    """Windows pəncərəsinə klik edəndə ("Select") konsol yazını dayandırır və bot donur. Bunu söndürür.
+    Konsol yoxdursa və ya Windows deyilsə heç nə etmir. Söndürüldüsə True qaytarır."""
+    if not sys.platform.startswith("win"):
+        return False
+    try:
+        import ctypes
+        kernel32 = ctypes.windll.kernel32
+        handle = kernel32.GetStdHandle(-10)  # STD_INPUT_HANDLE
+        mode = ctypes.c_uint32()
+        if not kernel32.GetConsoleMode(handle, ctypes.byref(mode)):
+            return False
+        new_mode = (mode.value | 0x0080) & ~0x0040  # ENABLE_EXTENDED_FLAGS açıq, ENABLE_QUICK_EDIT_MODE söndürülür
+        return bool(kernel32.SetConsoleMode(handle, new_mode))
+    except Exception:  # konsol ayarı alınmasa da bot işləməlidir
+        return False
+
+
 def cmd_serve(args, settings) -> int:
     from .bot import LeadsBot
     lock = SingleInstance(settings.db_path.parent / "serve.lock")
     if not lock.acquire():
         print("Bot artıq işləyir (başqa pəncərədə və ya avtomatik açılışla). İkinci nüsxə açılmadı.")
         return 3
+    if disable_quick_edit():
+        print("Pəncərəyə klik etmək botu artıq dayandırmır.")
     try:
         store = Store(settings.db_path)
         tg = TelegramClient(settings.require_token(), timeout=settings.request_timeout)
