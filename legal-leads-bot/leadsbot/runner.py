@@ -11,6 +11,7 @@ from .ai import AIError, LeadAI
 from .config import ConfigError, Settings, parse_lead_types
 from .filters import Matcher
 from .formatting import esc, format_digest, format_row, lead_keyboard
+from .manual import MANUAL_SOURCES
 from .models import MatchResult, Source
 from .sources import FetchError, fetch_source
 from .storage import Store
@@ -180,7 +181,7 @@ def run_cycle(
     - between_sources → hər mənbədən əvvəl çağırılır (dövrə uzun çəkəndə Telegram əmrlərinə cavab vermək üçün).
     """
     report = CycleReport(started=_now_iso())
-    names = {s.id: s.name for s in sources}
+    names = {**MANUAL_SOURCES, **{s.id: s.name for s in sources}}
     today = today or local_now(settings).date()
     wanted = effective_lead_types(settings, store)
     now = datetime.now(timezone.utc)

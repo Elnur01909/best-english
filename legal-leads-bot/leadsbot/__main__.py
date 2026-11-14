@@ -10,6 +10,7 @@ from .ai import make_ai
 from .config import ROOT, ConfigError, all_sources, load_profile, load_settings, load_sources
 from .filters import Matcher
 from .lock import SingleInstance
+from .manual import MANUAL_SOURCES, add_manual_leads, load_leads_file
 from .runner import check_sources, maybe_send_digest, run_cycle
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
@@ -50,7 +51,7 @@ def cmd_fetch(args, settings) -> int:
     report = run_cycle(settings, store, sources, matcher, tg, chats,
                        send=not args.dry_run, seed_only=args.seed, dry_run=args.dry_run, only=only, ai=ai)
     print(report.summary_text())
-    if tg is not None and maybe_send_digest(settings, store, tg, chats, {s.id: s.name for s in sources}):
+    if tg is not None and maybe_send_digest(settings, store, tg, chats, {**MANUAL_SOURCES, **{s.id: s.name for s in sources}}):
         print("☀️ Səhər xülasəsi göndərildi.")
     for err in report.send_errors:
         print("Telegram:", err)
@@ -179,6 +180,38 @@ def cmd_update(args, settings) -> int:
     return 0
 
 
+ADD_LABELS = {
+    "pending": "✅ növbəyə qoyuldu",
+    "known": "↩️ artıq var, yenidən göndərilmir",
+    "duplicate": "↩️ eyni başlıqlı yazı artıq var",
+    "invalid": "❌ link (http...) və başlıq lazımdır",
+}
+
+
+def cmd_add(args, settings) -> int:
+    if args.source not in MANUAL_SOURCES:
+        print(f"Mənbə yalnız bunlar ola bilər: {', '.join(MANUAL_SOURCES)}")
+        return 2
+    if args.file:
+        try:
+            leads = load_leads_file(Path(args.file))
+        except (OSError, ValueError) as exc:
+            print(f"Fayl oxunmadı: {exc}")
+            return 2
+    elif args.link and args.title:
+        leads = [{"link": args.link, "title": args.title, "text": args.text, "who": args.who, "date": args.date}]
+    else:
+        print("--link və --title (və ya --file) lazımdır.")
+        return 2
+    results = add_manual_leads(Store(settings.db_path), args.source, leads)
+    for outcome, title in results:
+        print(f"{ADD_LABELS.get(outcome, outcome)}: {title[:90]}")
+    queued = sum(1 for o, _ in results if o == "pending")
+    if queued:
+        print(f"{queued} yeni lid. Bot onları növbəti yoxlamada (ən çox {settings.fetch_interval_min} dəq.) Telegram-a göndərəcək.")
+    return 1 if any(o == "invalid" for o, _ in results) else 0
+
+
 def cmd_setup(args, settings) -> int:
     from .setup_wizard import run_setup
     env_path = Path(args.env) if args.env else ROOT / ".env"
@@ -214,6 +247,16 @@ def main(argv: list[str] | None = None) -> int:
     up = sub.add_parser("update", help="yeni versiyanı GitHub-dan endir (.env, data, .venv toxunulmur)")
     up.add_argument("--force", action="store_true", help="versiya eyni olsa da faylları yenidən yaz")
     up.set_defaults(func=cmd_update)
+
+    ad = sub.add_parser("add", help="LinkedIn kimi saytda tapılan müraciəti botun növbəsinə qoy")
+    ad.add_argument("--source", default="linkedin", help="mənbə (hazırda yalnız linkedin)")
+    ad.add_argument("--file", help="JSON siyahı: [{\"link\", \"title\", \"text\", \"who\", \"date\"}]")
+    ad.add_argument("--link")
+    ad.add_argument("--title")
+    ad.add_argument("--text", default="")
+    ad.add_argument("--who", default="", help="kim yazıb: ad, vəzifə, şirkət")
+    ad.add_argument("--date", default="")
+    ad.set_defaults(func=cmd_add)
 
     sub.add_parser("sources", help="konfiqurasiyadakı mənbələri göstər").set_defaults(func=cmd_sources)
     sub.add_parser("send-test", help="Telegram-a test mesajı göndər").set_defaults(func=cmd_send_test)

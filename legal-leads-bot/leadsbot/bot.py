@@ -11,6 +11,7 @@ import requests
 from .ai import AIError, LeadAI, template_draft
 from .config import Settings, all_sources, load_profile, load_sources, parse_hhmm, parse_lead_types, ConfigError
 from .filters import Matcher
+from .manual import MANUAL_SOURCES
 from .formatting import (BUTTON_STATUS, CATEGORY_META, STATUS_LABELS, esc, format_row, format_short, lead_keyboard)
 from .models import CATEGORIES, LEAD_TYPES, Source, normalize_tg_handle
 from .runner import (check_sources, effective_digest_time, effective_health_url, effective_lead_types, effective_min_score,
@@ -69,7 +70,7 @@ class LeadsBot:
         return all_sources(self.config_sources, self.store)
 
     def names(self) -> dict[str, str]:
-        return {s.id: s.name for s in self.sources}
+        return {**MANUAL_SOURCES, **{s.id: s.name for s in self.sources}}
 
     def matcher(self) -> Matcher:
         return Matcher(self.profile, self.store.user_keywords())

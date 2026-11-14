@@ -125,7 +125,7 @@ Botun iki nüsxəsi eyni vaxtda işləyə bilməz: ikinci nüsxə avtomatik daya
 - **TripAdvisor** botları bloklayır: söndürülüb, forumu əl ilə izləyin.
 - **❔ işarəli mənbələr** (Trend, AzerNews, iş saytları, ReliefWeb RSS) real şəbəkədə hələ sınanmayıb: `check.bat` ilə yoxlayın, işləməyəni `/mute` edin.
 - **ReliefWeb API** təsdiqlənmiş tətbiq adı tələb edir. **UNGM, EBRD, ADB** açıq lent vermir: onların e-poçt xəbərdarlıqlarına abunə olun.
-- **LinkedIn və Facebook** daxil edilməyib, şərtləri avtomatik oxumağı qadağan edir.
+- **LinkedIn və Facebook-u** bot özü oxumur, şərtləri bunu qadağan edir. LinkedIn-ə Claude tətbiqindəki planlı tapşırıq ("LinkedIn yoxlaması") gündə 3 dəfə sizin Chrome-da, yavaş və yalnız oxumaq üçün baxır. Tapdığı müraciəti `python -m leadsbot add --file leads.json` ilə bota verir, bot da onu adi lid kimi düymələri ilə Telegram-a göndərir. Eyni link ikinci dəfə gəlmir. Tapşırıq yalnız Claude tətbiqi və Chrome açıq olanda işləyir.
 
 ## Etik qaydalar
 
