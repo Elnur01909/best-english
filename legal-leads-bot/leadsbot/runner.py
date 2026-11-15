@@ -146,6 +146,18 @@ def is_stale(published: str, max_age_days: int, now: datetime) -> bool:
     return now - dt > timedelta(days=max_age_days)
 
 
+def owner_chats(settings: Settings, store: Store) -> list[str]:
+    """Sahibin çatları (.env-dəki TELEGRAM_CHAT_ID), /stop ilə susdurulanlar çıxmaqla."""
+    return [c for c in settings.allowed_chat_ids if store.get(f"muted:{c}") != "1"]
+
+
+def lead_chats(settings: Settings, store: Store) -> list[str]:
+    """Lidlərin və səhər xülasəsinin getdiyi çatlar: sahibin çatları və bota qoşulmuş qruplar."""
+    chats = owner_chats(settings, store)
+    chats += [g for g in store.groups() if g not in settings.allowed_chat_ids and store.get(f"muted:{g}") != "1"]
+    return chats
+
+
 def effective_health_url(settings: Settings, store: Store) -> str:
     v = store.get("health_url")
     return settings.healthcheck_url if v is None else v
@@ -172,6 +184,7 @@ def run_cycle(
     ai: LeadAI | None = None,
     today: date | None = None,
     between_sources: Callable[[], None] | None = None,
+    alert_chats: list[str] | None = None,
 ) -> CycleReport:
     """Bir tam dövrə: oxu → filtrlə → təkrarları at → (Claude) qiymətləndir → çatdır.
 
@@ -179,6 +192,8 @@ def run_cycle(
     - seed_only=True → yalnız başlanğıc nöqtəsi; heç nə göndərilmir.
     - dry_run=True → göndəriləcək mesajlar ekrana yazılır; bazada heç nə 'göndərilib' sayılmır.
     - between_sources → hər mənbədən əvvəl çağırılır (dövrə uzun çəkəndə Telegram əmrlərinə cavab vermək üçün).
+    - alert_chats → texniki xəbərdarlıqlar (mənbə sınıb, Claude işləmir) yalnız bura gedir, qruplara yox.
+      Boşdursa (sahib /stop yazıb), xəbərdarlıq lidlərin getdiyi çatlara gedir ki, itməsin.
     """
     report = CycleReport(started=_now_iso())
     names = {**MANUAL_SOURCES, **{s.id: s.name for s in sources}}
@@ -251,8 +266,9 @@ def run_cycle(
         _score_pending(settings, store, ai, report)
     _deliver(settings, store, names, tg, chat_ids, report, ai_on=ai is not None, dry_run=dry_run)
     if send and not dry_run and not only:
-        _check_health(store, sources, report, tg, chat_ids)
-        _check_claude(store, report, tg, chat_ids)
+        alerts = alert_chats or chat_ids
+        _check_health(store, sources, report, tg, alerts)
+        _check_claude(store, report, tg, alerts)
     report.pending = store.pending_count()
     report.finished = _now_iso()
     return report

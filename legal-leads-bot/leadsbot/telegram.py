@@ -80,7 +80,7 @@ class TelegramClient:
                 raise
 
     def get_updates(self, offset: int | None = None, timeout: int = 30) -> list[dict]:
-        params = {"timeout": timeout, "allowed_updates": ["message", "edited_message", "callback_query"]}
+        params = {"timeout": timeout, "allowed_updates": ["message", "edited_message", "callback_query", "my_chat_member"]}
         if offset is not None:
             params["offset"] = offset
         old = self.timeout

@@ -11,7 +11,7 @@ from .config import ROOT, ConfigError, all_sources, load_profile, load_settings,
 from .filters import Matcher
 from .lock import SingleInstance
 from .manual import MANUAL_SOURCES, add_manual_leads, load_leads_file
-from .runner import check_sources, maybe_send_digest, run_cycle
+from .runner import check_sources, lead_chats, maybe_send_digest, owner_chats, run_cycle
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
 from .updater import RESTART_EXIT_CODE, RestartRequested, UpdateError, run_update
@@ -45,11 +45,13 @@ def cmd_fetch(args, settings) -> int:
     tg, chats = None, []
     if not args.dry_run and not args.seed:
         tg = TelegramClient(settings.require_token(), timeout=settings.request_timeout)
-        chats = [c for c in settings.require_chat_ids() if store.get(f"muted:{c}") != "1"]
+        settings.require_chat_ids()
+        chats = lead_chats(settings, store)
     only = set(args.only.split(",")) if args.only else None
     ai = None if (args.seed or args.no_ai) else make_ai(settings)
     report = run_cycle(settings, store, sources, matcher, tg, chats,
-                       send=not args.dry_run, seed_only=args.seed, dry_run=args.dry_run, only=only, ai=ai)
+                       send=not args.dry_run, seed_only=args.seed, dry_run=args.dry_run, only=only, ai=ai,
+                       alert_chats=owner_chats(settings, store) if tg is not None else None)
     print(report.summary_text())
     if tg is not None and maybe_send_digest(settings, store, tg, chats, {**MANUAL_SOURCES, **{s.id: s.name for s in sources}}):
         print("☀️ Səhər xülasəsi göndərildi.")

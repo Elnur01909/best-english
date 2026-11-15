@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import sqlite3
 from datetime import datetime, timedelta, timezone
@@ -374,3 +375,27 @@ class Store:
     def delete(self, key: str) -> None:
         self.conn.execute("DELETE FROM kv WHERE key=?", (key,))
         self.conn.commit()
+
+    # ── qruplar ──
+    def groups(self) -> dict[str, str]:
+        """Lidlərin getdiyi Telegram qrupları: {çat id: qrupun adı}. Sahib botu qrupa əlavə edəndə yazılır."""
+        try:
+            data = json.loads(self.get("groups") or "{}")
+        except ValueError:
+            return {}
+        return {str(k): str(v) for k, v in data.items()} if isinstance(data, dict) else {}
+
+    def add_group(self, chat_id: str, title: str) -> bool:
+        """Qrup yenidirsə True."""
+        groups = self.groups()
+        new = chat_id not in groups
+        groups[chat_id] = title
+        self.set("groups", json.dumps(groups, ensure_ascii=False))
+        return new
+
+    def remove_group(self, chat_id: str) -> bool:
+        groups = self.groups()
+        if groups.pop(chat_id, None) is None:
+            return False
+        self.set("groups", json.dumps(groups, ensure_ascii=False))
+        return True

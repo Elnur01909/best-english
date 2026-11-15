@@ -15,7 +15,7 @@ from .manual import MANUAL_SOURCES
 from .formatting import (BUTTON_STATUS, CATEGORY_META, STATUS_LABELS, esc, format_row, format_short, lead_keyboard)
 from .models import CATEGORIES, LEAD_TYPES, Source, normalize_tg_handle
 from .runner import (check_sources, effective_digest_time, effective_health_url, effective_lead_types, effective_min_score,
-                     maybe_send_digest, run_cycle)
+                     lead_chats, maybe_send_digest, owner_chats, run_cycle)
 from .sources import FetchError, fetch_source
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
@@ -23,6 +23,10 @@ from .updater import RestartRequested, UpdateError, installed_sha, latest_sha, r
 from .config import ROOT
 
 log = logging.getLogger("leadsbot.bot")
+
+GROUP_TYPES = ("group", "supergroup", "channel")
+GROUP_WELCOME = ("✅ <b>Legal Leads Bot</b> bu qrupa qoşuldu. Yeni hüquqi müraciətlər bura da gələcək.\n"
+                 "Lidlərin altındakı düymələrdən yalnız bot sahibi istifadə edə bilər.")
 
 HELP = """<b>Legal Leads Bot</b> — Azərbaycanla bağlı hüquqi yardım axtaranlar, iş elanları və tenderlər.
 
@@ -44,6 +48,7 @@ HELP = """<b>Legal Leads Bot</b> — Azərbaycanla bağlı hüquqi yardım axtar
 /types individual tender company — Telegram-a hansı növlər gəlsin (company səhər siqnallarıdır, job və dispute əlavə oluna bilər)
 /ai — Claude statusu · /minscore 6 — minimum bal
 /digest 09:00 · /digest off · /digest now — səhər xülasəsi
+/groups — lidlərin getdiyi qruplar (botu qrupa əlavə etmək kifayətdir)
 /keywords · /addkw söz · /delkw söz
 /stats · /stop · /start · /ping
 
@@ -60,7 +65,8 @@ class LeadsBot:
         self.ai = ai
         self.config_sources: list[Source] = load_sources(settings.sources_file)
         self.profile = load_profile(settings.keywords_file)
-        self.allowed = set(settings.require_chat_ids())
+        self.owners = set(settings.require_chat_ids())
+        self.bot_id = settings.bot_token.split(":", 1)[0]  # tokenin əvvəli botun öz id-sidir
         self.offset: int | None = None
         self.cycling = False
 
@@ -76,7 +82,12 @@ class LeadsBot:
         return Matcher(self.profile, self.store.user_keywords())
 
     def active_chats(self) -> list[str]:
-        return [c for c in self.settings.allowed_chat_ids if self.store.get(f"muted:{c}") != "1"]
+        """Lidlərin getdiyi çatlar: sahibin çatı və qoşulmuş qruplar (/stop yazılanlar çıxmaqla)."""
+        return lead_chats(self.settings, self.store)
+
+    def tell_owners(self, text: str) -> None:
+        for chat in owner_chats(self.settings, self.store):
+            self.reply(chat, text)
 
     def reload_config(self) -> None:
         self.config_sources = load_sources(self.settings.sources_file)
@@ -93,7 +104,7 @@ class LeadsBot:
         interval = self.settings.fetch_interval_min * 60
         next_cycle = time.monotonic() if run_first else time.monotonic() + interval
         log.info("serve: %d mənbə, hər %d dəq, çatlar: %s, Claude: %s", len(self.sources),
-                 self.settings.fetch_interval_min, ", ".join(self.settings.allowed_chat_ids),
+                 self.settings.fetch_interval_min, ", ".join(self.settings.allowed_chat_ids + list(self.store.groups())),
                  self.settings.ai_model if self.ai else "söndürülüb")
         while True:
             if time.monotonic() >= next_cycle:
@@ -145,6 +156,7 @@ class LeadsBot:
             report = run_cycle(
                 self.settings, self.store, self.sources, self.matcher(), self.tg, self.active_chats(),
                 send=True, only=only, ai=self.ai, between_sources=self._poll_during_cycle,
+                alert_chats=owner_chats(self.settings, self.store),
             )
         finally:
             self.cycling = False
@@ -176,20 +188,36 @@ class LeadsBot:
         if "callback_query" in update:
             self.handle_callback(update["callback_query"])
             return
+        if "my_chat_member" in update:
+            self.handle_membership(update["my_chat_member"])
+            return
         msg = update.get("message") or update.get("edited_message")
         if not msg:
             return
-        chat_id = str(msg.get("chat", {}).get("id"))
+        chat = msg.get("chat") or {}
+        chat_id = str(chat.get("id"))
+        if self.handle_service(msg, chat):
+            return
         text = (msg.get("text") or "").strip()
         if not text.startswith("/"):
-            return
-        if chat_id not in self.allowed:
-            log.warning("icazəsiz çat: %s (%s)", chat_id, text[:40])
-            self.reply(chat_id, "Bu bot şəxsidir. Çat ID-niz: <code>" + esc(chat_id) + "</code>")
             return
         parts = text.split(maxsplit=1)
         cmd = parts[0].split("@", 1)[0].lower()
         arg = parts[1].strip() if len(parts) > 1 else ""
+        if chat_id not in self.owners:
+            if chat.get("type") not in GROUP_TYPES:
+                log.warning("icazəsiz çat: %s (%s)", chat_id, text[:40])
+                self.reply(chat_id, "Bu bot şəxsidir. Çat ID-niz: <code>" + esc(chat_id) + "</code>")
+                return
+            if _sender(msg) not in self.owners:
+                return  # qrupda əmrləri yalnız sahib verir; başqalarına cavab yazıb qrupu doldurmuruq
+            if cmd == "/join":
+                if not self.join_group(chat, _sender(msg)):
+                    self.reply(chat_id, "Bu qrup artıq qoşulub. Lidlər bura gəlir.")
+                return
+            if chat_id not in self.store.groups():
+                self.reply(chat_id, "Bu qrup bota qoşulmayıb. Lidlər bura gəlsin deyə /join yazın.")
+                return
         m = re.fullmatch(r"/l(\d+)", cmd)
         if m:
             self.cmd_lead(chat_id, m.group(1))
@@ -205,6 +233,7 @@ class LeadsBot:
             "/types": self.cmd_types, "/addrss": self.cmd_addrss, "/delrss": self.cmd_delrss, "/health": self.cmd_health,
             "/digest": self.cmd_digest, "/minscore": self.cmd_minscore, "/ai": self.cmd_ai,
             "/update": self.cmd_update, "/version": self.cmd_version, "/restart": self.cmd_restart,
+            "/groups": self.cmd_groups, "/join": self.cmd_groups,
         }.get(cmd)
         if handler is None:
             self.reply(chat_id, "Naməlum əmr. /help yazın.")
@@ -216,9 +245,13 @@ class LeadsBot:
         msg = cq.get("message") or {}
         chat_id = str((msg.get("chat") or {}).get("id"))
         data = cq.get("data") or ""
-        if chat_id not in self.allowed:
-            self._answer(cq_id, "İcazə yoxdur")
-            return
+        if chat_id not in self.owners:
+            if chat_id not in self.store.groups():
+                self._answer(cq_id, "İcazə yoxdur")
+                return
+            if _sender(cq) not in self.owners:
+                self._answer(cq_id, "Düymələrdən yalnız bot sahibi istifadə edə bilər")
+                return
         m = re.fullmatch(r"s:(\d+):([icxd])", data)
         if not m:
             self._answer(cq_id, "Köhnə düymə")
@@ -242,6 +275,79 @@ class LeadsBot:
                 self.tg.edit_reply_markup(chat_id, msg["message_id"], lead_keyboard(item_id, status))
             except TelegramError as exc:
                 log.warning("düymələr yenilənmədi: %s", exc)
+
+    # ── qruplar ──
+    def handle_membership(self, change: dict) -> None:
+        """Botu qrupa əlavə edəndə və ya çıxaranda Telegram bunu ayrıca xəbər verir."""
+        chat = change.get("chat") or {}
+        if chat.get("type") not in GROUP_TYPES:
+            return  # şəxsi çat: istifadəçi botu bloklayıb və ya açıb
+        status = (change.get("new_chat_member") or {}).get("status")
+        if status in ("member", "administrator"):
+            self.join_group(chat, _sender(change))
+        elif status in ("left", "kicked"):
+            self.leave_group(chat)
+
+    def handle_service(self, msg: dict, chat: dict) -> bool:
+        """Qrupdakı xidməti mesajlar: bot əlavə olundu, çıxarıldı, qrup supergroup oldu. Emal edibsə True."""
+        chat_id = str(chat.get("id"))
+        if msg.get("migrate_to_chat_id") or msg.get("migrate_from_chat_id"):
+            # qrup supergroup-a çevriləndə id-si dəyişir: köhnə id ilə göndərmək alınmır
+            old = str(msg.get("migrate_from_chat_id") or chat_id)
+            new = str(msg.get("migrate_to_chat_id") or chat_id)
+            groups = self.store.groups()
+            if old in groups and new not in groups:
+                self.store.add_group(new, groups[old])
+                self.store.remove_group(old)
+                if self.store.get(f"muted:{old}") == "1":
+                    self.store.set(f"muted:{new}", "1")
+                self.store.delete(f"muted:{old}")
+                log.info("qrup supergroup oldu: %s → %s", old, new)
+            return True
+        added = any(str(u.get("id")) == self.bot_id for u in msg.get("new_chat_members") or [])
+        if added or msg.get("group_chat_created") or msg.get("supergroup_chat_created"):
+            self.join_group(chat, _sender(msg))
+            return True
+        left = msg.get("left_chat_member") or {}
+        if left and str(left.get("id")) == self.bot_id:
+            self.leave_group(chat)
+            return True
+        return False
+
+    def join_group(self, chat: dict, added_by: str) -> bool:
+        """Qrupu lid alanlara qoşur, yalnız sahib əlavə edibsə. Yeni qoşulubsa True."""
+        chat_id = str(chat.get("id"))
+        title = str(chat.get("title") or chat_id)
+        if chat.get("type") not in GROUP_TYPES or chat_id in self.owners or chat_id in self.store.groups():
+            return False  # eyni əlavə etmə Telegram-dan iki yolla gəlir; ikincisi heç nə etmir
+        if added_by not in self.owners:
+            log.warning("botu sahibi olmayan biri qrupa əlavə etdi, qoşulmadı: %s (%s)", title, chat_id)
+            return False
+        self.store.add_group(chat_id, title)
+        self.store.delete(f"muted:{chat_id}")
+        log.info("qrup qoşuldu: %s (%s)", title, chat_id)
+        self.reply(chat_id, GROUP_WELCOME)
+        self.tell_owners(f"✅ «{esc(title)}» qrupu qoşuldu, yeni lidlər ora da gedəcək.\n"
+                         "Lidlər yalnız qrupa getsin istəsəniz, burada /stop yazın.")
+        return True
+
+    def leave_group(self, chat: dict) -> None:
+        chat_id = str(chat.get("id"))
+        title = self.store.groups().get(chat_id)
+        if title is None or not self.store.remove_group(chat_id):
+            return
+        self.store.delete(f"muted:{chat_id}")
+        log.info("qrupdan çıxarıldı: %s (%s)", title, chat_id)
+        self.tell_owners(f"➖ Bot «{esc(title)}» qrupundan çıxarıldı, lidlər ora artıq getmir.")
+
+    def cmd_groups(self, chat_id: str, arg: str) -> None:
+        groups = self.store.groups()
+        lines = ["<b>Lidlərin getdiyi qruplar</b>"]
+        lines += [f"• {esc(t)}" + (" (🔕 /stop yazılıb)" if self.store.get(f"muted:{g}") == "1" else "")
+                  for g, t in groups.items()] or ["Hələ heç bir qrup yoxdur."]
+        lines.append("\nQrup əlavə etmək üçün botu qrupa üzv kimi əlavə edin, o özü qoşulacaq. "
+                     "Çıxarmaq üçün botu qrupdan silin.")
+        self.reply(chat_id, "\n".join(lines))
 
     def _answer(self, cq_id: str, text: str) -> None:
         try:
@@ -611,3 +717,8 @@ class LeadsBot:
         else:
             lines.append("GitHub yoxlanmadı.")
         self.reply(chat_id, "\n".join(lines))
+
+
+def _sender(obj: dict) -> str:
+    """Mesajı yazan və ya düyməni basan istifadəçinin id-si (şəxsi çatda çat id-si ilə eynidir)."""
+    return str((obj.get("from") or {}).get("id"))

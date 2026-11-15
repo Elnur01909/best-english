@@ -79,9 +79,20 @@ Claude açarı varsa, forumlarda və Google Alerts lentlərində açar söz olma
 | `/mute id` · `/unmute id` | mənbəni söndür / yandır |
 | `/addkw söz` · `/delkw söz` · `/keywords` | əlavə açar sözlər |
 | `/stats` · `/stop` · `/start` · `/ping` | statistika · bildirişlər |
+| `/groups` | lidlərin getdiyi Telegram qrupları |
 | `/update` · `/version` · `/restart` | yeniləmə · versiya · yenidən başlatma |
 
 Bot yalnız `.env`-dəki çat ID-lərinə cavab verir.
+
+### Lidlər Telegram qrupuna necə göndərilir
+
+Botu qrupa üzv kimi əlavə edin: qrupda adın üstünə basın, sonra "Üzv əlavə et" seçin və botun adını yazın. Bot qrupa özü qoşulur, qrupa "qoşuldu" yazır, sizə də şəxsi çatda xəbər verir. Bundan sonra hər yeni lid həm sizə, həm qrupa gəlir. Lidlər yalnız qrupa getsin istəyirsinizsə, botla şəxsi çatda `/stop` yazın.
+
+- Botu yalnız `.env`-dəki sahib əlavə edəndə qrup qoşulur. Başqası əlavə etsə, bot oraya heç nə yazmır.
+- Qrupda əmrləri və lidlərin altındakı düymələri yalnız sahib işlədə bilər. Başqalarının əmrlərinə bot cavab vermir.
+- Texniki xəbərdarlıqlar (mənbə sınıb, Claude işləmir) qrupa getmir, yalnız sizə gəlir.
+- Botu qrupdan silsəniz, lidlər ora getməyi dayandırır.
+- Bot əvvəldən qrupdadırsa, qrupda `/join` yazın.
 
 ### Telegram kanalları necə əlavə olunur
 
