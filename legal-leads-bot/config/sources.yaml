@@ -356,61 +356,82 @@ sources:
     legal_forum: true
     ai_screen: true
     note: "✅ 09.11.2026 canlı yoxlanıb."
-  - id: pravoved_az
-    name: "pravoved.ru - search: Азербайджан"
+  # pravoved.ru axtarışı sualları tarixə görə yox, uyğunluğa görə düzür və hər dəfə eyni 15 köhnə sualı göstərir
+  # (17.11.2026-da yoxlanıb). Bölmə səhifələri isə ən yeni sualları göstərir; Azərbaycan sözü olanları bot seçir.
+  # Bölmələr bütün Rusiya üzrədir, ona görə Claude yalnız Azərbaycan sözü olan suallara baxır (ai_screen yoxdur).
+  - id: pravoved_new_citizenship
+    name: "pravoved.ru - yeni suallar: Гражданство"
     type: html_links
-    url: "https://pravoved.ru/search/?q=%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD"
+    url: "https://pravoved.ru/questions/citizenship/"
     link_pattern: "/question/\\d+/"
     category: individual
     categories: [individual]
     require_geo: true
     legal_forum: true
-    ai_screen: true
-    note: "✅ 09.11.2026 canlı yoxlanıb."
-  - id: pravoved_az_nasledstvo
-    name: "pravoved.ru - search: Азербайджан наследство"
+    note: "✅ 17.11.2026 canlı yoxlanıb: ən yeni 15 sual, Azərbaycan sözü olan suallar keçir."
+  - id: pravoved_new_migration
+    name: "pravoved.ru - yeni suallar: Миграционное право"
     type: html_links
-    url: "https://pravoved.ru/search/?q=%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD+%D0%BD%D0%B0%D1%81%D0%BB%D0%B5%D0%B4%D1%81%D1%82%D0%B2%D0%BE"
+    url: "https://pravoved.ru/questions/citizenship/migration-law/"
     link_pattern: "/question/\\d+/"
     category: individual
     categories: [individual]
     require_geo: true
     legal_forum: true
-    ai_screen: true
-    note: "✅ 09.11.2026 canlı yoxlanıb."
-  - id: pravoved_az_grazhdanstvo
-    name: "pravoved.ru - search: гражданство Азербайджана"
+    note: "✅ 17.11.2026 canlı yoxlanıb: ən yeni 15 sual, Azərbaycan sözü olan suallar keçir."
+  - id: pravoved_new_inheritance
+    name: "pravoved.ru - yeni suallar: Наследство"
     type: html_links
-    url: "https://pravoved.ru/search/?q=%D0%B3%D1%80%D0%B0%D0%B6%D0%B4%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD%D0%B0"
+    url: "https://pravoved.ru/questions/inheritance/"
     link_pattern: "/question/\\d+/"
     category: individual
     categories: [individual]
     require_geo: true
     legal_forum: true
-    ai_screen: true
-    note: "✅ 09.11.2026 canlı yoxlanıb."
-  - id: pravoved_az_deport
-    name: "pravoved.ru - search: депортация Азербайджан"
+    note: "✅ 17.11.2026 canlı yoxlanıb: ən yeni 15 sual, Azərbaycan sözü olan suallar keçir."
+  - id: pravoved_new_marriage
+    name: "pravoved.ru - yeni suallar: Брак и развод"
     type: html_links
-    url: "https://pravoved.ru/search/?q=%D0%B4%D0%B5%D0%BF%D0%BE%D1%80%D1%82%D0%B0%D1%86%D0%B8%D1%8F+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD"
+    url: "https://pravoved.ru/questions/family-law/marriage-and-divorce/"
     link_pattern: "/question/\\d+/"
     category: individual
     categories: [individual]
     require_geo: true
     legal_forum: true
-    ai_screen: true
-    note: "✅ 09.11.2026 canlı yoxlanıb."
-  - id: pravoved_az_vezd
-    name: "pravoved.ru - search: запрет на въезд Азербайджан"
+    note: "✅ 17.11.2026 canlı yoxlanıb: ən yeni 15 sual, Azərbaycan sözü olan suallar keçir."
+  - id: pravoved_new_pensions
+    name: "pravoved.ru - yeni suallar: Пенсии и пособия"
     type: html_links
-    url: "https://pravoved.ru/search/?q=%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%82+%D0%BD%D0%B0+%D0%B2%D1%8A%D0%B5%D0%B7%D0%B4+%D0%90%D0%B7%D0%B5%D1%80%D0%B1%D0%B0%D0%B9%D0%B4%D0%B6%D0%B0%D0%BD"
+    url: "https://pravoved.ru/questions/social-maintenance/pensions-and-benefits/"
     link_pattern: "/question/\\d+/"
     category: individual
     categories: [individual]
     require_geo: true
     legal_forum: true
+    note: "✅ 17.11.2026 canlı yoxlanıb: ən yeni 15 sual, Azərbaycan sözü olan suallar keçir."
+
+  # Stack Exchange: əcnəbilərin Azərbaycan haqqında sualları (Reddit 13.11.2026-da RSS-i bağladı)
+  - id: law_se_azerbaijan
+    name: "Law Stack Exchange — azerbaijan teqi"
+    type: rss
+    url: "https://law.stackexchange.com/feeds/tag/azerbaijan"
+    category: individual
+    categories: [individual]
+    require_geo: false
+    legal_forum: true
     ai_screen: true
-    note: "✅ 09.11.2026 canlı yoxlanıb."
+    expect_empty: true
+    note: "✅ 17.11.2026 canlı yoxlanıb. Sual az gəlir, amma hamısı Azərbaycan hüququ haqqındadır."
+  - id: travel_se_azerbaijan
+    name: "Travel Stack Exchange — azerbaijan teqi"
+    type: rss
+    url: "https://travel.stackexchange.com/feeds/tag/azerbaijan"
+    category: individual
+    categories: [individual]
+    require_geo: false
+    ai_screen: true
+    expect_empty: true
+    note: "✅ 17.11.2026 canlı yoxlanıb. Viza, qeydiyyat, sərhəd sualları; Claude ayırır."
 
   # ───────────── Company signals - English ─────────────
   - id: gnews_en_entity

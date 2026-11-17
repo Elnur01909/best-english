@@ -167,7 +167,16 @@ def test_google_alerts_feeds_are_opened_to_claude_but_other_rss_is_not(settings)
 
 def test_people_question_sources_are_marked_in_the_config():
     screened = {s.id for s in load_sources(ROOT / "config" / "sources.yaml") if s.ai_screen}
-    assert {"huquqlar_rss", "pravoved_az", "expat_az_forum_all", "worldbank_az", "ted_az", "ejiltalk_rss", "unjobs_human_rights"} <= screened
+    assert {"huquqlar_rss", "law_se_azerbaijan", "expat_az_forum_all", "worldbank_az", "ted_az", "ejiltalk_rss",
+            "unjobs_human_rights"} <= screened
+
+
+def test_pravoved_is_read_from_newest_first_pages_and_only_azerbaijan_questions_pass():
+    srcs = [s for s in load_sources(ROOT / "config" / "sources.yaml") if "pravoved.ru" in s.url]
+    assert len(srcs) == 5
+    for s in srcs:
+        assert "/search/" not in s.url  # axtarış hər dəfə eyni köhnə sualları qaytarır
+        assert "/questions/" in s.url and s.require_geo and s.legal_forum and not s.ai_screen
 
 
 def test_google_alert_link_points_to_the_real_site():
