@@ -2,10 +2,11 @@
 
 Belə səhifələrdə elanların çoxu uyğun deyil, ona görə bot onları özü qiymətləndirmir: hər elan Claude API pulu deməkdir.
 Gündəlik internet araşdırması `python -m leadsbot watch` ilə yeni elanları oxuyur, uyğun olanı
-`python -m leadsbot add --source web` ilə botun növbəsinə qoyur. `python -m leadsbot page <link>` bir səhifənin mətnini verir.
+`python -m leadsbot add --source web` ilə botun növbəsinə qoyur. `python -m leadsbot page <link>` bir səhifənin və ya PDF faylın mətnini verir.
 """
 from __future__ import annotations
 
+import io
 import re
 from pathlib import Path
 
@@ -20,6 +21,7 @@ from .storage import Store
 WATCH_PREFIX = "watch:"  # items cədvəlində izləmə səhifələrinin elanları bu ad altında saxlanır
 BUTTON_WORDS = re.compile(r"^(view details|read more|apply now|new)\s+", re.I)  # kartın düyməsi başlığa yapışır
 NOISE_TAGS = ("script", "style", "noscript", "svg", "nav", "footer", "header", "form", "iframe")
+PDF_MAX_PAGES = 40  # tender faylları adətən 5–20 səhifədir; son müddət çox vaxt birinci və sonuncu səhifədədir
 
 
 def watch_pages(path: Path, only: set[str] | None = None, group: str | None = None) -> list[Source]:
@@ -67,8 +69,34 @@ def render_watch(store: Store, pages: list[Source], user_agent: str, timeout: in
     return "\n".join(out)
 
 
+def _is_pdf(r) -> bool:
+    ctype = (getattr(r, "headers", None) or {}).get("Content-Type", "")
+    return "application/pdf" in ctype.lower() or (getattr(r, "content", b"") or b"")[:5] == b"%PDF-"
+
+
+def pdf_text(data: bytes) -> tuple[str, int]:
+    """PDF-in mətni (ilk PDF_MAX_PAGES səhifə) və ümumi səhifə sayı."""
+    try:
+        from pypdf import PdfReader
+    except ImportError as exc:
+        raise FetchError("PDF oxumaq üçün `pypdf` paketi lazımdır: pip install -r requirements.txt") from exc
+    try:
+        reader = PdfReader(io.BytesIO(data))
+        pages = len(reader.pages)
+        parts = [reader.pages[n].extract_text() or "" for n in range(min(pages, PDF_MAX_PAGES))]
+    except Exception as exc:  # pypdf zədəli və ya şifrəli faylda müxtəlif xətalar atır
+        raise FetchError(f"PDF açılmadı: {exc.__class__.__name__}") from exc
+    return re.sub(r"\s+", " ", " ".join(parts)).strip(), pages
+
+
+def _cut(text: str, chars: int) -> str:
+    if len(text) <= chars:
+        return text
+    return f"{text[:chars]}\n… (mətnin {len(text)} simvolundan {chars} göstərildi; hamısı üçün --chars {len(text)})"
+
+
 def read_page(url: str, user_agent: str, timeout: int = 25, chars: int = 6000) -> str:
-    """Səhifənin oxunaqlı mətni: menyu, skript və formalar çıxarılır."""
+    """Səhifənin oxunaqlı mətni: menyu, skript və formalar çıxarılır. PDF faylın mətni də oxunur."""
     try:
         r = _request(_session(user_agent), "GET", url, timeout)
     except requests.HTTPError as exc:
@@ -78,6 +106,12 @@ def read_page(url: str, user_agent: str, timeout: int = 25, chars: int = 6000) -
         raise FetchError(f"vaxt bitdi ({_domain(url)})") from exc
     except requests.RequestException as exc:
         raise FetchError(f"şəbəkə xətası: {exc.__class__.__name__} ({_domain(url)})") from exc
+    if _is_pdf(r):
+        text, pages = pdf_text(r.content)
+        shown = f", ilk {PDF_MAX_PAGES} səhifə oxundu" if pages > PDF_MAX_PAGES else ""
+        if not text:
+            text = "(Faylda mətn yoxdur: skan edilmiş şəkil ola bilər.)"
+        return f"PDF, {pages} səhifə{shown}\n{r.url}\n\n{_cut(text, chars)}"
     r.encoding = r.encoding or "utf-8"
     soup = BeautifulSoup(r.text, "html.parser")
     title = soup.title.get_text(" ", strip=True) if soup.title else ""
@@ -85,4 +119,4 @@ def read_page(url: str, user_agent: str, timeout: int = 25, chars: int = 6000) -
         tag.decompose()
     body = soup.find("main") or soup.find("article") or soup.body or soup
     text = re.sub(r"\s+", " ", body.get_text(" ", strip=True))
-    return f"{title}\n{r.url}\n\n{text[:chars]}"
+    return f"{title}\n{r.url}\n\n{_cut(text, chars)}"

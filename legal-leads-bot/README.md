@@ -144,7 +144,7 @@ Botun öz mənbələri və LinkedIn hər yeri əhatə etmir. Ona görə Claude t
 
 - **İzləmə siyahısı** (`config/watchlist.yaml`): universitet vakansiyaları, OSCE, UNjobs, Impactpool, Freelancer kimi çox elanlı səhifələr. `python -m leadsbot watch` bu səhifələrdən yalnız əvvəl göstərilməmiş elanları çıxarır. Bu elanları bot özü qiymətləndirmir, çünki çoxu uyğun deyil və hər biri Claude API pulu olardı. Onları araşdırma oxuyur və yalnız uyğun olanı bota verir.
 - **Açıq axtarış:** gündə 25–35 axtarış, ingilis, rus və türk dillərində. Həftənin hər günü əlavə bir mövzu dərindən axtarılır.
-- Araşdırma hər elanı özü açıb tarixini və son müraciət müddətini yoxlayır, sonra `python -m leadsbot add --source web --file ...` ilə bota verir. Telegram-da belə lidin mənbəyi "İnternet araşdırması" yazılır.
+- Araşdırma hər elanı özü açıb tarixini və son müraciət müddətini yoxlayır (`python -m leadsbot page <link>`; PDF tender fayllarını da oxuyur), sonra `python -m leadsbot add --source web --file ...` ilə bota verir. Telegram-da belə lidin mənbəyi "İnternet araşdırması" yazılır.
 - Öyrəndiklərini `data/web_research_notes.md` faylına yazır: hansı axtarış nəticə verdi, hansı boş çıxdı, hansı linklər rədd edildi. Növbəti gün bundan istifadə edir.
 - Heç kimə yazmır, heç bir forma doldurmur, heç yerdə qeydiyyatdan keçmir. Tapşırıq yalnız Claude tətbiqi açıq olanda işləyir.
 

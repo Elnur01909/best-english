@@ -306,9 +306,9 @@ def main(argv: list[str] | None = None) -> int:
     w.add_argument("--file", help="izləmə siyahısı faylı (defolt: config/watchlist.yaml)")
     w.set_defaults(func=cmd_watch)
 
-    pg = sub.add_parser("page", help="bir səhifənin mətnini göstər (elanın təfərrüatı üçün)")
+    pg = sub.add_parser("page", help="bir səhifənin və ya PDF faylın mətnini göstər (elanın təfərrüatı üçün)")
     pg.add_argument("url")
-    pg.add_argument("--chars", type=int, default=6000)
+    pg.add_argument("--chars", type=int, default=6000, help="mətndən ən çox neçə simvol")
     pg.set_defaults(func=cmd_page)
 
     sub.add_parser("sources", help="konfiqurasiyadakı mənbələri göstər").set_defaults(func=cmd_sources)
