@@ -1,0 +1,89 @@
+# İzləmə siyahısı: gündəlik internet araşdırmasının oxuduğu səhifələr (`python -m leadsbot watch`).
+#
+# Bu səhifələrdə gündə onlarla elan çıxır və çoxu uyğun deyil. Ona görə onları bot özü qiymətləndirmir
+# (hər elan Claude API pulu olardı). Araşdırma yalnız yeni elanları görür və uyğun olanı bota özü verir.
+# 17.11.2026-da hamısı canlı yoxlanıb. Sahələr sources.yaml ilə eynidir. `category` burada qrupdur: `watch --group job|tender|individual`.
+#   job        onlayn/uzaqdan tədris və akademik işlər (beynəlxalq hüquq, insan hüquqları və s.)
+#   tender     ekspert, məsləhətçi, tədqiqatçı çağırışları
+#   individual frilans sifarişləri və insanların sualları
+sources:
+  # ───────────── Tədris və akademik işlər ─────────────
+  - id: jobs_ac_uk_intlaw
+    name: "jobs.ac.uk — \"international law\""
+    type: html_links
+    url: "https://www.jobs.ac.uk/search/?keywords=%22international+law%22&sortOrder=1"
+    link_pattern: "/job/[A-Z]{3}\\d{3}/"
+    category: job
+    max_items: 25
+  - id: jobs_ac_uk_human_rights
+    name: "jobs.ac.uk — \"human rights\""
+    type: html_links
+    url: "https://www.jobs.ac.uk/search/?keywords=%22human+rights%22&sortOrder=1"
+    link_pattern: "/job/[A-Z]{3}\\d{3}/"
+    category: job
+    max_items: 25
+  - id: the_unijobs_law
+    name: "Times Higher Education — hüquq vakansiyaları"
+    type: html_links
+    url: "https://www.timeshighereducation.com/unijobs/listings/law/"
+    link_pattern: "/unijobs/listing/\\d+/"
+    category: job
+    max_items: 30
+  - id: chronicle_law
+    name: "Chronicle of Higher Education — hüquq vakansiyaları"
+    type: html_links
+    url: "https://jobs.chronicle.com/jobs/law-and-legal-studies/"
+    link_pattern: "/job/\\d+/"
+    category: job
+    max_items: 30
+  - id: esil_feed
+    name: "European Society of International Law — elanlar"
+    type: rss
+    url: "https://esil-sedi.eu/feed/"
+    category: job
+    max_items: 20
+  - id: impactpool_intlaw
+    name: "Impactpool — international law"
+    type: html_links
+    url: "https://www.impactpool.org/search?q=international+law"
+    link_pattern: "/jobs/\\d+"
+    category: job
+    max_items: 30
+
+  # ───────────── Ekspert və məsləhətçi çağırışları ─────────────
+  - id: osce_vacancies
+    name: "OSCE vakansiyaları"
+    type: html_links
+    url: "https://vacancies.osce.org/"
+    link_pattern: "/jobs/[a-z0-9-]+-\\d+$"
+    category: tender
+    max_items: 40
+  - id: unjobs_international_law
+    name: "UNjobs — beynəlxalq hüquq"
+    type: html_links
+    url: "https://unjobs.org/themes/international-law"
+    link_pattern: "/vacancies/\\d+"
+    category: tender
+    max_items: 30
+  - id: unjobs_humanitarian_law
+    name: "UNjobs — humanitar hüquq"
+    type: html_links
+    url: "https://unjobs.org/themes/humanitarian-law"
+    link_pattern: "/vacancies/\\d+"
+    category: tender
+    max_items: 30
+  - id: impactpool_legal_homebased
+    name: "Impactpool — legal consultant, home-based"
+    type: html_links
+    url: "https://www.impactpool.org/search?q=legal+consultant+home-based"
+    link_pattern: "/jobs/\\d+"
+    category: tender
+    max_items: 30
+
+  # ───────────── Frilans sifarişləri ─────────────
+  - id: freelancer_azerbaijan
+    name: "Freelancer.com — azerbaijan"
+    type: rss
+    url: "https://www.freelancer.com/rss.xml?keyword=azerbaijan"
+    category: individual
+    max_items: 20

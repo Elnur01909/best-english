@@ -15,6 +15,7 @@ from .runner import check_sources, lead_chats, maybe_send_digest, owner_chats, r
 from .storage import Store
 from .telegram import TelegramClient, TelegramError
 from .updater import RESTART_EXIT_CODE, RestartRequested, UpdateError, run_update
+from .watch import read_page, render_watch, watch_pages
 
 
 LOG_FILE = ROOT / "data" / "leadsbot.log"
@@ -214,6 +215,41 @@ def cmd_add(args, settings) -> int:
     return 1 if any(o == "invalid" for o, _ in results) else 0
 
 
+def _utf8_stdout() -> None:
+    """Windows konsolu cp1252 ilə yazır və xarici səhifələrin mətnində ilişir."""
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+
+
+def cmd_watch(args, settings) -> int:
+    _utf8_stdout()
+    path = Path(args.file) if args.file else settings.sources_file.parent / "watchlist.yaml"
+    only = {x.strip() for x in args.only.split(",") if x.strip()} if args.only else None
+    pages = watch_pages(path, only, args.group)
+    if not pages:
+        print("İzləmə siyahısında uyğun səhifə yoxdur.")
+        return 2
+    if args.list:
+        for pg in pages:
+            print(f"{pg.id:<28} [{pg.category:<10}] {pg.name}")
+        return 0
+    print(render_watch(Store(settings.db_path), pages, settings.user_agent, settings.request_timeout,
+                       mark=not args.peek, limit=args.max, chars=args.chars))
+    return 0
+
+
+def cmd_page(args, settings) -> int:
+    from .sources import FetchError
+    _utf8_stdout()
+    try:
+        print(read_page(args.url, settings.user_agent, settings.request_timeout, chars=args.chars))
+    except FetchError as exc:
+        print(f"Səhifə oxunmadı: {exc}")
+        return 1
+    return 0
+
+
 def cmd_setup(args, settings) -> int:
     from .setup_wizard import run_setup
     env_path = Path(args.env) if args.env else ROOT / ".env"
@@ -250,8 +286,8 @@ def main(argv: list[str] | None = None) -> int:
     up.add_argument("--force", action="store_true", help="versiya eyni olsa da faylları yenidən yaz")
     up.set_defaults(func=cmd_update)
 
-    ad = sub.add_parser("add", help="LinkedIn kimi saytda tapılan müraciəti botun növbəsinə qoy")
-    ad.add_argument("--source", default="linkedin", help="mənbə (hazırda yalnız linkedin)")
+    ad = sub.add_parser("add", help="LinkedIn-də və ya internet axtarışında tapılan müraciəti botun növbəsinə qoy")
+    ad.add_argument("--source", default="linkedin", help="mənbə: " + ", ".join(MANUAL_SOURCES))
     ad.add_argument("--file", help="JSON siyahı: [{\"link\", \"title\", \"text\", \"who\", \"date\"}]")
     ad.add_argument("--link")
     ad.add_argument("--title")
@@ -259,6 +295,21 @@ def main(argv: list[str] | None = None) -> int:
     ad.add_argument("--who", default="", help="kim yazıb: ad, vəzifə, şirkət")
     ad.add_argument("--date", default="")
     ad.set_defaults(func=cmd_add)
+
+    w = sub.add_parser("watch", help="izləmə siyahısındakı səhifələrdən yalnız yeni elanları göstər (internet araşdırması üçün)")
+    w.add_argument("--group", help="yalnız bu qrup: tender | job | individual | company")
+    w.add_argument("--only", help="yalnız bu səhifə id-ləri (vergüllə)")
+    w.add_argument("--peek", action="store_true", help="göstər, amma göstərilmiş kimi yadda saxlama")
+    w.add_argument("--list", action="store_true", help="səhifələrin siyahısı, oxumadan")
+    w.add_argument("--max", type=int, default=25, help="bir səhifədən ən çox neçə elan")
+    w.add_argument("--chars", type=int, default=280, help="hər elanın təsvirindən neçə simvol")
+    w.add_argument("--file", help="izləmə siyahısı faylı (defolt: config/watchlist.yaml)")
+    w.set_defaults(func=cmd_watch)
+
+    pg = sub.add_parser("page", help="bir səhifənin mətnini göstər (elanın təfərrüatı üçün)")
+    pg.add_argument("url")
+    pg.add_argument("--chars", type=int, default=6000)
+    pg.set_defaults(func=cmd_page)
 
     sub.add_parser("sources", help="konfiqurasiyadakı mənbələri göstər").set_defaults(func=cmd_sources)
     sub.add_parser("send-test", help="Telegram-a test mesajı göndər").set_defaults(func=cmd_send_test)

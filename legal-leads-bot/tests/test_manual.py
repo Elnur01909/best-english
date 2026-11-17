@@ -62,3 +62,29 @@ def test_file_and_command(settings, tmp_path, monkeypatch, capsys):
     assert out.count("növbəyə qoyuldu") == 2 and "artıq var" in out
     assert entry.main(["add", "--source", "facebook", "--link", "https://x", "--title", "T"]) == 2
     assert "linkedin" in MANUAL_SOURCES
+
+
+TENDER = {"link": "https://procurement.example.org/notice?id=4512&utm_source=newsletter",
+          "title": "National legal expert on Azerbaijani legislation", "who": "Example Programme",
+          "text": "Consultancy, home-based. Deadline 30 November 2026."}
+
+
+def test_web_research_leads_are_queued_under_their_own_name(settings, matcher):
+    store = Store(settings.db_path)
+    assert add_manual_leads(store, "web", [TENDER])[0][0] == "pending"
+    tg = FakeTG()
+    run(settings, store, [], matcher, tg, ai=ScoringAI(value=9))
+    assert "İnternet araşdırması" in tg.sent[0][1] and "id=4512" in tg.sent[0][1]
+
+
+def test_notice_number_in_the_query_keeps_two_notices_apart():
+    a = lead_uid("https://procurement.example.org/notice?id=4512&utm_source=x")
+    assert a == lead_uid("https://www.procurement.example.org/notice/?id=4512#top")
+    assert a != lead_uid("https://procurement.example.org/notice?id=4513")
+
+
+def test_lead_found_on_linkedin_is_not_queued_again_by_web_research(settings):
+    store = Store(settings.db_path)
+    add_manual_leads(store, "linkedin", [POST])
+    assert add_manual_leads(store, "web", [dict(POST, link=POST["link"] + "?trk=public_post")])[0][0] == "known"
+    assert store.pending_count() == 1
