@@ -136,7 +136,17 @@ Botun iki nüsxəsi eyni vaxtda işləyə bilməz: ikinci nüsxə avtomatik daya
 - **TripAdvisor** botları bloklayır: söndürülüb, forumu əl ilə izləyin.
 - **❔ işarəli mənbələr** (Trend, AzerNews, iş saytları, ReliefWeb RSS) real şəbəkədə hələ sınanmayıb: `check.bat` ilə yoxlayın, işləməyəni `/mute` edin.
 - **ReliefWeb API** təsdiqlənmiş tətbiq adı tələb edir. **UNGM, EBRD, ADB** açıq lent vermir: onların e-poçt xəbərdarlıqlarına abunə olun.
-- **LinkedIn və Facebook-u** bot özü oxumur, şərtləri bunu qadağan edir. LinkedIn-ə Claude tətbiqindəki planlı tapşırıq ("LinkedIn yoxlaması") gündə 3 dəfə sizin Chrome-da, yavaş və yalnız oxumaq üçün baxır. Tapdığı müraciəti `python -m leadsbot add --file leads.json` ilə bota verir, bot da onu adi lid kimi düymələri ilə Telegram-a göndərir. Eyni link ikinci dəfə gəlmir. Tapşırıq yalnız Claude tətbiqi və Chrome açıq olanda işləyir.
+- **LinkedIn və Facebook-u** bot özü oxumur, şərtləri bunu qadağan edir. LinkedIn-ə Claude tətbiqindəki planlı tapşırıq ("LinkedIn yoxlaması") gündə 3 dəfə sizin Chrome-da, yavaş və yalnız oxumaq üçün baxır: həm yazılara, həm LinkedIn Jobs elanlarına. Tapdığı müraciəti `python -m leadsbot add --file leads.json` ilə bota verir, bot da onu adi lid kimi düymələri ilə Telegram-a göndərir. Eyni link ikinci dəfə gəlmir. Tapşırıq yalnız Claude tətbiqi və Chrome açıq olanda işləyir.
+
+## Gündəlik internet araşdırması
+
+Botun öz mənbələri və LinkedIn hər yeri əhatə etmir. Ona görə Claude tətbiqində ikinci planlı tapşırıq var: "İnternet araşdırması". Hər səhər internetdə geniş axtarış aparır və üç növ iş axtarır: Azərbaycanla bağlı hüquqi yardım istəyən əcnəbilər və xarici şirkətlər, Azərbaycan hüququ üzrə ekspert və məsləhətçi çağırışları, beynəlxalq hüquq sahələrində onlayn tədris və uzaqdan ekspert işləri.
+
+- **İzləmə siyahısı** (`config/watchlist.yaml`): universitet vakansiyaları, OSCE, UNjobs, Impactpool, Freelancer kimi çox elanlı səhifələr. `python -m leadsbot watch` bu səhifələrdən yalnız əvvəl göstərilməmiş elanları çıxarır. Bu elanları bot özü qiymətləndirmir, çünki çoxu uyğun deyil və hər biri Claude API pulu olardı. Onları araşdırma oxuyur və yalnız uyğun olanı bota verir.
+- **Açıq axtarış:** gündə 25–35 axtarış, ingilis, rus və türk dillərində. Həftənin hər günü əlavə bir mövzu dərindən axtarılır.
+- Araşdırma hər elanı özü açıb tarixini və son müraciət müddətini yoxlayır, sonra `python -m leadsbot add --source web --file ...` ilə bota verir. Telegram-da belə lidin mənbəyi "İnternet araşdırması" yazılır.
+- Öyrəndiklərini `data/web_research_notes.md` faylına yazır: hansı axtarış nəticə verdi, hansı boş çıxdı, hansı linklər rədd edildi. Növbəti gün bundan istifadə edir.
+- Heç kimə yazmır, heç bir forma doldurmur, heç yerdə qeydiyyatdan keçmir. Tapşırıq yalnız Claude tətbiqi açıq olanda işləyir.
 
 ## Etik qaydalar
 
