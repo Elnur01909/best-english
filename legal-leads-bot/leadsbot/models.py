@@ -32,6 +32,7 @@ class Source:
     every_hours: float = 0  # >0 → yalnız bu qədər saatda bir oxunur (ağır və ya məhdudiyyətli saytlar)
     legal_forum: bool = False  # True → hər yazı hüquqi sualdır, ümumi söz ("miras", "долг") də kifayətdir
     ai_screen: bool = False  # True → Claude varsa, açar söz olmasa da hər yeni yazını o oxuyur (insanların sual yazdığı yerlər)
+    ai_only: bool = False  # True → yalnız Claude-un balı ilə göndərilir, açar sözlü yazı da balsız getmir (xəbər lentləri: Google Alerts)
     expect_empty: bool = False  # True → boş qalması normaldır, "boşdur" xəbərdarlığı göndərilmir
     user_added: bool = False
 

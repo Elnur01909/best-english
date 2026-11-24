@@ -21,7 +21,7 @@ log = logging.getLogger("leadsbot")
 
 ALERT_AFTER_FAILS = 3  # ardıcıl neçə xətadan sonra xəbər verilir
 ALERT_AFTER_EMPTY_DAYS = 7  # mənbə neçə gün boş qalandan sonra xəbər verilir
-SCREEN_RETRY_DAYS = 2  # Claude işləmirsə, açar sözü olmayan yazı neçə gün onu gözləyir
+SCREEN_RETRY_DAYS = 2  # Claude işləmirsə, açar sözü olmayan yazı (və ai_only mənbənin yazısı) neçə gün onu gözləyir
 SIGNAL_DIGEST_TIME = "09:00"  # səhər xülasəsi söndürülübsə, şirkət siqnalları bu vaxt gəlir
 
 
@@ -78,7 +78,7 @@ class CycleReport:
         if self.ai_scored:
             lines.append(f"🤖 Claude qiymətləndirdi: {self.ai_scored}")
         if self.ai_error:
-            lines.append(f"⚠️ Claude: {self.ai_error} (açar sözlü lidlər balsız göndərilir)")
+            lines.append(f"⚠️ Claude: {self.ai_error} (açar sözlü lidlər balsız göndərilir, Google Alerts gözləyir)")
         base = [s.source_id for s in self.sources if s.baseline]
         if base:
             lines.append("İlk dəfə oxundu (başlanğıc nöqtəsi, göndərilmədi): " + ", ".join(base))
@@ -262,9 +262,10 @@ def run_cycle(
         report.finished = _now_iso()
         return report
 
+    ai_only = {s.id for s in sources if s.ai_only}
     if ai is not None:
-        _score_pending(settings, store, ai, report)
-    _deliver(settings, store, names, tg, chat_ids, report, ai_on=ai is not None, dry_run=dry_run)
+        _score_pending(settings, store, ai, report, ai_only)
+    _deliver(settings, store, names, tg, chat_ids, report, ai_on=ai is not None, dry_run=dry_run, ai_only=ai_only)
     if send and not dry_run and not only:
         alerts = alert_chats or chat_ids
         _check_health(store, sources, report, tg, alerts)
@@ -349,13 +350,15 @@ def _check_claude(store: Store, report: CycleReport, tg: TelegramClient | None, 
     store.set("fails:claude", str(fails))
     if fails >= ALERT_AFTER_FAILS and not alerted:
         text = (f"⚠️ <b>Claude {ALERT_AFTER_FAILS} dəfə ardıcıl işləmədi:</b> <code>{esc(report.ai_error[:120])}</code>"
-                f"\nAçar sözlü lidlər balsız gəlir, forum və Google Alerts yazıları isə {SCREEN_RETRY_DAYS} gün gözləyir."
+                f"\nGoogle Alerts və açar sözsüz forum yazıları {SCREEN_RETRY_DAYS} gün Claude-u gözləyir, "
+                "qalan açar sözlü lidlər balsız gəlir."
                 "\nBalansı yoxlayın: https://platform.claude.com/settings/billing")
         if _tell(tg, chat_ids, text):
             store.set("alerted:claude", "1")
 
 
-def _score_pending(settings: Settings, store: Store, ai: LeadAI, report: CycleReport) -> None:
+def _score_pending(settings: Settings, store: Store, ai: LeadAI, report: CycleReport,
+                   ai_only: set[str] = frozenset()) -> None:
     wanted = effective_lead_types(settings, store)  # göndərilməyəcək lidə Claude pulu xərcləmə
     rows = [r for r in store.unscored(settings.ai_max_per_cycle) if _wanted(r, wanted)]
     if not rows:
@@ -375,16 +378,17 @@ def _score_pending(settings: Settings, store: Store, ai: LeadAI, report: CycleRe
         if s is not None:
             store.set_ai(r["id"], s.score, s.category, s.service, s.summary_az, s.reason_az)
             report.ai_scored += 1
-        elif r["hits"]:
+        elif r["hits"] and r["source_id"] not in ai_only:
             unscored.append(r["id"])  # açar sözü olan lid itməsin, balsız getsin
         elif is_stale(r["first_seen"], SCREEN_RETRY_DAYS, now):
             store.mark_hidden(r["id"])
-        # qalan yazıların açar sözü yoxdur: balsız göndərilmir, növbəti dövrədə yenidən Claude-a verilir
+        # qalanlar (açar sözsüz yazı, xəbər lentinin yazısı) balsız göndərilmir, növbəti dövrədə yenidən Claude-a verilir
     if unscored:
         store.mark_ai_failed(unscored)
 
 
-def _deliver(settings, store, names, tg, chat_ids, report, ai_on: bool, dry_run: bool) -> None:
+def _deliver(settings, store, names, tg, chat_ids, report, ai_on: bool, dry_run: bool,
+             ai_only: set[str] = frozenset()) -> None:
     min_score = effective_min_score(settings, store)
     digest_on = bool(effective_digest_time(settings, store))
     wanted = effective_lead_types(settings, store)
@@ -396,9 +400,9 @@ def _deliver(settings, store, names, tg, chat_ids, report, ai_on: bool, dry_run:
             continue
         if ai_on and row["ai_done"] == 0:
             continue  # bu dövrədə qiymətləndirilmədi (limit) — növbəti dövrədə
-        if row["ai_done"] != 1 and not row["hits"]:
+        if row["ai_done"] != 1 and (not row["hits"] or row["source_id"] in ai_only):
             if not dry_run:
-                store.mark_hidden(row["id"])  # açar sözü olmayan yazını yalnız Claude göndərə bilər
+                store.mark_hidden(row["id"])  # açar sözsüz yazını və xəbər lentini yalnız Claude göndərə bilər
             report.hidden += 1
             continue
         score = row["ai_score"] if row["ai_done"] == 1 else None

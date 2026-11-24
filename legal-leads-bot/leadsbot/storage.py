@@ -323,10 +323,11 @@ class Store:
         for r in self.conn.execute("SELECT * FROM user_sources ORDER BY added_at").fetchall():
             if r["type"] == "rss":
                 cat = r["category"] or "individual"
+                alert = "google.com/alerts/feeds/" in (r["url"] or "")  # xəbər məqalələri: açar söz kömək istəmək deyil
                 out.append(Source(
                     id=r["id"], name=r["name"] or "RSS", type="rss", url=r["url"], category=cat,
                     categories=None if cat == "other" else [cat], require_geo=False, enabled=True, expect_empty=True,
-                    ai_screen="google.com/alerts/feeds/" in (r["url"] or ""),
+                    ai_screen=alert, ai_only=alert,
                     note="/addrss ilə əlavə edilib", user_added=True,
                 ))
                 continue

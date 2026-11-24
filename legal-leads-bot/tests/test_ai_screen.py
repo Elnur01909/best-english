@@ -18,6 +18,8 @@ FORUM = Source(id="f", name="Forum", type="rss", url="https://x", category="indi
                require_geo=False, ai_screen=True)
 PLAIN_SOURCE = Source(id="p", name="Plain", type="rss", url="https://x", category="individual", categories=["individual"],
                       require_geo=False)
+ALERT = Source(id="a", name="Google Alerts", type="rss", url="https://www.google.com/alerts/feeds/1/2",
+               category="individual", categories=["individual"], require_geo=False, ai_screen=True, ai_only=True)
 PLAIN = "Məni işdən çıxardılar, nə edə bilərəm?"
 WITH_WORDS = "Need a lawyer for a residence permit in Baku"
 
@@ -125,6 +127,52 @@ def test_a_lead_with_keywords_is_still_sent_when_claude_fails(settings, matcher)
     assert rep.sent == 1 and "/10" not in tg.sent[0][1]
 
 
+# Google Alerts xəbər məqaləsi gətirir: "запрет на въезд" sözü olan idman xəbəri kömək istəmək deyil (2026-11-24)
+
+def test_a_news_alert_with_keywords_waits_for_claude_instead_of_going_out_unscored(settings, matcher):
+    store = seeded(settings, matcher, ALERT)
+    tg = FakeTG()
+    rep = run(settings, store, [ALERT], matcher, tg, fetch=posts(WITH_WORDS), ai=ScoringAI(fail=True))
+    assert rep.sent == 0 and tg.sent == [] and store.pending_count() == 1
+    rep = run(settings, store, [ALERT], matcher, tg, fetch=nothing, ai=ScoringAI())
+    assert rep.sent == 1 and "8/10" in tg.sent[0][1]
+
+
+def test_a_news_alert_claude_could_not_read_for_two_days_is_dropped(settings, matcher):
+    store = seeded(settings, matcher, ALERT)
+    tg = FakeTG()
+    run(settings, store, [ALERT], matcher, tg, fetch=posts(WITH_WORDS), ai=ScoringAI(fail=True))
+    old = (datetime.now(timezone.utc) - timedelta(days=3)).isoformat()
+    store.conn.execute("UPDATE items SET first_seen=?", (old,))
+    store.conn.commit()
+    run(settings, store, [ALERT], matcher, tg, fetch=nothing, ai=ScoringAI(fail=True))
+    assert tg.sent == [] and store.pending_count() == 0
+
+
+def test_an_alert_the_old_version_left_for_unscored_sending_is_not_sent(settings, matcher):
+    store = seeded(settings, matcher, ALERT)
+    tg = FakeTG()
+    run(settings, store, [ALERT], matcher, tg, fetch=posts(WITH_WORDS), ai=ScoringAI(fail=True))
+    store.conn.execute("UPDATE items SET ai_done=-1")  # köhnə versiya belə yazını balsız göndərmək üçün işarələyirdi
+    store.conn.commit()
+    rep = run(settings, store, [ALERT], matcher, tg, fetch=nothing, ai=ScoringAI(fail=True))
+    assert rep.sent == 0 and tg.sent == [] and store.pending_count() == 0
+
+
+def test_without_claude_a_news_alert_is_not_sent_even_with_keywords(settings, matcher):
+    store = seeded(settings, matcher, ALERT)
+    tg = FakeTG()
+    rep = run(settings, store, [ALERT], matcher, tg, fetch=posts(WITH_WORDS))
+    assert rep.sent == 0 and tg.sent == []
+
+
+def test_a_low_score_news_alert_stays_out(settings, matcher):
+    store = seeded(settings, matcher, ALERT)
+    tg = FakeTG()
+    rep = run(settings, store, [ALERT], matcher, tg, fetch=posts(WITH_WORDS), ai=ScoringAI(value=2))
+    assert rep.sent == 0 and rep.filtered == 1 and tg.sent == []
+
+
 @pytest.mark.parametrize("title", [PLAIN, WITH_WORDS])
 def test_company_news_is_hidden_when_claude_says_so(settings, matcher, title):
     settings.lead_types = ("individual", "job", "tender")
@@ -162,7 +210,7 @@ def test_google_alerts_feeds_are_opened_to_claude_but_other_rss_is_not(settings)
     store = Store(settings.db_path)
     for sid, url in (("a", "https://www.google.com/alerts/feeds/1/2"), ("b", "https://example.az/feed")):
         store.add_user_source(Source(id=sid, name=sid, type="rss", url=url, category="individual"))
-    assert {s.id: s.ai_screen for s in store.user_sources()} == {"a": True, "b": False}
+    assert {s.id: (s.ai_screen, s.ai_only) for s in store.user_sources()} == {"a": (True, True), "b": (False, False)}
 
 
 def test_people_question_sources_are_marked_in_the_config():
